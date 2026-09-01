@@ -1,0 +1,7 @@
+# The routing file is the decisions. It lives on the Desktop and never here.
+RadarRouting.json
+*.RadarRouting.json
+# 36MB of JD text: the judge's evidence, rebuilt by every run. Not history.
+data/jd.json
+.DS_Store
+__pycache__/

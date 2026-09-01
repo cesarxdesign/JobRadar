@@ -1,0 +1,228 @@
+<meta charset="utf-8">
+<title>Radar2</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--bg:#0e0f11;--panel:#17191c;--line:#24272c;--fg:#e8eaed;--dim:#9aa0a6;--dimmer:#6b7075;--acc:#7aa2f7;--good:#7ec699;--warn:#e0af68}
+@media (prefers-color-scheme:light){:root{--bg:#f6f7f9;--panel:#fff;--line:#e3e6ea;--fg:#1a1c1e;--dim:#5f6368;--dimmer:#8a8f94;--acc:#3b5bdb;--good:#2f9e44;--warn:#e8590c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{display:flex;align-items:baseline;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+h1{font-size:17px;margin:0;letter-spacing:-.2px}
+.stamp{color:var(--dim);font-size:12.5px}
+.spacer{flex:1}
+.route{background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:7px 13px;font-size:12.5px;cursor:pointer}
+.route:hover{border-color:var(--acc);color:var(--acc)}
+.route.drop{border-color:var(--acc);color:var(--acc);border-style:dashed}
+.route[disabled]{opacity:.5;cursor:wait}
+.tabs{display:flex;gap:2px;padding:10px 20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tab{background:none;border:0;border-bottom:2px solid transparent;color:var(--dim);padding:8px 12px;font-size:13px;cursor:pointer}
+.tab.on{color:var(--fg);border-bottom-color:var(--acc)}
+.tab .n{color:var(--dimmer);margin-left:6px;font-size:11.5px}
+.split{display:flex;height:calc(100vh - 108px)}
+.list{width:47%;min-width:340px;overflow-y:auto;padding:12px 16px;border-right:1px solid var(--line)}
+.pane{flex:1;overflow-y:auto;padding:20px 24px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin-bottom:8px;cursor:pointer}
+.card:hover,.card.sel{border-color:var(--acc)}
+.card .t{font-weight:600}
+.card .c{color:var(--dim);font-size:12.5px}
+.meta{display:flex;flex-wrap:wrap;gap:5px 7px;margin-top:7px;font-size:11px;color:var(--dimmer)}
+.tag{border:1px solid var(--line);border-radius:20px;padding:2px 8px}
+.tag.y{border-color:var(--good);color:var(--good)}
+.tag.n{border-color:var(--warn);color:var(--warn)}
+.acts{display:flex;gap:8px;margin-top:10px}
+.acts button{background:none;border:1px solid var(--line);color:var(--dim);border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer}
+.acts button:hover{border-color:var(--acc);color:var(--acc)}
+.empty{color:var(--dimmer);padding:20px 0}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:9px;overflow:hidden;margin:14px 0}
+.fact{background:var(--panel);padding:9px 11px}
+.fk{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600}
+.fv{font-size:13px}
+.why{margin-top:14px;font-size:12px;color:var(--dim)}
+.why li{margin:2px 0}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 15px;font-size:12.5px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+</style>
+
+<header>
+  <h1>Radar2</h1>
+  <span class="stamp" id="stamp">loading…</span>
+  <span class="spacer"></span>
+  <button class="route" id="route">⇱ RadarRoute</button>
+</header>
+
+<div class="tabs" id="tabs">
+  <button class="tab on" data-lane="open">Open<span class="n" id="c-open"></span></button>
+  <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
+  <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
+  <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
+  <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
+</div>
+
+<div class="split">
+  <div class="list" id="list"></div>
+  <div class="pane" id="pane"><div class="empty">Select a role.</div></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+// The board renders results.json and nothing else. It applies no criteria of
+// its own - the lane a role is in was decided by the judge, upstream.
+let DATA = null, LANE = "open", SEL = null;
+// Routing is absent until the one RadarRouting file on the planet is dropped
+// here. Nothing about it is stored in this browser.
+let RR = null, RRH = null, rrTimer = null;
+const $ = id => document.getElementById(id);
+const esc = s => (s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2600);}
+
+// ---------- render ----------
+function roleById(id){return DATA.roles.find(r=>r.id===id);}
+function routing(id){return RR ? (RR.decisions.find(d=>d.id===id)||{}).decision || null : null;}
+
+function pool(){
+  if(!DATA) return [];
+  if(LANE==="applied"||LANE==="discarded")
+    return DATA.roles.filter(r=>r.active && routing(r.id)===LANE);
+  // a role you have acted on leaves the first three lanes
+  return (DATA.lanes[LANE]||[]).map(roleById).filter(r=>r && !routing(r.id));
+}
+
+function counts(){
+  for(const l of ["open","portugal","unsure"]){
+    const n=(DATA.lanes[l]||[]).filter(id=>!routing(id)).length;
+    $("c-"+l).textContent=n||"";
+  }
+  if(RR) for(const l of ["applied","discarded"])
+    $("c-"+l).textContent=DATA.roles.filter(r=>r.active&&routing(r.id)===l).length||"";
+}
+
+function render(){
+  if(!DATA) return;
+  counts();
+  const rows=pool();
+  $("list").innerHTML = rows.length ? "" : '<div class="empty">Nothing here.</div>';
+  for(const r of rows){
+    const el=document.createElement("div");
+    el.className="card"+(SEL===r.id?" sel":"");
+    el.innerHTML='<div class="t">'+esc(r.title)+'</div><div class="c">'+esc(r.company)+'</div>'
+      +'<div class="meta">'
+      + (r.remote===true?'<span class="tag y">Remote</span>':r.remote===false?'<span class="tag n">On-site</span>':'<span class="tag">Remote ?</span>')
+      + (r.location?'<span class="tag">'+esc(r.location)+'</span>':'')
+      + (r.salary?'<span class="tag y">'+esc(r.salary)+'</span>':'')
+      + (r.years_xp?'<span class="tag">'+r.years_xp+'y XP</span>':'')
+      +'</div>';
+    el.onclick=()=>{SEL=r.id;render();};
+    $("list").appendChild(el);
+  }
+  renderPane();
+}
+
+function fact(k,v){return '<div class="fact"><div class="fk">'+k+'</div><div class="fv">'+(v||"—")+'</div></div>';}
+
+function renderPane(){
+  const r=SEL&&roleById(SEL);
+  if(!r){$("pane").innerHTML='<div class="empty">Select a role.</div>';return;}
+  const v=r.verdict||{};
+  $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
+    +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
+    +'<div class="facts">'
+    + fact("Remote", r.remote===true?"Yes":r.remote===false?"No":"Not stated")
+    + fact("Country", esc(r.country||r.location))
+    + fact("Salary", esc(r.salary))
+    + fact("Years XP", r.years_xp)
+    + fact("Reports to", esc(r.reports_to))
+    + fact("Source", esc(r.source))
+    +'</div>'
+    + (r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener" style="color:var(--acc)">Open posting ↗</a>':'')
+    + (RR?'<div class="acts"><button id="b-app">applied</button><button id="b-dis">discard</button>'
+        +(routing(r.id)?'<button id="b-clr">clear</button>':'')+'</div>':'')
+    + (v.why&&v.why.length?'<div class="why"><b>Judge said</b><ul>'+v.why.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>':'');
+  if(RR){
+    const set=d=>{decide(r.id,d);};
+    $("b-app").onclick=()=>set("applied");
+    $("b-dis").onclick=()=>set("discarded");
+    if($("b-clr")) $("b-clr").onclick=()=>set(null);
+  }
+}
+
+// ---------- RadarRouting ----------
+// Every decision is written straight back to the file on the Desktop.
+// createWritable() stages to a swap file and only replaces the original on
+// close(), so a crash mid-write leaves the previous routing intact.
+function decide(id,d){
+  const r=roleById(id);
+  RR.decisions=RR.decisions.filter(x=>x.id!==id);
+  if(d) RR.decisions.push({id,decision:d,company:r.company,title:r.title,at:new Date().toISOString()});
+  writeRR(); render();
+}
+function writeRR(){if(RRH){clearTimeout(rrTimer);rrTimer=setTimeout(flushRR,400);}}
+async function flushRR(){
+  if(!RRH) return;
+  try{
+    const w=await RRH.createWritable();
+    await w.write(JSON.stringify({updated:new Date().toISOString(),decisions:RR.decisions},null,1));
+    await w.close();
+    toast("routing saved · "+RR.decisions.length+" decisions");
+  }catch(e){toast("ROUTING NOT SAVED: "+e.message);}
+}
+function rrUI(on){
+  document.querySelectorAll(".tab.rr").forEach(t=>{t.hidden=!on;});
+  const b=$("route");
+  b.textContent=on?"↻ Run now":"⇱ RadarRoute";
+  b.title=on?"full run on this Mac":"Drop RadarRouting.json here, or click to pick it";
+}
+async function adopt(h){
+  const d=JSON.parse(await (await h.getFile()).text());
+  if(!d||!Array.isArray(d.decisions)) throw new Error("not a routing file");
+  RRH=h; RR=d;
+  try{await idb("readwrite",s=>s.put(h,"h"));}catch(e){}
+  rrUI(true); render(); toast("Routing applied · "+d.decisions.length+" decisions");
+}
+function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("radar2-rr",1);
+  r.onupgradeneeded=()=>r.result.createObjectStore("h");r.onerror=()=>rej(r.error);
+  r.onsuccess=()=>{const q=fn(r.result.transaction("h",mode).objectStore("h"));
+    q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error);};});}
+
+(function(){
+  const b=$("route");
+  b.onclick=async()=>{
+    if(RR) return runNow();
+    if(!window.showOpenFilePicker) return toast("Needs Chrome — Safari can't write files.");
+    try{const [h]=await window.showOpenFilePicker({types:[{description:"RadarRouting",accept:{"application/json":[".json"]}}]});await adopt(h);}
+    catch(e){if(e.name!=="AbortError") toast("Not a RadarRouting file.");}
+  };
+  b.addEventListener("dragover",e=>{e.preventDefault();b.classList.add("drop");});
+  b.addEventListener("dragleave",()=>b.classList.remove("drop"));
+  b.addEventListener("drop",async e=>{
+    e.preventDefault();b.classList.remove("drop");
+    const it=e.dataTransfer.items&&e.dataTransfer.items[0];
+    if(!it||!it.getAsFileSystemHandle) return toast("Needs Chrome — Safari can't write files.");
+    try{const h=await it.getAsFileSystemHandle();if(h.kind!=="file")throw 0;await adopt(h);}
+    catch(err){toast("Not a RadarRouting file.");}
+  });
+  rrUI(false);
+  (async()=>{try{const h=await idb("readonly",s=>s.get("h"));
+    if(h&&await h.queryPermission({mode:"readwrite"})==="granted") await adopt(h);}catch(e){}})();
+})();
+
+async function runNow(){
+  const b=$("route");b.disabled=true;b.textContent="↻ running…";
+  try{await fetch("http://127.0.0.1:8765/api/run-radar",{method:"POST",mode:"no-cors"});
+    toast("Run started on this Mac.");}catch(e){toast("Nothing listening on this Mac.");}
+  setTimeout(()=>{b.disabled=false;b.textContent="↻ Run now";},3000);
+}
+
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+  LANE=t.dataset.lane;SEL=null;
+  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
+  render();});
+
+fetch("data/results.json?t="+Date.now()).then(r=>r.json()).then(d=>{
+  DATA=d;
+  $("stamp").textContent=(d.counts.active||0)+" active · updated "+(d.generated_at||"").replace("T"," ").slice(0,16);
+  render();
+}).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";});
+</script>
