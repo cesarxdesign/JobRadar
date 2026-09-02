@@ -51,9 +51,48 @@ def norm(s):
 
 
 def identity(company, title):
-    """What makes two postings the same role. Parentheticals - (Remote),
-    (FTC), (m/f/d) - are decoration, not identity."""
+    """Fallback identity for a row with no url at all. Parentheticals -
+    (Remote), (FTC), (m/f/d) - are decoration, not identity."""
     return norm(company) + "|" + norm(re.sub(r"\([^)]*\)", " ", title or ""))
+
+
+# One row per posting (Cesar, 2026-09-02). A posting is identified by where it
+# lives, and the same posting has one address whatever page linked to it:
+# Stripe's careers site says stripe.com/jobs/search?gh_jid=7532733 and
+# designjobsworld's apply link says boards.greenhouse.io/stripe/jobs/7532733.
+# Both are greenhouse job 7532733.
+KEY_RES = [
+    ("greenhouse", re.compile(r"gh_jid=(\d+)|greenhouse\.io/[^/]+/jobs/(\d+)")),
+    ("ashby", re.compile(r"ashbyhq\.com/[^/]+/([0-9a-f]{8}-[0-9a-f-]{27})")),
+    ("lever", re.compile(r"lever\.co/[^/]+/([0-9a-f]{8}-[0-9a-f-]{27})")),
+    ("smartrecruiters", re.compile(r"smartrecruiters\.com/[^/]+/(\d+)")),
+    ("workable", re.compile(r"workable\.com/[^/]+/j/([A-Za-z0-9]+)")),
+    ("teamtailor", re.compile(r"teamtailor\.com/jobs/(\d+)")),
+    ("recruitee", re.compile(r"([a-z0-9-]+)\.recruitee\.com/o/([a-z0-9-]+)")),
+]
+
+
+def posting_key(url):
+    """The address of a posting, the same from every page that links to it.
+    Falls back to the url itself, stripped of tracking. None without a url."""
+    u = (url or "").strip()
+    if not u:
+        return None
+    for name, rx in KEY_RES:
+        m = rx.search(u)
+        if m:
+            return name + ":" + "/".join(g for g in m.groups() if g)
+    u = re.sub(r"[?&](utm_[a-z]+|ref|source|src|gh_src)=[^&#]*", "", u)
+    u = re.sub(r"\?$", "", u.split("#")[0]).rstrip("/").lower()
+    return re.sub(r"^https?://(www\.)?", "", u)
+
+
+def rank(source):
+    """A company board is the original; an aggregator republishes it. When
+    both report the same posting the board's fields win and the aggregator
+    is recorded as another place it was seen. Never the other way round -
+    that is how 110 board rows were overwritten by designjobsworld's copy."""
+    return 1 if (source or "").split("/")[0] in AGGREGATORS else 2
 
 
 def get_json(url):
@@ -830,30 +869,51 @@ def scrape(sources, on_batch=None):
 
 
 def update(previous, found, run_id, stamp):
-    """Fold this run's findings into the pool, minting ids only for new roles."""
+    """Fold this run's findings into the pool, minting ids only for new
+    postings. One row per posting, matched by posting_key; company+title only
+    identifies a row that has no url."""
     by_id = {r["id"]: r for r in previous}
-    by_identity, by_url = {}, {}
+    by_key, by_identity, collisions = {}, {}, 0
     for r in previous:
-        by_identity[identity(r["company"], r["title"])] = r["id"]
-        if r.get("url"):
-            by_url[r["url"]] = r["id"]
+        k = posting_key(r.get("url"))
+        if k:
+            if k in by_key:
+                collisions += 1           # two old rows, one posting: first wins
+            by_key.setdefault(k, r["id"])
+        else:
+            by_identity.setdefault(identity(r["company"], r["title"]), r["id"])
+    if collisions:
+        print(f"  {collisions} previous rows shared a posting with another; "
+              f"folded into one", flush=True)
 
-    seen, minted = set(), 0
+    seen, minted, merged = set(), 0, 0
     for rec in found:
-        rid = by_url.get(rec.get("url")) or by_identity.get(identity(rec["company"], rec["title"]))
+        k = posting_key(rec.get("url"))
+        rid = by_key.get(k) if k else by_identity.get(identity(rec["company"], rec["title"]))
         if rid is None:
             rid = uuid.uuid4().hex[:16]
             minted += 1
             by_id[rid] = {"id": rid, "first_seen": stamp, "first_run": run_id}
-            by_identity[identity(rec["company"], rec["title"])] = rid
+            if k:
+                by_key[k] = rid
+            else:
+                by_identity[identity(rec["company"], rec["title"])] = rid
         prev = by_id[rid]
-        prev.update(rec)
+        sources = set(prev.get("sources") or ([prev["source"]] if prev.get("source") else []))
+        if not prev.get("source") or rank(rec["source"]) >= rank(prev["source"]):
+            prev.update(rec)              # the original, or the latest copy of a copy
+        else:
+            merged += 1                   # a copy of a posting the board reported: noted, not applied
+        sources.add(rec["source"])
+        prev["sources"] = sorted(sources)
         prev["id"] = rid                       # identity is the pool's, not the source's
         prev.setdefault("first_seen", stamp)
         prev.setdefault("first_run", run_id)
         prev["last_seen"] = stamp
         prev["active"] = True
         seen.add(rid)
+    if merged:
+        print(f"  {merged} postings seen at more than one source, one row each", flush=True)
     for rid, rec in by_id.items():
         if rid in seen:
             continue

@@ -16,6 +16,7 @@ nothing else changes shape.
 POOL_FIELDS = [
     "id",            # minted once, on first sight, never recomputed
     "title", "company", "url", "apply_url", "source",
+    "sources",       # every source this posting was seen at; `source` is the primary
     # the normalised view of a role
     "remote",        # True / False / None when the posting does not say
     "country",       # free text as posted, normalised where we can
