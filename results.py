@@ -23,23 +23,33 @@ RESULTS_FILE = ROOT / "data" / "results.json"
 
 def build(pool_doc, verdicts_doc):
     verdicts = verdicts_doc.get("jobs", {})
-    roles, lanes, cut = [], {k: [] for k in LANES}, []
+    roles, lanes, cut, title_cuts, unjudged = [], {k: [] for k in LANES}, [], 0, 0
     for rec in pool_doc["jobs"]:
+        if not rec.get("active"):
+            continue
         v = dict(DEFAULT_VERDICT)
         v.update(verdicts.get(rec["id"], {}))
+        if v.get("stage") == "L1":
+            title_cuts += 1          # kept, with its reason, in verdicts.json
+            continue
+        if not v.get("judged"):
+            unjudged += 1            # the judge has not reached it yet
+            continue
         role = dict(rec)
         role["verdict"] = v
         roles.append(role)
-        if not rec.get("active"):
-            continue
         (cut if v["cut"] else lanes[v["lane"]]).append(rec["id"])
+    # The board fetches this file. 47,000 title cuts would make it 25MB for
+    # rows no lane shows; they stay in verdicts.json with their reasons.
     return {
         "generated_at": pool_doc.get("generated_at"),
         "run_id": pool_doc.get("run_id"),
+        "criteria": verdicts_doc.get("criteria"),
+        "model": verdicts_doc.get("model"),
         "counts": {**{k: len(v) for k, v in lanes.items()},
-                   "cut": len(cut),
+                   "cut": len(cut), "title_cuts": title_cuts, "unjudged": unjudged,
                    "active": sum(1 for r in pool_doc["jobs"] if r.get("active")),
-                   "total": len(roles)},
+                   "total": len(pool_doc["jobs"])},
         "lanes": lanes,
         "cut": cut,
         "sources": pool_doc.get("sources", {}),

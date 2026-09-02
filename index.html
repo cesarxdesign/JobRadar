@@ -109,10 +109,11 @@ function render(){
     el.className="card"+(SEL===r.id?" sel":"");
     el.innerHTML='<div class="t">'+esc(r.title)+'</div><div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
-      + (r.remote===true?'<span class="tag y">Remote</span>':r.remote===false?'<span class="tag n">On-site</span>':'<span class="tag">Remote ?</span>')
+      + placeTag(r)
       + (r.location?'<span class="tag">'+esc(r.location)+'</span>':'')
-      + (r.salary?'<span class="tag y">'+esc(r.salary)+'</span>':'')
-      + (r.years_xp?'<span class="tag">'+r.years_xp+'y XP</span>':'')
+      + (f(r).salary?'<span class="tag y">'+esc(f(r).salary)+'</span>':'')
+      + (f(r).years_xp?'<span class="tag">'+f(r).years_xp+'y XP</span>':'')
+      + (f(r).seniority?'<span class="tag">'+esc(f(r).seniority)+'</span>':'')
       +'</div>';
     el.onclick=()=>{SEL=r.id;render();};
     $("list").appendChild(el);
@@ -121,6 +122,16 @@ function render(){
 }
 
 function fact(k,v){return '<div class="fact"><div class="fk">'+k+'</div><div class="fv">'+(v||"—")+'</div></div>';}
+// What the judge extracted from the posting. The pool's own remote/salary
+// guesses are metadata; these come from reading the page.
+const f = r => (r.verdict&&r.verdict.fields)||{};
+function placeTag(r){
+  const v=r.verdict||{}, k=f(r).remote;
+  if(v.place==="remote") return '<span class="tag y">Remote</span>';
+  if(v.place==="pt_onsite") return '<span class="tag y">'+esc(k||"in Portugal")+'</span>';
+  if(k) return '<span class="tag">'+esc(k)+'</span>';
+  return '<span class="tag">place ?</span>';
+}
 
 function renderPane(){
   const r=SEL&&roleById(SEL);
@@ -129,17 +140,23 @@ function renderPane(){
   $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
     +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
     +'<div class="facts">'
-    + fact("Remote", r.remote===true?"Yes":r.remote===false?"No":"Not stated")
-    + fact("Country", esc(r.country||r.location))
-    + fact("Salary", esc(r.salary))
-    + fact("Years XP", r.years_xp)
-    + fact("Reports to", esc(r.reports_to))
-    + fact("Source", esc(r.source))
+    + fact("Location", esc(r.location))
+    + fact("Remote", esc(f(r).remote))
+    + fact("Countries", esc((f(r).countries||[]).join(", ")))
+    + fact("Portugal ok", esc(f(r).portugal_ok))
+    + fact("Seniority", esc(f(r).seniority))
+    + fact("Salary", esc(f(r).salary))
+    + fact("Years XP", f(r).years_xp)
+    + fact("Language", esc(f(r).language))
+    + fact("Reports to", esc(f(r).reports_to))
+    + fact("Source", esc((r.sources||[r.source]).join(", ")))
     +'</div>'
     + (r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener" style="color:var(--acc)">Open posting ↗</a>':'')
     + (RR?'<div class="acts"><button id="b-app">applied</button><button id="b-dis">discard</button>'
         +(routing(r.id)?'<button id="b-clr">clear</button>':'')+'</div>':'')
-    + (v.why&&v.why.length?'<div class="why"><b>Judge said</b><ul>'+v.why.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>':'');
+    + (v.why&&v.why.length?'<div class="why"><b>Judge said</b> · role '+esc(v.role)+' · place '+esc(v.place)
+        +' · '+esc(v.confidence||"")+' confidence · read the '+esc(v.text||"posting")
+        +'<ul>'+v.why.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>':'');
   if(RR){
     const set=d=>{decide(r.id,d);};
     $("b-app").onclick=()=>set("applied");
@@ -171,8 +188,8 @@ async function flushRR(){
 function rrUI(on){
   document.querySelectorAll(".tab.rr").forEach(t=>{t.hidden=!on;});
   const b=$("route");
-  b.textContent=on?"↻ Run now":"⇱ RadarRoute";
-  b.title=on?"full run on this Mac":"Drop RadarRouting.json here, or click to pick it";
+  b.textContent=on?"⇱ RadarRoute · on":"⇱ RadarRoute";
+  b.title=on?"RadarRouting.json is attached; every decision writes back to it":"Drop RadarRouting.json here, or click to pick it";
 }
 async function adopt(h){
   const d=JSON.parse(await (await h.getFile()).text());
@@ -189,7 +206,6 @@ function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("rad
 (function(){
   const b=$("route");
   b.onclick=async()=>{
-    if(RR) return runNow();
     if(!window.showOpenFilePicker) return toast("Needs Chrome — Safari can't write files.");
     try{const [h]=await window.showOpenFilePicker({types:[{description:"RadarRouting",accept:{"application/json":[".json"]}}]});await adopt(h);}
     catch(e){if(e.name!=="AbortError") toast("Not a RadarRouting file.");}
@@ -208,13 +224,6 @@ function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("rad
     if(h&&await h.queryPermission({mode:"readwrite"})==="granted") await adopt(h);}catch(e){}})();
 })();
 
-async function runNow(){
-  const b=$("route");b.disabled=true;b.textContent="↻ running…";
-  try{await fetch("http://127.0.0.1:8765/api/run-radar",{method:"POST",mode:"no-cors"});
-    toast("Run started on this Mac.");}catch(e){toast("Nothing listening on this Mac.");}
-  setTimeout(()=>{b.disabled=false;b.textContent="↻ Run now";},3000);
-}
-
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
   LANE=t.dataset.lane;SEL=null;
   document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
@@ -222,7 +231,8 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
 
 fetch("data/results.json?t="+Date.now()).then(r=>r.json()).then(d=>{
   DATA=d;
-  $("stamp").textContent=(d.counts.active||0)+" active · updated "+(d.generated_at||"").replace("T"," ").slice(0,16);
+  $("stamp").textContent=(d.counts.active||0)+" active · "+(d.counts.title_cuts||0)+" cut on title · "
+    +(d.counts.unjudged?d.counts.unjudged+" not yet judged · ":"")+"updated "+(d.generated_at||"").replace("T"," ").slice(0,16);
   render();
 }).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";});
 </script>

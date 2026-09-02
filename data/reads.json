@@ -50313,5 +50313,1066 @@
   },
   "lane": "unsure",
   "criteria_version": "2026-09-02.6"
+ },
+ "27a2183e3504571a": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote work is restricted to the United States; Cesar lives in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Group Manager, Product Design - Back Office",
+   "company": "jobgether (partner company unnamed)",
+   "seniority": "lead",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 185,300–297,400",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "6e9f2d3b05714415": {
+  "role_verdict": "no",
+  "place_verdict": "remote",
+  "cut": true,
+  "reason": "This is a data center infrastructure leadership role, not product/UX/UI design or design engineering.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Head of Data Center Design",
+   "company": "Partner company (unnamed)",
+   "seniority": "head",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "25fe267c23014b09": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Instructional Designer is educational/training design, not product design or UX/UI engineering.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Instructional Designer II",
+   "company": "Partner company (unnamed)",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 54,760",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "ab950706da695249": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is learning experience design / instructional design, not product design. The role is US-based with remote eligibility only for US states and territories.",
+  "confidence": "high",
+  "inferred": [
+   "remote",
+   "onsite_days"
+  ],
+  "fields": {
+   "role": "Lead Learning Experience Designer",
+   "company": "jobgether (partner company unnamed)",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 117,437–$177,624",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "2f33f50b84085a07": {
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Lead Product Designer role with marketplace expertise; fully remote with Portugal explicitly listed as location.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lead Product Designer, Marketplace",
+   "company": "Partner company (unnamed, managed by jobgether)",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": "USD 140,000–170,000",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-02.6"
+ },
+ "3866b023cd307e4b": {
+  "role_verdict": "no",
+  "place_verdict": "remote",
+  "cut": true,
+  "reason": "MEP Design Engineer is infrastructure/mechanical engineering, not product design or design-adjacent engineering.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "MEP Design Engineer",
+   "company": "Partner company (unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Netherlands"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "be05679fdd028d8a": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is genuine product design (mid-level UI/UX), but location is Brazil with no remote eligibility for Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Mid-Level UI/UX Designer",
+   "company": "Partner company (managed by jobgether)",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Brazil"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "7eeb734108b28e76": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is graphic design, motion, and brand work—not product/UX design. Location is US-based with East Coast preference; not remote for Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote inferred from 'Location Type: remote' and 'remote work opportunity' stated"
+  ],
+  "fields": {
+   "role": "PBA Lead Designer",
+   "company": "Professional sports property (partner company)",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$80,000–$90,000",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "951f6f0551d1cdff": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Performance Creative Designer role is brand/marketing/advertising creative work, not product design. Location restricted to India despite remote label.",
+  "confidence": "high",
+  "inferred": [
+   "remote inferred from 'Location Type: remote' field"
+  ],
+  "fields": {
+   "role": "Performance Creative Designer",
+   "company": "jobgether (partner company unnamed)",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "97ecc325c630105a": {
+  "role_verdict": "no",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "Product Manager role, not a design role. This is product strategy and configuration management, not product design, UX design, or design leadership.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Product Manager UX Orchestration",
+   "company": "Partner company (unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "19301aed4b04e9c3": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Project management role focused on construction and infrastructure, not product design. Location requires US residency in specific cities.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Project Manager - Design and Construction",
+   "company": "Partner company via jobgether",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 140,000–170,000",
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "4f93c17c6b0db9b1": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Retail designer role focused on architectural and interior design for commercial spaces, not product/UX design. Based in Mexico with no Portugal option.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Retail Designer",
+   "company": "jobgether (partner company not named)",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Mexico"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "9a00eecf400d06b9": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a sales role with interior design as a secondary component, not a product design role.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Sales and Design Consultant",
+   "company": "jobgether (partner company not named)",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "93ce84ac93f18ebb": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Pure front-end engineering role focused on code (HTML5, CSS3, JavaScript, C#, ASP.NET MVC 5, SQL Server) rather than product design or UX leadership.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Front-End UI/UX Engineer",
+   "company": "Partner company (unnamed, listed through jobgether)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "b54233e9c12acfa0": {
+  "role_verdict": "no",
+  "place_verdict": "remote",
+  "cut": true,
+  "reason": "Game AI Designer is not product/UX/UI design; it is game design and AI systems work.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Game AI Designer",
+   "company": "jobgether (partner company not named)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "e3c887cbc615e0a4": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Instructional design and training development, not product/UX design. Also requires US citizenship and security clearance.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Instructional System Designer",
+   "company": "Partner company (unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "231540852efcbe4b": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Game level designer role, not product/UX/UI design. Canada residency requirement explicitly stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Level Designer",
+   "company": "Partner company (unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 115,000–$149,500",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "3ba741db81bc2d2f": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote-first with preferred onsite location in Bengaluru, India. Cesar is in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Product Designer (Founding Team)",
+   "company": "Partner company (managed by Jobgether)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "2317cbc06146d921": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role listed as Canada-only; Cesar lives in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Product Designer, AI",
+   "company": "jobgether (partner company unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "0b7a34e6cb769496": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to United States; Portugal is not eligible.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer, Federal Modernization",
+   "company": "Federal Modernization partner (via jobgether)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "5542b80c9d359c70": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role is restricted to Canada; Cesar lives in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "jobgether (partner company unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "b547867203756820": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "PCB design is hardware/engineering, not product design. Role requires US-based work despite remote label.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "SR PCB Designer",
+   "company": "jobgether (partner company)",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 12,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "04a6811c5be2164e": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Organizational design and research consulting, not product/UX design. US-based role requiring travel to US locations and US work authorization.",
+  "confidence": "high",
+  "inferred": [
+   "remote inferred from 'Location Type: remote', but overridden by travel and US authorization requirements"
+  ],
+  "fields": {
+   "role": "Sr. Consultant, Organizational Design",
+   "company": "Partner company (unnamed)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$100,000–$135,000",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "0e02b0c7c407645c": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is genuine senior product design, but location requires AEST working hours (Brisbane/GMT+10), which is incompatible with Portugal timezone.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Sr. UI/UX Designer",
+   "company": "Partner company (hired through Jobgether)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Brazil"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "b6b091049fffcdc9": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Visual/deck design is graphic design, not product design. Role requires US-based work.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Sr. Visual/Deck Designer",
+   "company": "jobgether (partner company not named)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "english"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "380a643e8ee9a1e1": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a hardware verification engineer role (SystemVerilog, UVM, chip design), not product design.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Staff Engineer - Design Verification",
+   "company": "Not named (partner company via jobgether)",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "56fb99179ade964e": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is a strong fit for senior product designer, but explicitly restricted to India-based candidates only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer",
+   "company": "jobgether (partner company)",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "english"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "15924a85df37c95f": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is an excellent fit (Staff Product Designer, growth leadership). Location is Ireland with remote work, but no indication Portugal is included in scope.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Staff Product Designer, Growth",
+   "company": "Not named (listed via Jobgether partner)",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Ireland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "ec682a8a5e374192": {
+  "role_verdict": "no",
+  "place_verdict": "remote",
+  "cut": true,
+  "reason": "This is a structural and architectural engineering role, not product/UX/UI design or design leadership.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Structural & Architectural Design Engineer",
+   "company": "Partner company (managed by jobgether)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Europe"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "ed9dee19e404f664": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is infrastructure/cabling engineering, not product design. Role is also UK-onsite despite remote label.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Structured Cabling Design Engineer",
+   "company": "Partner company (unnamed)",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "UK"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "33abdfc9743e90b2": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is genuine product design, but position is based in India with no Europe/Portugal scope.",
+  "confidence": "high",
+  "inferred": [
+   "remote inferred from 'Location Type: remote' field"
+  ],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "jobgether partner company (unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "d0e2df09de79c694": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role is restricted to India; Cesar lives in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer - AI Apps",
+   "company": "Partner company (via Jobgether)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "aeaa59596aa44c37": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote position restricted to United States; U.S. citizenship required.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Design Lead",
+   "company": "jobgether (partner company unnamed)",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 123,000 – 170,000",
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "f57525e735f70e75": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to India; Cesar lives in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "UX Designer",
+   "company": "jobgether (on behalf of partner company)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "1f1aa1a21f4c73f6": {
+  "role_verdict": "no",
+  "place_verdict": "remote",
+  "cut": true,
+  "reason": "WordPress Designer with Elementor is web development/implementation, not product design or UX/UI design work.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "WordPress Designer (Elementor Expert)",
+   "company": "Partner company (unnamed)",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Switzerland"
+   ],
+   "portugal_ok": "yes",
+   "salary": "USD 600-1,000/month",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "4abe473934fbbf3a": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Game Economy Designer is not a design role; it's a games industry economy/balance specialist. Location is hybrid in Berlin with no remote option.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Game Economy Designer",
+   "company": "Kolibri Games",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "374f416b1b1b04a5": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Motion graphics and video production role (70% focus) is marketing/brand work, not product design. Onsite in Ho Chi Minh City, not Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Creative Designer",
+   "company": "lalamove",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Vietnam"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "84d3339e56f93f89": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is marketing/creative production with AI focus, not product design; onsite in Kuala Lumpur, not Portugal or remote.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Creative Designer (AI Focus)",
+   "company": "Lalamove",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Malaysia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "34ba9bb23cb51ffa": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Graphic design and marketing role, not product/UX design. Onsite in London, not remote or Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Multimedia Designer",
+   "company": "Lalamove",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 2,
+   "reports_to": "Marketing Manager",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "97bc6aa04986c35a": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is product design (UI/UX), but location is onsite in Hong Kong with no remote option stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer (UI/UX)",
+   "company": "Lalamove",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Hong Kong SAR"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
  }
 }
