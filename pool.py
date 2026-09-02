@@ -87,6 +87,18 @@ def posting_key(url):
     return re.sub(r"^https?://(www\.)?", "", u)
 
 
+ATS_KEYS = tuple(name + ":" for name, _ in KEY_RES)
+
+
+def copy_key(company, title):
+    """Second tier, for aggregators that link to their own page and not to
+    the original (Jobicy, Arbeitnow, Remotive): the same company and title as
+    a posting a board reported THIS run is a copy of that posting. Company
+    names are squashed - "Eight Sleep" and the slug "eightsleep" are one."""
+    return (re.sub(r"[^a-z0-9]", "", (company or "").lower()),
+            norm(re.sub(r"\([^)]*\)", " ", title or "")))
+
+
 def rank(source):
     """A company board is the original; an aggregator republishes it. When
     both report the same posting the board's fields win and the aggregator
@@ -887,9 +899,14 @@ def update(previous, found, run_id, stamp):
               f"folded into one", flush=True)
 
     seen, minted, merged = set(), 0, 0
+    by_copy = {}                              # this run's board postings, by company+title
     for rec in found:
         k = posting_key(rec.get("url"))
-        rid = by_key.get(k) if k else by_identity.get(identity(rec["company"], rec["title"]))
+        rid = None
+        if rank(rec["source"]) == 1 and not (k or "").startswith(ATS_KEYS):
+            rid = by_copy.get(copy_key(rec["company"], rec["title"]))      # tier 2
+        if rid is None:
+            rid = by_key.get(k) if k else by_identity.get(identity(rec["company"], rec["title"]))
         if rid is None:
             rid = uuid.uuid4().hex[:16]
             minted += 1
@@ -906,6 +923,8 @@ def update(previous, found, run_id, stamp):
             merged += 1                   # a copy of a posting the board reported: noted, not applied
         sources.add(rec["source"])
         prev["sources"] = sorted(sources)
+        if rank(rec["source"]) == 2:
+            by_copy.setdefault(copy_key(rec["company"], rec["title"]), rid)
         prev["id"] = rid                       # identity is the pool's, not the source's
         prev.setdefault("first_seen", stamp)
         prev.setdefault("first_run", run_id)
