@@ -31,6 +31,42 @@ POOL_FIELDS = [
     # jd_text is bulk evidence and lives in data/jd.json, keyed by id
 ]
 
+# ---------------------------------------------------------------- rendered
+# What the judge is allowed to see, and the panel label each one appears under
+# on the posting. NOTHING may reach the judge that a person cannot read on the
+# page. An API field that exists in the response but renders nowhere - a
+# company's registered mailing address, an internal id, a board flag - is not
+# evidence and must never be merged into a role.
+RENDERED = {
+    "title":           "the title block",
+    "company":         "the title block",
+    "location":        "side panel: Location",
+    "workplace":       "side panel: Location Type",
+    "employment_type": "side panel: Employment Type",
+    "department":      "side panel: Department",
+    "salary":          "side panel: Compensation",
+    "restrictions":    "side panel: location restrictions, where a board shows them",
+    "jd_text":         "the description",
+}
+
+
+def check_rendered(rec):
+    """Raise if a role carries something the page does not show.
+
+    Circle's Ashby record has address.postalAddress.addressCountry =
+    'United States' - a Delaware agent address. Merging it turned the panel's
+    "Remote" into "Remote; United States" and the judge cut the role on a
+    restriction no human could see. Guard, not a promise to remember.
+    """
+    junk = [k for k in ("address", "postalAddress", "addressCountry", "isRemote",
+                        "country", "offices", "secondaryLocations", "atsLocation")
+            if k in rec]
+    if junk:
+        raise ValueError(f"{rec.get('company')} / {rec.get('title')}: carries "
+                         f"non-rendered field(s) {junk} - the page does not show these")
+    return rec
+
+
 # ---------------------------------------------------------------- judge
 # Two independent axes. A lane is a function of both, never of one.
 #   role  - is this a role for him?          yes | no | unclear

@@ -1,0 +1,771 @@
+{
+ "name": "batchB",
+ "criteria": "criteria 2026-09-02.6 — 0 passes, 20 cuts, drawn from 252 roles read",
+ "roles": [
+  {
+   "n": 1,
+   "bucket": "cut",
+   "company": "plaid",
+   "title": "Product Designer",
+   "url": "https://jobs.ashbyhq.com/plaid/add52eef-327d-4dcf-aad1-82ae6b9abc50",
+   "location": "San Francisco HQ; Seattle Office; New York City Office",
+   "source": "ashby/plaid",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Hybrid role in San Francisco, Seattle, and NYC with no remote option stated; Portugal is not listed or covered."
+   },
+   "fields": {
+    "role": "Product Designer",
+    "company": "Plaid",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 4,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "We believe that the way people interact with their finances will drastically improve in the next few years. We’re dedicated to empowering this transformation by building the tools and experiences that thousands of developers use to create their own products. Plaid powers the tools millions of people rely on to live a healthier financial life. We work with thousands of companies like Venmo, SoFi, several of the Fortune 500, and many of the largest banks to make it easy for people to connect their financial accounts to the apps and services they want to use. Plaid’s network covers 12,000 financial institutions across the US, Canada, UK and Europe. Founded in 2013, the company is headquartered in San Francisco with offices in New York, Seattle, Washington D.C., Raleigh, London, and Amsterdam.\n\nThe design team at Plaid is made up of product designers, researchers, and content strategists who work with our cross-functional partners to create Plaid’s products. Please visit https://designedbyplaid.com/ to learn more about the Design team.\n\nThe Consumer team at Plaid builds and owns the key consumer touchpoints from Plaid: Plaid Link and our future direct to consumer experiences. Plaid Link is the embedded UX that all of Plaid’s customers integrate in order to securely have their end-users share their bank data via Plaid, and Plaid’s core business is built on consumer trust and confidence in that platform. It’s this team’s responsibility to build on the success of the existing platform to keep innovating and delivering high quality consumer experiences that unlock financial freedom for users leveraging Plaid’s products.\n\nWe're looking for an experienced Product Designer to own the design of Plaid’s consumer experiences. This is novel scope: a first-party, direct-to-consumer product inside a company most people know only through other companies' apps. You'll be the sole designer on a small, senior team, partnering closely with one PM and one engineering lead (as well as a nimble team of IC engineers). Your pod is also part of the larger Consumer team, and you’ll get to work across it on other projects too. You'll set the quality bar for the surface and take work from ambiguous problem to shipped, polished detail. We care a great deal about craft here — this is the product where Plaid's brand is judged directly by consumers, so the details are the substance, not the finish. We also work fast, and we expect the person in this role to have already made agentic development a real part of how they design and build.\n\nResponsibilities:\n\n•\nOwn consumer surface design end to end, from problem definition through pixel-level polish\n\n•\nSet and hold the visual and interaction quality bar for Plaid's consumer product\n\n•\nPartner directly with product and engineering from planning through execution, shaping what gets built\n\n•\nBuild working prototypes — including with AI agents — to test ideas before committing engineering time\n\n•\nProduce high-quality work from wireframes and user flows to pixel-perfect prototypes with delightful interactions\n\n•\nAdvocate for consumers and for user-centered process across the team\n\n•\nContribute to design culture through collaboration, presenting work, and sharing feedback\n\nQualifications:\n\n•\n4+ years creating and shipping quality digital products, with consumer experience across mobile and web\n\n•\nExceptional visual and interaction craft — you can build nearly anything yourself, and the details are right\n\n•\nYou've genuinely integrated AI agents into how you design and build, and can speak to what that changed\n\n•\nStrong verbal and visual presentation skills and an articulate point of view about design\n\n•\nA proven record of influencing team direction and planning, and of tying design to business goals and metrics\n\n•\nNice to have: you ship your own code, or have worked as a design engineer\n\nOur mission at Plaid is to unlock financial freedom for everyone. To support that mission, we seek to build a diverse team of driven individuals who care deeply about making the financial ecosystem more equitable. We recognize that strong qualifications can come from both prior work experiences and lived experiences. We encourage you to apply to a role even if your experience doesn't fully match the job description. We are always looking for team members that will bring something unique to Plaid!\n\nPlaid is proud to be an equal opportunity employer and values diversity at our company. We do not discriminate based on race, color, national origin, ethnicity, religion or religious belief, sex (including pregnancy, childbirth, or related medical conditions), sexual orientation, gender, gender identity, gender expression, transgender status, sexual stereotypes, age, military or veteran status, disability, or other applicable legally protected characteristics. We also consider qualified applicants with criminal histories, consistent with applicable federal, state, and local laws. Plaid is committed to providing reasonable accommodations for candidates with disabilities in our recruiting process. If you need any assistance with your application or interviews due to a disability, please let us know at accommodations@plaid.com.\n\nPlease review our Candidate Privacy Notice here .\n\nAdditional compensation in the form(s) of equity and/or commission are dependent on the position offered. Plaid provides a comprehensive benefit plan, including medical, dental, vision, and 401(k). Pay is based on factors such as (but not limited to) scope and responsibilities of the position, candidate's work experience and skillset, and location. Pay and benefits are subject to change at any time, consistent with the terms of any applicable compensation or benefit plans.",
+   "workplace": "hybrid",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 2,
+   "bucket": "cut",
+   "company": "lovable",
+   "title": "Staff / Principal Design Engineer, Web",
+   "url": "https://jobs.ashbyhq.com/lovable/51885ae5-4f4c-46c4-abd3-d7aad1c8d9c0",
+   "location": "New York; London",
+   "source": "ashby/lovable",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Pure frontend engineering role focused on React/TypeScript, not design-led. Location restricted to New York and London."
+   },
+   "fields": {
+    "role": "Staff / Principal Design Engineer, Web",
+    "company": "Lovable",
+    "seniority": "staff",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States",
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "TL;DR - We're seeking an exceptional Design Engineer who combines strong frontend engineering fundamentals with a sharp eye for craft to execute on our website. You’ll work closely with design and marketing to build world-class web content helping empower the next generation of creators and builders.\n\nWhy Lovable?\n\nLovable is the software creation platform that gives people the power to act on the problems closest to them. For decades, turning an idea into software required so much capital, technical fluency, and time that many ideas never came to life. Lovable is the counterargument: a platform for all people with ideas, ambition, and problems worth solving. From solopreneurs to small business owners to teams at companies like Adidas and Zendesk, people have built over 60 million projects on Lovable since its launch in November 2024. And we’re just getting started.\n\nWe’re building a generational company from Stockholm, with growing teams in London, Boston, New York, and San Francisco. Our team is small, talent-dense, and moving quickly, with a culture rooted in extreme ownership, high velocity, and low-ego collaboration. We look for people who care deeply, ship fast, and are eager to make a dent in the world.\n\nLovable is one of TIME’s 100 Most Influential Companies and has been recognized on the Forbes AI 50 and CNBC Disruptor 50, reflecting our momentum as one of Europe’s fastest-growing AI companies and one of the most ambitious places to build in this next era of software.\n\nWhat we’re looking for\n\n•\n10+ years of years experience, shipping websites and landing pages users genuinely love\n\n•\nPortfolio demonstrating landing pages and advanced web interactions (if you don’t have a portfolio of landing pages - check out our other roles)\n\n•\nAbility to make smart trade-offs between speed and polish, knowing when to ship and when to refine\n\n•\nStrong fundamental understanding of modern frontend systems - React architecture, state management, performance, accessibility, and scalable UI patterns\n\n•\nExperience translating scrappy explorations into production-ready experiences\n\n•\nStrong design sense with an eye for detail, accessibility, and usability\n\n•\nIdeally - you push the boundaries of the web with technologies like WebGL\n\nWhat you’ll do\n\nIn one sentence: Own and elevate landing pages and web experiences that help share Lovable with the world.\n\n•\nBuild landing pages that delight, also designing interactions or pairing closely with designers\n\n•\nImplement web interactions in React/TypeScript with obsessive attention to performance, responsiveness, and cross-browser consistency\n\n•\nDrive front-end execution - pioneering new interaction patterns, micro-animations, and delightful details that elevate the entire experience\n\n•\nCollaborate with marketing, helping share Lovable with the world\n\n•\nExplore and iterate on visual designs with designers, translating explorations into scalable, web-native implementations\n\n•\nBuild and maintain reusable components that enhance consistency while enabling creativity across both product and marketing\n\n•\nReinvent how teams build for the web\n\nOur tech stack\n\nWe're building with tools that both humans and AI love:\n\n•\nFrontend: React, Tailwind\n\n•\nBackend: Golang and Rust\n\n•\nCloud: Cloudflare, GCP, AWS, Many LLM providers\n\n•\nDevOps & Tooling: Github Actions, Grafana, OTEL, , infra-as-code (Terraform)\n\nAnd always on the lookout for what's next!\n\nHow we hire\n\n•\nFill in a short form then jump on an intro call with recruiter.\n\n•\nShow us some of your work you’re really proud of.\n\n•\nShow us how you approach problems during several technical interviews, including a technical screening where we evaluate frontend engineering fundamentals at the same level we expect from Product Engineers.\n\n•\nIn some cases, we may opt to do paid, trial work.\n\nAbout your application\n\n•\nPlease submit your application in English - it’s our company language so you’ll be speaking lots of it if you join\n\n•\nWe treat all candidates equally - if you’re interested please apply through our careers portal\n\n•\nFor this role, we're prioritising candidates based in New York",
+   "workplace": null,
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 3,
+   "bucket": "cut",
+   "company": "notion",
+   "title": "Product Designer",
+   "url": "https://jobs.ashbyhq.com/notion/d177d052-ef57-4900-acf2-d58e9eded620",
+   "location": "San Francisco, California; New York, New York",
+   "source": "ashby/notion",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Hybrid role requiring 3 days/week in San Francisco or New York; not Portugal-based."
+   },
+   "fields": {
+    "role": "Product Designer",
+    "company": "Notion",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 285,000 - 330,000",
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Who We Are\n\nNotion is the collaborative AI workspace where teams and agents think together . We're building one place where your knowledge, projects, meetings, and AI tools live side by side, so work is faster, clearer, and less fragmented. Millions of individuals, small teams, and large companies run their work on Notion.\n\nNotinos (our employees) are customer zero in bringing this future of work to life. We care about craft, building things that last, and the belief that great work is still fundamentally human. Our goal isn’t to ship the next feature. Each and every team of Notinos is working to set the standard for how humans work together in the AI era. From building a business’s system of record to making and managing AI agents to automating away the busy work, we care deeply about giving our customers more time for their life’s work.\n\nAbout The Role\n\nImagine yourself in the 1970s or 80s thinking through how computing should look and feel for people who had never seen one before. That's what we're trying to do at Notion — make software that feels timeless, with the craftsmanship of German cameras, playfulness of Japanese toys, and mass appeal of Coca-Cola. We have no end of fascinating challenges that can only be solved by someone with innate product & UX sense, technical aptitude, great taste, and impeccable craft.\n\nThis role can be based in either San Francisco or New York City. We work from our offices on Mondays, Tuesdays and Thursdays (our Anchor Days) because we do our best thinking and building together in person. We’re looking for someone who’s excited to work alongside the team during those days.\n\nWhat You'll Achieve:\n\n•\nDesign product concepts that balance vision, craft, speed, and business potential.\n\n•\nCraft every detail of new product features, from idea to UX to pixel-perfect execution.\n\n•\nRun projects end to end with engineers to drive your vision to the ship line.\n\n•\nPartner closely with our Customer Experience, Sales, and Customer Success teams to understand what each of our diverse user segments need, want, and love about Notion. Use this data and acquired intuition to prioritize, plan, and scope our product roadmap.\n\n•\nWork with Marketing to devise new ways to tell great stories throughout the user lifecycle, and across our site, product, help guides and other channels.\n\n•\nCreate new patterns that are intuitive, practical, and convergent. Evolve our design system intentionally as we scale.\n\nSkills You'll Need to Bring:\n\n•\nYou have well-rounded skills and experience to run projects independently end to end. 5+ years of working experience.\n\n•\nYou seek to understand the needs of customers then explore and advocate for the strongest user experiences to solve their problems\n\n•\nYou enjoy untangling vague conceptual problems and have a sharp intuition for the most accessible mental models and flows, so users can immediately start gaining value out of the product.\n\n•\nYou create clear, intuitive, and visually appealing human interfaces.\n\n•\nYou care about business needs, implications, and practicality of your designs. You don't get stuck on pretty UI or deep abstractions and can balance between craft, speed, and the bottom line.\n\n•\nYou have strong beliefs, loosely held. You're a good listener who collaborates well with different stakeholders. You observe and internalize all inputs and feedback to help you reach an optimal decision.\n\n•\nYou understand how to tell stories using both words and visuals, and strategize the best ways to drive alignment.\n\n•\nYou value working cross-functionally with project management, engineering, research and data — as well as design peers.\n\nNice to Haves:\n\n•\nYou've designed and built great tools with small teams in the past.\n\n•\nYou bring unique strengths and perspectives to the team. We're looking to build a diverse team where our skills and experience can complement each other.\n\n•\nYou've experienced the pain of fragmented tools and information silos created by them, and have a strong urge to fix it.\n\n•\nYou're familiar with the work of computing heroes like Douglas Engelbart, Alan Kay, Bret Victor, etc. — and understand why we're big fans.\n\n•\nYou are a designer who can code!\n\nNotion is committed to providing highly competitive cash compensation, equity, and benefits. The compensation offered for this role will be based on multiple factors such as location, the role’s scope and complexity, and the candidate’s experience and expertise, and may vary from the range provided below. For roles based in San Francisco, the estimated base salary range for this role is $285,000 - $330,000 per year.\n\nBy clicking “Submit Application”, I understand and agree that Notion and its affiliates and subsidiaries will collect and process my information in accordance with Notion’s Global Recruiting Privacy Policy and NYLL 144 .\n\n#LI-Onsite\n\nA Note on AI\n\nYou don’t need deep AI expertise for every role, but we do expect every Notino to be intellectually curious, drawn to tinkering and discovery, and excited to use AI as a real collaborator in their work. For some roles, AI fluency is a core requirement — when that’s the case, we'll say so explicitly in the qualifications. People who thrive here don’t treat AI as a novelty. They use it to think better, and make their work easier for others to build on.\n\nEqual Opportunity & Accommodations\n\nWe hire talented people from a wide range of backgrounds. If you’re excited about this role but don’t meet every bullet, we still encourage you to apply. Notion is an equal opportunity employer and does not discriminate on the basis of any legally protected characteristic. Consistent with applicable law, we will consider for employment qualified applicants with arrest and conviction records. Notion provides reasonable accommodations during the application process; if you need one, please let your recruiter know.\n\nNotion is proud to be an equal opportunity employer. We do not discriminate in hiring or any employment decision based on race, color, religion, national origin, age, sex (including pregnancy, childbirth, or related medical conditions), marital status, ancestry, physical or mental disability, genetic information, veteran status, gender identity or expression, sexual orientation, or other applicable legally protected characteristic. Notion considers qualified applicants with criminal histories, consistent with applicable federal, state and local law. Notion is also committed to providing reasonable accommodations for qualified individuals with disabilities and disabled veterans in our job application procedures. If you need assistance or an accommodation due to a disability, please let your recruiter know.",
+   "workplace": "hybrid",
+   "employment_type": null,
+   "department": null,
+   "salary": "$285,000 - $330,000",
+   "restrictions": null
+  },
+  {
+   "n": 4,
+   "bucket": "cut",
+   "company": "lovable",
+   "title": "People Partner - Engineering, Product, Design (EPD)",
+   "url": "https://jobs.ashbyhq.com/lovable/82b7f137-3648-4996-b6ff-2b1e5d1a27d2",
+   "location": "London; Stockholm",
+   "source": "ashby/lovable",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "This is an HR Business Partner role, not a design role. It does not fall within product design, UX, UI, design systems, or design leadership."
+   },
+   "fields": {
+    "role": "People Partner - Engineering, Product, Design (EPD)",
+    "company": "Lovable",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom",
+     "Sweden"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "TL;DR: We're hiring a Human Resources Business Partner to partner with Engineering, Product & Design (EPD) at Lovable - our largest and fastest-growing organization. You'll act as a trusted advisor to the leadership team, and fly at many different altitudes every day. You’ll advise on org design, location strategy, talent planning, employee relations, manager effectiveness, and change management as we scale across Stockholm and London.\n\nThis is an in-office role is based in Stockholm or London.\n\nWhy Lovable?\n\nLovable is the software creation platform that gives people the power to act on the problems closest to them. For decades, turning an idea into software required so much capital, technical fluency, and time that many ideas never came to life. Lovable is the counterargument: a platform for all people with ideas, ambition, and problems worth solving. From solopreneurs to small business owners to teams at companies like Adidas and Zendesk, people have built over 60 million projects on Lovable since its launch in November 2024. And we’re just getting started.\n\nWe’re building a generational company from Stockholm, with growing teams in London, Boston, New York, and San Francisco. Our team is small, talent-dense, and moving quickly, with a culture rooted in extreme ownership, high velocity, and low-ego collaboration. We look for people who care deeply, ship fast, and are eager to make a dent in the world.\n\nLovable is one of TIME’s 100 Most Influential Companies and has been recognized on the Forbes AI 50 and CNBC Disruptor 50, reflecting our momentum as one of Europe’s fastest-growing AI companies and one of the most ambitious places to build in this next era of software.\n\nThe Role\n\nYou'll be deeply embedded with Engineering, Product, and Design as a strategic partner and operator: someone leaders trust for candid coaching, clear judgment, and pragmatic execution. You will spot patterns before they become problems, bring structure without slowing the team down, and turn People programs into AI enabled operating rhythms that work for a technical org.\n\nWhat You'll Do\n\n•\nStrategic People Partnership — build deep partnerships with EPD leaders and act as a trusted advisor on the people decisions that shape the business: team design, leadership effectiveness, talent density, retention, and change.\n\n•\nAI-Native People Operations — rethink how work gets done in an AI-native company: experiment with AI-enabled workflows to increase velocity and craftsmanship (e.g., manager enablement, insight generation, communications, and operating rhythms), and help EPD leaders adopt them in a thoughtful, human-first way.\n\n•\nOrg Design & Headcount Planning — partner with Eng Leads, Finance, Recruiting, and People Ops to bring clarity and discipline to workforce planning, reporting lines, role definition, spans/layers, contractor strategy, and future org shape.\n\n•\nPerformance Reviews — Run EPD's quarterly Signal Review cycle end-to-end, including manager prep, calibration, monitor/at-risk categorization, level corrections, follow-through, and clean operating rhythms.\n\n•\nTalent Insights & Retention — use qualitative signal and people data to identify hot spots, flight risks, manager gaps, and team-level patterns early; translate those insights into practical interventions.\n\n•\nEmployee Relations & Risk Management — own complex employee situations, performance improvement plans, investigations, resignations, probation issues, and terminations for EPD in partnership with Legal and People Ops.\n\n•\nManager & Leadership Coaching — coach technical leaders through hard conversations, promotion readiness, org changes, feedback, accountability, team health, and moments where clarity matters more than consensus.\n\n•\nPeople Program Execution — help shape and roll out scalable People programs for EPD, including manager enablement, career pathing, leveling consistency, compensation cycles, engagement follow-up, and change management.\n\nWhat We're Looking For\n\n•\n10+ years as an HRBP or People Partner, with meaningful experience directly supporting Engineering, Product, Design, Research, or similarly technical organizations.\n\n•\nExperience at an AI-native, developer tools, product-led, or high-growth technology company.\n\n•\nStrong business judgment and the ability to connect people decisions to company priorities, product velocity, leadership effectiveness, and team performance.\n\n•\nExcellent judgment in employee relations, including sensitive performance, conduct, probation, resignation, and termination situations.\n\n•\nComfortable giving hard feedback to senior technical leaders while maintaining strong relationships and discretion.\n\n•\nComfort with ambiguity, pace, and imperfect systems in a company where structure is still being built in real time.\n\nAbout your application\n\nPlease submit your application in English. It’s our company language, so you’ll be speaking lots of it if you join.\n\nWe treat all candidates equally - if you’re interested, please apply through our careers portal.",
+   "workplace": "onsite",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 5,
+   "bucket": "cut",
+   "company": "miro",
+   "title": "Director Product Design",
+   "url": "https://jobs.ashbyhq.com/miro/04795998-7f24-465c-b413-8b4cb0c0d864",
+   "location": "Copenhagen",
+   "source": "ashby/miro",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Director of Product Design is genuinely design leadership; location is Copenhagen with no remote option stated."
+   },
+   "fields": {
+    "role": "Director of Product Design",
+    "company": "Miro",
+    "seniority": "director",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Denmark"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "About the Team\n\nDesign at Miro sits at the heart of how millions of people experience collaboration. Our product design team works across the full breadth of the platform, from the foundational canvas experience to the emerging AI-powered capabilities that are redefining how teams think, create, and build together. We're a team that cares deeply about craft, moves with intention, and believes that great design is inseparable from great outcomes.\n\nAs Miro continues to grow and evolve, the design team is scaling to meet that ambition. We're investing in leadership that can raise the bar on both the quality of our work and the health of our teams, people who understand that building a great design org and shipping great product experiences are the same job.\n\nAbout the Role\n\nAs Director of Product Design, you will lead a small team and be an active designer yourself. This is not a role where leadership means distance from the work. You'll be the creative director for your area of the product, shape how design thinks about problems and solutions, and then roll up your sleeves to ensure the execution matches the vision.\n\nThis role is critical because Miro is at an inflection point. AI is changing what collaboration software can and should be, and the design decisions made now will shape how teams around the world work for years to come. You'll have the scope, the resources, and the mandate to do some of the most consequential design work of your career.\n\nWhat you’ll do\n\n•\nSet the creative vision for your product area and hold the bar for it — not just in words, but in the work itself. You'll define what good looks like, then stay close enough to the craft to know when you're getting there and when you're not.\n\n•\nLead, mentor, and grow a team of product designers across multiple levels, building a culture where rigorous critique and psychological safety exist in the same room.\n\n•\nGet your hands dirty at the moments that matter, shaping early frameworks when the problem is still fuzzy, writing the interaction logic that unlocks a stuck design, pushing the details on a surface that's going to be seen by millions.\n\n•\nDrive design strategy across the full Discover, Define, and Deliver lifecycle, making sure the team is asking the right questions before they're crafting the right answers.\n\n•\nAlign stakeholders across Product, Engineering, and Analytics around a shared design direction, and hold that direction with conviction through the ambiguity and tradeoffs of real product development.\n\n•\nRun design critiques that are genuinely useful: direct, and focused on making the work better rather than making everyone comfortable.\n\n•\nSpot gaps in team capability and make the case for what we need to build — through hiring, development, or how we structure the work.\n\nWhat you’ll need\n\n•\n10+ years of product design experience, with at least 4 years leading and managing teams in a technology company.\n\n•\nA portfolio that demonstrates both strong strategic thinking and high-quality craft — work that you shaped at the system level alongside work where your hands were directly on the pixels.\n\n•\nProven experience designing AI-powered or AI-adjacent product experiences, with a clear point of view on what good looks like when the system is dynamic, generative, or probabilistic.\n\n•\nDeep fluency with modern design tools, particularly Figma, and comfort working within or evolving a mature design system.\n\nWhat's in it for you\n\nWe want you to feel supported, connected, and ready to grow. Our global benefits package generally includes equity, a wellbeing benefit, a WFH equipment allowance, and an annual Learning & Development stipend. Join a diverse team where you can do your best work. Full benefits may differ per location. If you would like to learn more about location-specific benefits, please refer to our Global Miro benefits board .",
+   "workplace": null,
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 6,
+   "bucket": "cut",
+   "company": "notion",
+   "title": "Workflow + Process Designer (AI Enablement)",
+   "url": "https://jobs.ashbyhq.com/notion/c799f1f0-0e7b-4eac-98ce-44223130f2b0",
+   "location": "San Francisco, California",
+   "source": "ashby/notion",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "This is a process/operations design role, not product design. Location is hybrid onsite (SF/NYC, 3 days/week), not remote."
+   },
+   "fields": {
+    "role": "Workflow + Process Designer (AI Enablement)",
+    "company": "Notion",
+    "seniority": "mid",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "$166,000 – $185,000",
+    "years_xp": 2,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Who We Are\n\nNotion is the collaborative AI workspace where teams and agents think together . We're building one place where your knowledge, projects, meetings, and AI tools live side by side, so work is faster, clearer, and less fragmented. Millions of individuals, small teams, and large companies run their work on Notion.\n\nNotinos (our employees) are customer zero in bringing this future of work to life. We care about craft, building things that last, and the belief that great work is still fundamentally human. Our goal isn’t to ship the next feature. Each and every team of Notinos is working to set the standard for how humans work together in the AI era. From building a business’s system of record to making and managing AI agents to automating away the busy work, we care deeply about giving our customers more time for their life’s work.\n\nAbout the Role:\n\nOwn how our Foundations business teams design, automate, and operate their most important workflows.\n\nNotion is growing quickly, and the processes that run our business — intake, triage, execution, approvals, escalations, reporting — need to scale without adding headcount or losing auditability. This role exists to redesign those processes end to end and to embed AI directly into them, so the work moves faster and the system stays trustworthy.\n\nWhat's different at Notion: you'll build on Notion as customer zero. You'll design multi-system workflows spanning Notion, Slack, email, support tooling, and internal data, then ship the custom agents, skills, and automations that run them — partnering with Finance, Legal, People, Ops, Data, and Engineering to drive real adoption, not just documentation.\n\nThis role can be based in either San Francisco or New York City. We work from our offices on Mondays, Tuesdays and Thursdays (our Anchor Days) because we do our best thinking and building together in person. We’re looking for someone who’s excited to work alongside the team during those days.\n\nWhat You'll Achieve:\n\n•\nRedesign cross-functional processes end to end: Map and optimize core and cross-functional flows for Foundations business teams, making them simpler, faster, and more consistent than the operating models they replace.\n\n•\nArchitect multi-system workflows: Design workflows spanning Notion, Slack, email, support tooling, and internal systems and data, with clear states, routing, permissions, and auditability.\n\n•\nDesign for failure, not just the happy path: Identify edge cases, controls, and handoffs so workflows are resilient, reviewable, and easy for a business team to operate without you.\n\n•\nEmbed AI with clear human-in-the-loop patterns: Define where AI assists, automates, approves, and audits — and make it obvious what AI did and why.\n\n•\nBuild and maintain custom agents and skills: Ship the agents, structured skills, and runbooks that power intake triage, summarization, routing, escalation, and reporting for business teams.\n\n•\nInstrument everything you ship: Define success metrics (cycle time, deflection, quality, adoption), measure them, and iterate based on data and stakeholder feedback.\n\n•\nSet the standards others build on: Establish best practices for AI safety, permissions, transparency, and workflow documentation so the patterns hold as more teams adopt them.\n\n•\nDrive adoption and change management: Partner with business stakeholders so tooling gets used because it's intuitive and reliable, and measurably improves day-to-day work.\n\nSkills You'll Need to Bring:\n\n•\nProcess and systems design depth: 2–6 years in operations design, service design, product operations, business systems, or internal tools, with a portfolio showing systems thinking and measurable outcomes.\n\n•\nComplex workflow experience: Demonstrated ability to design for intake, triage, routing, approvals, escalations, and reporting across teams and tools, including states, permissions, and auditability.\n\n•\nProcess mapping rigor: Hands-on experience mapping and improving business processes through journey maps, service blueprints, operating models, and SOPs.\n\n•\nAI-native builder mindset: Experience designing or building with AI assistants and agents, workflow automation, or internal tooling — including prompt design, tool selection, and evaluation for quality, reliability, and edge cases. This role requires AI fluency.\n\n•\nLightweight automation ability: Comfort building with Notion custom agents and automations, structured skills, and integrations across systems (APIs, webhooks, connectors). Hands-on preferred.\n\n•\nClear communication and stakeholder judgment: Ability to convey design intent using whatever artifact fits the problem, and to present and defend tradeoffs across multiple tools and teams.\n\n•\nComfort with ambiguity: Experience operating in fast-moving environments and collaborating deeply with engineers and PMs to shape decisions, not just execute them.\n\nNice to Haves:\n\n•\nConsulting background in technology, process and operations consulting, or business/digital transformation — including discovery, current- and future-state process mapping, and stakeholder workshops\n\n•\nTrack record delivering client engagements across multiple functions or industries, and turning that pattern recognition into repeatable playbooks and operating standards\n\n•\nExperience designing internal tools, developer platforms, or enterprise software\n\n•\nFamiliarity with data concepts (schemas, event tracking, dashboards) and operational analytics\n\n•\nNotion product expertise\n\nNotion is committed to providing highly competitive cash compensation, equity, and benefits. The compensation offered for this role will be based on multiple factors such as location, the role’s scope and complexity, and the candidate’s experience and expertise, and may vary from the range provided below. For roles based in San Francisco, the estimated base salary range for this role is $166,000 – $185,000 per year.\n\nBy clicking “Submit Application”, I understand and agree that Notion and its affiliates and subsidiaries will collect and process my information in accordance with Notion’s Global Recruiting Privacy Policy .\n\n#LI-Onsite\n\nA Note on AI\n\nYou don’t need deep AI expertise for every role, but we do expect every Notino to be intellectually curious, drawn to tinkering and discovery, and excited to use AI as a real collaborator in their work. For some roles, AI fluency is a core requirement — when that’s the case, we'll say so explicitly in the qualifications. People who thrive here don’t treat AI as a novelty. They use it to think better, and make their work easier for others to build on.\n\nEqual Opportunity & Accommodations\n\nWe hire talented people from a wide range of backgrounds. If you’re excited about this role but don’t meet every bullet, we still encourage you to apply. Notion is an equal opportunity employer and does not discriminate on the basis of any legally protected characteristic. Consistent with applicable law, we will consider for employment qualified applicants with arrest and conviction records. Notion provides reasonable accommodations during the application process; if you need one, please let your recruiter know.\n\nNotion is proud to be an equal opportunity employer. We do not discriminate in hiring or any employment decision based on race, color, religion, national origin, age, sex (including pregnancy, childbirth, or related medical conditions), marital status, ancestry, physical or mental disability, genetic information, veteran status, gender identity or expression, sexual orientation, or other applicable legally protected characteristic. Notion considers qualified applicants with criminal histories, consistent with applicable federal, state and local law. Notion is also committed to providing reasonable accommodations for qualified individuals with disabilities and disabled veterans in our job application procedures. If you need assistance or an accommodation due to a disability, please let your recruiter know.",
+   "workplace": "hybrid",
+   "employment_type": null,
+   "department": null,
+   "salary": "$166,000 – $185,000",
+   "restrictions": null
+  },
+  {
+   "n": 7,
+   "bucket": "cut",
+   "company": "miro",
+   "title": "Staff Product Designer",
+   "url": "https://jobs.ashbyhq.com/miro/68a49faa-7d75-4194-81b5-c743fe249ff9",
+   "location": "Copenhagen",
+   "source": "ashby/miro",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Staff Product Designer role is a genuine design leadership fit, but location is Copenhagen with no remote option stated."
+   },
+   "fields": {
+    "role": "Staff Product Designer",
+    "company": "Miro",
+    "seniority": "staff",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Denmark"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "About the Team\n\nAt Miro, design is intrinsic in everything we do. As a business we are on a mission to redefine how great work is done, and as a design team we aim to make that as easy and delightful as possible.\n\nWe operate in a fast-paced environment and get to have a direct impact on the millions of users who rely on Miro to collaborate and create the next big thing. As a part of our Product Design team, you will contribute to our design process, culture, and experience principles and set new standards for design quality.\n\nLearn more about the colorful design team and our culture: https://miro.design/\n\nAbout the Role\n\nMiro is looking for a visionary Staff Product Designer to support the design of Miro’s canvas formats experiences, including prototyping and slides. This isn’t just about refining a feature; it’s about defining the future of how millions of people bring their ideas to life.\n\nAs a key leader within the Canvas Modes stream, you will lead the design evolution of these formats, helping Miro customers turn rough thinking and code-based content from in- and outside of Miro into polished, persuasive content on its canvas. We are looking for an AI Native designer - someone who doesn’t just see AI as a feature but as a fundamental shift in the product development process and ultimately, a massive opportunity.\n\nYou will be tasked with shaping not just where Miro’s formats offering should be, but where it is going - ensuring we aren't just keeping pace with the market, but setting it.\n\nWhat you’ll do\n\n•\nDefine and drive the evolution of Miro’s canvas-based formats. You’ll articulate a near-term design vision that disrupts the norms and looks where the market is going.\n\n•\nBe a tireless innovator in the AI space. You will explore how generative AI can collapse the gap between a rough idea and rich, interactive content on a Miro board.\n\n•\nApproach the product with an entrepreneurial spirit and sense of ownership. You’ll navigate ambiguity, build lean experiments, and treat the format experience as your own startup within Miro.\n\n•\nLeverage your deep understanding of the competitive landscape to create a best-in-class experience that rivals any competitor while maintaining Miro’s ease of use and considering our other suite of formats.\n\n•\nPartner with Product and Engineering across the org to solve complex technical- and design challenges around AI quality, discoverability, and the seamless transition between the ‘infinite canvas’ and the format experiences within it.\n\n•\nSet the bar for design excellence at Miro, mentoring other designers and contributing to the evolution of our design systems and internal tooling.\n\nWhat you’ll need\n\n•\n10+ years of product design experience, ideally in B2B SaaS or AI-focused roles.\n\n•\nAt least 2-3 years operating at a Staff / Principal level, with proven ownership of complex initiatives.\n\n•\nA strong portfolio showcasing your ability to create clear, user-focused products and strategies. Demonstrating both the impact on user experience and business goals.\n\n•\nA deep understanding of AI and AI design tooling and the ability to show you’re leading the charge.\n\n•\nProven experience working closely with cross-functional teams, including product management, UX design, and engineering, to deliver seamless content solutions.\n\n•\nDeep understanding of UX practices, information architecture, and user-centred design methodologies.\n\n•\nStrong written and verbal communication skills, with the ability to articulate the value of design and collaborate effectively across diverse teams.\n\n•\nA proactive and flexible approach, comfortable working autonomously in a fast-paced, sometimes ambiguous environment and managing multiple priorities.\n\n•\nExperience working on design tools, editors, or creative software is a massive plus.\n\nWhat's in it for you\n\nWe want you to feel supported, connected, and ready to grow. Our global benefits package generally includes equity, a wellbeing benefit, a WFH equipment allowance, and an annual Learning & Development stipend. Join a diverse team where you can do your best work. Full benefits may differ per location. If you would like to learn more about location-specific benefits, please refer to our Global Miro benefits board .\n\n#LI-VS1",
+   "workplace": null,
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 8,
+   "bucket": "cut",
+   "company": "Atlas",
+   "title": "Senior Product Designer (Internal Tools)",
+   "url": "https://jobs.ashbyhq.com/Atlas/91ef057b-5808-4abd-84ec-2c7315f0cd57",
+   "location": "New York; San Francisco",
+   "source": "ashby/Atlas",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Role is genuine product design (senior level), but requires onsite presence in NYC or SF with 3+ days/week in office. Portugal-based remote work explicitly ruled out."
+   },
+   "fields": {
+    "role": "Senior Product Designer (Internal Tools)",
+    "company": "Atlas",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": "Design Director",
+    "language": "English"
+   },
+   "jd": "About\n\nAtlas is the concierge charge card for high-net-worth individuals and their companies. We pair 24/7 concierge access with no-preset-limit spending, giving members insider access to dining, luxury travel, and experiences that are otherwise impossible to get. We've crossed $1B in annualized transaction volume and are backed by Y Combinator, Elad Gil, O1 Advisors, Eric Schmidt, and other leading fintech and consumer investors. The team is lean, senior, and fast-moving, with experience across Apple, Robinhood, Rimowa, and more.\n\nThe Role\n\nWe’re looking for a Senior Product Designer to lead the design of the internal tools that power Atlas. Our internal tools directly impact the world-class experience demanded by our members, supporting everything from managing balances and points to booking dining reservations, flights, and hotels. You’ll collaborate closely with the concierge team, dining operations, head of operations, and engineering team to build functional, operationally-focused, complex yet easy to use and beautiful tools that streamline our internal workflows and improve efficiency. You’ll be a part of the Atlas design team, reporting to the Design Director, working collaboratively with other members of the design team to bring the same exceptional standards of our customer-facing products to our internal tools. You must be based in our NYC (SOHO) or SF (FIDI) office, with an expectation of at least three days per week in person.\n\nRequirements\n\n•\n5+ years of experience working on a range of digital media products, with a demonstrable focus on app based experiences.\n\n•\nDeep skill set in Interaction Design + Visual Design + Motion Design for digital products.\n\n•\nDemonstrate a prototyping and iteration driven approach to design.\n\n•\nOutstanding portfolio that demonstrates your experience in crafting thoughtfully constructed and highly innovative digital products.\n\nBenefits\n\n•\nCompetitive salary, equity, and 401K.\n\n•\nFull health benefits (medical, dental, and vision insurance).\n\n•\nGenerous vacation policy and paid company holidays.\n\n•\nComplimentary Atlas Membership.",
+   "workplace": "hybrid",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 9,
+   "bucket": "cut",
+   "company": "alan",
+   "title": "Product Designer",
+   "url": "https://jobs.ashbyhq.com/alan/1bf22834-f85d-4581-95a8-0a0278ba9013",
+   "location": "Paris, France; Bordeaux, France; Marseille, France; Lyon, France; Nantes, France; Brussels, Belgium; Barcelona, Spain; Madrid, Spain; Amsterdam, Netherlands;",
+   "source": "ashby/alan",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Role is genuine product design, but requires onsite 2 days/week in one of 6 European cities; none are Portugal."
+   },
+   "fields": {
+    "role": "Product Designer",
+    "company": "Alan",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 2,
+    "countries": [
+     "France",
+     "Belgium",
+     "Spain",
+     "Netherlands"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Health can’t wait .\n\nNot for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t.\n\nAlan exists to end the wait.\n\nHealth is a universal right, and we believe this right can only become real when it’s coupled with prevention. We need to stop treating health as something we repair and start treating it as something we build, every day. It’s not solely a question of willpower. It’s the healthcare system itself that needs to work for everyone, in a sustainable way.\n\nSo we are building the new standard in prevention insurance. Alan is the first company that integrates insurance, prevention, and care into a single, acclaimed user experience.\n\nWe are on an incredible journey to build a global leading company, with a unique culture . We already partner with 40K+ companies of all sizes, serving more than 1M+ members, and have reached €800M+ in ARR.\n\nPrevention as the new norm. That's what we're building with our team of 800+ people. If it speaks to you: we're hiring across France, Spain, Belgium, and Canada. And beyond.\n\n🐼 Who we are\n\nYou. Better. With Alan.\n\nAlan's vision is to make prevention the new norm of care for all. Our mission is to help people live in good health to 100 while helping employers feel proud, turning health benefits from a cost centre into their most valuable investment.\n\nWe're building a vertically integrated health partner that seamlessly unites insurance and smart healthcare delivery into one system.\n\nBy connecting all aspects of care - private, public, and direct to consumer - we create the most member-centric healthcare experience. Through deep engagement, we empower everyone to overcome day-to-day health obstacles and live healthier lives.\n\nWe partner with 35K+ companies of all sizes, serving more than 950K+ members , and have reached 680M+ in ARR.\n\nOur team of 700+ people (still growing) operates across France 🇫🇷, Spain 🇪🇸, Belgium 🇧🇪, and Canada 🇨🇦\n\n🤘 How we do it ?\n\nPeople joining Alan are always surprised and delighted by our innovative working method. We have a set of cultural values that guide our approach to work, such as:\n\n🎯 What drives us — We're obsessed with helping our members live healthier\n\n•\nMission is the Boss : long-term thinking, seeking our mission success above all else.\n\n•\nMember & customer-led: obsessively focused on solving members & customers problems and creating the most delightful experiences.\n\n🏆 How we build excellence — We hire the best people and give them platform to succeed\n\n•\nChampions of excellence: extremely high standards and talent density.\n\n•\nDistributed ownership: accountable enlightened despots, everyone owns their decisions and results.\n\n•\nRadically transparent : all information is accessible and written-first, so everyone can make the best decisions asynchronously\n\n🤝 How we grow together — We help each other improve through honest feedback and bold thinking\n\n•\nOptimistic alchemy: optimists who collaborate with genuine care and support teammates.\n\n•\nEmpathetic challengers: direct, caring feedback combined with praises to help each other grow professionally\n\n•\nBold & creative contrarians: think differently to achieve greatness, try new approaches\n\n⚡ How we move fast — We fight complexity and focus on what matters most\n\n•\nDisciplined in execution: taking decisive actions with focus that compounds success over time\n\n•\nFight for simplicity: only high impact processes, smart frugality\n\n👉 About the role\n\nProduct designers at Alan are at the forefront of building our product(s), taking them from inception to completion. They work hand in hand with product managers, researchers, and engineers to ensure we create meaningful and human experiences that improve the health of our members.\n\nThe community of designers is vibrant and inclusive; we are all learning, growing, and improving together!\n\nAs a product designer, you will:\n\n•\nDevelop a product vision and enable teams to explore, ideate, and experiment towards it. When required, you should be able to autonomously take product bets from zero to one.\n\n•\nCommunicate transversally and be a compelling storyteller , employing written visual and verbal techniques.\n\n•\nBuild an understanding of our members to nurture product thinking and transform insights into actionable opportunities.\n\n•\nMaintain strong working relationships and collaborate with product managers, researchers, and engineers, from identifying problems and opportunities to finding solutions and delivering the product(s).\n\n•\nDevelop and evangelize design understanding and sensibility across the organization, improving ways of working and design processes.\n\n•\nMentor junior designers , increasing collective performance and quality across the team.\n\n•\nDeliver a UI consistent with Alan’s brand with thoughtful design choices and a high-quality bar in delivering products.\n\n•\nContribute to the design system with components documentation for designers and engineers.\n\n•\nEvaluate and maintain the quality of Alan’s product through continuous monitoring and testing.\n\n✏️ Qualifications\n\n•\nBased in (or within commuting distance of) one of our hubs (Paris, Bordeaux, Marseille, Brussels, Madrid, or Barcelona) , with the ability to work onsite twice per week.\n\n•\n5+ years of product design experience - You've designed and built products from concept to launch\n\n•\nTrack record of shipping quality products - You're experienced working within cross-functional product and engineering teams to deliver exceptional user experiences\n\n•\nDesign mentorship experience - You've coached and guided junior designers, helping them grow their skills and careers\n\n•\nFull-stack design expertise - You have proven skills across UX research, UI design, and visual design, with the ability to deliver production-ready assets that developers can implement seamlessly\n\n•\nEmbrace of AI and other innovative tools - You're curious about and experienced with leveraging AI-powered design tools and emerging technologies\n\n•\nStrong English communication - You're fluent in English and can collaborate effectively with our international team (French is a plus but not required)\n\n🙌 Products or teams you may work on\n\nYou'll be designing the direct touch points that connect our members with their healthcare journey. Your work will focus on:\n\n•\nAlan Clinic : When prevention alone is not enough, our members need the best care possible. That's what the Alan Clinic is for. 120 health professionals (and one AI) work behind the scenes to answer all our member's questions, consult in video, redirect you to the nearest hospital, interpret your lab results. And while it feels effortless for members, the logistics behind it are next level. We plan to grow the clinic further in the best medical suite of tools for both members and doctors.\n\n•\nAlan Spain: We're building Alan's own health network from scratch in Spain, designed around the real needs of Spanish members: from navigating a fragmented system to accessing the right care at the right time. At the heart of it is Alan Flex, our subscription model that goes beyond insurance to become a true health companion for individuals and families.\n\n🙌 Perks & Benefits\n\nAt Alan, we believe that being in good health is a basic need , and it starts with our employees. This is why Alaners are provided with a stimulating environment and perks ensuring they are happy, efficient and spend only high-quality time with co-workers.\n\nTherefore, we offer:\n\n•\nFair rewards . Generous equity packages complement your base salary, for permanent contracts only.\n\n•\nFlexible Office . Amazing office space at our HQ, sponsored co-working hubs with home office equipment sponsorship, we want you to integrate your professional and personal life best.\n\n•\nAll the tools you need . Top of the range equipment: Macbook Pro, keyboard, laptop stand, monitor, and Bose noise-canceling headphones.\n\n•\nFlexible vacation policy and flexible working hours . Organize your time as you wish.\n\n•\nDelightful healthcare insurance: Extremely comprehensive health insurance - 100% for you and your children, 90-100% for partners depending on your country (permanent contracts only) .\n\n•\nTransport . Country-specific commuter benefits.\n\n•\nLearning & Training opportunities . A highly flexible Training policy free books and budget to attend and speak at conferences if the opportunity arises.\n\n•\nPersonal growth through coaching : At Alan, coaching isn't just a perk - ****it's core to who we are. Every Alaner is paired with a dedicated coach from day one, who helps maximize their impact, nurture engagement, and navigate Alan's values to develop their full potential. Learn more about our coaching culture .\n\n•\nParental leave . Extended parental leave for all new parents, for permanent contracts only.\n\nImportant note: we hire people, not roles.\n\nIf you're excited about this opportunity but don't check every box, we'd love to hear from you. Everyone, no matter how underrepresented, should feel free to apply as it can only bring learnings or success.\n\nIf you identify yourself as a woman : Did you know that research shows women often apply only when meeting 100% of requirements?\n\nRemember, this is just a guide, not a checklist. We'll be thrilled to receive your application!\n\n🔖 Check out our About Alan and Career pages, as well as our Medium , blog and Glassdoor page for more info. #LI-DNP",
+   "workplace": null,
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 10,
+   "bucket": "cut",
+   "company": "DatologyAI",
+   "title": "Product Designer",
+   "url": "https://jobs.ashbyhq.com/DatologyAI/1de2d59f-b795-47a5-9a1a-33fd365e5ea4",
+   "location": "San Mateo",
+   "source": "ashby/DatologyAI",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Role is genuinely product design, but onsite in San Mateo, CA with 4 days/week in office requirement—not remote or Portugal-based."
+   },
+   "fields": {
+    "role": "Product Designer",
+    "company": "DatologyAI",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": 4,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 180,000 to 250,000",
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "About the Company\n\nModels are what they eat. But a large portion of training compute is wasted training on data that are already learned, irrelevant, or even harmful, leading to worse models that cost more to train and deploy.\n\nAt DatologyAI, we’ve built a state of the art data curation suite to automatically curate and optimize petabytes of data to create the best possible training data for your models. Training on curated data can dramatically reduce training time and cost ( 7-40x faster training depending on the use case), dramatically increase model performance as if you had trained on >10x more raw data without increasing the cost of training, and allow smaller models with fewer than half the parameters to outperform larger models despite using far less compute at inference time, substantially reducing the cost of deployment. For more details, check out our recent research on synthetic data scaling ( BeyondWeb ) and pretraining with domain-specific data ( The Finetuner’s Fallacy ).\n\nWe raised a total of $57.5M in two rounds, a Seed and Series A. Our investors include Felicis Ventures, Radical Ventures, Amplify Partners, Microsoft, Amazon, and AI visionaries like Geoff Hinton, Yann LeCun, Jeff Dean, and many others who deeply understand the importance and difficulty of identifying and optimizing the best possible training data for models. Our team has pioneered this frontier research area and has the deep expertise on both data research and data engineering necessary to solve this incredibly challenging problem and make data curation easy for anyone who wants to train their own model on their own data.\n\nThis role is based in San Mateo, CA. We are in office 4 days a week.\n\nAbout the Role\n\nYou'll shape the way users experience our platform from the ground up.\n\nOur users are ML engineers and researchers, and the workflows they run are long, expensive, and technically dense. Your job is to make those systems legible: designing the configuration surfaces, telemetry, and visualizations that let an engineer parameterize a curation pipeline, inspect its behavior at runtime, and evaluate the quality of the dataset it produces.\n\nThis role asks for high visual craft, and the ability to take a genuinely complex feature and define a design for it that feels obvious. You'll own the visual quality of what lands in production and partner closely with engineers to get it there. You'll work with leadership, engineering, research, and customers, with a rare opportunity to influence product direction at an early stage.\n\nWhat You'll Work On\n\n•\nCreate and design key user-facing features and components of our data curation platform end to end, from concept to production\n\n•\nDefine the design principles for an enterprise platform, and set the bar for clarity and confidence in workflows where the stakes are high\n\n•\nEstablish and evolve an intuitive, scalable design system, style guide, and illustration language so the product scales consistently\n\n•\nDeliver high quality assets—icons, illustrations, and motion—that hold up across the product\n\n•\nCreate wireframes, prototypes, and high-fidelity designs that balance user needs with real technical constraints\n\n•\nConduct user research, usability testing, and analysis to understand pain points and validate design solutions\n\n•\nCollaborate with engineering and research teams to define both long-term strategy and short-term deliverables\n\n•\nHelp establish our design culture as an early design team member\n\nThe areas you'll design across:\n\n•\nTechnical workflows. Front-end UI for setting up, launching, monitoring, and intervening in long-running curation and training jobs\n\n•\nData visualization. Making dataset composition, quality, and cost legible at a glance\n\n•\nOnboarding and integration. Flows that get customers' data into the platform\n\nAbout You\n\n•\n5+ years of experience designing digital products, with a portfolio showcasing strong UX, UI, and interaction design skills\n\n•\nHigh visual craft, with the ability to produce finished assets yourself—iconography, illustration, and interface detail that ship\n\n•\nA track record of motion design that is beautiful and intuitive, clarifying what's happening rather than decorating it\n\n•\nYou've created intuitive, scalable design systems and style guides from scratch, and evolved them as a product grew\n\n•\nExperience simplifying complex technical concepts into intuitive user experiences\n\n•\nExperience designing data-dense interfaces and data visualization\n\n•\nExperience designing with cross-functional partners for multiple use cases and distinct user types—enterprise technical users alongside ML researchers and scientists\n\n•\nExcellent communication skills with the ability to articulate design decisions to technical and non-technical stakeholders\n\n•\nProficiency with Figma and other prototyping software\n\n•\nComfortable working in an ambiguous, fast-paced startup environment\n\n•\nAbility to balance short-term deliverables with long-term vision\n\n•\nSelf-motivated problem solver who can work independently while collaborating effectively with cross-functional teams\n\nNice to have:\n\n•\nYou implement your own work—comfortable in HTML and CSS, and shipping front-end code alongside engineers\n\n•\nExperience working with AI tools to prototype and implement designs\n\n•\nExperience designing platform workflows for ML engineers and researchers\n\n•\nExperience designing for technical or enterprise users\n\n•\nExperience working as an early designer at a startup\n\nCompensation\n\nAt DatologyAI, we are dedicated to rewarding talent with competitive salary and meaningful equity. The salary for this position ranges from $180,000 to $250,000.\n\n•\nStarting pay is based on job-related skills, experience, qualifications, and interview performance.\n\nBenefits:\n\n•\n100% covered health benefits (medical, vision, and dental).\n\n•\n401(k) plan with a generous 4% company match.\n\n•\nUnlimited PTO policy\n\n•\nPaid Parental Leave of 12 weeks, plus 6 months of WFH flexibility.\n\n•\nAnnual $2,000 wellness stipend.\n\n•\nAnnual $1,000 learning and development stipend.\n\n•\nDaily lunches and snacks are provided in our office!\n\n•\nRelocation assistance for employees moving to the Bay Area.",
+   "workplace": null,
+   "employment_type": null,
+   "department": null,
+   "salary": "$180,000 to $250,000",
+   "restrictions": null
+  },
+  {
+   "n": 11,
+   "bucket": "cut",
+   "company": "EightSleep",
+   "title": "Industrial Designer",
+   "url": "https://jobs.ashbyhq.com/EightSleep/f88ec4a1-0031-41f3-aed7-270e1a5a5e7c",
+   "location": "San Francisco",
+   "source": "ashby/EightSleep",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Industrial design is not product/UX/UI design; onsite in San Francisco, not remote or Portugal-based."
+   },
+   "fields": {
+    "role": "Industrial Designer",
+    "company": "Eight Sleep",
+    "seniority": "junior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Join the Sleep Fitness Movement\n\nAt Eight Sleep, we’re on a mission to fuel human potential through optimal sleep. As the world’s first sleep fitness company, we’re redefining what it means to be well-rested and building the most advanced hardware, software, and AI technology to make it possible. Our products power peak mental, physical, and emotional performance by transforming every night of sleep into a personalized, data-driven recovery experience. We are trusted by high performers, professional athletes, and health-conscious consumers in over 30 countries worldwide. Recognized as one of Fast Company's Most Innovative Companies in 2019, 2022, and 2023, and twice named to TIME's “Best Inventions of the Year.” We operate like a high-performance team: fast, focused, and motivated by impact. We don’t just ship; we iterate, refine, and obsess over the details that help our members sleep better and wake up stronger.\n\nEvery role at Eight Sleep is a chance to create cutting-edge technology, collaborate with world-class talent, and help shape a future where sleep isn’t passive - it’s a powerful tool for living better. If you’re tired of the ordinary and driven to build at the edge of what’s possible, this is your moment. Join us and lead the movement that’s transforming how the world sleeps and what we’re all capable of when we wake up.\n\nHigh Standards. No Apologies.\n\nWe operate with intensity because our mission demands it. At Eight Sleep, we bring the same mindset as the world’s top performers: focused, relentless, and always pushing to be in the top 1% of our craft. Think Kobe Bryant’s mamba mentality, applied to bold ideas, next-gen tech, and flawless execution. This isn’t a 9-to-5. Our team is deeply committed, often putting in 60+ hours a week –not because we’re told to, but because we’re invested. We’re here to build fast, push limits, and deliver without compromise. If you thrive under pressure and want to do the most meaningful work of your career, you’ll feel right at home. If you’re looking for something easier –this isn’t it.\n\nThe Role\n\nWe are looking to hire an Industrial Designer that has a deep passion for problem-solving paired with a strong aesthetic sensibility. Your expertise spans materials, finishes, and manufacturing processes, and you bring a keen interest in both hard-goods and soft-goods design. You have a unique opportunity to work alongside and learn from industry veterans that came from the Apple Design team, Ideo & Incase. Above all, you’re driven by a desire to create insanely great products that push boundaries and inspire.\n\nWhat You'll Help Build\n\n•\nCollaborate with a small, highly experienced design team (ex-Apple) to conceptualize and design innovative sleep technology products.\n\n•\nSupport all stages of the design process, including user research, ideation, prototyping, and refinement.\n\n•\nTranslate user needs, technical requirements, and brand aesthetics into beautiful, functional product designs.\n\n•\nWork closely with engineers, researchers, and other cross-functional teams to bring concepts to life.\n\n•\nCreate compelling visual presentations, detailed CAD models, and prototypes that communicate design intent.\n\n•\nContribute to the development of a cohesive design language for Eight Sleep’s products.\n\nWhat You'll Need to Succeed\n\n•\nExperience: 0–5 years of professional experience in industrial design, with a strong portfolio showcasing innovative product designs.\n\n•\nEducation : Bachelor Degree in Industrial design or equivalent\n\n•\nSkills:\n\n•\nHigh Proficiency in 3D CAD tools (e.g., Alias, Rhino, SolidWorks or Fusion 360).\n\n•\nExpertise in rendering software (e.g., KeyShot, Blender, or equivalent).\n\n•\nExpertise in Adobe Illustrator and Photoshop\n\n•\nStrong sketching, ideation, and visualization abilities.\n\n•\nHands-on experience with physical and digital prototyping tools and techniques.\n\n•\nKnowledge of materials, manufacturing processes, prototyping and production techniques.\n\n•\nQualities:\n\n•\nA keen eye for aesthetics and detail, paired with a strong sense of functionality.\n\n•\nAbility to work quickly and efficiently in a fast-paced environment.\n\n•\nComfort working in ambiguity and handling multiple projects simultaneously.\n\n•\nStrong communication skills to present and justify design decisions.\n\n•\nPassion for human-centered design and a drive to create meaningful products.\n\n•\nHardgoods & Softgoods experience and interest is a plus\n\nWhy join Eight Sleep?\n\nInnovation in a culture of excellence\n\nJoin us in a workplace where innovation isn’t just encouraged - it’s a standard. Our flagship product, the Pod, is a testament to our culture of excellence, beloved by hundreds of thousands of customers worldwide. At Eight Sleep, you will be part of a team that continuously pushes the boundaries of technology in sleep fitness.\n\nImmediate responsibility and accelerated career growth\n\nFrom your first day, you’ll take on substantial responsibilities that have a direct impact on our core business and product success. We are a small team that empowers you to own your projects and see the tangible effects of your efforts, enhancing both your professional growth and our company’s trajectory. Your path will be challenging but rewarding, perfect for those who thrive in fast-paced environments aiming for high standards.\n\nCollaboration with exceptional talent\n\nWork alongside other bright minds like you: at Eight Sleep exceptional intelligence and a passion for breakthroughs are the norms. Our team members are not only experts in their fields but also avid innovators who thrive in our dynamic, fast-paced environment.\n\nEquitable compensation and continuous equity investment\n\nWe extend equity participation to every full-time team member, recognizing and rewarding your direct contributions to our success. This includes periodic equity refreshments based on performance, ensuring that as Eight Sleep grows and succeeds, so do you – perfectly aligning your achievements with the broader triumphs of the company.\n\nYour own Pod - and other great benefits\n\nEvery Eight Sleep employee receives the very product that defines our mission: a Pod of their own. If you join us you’ll get your own Pod , along with:\n\n•\nFull access to health, vision, and dental insurance for you and your dependents\n\n•\nSupplemental life insurance\n\n•\nFlexible PTO\n\n•\nCommuter benefits to ease your daily commute\n\n•\nPaid parental leave\n\nAt Eight Sleep we continually celebrate the diverse community different individuals cultivate. As an equal opportunity employer, we stay true to our values by ensuring everyone feels they can flourish and grow. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status.",
+   "workplace": "onsite",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 12,
+   "bucket": "cut",
+   "company": "EightSleep",
+   "title": "Product Designer, App (NYC)",
+   "url": "https://jobs.ashbyhq.com/EightSleep/95078a15-645e-4acd-8d95-cbc4bfc55f31",
+   "location": "New York City",
+   "source": "ashby/EightSleep",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Onsite role in New York City, not remote, and Cesar lives in Portugal."
+   },
+   "fields": {
+    "role": "Product Designer, App",
+    "company": "Eight Sleep",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 4,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Join the Sleep Fitness Movement\n\nAt Eight Sleep, we’re on a mission to fuel human potential through optimal sleep. As the world’s first sleep fitness company, we’re redefining what it means to be well-rested and building the most advanced hardware, software, and AI technology to make it possible. Our products power peak mental, physical, and emotional performance by transforming every night of sleep into a personalized, data-driven recovery experience. We are trusted by high performers, professional athletes, and health-conscious consumers in over 30 countries worldwide. Recognized as one of Fast Company's Most Innovative Companies in 2019, 2022, and 2023, 2026 and twice named to TIME's “Best Inventions of the Year.” We operate like a high-performance team: fast, focused, and motivated by impact. We don’t just ship; we iterate, refine, and obsess over the details that help our members sleep better and wake up stronger.\n\nEvery role at Eight Sleep is a chance to create cutting-edge technology, collaborate with world-class talent, and help shape a future where sleep isn’t passive - it’s a powerful tool for living better. If you’re tired of the ordinary and driven to build at the edge of what’s possible, this is your moment. Join us and lead the movement that’s transforming how the world sleeps and what we’re all capable of when we wake up.\n\nHigh Standards. No Apologies.\n\nWe operate with intensity because our mission demands it. At Eight Sleep, we bring the same mindset as the world’s top performers: focused, relentless, and always pushing to be in the top 1% of our craft. Think Kobe Bryant’s mamba mentality, applied to bold ideas, next-gen tech, and flawless execution. This isn’t a 9-to-5. Our team is deeply committed, often putting in 60+ hours a week –not because we’re told to, but because we’re invested. We’re here to build fast, push limits, and deliver without compromise. If you thrive under pressure and want to do the most meaningful work of your career, you’ll feel right at home. If you’re looking for something easier –this isn’t it.\n\nThe role\n\nWe’re looking for a product designer who thinks beyond aesthetics. Someone who is as passionate about crafting seamless user experiences as they are about beautiful interfaces. You care deeply about building, shipping, and iterating on real products, not just making polished mockups that never see the light of day.\n\nAs a Product Designer on our mobile team, you’ll play a critical role in shaping the Eight Sleep app, driving the design of engaging, intuitive, and seamless experiences that help users optimize their sleep and health. You’ll collaborate closely with Product, Engineering, Brand, and Research & Development teams to craft high-quality, data-driven designs that balance aesthetics with usability.\n\nWe don’t believe in rigid design silos. At many companies, product design is split into UX, UI, and other sub-disciplines. Here, it’s all in one. You should be an exceptional generalist who can move fluidly between information architecture, visual design, and interaction patterns, with an eye for both pixel perfection and real-world usability. As a key member of our small but growing design team, you'll have significant ownership over the app experience, ensuring that users can effortlessly track, understand, and optimize their sleep performance while maintaining long-term engagement with the Eight Sleep ecosystem.\n\nHow you’ll contribute\n\nWe are a mission-driven company, so passion for what we do and our mission is key. At a high level, the role encompasses three areas:\n\n•\nDesign: You’ll sit at the intersection of Design and Product, playing a key role in the end-to-end design and evolution of the Eight Sleep app. Your responsibilities will encompass the full spectrum of product design, from information architecture and low-fidelity wireframes to high-fidelity mockups, and everything in-between.\n\n•\nValidate: You’ll conduct usability studies and user interviews to inform design work, and work closely with our in-house customer discovery squad. You’ll use data to inform the success or failure of the design.\n\n•\nIterate: You’ll combine qualitative and quantitative customer insights to make design decisions that improve our app experience, reduce churn, and increase engagement.\n\nSome other details about the role:\n\n•\nYou’ll work as part of an interdisciplinary team to deliver captivating user experiences that increase membership value and support hardware innovations\n\n•\nYou’ll build, document, and organize the UI components of our design library and system to drive consistency across our app and the rest of the brand\n\n•\nYou’ll align with Product and Brand stakeholders and clearly present design updates to C-suite leadership for feedback and approval\n\n•\nYou’ll serve as the subject matter expert responsible for app design patterns and interactions - including researching and staying up-to-date on emerging mobile design trends and best practices\n\n•\nYou’ll collaborate closely with the Engineering, Product, and Marketing teams to ship world class products and features\n\nWhat you need to succeed\n\n•\n4+ years experience in UX and UI, with a strong portfolio including live mobile examples\n\n•\nYou’ve shipped your designs to public users and have data that proves either success or failure\n\n•\nYou are able to consider the technical implications of design decisions and have the ability to find the right balance between new user value and technical effort\n\n•\nYou have experience coaching junior designers and collaborating closely with Product Managers and Engineers\n\n•\nYou are obsessed with simplicity, have a high-quality bar for the aesthetics in your design\n\n•\nYou thrive as an independent thinker and can manage the design process from end to end even in open-ended ambiguous environments\n\n•\nAble and flexible to iterate fast and often\n\n•\nYou are confident in writing clear agendas and decks, and presenting design evolutions to C-Suite leadership\n\n•\nYour are open to occasional travel to other office locations (San Francisco, Milan) to work with other teams in-person\n\n•\nYou are excited about the opportunity to build a fast-growing brand into an iconic company\n\n•\nYou have a Bachelor’s degree in a related design field or equivalent experience\n\nBonus points for:\n\n•\nHaving built iconic, consumer-facing mobile apps at small and mid-size tech startups (with the data & reviews to prove it)\n\n•\nExperience designing mobile apps for Android\n\nWhy join Eight Sleep?\n\nInnovation in a culture of excellence\n\nJoin us in a workplace where innovation isn’t just encouraged - it’s a standard. Our flagship product, the Pod, is a testament to our culture of excellence, beloved by hundreds of thousands of customers worldwide. At Eight Sleep, you will be part of a team that continuously pushes the boundaries of technology in sleep fitness.\n\nImmediate responsibility and accelerated career growth\n\nFrom your first day, you’ll take on substantial responsibilities that have a direct impact on our core business and product success. We are a small team that empowers you to own your projects and see the tangible effects of your efforts, enhancing both your professional growth and our company’s trajectory. Your path will be challenging but rewarding, perfect for those who thrive in fast-paced environments aiming for high standards.\n\nCollaboration with exceptional talent\n\nWork alongside other bright minds like you: at Eight Sleep exceptional intelligence and a passion for breakthroughs are the norms. Our team members are not only experts in their fields but also avid innovators who thrive in our dynamic, fast-paced environment.\n\nEquitable compensation and continuous equity investment\n\nWe extend equity participation to every full-time team member, recognizing and rewarding your direct contributions to our success. This includes periodic equity refreshments based on performance, ensuring that as Eight Sleep grows and succeeds, so do you – perfectly aligning your achievements with the broader triumphs of the company. Pay grows rapidly as you accumulate experience with Eight Sleep and translate it into concrete impact.\n\nYour own Pod - and other great benefits\n\n•\nEvery Eight Sleep employee receives the very product that defines our mission: a Pod of their own. If you join us you’ll get your own Pod , along with*:\n\n•\nFull access to health, vision, and dental insurance for you and your dependents\n\n•\nSupplemental life insurance\n\n•\nFlexible PTO\n\n•\nCommuter benefits to ease your daily commute\n\n•\nPaid parental leave\n\n*List of benefits may vary depending on your location\n\nAt Eight Sleep we continually celebrate the diverse community different individuals cultivate. As an equal opportunity employer, we stay true to our values by ensuring everyone feels they can flourish and grow. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status.",
+   "workplace": "onsite",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 13,
+   "bucket": "cut",
+   "company": "EightSleep",
+   "title": "Staff Product Designer",
+   "url": "https://jobs.ashbyhq.com/EightSleep/5a2480c0-3d87-4c21-b8d2-00d593c95b89",
+   "location": "New York City",
+   "source": "ashby/EightSleep",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Hybrid role requiring 3 days/week onsite in NYC; Cesar works from home in Portugal."
+   },
+   "fields": {
+    "role": "Staff Product Designer",
+    "company": "Eight Sleep",
+    "seniority": "staff",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 8,
+    "reports_to": "Executive Creative Director",
+    "language": "English"
+   },
+   "jd": "Join the Sleep Fitness Movement\n\nAt Eight Sleep, we’re on a mission to fuel human potential through optimal sleep. As the world’s first sleep fitness company, we’re redefining what it means to be well-rested and building the most advanced hardware, software, and AI technology to make it possible. Our products power peak mental, physical, and emotional performance by transforming every night of sleep into a personalized, data-driven recovery experience. We are trusted by high performers, professional athletes, and health-conscious consumers in over 30 countries worldwide. Recognized as one of Fast Company's Most Innovative Companies in 2019, 2022, 2023, and 2026 and twice named to TIME's “Best Inventions of the Year.” We operate like a high-performance team: fast, focused, and motivated by impact. We don’t just ship; we iterate, refine, and obsess over the details that help our members sleep better and wake up stronger.\n\nEvery role at Eight Sleep is a chance to create cutting-edge technology, collaborate with world-class talent, and help shape a future where sleep isn’t passive - it’s a powerful tool for living better. If you’re tired of the ordinary and driven to build at the edge of what’s possible, this is your moment. Join us and lead the movement that’s transforming how the world sleeps and what we’re all capable of when we wake up.\n\nHigh Standards. No Apologies.\n\nWe operate with intensity because our mission demands it. At Eight Sleep, we bring the same mindset as the world’s top performers: focused, relentless, and always pushing to be in the top 1% of our craft. Think Kobe Bryant’s mamba mentality, applied to bold ideas, next-gen tech, and flawless execution. This isn’t a 9-to-5. Our team is deeply committed, often putting in 60+ hours a week –not because we’re told to, but because we’re invested. We’re here to build fast, push limits, and deliver without compromise. If you thrive under pressure and want to do the most meaningful work of your career, you’ll feel right at home. If you’re looking for something easier –this isn’t it.\n\nThe Role\n\nEight Sleep makes technology that responds to your body in real time. The app and product surface are where that technology lives for our customers — and this role owns that experience. We're looking for a staff-level IC who can set the craft standard for product design at Eight Sleep and carry it forward with minimal direction.\n\nYou'll work directly with the Executive Creative Director. The expectation is simple: your work is the benchmark. You're not managing a team — you're defining what good looks like on the product surface, and everyone else rises to meet it. With your craft and vision, you will set the standard for other product designers on the team.\n\nLocation: NYC\nLocation Requirement : 3 days/week in-office, hybrid\n\nWhat You'll Own\n\n•\nEnd-to-end design of the Eight Sleep app and product UI — from interaction architecture through final visual polish\n\n•\nOwn and evolve the product design system: components, patterns, tokens, and the rules that govern them\n\n•\nTranslate complex health and biometric data into interfaces that feel clear, calm, and premium\n\n•\nPartner with product, engineering, and brand to ensure the in-app experience is coherent with the broader Eight Sleep aesthetic\n\n•\nSet the craft bar for the product surface — your output is the reference point for designers, contractors, and cross-functional partners\n\n•\nPrototype interactions and flows to validate concepts quickly before engineering investment\n\nWhat You Will Need to Succeed\n\n•\n8–12 years in product/UI design , with a portfolio that demonstrates mastery of both interaction design and visual craft\n\n•\nExperience designing for health, biometrics, or data-rich consumer apps — you know how to make complexity feel simple\n\n•\nDeep Figma fluency — as a design tool, a prototyping tool, and a system-building tool\n\n•\nStrong motion sensibility ; you think in transitions, not just screens\n\n•\nGenuine fluency with AI design tools (Cursor, Claude, generative workflows) — not curiosity, actual working practice\n\n•\nComfort operating without heavy process scaffolding — you define the process as much as you follow it\n\n•\nA clear point of view on what makes product design excellent, and the confidence to hold it\n\nHow Success is Defined\n\n•\nIn 60 days: You've mapped the current product surface, identified the biggest craft gaps, and shipped your first meaningful improvement\n\n•\nIn 6 months: You own the design system end-to-end and have raised the visual standard of the app measurably\n\n•\nIn a year: The Eight Sleep product experience is something designers in the industry reference — and you built that\n\nWhy join Eight Sleep?\n\nInnovation in a culture of excellence\nJoin us in a workplace where innovation isn’t just encouraged - it’s a standard. Our flagship product, the Pod, is a testament to our culture of excellence, beloved by hundreds of thousands of customers worldwide. At Eight Sleep, you will be part of a team that continuously pushes the boundaries of technology in sleep fitness.\n\nImmediate responsibility and accelerated career growth\n\nFrom your first day, you’ll take on substantial responsibilities that have a direct impact on our core business and product success. We are a small team that empowers you to own your projects and see the tangible effects of your efforts, enhancing both your professional growth and our company’s trajectory. Your path will be challenging but rewarding, perfect for those who thrive in fast-paced environments aiming for high standards.\n\nCollaboration with exceptional talent\nWork alongside other bright minds like you: at Eight Sleep exceptional intelligence and a passion for breakthroughs are the norms. Our team members are not only experts in their fields but also avid innovators who thrive in our dynamic, fast-paced environment.\n\nEquitable compensation and continuous equity investment\nWe extend equity participation to every full-time team member, recognizing and rewarding your direct contributions to our success. This includes periodic equity refreshments based on performance, ensuring that as Eight Sleep grows and succeeds, so do you – perfectly aligning your achievements with the broader triumphs of the company. Pay grows rapidly as you accumulate experience with Eight Sleep and translate it into concrete impact.\n\nYour own Pod - and other great benefits\nEvery Eight Sleep employee receives the very product that defines our mission: a Pod of their own. If you join us you’ll get your own Pod, along with other benefits",
+   "workplace": "hybrid",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 14,
+   "bucket": "cut",
+   "company": "EightSleep",
+   "title": "Lead Mechanical/ Product Design Engineer, Special Projects",
+   "url": "https://jobs.ashbyhq.com/EightSleep/8441114d-b3d3-4783-8451-a1d7a15e850f",
+   "location": "Remote; San Francisco",
+   "source": "ashby/EightSleep",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Mechanical/product design engineer role is engineering-focused, not product design; remote requires 1x/month travel to San Francisco."
+   },
+   "fields": {
+    "role": "Lead Mechanical/Product Design Engineer, Special Projects",
+    "company": "Eight Sleep",
+    "seniority": "staff",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 6,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Join the Sleep Fitness Movement\n\nAt Eight Sleep, we’re on a mission to fuel human potential through optimal sleep. As the world’s first sleep fitness company, we’re redefining what it means to be well-rested and building the most advanced hardware, software, and AI technology to make it possible. Our products power peak mental, physical, and emotional performance by transforming every night of sleep into a personalized, data-driven recovery experience. We are trusted by high performers, professional athletes, and health-conscious consumers in over 30 countries worldwide. Recognized as one of Fast Company's Most Innovative Companies in 2019, 2022, and 2023, and twice named to TIME's “Best Inventions of the Year.” We operate like a high-performance team: fast, focused, and motivated by impact. We don’t just ship; we iterate, refine, and obsess over the details that help our members sleep better and wake up stronger.\n\nEvery role at Eight Sleep is a chance to create cutting-edge technology, collaborate with world-class talent, and help shape a future where sleep isn’t passive - it’s a powerful tool for living better. If you’re tired of the ordinary and driven to build at the edge of what’s possible, this is your moment. Join us and lead the movement that’s transforming how the world sleeps and what we’re all capable of when we wake up.\n\nThe Role\n\nWe’re looking for an experienced Staff Mechanical Design Engineer to lead mechanical/product design engineering for V1 products from concept to production. You’ll be the mechanical lead for a mission-driven team and have significant ownership over decisions. We’re growing quickly so there are ample opportunities for career growth.\n\nPreference for applicants who can work onsite at our San Francisco office. Open to remote with 1x/month travel to our San Francisco office.\n\nWhat You'll Help Build\n\n•\nOwn, architect, and design complex electromechanical systems, including plastic, metal, and soft goods components integrated with novel sensors and actuators.\n\n•\nDrive designs across the entire development lifecycle, including brainstorming, CAD, prototyping, testing, and ramp into production in Asia.\n\n•\nSolve highly cross-functional problems by working with electrical, software, reliability, and manufacturing engineering teams.\n\n•\nPerform analysis and testing to ensure designs meet product goals, including thermal, fluid, and structural analyses.\n\n•\nHelp shape the direction of our products and features by collaborating with industrial design, marketing, and product teams as well as company leadership.\n\nWhat You'll Need to Succeed\n\n•\n6+ years of consumer product design experience with knowledge of injection molding, sheet metal forming, and sensor/electronics integration.\n\n•\nExperience shipping high-volume consumer products, including manufacturing support in Asia.\n\n•\nHighly proficient with 3D modeling (e.g. Solidworks, NX, Creo).\n\n•\nExperience with high-volume manufacturing processes, design for manufacturability and assembly (DFM/DFA), tolerance analysis, functional dimensioning and geometric tolerancing (GD&T).\n\n•\nSolid understanding of root cause analysis, DOEs, and other quality measuring techniques.\n\n•\nBSME or equivalent.\n\n•\nWillingness and ability to travel to China as needed.\n\nWhy join Eight Sleep?\n\nInnovation in a culture of excellence\n\nJoin us in a workplace where innovation isn’t just encouraged - it’s a standard. Our flagship product, the Pod, is a testament to our culture of excellence, beloved by hundreds of thousands of customers worldwide. At Eight Sleep, you will be part of a team that continuously pushes the boundaries of technology in sleep fitness.\n\nImmediate responsibility and accelerated career growth\n\nFrom your first day, you’ll take on substantial responsibilities that have a direct impact on our core business and product success. We are a small team that empowers you to own your projects and see the tangible effects of your efforts, enhancing both your professional growth and our company’s trajectory. Your path will be challenging but rewarding, perfect for those who thrive in fast-paced environments aiming for high standards.\n\nCollaboration with exceptional talent\n\nWork alongside other bright minds like you: at Eight Sleep exceptional intelligence and a passion for breakthroughs are the norms. Our team members are not only experts in their fields but also avid innovators who thrive in our dynamic, fast-paced environment.\n\nEquitable compensation and continuous equity investment\n\nWe extend equity participation to every full-time team member, recognizing and rewarding your direct contributions to our success. This includes periodic equity refreshments based on performance, ensuring that as Eight Sleep grows and succeeds, so do you – perfectly aligning your achievements with the broader triumphs of the company.\n\nYour own Pod - and other great benefits\n\nEvery Eight Sleep employee receives the very product that defines our mission: a Pod of their own. If you join us you’ll get your own Pod , along with*:\n\n•\nLunch in the SF office 5 days a week\n\n•\nFull access to health, vision, and dental insurance for you and your dependents\n\n•\nSupplemental life insurance\n\n•\nFlexible PTO\n\n•\nCommuter benefits to ease your daily commute\n\n•\nPaid parental leave\n\nAt Eight Sleep we continually celebrate the diverse community different individuals cultivate. As an equal opportunity employer, we stay true to our values by ensuring everyone feels they can flourish and grow. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status.",
+   "workplace": "remote",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 15,
+   "bucket": "cut",
+   "company": "Frontcareers",
+   "title": "Senior Design Engineer",
+   "url": "https://jobs.ashbyhq.com/Frontcareers/f8ee1ada-f72b-4a09-a150-35dc954324cf",
+   "location": "San Francisco, CA",
+   "source": "ashby/Frontcareers",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Hybrid role requiring 3 days/week in San Francisco office; no remote work outside the US mentioned."
+   },
+   "fields": {
+    "role": "Senior Design Engineer",
+    "company": "Front",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 6,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Front is the customer operations platform built for B2B complexity, keeping every team, tool, and customer conversation in sync so companies can scale without losing connection. Others handle simple interactions. Front handles the coordination and context behind complex B2B customer relationships. Over 9,000 companies, including Uber Freight, Navan, and Stripe, rely on Front because it's the only one that can run the operational layer that makes customer-facing work actually succeed.\n\nBacked by Sequoia Capital and Salesforce Ventures, Front has raised $204M from leading venture capital firms and independent investors including top executives at Atlassian, Okta, Qualtrics, Zoom, and PagerDuty. Front has received numerous Great Place to Work accolades, including Built In's 100 Best Midsize Places to Work in SF 2025 , Top Places to Work by USA Today 2025 , Y Combinator's list of Top Companies in 2023 , #4 on Fortune’s Best Workplaces in the Bay Area™ , Inc. Magazine's 2022 Best Workplaces list , and Forbes Best Startup Employers 2022 List .\n\nAI is transforming customer service at a pace the industry hasn’t seen before. Front is at the leading edge of that shift, with more than 9,000 companies worldwide, including CultureAmp, Hootsuite, and Y Combinator, already running their support operations on it.\n\nWe’re looking for a Senior Design Engineer to help close the gap between how Front is designed and how Front is built. Front has a mature, complex product surface with more than a decade of UI investment, a rich Figma library, and a large production codebase. This role is for someone who is equally comfortable in Figma and in frontend code, and who wants to turn design systems from static documentation into living, production-quality systems that help product teams move faster.\n\nYou’ll own the connective tissue between Design and Engineering: building reusable components, shaping design-system architecture, improving the fidelity between Figma and production, and creating the tooling, patterns, and practices that make high-quality UI easier to ship. You won’t just document the system — you’ll build it, ship it, evolve it, and help teams adopt it.\n\nThis is a hands-on senior IC role with high leverage across Product, Design, and Engineering. The right person brings strong frontend engineering judgment, excellent UI craft, deep design-systems experience, and the ability to influence teams without becoming a bottleneck.\n\nWhat will you be doing?\n\n•\nOwn and evolve Front’s design system across Figma, Storybook, and production code, helping create a clearer source of truth between design and engineering.\n\n•\nBuild, refactor, and maintain reusable, accessible, well-documented UI components that product teams can confidently use across Front’s core surfaces.\n\n•\nIdentify and reduce design/code drift across our existing component libraries, legacy UI patterns, and evolving Figma system.\n\n•\nEstablish patterns, conventions, and guardrails that improve consistency, accessibility, maintainability, and developer experience.\n\n•\nPrototype new interaction patterns and reference implementations in code to help teams align quickly and de-risk complex product decisions.\n\n•\nPartner closely with Product Designers, Product Managers, and Engineers to define what “great” looks like for complex workflows, edge cases, and enterprise-grade product experiences.\n\n•\nUse AI tools thoughtfully to accelerate prototyping, iteration, production changes, and system maintenance while applying strong judgment to the output.\n\nWhat skills and experience do you need?\n\n•\n6+ years of experience designing and building production frontend experiences, ideally in complex B2B SaaS, enterprise software, developer tools, or similarly deep product domains.\n\n•\nStrong frontend engineering skills with modern web technologies and component-based architecture. You do not need to have used Front’s exact stack, but you should be able to ramp quickly in a large, mature codebase.\n\n•\nHigh UI/UX craft and strong product taste. You can evaluate whether an interface is not only visually polished, but also usable, accessible, flexible, and maintainable.\n\n•\nExperience building or maintaining component libraries, Storybook documentation, visual regression workflows, design-token pipelines, Figma workflows/plugins, or similar design-engineering infrastructure.\n\n•\nStrong accessibility fundamentals, including semantic HTML, ARIA patterns, keyboard interaction models, focus management, and inclusive component states.\n\n•\nStrong communication skills. You can explain technical and design-system decisions clearly to both specialists and non-specialists.\n\n•\nA portfolio or body of work showing shipped design-engineering impact: production UI, component systems, prototypes, Storybook examples, design-system documentation, or code-backed product work.\n\nBonus points\n\n•\nExperience working on products with a large existing frontend surface area, multiple product teams, and a mature or evolving design system.\n\n•\nExperience in customer support, customer operations, collaboration software, internal tools, developer tools, or other workflow-heavy SaaS products.\n\n•\nExperience consolidating fragmented component libraries or aligning Figma libraries with production code.\n\n•\nExperience using AI-assisted coding or design tools to accelerate prototyping, refactoring, and product iteration.\n\nWhat you’ll bring to Front\n\n•\nA systems mindset: you see patterns, edge cases, and long-term maintenance costs, not just individual screens.\n\n•\nA high craft bar: you care about the last 10% of interaction detail, visual polish, accessibility, and usability.\n\n•\nA builder’s bias: you prefer to make ideas real in code, learn from how they behave, and iterate quickly.\n\n•\nA collaborative approach: you raise the quality of work around you by making the right path easier for other designers and engineers.\n\n•\nSenior-level judgment: you can operate through ambiguity, prioritize high-leverage improvements, and sequence change in a way that teams can actually adopt\n\nFront operates on a hybrid model — we come together in the office each Tuesday, Wednesday, and Thursday to collaborate and stay connected.\n\nWhat we offer\n\n•\nCompetitive salary\n\n•\nEquity (we are post-series D & backed by some of the best VCs in the US)\n\n•\nPrivate health insurance, including plan options at no cost to employees\n\n•\nPaid parental leave\n\n•\nFlexible time off policy\n\n•\nFlexibility to work from home Monday and Friday, unless posted as a fully remote role\n\n•\nMental health support with Workplace Options\n\n•\nFamily planning support with Maven\n\n•\n$100 per month Lifestyle Stipend to spend on fitness, health and wellness, and other activities\n\n•\nWellness Days - Fronteers get an additional day off on months with no holidays\n\n•\nWinter Break - Our offices are closed from Christmas to New Year's Day!\n\nFront provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age or disability. By applying, you acknowledge and agree that you have read and understand the California Recruiting Privacy Notice & EU Privacy Notice",
+   "workplace": null,
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 16,
+   "bucket": "cut",
+   "company": "Frontcareers",
+   "title": "Head of Product Design",
+   "url": "https://jobs.ashbyhq.com/Frontcareers/6ca0f3aa-4593-4ca2-8c64-dcb61e96465d",
+   "location": "San Francisco, CA",
+   "source": "ashby/Frontcareers",
+   "l2": {
+    "role": "yes",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Hybrid role requiring 3 days/week in San Francisco office; not remote or Portugal-based."
+   },
+   "fields": {
+    "role": "Head of Product Design",
+    "company": "Front",
+    "seniority": "director",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Front is the customer operations platform built for B2B complexity, keeping every team, tool, and customer conversation in sync so companies can scale without losing connection. Others handle simple interactions. Front handles the coordination and context behind complex B2B customer relationships. Over 9,000 companies, including Uber Freight, Navan, and Stripe, rely on Front because it's the only one that can run the operational layer that makes customer-facing work actually succeed.\n\nBacked by Sequoia Capital and Salesforce Ventures, Front has raised $204M from leading venture capital firms and independent investors including top executives at Atlassian, Okta, Qualtrics, Zoom, and PagerDuty. Front has received numerous Great Place to Work accolades, including Built In's 100 Best Midsize Places to Work in SF 2025 , Top Places to Work by USA Today 2025 , Y Combinator's list of Top Companies in 2023 , #4 on Fortune’s Best Workplaces in the Bay Area™ , Inc. Magazine's 2022 Best Workplaces list , and Forbes Best Startup Employers 2022 List .\n\nFront is looking for a Design Director to lead our Product Design team and elevate the craft, speed, and impact of what we ship. This role is a senior design leader responsible for the quality of end-to-end experiences across Front’s core workflows—and for building the systems, processes, and leadership muscle that help design scale.\n\nYou’ll partner closely with Product and Engineering leadership to shape what we build (not just how it looks), connect design decisions to customer outcomes, and drive a high-trust, high-accountability culture across the org.\n\nWho you are\n\n•\nA senior, hands-on design leader who sets high standards for craft, clarity, and outcomes.\n\n•\nComfortable operating in complex, workflow-heavy, data-rich product areas (queues, routing/assignment, rules builders, automation, analytics).\n\n•\nA strong cross-functional partner to Product and Engineering—able to drive alignment, momentum, and crisp decision-making.\n\n•\nAn executive-level communicator who can translate design decisions into business outcomes and tradeoffs.\n\n•\nAn operator who brings structure without bureaucracy—improving process so teams move faster, not slower.\n\n•\nProduct-obsessed: deeply curious about customers and the broader CX market, and committed to understanding the “why” behind the work.\n\n•\nExcited to define and lead an AI-forward evolution of design practices while protecting quality and customer trust.\n\nWhat you’ll do\n\n•\nLead and develop a team of product designers (including managing managers as the org scales), setting clear expectations and coaching to raise the craft bar.\n\n•\nEstablish a strong operating cadence (critiques, design reviews, planning, decision-making) that improves quality, clarity, and throughput.\n\n•\nRaise design quality across Front’s core workflows—queues, routing/assignment, rules/automation, and analytics—shipping high-craft improvements that measurably increase usability and adoption.\n\n•\nEnsure experiences feel fast, clear, and intuitive even when systems are complex and data-heavy; model strong interaction, visual polish, and systems thinking.\n\n•\nEvolve and govern the design system (tokens, components, governance, collaboration model) so design and engineering can ship 2–3× faster with confidence.\n\n•\nOperationalize an AI-first design process from research to prototyping to engineering handoff—accelerating iteration, reducing rework, and setting AI-forward standards while protecting quality and customer trust.\n\n•\nPartner with Product and Engineering leadership to identify risks early, align stakeholders, and translate design decisions into business outcomes and tradeoffs.\n\nWhat you bring\n\n•\n10+ years of product design experience with substantial time leading teams in complex product environments.\n\n•\nStrong track record designing and shipping workflow-heavy, data-rich experiences (e.g., routing/assignment, rules builders, dashboards, analytics).\n\n•\nProven experience building, evolving, and governing a design system that improved consistency and shipping velocity.\n\n•\nExcellent cross-functional leadership—able to partner deeply with Product and Engineering to drive clarity and execution.\n\n•\nExecutive-level communication: strong storytelling, sharp judgment, and comfort presenting tradeoffs and recommendations.\n\n•\nExperience defining AI-enabled design practices and tools across a team (or a clear, credible point of view on how you would).\n\nBonus points\n\n•\nExperience with B2B SaaS products in CX/support/operations-adjacent categories.\n\n•\nTrack record shipping products known for exceptional craft and ambitious design.\n\nWhy this role and why now?\n\nFront has invested heavily in foundations—now we’re ready to turn that into exceptional product experiences at scale. This role has real leverage: you’ll lead the team that shapes the usability, consistency, and quality of Front’s core product, while helping define how design evolves in an AI-first era.\n\nFront operates on a hybrid model — we come together in the office each Tuesday, Wednesday, and Thursday to collaborate and stay connected.\n\nWhat we offer\n\n•\nCompetitive salary\n\n•\nEquity (we are post-series D & backed by some of the best VCs in the US)\n\n•\nPrivate health insurance, including plan options at no cost to employees\n\n•\nPaid parental leave\n\n•\nFlexible time off policy\n\n•\nFlexibility to work from home Monday and Friday, unless posted as a fully remote role\n\n•\nMental health support with Workplace Options\n\n•\nFamily planning support with Maven\n\n•\n$100 per month Lifestyle Stipend to spend on fitness, health and wellness, and other activities\n\n•\nWellness Days - Fronteers get an additional day off on months with no holidays\n\n•\nWinter Break - Our offices are closed from Christmas to New Year's Day!\n\nFront provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age or disability. By applying, you acknowledge and agree that you have read and understand the California Recruiting Privacy Notice & EU Privacy Notice",
+   "workplace": "hybrid",
+   "employment_type": null,
+   "department": null,
+   "salary": null,
+   "restrictions": null
+  },
+  {
+   "n": 17,
+   "bucket": "cut",
+   "company": "MaticRobots",
+   "title": "Senior Electrical Design Engineer",
+   "url": "https://jobs.ashbyhq.com/MaticRobots/031021d7-7325-476e-afcb-121a45175f27",
+   "location": "Menlo Park, CA",
+   "source": "ashby/MaticRobots",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Electrical Design Engineer is a hardware engineering role, not product/UX/UI design. Location is onsite in California, not remote or Portugal."
+   },
+   "fields": {
+    "role": "Senior Electrical Design Engineer",
+    "company": "MaticRobots",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 160,000 - 240,000",
+    "years_xp": 4,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Company Overview\n\nEach year, 2.5 trillion hours are spent on household chores. At Matic, we’re on a mission to recapture that lost time, and we’re doing it by revolutionizing home robotics.\n\nOur first product, also called Matic, is a Wall-E-esque floor cleaning robot. We've built what amounts to \"full self-driving in the home” with real-time 3D mapping, adaptive path-tracking, and a precise semantic understanding of the home. Our breakthroughs in spatial AI allow Matic to work reliably in real homes, using only RGB cameras and neural networks running on-device.\n\nPrivacy First\n\nWhat happens in the home, stays in the home. Our robots are private by design, with all data processing performed by the robot itself, not in the cloud.\n\nOur Approach\n\nBefore the iPhone, consumers adopted several distinct devices; cell phones, PDAs, and portable music players each served a particular need. We believe in a similar progression for home robotics, starting with single-purpose robots and building iteratively toward more complex capabilities over time.\n\nOur Culture\n\nMatic is a tight-knit and collaborative team, singularly focused on building products our customers will cherish. We're ultra-hardworking people committed to solving tough problems that save precious time and energy.\n\nAbout the role\n\nAs a Senior Electrical Design Engineer, you’ll lead the design of critical PCBs and subsystems of our products. You will work closely with team members from our hardware, software, and product teams to help us realize our vision of full home autonomy.\n\nIf you’re passionate about great design and obsessed with getting the details right, we’d love to talk to you about how you can work with us to pioneer innovations in the home robotics space.\n\nWhat you'll do\n\n•\nOwn end-to-end design and manufacturing of critical PCBAs in the system\n\n•\nSubsystem design and prototyping, component selection, schematic capture, prototype bring-up and debugging, hardware bug tracking, functional verification, and signal characterization\n\n•\nBoard layout of PCB assemblies including SoCs, microcontrollers, rugged connectors, sensors, power devices, etc.\n\n•\nElectromechanical integration through collaboration with mechanical and firmware engineers\n\n•\nDevelop specifications and accelerated test plans to validate the product for its lifetime\n\n•\nWork with CMs to ensure proper production of PCBAs and subassemblies, perhaps also flying out to be on the line as well\n\nWhat we look for\n\n•\nTechnical degree in Electrical Engineering or equivalent\n\n•\n4+ years of professional electrical design experience on a product (preferably a consumer product) that has shipped in high volume\n\n•\nPrevious ECAD experience with tools such as Altium Designer, Cadence, or equivalent\n\n•\nExperience with common digital protocols including I2C, SPI, USB, MIPI\n\n•\nExperience with component selection, schematic capture, and PCB layout\n\n•\nExperience with verifying and validating functional requirements of the electrical systems\n\n•\nExposure to regulatory certification processes\n\n•\nSupply chain management and PCBA contract manufacturing experience\n\n•\nComfort with fast-paced, startup atmosphere -- you don’t shy away from the hard work\n\n•\nHigh level of maturity, ownership, and pride in your work\n\nWe'd love to hear from you if...\n\n•\nYou are genuinely motivated to help those around you\n\n•\nYou are passionate about learning outside of your normal comfort zones\n\n•\nYou love diagnosing complex technical issues\n\n•\nYou are excited to do great work\n\nCompensation:\n\nBase: $160,000 - $240,000 per annum.\n\nActual Compensation will depend on skills, experience and qualifications. Base Salary is one part of the total compensation package. The role is also eligible for equity through the company’s discretionary equity program, along with a comprehensive benefits package that includes medical, dental and vision coverage access to a 401(k) plan.",
+   "workplace": "onsite",
+   "employment_type": null,
+   "department": null,
+   "salary": "$160,000 - $240,000",
+   "restrictions": null
+  },
+  {
+   "n": 18,
+   "bucket": "cut",
+   "company": "MaticRobots",
+   "title": "Senior Mechanical Design Engineer",
+   "url": "https://jobs.ashbyhq.com/MaticRobots/f46b52d3-0d7f-4b28-979e-26a99d380c73",
+   "location": "Menlo Park, CA",
+   "source": "ashby/MaticRobots",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "This is a mechanical engineering role, not product design. Cesar is a product designer."
+   },
+   "fields": {
+    "role": "Senior Mechanical Design Engineer",
+    "company": "Matic Robots",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 160,000 - 240,000",
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Company Overview\n\nEach year, 2.5 trillion hours are spent on household chores. At Matic, we’re on a mission to recapture that lost time, and we’re doing it by revolutionizing home robotics.\n\nOur first product, also called Matic, is a Wall-E-esque floor cleaning robot. We've built what amounts to \"full self-driving in the home” with real-time 3D mapping, adaptive path-tracking, and a precise semantic understanding of the home. Our breakthroughs in spatial AI allow Matic to work reliably in real homes, using only RGB cameras and neural networks running on-device.\n\nPrivacy First\n\nWhat happens in the home, stays in the home. Our robots are private by design, with all data processing performed by the robot itself, not in the cloud.\n\nOur Approach\n\nBefore the iPhone, consumers adopted several distinct devices; cell phones, PDAs, and portable music players each served a particular need. We believe in a similar progression for home robotics, starting with single-purpose robots and building iteratively toward more complex capabilities over time.\n\nOur Culture\n\nMatic is a tight-knit and collaborative team, singularly focused on building products our customers will cherish. We're ultra-hardworking people committed to solving tough problems that save precious time and energy.\n\nAbout the role\n\nAs a Senior Mechanical Design Engineer, you’ll lead the design of critical subassemblies of our products and work closely with team members from our hardware, software, and product teams to help us realize our vision of full home autonomy.\n\nIf you’re passionate about great design and obsessed with getting the details right, we’d love to talk to you about how you can work with us to pioneer innovations in the home robotics space.\n\nWhat you'll do\n\n•\nOwn a critical subsystem end to end: requirements, architecture, detailed design, validation, tooling, and ramp\n\n•\nTurn a vague product goal into a set of engineering requirements and defend the ones that matter when they conflict\n\n•\nMake and own tradeoffs across cost, mass, acoustics, serviceability, manufacturability, and reliability, and explain the reasoning to people outside your discipline\n\n•\nOwn the tolerance budget for the full assembly, not just individual stacks\n\n•\nDecide where to spend analysis, where to spend test, and where to just build it\n\n•\nDrive suppliers from tooling kickoff through T1 and T2 to a qualified process, and hold the line on quality when the schedule pushes back\n\n•\nOwn the failure investigations in your area, from field returns back to root cause and corrective action\n\n•\nRaise the technical level of the engineers around you through design reviews, mentorship, and the standard you set on your own drawings\n\nWhat we look for\n\nEvidence of independent technical judgment at subsystem scale:\n\n•\nA subsystem you owned that shipped in volume, where you can walk through the architecture decisions, what you rejected, and what you got wrong\n\n•\nYou've been through at least one full production ramp and can talk about what broke between T1 and mass production\n\n•\nDeep command of high volume manufacturing, particularly injection molding, at the level of tool design conversations with a supplier\n\n•\nYou've built a tolerance and variation strategy for an assembly, including how you decided what to control and what to leave open\n\n•\nTest design judgment: you've built accelerated test plans that correlated to field data, and you know when an acceleration model does not apply\n\n•\nYou've made a call under uncertainty, been wrong, caught it, and fixed it. We will ask about this\n\n•\nYou are still hands-on. Tell us the last thing you personally built, measured, or debugged yourself rather than delegating\n\n•\nYou've owned something outside your discipline because the company needed it done and you were the one available\n\n•\nYou make other engineers better without needing a title to do it\n\n•\nComfort in a fast-paced startup where you are the escalation point, not the escalator\n\nA technical degree in mechanical engineering or related field. Most people who can do this job have 5+ years of professional design experience on shipping high volume products, but we hire on demonstrated capability. If you're earlier in your career and can show the above, apply for this role rather than the Mechanical Design Engineer role.\n\nExperience in NVH, motors, or turbo motors is a plus.\n\nEngineering Culture at Matic\n\nSeniority at Matic means both more depth and more range, not just one of the two. Nobody graduates out of the hands-on work.\n\nWhen it's needed, we're all still on late evening supplier calls. We're still in the lab at 9pm when a life test fails three days before a build. You'll redline your own drawings, tear down your own returns, build your own fixtures, and dig through your own data. Owning a subsystem end to end means every part of it is yours, including the parts that feel tedious and repetitive right up until the moment they save the program.\n\nThe senior engineers who do best here go deepest into that work, because that's where the problems actually live. Architecture and direction matter, but they hold up only when the person making the calls has recent dirt under their fingernails. Concept and R&D are the fun half. Production, tolerancing, reliability, and supplier management are the half that tells you whether the fun half was any good. We keep them together on purpose.\n\nThe same goes past your own scope. A blocked build, a broken test rig, a supplier issue in someone else's area, a question nobody quite owns: people here move toward those. Scope is how we plan the work, not how we decide what's ours.\n\nThat's the shape of the team we're building. We value deep expertise in people who'd like to join Matic. At the same time, the engineers who've done the most for this company are the ones who wanted Matic to win first and picked up whatever that took.\n\nWe'd love to hear from you if...\n\n•\nYou are genuinely motivated to help those around you\n\n•\nYou are passionate about learning outside of your normal comfort zones\n\n•\nYou love diagnosing complex technical issues\n\n•\nYou are excited to do great work\n\nCompensation:\n\nBase: $160,000 - $240,000 per annum.\n\nActual Compensation will depend on skills, experience and qualifications. Base Salary is one part of the total compensation package. The role is also eligible for equity through the company’s discretionary equity program, along with a comprehensive benefits package that includes medical, dental and vision coverage access to a 401(k) plan.",
+   "workplace": "onsite",
+   "employment_type": null,
+   "department": null,
+   "salary": "$160,000 - $240,000",
+   "restrictions": null
+  },
+  {
+   "n": 19,
+   "bucket": "cut",
+   "company": "MaticRobots",
+   "title": "Senior Manufacturing Design Engineer",
+   "url": "https://jobs.ashbyhq.com/MaticRobots/c1e04901-0c2c-4902-b4fc-af5fa9515748",
+   "location": "Menlo Park, CA",
+   "source": "ashby/MaticRobots",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Manufacturing Design Engineer is mechanical engineering, not product/UX design. Onsite in Menlo Park, CA."
+   },
+   "fields": {
+    "role": "Senior Manufacturing Design Engineer",
+    "company": "MaticRobots",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 120,000 - 200,000",
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Company Overview\n\nEach year, 2.5 trillion hours are spent on household chores. At Matic, we’re on a mission to recapture that lost time, and we’re doing it by revolutionizing home robotics.\n\nOur first product, also called Matic, is a Wall-E-esque floor cleaning robot. We've built what amounts to \"full self-driving in the home” with real-time 3D mapping, adaptive path-tracking, and a precise semantic understanding of the home. Our breakthroughs in spatial AI allow Matic to work reliably in real homes, using only RGB cameras and neural networks running on-device.\n\nPrivacy First\n\nWhat happens in the home, stays in the home. Our robots are private by design, with all data processing performed by the robot itself, not in the cloud.\n\nOur Approach\n\nBefore the iPhone, consumers adopted several distinct devices; cell phones, PDAs, and portable music players each served a particular need. We believe in a similar progression for home robotics, starting with single-purpose robots and building iteratively toward more complex capabilities over time.\n\nOur Culture\n\nMatic is a tight-knit and collaborative team, singularly focused on building products our customers will cherish. We're ultra-hardworking people committed to solving tough problems that save precious time and energy.\n\nAbout the role\n\nAs a Senior Manufacturing Design Engineer (MDE) , you will work at the intersection of R&D and production, translating product designs into robust, scalable manufacturing solutions. You will use CAD tools to design fixtures, tooling, and equipment, develop assembly processes, and optimize workflows for high-volume production.\n\nIf you’re passionate about great design, strong problem-solving, and getting the details right, we’d love to talk about how you can help us pioneer innovation in the home robotics space.\n\nWhat You'll Do\n\n•\nTooling & Equipment Design: Design and develop production fixtures, QC equipment, and specialized tooling to support assembly and testing on the manufacturing line.\n\n•\nCross-Functional Collaboration: Work closely with product design, quality, and manufacturing teams to troubleshoot production issues and support new product launches.\n\n•\nPartner with vendors, suppliers, and contract manufacturers in a fast-moving startup environment.\n\n•\nFMEA & Root Cause Analysis: Monitor production issues, analyze yield data, perform root cause analysis, and drive corrective actions to quickly recover the production line.\n\n•\nPrototype, fabricate, and iterate rapidly to mature concepts into robust, self-sustaining manufacturing solutions.\n\n•\nPerform component-level testing for performance, durability, reliability, and variability.\n\n•\nTechnical Documentation: Create and maintain CAD models, engineering drawings, specifications, and manufacturing documentation.\n\n•\nDesign for Manufacturability (DFM): Collaborate with design teams to refine products for efficient, cost-effective, and scalable manufacturing.\n\nWhat We Look For\n\n•\nBachelor’s degree in Mechanical Engineering or a related technical field.\n\n•\n10+ years of professional experience in mechanical design, tooling, or equipment development for high-volume manufacturing.\n\n•\nProven ability to execute complex mechanical designs and bring them from concept to production.\n\n•\nExperience working on products that have shipped to customers.\n\n•\nManufacturing Expertise: Strong understanding of CNC machining, injection molding, casting, welding, and mechanical assembly processes.\n\n•\nAnalytical Skills: Experience with tolerance analysis, root cause analysis, and process optimization.\n\n•\nProficiency in SolidWorks.\n\n•\nFamiliarity with PDM/PLM systems, engineering change management, and quality management processes.\n\n•\nExperience with sensors, motors, or fluid systems is a plus.\n\n•\nComfortable working in a fast-paced startup environment and willing to take ownership of ambiguous problems.\n\n•\nHigh level of maturity, accountability, and pride in delivering high-quality work.\n\nWe'd love to hear from you if...\n\n•\nYou’re genuinely motivated to help teammates succeed.\n\n•\nYou enjoy learning beyond your immediate area of expertise.\n\n•\nYou love diagnosing and solving complex technical problems.\n\n•\nYou’re excited to do meaningful, high-impact work.\n\nCompensation:\n\nBase: $120,000 - $200,000 per annum.\n\nActual Compensation will depend on skills, experience and qualifications. Base Salary is one part of the total compensation package. The role is also eligible for equity through the company’s discretionary equity program, along with a comprehensive benefits package that includes medical, dental and vision coverage access to a 401(k) plan.",
+   "workplace": "onsite",
+   "employment_type": null,
+   "department": null,
+   "salary": "$120,000 - $200,000",
+   "restrictions": null
+  },
+  {
+   "n": 20,
+   "bucket": "cut",
+   "company": "MaticRobots",
+   "title": "UX Engineer",
+   "url": "https://jobs.ashbyhq.com/MaticRobots/2d90711b-10e4-4caa-ac31-78cd66657412",
+   "location": "Menlo Park, CA",
+   "source": "ashby/MaticRobots",
+   "l2": {
+    "role": "no",
+    "place": "no",
+    "cut": true,
+    "lane": "unsure",
+    "confidence": "high",
+    "reason": "Pure front-end engineering role focused on mobile app development, not product design. Onsite in Menlo Park, CA with no remote option."
+   },
+   "fields": {
+    "role": "UX Engineer",
+    "company": "MaticRobots",
+    "seniority": "junior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "$96,000 — $120,000",
+    "years_xp": 1,
+    "reports_to": null,
+    "language": "English"
+   },
+   "jd": "Company Overview\n\nEach year, 2.5 trillion hours are spent on household chores. At Matic, we’re on a mission to recapture that lost time, and we’re doing it by revolutionizing home robotics.\n\nOur first product, also called Matic, is a Wall-E-esque floor cleaning robot. We've built what amounts to \"full self-driving in the home” with real-time 3D mapping, adaptive path-tracking, and a precise semantic understanding of the home. Our breakthroughs in spatial AI allow Matic to work reliably in real homes, using only RGB cameras and neural networks running on-device.\n\nPrivacy First\n\nWhat happens in the home, stays in the home. Our robots are private by design, with all data processing performed by the robot itself, not in the cloud.\n\nOur Approach\n\nBefore the iPhone, consumers adopted several distinct devices; cell phones, PDAs, and portable music players each served a particular need. We believe in a similar progression for home robotics, starting with single-purpose robots and building iteratively toward more complex capabilities over time.\n\nOur Culture\n\nMatic is a tight-knit and collaborative team, singularly focused on building products our customers will cherish. We're ultra-hardworking people committed to solving tough problems that save precious time and energy.\n\nAbout the role\n\nWe’re looking for a UX Engineer / Design Engineer to help build and refine Matic’s mobile app experience.\n\nThis role sits at the intersection of design and engineering. You’ll work closely with product designers and engineers to turn thoughtful interaction concepts into polished, production-ready UI.\n\nThe Matic app is where users interact with real-time autonomy — from maps and cleaning controls to robot status and feature configuration. Your work will help make complex robotic intelligence feel intuitive, trustworthy, and beautifully executed.\n\nThis is an entry-to-mid-level role with strong growth potential for someone who cares about craft, interaction quality, and building products that live beyond the screen.\n\nWhat You'll Do\n\n•\nBuild and ship high-quality UI in Matic’s mobile app\n\n•\nTranslate Figma designs and prototypes into production-ready components\n\n•\nImplement smooth animations and thoughtful micro-interactions\n\n•\nHelp visualize complex robot behaviors (mapping, obstacle detection, cleaning states)\n\n•\nCollaborate closely with product design to refine interaction details\n\n•\nPartner with design, software, algorithms, and hardware teams to ensure accurate real-time feedback\n\n•\nContribute to and help evolve a scalable design system in code\n\n•\nParticipate in feature planning and iteration discussions\n\nWhat You Bring\n\n•\n1–4+ years of experience in front-end or mobile development\n\n•\nExperience building product-facing UI (mobile preferred)\n\n•\nFamiliarity with Rust and/or Python, iOS and/or Android is required.\n\n•\nStrong attention to detail in spacing, hierarchy, motion, and interaction\n\n•\nComfort working in a fast-moving, collaborative environment\n\n•\nCuriosity about connected devices and how software interfaces with hardware\n\n•\nClear communication skills and a willingness to give and receive feedback\n\nPortfolio (Required)\nPlease include a portfolio showcasing relevant design work. We’re especially interested in projects that demonstrate strong visual taste, attention to detail, and the ability to translate complex ideas into clear, compelling graphics. Work that shows range across brand, marketing, product visuals, or storytelling is particularly valuable.\nPlease provide portfolio website password (if applicable)\n\nCompensation\n\nBase $96,000 — $120,000\n\nActual Compensation will depend on skills, experience and qualifications. Base Salary is one part of the total compensation package. The role is also eligible for equity through the company’s discretionary equity program, along with a comprehensive benefits package that includes medical, dental and vision coverage access to a 401(k) plan.",
+   "workplace": "onsite",
+   "employment_type": null,
+   "department": null,
+   "salary": "$96,000 — $120,000",
+   "restrictions": null
+  }
+ ]
+}
