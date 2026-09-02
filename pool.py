@@ -911,7 +911,6 @@ def main():
         return 2
 
     previous = json.loads(POOL_FILE.read_text())["jobs"] if POOL_FILE.exists() else []
-    previous_jd = json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {}
     stamp = now()
     run_id = stamp
     print(f"pool run {run_id} - {len(previous)} roles carried in", flush=True)
@@ -937,6 +936,10 @@ def main():
         print("  --dry: nothing written")
         return 0
 
+    # Read the previous descriptions NOW, not at start: a judge run resolving
+    # originals during a 40-minute scrape writes jd.json too, and a snapshot
+    # taken at start would overwrite its work.
+    previous_jd = json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {}
     jd, carried, lost = merge_jd(jobs, previous_jd)
     if lost:
         print(f"ABORT - {len(lost)} active roles would lose their description; "
