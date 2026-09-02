@@ -51374,5 +51374,269 @@
   },
   "lane": "unsure",
   "criteria_version": "2026-09-02.6"
+ },
+ "c214a9fb9adbefb4": {
+  "role_verdict": "no",
+  "place_verdict": "remote",
+  "cut": true,
+  "reason": "Creative Designer role is brand and marketing design, not product/UX design.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Creative Designer",
+   "company": "Lodgify",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Europe"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "1282c86ad0ceaa27": {
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Head of Design role (leadership level) matches his seniority; company offers remote flexibility with Barcelona HQ.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Head of Design",
+   "company": "Lodgify",
+   "seniority": "head",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 10,
+   "reports_to": "Chief Product and Design Officer",
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-02.6"
+ },
+ "a7ba95169df95087": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Barcelona with no mention of Portugal work eligibility.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Lodgify",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "890f0ef10469fe89": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Location type is 'remote' but the posting states Barcelona as the location with no clear indication that Portugal is included in the remote scope.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UX/UI Designer",
+   "company": "Lodgify",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "14e4fae9b28ed99c": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role in Paris; no remote work or Portugal eligibility stated.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Head of Product Design",
+   "company": "Malt",
+   "seniority": "head",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "VP of Design",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "89fe93d5f6cc9107": {
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Product Designer role at fully remote global company; explicitly remote-first and hires worldwide.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Metabase",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Global"
+   ],
+   "portugal_ok": "yes",
+   "salary": "$93K–$210K USD",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-02.6"
+ },
+ "ee6023e3cfeee4b1": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Fashion knitwear design is not product/UX/UI design; hybrid role based in London.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Knitwear Designer",
+   "company": "Mulberry",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": "Design Director",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "3685fe1b656cdaaa": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Leather goods design is brand/fashion/graphic design, not product/UX/UI design. Onsite hybrid role in London, not Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Leather Goods Designer",
+   "company": "Mulberry",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "290c3058a6b3dc59": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is genuine product design, but location is Seattle with remote not clearly stated for Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Staff Product Designer",
+   "company": "Outreach",
+   "seniority": "staff",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "25e79e8b39cd4c84": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Instructional designer role is user research / learning design discipline, not product design. Hybrid role in Toronto, not Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Instructional Designer",
+   "company": "Pigment",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
  }
 }
