@@ -17,6 +17,23 @@ class H(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **k):
         super().__init__(*a, directory=str(ROOT), **k)
 
+    _jd, _jd_mtime = {}, 0
+
+    def do_GET(self):
+        if not self.path.startswith("/api/jd/"):
+            return super().do_GET()
+        f = ROOT / "data" / "jd.json"
+        m = f.stat().st_mtime if f.exists() else 0
+        if m != H._jd_mtime:                    # reloaded when the judge or pool rewrites it
+            H._jd, H._jd_mtime = json.loads(f.read_text()) if f.exists() else {}, m
+        text = H._jd.get(self.path[len("/api/jd/"):].split("?")[0], "")
+        body = text.encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
     def do_POST(self):
         n = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(n).decode("utf-8", "replace")
