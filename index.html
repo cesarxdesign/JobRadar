@@ -40,7 +40,9 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .mail .warn{color:#e5484d;font-weight:600}
 .mail .s{font-weight:600;margin-top:3px}
 .mail .b{color:var(--dim);margin-top:3px}
-.mail .body{color:var(--fg);margin-top:6px;line-height:1.5;max-height:260px;overflow-y:auto;padding-right:6px}
+.mail .facts{margin:8px 0}
+.mail .body{color:var(--fg);margin-top:8px;line-height:1.5;max-height:260px;overflow-y:auto;padding-right:6px;white-space:normal}
+.mail .body.none{color:var(--dimmer)}
 .card .env{font-size:11px;color:var(--dimmer)}
 .card .env.older{color:#e5484d}
 .jd{margin-top:16px;font-size:13px;line-height:1.55;color:var(--fg)}
@@ -237,11 +239,13 @@ function renderPane(){
   $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
     +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
     +(r.hints||[]).map(h=>'<div class="mail'+(h.older?' older':'')+'"><div class="k">'
-        +(h.kind==="reject"?"rejection":"confirmation")+' · <b>'+esc(h.date)+'</b> · '+esc(h.from)
+        +(h.kind==="reject"?"rejection":"confirmation")+' · <b>'+esc(h.date)+'</b>'
         +(h.older?' · <span class="warn">email is older than this posting ('+esc(h.posted)+')</span>':' · posting '+esc(h.posted))+'</div>'
-        +'<div class="s">'+esc(h.subject)+'</div>'
-        +(h.body?'<div class="b body">'+esc(h.body).replace(/\n/g,'<br>')+'</div>':h.snippet?'<div class="b">'+esc(h.snippet)+'</div>':'')
-        +'<div class="b">read as: '+esc(h.company||"?")+' · '+esc(h.title||"no title in the email")+'</div></div>').join("")
+        +'<div class="facts">'+fact("Title in the email",esc(h.title))+fact("Company in the email",esc(h.company))
+          +fact("Subject",esc(h.subject))+fact("Sent from",esc(h.domain||h.from))+'</div>'
+        +(h.body?'<div class="body">'+esc(h.body).replace(/\n/g,'<br>')
+          :'<div class="body none">'+(h.snippet?esc(h.snippet)+'<br><br>(only the preview line — this email predates the body pull)':'no body on file for this email')
+          )+'</div></div>').join("")
     +'<div class="facts">'
     + fact("Days open", days(r)===null?"—":days(r)+" · since "+esc((r.posted||r.first_seen||"").slice(0,10)))
     + fact("Location", esc(r.location))

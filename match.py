@@ -169,6 +169,7 @@ def main():
             posted = str(posted)[:10]
             hints.setdefault(j["id"], []).append({
                 "kind": e["kind"], "date": e["date"], "from": e["from"], "subject": e["subject"],
+                "domain": (e["email"].split("@")[-1] or "").lstrip("."),
                 "snippet": e["snippet"], "body": e.get("body", ""),
                 "company": e["company"], "title": e["title"],
                 "score": round(score, 2), "older": bool(e["date"] and posted and e["date"] < posted),
