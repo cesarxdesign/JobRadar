@@ -211,7 +211,7 @@ function renderPane(){
         +(h.older?' · <span class="warn">email is older than this posting ('+esc(h.posted)+')</span>':' · posting '+esc(h.posted))+'</div>'
         +'<div class="s">'+esc(h.subject)+'</div>'
         +(h.snippet?'<div class="b">'+esc(h.snippet)+'</div>':'')
-        +'<div class="b">read as: '+esc(h.company||"?")+' · '+esc(h.title||"no title in the email")+'</div></div>').join("")'
+        +'<div class="b">read as: '+esc(h.company||"?")+' · '+esc(h.title||"no title in the email")+'</div></div>').join("")
     +'<div class="facts">'
     + fact("Days open", days(r)===null?"—":days(r)+" · since "+esc((r.posted||r.first_seen||"").slice(0,10)))
     + fact("Location", esc(r.location))
