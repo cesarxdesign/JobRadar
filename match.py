@@ -45,7 +45,7 @@ def parse_date(s):
     return None
 
 def company_of(e):
-    for text in (e["subject"], e["snippet"]):
+    for text in (e["subject"], e.get("body") or e["snippet"]):
         for rx in COMPANY_RES:
             for m in re.finditer(rx, text):
                 c = re.split(r" (?:Cesar|Thank|We|Your|Hello|Here)\b", m.group("c"))[0].strip(" -–—:!.,")
@@ -64,7 +64,7 @@ def company_of(e):
 
 
 def title_of(e):
-    text = e["subject"] + ". " + e["snippet"]
+    text = e["subject"] + ". " + (e.get("body") or e["snippet"])
     for rx in TITLE_RES:
         m = re.search(rx, text)
         if m:
@@ -81,7 +81,27 @@ def level(t):
     m = re.search(r"\b(senior|sr|staff|principal|lead|head|director|manager|founding|junior)\b", (t or "").lower())
     return m.group(1) if m else ""
 
+def load_bodies():
+    """data/emails_bodies_*.txt: '###<tid>' then the message text, as pulled
+    from each thread's print view. Local only."""
+    bodies, tid, buf = {}, None, []
+    import glob
+    for f in sorted(glob.glob(f"{ROOT}/data/emails_bodies_*.txt")):
+        for line in open(f):
+            if line.startswith("###"):
+                if tid:
+                    bodies[tid] = "".join(buf).strip()
+                tid, buf = line[3:].strip(), []
+            else:
+                buf.append(line)
+        if tid:
+            bodies[tid] = "".join(buf).strip()
+        tid, buf = None, []
+    return bodies
+
+
 def load_emails():
+    bodies = load_bodies()
     out = []
     for line in open(f"{ROOT}/data/emails_raw.tsv"):
         f = line.rstrip("\n").split("\t")
@@ -89,6 +109,7 @@ def load_emails():
             continue
         e = dict(zip(("kind", "date_raw", "from", "email", "subject", "snippet", "tid"), f))
         e["date"] = parse_date(e["date_raw"])
+        e["body"] = bodies.get(e["tid"], "")
         e["company"] = company_of(e)
         e["title"] = title_of(e)
         out.append(e)
@@ -146,7 +167,8 @@ def main():
             posted = str(posted)[:10]
             hints.setdefault(j["id"], []).append({
                 "kind": e["kind"], "date": e["date"], "from": e["from"], "subject": e["subject"],
-                "snippet": e["snippet"], "company": e["company"], "title": e["title"],
+                "snippet": e["snippet"], "body": e.get("body", ""),
+                "company": e["company"], "title": e["title"],
                 "score": round(score, 2), "older": bool(e["date"] and posted and e["date"] < posted),
                 "posted": posted})
             matched += 1

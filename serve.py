@@ -34,6 +34,20 @@ class H(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _cors(self):
+        # The Gmail tab posts here. It is a public https page reaching a
+        # loopback http address: Chrome preflights that (Private Network
+        # Access) and hangs the request unless these headers come back.
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "content-type")
+        self.send_header("Access-Control-Allow-Private-Network", "true")
+
+    def do_OPTIONS(self):
+        self.send_response(204)
+        self._cors()
+        self.end_headers()
+
     def do_POST(self):
         n = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(n).decode("utf-8", "replace")
@@ -43,7 +57,7 @@ class H(http.server.SimpleHTTPRequestHandler):
             with open(ROOT / "data" / "emails_raw.jsonl", "a") as f:
                 f.write(body.rstrip("\n") + "\n")
             self.send_response(200)
-            self.send_header("Access-Control-Allow-Origin", "*")
+            self._cors()
             self.end_headers()
             self.wfile.write(b'{"ok":true}')
             return

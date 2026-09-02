@@ -40,6 +40,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .mail .warn{color:#e5484d;font-weight:600}
 .mail .s{font-weight:600;margin-top:3px}
 .mail .b{color:var(--dim);margin-top:3px}
+.mail .body{color:var(--fg);margin-top:6px;line-height:1.5;max-height:260px;overflow-y:auto;padding-right:6px}
 .card .env{font-size:11px;color:var(--dimmer)}
 .card .env.older{color:#e5484d}
 .jd{margin-top:16px;font-size:13px;line-height:1.55;color:var(--fg)}
@@ -239,7 +240,7 @@ function renderPane(){
         +(h.kind==="reject"?"rejection":"confirmation")+' · <b>'+esc(h.date)+'</b> · '+esc(h.from)
         +(h.older?' · <span class="warn">email is older than this posting ('+esc(h.posted)+')</span>':' · posting '+esc(h.posted))+'</div>'
         +'<div class="s">'+esc(h.subject)+'</div>'
-        +(h.snippet?'<div class="b">'+esc(h.snippet)+'</div>':'')
+        +(h.body?'<div class="b body">'+esc(h.body).replace(/\n/g,'<br>')+'</div>':h.snippet?'<div class="b">'+esc(h.snippet)+'</div>':'')
         +'<div class="b">read as: '+esc(h.company||"?")+' · '+esc(h.title||"no title in the email")+'</div></div>').join("")
     +'<div class="facts">'
     + fact("Days open", days(r)===null?"—":days(r)+" · since "+esc((r.posted||r.first_seen||"").slice(0,10)))
