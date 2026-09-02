@@ -856,6 +856,24 @@ def update(previous, found, run_id, stamp):
     return list(by_id.values()), minted
 
 
+def merge_jd(jobs, previous_jd):
+    """jd.json is rebuilt every run from the roles fetched THIS run. A role
+    carried forward - its source skipped with --skip, or failed soft - keeps
+    its row but used to lose its description: 801 designjobsworld roles came
+    out of the 2026-09-02 skip run with no text at all. Carry the previous
+    description forward for every role that did not get a fresh one.
+    Returns (jd, carried, lost). lost must be 0 - the caller aborts if not."""
+    jd = {j["id"]: j.pop("jd_text") for j in jobs if j.get("jd_text")}
+    carried = 0
+    for j in jobs:
+        if j["id"] not in jd and previous_jd.get(j["id"]):
+            jd[j["id"]] = previous_jd[j["id"]]
+            carried += 1
+    lost = [j["id"] for j in jobs if j["active"] and j["id"] not in jd
+            and previous_jd.get(j["id"])]
+    return jd, carried, lost
+
+
 def main():
     if "--skip" in sys.argv:
         SKIP.update(sys.argv[sys.argv.index("--skip") + 1].split(","))
@@ -874,6 +892,7 @@ def main():
         return 2
 
     previous = json.loads(POOL_FILE.read_text())["jobs"] if POOL_FILE.exists() else []
+    previous_jd = json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {}
     stamp = now()
     run_id = stamp
     print(f"pool run {run_id} - {len(previous)} roles carried in", flush=True)
@@ -899,7 +918,14 @@ def main():
         print("  --dry: nothing written")
         return 0
 
-    jd = {j["id"]: j.pop("jd_text") for j in jobs if j.get("jd_text")}
+    jd, carried, lost = merge_jd(jobs, previous_jd)
+    if lost:
+        print(f"ABORT - {len(lost)} active roles would lose their description; "
+              f"nothing written", file=sys.stderr)
+        return 3
+    if carried:
+        print(f"  {carried} descriptions carried forward for roles not fetched this run",
+              flush=True)
     tmp = POOL_FILE.with_suffix(".tmp")
     tmp.write_text(json.dumps({"generated_at": stamp, "run_id": run_id,
                                "adapter_version": ADAPTER_VERSION,
