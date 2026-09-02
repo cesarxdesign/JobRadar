@@ -50,6 +50,71 @@ def _ashby(api):
     return ""
 
 
+def fetch_posting(url):
+    """The original posting: its text AND the panel it prints beside it.
+
+    Resolving only the text left an aggregator's own location and workplace
+    standing beside the original's description - the judge read Ashby's words
+    under designjobsworld's location. Whatever the original board prints, the
+    judge should see."""
+    api, kind = api_url(url)
+    if kind == "ashby":
+        board, _, jid = api.partition("#")
+        req = urllib.request.Request(board, headers=P.UA)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            d = json.loads(r.read().decode("utf-8", "replace"))
+        for j in d.get("jobs", []):
+            if jid and jid in (j.get("jobUrl") or ""):
+                locs = [j.get("location")] + [(s or {}).get("location")
+                                              for s in (j.get("secondaryLocations") or [])]
+                return {"jd": P.strip_html(j.get("descriptionHtml") or j.get("descriptionPlain") or ""),
+                        "location": "; ".join(dict.fromkeys(x for x in locs if x)),
+                        "workplace": j.get("workplaceType"),
+                        "employment_type": j.get("employmentType"),
+                        "department": j.get("department") or j.get("team"),
+                        "company": d.get("name")}
+        return {}
+    req = urllib.request.Request(api, headers=P.UA)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        raw = r.read().decode("utf-8", "replace")
+    if kind == "gh":
+        j = json.loads(raw)
+        locs = [(j.get("location") or {}).get("name")]
+        for o in (j.get("offices") or []):
+            locs += [o.get("name"), o.get("location")]
+        return {"jd": P.strip_html(j.get("content") or ""),
+                "location": "; ".join(dict.fromkeys(x.strip() for x in locs if x and x.strip())),
+                "department": "; ".join(d.get("name") for d in (j.get("departments") or []) if d.get("name")),
+                "company": j.get("company_name")}
+    if kind == "lever":
+        j = json.loads(raw)
+        body = [j.get("descriptionPlain") or j.get("description") or ""]
+        for sec in (j.get("lists") or []):
+            body += [sec.get("text") or "", sec.get("content") or ""]
+        body.append(j.get("additionalPlain") or "")
+        cat = j.get("categories") or {}
+        locs = [cat.get("location")] + list(j.get("allLocations") or [])
+        return {"jd": P.strip_html(" ".join(body)),
+                "location": "; ".join(dict.fromkeys(x for x in locs if x)),
+                "workplace": j.get("workplaceType"),
+                "employment_type": cat.get("commitment"),
+                "department": cat.get("department") or cat.get("team")}
+    if kind == "sr":
+        d = json.loads(raw)
+        secs = d.get("jobAd", {}).get("sections", {})
+        parts = []
+        for k in ("companyDescription", "jobDescription", "qualifications", "additionalInformation"):
+            s = secs.get(k) or {}
+            if s.get("text"):
+                parts.append((s.get("title") or "") + "\n" + s["text"])
+        loc = d.get("location") or {}
+        return {"jd": P.strip_html("\n\n".join(parts)),
+                "location": loc.get("fullLocation") or ", ".join(
+                    filter(None, [loc.get("city"), (loc.get("country") or "").upper()])),
+                "company": (d.get("company") or {}).get("name")}
+    return {"jd": P.strip_html(raw)}
+
+
 def fetch_original(url):
     api, kind = api_url(url)
     if kind == "ashby":

@@ -38,6 +38,7 @@ def build(pool_doc, verdicts_doc, hints=None):
             unjudged += 1            # the judge has not reached it yet
             continue
         role = dict(rec)
+        role.update({k: x for k, x in (v.get("panel") or {}).items() if x})
         role["verdict"] = v
         roles.append(role)
         if v.get("judged") and v.get("stage") != "L1":

@@ -79,16 +79,24 @@ def resolve(items):
         open(tmp, "w").write(json.dumps(store, ensure_ascii=False))
         os.replace(tmp, JD_FILE)
 
+    panels = {}
+
     def one(pair):
         rec, _ = pair
         try:
-            t = deep.fetch_original(rec["url"])
+            d = deep.fetch_posting(rec["url"])
         except Exception:
-            t = None
+            d = {}
+        t = d.get("jd")
         with lock:
             if t and len(t) > len(store.get(rec["id"]) or ""):
                 store[rec["id"]] = t[:20000]
                 got[0] += 1
+                # The original board's panel replaces the aggregator's guess.
+                p = {k: d[k] for k in ("location", "workplace", "employment_type",
+                                       "department", "company") if d.get(k)}
+                if p:
+                    panels[rec["id"]] = p
             done[0] += 1
             if done[0] % 25 == 0 or done[0] == len(todo):
                 print(f"  [{done[0]}/{len(todo)}] {got[0]} resolved, "
@@ -98,7 +106,15 @@ def resolve(items):
     with ThreadPoolExecutor(max_workers=8) as ex:
         list(ex.map(one, todo))
     save()
-    return [(rec, store.get(rec["id"], jd)) for rec, jd in items]
+    out = []
+    for rec, jd in items:
+        p = panels.get(rec["id"])
+        if p:
+            rec = {**rec, **p, "panel": p}      # judged on the original's panel
+        out.append((rec, store.get(rec["id"], jd)))
+    print(f"  {len(panels)} of them replaced the aggregator's panel with the original's",
+          flush=True)
+    return out
 
 
 # ---------------------------------------------------------------- verdicts
@@ -188,6 +204,8 @@ def main():
         try:
             v, cached = read.read_one(rec, text, cache)
             verdict = l2_verdict(v, read.text_kind(rec, text))
+            if rec.get("panel"):
+                verdict["panel"] = rec["panel"]   # what the board should show
         except read.Overloaded as e:
             with lock:
                 if not stop.is_set():
