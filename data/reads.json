@@ -41450,5 +41450,275 @@
   },
   "lane": "unsure",
   "criteria_version": "2026-09-02.6"
+ },
+ "ff356a776951df68": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote roles limited to Canada and US; Portugal is not included.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer, AI",
+   "company": "GitLab",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada",
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$140,000 — $200,000 USD",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "fe8e74f3840ef8fb": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is facilities/real estate management (physical spaces, construction), not product design. Location is onsite/hybrid in US only (Austin, San Francisco).",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Director, Global Design & Construction",
+   "company": "Cloudflare",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 223,000 - 307,000",
+   "years_xp": 12,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "91fd219c5dd3162d": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is product management focused on AI strategy and organizational operations, not design. Location restricted to Canada, UK, USA with no remote flexibility stated.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "AI Transformation Owner, Product & Design",
+   "company": "GitLab",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada",
+    "UK",
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD $203,200—$345,600",
+   "years_xp": null,
+   "reports_to": "Executive Sponsor (implied)",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "dea06266d9c770e8": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Austin, TX with no remote option for Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Design Engineer",
+   "company": "Cloudflare",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "9f41f173938e5883": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Sales compensation design is not product/UX design; it's a business operations and strategy role. Additionally, the role is US-only (Remote US), excluding Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Principal, Sales Compensation Design & Strategy",
+   "company": "Cloudflare",
+   "seniority": "principal",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 230,000 - 317,000",
+   "years_xp": 15,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "848d0e1a034d5a38": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is advocacy and community building, not product design. Location is New York onsite, not remote or Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Designer Advocate - Figma Weave",
+   "company": "Figma",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 153,000 - 317,000",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "bee0437c3e61aa14": {
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is genuinely design-adjacent (Designer Advocate), but job is hybrid/onsite in São Paulo, Brazil—not remote and not Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Designer Advocate",
+   "company": "Figma",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Brazil"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "5fee6b35503b9286": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is advocacy and partnerships, not product/UX/UI design. Location is San Francisco onsite with required in-person onboarding.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Designer Advocate, Partnerships",
+   "company": "Figma",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 153,000 — 317,000",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "f961b4277abd8106": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Design Program Manager / DesignOps role is not product design; requires US onsite or US-only remote.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Design Program Manager, Context Platform",
+   "company": "Figma",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "$169,000 — $303,000 USD",
+   "years_xp": 5,
+   "reports_to": "Senior Design Director",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
+ },
+ "6ec1b80fff99c3a8": {
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a People/HR leadership role, not a design role. Location is San Francisco onsite with no remote option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Director, People Partners - Product, Design & Engineering",
+   "company": "Figma",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 235,000 — 317,000",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-02.6"
  }
 }

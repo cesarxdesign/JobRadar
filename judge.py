@@ -142,8 +142,11 @@ def main():
         return 2
     jobs = pool_doc["jobs"]
     jd = json.load(open(JD_FILE))
+    # Only this judge's own verdicts count as history. The file on disk may
+    # be from the old L1-only engine (no "stage"); that is not a verdict.
     previous = (json.load(open(VERDICTS_FILE)).get("jobs", {})
                 if os.path.exists(VERDICTS_FILE) else {})
+    previous = {k: v for k, v in previous.items() if isinstance(v, dict) and "stage" in v}
 
     if "--explain" in sys.argv:
         wanted = sys.argv[sys.argv.index("--explain") + 1]
