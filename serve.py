@@ -18,11 +18,21 @@ class H(http.server.SimpleHTTPRequestHandler):
         super().__init__(*a, directory=str(ROOT), **k)
 
     def do_POST(self):
+        n = int(self.headers.get("Content-Length", 0))
+        body = self.rfile.read(n).decode("utf-8", "replace")
+        if self.path == "/api/inbox":
+            # A page of Gmail search results, posted by a script run in the
+            # Gmail tab. Appended, local only, never committed (gitignored).
+            with open(ROOT / "data" / "emails_raw.jsonl", "a") as f:
+                f.write(body.rstrip("\n") + "\n")
+            self.send_response(200)
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(b'{"ok":true}')
+            return
         if self.path != "/api/marks":
             self.send_error(404)
             return
-        n = int(self.headers.get("Content-Length", 0))
-        body = self.rfile.read(n).decode("utf-8", "replace")
         tmp = MARKS.with_suffix(".tmp")
         tmp.write_text(body)
         tmp.replace(MARKS)

@@ -12,3 +12,6 @@ data/*.tmp
 # Judge recall fixtures, never public. Files stay on disk, out of git.
 data/test_applied.json
 data/test_emails.json
+
+# Email extraction: his inbox, local only
+data/emails*
