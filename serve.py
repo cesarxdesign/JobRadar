@@ -6,7 +6,7 @@ POST /api/marks straight to data/marks.json.
 
     python3 serve.py        # http://localhost:8123/review.html
 """
-import http.server, json, os
+import http.server, json, os, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -60,6 +60,18 @@ class H(http.server.SimpleHTTPRequestHandler):
             self._cors()
             self.end_headers()
             self.wfile.write(b'{"ok":true}')
+            return
+        if self.path == "/api/complete-batch":
+            import subprocess
+            r = subprocess.run([sys.executable, str(ROOT / "batch.py"), "--complete"],
+                               capture_output=True, text=True, cwd=str(ROOT))
+            print((r.stdout + r.stderr).strip(), flush=True)
+            self.send_response(200 if r.returncode == 0 else 500)
+            self._cors()
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"ok": r.returncode == 0,
+                                         "msg": (r.stdout or r.stderr).strip()}).encode())
             return
         if self.path != "/api/marks":
             self.send_error(404)

@@ -14,6 +14,11 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .route:hover{border-color:var(--acc);color:var(--acc)}
 .q{background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:7px 11px;font-size:12.5px;min-width:220px}
 .q:focus{outline:none;border-color:var(--acc)}
+.route.on{border-color:var(--acc);color:var(--acc)}
+.route.done{border-color:var(--good);color:var(--good)}
+.wrong{border-color:var(--warn)!important;color:var(--warn)!important}
+.wrong.on{background:var(--warn);color:#fff!important;border-color:var(--warn)!important}
+.bucket{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;margin:14px 0 6px 46px}
 .route.drop{border-color:var(--acc);color:var(--acc);border-style:dashed}
 .route[disabled]{opacity:.5;cursor:wait}
 .tabs{display:flex;gap:2px;padding:10px 20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
@@ -67,6 +72,8 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="route" id="refresh" title="reload results.json, keep the page">↻</button>
   <input class="q" id="q" type="search" placeholder="filter roles…" autocomplete="off">
   <span class="spacer"></span>
+  <span class="stamp" id="batch-when"></span>
+  <button class="route" id="batch" hidden>Review last batch</button>
   <button class="route" id="route">⇱ RadarRoute</button>
 </header>
 
@@ -90,6 +97,11 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 // The board renders results.json and nothing else. It applies no criteria of
 // its own - the lane a role is in was decided by the judge, upstream.
 let DATA = null, LANE = "open", SEL = null, Q = "";
+// The batch view: the same board, showing the sample the judge just drew,
+// split pass / cut, with a Wrong button per role. Nothing else changes -
+// same cards, same pane, same search.
+let BATCH = null, INBATCH = false, W = {};
+const wkey = r => (r.company + "|" + r.title).toLowerCase();
 // Routing is absent until the one RadarRouting file on the planet is dropped
 // here. Nothing about it is stored in this browser.
 let RR = null, RRH = null, STORED = null;
@@ -100,7 +112,43 @@ function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");
   clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2600);}
 
 // ---------- render ----------
-function roleById(id){return DATA.roles.find(r=>r.id===id)||ghost(id);}
+function roleById(id){
+  if(INBATCH){const b=BATCH.roles.find(r=>r.id===id);if(b) return b;}
+  return DATA.roles.find(r=>r.id===id)||ghost(id);
+}
+// A mark is the whole point of the batch, so it goes to disk on the click.
+function markWrong(r){
+  const k=wkey(r);
+  if(W[k]) delete W[k]; else W[k]={key:k,company:r.company,title:r.title,url:r.url,
+                                   bucket:r.bucket,lane:r.l2&&r.l2.lane,reason:r.l2&&r.l2.reason};
+  fetch("/api/marks",{method:"POST",body:JSON.stringify(Object.values(W))}).catch(()=>{});
+  render();
+}
+function setBatch(on){
+  INBATCH=on;SEL=null;
+  document.querySelectorAll(".tab").forEach(t=>{t.hidden=on;});
+  $("q").placeholder=on?"filter this batch…":"filter roles…";
+  const b=$("batch");
+  b.className="route"+(on?" on":"");
+  b.textContent=on?"✓ Complete review":"Review last batch";
+  b.title=on?"archive this batch and release its roles to the board"
+           :"the sample the judge drew for sense checking";
+  render();
+}
+async function completeBatch(){
+  const n=Object.keys(W).length;
+  if(!confirm("Complete this review?\n\n"+BATCH.roles.length+" roles, "+n+" marked wrong."
+      +"\nThe batch is archived as a fixture and its roles rejoin the board.")) return;
+  const b=$("batch");b.disabled=true;b.textContent="archiving…";
+  try{
+    const r=await fetch("/api/complete-batch",{method:"POST",body:"{}"});
+    const d=await r.json();
+    if(!d.ok) throw new Error(d.msg||"failed");
+    BATCH=null;W={};b.hidden=true;$("batch-when").textContent="";
+    setBatch(false);
+  }catch(e){alert("Not archived: "+e.message);b.textContent="✓ Complete review";}
+  finally{b.disabled=false;}
+}
 // A decision outlives the posting. results.json ships only active, judged
 // roles, so a role he applied to that the company takes down - or that a
 // later criteria run cuts before the judge reaches it - would vanish from
@@ -149,6 +197,8 @@ function matches(r){
 
 function pool(){
   if(!DATA) return [];
+  if(INBATCH) return BATCH.roles.filter(matches)
+    .sort((a,b)=>(a.bucket===b.bucket?a.n-b.n:a.bucket==="pass"?-1:1));
   let rows;
   if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id))
       .concat((RR?RR.favorites:[]).filter(id=>!DATA.roles.some(r=>r.id===id)).map(ghost).filter(Boolean));
@@ -182,9 +232,12 @@ function render(){
   $("list").innerHTML = rows.length ? "" : '<div class="empty">Nothing here.</div>';
   let section=null;
   for(const r of rows){
-    if(LANE==="favorites"&&stateOf(r)!==section){
-      section=stateOf(r);
-      const h=document.createElement("div");h.className="sect";h.textContent=section;$("list").appendChild(h);
+    const head=INBATCH?r.bucket:(LANE==="favorites"?stateOf(r):null);
+    if(head&&head!==section){
+      section=head;
+      const h=document.createElement("div");h.className=INBATCH?"bucket":"sect";
+      h.textContent=INBATCH?(head==="pass"?"passed the judge":"cut by the judge"):head;
+      $("list").appendChild(h);
     }
     const el=document.createElement("div");
     el.className="card"+(SEL===r.id?" sel":"");
@@ -199,7 +252,9 @@ function render(){
       + (f(r).years_xp?'<span class="tag">'+f(r).years_xp+'y XP</span>':'')
       + (f(r).seniority?'<span class="tag">'+esc(f(r).seniority)+'</span>':'')
       +'</div></div>'
-      + (RR?'<div class="acts">'
+      + (INBATCH?'<div class="acts"><button class="wrong '+(W[wkey(r)]?"on":"")+'" data-w="1">'
+            +(W[wkey(r)]?"✓ wrong":"Wrong")+'</button></div>'
+         : RR?'<div class="acts">'
           +'<button class="star'+(fav(r.id)?" on":"")+'" data-f="1" title="favorite">'+(fav(r.id)?"★":"☆")+'</button>'
           +'<button data-d="applied" class="'+(rt==="applied"?"on":"")+'">applied</button>'
           +'<button data-d="discarded" class="'+(rt==="discarded"?"on":"")+'">discard</button>'
@@ -207,6 +262,7 @@ function render(){
     el.onclick=()=>{SEL=r.id;render();};
     el.querySelectorAll("a").forEach(a=>a.onclick=e=>e.stopPropagation());
     el.querySelectorAll("button").forEach(b=>b.onclick=e=>{e.stopPropagation();
+      if(b.dataset.w) return markWrong(r);
       if(b.dataset.f) return toggleFav(r.id);
       if(b.classList.contains("on")) return;
       decide(r.id,b.dataset.d||null);});
@@ -241,9 +297,9 @@ function loadJD(id){
 function fact(k,v){return '<div class="fact"><div class="fk">'+k+'</div><div class="fv">'+(v||"—")+'</div></div>';}
 // What the judge extracted from the posting. The pool's own remote/salary
 // guesses are metadata; these come from reading the page.
-const f = r => (r.verdict&&r.verdict.fields)||{};
+const f = r => (r.fields)||(r.verdict&&r.verdict.fields)||{};
 function placeTag(r){
-  const v=r.verdict||{}, k=f(r).remote;
+  const v=r.verdict||r.l2||{}, k=f(r).remote;
   if(v.place==="remote") return '<span class="tag y">Remote</span>';
   if(v.place==="pt_onsite") return '<span class="tag y">'+esc(k||"in Portugal")+'</span>';
   if(k) return '<span class="tag">'+esc(k)+'</span>';
@@ -253,7 +309,7 @@ function placeTag(r){
 function renderPane(){
   const r=SEL&&roleById(SEL);
   if(!r){$("pane").innerHTML='<div class="empty">Select a role.</div>';return;}
-  const v=r.verdict||{};
+  const v=INBATCH?{...(r.l2||{}),why:[(r.l2||{}).reason].filter(Boolean),fields:r.fields||{}}:(r.verdict||{});
   $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
     +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
     + (r.gone?'<div class="why">This posting is no longer on the board - the company took it '
@@ -370,5 +426,16 @@ function load(){
 }
 $("refresh").onclick=load;
 $("q").oninput=e=>{Q=e.target.value.trim().toLowerCase();SEL=null;render();};
+$("batch").onclick=()=>INBATCH?completeBatch():setBatch(true);
+// The batch and its marks live beside results.json, drawn by batch.py.
+Promise.all([fetch("data/batch.json?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+             fetch("data/marks.json?t="+Date.now()).then(r=>r.ok?r.json():[]).catch(()=>[])])
+  .then(([b,m])=>{
+    if(!b||!b.roles||!b.roles.length) return;
+    BATCH=b;(m||[]).forEach(x=>{W[x.key]=x;});
+    const d=new Date(b.drawn_at);
+    $("batch-when").textContent=isNaN(d)?"":d.toLocaleString([], {month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});
+    $("batch").hidden=false;
+  });
 load();
 </script>
