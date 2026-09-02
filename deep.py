@@ -27,6 +27,9 @@ def api_url(u):
     m = re.search(r"jobs\.lever\.co/([^/]+)/([0-9a-f-]{16,})", u or "")
     if m:
         return f"https://api.lever.co/v0/postings/{m.group(1)}/{m.group(2)}", "lever"
+    m = re.search(r"jobs\.smartrecruiters\.com/([^/]+)/(\d+)", u or "")
+    if m:
+        return f"https://api.smartrecruiters.com/v1/companies/{m.group(1)}/postings/{m.group(2)}", "sr"
     m = re.search(r"jobs\.ashbyhq\.com/([^/]+)/([0-9a-f-]{16,})", u or "")
     if m:
         # Ashby job pages are JS-rendered - the HTML has no description in it.
@@ -56,15 +59,18 @@ def fetch_original(url):
         raw = r.read().decode("utf-8", "replace")
     if kind == "gh":
         return P.strip_html(json.loads(raw).get("content") or "")
-    if kind == "ashby":
-        board, _, jid = api.partition("#")
-        req2 = urllib.request.Request(board, headers=P.UA)
-        with urllib.request.urlopen(req2, timeout=30) as r:
-            d = json.loads(r.read().decode("utf-8", "replace"))
-        for j in d.get("jobs", []):
-            if jid and jid in (j.get("jobUrl") or ""):
-                return P.strip_html(j.get("descriptionHtml") or j.get("descriptionPlain") or "")
-        return ""
+    if kind == "sr":
+        # The page renders four titled sections. The API's remote/hybrid
+        # booleans do NOT render on the page (checked 2026-09-02), so they
+        # stay out - only what renders.
+        secs = json.loads(raw).get("jobAd", {}).get("sections", {})
+        parts = []
+        for k in ("companyDescription", "jobDescription", "qualifications",
+                  "additionalInformation"):
+            s = secs.get(k) or {}
+            if s.get("text"):
+                parts.append((s.get("title") or "") + "\n" + s["text"])
+        return P.strip_html("\n\n".join(parts))
     if kind == "lever":
         j = json.loads(raw)
         body = [j.get("descriptionPlain") or j.get("description") or ""]

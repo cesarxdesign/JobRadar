@@ -767,7 +767,10 @@ def scrape(sources, on_batch=None):
     on_batch(rows) is called after each source so the caller can checkpoint.
     """
     out, errors, done = [], {}, 0
-    jobs = [(p, s_, cfg) for p, sl in sources["watchlist"].items() for s_, cfg in sl.items()]
+    # SKIP applies to company boards too. It only ever filtered aggregators,
+    # so --skip greenhouse would have scraped greenhouse anyway.
+    jobs = [(p, s_, cfg) for p, sl in sources["watchlist"].items() if p not in SKIP
+            for s_, cfg in sl.items()]
     aggs = list(sources.get("aggregators", []))
     total = len(jobs) + len(aggs)
     t_run = time.monotonic()
@@ -879,6 +882,17 @@ def main():
         SKIP.update(sys.argv[sys.argv.index("--skip") + 1].split(","))
         print(f"skipping (roles kept active): {', '.join(sorted(SKIP))}", flush=True)
     sources = json.loads(SOURCES_FILE.read_text())
+    if "--only" in sys.argv:
+        only = set(sys.argv[sys.argv.index("--only") + 1].split(","))
+        every = set(sources["watchlist"]) | set(sources.get("aggregators", []))
+        unknown = only - every
+        if unknown:
+            print(f"ABORT - --only names no such source: {', '.join(sorted(unknown))}",
+                  file=sys.stderr)
+            return 2
+        SKIP.update(every - only)
+        print(f"scraping only {', '.join(sorted(only))}; every other source's roles "
+              f"and descriptions carried forward", flush=True)
 
     # A missing reader is not a soft failure. Radar1's readers were silently
     # dropped twice by edits to this file, and each time the run "succeeded"

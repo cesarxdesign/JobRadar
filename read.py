@@ -190,6 +190,8 @@ def read_one(rec, jd, cache, allow_thin=False):
     is exactly how a run of stub-judged roles reached review once already.
     """
     src = (rec.get("source") or "").split("/")[0]
+    if not allow_thin and not (jd or "").strip():
+        raise NotResolved(f"{src}: no description - the original was not resolved")
     if not allow_thin and len(jd or "") < THIN and src in AGGREGATORS:
         raise NotResolved(f"{src} summary, {len(jd or '')} chars - run deep.py first")
     k = key_for(rec, jd)

@@ -217,9 +217,9 @@ function renderPane(){
       +`<button id="v-page" class="${VIEW==="page"?"on":""}">Page</button>`
       +`<button id="v-text" class="${VIEW==="text"?"on":""}">Text</button>`
       +`<span class="hint">${VIEW==="page"
-          ? "some boards refuse to embed — switch to Text or open the posting"
+          ? (canEmbed(r.url) ? "" : "this board refuses to embed — showing the scraped text, open the posting for the page")
           : (r.jd||"").length.toLocaleString()+" characters as scraped"}</span></div>`
-    + (VIEW==="page" && r.url
+    + (VIEW==="page" && r.url && canEmbed(r.url)
         ? `<iframe class="frame" src="${esc(r.url)}" referrerpolicy="no-referrer"
              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>`
         : `<div class="jd">${fmtJD(r.jd||"(none)")}</div>`);
@@ -229,6 +229,10 @@ function renderPane(){
   $("b-w").onclick=()=>toggle();
   $("b-n").onclick=()=>{if(SEL<rs.length-1){SEL++;render();}};
 }
+
+// Only greenhouse and ashby allow their page in an iframe. Everyone else
+// sends frame-ancestors none and comes up blank, so they get the text.
+const canEmbed = u => /greenhouse\.io|ashbyhq\.com/.test(u||"");
 
 // A job description is a document, not a string. Render the structure the
 // scrape now preserves: short standalone lines are headings, bullets are a

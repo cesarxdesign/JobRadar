@@ -10,13 +10,11 @@ import criteria as c, deep, pool as P, read
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PASSES_WANTED, CUTS_WANTED = 30, 20
-MAX_READS = 250        # a budget. Without one, a run with a low pass rate
-                       # grinds through every survivor looking for 30 passes.
-
-# Boards that allow their page to be embedded, so the review UI can show the
-# real posting instead of our reconstruction. Stripe, Jobicy, Datadog and
-# SmartRecruiters send frame-ancestors self/none and come up blank.
-EMBEDDABLE = ("greenhouse.io", "ashbyhq.com")
+# No read cap and no board filter. Both existed once, both were structural
+# decisions made without Cesar (a 250-read cap that starved batch B, and a
+# greenhouse/ashby-only filter so the review iframe would render, which hid
+# 337 ready roles). He removed both on 2026-09-02. The review UI falls back
+# to the scraped text for boards that refuse to embed.
 
 
 def check_pool_is_current():
@@ -60,32 +58,24 @@ def survivors():
             continue
         if JR.search(t):
             continue
-        text = jd.get(x["id"]) or ""
-        if not text:
-            continue
-        # Only fully-resolved postings. A company board IS the original; an
-        # aggregator row counts only once it has been resolved to the real one.
-        src = (x.get("source") or "").split("/")[0]
-        if src in read.AGGREGATORS and len(text) < read.THIN:
-            continue
-        host = (x.get("url") or "").split("/")[2] if x.get("url") else ""
-        if not any(e in host for e in EMBEDDABLE):
-            continue
-        out.append((x, text))
+        # Rows with a thin or missing description go through too - resolve_first
+        # fetches the original for them, and read_one refuses anything still
+        # unresolved. Nothing is dropped silently here.
+        out.append((x, jd.get(x["id"]) or ""))
     return out
 
 
 def resolve_first(items):
-    """Aggregator rows must be resolved to the original before L2 sees them.
-    This is a pipeline step, not a thing to remember: pool -> L1 -> resolve
-    originals -> L2. Skipping it is how a whole batch got judged on summaries."""
+    """Every thin survivor is resolved to the original before L2 sees it.
+    Aggregators republish a summary; some boards (SmartRecruiters, Workday)
+    list postings without a body at all. This is a pipeline step, not a thing
+    to remember: pool -> L1 -> resolve originals -> L2. Skipping it is how a
+    whole batch got judged on summaries."""
     todo = [(rec, jd) for rec, jd in items
-            if len(jd or "") < read.THIN
-            and (rec.get("source") or "").split("/")[0] in read.AGGREGATORS
-            and rec.get("url")]
+            if len(jd or "") < read.THIN and rec.get("url")]
     if not todo:
         return items
-    print(f"resolving {len(todo)} aggregator rows to their original posting", flush=True)
+    print(f"resolving {len(todo)} thin rows to their original posting", flush=True)
     store = json.load(open(f"{ROOT}/data/jd.json"))
     done = [0]
     def one(pair):
@@ -121,10 +111,6 @@ def main():
     def run(item):
         if stop.is_set():
             return
-        with lock:
-            if n[0] >= MAX_READS:
-                stop.set()
-                return
         rec, jd = item
         try:
             v, cached = read.read_one(rec, jd, cache)
