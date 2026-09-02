@@ -66,10 +66,6 @@ def main():
                     print(f"  STOPPING: {e}", flush=True)
                 stop.set()
             return
-        except read.NotResolved as e:
-            with lock:
-                errs.append((rec, f"skipped - {e}"))
-            return
         except Exception as e:
             with lock:
                 errs.append((rec, str(e)[:90]))

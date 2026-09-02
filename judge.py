@@ -10,8 +10,10 @@ live in criteria.py - and writes nothing but its own file.
          criteria from criteria.py, and answers ROLE and PLACE.
 
 Every active role gets a verdict, keyed by id. Cuts are kept with their
-reason. A survivor whose original could not be resolved is recorded as
-unread - never judged on nothing, never dropped silently.
+reason. The original posting is preferred; when it cannot be fetched the
+summary on hand is judged, and with no text at all the criteria judge from
+the title and panel. Each verdict says which ("text": original / summary /
+none). Errors record nothing and are retried next run.
 
 Reads are cached on the exact text shown (read.key_for), so a second run
 costs only the roles that are new or changed. verdicts.json is written every
@@ -105,8 +107,8 @@ def l1_verdict(reason):
             "why": [reason], "judged": True, "stage": "L1"}
 
 
-def l2_verdict(v):
-    return {"role": v.get("role_verdict") or "unclear",
+def l2_verdict(v, text):
+    return {"text": text,"role": v.get("role_verdict") or "unclear",
             "place": v.get("place_verdict") or "unclear",
             "lane": v.get("lane") or "unsure", "cut": bool(v.get("cut")),
             "why": [v.get("reason") or ""], "judged": True, "stage": "L2",
@@ -114,19 +116,11 @@ def l2_verdict(v):
             "inferred": v.get("inferred") or []}
 
 
-def unread_verdict(reason):
-    # Not a judgement. The board can show these as unread; whether they sit
-    # in Unsure or elsewhere is Cesar's call, and results.py applies it.
-    return {"role": "unclear", "place": "unclear", "lane": "unsure", "cut": False,
-            "why": [f"unread: {reason}"], "judged": False, "stage": "unread"}
-
-
 def write(doc, jobs_verdicts):
     doc["jobs"] = jobs_verdicts
     from collections import Counter
     doc["counts"] = dict(Counter(
-        ("cut-L1" if v["stage"] == "L1" else "cut-L2" if v["cut"]
-         else "unread" if v["stage"] == "unread" else v["lane"])
+        ("cut-L1" if v["stage"] == "L1" else "cut-L2" if v["cut"] else v["lane"])
         for v in jobs_verdicts.values()))
     tmp = f"{VERDICTS_FILE}.tmp"
     open(tmp, "w").write(json.dumps(doc, indent=1, ensure_ascii=False))
@@ -184,7 +178,8 @@ def main():
            "criteria": c.VERSION, "model": read.MODEL}
     lock, n, t0 = threading.Lock(), [0], time.time()
     stop = threading.Event()
-    tally = {"open": 0, "portugal": 0, "unsure": 0, "cut": 0, "unread": 0}
+    tally = {"open": 0, "portugal": 0, "unsure": 0, "cut": 0, "error": 0}
+    kinds = {"original": 0, "summary": 0, "none": 0}
 
     def run(item):
         if stop.is_set():
@@ -192,9 +187,7 @@ def main():
         rec, text = item
         try:
             v, cached = read.read_one(rec, text, cache)
-            verdict = l2_verdict(v)
-        except read.NotResolved as e:
-            verdict, cached = unread_verdict(str(e)), True
+            verdict = l2_verdict(v, read.text_kind(rec, text))
         except read.Overloaded as e:
             with lock:
                 if not stop.is_set():
@@ -203,17 +196,23 @@ def main():
                 stop.set()
             return
         except Exception as e:
-            verdict, cached = unread_verdict(f"error: {str(e)[:80]}"), True
+            # Not a verdict. Nothing recorded, so the next run retries it.
+            with lock:
+                n[0] += 1
+                tally["error"] += 1
+                print(f"  [{n[0]}/{len(items)}] error    {rec['company'][:20]:<20} "
+                      f"{(rec['title'] or '')[:40]:<40} {str(e)[:60]}", flush=True)
+            return
         with lock:
             out[rec["id"]] = verdict
             n[0] += 1
-            key = ("unread" if verdict["stage"] == "unread" else
-                   "cut" if verdict["cut"] else verdict["lane"])
+            key = "cut" if verdict["cut"] else verdict["lane"]
             tally[key] += 1
+            kinds[verdict["text"]] += 1
             if not cached:
                 print(f"  [{n[0]}/{len(items)}] {key:<8} "
                       f"open {tally['open']} pt {tally['portugal']} unsure {tally['unsure']} "
-                      f"cut {tally['cut']} unread {tally['unread']}  "
+                      f"cut {tally['cut']} err {tally['error']}  "
                       f"{rec['company'][:20]:<20} {(rec['title'] or '')[:40]:<40} "
                       f"{time.time()-t0:.0f}s", flush=True)
             if n[0] % 10 == 0:
@@ -227,6 +226,7 @@ def main():
     read.save_cache(cache)
     write(doc, out)
     print(f"\n{n[0]} survivors judged in {time.time()-t0:.0f}s: {tally}")
+    print(f"judged on: {kinds}")
     print(f"wrote {VERDICTS_FILE}: {doc['counts']}")
     return 1 if stop.is_set() else 0
 

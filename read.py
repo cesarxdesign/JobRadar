@@ -9,6 +9,7 @@ twice, and a verdict cannot drift between runs for a posting that has not
 changed. A company editing its JD changes the hash, which is exactly when a
 fresh read is wanted.
 """
+import threading
 import hashlib
 import json
 import os
@@ -27,10 +28,6 @@ import criteria
 AGGREGATORS = {"designjobsworld", "himalayas", "jobicy", "remoteok", "remotive",
                "arbeitnow", "landingjobs", "weworkremotely", "workingnomads"}
 THIN = 1200
-
-
-class NotResolved(Exception):
-    """Raised rather than judging a posting we have not actually read."""
 
 
 # This job is reading English and applying stated rules - there is very little
@@ -181,19 +178,25 @@ def ask(prompt, tries=2):
     raise RuntimeError(last or "failed")
 
 
-def read_one(rec, jd, cache, allow_thin=False):
-    """Refuses to judge what it has not read.
-
-    L2's whole value is reading the real posting. Judging an aggregator's
-    two-sentence summary produces a confident verdict from nothing, and it is
-    indistinguishable downstream from a verdict made on the full text - which
-    is exactly how a run of stub-judged roles reached review once already.
-    """
+def text_kind(rec, jd):
+    """What the judge was shown: the original posting, an aggregator's
+    summary, or nothing but the title block and panel."""
+    if not (jd or "").strip():
+        return "none"
     src = (rec.get("source") or "").split("/")[0]
-    if not allow_thin and not (jd or "").strip():
-        raise NotResolved(f"{src}: no description - the original was not resolved")
-    if not allow_thin and len(jd or "") < THIN and src in AGGREGATORS:
-        raise NotResolved(f"{src} summary, {len(jd or '')} chars - run deep.py first")
+    if src in AGGREGATORS and len(jd) < THIN:
+        return "summary"
+    return "original"
+
+
+def read_one(rec, jd, cache, allow_thin=False):
+    """One verdict for one posting, from the cache or from the model."""
+    # Judges whatever text there is. The judge resolves originals first; when
+    # that fails the aggregator's summary is still the posting as far as we
+    # can see it, and with no text at all the criteria say how to judge from
+    # the title and panel. Cesar, 2026-09-02: "we parse and judge like the
+    # others." The cache key is the text, so an original arriving later is a
+    # new read. text_kind() says what was judged.
     k = key_for(rec, jd)
     if k in cache:
         return cache[k], True
@@ -202,8 +205,15 @@ def read_one(rec, jd, cache, allow_thin=False):
     v["lane"] = lane or "unsure"
     v["cut"] = lane is None or bool(v.get("cut"))
     v["criteria_version"] = criteria.VERSION
-    cache[k] = v
+    with _cache_lock:
+        cache[k] = v
     return v, False
+
+
+# Readers run in threads. Every write to the cache and every snapshot of it
+# goes through this lock - a save that serialised the dict while another
+# thread inserted killed a judge run at read 250.
+_cache_lock = threading.Lock()
 
 
 def load_cache():
@@ -211,6 +221,8 @@ def load_cache():
 
 
 def save_cache(cache):
+    with _cache_lock:
+        snap = dict(cache)
     tmp = CACHE_FILE.with_suffix(".tmp")
-    tmp.write_text(json.dumps(cache, indent=1, ensure_ascii=False))
+    tmp.write_text(json.dumps(snap, indent=1, ensure_ascii=False))
     tmp.replace(CACHE_FILE)
