@@ -704,47 +704,52 @@ def agg_designjobsworld():
             return get_text(u)
         except Exception:
             return None
+    # Yield each posting as its page lands, so drain() heartbeats and the
+    # run is never dark. Collecting all 1,904 into a list first was a black
+    # box for the whole 40 minutes - nothing printed until the last page.
+    from concurrent.futures import as_completed
     with ThreadPoolExecutor(max_workers=12) as ex:
-        pages = list(ex.map(_page, urls))
-    for h in pages:
-        if not h:
-            continue
-        ld = None
-        for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
-            try:
-                dd = json.loads(x)
-                if dd.get("@type") == "JobPosting":
-                    ld = dd
-                    break
-            except Exception:
-                pass
-        if not ld or not ld.get("title"):
-            continue
-        pa = ld.get("potentialAction") or {}
-        tgt = (pa.get("target") or {}) if isinstance(pa, dict) else {}
-        apply_to = tgt.get("urlTemplate") if isinstance(tgt, dict) else None
-        m = DJW_ATS_RE.search(h)
-        if m:
-            apply_to = m.group(0)
-        locs = ld.get("jobLocation") or []
-        if isinstance(locs, dict):
-            locs = [locs]
-        parts = []
-        for l in locs:
-            a = (l.get("address") or {}) if isinstance(l, dict) else {}
-            if isinstance(a, dict):
-                parts += [a.get("addressLocality"), a.get("addressCountry")]
-        alr = ld.get("applicantLocationRequirements") or []
-        if isinstance(alr, dict):
-            alr = [alr]
-        parts += [x.get("name") for x in alr if isinstance(x, dict)]
-        loc = ", ".join(dict.fromkeys(str(x) for x in parts if x))
-        yield {"company": (ld.get("hiringOrganization") or {}).get("name") or "?",
-               "title": ld.get("title"),
-               "url": apply_to or (ld.get("url") or ""), "location": loc,
-               "remote": bool(re.search(r"remote|anywhere|telecommute",
-                                        f"{loc} {ld.get('jobLocationType') or ''}", re.I)) or None,
-               "posted": ld.get("datePosted"), "jd_text": strip_html(ld.get("description"))}
+        futs = [ex.submit(_page, u) for u in urls]
+        for fut in as_completed(futs):
+            h = fut.result()
+            if not h:
+                continue
+            ld = None
+            for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
+                try:
+                    dd = json.loads(x)
+                    if dd.get("@type") == "JobPosting":
+                        ld = dd
+                        break
+                except Exception:
+                    pass
+            if not ld or not ld.get("title"):
+                continue
+            pa = ld.get("potentialAction") or {}
+            tgt = (pa.get("target") or {}) if isinstance(pa, dict) else {}
+            apply_to = tgt.get("urlTemplate") if isinstance(tgt, dict) else None
+            m = DJW_ATS_RE.search(h)
+            if m:
+                apply_to = m.group(0)
+            locs = ld.get("jobLocation") or []
+            if isinstance(locs, dict):
+                locs = [locs]
+            parts = []
+            for l in locs:
+                a = (l.get("address") or {}) if isinstance(l, dict) else {}
+                if isinstance(a, dict):
+                    parts += [a.get("addressLocality"), a.get("addressCountry")]
+            alr = ld.get("applicantLocationRequirements") or []
+            if isinstance(alr, dict):
+                alr = [alr]
+            parts += [x.get("name") for x in alr if isinstance(x, dict)]
+            loc = ", ".join(dict.fromkeys(str(x) for x in parts if x))
+            yield {"company": (ld.get("hiringOrganization") or {}).get("name") or "?",
+                   "title": ld.get("title"),
+                   "url": apply_to or (ld.get("url") or ""), "location": loc,
+                   "remote": bool(re.search(r"remote|anywhere|telecommute",
+                                            f"{loc} {ld.get('jobLocationType') or ''}", re.I)) or None,
+                   "posted": ld.get("datePosted"), "jd_text": strip_html(ld.get("description"))}
 
 
 ADAPTERS.update({"bamboohr": from_bamboohr, "breezy": from_breezy,
