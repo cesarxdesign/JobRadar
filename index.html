@@ -84,6 +84,8 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
+  <button class="tab bt" data-lane="pass" hidden>Passed<span class="n" id="c-pass"></span></button>
+  <button class="tab bt" data-lane="cut" hidden>Cut<span class="n" id="c-cut"></span></button>
 </div>
 
 <div class="split">
@@ -100,7 +102,7 @@ let DATA = null, LANE = "open", SEL = null, Q = "";
 // The batch view: the same board, showing the sample the judge just drew,
 // split pass / cut, with a Wrong button per role. Nothing else changes -
 // same cards, same pane, same search.
-let BATCH = null, INBATCH = false, W = {};
+let BATCH = null, INBATCH = false, BUCKET = "pass", W = {};
 const wkey = r => (r.company + "|" + r.title).toLowerCase();
 // Routing is absent until the one RadarRouting file on the planet is dropped
 // here. Nothing about it is stored in this browser.
@@ -126,7 +128,9 @@ function markWrong(r){
 }
 function setBatch(on){
   INBATCH=on;SEL=null;
-  document.querySelectorAll(".tab").forEach(t=>{t.hidden=on;});
+  document.querySelectorAll(".tab:not(.bt)").forEach(t=>{t.hidden=on||(t.classList.contains("rr")&&!RR);});
+  document.querySelectorAll(".tab.bt").forEach(t=>{t.hidden=!on;t.classList.toggle("on",on&&t.dataset.lane===BUCKET);});
+  if(!on) document.querySelectorAll(".tab:not(.bt)").forEach(t=>t.classList.toggle("on",t.dataset.lane===LANE));
   $("q").placeholder=on?"filter this batch…":"filter roles…";
   const b=$("batch");
   b.className="route"+(on?" on":"");
@@ -197,8 +201,8 @@ function matches(r){
 
 function pool(){
   if(!DATA) return [];
-  if(INBATCH) return BATCH.roles.filter(matches)
-    .sort((a,b)=>(a.bucket===b.bucket?a.n-b.n:a.bucket==="pass"?-1:1));
+  if(INBATCH) return BATCH.roles.filter(r=>r.bucket===BUCKET).filter(matches)
+    .sort((a,b)=>a.n-b.n);
   let rows;
   if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id))
       .concat((RR?RR.favorites:[]).filter(id=>!DATA.roles.some(r=>r.id===id)).map(ghost).filter(Boolean));
@@ -213,6 +217,11 @@ function pool(){
 }
 
 function counts(){
+  if(INBATCH){
+    for(const b of ["pass","cut"])
+      $("c-"+b).textContent=BATCH.roles.filter(r=>r.bucket===b&&matches(r)).length||"";
+    return;
+  }
   for(const l of ["open","portugal","unsure"]){
     const n=(DATA.lanes[l]||[]).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length;
     $("c-"+l).textContent=n||"";
@@ -232,7 +241,7 @@ function render(){
   $("list").innerHTML = rows.length ? "" : '<div class="empty">Nothing here.</div>';
   let section=null;
   for(const r of rows){
-    const head=INBATCH?r.bucket:(LANE==="favorites"?stateOf(r):null);
+    const head=INBATCH?null:(LANE==="favorites"?stateOf(r):null);
     if(head&&head!==section){
       section=head;
       const h=document.createElement("div");h.className=INBATCH?"bucket":"sect";
@@ -409,8 +418,10 @@ function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("rad
 })();
 
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
-  LANE=t.dataset.lane;SEL=null;
-  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
+  if(t.classList.contains("bt")) BUCKET=t.dataset.lane; else LANE=t.dataset.lane;
+  SEL=null;
+  document.querySelectorAll(t.classList.contains("bt")?".tab.bt":".tab:not(.bt)")
+    .forEach(x=>x.classList.toggle("on",x===t));
   render();});
 
 // Data reloads without the page: selection, tab and routing all stay.
