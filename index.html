@@ -33,6 +33,15 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .card .acts .star{padding:4px 8px;font-size:13px}
 .card .acts .star.on{color:var(--warn);border-color:var(--warn)}
 .card .acts button.on{color:var(--fg);border-color:var(--fg);cursor:default}
+.mail{border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:9px;padding:10px 12px;margin:12px 0;font-size:12.5px}
+.mail.older{border-left-color:#e5484d}
+.mail .k{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:600;color:var(--dimmer)}
+.mail .k b{color:var(--fg)}
+.mail .warn{color:#e5484d;font-weight:600}
+.mail .s{font-weight:600;margin-top:3px}
+.mail .b{color:var(--dim);margin-top:3px}
+.card .env{font-size:11px;color:var(--dimmer)}
+.card .env.older{color:#e5484d}
 .sect{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;margin:14px 0 6px 46px}
 .card .c{color:var(--dim);font-size:12.5px}
 .meta{display:flex;flex-wrap:wrap;gap:5px 7px;margin-top:7px;font-size:11px;color:var(--dimmer)}
@@ -66,6 +75,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
+  <button class="tab" data-lane="applied?" id="t-hint" hidden>Applied?<span class="n" id="c-applied?"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
 </div>
@@ -112,6 +122,7 @@ function pool(){
   if(!DATA) return [];
   let rows;
   if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id));
+  else if(LANE==="applied?") rows=DATA.roles.filter(r=>r.active && r.hints && !routing(r.id));
   else if(LANE==="applied"||LANE==="discarded")
     rows=DATA.roles.filter(r=>r.active && routing(r.id)===LANE);
   // a role you have acted on leaves the first three lanes
@@ -131,6 +142,9 @@ function counts(){
       $("c-"+l).textContent=DATA.roles.filter(r=>r.active&&routing(r.id)===l).length||"";
     $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)).length||"";
   }
+  const hinted=DATA.roles.filter(r=>r.active&&r.hints&&!routing(r.id)).length;
+  $("t-hint").hidden=!DATA.roles.some(r=>r.hints);
+  $("c-applied?").textContent=hinted||"";
 }
 
 function render(){
@@ -149,7 +163,8 @@ function render(){
     const d=days(r), rt=routing(r.id);
     el.innerHTML='<div class="days" title="days open">'+(d===null?"—":d+"d")+'</div>'
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
-      +'<div class="c">'+esc(r.company)+'</div>'
+      +'<div class="c">'+esc(r.company)+(r.hints?' <span class="env'+(r.hints.some(h=>h.older)?' older':'')+'">✉ '
+          +r.hints.map(h=>(h.kind==="reject"?"rejected ":"applied ")+h.date).join(" · ")+'</span>':'')+'</div>'
       +'<div class="meta">'
       + placeTag(r)
       + (r.location?'<span class="tag">'+esc(r.location)+'</span>':'')
@@ -191,6 +206,12 @@ function renderPane(){
   const v=r.verdict||{};
   $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
     +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
+    +(r.hints||[]).map(h=>'<div class="mail'+(h.older?' older':'')+'"><div class="k">'
+        +(h.kind==="reject"?"rejection":"confirmation")+' · <b>'+esc(h.date)+'</b> · '+esc(h.from)
+        +(h.older?' · <span class="warn">email is older than this posting ('+esc(h.posted)+')</span>':' · posting '+esc(h.posted))+'</div>'
+        +'<div class="s">'+esc(h.subject)+'</div>'
+        +(h.snippet?'<div class="b">'+esc(h.snippet)+'</div>':'')
+        +'<div class="b">read as: '+esc(h.company||"?")+' · '+esc(h.title||"no title in the email")+'</div></div>').join("")'
     +'<div class="facts">'
     + fact("Days open", days(r)===null?"—":days(r)+" · since "+esc((r.posted||r.first_seen||"").slice(0,10)))
     + fact("Location", esc(r.location))
