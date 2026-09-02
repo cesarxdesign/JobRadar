@@ -22,6 +22,8 @@ POOL_FIELDS = [
     "country",       # free text as posted, normalised where we can
     "location",      # the raw location string, kept for audit
     "salary",        # normalised range string, or None
+    "employment_type",  # side panel, as the board prints it ("Full Time")
+    "department",       # side panel
     "years_xp",      # int or None
     "reports_to",    # str or None
     # provenance

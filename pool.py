@@ -30,7 +30,7 @@ from pathlib import Path
 # the code. Fixing an adapter does nothing until the pool is scraped again -
 # ashby's secondaryLocations fix sat in the code for three batches while the
 # judge kept reading one-country locations off disk and looking wrong for it.
-ADAPTER_VERSION = 3
+ADAPTER_VERSION = 4
 
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
@@ -278,13 +278,29 @@ def from_pinpoint(slug, name=None):
         loc = j.get("location") or {}
         loc_s = loc.get("name") if isinstance(loc, dict) else str(loc or "")
         wt = (j.get("workplace_type") or "").lower()
-        yield {"company": name or slug, "title": j.get("title"),
+        # The page prints a panel - Workplace type, Employment Type,
+        # Department, Reporting To - and a body in four titled sections. Only
+        # the first section was read, and the panel not at all, so a posting
+        # whose panel says "Fully remote" reached the judge as bare "Portugal"
+        # and came back unclear.
+        body = []
+        for head, text in (("", j.get("description")),
+                           (j.get("key_responsibilities_header"), j.get("key_responsibilities")),
+                           (j.get("skills_knowledge_expertise_header"), j.get("skills_knowledge_expertise")),
+                           (j.get("benefits_header"), j.get("benefits"))):
+            if text:
+                body.append(((head or "").strip() + "\n" + strip_html(text)).strip())
+        yield {"company": name or slug, "title": (j.get("title") or "").strip(),
                "url": j.get("url") or f"https://{slug}.pinpointhq.com/en/postings/{j.get('id')}",
                "location": loc_s or "",
+               "workplace": (j.get("workplace_type_text") or "").strip() or None,
+               "employment_type": (j.get("employment_type_text") or "").strip() or None,
+               "department": ((j.get("job") or {}).get("department") or {}).get("name"),
+               "reports_to": (j.get("reporting_to") or "").strip() or None,
                "remote": ("remote" in wt) or bool(re.search(r"remote", loc_s or "", re.I)) or None,
                "salary": (j.get("compensation") or "").strip() or None,
                "posted": j.get("published_at") or j.get("created_at"),
-               "jd_text": strip_html(j.get("description"))}
+               "jd_text": "\n\n".join(body)}
 
 
 def from_freshteam(slug, name=None):
@@ -480,8 +496,14 @@ def normalise(raw, source):
         "country": raw.get("country"),
         "location": loc.strip() or None,
         "salary": salary,
+        # These render in the side panel and contracts.RENDERED says the judge
+        # may read them. The adapters were yielding them and normalise was
+        # dropping them on the floor, so Employment Type and Department have
+        # been blank in every prompt ever sent.
+        "employment_type": raw.get("employment_type"),
+        "department": raw.get("department"),
         "years_xp": xp,
-        "reports_to": rep.group(1).strip() if rep else None,
+        "reports_to": raw.get("reports_to") or (rep.group(1).strip() if rep else None),
         "posted": raw.get("posted"), "updated": raw.get("updated"),
         "restrictions": raw.get("restrictions"),
         "timezones": raw.get("timezones"),
