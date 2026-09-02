@@ -42,4 +42,6 @@ class H(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     print("serving %s on http://localhost:8123" % ROOT, flush=True)
-    http.server.HTTPServer(("127.0.0.1", 8123), H).serve_forever()
+    # Threaded: a single-threaded server let one stuck keep-alive connection
+    # from a quit Chrome hold every other request until it timed out.
+    http.server.ThreadingHTTPServer(("127.0.0.1", 8123), H).serve_forever()

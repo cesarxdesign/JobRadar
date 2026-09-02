@@ -71,7 +71,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 let DATA = null, LANE = "open", SEL = null;
 // Routing is absent until the one RadarRouting file on the planet is dropped
 // here. Nothing about it is stored in this browser.
-let RR = null, RRH = null, rrTimer = null;
+let RR = null, RRH = null, rrTimer = null, STORED = null;
 const $ = id => document.getElementById(id);
 const esc = s => (s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
@@ -207,6 +207,11 @@ function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("rad
   const b=$("route");
   b.onclick=async()=>{
     if(!window.showOpenFilePicker) return toast("Needs Chrome — Safari can't write files.");
+    if(STORED&&!RR){
+      // the file from last time; Chrome wants a click before it lets us write again
+      try{if(await STORED.requestPermission({mode:"readwrite"})==="granted"){await adopt(STORED);return;}}
+      catch(e){}
+    }
     try{const [h]=await window.showOpenFilePicker({types:[{description:"RadarRouting",accept:{"application/json":[".json"]}}]});await adopt(h);}
     catch(e){if(e.name!=="AbortError") toast("Not a RadarRouting file.");}
   };
@@ -221,7 +226,10 @@ function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("rad
   });
   rrUI(false);
   (async()=>{try{const h=await idb("readonly",s=>s.get("h"));
-    if(h&&await h.queryPermission({mode:"readwrite"})==="granted") await adopt(h);}catch(e){}})();
+    if(!h) return;
+    STORED=h;
+    if(await h.queryPermission({mode:"readwrite"})==="granted") await adopt(h);
+    else{b.textContent="⇱ RadarRoute · reconnect";b.title="Click to reattach "+h.name;}}catch(e){}})();
 })();
 
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
