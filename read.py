@@ -189,6 +189,24 @@ def text_kind(rec, jd):
     return "original"
 
 
+# Rules the code enforces, on the model's own extracted fields. The criteria
+# tell the model to cut a posting that is not in English or Portuguese; haiku
+# read Pennylane's German posting, wrote language "German", and passed it to
+# Open anyway. A rule that decides a cut is not left to the model's goodwill.
+OK_LANGUAGE = ("english", "portug")
+
+
+def enforce(v):
+    """Applied to every verdict, cached or fresh, so a rule fixed today also
+    fixes yesterday's reads without paying to read them again."""
+    lang = (v.get("fields") or {}).get("language")
+    if lang and not any(w in str(lang).lower() for w in OK_LANGUAGE):
+        v["cut"] = True
+        v["role_verdict"] = "no"
+        v["reason"] = f"posting is written in {lang} - not English or Portuguese"
+    return v
+
+
 def read_one(rec, jd, cache, allow_thin=False):
     """One verdict for one posting, from the cache or from the model."""
     # Judges whatever text there is. The judge resolves originals first; when
@@ -199,12 +217,13 @@ def read_one(rec, jd, cache, allow_thin=False):
     # new read. text_kind() says what was judged.
     k = key_for(rec, jd)
     if k in cache:
-        return cache[k], True
+        return enforce(cache[k]), True
     v = ask(prompt_for(rec, jd))
     lane = criteria.lane_for(v.get("role_verdict"), v.get("place_verdict"))
     v["lane"] = lane or "unsure"
     v["cut"] = lane is None or bool(v.get("cut"))
     v["criteria_version"] = criteria.VERSION
+    enforce(v)
     with _cache_lock:
         cache[k] = v
     return v, False
