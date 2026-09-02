@@ -342,16 +342,50 @@ def from_personio(host, name=None):
                "jd_text": strip_html(raw)}
 
 
+# Teamtailor prints a one-line panel above the title - department, city,
+# workplace type. It lives in two feeds and neither one has all of it:
+# jobs.json carries the location and the real company name, jobs.rss carries
+# remoteStatus and department. The reader read jobs.rss and asked it for
+# <location>, <region>, <country>, tags Teamtailor does not emit, so every
+# one of its 978 roles reached the judge with no location and no workplace at
+# all. Voy's "PRODUCT DESIGN - SAO PAULO - HYBRID" arrived as nothing.
+TT_WORKPLACE = {"none": None, "onsite": "On-site", "hybrid": "Hybrid",
+                "fully": "Fully remote", "remote": "Fully remote",
+                "temporary": "Temporarily remote"}
+TT_NS = "{https://teamtailor.com/locations}"
+
+
 def from_teamtailor(host, name=None):
-    root = ET.fromstring(get_text(f"https://{host}/jobs.rss"))
-    for item in root.iter("item"):
-        g = lambda t: (item.findtext(t) or "").strip()
-        loc = ", ".join(filter(None, [g("location"), g("region"), g("country")]))
-        title = g("title")
-        yield {"company": name or host, "title": title, "url": g("link"),
-               "location": loc,
-               "remote": bool(re.search(r"remote", f"{title} {loc}", re.I)) or None,
-               "posted": g("pubDate") or None, "jd_text": strip_html(g("description"))}
+    side = {}
+    try:
+        root = ET.fromstring(get_text(f"https://{host}/jobs.rss"))
+        for item in root.iter("item"):
+            link = (item.findtext("link") or "").strip()
+            if link:
+                side[link] = ((item.findtext("remoteStatus") or "").strip().lower(),
+                              (item.findtext(TT_NS + "department") or "").strip())
+    except Exception:
+        pass                       # the panel is a bonus; the feed below is the job
+    d = json.loads(get_text(f"https://{host}/jobs.json"))
+    for it in d.get("items") or []:
+        jp = it.get("_jobposting") or {}
+        url = it.get("url") or ""
+        status, dept = side.get(url, ("", ""))
+        locs = jp.get("jobLocation") or []
+        locs = [locs] if isinstance(locs, dict) else locs
+        # The city is what the page prints. The street address and postcode
+        # in the same block are not on the page and must not be merged in.
+        cities = [((l.get("address") or {}) if isinstance(l, dict) else {}).get("addressLocality")
+                  for l in locs]
+        loc = "; ".join(dict.fromkeys(c.strip() for c in cities if c and c.strip()))
+        org = ((jp.get("hiringOrganization") or {}).get("name") or "").strip()
+        wp = TT_WORKPLACE.get(status, status.capitalize() or None)
+        yield {"company": org or name or host, "title": (it.get("title") or "").strip(),
+               "url": url, "location": loc,
+               "workplace": wp, "department": dept or None,
+               "remote": (wp == "Fully remote") or None,
+               "posted": it.get("date_published") or jp.get("datePosted"),
+               "jd_text": strip_html(jp.get("description") or it.get("content_html"))}
 
 
 # ---- aggregators: many companies per feed, company comes from the data ----
