@@ -184,10 +184,10 @@ const byDays=(a,b)=>{const x=days(a),y=days(b);return (x===null)-(y===null)||x-y
 // Everything the board knows about a role, as one string to search. The lane
 // is untouched: a filtered role stays in its own column, the rest are hidden.
 function haystack(r){
-  const f=(r.verdict&&r.verdict.fields)||{}, v=r.verdict||{};
+  const f=(r.fields)||(r.verdict&&r.verdict.fields)||{}, v=r.verdict||r.l2||{};
   return [r.title,r.company,r.location,r.source,(r.sources||[]).join(" "),
           f.role,f.seniority,f.remote,f.portugal_ok,f.language,f.salary,f.reports_to,
-          (f.countries||[]).join(" "),v.role,v.place,(v.why||[]).join(" ")]
+          (f.countries||[]).join(" "),v.role,v.place,(v.why||[]).join(" "),v.reason]
          .filter(Boolean).join(" ").toLowerCase();
 }
 function matches(r){

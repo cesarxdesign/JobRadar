@@ -48,6 +48,8 @@ def draw():
     def row(i, rec, v, bucket):
         return {"n": i, "bucket": bucket, "id": rec["id"], "company": rec["company"],
                 "title": rec["title"], "url": rec.get("url"), "source": rec.get("source"),
+                "sources": rec.get("sources"), "posted": rec.get("posted"),
+                "first_seen": rec.get("first_seen"),
                 **{f: rec.get(f) for f, _ in read.PANEL},
                 "l2": {"role": v.get("role"), "place": v.get("place"), "cut": bool(v["cut"]),
                        "lane": v.get("lane"), "confidence": v.get("confidence"),
