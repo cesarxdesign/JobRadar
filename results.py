@@ -20,6 +20,7 @@ POOL_FILE = ROOT / "data" / "pool.json"
 VERDICTS_FILE = ROOT / "data" / "verdicts.json"
 RESULTS_FILE = ROOT / "data" / "results.json"
 HINTS_FILE = ROOT / "data" / "applied_hints.json"     # local only, from match.py
+SHIPPED_FILE = ROOT / "data" / "shipped.json"         # every id ever put on the board
 
 
 def build(pool_doc, verdicts_doc, hints=None):
@@ -61,12 +62,26 @@ def build(pool_doc, verdicts_doc, hints=None):
     }
 
 
+def remember_shipped(built):
+    """A role is "seen" once it has stood in one of the three lanes. Cuts are
+    shipped so the board can explain them, but no tab shows them, so they are
+    not seen and stay eligible for a review batch."""
+    before = set(json.loads(SHIPPED_FILE.read_text())) if SHIPPED_FILE.exists() else set()
+    now = before | {i for lane in built["lanes"].values() for i in lane}
+    tmp = SHIPPED_FILE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(sorted(now)))
+    tmp.replace(SHIPPED_FILE)
+    return len(now) - len(before)
+
+
 def main():
     built = build(json.loads(POOL_FILE.read_text()),
                   json.loads(VERDICTS_FILE.read_text()),
                   json.loads(HINTS_FILE.read_text()) if HINTS_FILE.exists() else {})
+    fresh = remember_shipped(built)
     RESULTS_FILE.write_text(json.dumps(built, indent=1, ensure_ascii=False))
     print(f"wrote {RESULTS_FILE} - {built['counts']}")
+    print(f"  {fresh} lane roles he had never been shown before")
     return 0
 
 

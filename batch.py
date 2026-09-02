@@ -29,11 +29,26 @@ def write(path, doc):
     os.replace(tmp, path)
 
 
+def already_seen():
+    """Everything he has already laid eyes on: roles drawn into an earlier
+    batch, roles the board has shown him, and roles he has decided in the
+    routing file on his Desktop. The first batch drew 14 roles he had already
+    marked applied because it checked only the first of the three."""
+    seen = set(load(SEEN, []))
+    shipped = f"{ROOT}/data/shipped.json"
+    prior = set(load(shipped, []))
+    rr = os.path.expanduser("~/Desktop/RadarRouting.json")
+    decided = {d["id"] for d in (load(rr, {}).get("decisions") or []) if d.get("id")}
+    return seen | prior | decided, len(seen), len(prior), len(decided)
+
+
 def draw():
     pool = {j["id"]: j for j in json.load(open(f"{ROOT}/data/pool.json"))["jobs"]}
     vdoc = json.load(open(f"{ROOT}/data/verdicts.json"))
     jd = json.load(open(f"{ROOT}/data/jd.json"))
-    seen = set(load(SEEN, []))
+    seen, n_batched, n_shipped, n_decided = already_seen()
+    print(f"excluding {len(seen)} roles already seen "
+          f"({n_batched} batched, {n_shipped} shown on the board, {n_decided} decided)")
     passes, cuts = [], []
     for rid, v in vdoc["jobs"].items():
         rec = pool.get(rid)
