@@ -30,7 +30,7 @@ from pathlib import Path
 # the code. Fixing an adapter does nothing until the pool is scraped again -
 # ashby's secondaryLocations fix sat in the code for three batches while the
 # judge kept reading one-country locations off disk and looking wrong for it.
-ADAPTER_VERSION = 4
+ADAPTER_VERSION = 5
 
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
@@ -578,6 +578,19 @@ def from_breezy(slug, cfg=None):
                "posted": j.get("published_date"), "jd_text": strip_html(j.get("description"))}
 
 
+def sr_location(loc):
+    """SmartRecruiters' fullLocation is sometimes the string ", " - truthy,
+    and empty. Taken at face value it wiped the city out of the panel, and
+    the judge answered "location is not stated" for a posting whose page
+    prints Dubai."""
+    loc = loc or {}
+    full = (loc.get("fullLocation") or "").strip(" ,")
+    if full:
+        return full
+    parts = [loc.get("city"), loc.get("region"), (loc.get("country") or "").upper()]
+    return ", ".join(dict.fromkeys(p.strip() for p in parts if p and p.strip()))
+
+
 def from_smartrecruiters(slug, cfg=None):
     """Page until the board is exhausted. Radar1 stopped at 5 pages; Bosch
     alone has 4784 postings, so that cap hid ~20k roles across 18 companies."""
@@ -591,8 +604,7 @@ def from_smartrecruiters(slug, cfg=None):
             yield {"company": (j.get("company") or {}).get("name") or _name(cfg) or slug,
                    "title": j.get("name"),
                    "url": f"https://jobs.smartrecruiters.com/{slug}/{j['id']}",
-                   "location": loc.get("fullLocation") or ", ".join(
-                       filter(None, [loc.get("city"), (loc.get("country") or "").upper()])),
+                   "location": sr_location(loc),
                    "remote": bool(loc.get("remote")) or None, "posted": j.get("releasedDate")}
         offset += 100
         if not items or offset >= (d.get("totalFound") or 0):

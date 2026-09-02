@@ -107,10 +107,8 @@ def fetch_posting(url):
             s = secs.get(k) or {}
             if s.get("text"):
                 parts.append((s.get("title") or "") + "\n" + s["text"])
-        loc = d.get("location") or {}
         return {"jd": P.strip_html("\n\n".join(parts)),
-                "location": loc.get("fullLocation") or ", ".join(
-                    filter(None, [loc.get("city"), (loc.get("country") or "").upper()])),
+                "location": P.sr_location(d.get("location")),
                 "company": (d.get("company") or {}).get("name")}
     return {"jd": P.strip_html(raw)}
 

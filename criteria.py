@@ -159,6 +159,8 @@ Return ONE JSON object and nothing else. No prose, no code fence.
 {
   "language_of_the_posting": "the language the DESCRIPTION is written in",
   "language_ok": true | false,
+  "workplace_as_posted": "remote" | "hybrid" | "onsite" | "not stated",
+  "can_he_do_it_from_portugal": "yes" | "no" | "unclear",
   "role_verdict": "yes" | "no" | "unclear",
   "place_verdict": "remote" | "pt_onsite" | "no" | "unclear",
   "cut": true | false,
@@ -180,6 +182,17 @@ written in <language>". Nothing else overrides that - not the location, not
 the role. Stated as prose above, this rule was read and ignored: the model
 named the language correctly in its fields and passed a German posting to
 Open anyway. It is a field it must answer before it judges anything.
+
+Answer workplace_as_posted and can_he_do_it_from_portugal BEFORE
+place_verdict, and then let them decide it:
+  can_he_do_it_from_portugal "no"      -> place_verdict MUST be "no"
+  "yes" and workplace_as_posted remote -> place_verdict "remote"
+  "yes" and hybrid or onsite in Portugal -> place_verdict "pt_onsite"
+  "unclear"                            -> place_verdict "unclear"
+A hybrid or onsite job anywhere but Portugal is "no", however good the role.
+The model has answered hybrid in Vienna, Portugal no, and then written
+place_verdict "remote" in the same reply. The two questions above are the
+answer; place_verdict only records it.
 
 Otherwise cut is true when role_verdict is "no" OR place_verdict is "no".
 """
