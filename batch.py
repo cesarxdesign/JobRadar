@@ -6,7 +6,7 @@ keeps the FIRST PASSES_WANTED passes. Writes data/review.json for the UI.
 import json, os, re, sys, threading, time
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import criteria as c, deep, pool as P, read
+import criteria as c, judge, pool as P, read
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PASSES_WANTED, CUTS_WANTED = 30, 20
@@ -32,74 +32,19 @@ def check_pool_is_current():
     return True
 
 
-def already_reviewed():
-    """Identities Cesar has already been shown. A second batch that repeats
-    the first teaches nothing."""
-    f = f"{ROOT}/data/reviewed.json"
-    return set(json.load(open(f))) if os.path.exists(f) else set()
-
-
 def survivors():
+    """Every active role that passes L1, via the judge. The old "already
+    reviewed" exclusion is gone: Cesar put every test batch back into the pool
+    on 2026-09-02, to be re-judged like everything else."""
     pool = json.load(open(f"{ROOT}/data/pool.json"))["jobs"]
     jd = json.load(open(f"{ROOT}/data/jd.json"))
-    HAS, EXC = re.compile(c.L1_MUST_HAVE, re.I), re.compile(c.L1_EXCLUDE, re.I)
-    JR, LEAD = re.compile(c.L1_JUNIOR, re.I), re.compile(c.L1_LEADERSHIP, re.I)
-    NOT = re.compile(c.L1_NOT_LEADERSHIP, re.I)
-    lead = lambda t: bool(LEAD.search(t)) and not NOT.search(t)
-    seen = already_reviewed()
-    out = []
-    for x in pool:
-        if P.identity(x.get("company") or "", x.get("title") or "") in seen:
-            continue
-        t = x.get("title") or ""
-        if not (x.get("active") and HAS.search(t)):
-            continue
-        if EXC.search(t) and not lead(t):
-            continue
-        if JR.search(t):
-            continue
-        # Rows with a thin or missing description go through too - resolve_first
-        # fetches the original for them, and read_one refuses anything still
-        # unresolved. Nothing is dropped silently here.
-        out.append((x, jd.get(x["id"]) or ""))
-    return out
-
-
-def resolve_first(items):
-    """Every thin survivor is resolved to the original before L2 sees it.
-    Aggregators republish a summary; some boards (SmartRecruiters, Workday)
-    list postings without a body at all. This is a pipeline step, not a thing
-    to remember: pool -> L1 -> resolve originals -> L2. Skipping it is how a
-    whole batch got judged on summaries."""
-    todo = [(rec, jd) for rec, jd in items
-            if len(jd or "") < read.THIN and rec.get("url")]
-    if not todo:
-        return items
-    print(f"resolving {len(todo)} thin rows to their original posting", flush=True)
-    store = json.load(open(f"{ROOT}/data/jd.json"))
-    done = [0]
-    def one(pair):
-        rec, _ = pair
-        try:
-            t = deep.fetch_original(rec["url"])
-        except Exception:
-            t = None
-        if t and len(t) > len(store.get(rec["id"]) or ""):
-            store[rec["id"]] = t[:20000]
-        done[0] += 1
-    with ThreadPoolExecutor(max_workers=8) as ex:
-        list(ex.map(one, todo))
-    tmp = f"{ROOT}/data/jd.tmp.json"
-    open(tmp, "w").write(json.dumps(store, ensure_ascii=False))
-    os.replace(tmp, f"{ROOT}/data/jd.json")
-    print(f"resolved {done[0]}", flush=True)
-    return [(rec, store.get(rec["id"], jd)) for rec, jd in items]
+    return judge.survivors(pool, jd)
 
 
 def main():
     if not check_pool_is_current():
         return 2
-    items = resolve_first(survivors())
+    items = judge.resolve(survivors())
     print(f"{len(items)} L1 survivors with a JD. criteria {c.VERSION}", flush=True)
     print(f"reading until {CUTS_WANTED} cuts; keeping the first {PASSES_WANTED} passes\n", flush=True)
     cache = read.load_cache()
