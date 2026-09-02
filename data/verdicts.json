@@ -539010,11 +539010,1535 @@
    "inferred": [
     "remote"
    ]
+  },
+  "d8043d129d43441a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Management consulting with service design focus is not product design; onsite requirement in Toronto disqualifies Portugal-based remote worker."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Service Design & Business Transformation Consultant",
+    "company": "Sia",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": 2,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "dab22208c6974675": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a management consulting role focused on organizational design and business transformation, not product design or design engineering. Location is Bellevue, WA with mandatory 3+ days/week onsite at a US office."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Consultant, Organizational Design",
+    "company": "Sia",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 130,600–135,700",
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "c90dc6479bfd4fc6": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a management consulting role focused on organizational change and HR transformation, not product design or design-adjacent work. Location is New York with 3 days onsite required, and no remote work for non-primary markets is stated clearly enough to override the onsite requirement."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Consulting Manager - Organizational Design",
+    "company": "Sia",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 140,000 - 180,000",
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "d3058f5b8c09481b": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is graphic design and brand work leadership, not product design. Location is New York onsite with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Visual Design Lead",
+    "company": "Sia Experience (Sia)",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": 3,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 110-120k",
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "1ab2130992384272": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Oslo, Norway onsite; not remote and not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Sommerjobb 2027 - Design",
+    "company": "Sopra Steria",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Norway"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Norwegian"
+   },
+   "inferred": []
+  },
+  "9367b860de204f34": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an engineering role (DMU/PLM integration), not a design role, and requires onsite work in Munich, Germany."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "DMU Integrator (m/w/d) - Bereich Design /Manufacturing",
+    "company": "CIMPA GmbH (Sopra Steria)",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Germany"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "German"
+   },
+   "inferred": []
+  },
+  "7ed0b8ae92c447cb": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Product Owner role managing PLM/CAD features for 3DExperience/CATIA; not product design. Onsite in Munich, Germany with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Product Owner 3DX Design",
+    "company": "CIMPA GmbH (Sopra Steria)",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Germany"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "German"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "624e563389c548a4": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Language is Norwegian, not English or Portuguese."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Digital Designer UX/UI",
+    "company": "Sopra Steria",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Norway"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "Norwegian"
+   },
+   "inferred": []
+  },
+  "ebd5cbc400dd41af": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Game designer role focused on iGaming/casino games, not product/UX design. Requires 4 days/week onsite in Vienna, Austria."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Game Designer",
+    "company": "Sportradar",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 4,
+    "countries": [
+     "Austria"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "d0ba5da2dac94f35": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Pure front-end engineering role (UI programmer) focused on game development code, not product design."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior UI Programmer",
+    "company": "Techland S.A.",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "7fedf15d6b3d47b6": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Game design lead role; Cesar is a product designer, not a game designer. Location is Warsaw, Poland onsite with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Online Game Designer",
+    "company": "Techland S.A.",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "03e9eda12f1041b4": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Game design leadership is not product design; the role is onsite in Poland, not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Game Designer",
+    "company": "Techland S.A.",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "Game Director",
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "7212efb8f3454353": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Quest Designer is game narrative/storytelling work, not product design. Location is onsite in Warsaw, Poland—not remote and not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Quest Designer",
+    "company": "Techland S.A.",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": "Quest Director",
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "722eb9b87a14421a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Level Designer is a game development role, not product/UX design. Located onsite in Warsaw, Poland."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Level Designer",
+    "company": "Techland S.A.",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "89eb707916184597": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is UX/UI design for games (genuine design work), but location is onsite in Warsaw, Poland with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UX/UI Designer",
+    "company": "Techland S.A.",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 2,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "21e5b06463f84b76": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Level Design Director is a game development leadership role, not product/UX/UI design. Location is Wrocław, Poland with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Level Design Director",
+    "company": "Techland S.A.",
+    "seniority": "director",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 8,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "4c6b8903217d4950": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is design leadership, but onsite in Poland with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UI/UX Lead",
+    "company": "Techland S.A.",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "74c6dd76c2c54722": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a technical architecture role in telecommunications infrastructure, not product design. Location is Newbury, England with hybrid work (2-3 days/week onsite), not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Technical Design Authority - Subscriber Management",
+    "company": "VodafoneThree",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 2,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "8cfba3efcc534def": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Lead Level Designer is a game design role (not product/UX design), and the posting explicitly states onsite in Montpellier, France."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Level Designer - BGE2",
+    "company": "Ubisoft",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "World Director",
+    "language": "French"
+   },
+   "inferred": []
+  },
+  "cfdd8e0fc08a4e2c": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "UI Programmer is a pure engineering role, not product/UX design. Location is Montreal, Canada - not remote and not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UI Programmer",
+    "company": "Ubisoft",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "0c51761a286e4d44": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Technical design focused on game systems and data configuration—engineering-heavy with minimal product design; onsite in Montreal only."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Associate Technical Director - Design",
+    "company": "Ubisoft",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "385175e8a28749f6": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Language is French; role is technical production/data configuration, not product design"
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Directeur·trice technique associé·e - Design",
+    "company": "Ubisoft",
+    "seniority": "director",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "French"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "4246e3af4cfd4d78": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Audio/voice design production role, not product/UX design. Onsite in Montreal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Voice Designer - Far Cry",
+    "company": "Ubisoft",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "95698c49e5cc43ac": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a technical art/engineering role focused on UI implementation in Unreal Engine, not product design. Location is Montreal, Canada with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UI Technical Artist",
+    "company": "Ubisoft",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "56608ccf79304414": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is user research and accessibility advocacy, not product design. Location is Montreal, Canada—not remote."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Accessibility Design Specialist",
+    "company": "Ubisoft",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "6508b65a2bdc453f": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine UX design, but location is Montreal, Canada with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior UX Designer",
+    "company": "Ubisoft",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "088051a1e0d649a6": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Designer UX Senior is a legitimate design role, but the position is onsite in Montreal, Canada, not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Designer UX senior",
+    "company": "Ubisoft",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "French"
+   },
+   "inferred": []
+  },
+  "76dcd852a8df4e4a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a pure engineering role (UI programmer), not product design. Cesar is a senior product designer, not an engineer."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Technical Lead - UI Programmer (Far Cry)",
+    "company": "Ubisoft",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 2,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "f56cde525da24121": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a game designer role (not product/UX design), and the location is Montreal, Canada with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Technical Game Designer - Rainbow Six Mobile",
+    "company": "Ubisoft",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "bd0e4aa788774dd3": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Game design leadership role, not product/UX design. Onsite in Vietnam, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Game Designer",
+    "company": "Ubisoft",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Vietnam"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "9a26a0d8db954608": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a game level design leadership role, not product/UX/UI design. Location is onsite in Annecy, France."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Level Designer",
+    "company": "Ubisoft",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "World Lead",
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "cf8c7830378744e8": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Technical Level Design leadership is engineering-focused game production, not product/UX design. Onsite in France, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Technical Level Designer (F/H/NB) [AAA Project]",
+    "company": "Ubisoft Annecy",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "World Lead",
+    "language": "French"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "4007fac7db9f42cf": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a game level design leadership role, not product/UX/UI design. Location is onsite in Annecy, France, not Portugal or remote."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Level Designer (F/H/NB) [AAA Project]",
+    "company": "Ubisoft",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "World Lead",
+    "language": "French"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "345d8f9451544110": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Senior UI Programmer is a programming role, not a design role. Location is onsite in Malmö, Sweden with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior UI Programmer",
+    "company": "Massive Entertainment (Ubisoft)",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Sweden"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "481db163f0504152": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Event scripting in game development is not product design; location is onsite in Sofia, Bulgaria with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Event Scripting Designer",
+    "company": "Ubisoft Sofia",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Bulgaria"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "68eb1f50b2e4493b": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "AI game designer focused on NPC behavior trees and combat design—not product/UX/UI design. Onsite role in Sweden."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior AI Game Designer",
+    "company": "Massive Entertainment (Ubisoft)",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Sweden"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "c7f68eacb2b64040": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Game Economy Designer is systems/balancing design for games, not product/UX/UI design. Onsite in Paris, France."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Game Economy Designer",
+    "company": "Ubisoft",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "e90d71e4aee94274": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Game Designer role is not product/UX design; location is onsite in Montpellier, France with no remote option for Portugal residents."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Game Designer - Beyond Good & Evil 2",
+    "company": "Ubisoft",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "French"
+   },
+   "inferred": []
+  },
+  "e39b3fc36ed24a52": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Game designer role, not product/UX/UI design. Onsite in France, not Portugal or remote."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Game Designer - Beyond Good & Evil 2",
+    "company": "Ubisoft",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "3d9bbc0cda0f434a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is mechanical/piping engineering, not product design or design engineering."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Design Engineer",
+    "company": "Veolia Environnement SA",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "62c9e702f0fe46e6": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is mechanical engineering design (skids, piping, CAD), not product/UX design. Location is Chennai, India with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Technical Lead - Design (Skid Design Engineer)",
+    "company": "Veolia Environnement SA",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 8,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "184ffce86bda4db1": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine service design, but onsite in UK only with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Service Designer",
+    "company": "Version 1",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "6310e3a81c534994": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Service Designer is genuine design work, but the role is onsite/hybrid in the UK with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Service Designer",
+    "company": "Version 1",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "70ebfceac6d147f9": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine product design (UI/UX Designer), but location is Dublin, Ireland with hybrid work - not remote and not in Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UI/UX Designer",
+    "company": "Version 1",
+    "seniority": "unstated",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "Ireland"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 45,000 - EUR 55,000",
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "a372230e513946ec": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Content Designer role focuses on content strategy and editorial work, not product/UX design. Location is UK onsite/hybrid, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Content Designer",
+    "company": "Version 1",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "2622a833bae245e1": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine interaction design, but job is onsite in UK cities, not remote and not Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Interaction Designer",
+    "company": "Version 1",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "a073ebca829643db": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine product design, but location is London, United Kingdom with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Product Designer - Credit",
+    "company": "Wise",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5fc69db7c2bf4728": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Design Director role is perfect for him, but the job is onsite in London with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Design Director",
+    "company": "Wise",
+    "seniority": "director",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5a9aa506859e48ba": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Principal Content Designer role is design-adjacent but primarily content-focused; location is London, UK with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Principal AI Content Designer, FinCrime",
+    "company": "Wise",
+    "seniority": "principal",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "d34ec5f7ab0049eb": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Pure Android engineering role focused on technical implementation, not product design. Location is London onsite with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Android Engineer - Design Systems",
+    "company": "Wise",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": "GBP 87,500 - 111,000 + RSUs",
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
   }
  },
  "counts": {
   "cut-L1": 45933,
-  "cut-L2": 997,
+  "cut-L2": 1047,
   "open": 89,
   "portugal": 3,
   "unsure": 11

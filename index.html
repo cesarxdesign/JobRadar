@@ -56,6 +56,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 <header>
   <h1>Radar2</h1>
   <span class="stamp" id="stamp">loading…</span>
+  <button class="route" id="refresh" title="reload results.json, keep the page">↻</button>
   <span class="spacer"></span>
   <button class="route" id="route">⇱ RadarRoute</button>
 </header>
@@ -287,10 +288,17 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
   render();});
 
-fetch("data/results.json?t="+Date.now()).then(r=>r.json()).then(d=>{
-  DATA=d;
-  $("stamp").textContent=(d.counts.active||0)+" active · "+(d.counts.title_cuts||0)+" cut on title · "
-    +(d.counts.unjudged?d.counts.unjudged+" not yet judged · ":"")+"updated "+(d.generated_at||"").replace("T"," ").slice(0,16);
-  render();
-}).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";});
+// Data reloads without the page: selection, tab and routing all stay.
+function load(){
+  const b=$("refresh");b.disabled=true;
+  return fetch("data/results.json?t="+Date.now()).then(r=>r.json()).then(d=>{
+    DATA=d;
+    $("stamp").textContent=(d.counts.active||0)+" active · "+(d.counts.title_cuts||0)+" cut on title · "
+      +(d.counts.unjudged?d.counts.unjudged+" not yet judged · ":"")+"updated "+(d.generated_at||"").replace("T"," ").slice(0,16);
+    render();
+  }).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";})
+  .finally(()=>{b.disabled=false;});
+}
+$("refresh").onclick=load;
+load();
 </script>
