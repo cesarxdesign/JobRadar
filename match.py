@@ -33,6 +33,29 @@ COMPANY_RES = [
 ]
 TITLEISH = re.compile(r"designer|design|strategist|engineer|manager|director|lead\b|application|interview", re.I)
 
+# A board's own name for the company, taken from the posting URL. Written
+# per board: a loose "<host>/([^/]+)" grabbed the "j" out of Workable's
+# apply.workable.com/j/<id>, which then matched every company whose name
+# contains a j - Plutus Media collected Jito, Jimdo and JetBrains.
+SLUG_RES = [
+    r"jobs\.ashbyhq\.com/([^/?#]+)/",
+    r"greenhouse\.io/([^/?#]+)/jobs/",
+    r"jobs\.lever\.co/([^/?#]+)/",
+    r"apply\.workable\.com/([^/?#]+)/j/",
+    r"([a-z0-9-]+)\.recruitee\.com/",
+    r"([a-z0-9-]+)\.teamtailor\.com/",
+    r"jobs\.smartrecruiters\.com/([^/?#]+)/",
+]
+
+
+def ats_slug(url):
+    for rx in SLUG_RES:
+        m = re.search(rx, url or "", re.I)
+        if m:
+            return squash(m.group(1))
+    return None
+
+
 def squash(s):
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
 
@@ -144,15 +167,21 @@ def main():
     by_co = {}
     for j in jobs:
         keys = {squash(j["company"])}
-        m = re.search(r"(?:ashbyhq\.com|greenhouse\.io|lever\.co|workable\.com)/([^/?#]+)", j.get("url") or "")
-        if m:
-            keys.add(squash(m.group(1)))
+        s = ats_slug(j.get("url"))
+        if s:
+            keys.add(s)
         for k in keys:
-            by_co.setdefault(k, []).append(j)
+            if len(k) >= 3:
+                by_co.setdefault(k, []).append(j)
     hints, matched = {}, 0
     for e in emails:
         co = squash(e["company"])
-        cands = by_co.get(co) or [j for k, v in by_co.items() if len(co) > 4 and (co in k or k in co) for j in v]
+        # Fall back to a partial name only when BOTH sides are long enough
+        # to mean something. Guarding only one side let a 1-character key
+        # match everything.
+        cands = by_co.get(co) or ([j for k, js in by_co.items()
+                                   if len(k) >= 5 and (co in k or k in co) for j in js]
+                                  if len(co) >= 5 else [])
         if not cands:
             continue
         et = toks(e["title"]) if e["title"] else set()
