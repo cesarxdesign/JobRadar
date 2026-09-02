@@ -31,17 +31,15 @@ def build(pool_doc, verdicts_doc, hints=None):
             continue
         v = dict(DEFAULT_VERDICT)
         v.update(verdicts.get(rec["id"], {}))
-        hinted = rec["id"] in hints
         if v.get("stage") == "L1":
             title_cuts += 1          # kept, with its reason, in verdicts.json
             continue
         if not v.get("judged"):
             unjudged += 1            # the judge has not reached it yet
-            if not hinted:
-                continue
+            continue
         role = dict(rec)
         role["verdict"] = v
-        if hinted:
+        if rec["id"] in hints:
             role["hints"] = hints[rec["id"]]   # his inbox says he may have applied
         roles.append(role)
         if v.get("judged") and v.get("stage") != "L1":

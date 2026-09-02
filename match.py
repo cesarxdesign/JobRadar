@@ -131,13 +131,16 @@ def load_emails():
 def main():
     emails = load_emails()
     json.dump(emails, open(f"{ROOT}/data/emails.json", "w"), indent=1, ensure_ascii=False)
-    # Only postings the judge's L1 keeps can be matched. This used to be a
-    # second, looser role test here - re.search("design|ux|ui") - which
-    # matched "ui" inside "Recr-ui-ter" and put ElevenLabs' Operations
-    # Recruiter in the Applied? tab. One role rule, in criteria.py, asked
-    # through judge.l1.
+    # Only roles that PASSED the judge - the three lanes. Emails cleanse the
+    # board he actually reviews; a role the judge cut is not on it, and
+    # matching against the whole pool only invents work. It matched 1,954 L1
+    # survivors before, which is the pool minus titles, not the judge's yes.
+    verdicts = json.load(open(f"{ROOT}/data/verdicts.json"))["jobs"]
+    def passed(j):
+        v = verdicts.get(j["id"]) or {}
+        return v.get("judged") and v.get("stage") == "L2" and not v.get("cut")
     jobs = [j for j in json.load(open(f"{ROOT}/data/pool.json"))["jobs"]
-            if j.get("active") and judge.l1(j.get("title")) is None]
+            if j.get("active") and passed(j)]
     by_co = {}
     for j in jobs:
         keys = {squash(j["company"])}
@@ -180,7 +183,8 @@ def main():
             matched += 1
     json.dump(hints, open(f"{ROOT}/data/applied_hints.json", "w"), indent=1, ensure_ascii=False)
     print(f"{len(emails)} emails ({sum(1 for e in emails if e['kind']=='reject')} rejections), "
-          f"{sum(1 for e in emails if e['title'])} with a title; {len(hints)} postings hinted, {matched} email-role pairs")
+          f"{sum(1 for e in emails if e['title'])} with a title; matched against "
+          f"{len(jobs)} roles that passed the judge -> {len(hints)} hinted, {matched} pairs")
     nomatch = [e for e in emails if squash(e['company']) not in by_co]
     print(f"{len(nomatch)} emails with no company in the pool, e.g.: " +
           ", ".join(sorted({e['company'] for e in nomatch})[:12]))
