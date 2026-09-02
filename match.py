@@ -16,7 +16,7 @@ Output: data/emails.json (merged), data/applied_hints.json {role_id: [hint]}
 import json, os, re, sys
 from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import pool as P
+import judge, pool as P
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 NOISE = re.compile(r"\b(hiring|talent|recruit\w*|team|no-?reply|careers?|hr|acquisition|the)\b|[.!]", re.I)
@@ -128,7 +128,13 @@ def load_emails():
 def main():
     emails = load_emails()
     json.dump(emails, open(f"{ROOT}/data/emails.json", "w"), indent=1, ensure_ascii=False)
-    jobs = [j for j in json.load(open(f"{ROOT}/data/pool.json"))["jobs"] if j.get("active")]
+    # Only postings the judge's L1 keeps can be matched. This used to be a
+    # second, looser role test here - re.search("design|ux|ui") - which
+    # matched "ui" inside "Recr-ui-ter" and put ElevenLabs' Operations
+    # Recruiter in the Applied? tab. One role rule, in criteria.py, asked
+    # through judge.l1.
+    jobs = [j for j in json.load(open(f"{ROOT}/data/pool.json"))["jobs"]
+            if j.get("active") and judge.l1(j.get("title")) is None]
     by_co = {}
     for j in jobs:
         keys = {squash(j["company"])}
@@ -148,14 +154,10 @@ def main():
         for j in cands:
             jt = toks(j["title"])
             if e["title"]:
-                if not re.search(r"design|ux|ui", j["title"], re.I):
-                    continue
                 overlap = len(et & jt) / max(1, len(et | jt)) if (et or jt) else 1.0
                 score = 0.5 + 0.5 * overlap - (0.15 if level(e["title"]) != level(j["title"]) else 0)
             else:
-                if not re.search(r"design|ux|ui", j["title"], re.I):
-                    continue
-                score = 0.35
+                score = 0.35     # company matched, the email named no role
             scored.append((score, j))
         scored.sort(key=lambda x: -x[0])
         for score, j in scored[:4]:

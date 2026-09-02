@@ -34,9 +34,8 @@ def build(pool_doc, verdicts_doc, hints=None):
         hinted = rec["id"] in hints
         if v.get("stage") == "L1":
             title_cuts += 1          # kept, with its reason, in verdicts.json
-            if not hinted:
-                continue
-        elif not v.get("judged"):
+            continue
+        if not v.get("judged"):
             unjudged += 1            # the judge has not reached it yet
             if not hinted:
                 continue
