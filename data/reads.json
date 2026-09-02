@@ -36766,10 +36766,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "a248b0e9c183390f": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "remote",
-  "cut": false,
-  "reason": "Product Designer role at senior level; Portugal explicitly listed as remote location.",
+  "cut": true,
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -55983,10 +55983,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "eb437a4609b2a3a0": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is product design (yes), but job requires living in Lyon or Paris with onsite presence; Portugal is not mentioned and is incompatible with stated location requirements.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -56324,10 +56324,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "5462de2ff3757e19": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "UI/UX Designer role is a match, but location is Vietnam with no remote option and requires working rights in Malaysia, Indonesia, or Vietnam.",
+  "reason": "posting is written in en - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -59186,7 +59186,7 @@
   "role_verdict": "no",
   "place_verdict": "unclear",
   "cut": true,
-  "reason": "This is a bootcamp training program, not a job posting for an active role.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -59233,10 +59233,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "d3c8f4d6b96eadb6": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Product design role is a match, but onsite in Hamburg, Germany with no remote option stated.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -59263,7 +59263,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Brand and art direction role (not product design), onsite in Hamburg with no remote option stated.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -60135,10 +60135,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "0b8392b4753fe564": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is design leadership (Lead Design System), but location is onsite in France, not Portugal or remote.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -60246,7 +60246,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "This is a supplier quality management role, not product design. Location is Wuhu, China with no remote option.",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -60726,7 +60726,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Posting is in Hungarian, not English or Portuguese. Language barrier is disqualifying.",
+  "reason": "posting is written in Hungarian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -60751,7 +60751,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Hungarian, not English or Portuguese.",
+  "reason": "posting is written in Hungarian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -60911,7 +60911,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "This is an IC/chip design role, not product/UX/UI design; located onsite in Germany with no remote option stated.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -61015,7 +61015,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Process Designer role is business/IT process design, not product/UX design; onsite in Ulm, Germany.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -61222,10 +61222,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "74f13de7fd8216bc": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is legitimate UX/UI design, but job is hybrid/onsite in Zaragoza, Spain, not remote or Portugal-based.",
+  "reason": "posting is written in Spanish - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -61303,10 +61303,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "1fdf57097b881759": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite role in France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -62732,7 +62732,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Italian, not English or Portuguese.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -62757,7 +62757,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Italian, not English or Portuguese; also onsite sales role in Italy, not Portugal.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -63011,10 +63011,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "93795ef9a0f5011b": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is design, but position is onsite in Montreal with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -63144,10 +63144,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "56549427f9b744ad": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Oslo, Norway onsite; not remote and not Portugal.",
+  "reason": "posting is written in Norwegian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -63172,7 +63172,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "This is an engineering role (DMU/PLM integration), not a design role, and requires onsite work in Munich, Germany.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -63197,7 +63197,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Product Owner role managing PLM/CAD features for 3DExperience/CATIA; not product design. Onsite in Munich, Germany with no remote option stated.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -63519,7 +63519,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Lead Level Designer is a game design role (not product/UX design), and the posting explicitly states onsite in Montpellier, France.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -63596,7 +63596,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is French; role is technical production/data configuration, not product design",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -63858,7 +63858,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Technical Level Design leadership is engineering-focused game production, not product/UX design. Onsite in France, not remote or Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -63885,7 +63885,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "This is a game level design leadership role, not product/UX/UI design. Location is onsite in Annecy, France, not Portugal or remote.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -64685,10 +64685,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "90ea34c2ed8ecea9": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine UX/UI design, but location is onsite in Bilbao, Spain with no remote option stated.",
+  "reason": "posting is written in Spanish - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -64766,10 +64766,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "62098fd8c2728d31": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is legitimate product design leadership, but job is onsite in Lille, France - not remote and not in Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -64796,7 +64796,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Product Manager role, not a design role; onsite in Paris, France with no remote option.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -64820,10 +64820,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "c03d5dcab8a8b342": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite role in Paris, France. No remote work mentioned; location is explicit and not in Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -64901,10 +64901,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "0e1946d6fbd98516": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine product design (senior level), but location is Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -64928,10 +64928,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "67c001ebe696b243": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is design system leadership (yes for Cesar), but location is Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -64955,10 +64955,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "a3e6b8cd3cf4f32f": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Design System Designer is a legitimate design role, but the posting requires onsite work in Paris, France, not Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -65384,7 +65384,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Fashion design and product development role, not product/UX/UI design. Location is Montreal, Canada - not remote and not Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -65591,10 +65591,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "ae461cc4f69281ea": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Posting is in French, not English or Portuguese.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -65616,10 +65616,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "ba0b245acf9f1e70": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Hybrid role (2 days/week onsite in Neuilly, France) with no remote-from-Portugal option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -65779,7 +65779,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Hardware engineering role (embedded systems, PCB, firmware) is not product design. Location is Liège, Belgium with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -66104,7 +66104,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese; posting is for mechanical/automotive engineering design management in Jinan, not product design.",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -66206,10 +66206,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "bd7886d363e466d7": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite role in Reutlingen, Germany with no remote option stated despite hybrid working mentioned.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -67558,7 +67558,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is German, not English or Portuguese. Posting is in German and requires cutting immediately.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -67793,7 +67793,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Hungarian, not English or Portuguese.",
+  "reason": "posting is written in Hungarian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -67922,7 +67922,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Digital design role for microelectronics (SoC/ASIC engineering), not product/UX design. Onsite in Valbonne, France.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -68188,10 +68188,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "8fe82336f146958b": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Location is onsite in Munich, Germany with no remote option stated.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -68927,7 +68927,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is German, not English or Portuguese.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -69632,7 +69632,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese; posting is for mechanical/connector design engineering, not product/UX design; location is China, not Portugal.",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -69657,7 +69657,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese and English mixed; role is mechanical engineering, not design.",
+  "reason": "posting is written in mixed - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -72325,10 +72325,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "2629dd19d406ce00": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is design and innovation consulting with user research methods - genuine design work. Location is Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -73154,10 +73154,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "47965413079630fa": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Remote work allowed only in Warsaw/Wrocław/Poznań (Poland), not Portugal.",
+  "reason": "posting is written in Polish - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -73181,10 +73181,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "a29ea1e387e554ff": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is product design (yes), but location is Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -73208,10 +73208,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "acc13662c64c76db": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Location is Paris, France with 2 days/week remote; not remote-eligible for Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote",
@@ -73830,7 +73830,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is French, not English or Portuguese. Posting must be cut immediately.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -74204,7 +74204,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "This is a multimedia/graphic designer role focused on marketing, branding, and motion design—not product design or design engineering.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -78082,7 +78082,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Graphic design internship (not product/UX design); onsite in Germany with no remote option.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -81896,7 +81896,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Swedish, not English or Portuguese.",
+  "reason": "posting is written in Swedish - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -82078,10 +82078,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "bd91f5918a5c5838": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine product design, but job is onsite in France with no remote option for Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -82239,7 +82239,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Posting is in German, not English or Portuguese.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -82369,10 +82369,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "8cec1adb1ed73b40": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is product design (yes), but posting is onsite in Levallois-Perret, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -82792,7 +82792,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Store manager role in retail, not design. Location is Italy, not Portugal.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -82844,7 +82844,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Warehouse/stock coordination role, not product design; onsite in Italy, not Portugal or remote.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -82869,7 +82869,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Sales advisor role in retail/beauty, not design. Onsite in Italy, not Portugal.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -82894,7 +82894,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Sales advisor role, not design. Located in Italy, not remote or Portugal.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -82919,7 +82919,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Sales advisor role in retail, not design. Onsite in Italy, not Portugal or remote.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -83152,10 +83152,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "30bc8419a55807ac": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Norwegian, not English or Portuguese.",
+  "reason": "posting is written in Norwegian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -83420,10 +83420,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "73ccf083a8ac9bdb": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is UX design (senior, game industry), but location is Montreal, Canada with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -83585,7 +83585,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Game designer role is not product/UX/UI design; onsite in Montpellier, France with no remote option for Portugal-based workers.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -84039,7 +84039,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Systems administration role (not design); onsite in Bogota, Colombia (not Portugal or remote).",
+  "reason": "posting is written in Spanish - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -84061,10 +84061,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "b9a9cf939ab89dab": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is UX/UI design (a fit), but location is France with flexible remote up to 3 days/week — not Portugal and not fully remote.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84091,7 +84091,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Service design leans research and organizational process design, not product/UX design. Also onsite in Paris with no remote option.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84115,10 +84115,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "0fc5358d1e3544b9": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite role in Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84145,7 +84145,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "UX Writing is content/marketing discipline, not product design. Location is Paris onsite with no remote option.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84169,10 +84169,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "b197e3316d77e70b": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Product Designer role is a strong match, but onsite in Lille, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84196,10 +84196,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "a21b1d46c956838a": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Product Designer role is a strong match for Cesar, but onsite in Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84223,10 +84223,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "702926a93bfcf9e2": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is design leadership (Design System Manager), but job is onsite in Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84250,10 +84250,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "d558f49c1853fbdb": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "UX Designer role is a match, but job is onsite in Paris, France - not remote and not in Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84277,10 +84277,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "a785a14411826e84": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is UI design, but job is onsite in Paris, France, not remote and not in Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84304,10 +84304,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "a864c4e36facbd3d": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite role in Montpellier, France - not in Portugal and no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84331,10 +84331,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "6dc066316fdcc486": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Senior Product Designer role is a perfect fit, but the job is onsite in Paris, France—not remote and not in Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84358,10 +84358,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "25f1e1bd2661c908": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine product design (UX/UI Designer), but job is onsite in Paris with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84490,7 +84490,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "This is a fashion/textile design role focused on materials and garment construction, not product/UX/UI design. Location is Montreal, Canada with no remote option.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84567,7 +84567,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is French, not English or Portuguese. Posting must be cut immediately.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -84589,10 +84589,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "a4c8843c9a187dcb": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite in Paris, France with mandatory regular office presence. Not remote, not Portugal-based.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -84641,10 +84641,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "64b95bfaae7527c7": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite in Montpellier, France with only 2 days/week remote - not viable from Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -84696,7 +84696,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Swedish, not English or Portuguese. Cut immediately.",
+  "reason": "posting is written in Swedish - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -84721,7 +84721,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Swedish, not English or Portuguese.",
+  "reason": "posting is written in Swedish - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -84852,7 +84852,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese (Simplified); posting is not in English or Portuguese.",
+  "reason": "posting is written in Chinese (Simplified) - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -84981,7 +84981,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is German, not English or Portuguese. Also location is Dresden, Germany with required onsite presence.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -85246,10 +85246,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "776d1083df7a95c6": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is German, not English or Portuguese.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -85328,7 +85328,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese, not English or Portuguese.",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -85353,7 +85353,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese; role is engineering/technical expert, not design",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -85434,7 +85434,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Mechanical engineering role (eAxle design), not product/UX design. Onsite in Chongqing, China; posting is in Chinese.",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -85671,7 +85671,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese; posting is for embedded software engineering in Shanghai, not product design.",
+  "reason": "posting is written in Chinese (Mandarin) - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -85696,7 +85696,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Chinese; role is systems engineering focused on power electronics and control theory, not product design.",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -85746,7 +85746,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Not a design role - hydraulic systems engineering. Onsite in Changzhou, China.",
+  "reason": "posting is written in Chinese - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -86556,10 +86556,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "122162527a2e6cdd": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine product/UX design, but job is onsite in Rome, Italy with no remote option stated.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -86583,10 +86583,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "62585d7af7932955": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite role in Aix-en-Provence, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -86610,10 +86610,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "d0f1d87847471fb8": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine product/UX/service design, but job is onsite in Netherlands with no remote option stated.",
+  "reason": "posting is written in Dutch - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -86637,10 +86637,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "cb286cf9a77498f6": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine UX/UI design, but location is Stockholm, Sweden with no remote option stated.",
+  "reason": "posting is written in Swedish - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -86691,10 +86691,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "86a6b100ea284d25": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Onsite role in France (Courbevoie) with only 2 days/week remote; Portugal-based remote worker cannot do this.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -89164,10 +89164,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "667f7661f0249bc4": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Strategic design leadership role matches Cesar's profile, but posting is onsite in Aix-en-Provence, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -89276,7 +89276,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Posting is in German, not English or Portuguese.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -90719,10 +90719,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "4a170e81e3b2042e": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Hybrid role in Lima, Peru; candidate lives in Portugal and needs remote work.",
+  "reason": "posting is written in Spanish - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -90749,7 +90749,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is brand/art direction and graphic design, not product design. Location is Hamburg, Germany with no remote option stated.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -91282,7 +91282,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is French, not English or Portuguese. Mechanical tooling design is engineering, not product/UX design. Location is France, not Portugal or remote.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -92463,7 +92463,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Engineering role focused on aircraft structural repairs, not product/UX design. Onsite in France, not Portugal or remote.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -92787,7 +92787,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is German, not English or Portuguese.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -92998,10 +92998,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "6ad24dfc2efe8e7d": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Design Engineer role qualifies, but onsite in Querétaro, Mexico - not Portugal or remote.",
+  "reason": "posting is written in Spanish - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -94196,10 +94196,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "3401d68e285a7b9a": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine product design (UX/UI), but job requires onsite work in Paris, France, not Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -94543,10 +94543,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "2a49202a07979aad": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Location requirement is Buenos Aires, Argentina onsite/hybrid - not Portugal, not remote.",
+  "reason": "posting is written in Spanish - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -94602,7 +94602,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Sales advisor role in retail - not a design position. Location is Italy onsite, not Portugal or remote.",
+  "reason": "posting is written in Italian - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -94624,10 +94624,10 @@
   "criteria_version": "2026-09-02.6"
  },
  "46b8336b5b8e3916": {
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Role is genuine product design (DA Digital/UI Designer), but job is onsite in Paris with no remote option for Portugal.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -94870,7 +94870,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is French, not English or Portuguese.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -95184,7 +95184,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Civil engineering infrastructure role, not product/UX design. Location is Vejle, Denmark with relocation expected.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -96749,7 +96749,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Language is Japanese; role is digital advertising design, not product/UX design.",
+  "reason": "posting is written in Japanese - not English or Portuguese",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -97364,7 +97364,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Graphic design and motion content creation for marketing/brand; not product/UX design. Located in Paris, France with no remote option stated.",
+  "reason": "posting is written in French - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"
@@ -97472,7 +97472,7 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "Fashion/apparel design (DOB - dresses/blouses), not product/UX/UI design. Onsite 3+ days/week in Stuttgart, Germany - not remote, not Portugal.",
+  "reason": "posting is written in German - not English or Portuguese",
   "confidence": "high",
   "inferred": [
    "remote"

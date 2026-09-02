@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-09-02.6"
+VERSION = "2026-09-02.7"
 
 # ---------------------------------------------------------------- L1
 # Title only. Every cut is logged with the rule that fired.
@@ -37,6 +37,13 @@ L1_JUNIOR = (r"\b(junior|jr\.?|intern|internship|trainee|graduate|new grad|"
 # Handed to Claude verbatim. Written as instructions to a reader, not as rules
 # for a machine, because a reader is what is on the other end.
 L2_CRITERIA = """
+BEFORE ANYTHING ELSE, LOOK AT WHAT LANGUAGE THE POSTING IS WRITTEN IN.
+Read the words on the page. If the description is written in any language
+other than English or Portuguese - German, French, Spanish, Dutch, Italian,
+Polish, anything - stop there. Do not judge the role. Do not judge the place.
+Return cut, role_verdict "no", reason "posting is written in <language>".
+A German posting is a cut even when its location says Portugal.
+
 READ THE WHOLE PAGE FIRST. THE SIDE PANEL IS PART OF THE POSTING.
 You are given the posting as it renders: the title block, then the side panel
 (Location, Location Type, Employment Type, Compensation, Department), then the
@@ -106,10 +113,6 @@ AXIS 2 - PLACE. Can he do this job while living in Portugal?
     Spain only. France, Germany and Italy stay NO.
 
   UNCLEAR when you genuinely cannot tell. Do not guess NO.
-
-
-LANGUAGE. If the posting is not written in English or Portuguese, cut it
-immediately and stop reading. Return cut with reason "language".
 
 
 BE GENEROUS ABOUT THE ROLE. BE EXACT ABOUT THE PLACE.

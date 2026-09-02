@@ -12,6 +12,8 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .spacer{flex:1}
 .route{background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:7px 13px;font-size:12.5px;cursor:pointer}
 .route:hover{border-color:var(--acc);color:var(--acc)}
+.q{background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:7px 11px;font-size:12.5px;min-width:220px}
+.q:focus{outline:none;border-color:var(--acc)}
 .route.drop{border-color:var(--acc);color:var(--acc);border-style:dashed}
 .route[disabled]{opacity:.5;cursor:wait}
 .tabs{display:flex;gap:2px;padding:10px 20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
@@ -33,18 +35,6 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .card .acts .star{padding:4px 8px;font-size:13px}
 .card .acts .star.on{color:var(--warn);border-color:var(--warn)}
 .card .acts button.on{color:var(--fg);border-color:var(--fg);cursor:default}
-.mail{border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:9px;padding:10px 12px;margin:12px 0;font-size:12.5px}
-.mail.older{border-left-color:#e5484d}
-.mail .k{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:600;color:var(--dimmer)}
-.mail .k b{color:var(--fg)}
-.mail .warn{color:#e5484d;font-weight:600}
-.mail .s{font-weight:600;margin-top:3px}
-.mail .b{color:var(--dim);margin-top:3px}
-.mail .facts{margin:8px 0}
-.mail .body{color:var(--fg);margin-top:8px;line-height:1.5;max-height:260px;overflow-y:auto;padding-right:6px;white-space:normal}
-.mail .body.none{color:var(--dimmer)}
-.card .env{font-size:11px;color:var(--dimmer)}
-.card .env.older{color:#e5484d}
 .jd{margin-top:16px;font-size:13px;line-height:1.55;color:var(--fg)}
 .jd h4{font-size:12px;margin:14px 0 4px;color:var(--dim);text-transform:uppercase;letter-spacing:.6px}
 .jd p{margin:0 0 8px}
@@ -75,6 +65,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <h1>Radar2</h1>
   <span class="stamp" id="stamp">loading…</span>
   <button class="route" id="refresh" title="reload results.json, keep the page">↻</button>
+  <input class="q" id="q" type="search" placeholder="filter roles…" autocomplete="off">
   <span class="spacer"></span>
   <button class="route" id="route">⇱ RadarRoute</button>
 </header>
@@ -84,7 +75,6 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
-  <button class="tab" data-lane="applied?" id="t-hint" hidden>Applied?<span class="n" id="c-applied?"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
 </div>
@@ -99,7 +89,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 "use strict";
 // The board renders results.json and nothing else. It applies no criteria of
 // its own - the lane a role is in was decided by the judge, upstream.
-let DATA = null, LANE = "open", SEL = null;
+let DATA = null, LANE = "open", SEL = null, Q = "";
 // Routing is absent until the one RadarRouting file on the planet is dropped
 // here. Nothing about it is stored in this browser.
 let RR = null, RRH = null, STORED = null;
@@ -127,15 +117,29 @@ function days(r){
   return isNaN(d)?null:Math.max(0,Math.floor((Date.now()-d)/86400000));
 }
 const byDays=(a,b)=>{const x=days(a),y=days(b);return (x===null)-(y===null)||x-y;};
+// Everything the board knows about a role, as one string to search. The lane
+// is untouched: a filtered role stays in its own column, the rest are hidden.
+function haystack(r){
+  const f=(r.verdict&&r.verdict.fields)||{}, v=r.verdict||{};
+  return [r.title,r.company,r.location,r.source,(r.sources||[]).join(" "),
+          f.role,f.seniority,f.remote,f.portugal_ok,f.language,f.salary,f.reports_to,
+          (f.countries||[]).join(" "),v.role,v.place,(v.why||[]).join(" ")]
+         .filter(Boolean).join(" ").toLowerCase();
+}
+function matches(r){
+  if(!Q) return true;
+  return Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w));
+}
+
 function pool(){
   if(!DATA) return [];
   let rows;
   if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id));
-  else if(LANE==="applied?") rows=DATA.roles.filter(r=>r.active && r.hints && !routing(r.id));
   else if(LANE==="applied"||LANE==="discarded")
     rows=DATA.roles.filter(r=>r.active && routing(r.id)===LANE);
   // a role you have acted on leaves the first three lanes
   else rows=(DATA.lanes[LANE]||[]).map(roleById).filter(r=>r && !routing(r.id));
+  rows=rows.filter(matches);
   if(LANE!=="favorites") return rows.sort(byDays);
   const order=["open","portugal","unsure","applied","discarded","cut"];
   return rows.sort((a,b)=>order.indexOf(stateOf(a))-order.indexOf(stateOf(b))||byDays(a,b));
@@ -143,17 +147,14 @@ function pool(){
 
 function counts(){
   for(const l of ["open","portugal","unsure"]){
-    const n=(DATA.lanes[l]||[]).filter(id=>!routing(id)).length;
+    const n=(DATA.lanes[l]||[]).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length;
     $("c-"+l).textContent=n||"";
   }
   if(RR){
     for(const l of ["applied","discarded"])
-      $("c-"+l).textContent=DATA.roles.filter(r=>r.active&&routing(r.id)===l).length||"";
-    $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)).length||"";
+      $("c-"+l).textContent=DATA.roles.filter(r=>r.active&&routing(r.id)===l&&matches(r)).length||"";
+    $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)&&matches(r)).length||"";
   }
-  const hinted=DATA.roles.filter(r=>r.active&&r.hints&&!routing(r.id)).length;
-  $("t-hint").hidden=!DATA.roles.some(r=>r.hints);
-  $("c-applied?").textContent=hinted||"";
 }
 
 function render(){
@@ -172,8 +173,7 @@ function render(){
     const d=days(r), rt=routing(r.id);
     el.innerHTML='<div class="days" title="days open">'+(d===null?"—":d+"d")+'</div>'
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
-      +'<div class="c">'+esc(r.company)+(r.hints?' <span class="env'+(r.hints.some(h=>h.older)?' older':'')+'">✉ '
-          +r.hints.map(h=>(h.kind==="reject"?"rejected ":"applied ")+h.date).join(" · ")+'</span>':'')+'</div>'
+      +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
       + placeTag(r)
       + (r.location?'<span class="tag">'+esc(r.location)+'</span>':'')
@@ -238,14 +238,6 @@ function renderPane(){
   const v=r.verdict||{};
   $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
     +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
-    +(r.hints||[]).map(h=>'<div class="mail'+(h.older?' older':'')+'"><div class="k">'
-        +(h.kind==="reject"?"rejection":"confirmation")+' · <b>'+esc(h.date)+'</b>'
-        +(h.older?' · <span class="warn">email is older than this posting ('+esc(h.posted)+')</span>':' · posting '+esc(h.posted))+'</div>'
-        +'<div class="facts">'+fact("Title in the email",esc(h.title))+fact("Company in the email",esc(h.company))
-          +fact("Subject",esc(h.subject))+fact("Sent from",esc(h.domain||h.from))+'</div>'
-        +(h.body?'<div class="body">'+esc(h.body).replace(/\n/g,'<br>')
-          :'<div class="body none">'+(h.snippet?esc(h.snippet)+'<br><br>(only the preview line — this email predates the body pull)':'no body on file for this email')
-          )+'</div></div>').join("")
     +'<div class="facts">'
     + fact("Days open", days(r)===null?"—":days(r)+" · since "+esc((r.posted||r.first_seen||"").slice(0,10)))
     + fact("Location", esc(r.location))
@@ -357,5 +349,6 @@ function load(){
   .finally(()=>{b.disabled=false;});
 }
 $("refresh").onclick=load;
+$("q").oninput=e=>{Q=e.target.value.trim().toLowerCase();SEL=null;render();};
 load();
 </script>

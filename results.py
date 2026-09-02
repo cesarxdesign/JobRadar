@@ -39,8 +39,6 @@ def build(pool_doc, verdicts_doc, hints=None):
             continue
         role = dict(rec)
         role["verdict"] = v
-        if rec["id"] in hints:
-            role["hints"] = hints[rec["id"]]   # his inbox says he may have applied
         roles.append(role)
         if v.get("judged") and v.get("stage") != "L1":
             (cut if v["cut"] else lanes[v["lane"]]).append(rec["id"])
