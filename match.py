@@ -113,12 +113,15 @@ def load_emails():
         e["company"] = company_of(e)
         e["title"] = title_of(e)
         out.append(e)
+    # The v1 extract stored company, date and role - no thread, so no body.
+    # The real messages above supersede it wherever the same company appears.
+    # A v1 row for a company with no real email is kept: it is still proof he
+    # applied, and losing it would lose a hint.
     old = json.load(open(os.path.expanduser("~/Claude/radar/applications.json")))
     old = old if isinstance(old, list) else next(v for v in old.values() if isinstance(v, list))
-    seen = {(squash(e["company"]), e["date"]) for e in out}
+    seen = {squash(e["company"]) for e in out}
     for o in old:
-        key = (squash(o["company"]), o["date"])
-        if key in seen:
+        if squash(o["company"]) in seen:
             continue
         out.append({"kind": "confirm", "date": o["date"], "from": o["company"], "email": "@" + (o.get("dom") or ""),
                     "subject": f"(v1 extract) application to {o['company']}", "snippet": "",
