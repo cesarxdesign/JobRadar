@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-09-02.7"
+VERSION = "2026-09-03.1"
 
 # ---------------------------------------------------------------- L1
 # Title only. Every cut is logged with the rule that fired.
@@ -38,11 +38,9 @@ L1_JUNIOR = (r"\b(junior|jr\.?|intern|internship|trainee|graduate|new grad|"
 # for a machine, because a reader is what is on the other end.
 L2_CRITERIA = """
 BEFORE ANYTHING ELSE, LOOK AT WHAT LANGUAGE THE POSTING IS WRITTEN IN.
-Read the words on the page. If the description is written in any language
-other than English or Portuguese - German, French, Spanish, Dutch, Italian,
-Polish, anything - stop there. Do not judge the role. Do not judge the place.
-Return cut, role_verdict "no", reason "posting is written in <language>".
-A German posting is a cut even when its location says Portugal.
+Read the words in the description. English or Portuguese, carry on. Any
+other language - German, French, Spanish, Dutch, Italian, Polish - is a cut,
+whatever the location says. It is the first field you answer, below.
 
 READ THE WHOLE PAGE FIRST. THE SIDE PANEL IS PART OF THE POSTING.
 You are given the posting as it renders: the title block, then the side panel
@@ -159,6 +157,8 @@ L2_OUTPUT = """
 Return ONE JSON object and nothing else. No prose, no code fence.
 
 {
+  "language_of_the_posting": "the language the DESCRIPTION is written in",
+  "language_ok": true | false,
   "role_verdict": "yes" | "no" | "unclear",
   "place_verdict": "remote" | "pt_onsite" | "no" | "unclear",
   "cut": true | false,
@@ -173,8 +173,15 @@ Return ONE JSON object and nothing else. No prose, no code fence.
   }
 }
 
-cut is true when role_verdict is "no" OR place_verdict is "no" OR the
-language is neither English nor Portuguese. Otherwise cut is false.
+Answer language_of_the_posting FIRST, from the words in the description.
+language_ok is true only for English or Portuguese. When it is false, cut
+MUST be true, role_verdict MUST be "no", and reason MUST be "posting is
+written in <language>". Nothing else overrides that - not the location, not
+the role. Stated as prose above, this rule was read and ignored: the model
+named the language correctly in its fields and passed a German posting to
+Open anyway. It is a field it must answer before it judges anything.
+
+Otherwise cut is true when role_verdict is "no" OR place_verdict is "no".
 """
 
 
