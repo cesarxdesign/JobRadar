@@ -71,7 +71,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 let DATA = null, LANE = "open", SEL = null;
 // Routing is absent until the one RadarRouting file on the planet is dropped
 // here. Nothing about it is stored in this browser.
-let RR = null, RRH = null, rrTimer = null, STORED = null;
+let RR = null, RRH = null, STORED = null;
 const $ = id => document.getElementById(id);
 const esc = s => (s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
@@ -175,15 +175,21 @@ function decide(id,d){
   if(d) RR.decisions.push({id,decision:d,company:r.company,title:r.title,at:new Date().toISOString()});
   writeRR(); render();
 }
-function writeRR(){if(RRH){clearTimeout(rrTimer);rrTimer=setTimeout(flushRR,400);}}
-async function flushRR(){
+// Written the instant you click, one write at a time. The swap file only
+// replaces the original on close(), so a quit mid-write keeps the previous
+// routing; the "routing saved" toast means the click is on disk.
+let rrChain = Promise.resolve();
+function writeRR(){
   if(!RRH) return;
-  try{
-    const w=await RRH.createWritable();
-    await w.write(JSON.stringify({updated:new Date().toISOString(),decisions:RR.decisions},null,1));
-    await w.close();
-    toast("routing saved · "+RR.decisions.length+" decisions");
-  }catch(e){toast("ROUTING NOT SAVED: "+e.message);}
+  const snapshot=JSON.stringify({updated:new Date().toISOString(),decisions:RR.decisions},null,1);
+  rrChain = rrChain.then(async()=>{
+    try{
+      const w=await RRH.createWritable();
+      await w.write(snapshot);
+      await w.close();
+      toast("routing saved · "+RR.decisions.length+" decisions");
+    }catch(e){toast("ROUTING NOT SAVED: "+e.message);}
+  });
 }
 function rrUI(on){
   document.querySelectorAll(".tab.rr").forEach(t=>{t.hidden=!on;});
