@@ -7,3 +7,8 @@ data/jd.json
 __pycache__/
 data/pool.partial.json
 data/*.tmp
+
+# His application history in test form (v1 applied roles, email-derived applications).
+# Judge recall fixtures, never public. Files stay on disk, out of git.
+data/test_applied.json
+data/test_emails.json
