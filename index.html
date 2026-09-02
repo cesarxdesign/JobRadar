@@ -28,8 +28,12 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .card .t{font-weight:600}
 .card .t a{color:inherit;text-decoration:none}
 .card .t a:hover{color:var(--acc);text-decoration:underline}
-.card .acts{flex:none;margin:0;flex-direction:column;gap:5px}
+.card .acts{flex:none;margin:0;gap:5px}
 .card .acts button{padding:4px 10px}
+.card .acts .star{padding:4px 8px;font-size:13px}
+.card .acts .star.on{color:var(--warn);border-color:var(--warn)}
+.card .acts button.on{color:var(--fg);border-color:var(--fg);cursor:default}
+.sect{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;margin:14px 0 6px 46px}
 .card .c{color:var(--dim);font-size:12.5px}
 .meta{display:flex;flex-wrap:wrap;gap:5px 7px;margin-top:7px;font-size:11px;color:var(--dimmer)}
 .tag{border:1px solid var(--line);border-radius:20px;padding:2px 8px}
@@ -60,6 +64,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab on" data-lane="open">Open<span class="n" id="c-open"></span></button>
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
+  <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
 </div>
@@ -87,6 +92,13 @@ function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");
 // ---------- render ----------
 function roleById(id){return DATA.roles.find(r=>r.id===id);}
 function routing(id){return RR ? (RR.decisions.find(d=>d.id===id)||{}).decision || null : null;}
+// A favorite is a favorite whatever else happens to it. It lives in the
+// routing file beside the decisions and shows the role's current state.
+function fav(id){return !!(RR&&RR.favorites.includes(id));}
+function toggleFav(id){RR.favorites=fav(id)?RR.favorites.filter(x=>x!==id):[...RR.favorites,id];writeRR();render();}
+const LANES=["open","portugal","unsure"];
+const laneOf=r=>LANES.find(l=>(DATA.lanes[l]||[]).includes(r.id));
+const stateOf=r=>routing(r.id)||laneOf(r)||"cut";
 
 // Days the posting has been open: from the date the board gives, else the
 // day the pool first saw it. Every lane sorts freshest first.
@@ -98,11 +110,14 @@ const byDays=(a,b)=>{const x=days(a),y=days(b);return (x===null)-(y===null)||x-y
 function pool(){
   if(!DATA) return [];
   let rows;
-  if(LANE==="applied"||LANE==="discarded")
+  if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id));
+  else if(LANE==="applied"||LANE==="discarded")
     rows=DATA.roles.filter(r=>r.active && routing(r.id)===LANE);
   // a role you have acted on leaves the first three lanes
   else rows=(DATA.lanes[LANE]||[]).map(roleById).filter(r=>r && !routing(r.id));
-  return rows.sort(byDays);
+  if(LANE!=="favorites") return rows.sort(byDays);
+  const order=["open","portugal","unsure","applied","discarded","cut"];
+  return rows.sort((a,b)=>order.indexOf(stateOf(a))-order.indexOf(stateOf(b))||byDays(a,b));
 }
 
 function counts(){
@@ -110,8 +125,11 @@ function counts(){
     const n=(DATA.lanes[l]||[]).filter(id=>!routing(id)).length;
     $("c-"+l).textContent=n||"";
   }
-  if(RR) for(const l of ["applied","discarded"])
-    $("c-"+l).textContent=DATA.roles.filter(r=>r.active&&routing(r.id)===l).length||"";
+  if(RR){
+    for(const l of ["applied","discarded"])
+      $("c-"+l).textContent=DATA.roles.filter(r=>r.active&&routing(r.id)===l).length||"";
+    $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)).length||"";
+  }
 }
 
 function render(){
@@ -119,7 +137,12 @@ function render(){
   counts();
   const rows=pool();
   $("list").innerHTML = rows.length ? "" : '<div class="empty">Nothing here.</div>';
+  let section=null;
   for(const r of rows){
+    if(LANE==="favorites"&&stateOf(r)!==section){
+      section=stateOf(r);
+      const h=document.createElement("div");h.className="sect";h.textContent=section;$("list").appendChild(h);
+    }
     const el=document.createElement("div");
     el.className="card"+(SEL===r.id?" sel":"");
     const d=days(r), rt=routing(r.id);
@@ -134,12 +157,16 @@ function render(){
       + (f(r).seniority?'<span class="tag">'+esc(f(r).seniority)+'</span>':'')
       +'</div></div>'
       + (RR?'<div class="acts">'
-          +(rt==="applied"?'':'<button data-d="applied">applied</button>')
-          +(rt==="discarded"?'':'<button data-d="discarded">discard</button>')
+          +'<button class="star'+(fav(r.id)?" on":"")+'" data-f="1" title="favorite">'+(fav(r.id)?"★":"☆")+'</button>'
+          +'<button data-d="applied" class="'+(rt==="applied"?"on":"")+'">applied</button>'
+          +'<button data-d="discarded" class="'+(rt==="discarded"?"on":"")+'">discard</button>'
           +(rt?'<button data-d="">clear</button>':'')+'</div>':'');
     el.onclick=()=>{SEL=r.id;render();};
     el.querySelectorAll("a").forEach(a=>a.onclick=e=>e.stopPropagation());
-    el.querySelectorAll("button").forEach(b=>b.onclick=e=>{e.stopPropagation();decide(r.id,b.dataset.d||null);});
+    el.querySelectorAll("button").forEach(b=>b.onclick=e=>{e.stopPropagation();
+      if(b.dataset.f) return toggleFav(r.id);
+      if(b.classList.contains("on")) return;
+      decide(r.id,b.dataset.d||null);});
     $("list").appendChild(el);
   }
   renderPane();
@@ -198,7 +225,7 @@ function decide(id,d){
 let rrChain = Promise.resolve();
 function writeRR(){
   if(!RRH) return;
-  const snapshot=JSON.stringify({updated:new Date().toISOString(),decisions:RR.decisions},null,1);
+  const snapshot=JSON.stringify({updated:new Date().toISOString(),decisions:RR.decisions,favorites:RR.favorites},null,1);
   rrChain = rrChain.then(async()=>{
     try{
       const w=await RRH.createWritable();
@@ -216,6 +243,7 @@ function rrUI(on){
 async function adopt(h){
   const d=JSON.parse(await (await h.getFile()).text());
   if(!d||!Array.isArray(d.decisions)) throw new Error("not a routing file");
+  d.favorites=Array.isArray(d.favorites)?d.favorites:[];
   RRH=h; RR=d;
   try{await idb("readwrite",s=>s.put(h,"h"));}catch(e){}
   rrUI(true); render();

@@ -536587,11 +536587,2434 @@
    "inferred": [
     "remote"
    ]
+  },
+  "2c687a829d5f4d97": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an IC design engineering role, not product/UX design. Location is onsite in Germany, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Analog/Mixed-Signal IC Designer Automotive",
+    "company": "Bosch Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Germany"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 88,000+",
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "faf18705ded242f6": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "PCB designer is hardware/electronics engineering, not product design. Location is Bengaluru, India, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "PCB designer specialist for Multimarket DC",
+    "company": "Bosch Global Software Technologies Private Limited",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "774e7eeafd7d45e3": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is audio/voice design (not product/UX design); location requires relocation to Warsaw, Poland."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Voice Designer",
+    "company": "CD PROJEKT RED",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": "PLN 19,000–29,600 gross monthly",
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "f8975897906c4384": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Process Designer role is business/IT process design, not product/UX design; onsite in Ulm, Germany."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Process Designer Produce to Supply (w/m/div.)",
+    "company": "Bosch Rexroth AG",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Germany"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "German"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "07cec32e32a24da6": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is a perfect fit for a senior product designer, but the job requires in-office work in Warsaw with mandatory relocation, and Cesar works from home in Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UX Director",
+    "company": "CD PROJEKT RED",
+    "seniority": "director",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": "43300-59500 PLN gross monthly",
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "77da4422dd5a426c": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Sound design is not product design; this is audio/music discipline. Onsite in Warsaw, Poland with mandatory relocation—not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lead Sound Designer",
+    "company": "CD PROJEKT RED",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": "31800–43725 PLN gross monthly",
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "0680503556254d88": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Quest Designer is a game design role, not product design. Relocation to Warsaw is required."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Quest Designer",
+    "company": "CD PROJEKT RED",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "3eaeba22c4aa491e": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Level designer role, not product/UX/UI design; onsite in Warsaw with mandatory relocation."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Expert Level Designer",
+    "company": "CD PROJEKT RED",
+    "seniority": "expert",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": "PLN 31,500–43,340 gross monthly",
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "9f397d319bd54147": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Gameplay designer role focused on game development and Unreal Engine; requires relocation to Warsaw, Poland with office-first working mode."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Gameplay Designer",
+    "company": "CD PROJEKT RED",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Poland"
+    ],
+    "portugal_ok": "no",
+    "salary": "PLN 20,100 - 31,790 gross monthly",
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "a88f026c012846d6": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Onsite in Dubai with no remote option stated; Cesar is based in Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Staff Product Designer, Global Hub Q-Commerce",
+    "company": "talabat (Delivery Hero)",
+    "seniority": "staff",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Arab Emirates"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "64460c4119a24cc7": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is design leadership (Product Design Manager), but location is Barcelona, Spain with only 2 days/week work-from-home—not remote in Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Product Design Manager",
+    "company": "Glovo",
+    "seniority": "lead",
+    "remote": "hybrid",
+    "onsite_days": 3,
+    "countries": [
+     "Spain"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 8,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "b74e9ebb3ace4405": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is legitimate UX/UI design, but job is hybrid/onsite in Zaragoza, Spain, not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Becari@ Diseño UX/UI (UX/UI Design Internship)",
+    "company": "Devoteam",
+    "seniority": "junior",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "Spain"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Spanish"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5f8f1e04f4f049d2": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Onsite role in Lisbon; no remote work mentioned despite company having distributed teams across EMEA."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UX/UI Designer",
+    "company": "Devoteam",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Portugal"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 2,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "67a00f9116e44711": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Posting is in French; location is onsite in Levallois-Perret, France with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "IA Product Designer H/F",
+    "company": "Devoteam",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "French"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "329a1952bb3a47c0": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Onsite role in France with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "AI Agent Designer",
+    "company": "Seequalis",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "France"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "French"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "436b85ef96474be3": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "PLC software engineering role, not product/UX/UI design. Onsite in Netherlands, not Portugal or remote."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior PLC Designer (m/w/d)",
+    "company": "Everience",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Netherlands"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5130ccc5bdea4ade": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "HTML media banner design is motion/graphic design, not product design. Location is onsite Chicago with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Experience Designer – Banner",
+    "company": "EVERSANA",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 6,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "d14577bc3b734201": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine senior product design (Experience Designer in design systems), but location is Chicago, IL with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Experience Designer – Web/IVA",
+    "company": "EVERSANA",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 6,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "9f72381ca49f409e": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Scientific content designer role is graphic design focused, not product/UX design. Location is Pune, India with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Scientific Content Designer",
+    "company": "EVERSANA",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "ce3bca3864254a19": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a landscape architecture management role, not product/UX/UI design. Location is onsite in Riyadh, Saudi Arabia, not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Design Manager - Landscape Architecture",
+    "company": "Omrania (Egis Group)",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Saudi Arabia"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 15,
+    "reports_to": "Head of Department",
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "6730bc8f4c4e44e4": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Contract manager for infrastructure design is not a design role; onsite in Bucharest, Romania with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Contract Manager (Infrastructure Design)",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Romania"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "9850ff8e10e44d26": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an architectural design role (not product/UX design) and requires onsite work in Singapore."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Architectural Designer",
+    "company": "10 Design (Egis Group)",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Singapore"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 4,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "9ff526a12e1b4769": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an architecture role (buildings, infrastructure), not product/UX/UI design. Location is Cairo, Egypt—not remote and not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Architect (Design)",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Egypt"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 12,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "8d09c8cc7d904b12": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is infrastructure/hydraulic engineering, not product design. Role is onsite in Bucharest, Romania, not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Hydrotechnical and Hydraulic Engineer (Infrastructure Design)",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Romania"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "b4344cfbdf3c48ab": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Civil engineering project management and drainage design, not product/UX design. Onsite in Indianapolis, Indiana, United States."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Design Project Manager and Drainage Design Lead",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 8,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "3a7a4313f0f24b8d": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a structural CAD drafting role, not product design. The posting is for civil/infrastructure technical drafting, not UX/UI/design work."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Structural CAD Designer - Bridges",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 15,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "f7ec8667ca284473": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Civil engineering role focused on water infrastructure design, not product/UX design. Onsite in Dublin, Ireland."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Civil Design Engineer (Water)",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Ireland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "104d7adcd5964928": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an engineering role (not product/UX design) and requires hybrid/onsite work in England."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Project Engineer - EHV Specification & Design",
+    "company": "Omnia Projects (Egis Group)",
+    "seniority": "mid",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "ec757b3421bc4abc": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an electrical engineering role, not a design role. Hybrid onsite in England, not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Project Engineer - Specification & Design (EHV Substations)",
+    "company": "Egis Group (Omnia Projects)",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5ace2b2c19cc44b1": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a civil engineering highway design role, not product/UX design. Located in Markham, Ontario, Canada with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Intermediate Highway Design Engineer – OpenRoads",
+    "company": "Egis Group",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "c193411f7b9f4128": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is civil engineering (site grading, roadway design, infrastructure), not product design or UX/UI work."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Civils Site Grading Design Engineer",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "94bb574ec1f34fb8": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Building structural BIM engineer is pure engineering, not product design or design leadership."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Building Structural Designer Engineer",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "eeab22ca943547fe": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "BIM modeling is architectural/engineering technical work, not product/UX design. Location is Bengaluru, India with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Electrical Design BIM",
+    "company": "Egis Group",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "b6cfc89d06c94658": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Pure electrical engineering role for highways infrastructure, not product/UX design. Onsite in London, UK only."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Electrical Design Engineer (Highways)",
+    "company": "Egis Group",
+    "seniority": "junior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "53708505dafc400b": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Mechanical engineering role focused on HVAC, plumbing, and fire protection systems — not product/UX design. Located in Bengaluru, India with no remote option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Mechanical Design Engineer",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "67ee72af2667425e": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an electrical engineering role, not product design or design-adjacent work. Location is onsite in Amman, Jordan."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Electrical Engineer - Design Team",
+    "company": "Omrania (Egis Group)",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Jordan"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 2,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "1f062dcc3ff04e09": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a civil engineering design role, not product/UX design. Location is Perth, Australia with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Principal Civil Designer / Discipline Lead - Design & Drafting",
+    "company": "Egis Group",
+    "seniority": "principal",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Australia"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "eeb5bd57e123472a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Civil designer role in engineering/infrastructure, not product/UX design. Onsite in Perth, Australia."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Civil Designer",
+    "company": "Egis Group",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Australia"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "b63bf5c02c7d423a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Civil engineering discipline lead role, not product/UX design; onsite in Perth, Australia, not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Principal Civil Engineer / Discipline Lead - Design & Drafting",
+    "company": "Egis Group",
+    "seniority": "principal",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Australia"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "bb2b9b0c9f034b17": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Electrical infrastructure design engineering role, not product/UX design. Location is Toronto, Canada onsite."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Electrical Traffic Signal Designer",
+    "company": "Egis Group",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "b1c61fffee474216": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an engineering/programme management role in water infrastructure, not a design role. Cesar is a product designer, not a civil/water engineer."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Design Manager - Bioresources",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "0f8662dd57c648f9": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a mechanical/electrical/plumbing engineering role, not product design. Location is onsite in New Delhi, India."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Design Engineer - MEPF",
+    "company": "Egis Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 5,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "37acb8ad22324f8a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "MEP mechanical engineering role, not product/UX design. Onsite in Saudi Arabia, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "MEP Design Lead Mechanical",
+    "company": "Egis Group",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Saudi Arabia"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "9ba081670de64155": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is an HR/organisational consulting role, not a design role. Location is Bucharest, Romania with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Organisation Design & Job Architecture Consultant",
+    "company": "Endava",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Romania"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5fe054ca96154c9e": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a .NET software architect role, not a design role. Pure engineering."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Design Lead - .Net",
+    "company": "Endava",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 10,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "e26d0059a071472a": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Head of Design is a design leadership role, but the job is hybrid with 2 days onsite in London, not Portugal or remote-Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Head of Design",
+    "company": "Entain",
+    "seniority": "head",
+    "remote": "hybrid",
+    "onsite_days": 2,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "9334fdcbe81f4834": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Data integration and analysis role, not design. Onsite in Costa Rica, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Data Integration Designer",
+    "company": "Experian",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Costa Rica"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": "Data Integration Manager",
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "2a375a7c78cd4c9a": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine product design, but job is onsite in São Paulo, Brazil—Cesar lives in Portugal and works from home."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Especialista de Design I",
+    "company": "Experian (Serasa Experian)",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Brazil"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Portuguese"
+   },
+   "inferred": []
+  },
+  "41020bbf68dc4825": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Location is São Paulo, Brazil; no remote option stated. Posting is in Portuguese."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Coordenadora de Design de Produto",
+    "company": "Serasa Experian",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Brazil"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Portuguese"
+   },
+   "inferred": []
+  },
+  "33cc825cef7b44de": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a graphic design and marketing creative role, not product/UX design. Location is London hybrid, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Designer",
+    "company": "Experian",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 2,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "Head of Creative & Content",
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "0377cc3f10b0401a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Product Manager role, not a design role. Onsite in São Paulo, Brazil, not remote or Portugal-based."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Analista de Produto Pleno - Design System",
+    "company": "Experian",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Brazil"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Portuguese"
+   },
+   "inferred": []
+  },
+  "ea749ca10169439d": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuinely product design, but the job is hybrid in London with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Product Designer - AI Experiences",
+    "company": "Experian",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": 2,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "Product Design Lead",
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "19e2e6c8cc974ccd": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Onsite role in São Paulo, Brazil; Cesar lives in Portugal and works from home."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Analista de Design de Produto",
+    "company": "Serasa Experian",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Brazil"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Portuguese"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "676ef85a92684137": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Onsite role in São Paulo, Brazil; Cesar lives in Portugal and cannot work from home here."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Analista de Design de Produto Sênior - Design System",
+    "company": "Serasa Experian",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Brazil"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Portuguese"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "15b18adbecce4ff4": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is product design; location is onsite in São Paulo, Brazil, with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Analista de Design III",
+    "company": "Serasa Experian",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Brazil"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Portuguese"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "ba50ebc46d1449da": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Fashion designer role - brand/fashion design discipline, not product design. Requires relocation to Stockholm."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Kids - Fashion Designer",
+    "company": "H&M Group",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Sweden"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "Regional Relevance Team Lead",
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "f799322845194788": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Retail architecture/interior design role, not product/UX design. Onsite in Mexico City."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Retail Designer",
+    "company": "H&M Group",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Mexico"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5fad310c49174ee7": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is design systems leadership (yes for Cesar), but onsite in Bengaluru, India with 3+ days/week required and right to work in India mandatory—Portugal-based remote worker cannot do this."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Technical Design System Lead",
+    "company": "Informa Group Plc. (Taylor & Francis)",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": 3,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": "Head of Product Design",
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "017efbce1fff46b3": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Exhibition floor planning is graphic/technical design, not product/UX/UI design. Location is onsite in Riyadh, Saudi Arabia, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Exhibition Floor Plan Designer (Contractor/Freelance role)",
+    "company": "Tahaluf (Informa Group Plc.)",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Saudi Arabia"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 2,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "b0b16e2973fc4092": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Pure mechanical engineering role, not product design. Onsite in Pune, India with no remote option for Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Design Engineer, LLE Platform Support",
+    "company": "Konecranes",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 2,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "ab0c6842e5254803": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Electrical engineering role focused on motor control, PLC programming, and hardware—not product design or UX/UI."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Project Engineer, Electrical",
+    "company": "Konecranes",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 2,
+    "reports_to": "Lead Project Engineer, Electrical",
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "b2c1e9449b7e40a8": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuinely service design (YES), but job is onsite in Brighton, England with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Service Designer",
+    "company": "Legal & General",
+    "seniority": "senior",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "ffd75ca396184cd0": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine senior product design, but location is onsite in Lausanne, Switzerland with hybrid model - not remote, and not in Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Senior Product Designer",
+    "company": "Nexthink",
+    "seniority": "senior",
+    "remote": "hybrid",
+    "onsite_days": null,
+    "countries": [
+     "Switzerland"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 7,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "cb2a41b0f4f74635": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is genuine UI/UX design, but onsite in Sofia, Bulgaria with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "UI/UX Designer",
+    "company": "Playtech",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Bulgaria"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 3,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "5db3026ff10149b4": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a sound design and music composition role, not product/UX/UI design."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Composer / Sound Designer",
+    "company": "Playtech",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Bulgaria"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 1,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "272c5ba986cb4d34": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is learning/instructional design, not product/UX design. Location is UK with hybrid onsite in Cheltenham, not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Digital Learning Designer (Maternity Cover)",
+    "company": "PortmanDentex",
+    "seniority": "unstated",
+    "remote": "hybrid",
+    "onsite_days": 1,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "bf25ef1c09784ede": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Industrial automation and controls engineering, not product design. Onsite in Pune, India."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Design Engineer",
+    "company": "Rexel",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "India"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "70596bd3a95f4f58": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a lighting design engineering role focused on technical implementation and sales, not product/UX design. Location is UK-based, not remote or Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Lighting Design Engineer",
+    "company": "Rexel",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "3e4da6b6b24a4a28": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Language is Italian, not English or Portuguese."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Addetto/a alle vendite Part-Time (Sales Advisor)",
+    "company": "Rituals",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Italy"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 23,371-25,103 gross annual (pro-rated for part-time)",
+    "years_xp": 1,
+    "reports_to": null,
+    "language": "Italian"
+   },
+   "inferred": []
+  },
+  "4bed37057d784b4e": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Language is Italian, not English or Portuguese; also onsite sales role in Italy, not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Addetto/a alle vendite (Sales Advisor)",
+    "company": "Rituals",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Italy"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 23,371–25,103 annually (pro-rated for part-time)",
+    "years_xp": 1,
+    "reports_to": null,
+    "language": "Italian"
+   },
+   "inferred": []
+  },
+  "7018df3e690d43eb": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a retail store management role, not a design role. Language is Italian, not English or Portuguese."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Assistant Store Manager",
+    "company": "Rituals",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Italy"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 27,904.80-32,572.00 annual",
+    "years_xp": 1,
+    "reports_to": "Store Manager",
+    "language": "Italian"
+   },
+   "inferred": []
+  },
+  "53de10cc64874e4a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "This is a warehouse/stock coordinator retail role, not product design. Language is Italian, not English or Portuguese."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Addetto/a al Magazzino / Stock Coordinator",
+    "company": "Rituals",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Italy"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 23,371–25,103 annually",
+    "years_xp": 2,
+    "reports_to": "Store Manager",
+    "language": "Italian"
+   },
+   "inferred": []
+  },
+  "48930aa8d2d845cf": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Sales advisor role in retail/beauty, not product design. Onsite in Italy, not Portugal."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Addetto/a alle vendite (Sales Advisor)",
+    "company": "Rituals",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Italy"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 9.93-10.67/hour",
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Italian"
+   },
+   "inferred": []
+  },
+  "6a4791415bf548fc": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Sales Advisor role is retail, not design. Location is Italy, not Portugal or remote."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Addetto/a alle vendite (Sales Advisor)",
+    "company": "Rituals",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Italy"
+    ],
+    "portugal_ok": "no",
+    "salary": "EUR 23,371-25,103 annually",
+    "years_xp": 1,
+    "reports_to": null,
+    "language": "Italian"
+   },
+   "inferred": []
+  },
+  "5b1ac654354846a8": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Sales advisor role in retail/beauty, not design. Onsite in Italy, not Portugal or remote."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Addetto/a alle vendite (Sales Advisor)",
+    "company": "Rituals",
+    "seniority": "unstated",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Italy"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": null,
+    "reports_to": null,
+    "language": "Italian"
+   },
+   "inferred": []
+  },
+  "97103f83726c4a2a": {
+   "text": "original",
+   "role": "no",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Principal infrastructure architect role focused on cloud, networking, and systems engineering—not product design or UX. Onsite in Mountain View, California."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Principal Systems Design Engineer",
+    "company": "ServiceNow",
+    "seniority": "principal",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 192,600 - 337,100",
+    "years_xp": 12,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": []
+  },
+  "f3be36ad58c54cb7": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Onsite role in Santa Clara, California with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Sr. Director, UX Research - AI",
+    "company": "ServiceNow",
+    "seniority": "director",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 254,500 - 445,400",
+    "years_xp": 15,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "d00ef8dfd3f540d1": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is product design (YES), but location is San Diego, onsite, with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Staff Product Designer, Customer & Partner Experience (CPEX)",
+    "company": "ServiceNow",
+    "seniority": "staff",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States"
+    ],
+    "portugal_ok": "no",
+    "salary": "USD 149,800 - 262,200",
+    "years_xp": 8,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "ef20ec23296940c6": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is design leadership (manager of design team), but job is onsite in Atlanta, Georgia with no Portugal option."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Manager, Product Design, Customer & Partner Experience",
+    "company": "ServiceNow",
+    "seniority": "lead",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "United States",
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 8,
+    "reports_to": null,
+    "language": "English"
+   },
+   "inferred": [
+    "remote"
+   ]
+  },
+  "13280a5836bf4187": {
+   "text": "original",
+   "role": "yes",
+   "place": "no",
+   "lane": "unsure",
+   "cut": true,
+   "why": [
+    "Role is design, but position is onsite in Montreal with no remote option stated."
+   ],
+   "judged": true,
+   "stage": "L2",
+   "confidence": "high",
+   "fields": {
+    "role": "Conseiller(ère) UX / Service Design & Transformation numérique",
+    "company": "Sia",
+    "seniority": "mid",
+    "remote": "onsite",
+    "onsite_days": null,
+    "countries": [
+     "Canada"
+    ],
+    "portugal_ok": "no",
+    "salary": null,
+    "years_xp": 1,
+    "reports_to": null,
+    "language": "French"
+   },
+   "inferred": [
+    "remote"
+   ]
   }
  },
  "counts": {
   "cut-L1": 45933,
-  "cut-L2": 917,
+  "cut-L2": 997,
   "open": 89,
   "portugal": 3,
   "unsure": 11
