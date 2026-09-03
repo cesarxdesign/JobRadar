@@ -74,6 +74,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <span class="spacer"></span>
   <span class="stamp" id="batch-when"></span>
   <button class="route" id="batch" hidden>Review last batch</button>
+  <button class="route" id="export" hidden title="write the decision history for Claude to read">⇱ Export history</button>
   <button class="route" id="route">⇱ RadarRoute</button>
 </header>
 
@@ -351,7 +352,16 @@ function renderPane(){
 function decide(id,d){
   const r=roleById(id);
   RR.decisions=RR.decisions.filter(x=>x.id!==id);
-  if(d) RR.decisions.push({id,decision:d,company:r.company,title:r.title,at:new Date().toISOString()});
+  if(d){
+    const f=(r.verdict&&r.verdict.fields)||{}, v=r.verdict||{};
+    // Snapshot what Radar knew at the moment he decided. The posting will
+    // come down; the history should not thin out with it.
+    RR.decisions.push({id,decision:d,company:r.company,title:r.title,
+      at:new Date().toISOString(),url:r.url,location:r.location,
+      workplace:r.workplace,source:r.source,posted:r.posted,
+      lane:v.lane,seniority:f.seniority,remote:f.remote,salary:f.salary,
+      countries:f.countries});
+  }
   writeRR(); render();
 }
 // Written the instant you click, one write at a time. The swap file only
@@ -381,7 +391,7 @@ async function adopt(h){
   d.favorites=Array.isArray(d.favorites)?d.favorites:[];
   RRH=h; RR=d;
   try{await idb("readwrite",s=>s.put(h,"h"));}catch(e){}
-  rrUI(true); render();
+  rrUI(true); render(); $("export").hidden=false;
 }
 function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("radar2-rr",1);
   r.onupgradeneeded=()=>r.result.createObjectStore("h");r.onerror=()=>rej(r.error);
@@ -438,6 +448,16 @@ function load(){
 $("refresh").onclick=load;
 $("q").oninput=e=>{Q=e.target.value.trim().toLowerCase();SEL=null;render();};
 $("batch").onclick=()=>INBATCH?completeBatch():setBatch(true);
+$("export").onclick=async()=>{
+  const b=$("export");b.disabled=true;b.textContent="writing…";
+  try{
+    const d=await (await fetch("/api/export",{method:"POST",body:"{}"})).json();
+    if(!d.ok) throw new Error(d.msg||"failed");
+    b.className="route done";b.textContent="✓ "+d.msg.split(" -> ")[0];
+    toast("radar2/data/applied_history.json and .md — point Claude at either");
+  }catch(e){alert("Not written: "+e.message);b.textContent="⇱ Export history";}
+  finally{b.disabled=false;setTimeout(()=>{b.className="route";b.textContent="⇱ Export history";},6000);}
+};
 // The batch and its marks live beside results.json, drawn by batch.py.
 Promise.all([fetch("data/batch.json?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
              fetch("data/marks.json?t="+Date.now()).then(r=>r.ok?r.json():[]).catch(()=>[])])

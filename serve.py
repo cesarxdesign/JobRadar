@@ -61,6 +61,18 @@ class H(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b'{"ok":true}')
             return
+        if self.path == "/api/export":
+            import subprocess
+            r = subprocess.run([sys.executable, str(ROOT / "export.py")],
+                               capture_output=True, text=True, cwd=str(ROOT))
+            print((r.stdout + r.stderr).strip(), flush=True)
+            self.send_response(200 if r.returncode == 0 else 500)
+            self._cors()
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"ok": r.returncode == 0,
+                                         "msg": (r.stdout or r.stderr).strip()}).encode())
+            return
         if self.path == "/api/complete-batch":
             import subprocess
             r = subprocess.run([sys.executable, str(ROOT / "batch.py"), "--complete"],
