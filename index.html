@@ -453,8 +453,15 @@ $("export").onclick=async()=>{
   try{
     const d=await (await fetch("/api/export",{method:"POST",body:"{}"})).json();
     if(!d.ok) throw new Error(d.msg||"failed");
+    // The server writes it beside the pipeline so a Claude session can read
+    // it in place; this hands him the same file to drop into a chat.
+    const res=await fetch("/data/applied_history.json?t="+Date.now());
+    const url=URL.createObjectURL(await res.blob());
+    const a=document.createElement("a");
+    a.href=url;a.download="applied_history.json";document.body.appendChild(a);
+    a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);
     b.className="route done";b.textContent="✓ "+d.msg.split(" -> ")[0];
-    toast("radar2/data/applied_history.json and .md — point Claude at either");
+    toast("downloaded · also written to radar2/data/applied_history.json and .md");
   }catch(e){alert("Not written: "+e.message);b.textContent="⇱ Export history";}
   finally{b.disabled=false;setTimeout(()=>{b.className="route";b.textContent="⇱ Export history";},6000);}
 };
