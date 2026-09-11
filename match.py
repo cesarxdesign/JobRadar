@@ -10,7 +10,7 @@ posting, because a newer posting may be a new job.
 
 Inputs (local only, gitignored):
     data/emails_raw.tsv   kind, date, from, email, subject, snippet, tid
-    ~/Claude/radar/applications.json   the older confirmations (v1 extract)
+    ~/Claude/JobRadar/current/data/applications.json   the older confirmations (v1 extract)
 Output: data/emails.json (merged), data/applied_hints.json {role_id: [hint]}
 """
 import json, os, re, sys
@@ -140,7 +140,7 @@ def load_emails():
     # The real messages above supersede it wherever the same company appears.
     # A v1 row for a company with no real email is kept: it is still proof he
     # applied, and losing it would lose a hint.
-    old = json.load(open(os.path.expanduser("~/Claude/radar/applications.json")))
+    old = json.load(open(os.path.expanduser("~/Claude/JobRadar/current/data/applications.json")))
     old = old if isinstance(old, list) else next(v for v in old.values() if isinstance(v, list))
     seen = {squash(e["company"]) for e in out}
     for o in old:

@@ -879,6 +879,324 @@ ADAPTERS.update({"bamboohr": from_bamboohr, "breezy": from_breezy,
 AGGREGATORS.update({"himalayas": agg_himalayas, "designjobsworld": agg_designjobsworld})
 
 
+# ------------------------------------------ from the LinkedIn sweep, 2026-09-11
+# Sources Cesar collected in JobRadar/sweep.md. Every one below was probed for
+# a data path by hand before it was written up. Not here, because no scripted
+# path was found: Behance (its job JSON answers empty without a session),
+# remote.co (times out every scripted client), Designer News (paywalled),
+# Otta (login wall, now Welcome to the Jungle), FlexJobs (paid), DailyRemote
+# (600 design rows, every company "[Hidden Company]" and the description
+# behind Premium, on the job page too - nothing to judge).
+
+
+def _post_json(url, body, headers=None):
+    req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                 headers={**UA, "Content-Type": "application/json",
+                                          "Accept": "application/json", **(headers or {})})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8", "replace"))
+
+
+def _get_text(url, extra):
+    req = urllib.request.Request(url, headers={**UA, **extra})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def agg_superjobs():
+    """superjobs.design publishes its whole board as one jobs.json (2,188
+    roles at 943 design-led companies). Most rows link to the original ATS
+    posting, so posting_key folds them into the board's row wherever we poll
+    that board; the rest are himalayas copies. meta.json carries the company
+    names the rows only key by slug."""
+    names = {}
+    try:
+        names = {k: (v or {}).get("name") for k, v in get_json("https://superjobs.design/meta.json").items()}
+    except Exception:
+        pass
+    for j in get_json("https://superjobs.design/jobs.json").get("jobs", []):
+        loc = (j.get("location") or "").replace(" · ", ", ")     # "Remote · Mexico"
+        sal = j.get("salary")
+        if isinstance(sal, dict):
+            sal = fmt_range(sal.get("min"), sal.get("max"), sal.get("currency"))
+        yield {"company": j.get("companyName") or names.get(j.get("company")) or j.get("company"),
+               "title": j.get("title"), "url": j.get("url"), "location": loc,
+               "remote": bool(re.search(r"remote", f"{loc} {j.get('workplace') or ''}", re.I)) or None,
+               "salary": sal if isinstance(sal, str) else None,
+               "posted": j.get("posted"), "jd_text": strip_html(j.get("description"))}
+
+
+def agg_euremotejobs():
+    """WordPress with WP Job Manager: the REST API pages the design category
+    at 100 a call. Regions are taxonomy ids, resolved once per run."""
+    base = "https://euremotejobs.com/wp-json/wp/v2"
+    cat = next((c["id"] for c in get_json(f"{base}/job-categories?slug=design")), None)
+    if cat is None:
+        return
+    regions = {r["id"]: unescape(r.get("name") or "")
+               for r in get_json(f"{base}/job_listing_region?per_page=100")}
+    page = 1
+    while True:
+        req = urllib.request.Request(
+            f"{base}/job-listings?job-categories={cat}&per_page=100&page={page}", headers=UA)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            rows = json.loads(r.read().decode("utf-8", "replace"))
+            pages = int(r.headers.get("X-WP-TotalPages") or 1)
+        for j in rows:
+            meta = j.get("meta") or {}
+            loc = ", ".join(regions[i] for i in (j.get("job_listing_region") or []) if regions.get(i))
+            yield {"company": unescape(meta.get("_company_name") or ""),
+                   "title": unescape((j.get("title") or {}).get("rendered") or ""),
+                   "url": j.get("link"), "location": loc or "Remote", "remote": True,
+                   "posted": j.get("date"), "updated": j.get("modified"),
+                   "jd_text": strip_html((j.get("content") or {}).get("rendered"))}
+        if page >= pages or not rows:
+            break
+        page += 1
+
+
+def agg_jobspresso():
+    """WP Job Manager's listing endpoint, the one the page's Load More calls.
+    The RSS ignores every filter; this one honours the keyword."""
+    page = 1
+    while page <= 30:
+        body = urllib.parse.urlencode({"search_keywords": "design", "per_page": 100,
+                                       "page": page}).encode()
+        req = urllib.request.Request("https://jobspresso.co/jm-ajax/get_listings/", data=body,
+                                     headers={**UA, "Content-Type": "application/x-www-form-urlencoded"})
+        with urllib.request.urlopen(req, timeout=40) as r:
+            d = json.loads(r.read().decode("utf-8", "replace"))
+        blocks = (d.get("html") or "").split('<li id="job_listing-')[1:]
+        for b in blocks:
+            href = re.search(r'data-href="([^"]+)"', b)
+            title = re.search(r'class="job_listing-title">(.*?)</h3>', b, re.S)
+            company = re.search(r'job_listing-company">\s*<strong>(.*?)</strong>', b, re.S)
+            loc = re.search(r'job_listing-location[^>]*>(.*?)</div>', b, re.S)
+            loc_s = strip_html(loc.group(1), 200).strip() if loc else ""
+            yield {"company": strip_html(company.group(1), 120).strip() if company else "",
+                   "title": strip_html(title.group(1), 200).strip() if title else "",
+                   "url": href.group(1) if href else None, "location": loc_s,
+                   "remote": bool(re.search(r"remote|anywhere|worldwide", loc_s, re.I)) or None}
+        if not blocks or page >= int(d.get("max_num_pages") or 1):
+            break
+        page += 1
+
+
+def agg_justremote():
+    """The SPA's own API. The page preloads only the newest 83 across every
+    category; the API answers the whole design category."""
+    for j in get_json("https://justremote-api.herokuapp.com/api/v1/jobs?category=design"):
+        if j.get("is_active") is False:
+            continue
+        locs = [x for x in (j.get("location_restrictions") or []) if x]
+        yield {"company": j.get("company_name"), "title": j.get("title"),
+               "url": "https://justremote.co/" + (j.get("href") or "").lstrip("/"),
+               "location": ", ".join(locs) or (j.get("job_country") or ""),
+               "workplace": j.get("remote_type") or None, "remote": True}
+
+
+def agg_wellfound():
+    """Next.js pages: the Apollo cache in __NEXT_DATA__ carries the search
+    results and the startup each belongs to. Four role landings, paged until
+    a page brings nothing new."""
+    seen = set()
+    for role in ("product-designer", "ux-designer", "ui-designer", "designer"):
+        for page in range(1, 16):
+            html = get_text(f"https://wellfound.com/role/r/{role}" + (f"?page={page}" if page > 1 else ""))
+            m = re.search(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+            if not m:
+                break
+            try:
+                st = json.loads(m.group(1))["props"]["pageProps"]["apolloState"]["data"]
+            except (KeyError, TypeError, ValueError):
+                break
+            company = {}
+            for v in st.values():
+                if isinstance(v, dict) and v.get("__typename") == "StartupResult":
+                    for ref in v.get("highlightedJobListings") or []:
+                        company[(ref or {}).get("__ref")] = v.get("name")
+            new = 0
+            for k, v in st.items():
+                if not (isinstance(v, dict) and v.get("__typename") == "JobListingSearchResult"):
+                    continue
+                if not v.get("id") or v["id"] in seen:
+                    continue
+                seen.add(v["id"])
+                new += 1
+                loc = "; ".join(v.get("locationNames") or [])
+                rem = v.get("acceptedRemoteLocationNames") or []
+                if v.get("remote") and rem:
+                    loc = "; ".join(filter(None, [loc, "Remote: " + ", ".join(rem)]))
+                yield {"company": company.get(k) or "", "title": v.get("title"),
+                       "url": f"https://wellfound.com/jobs/{v['id']}-{v.get('slug') or ''}",
+                       "location": loc, "remote": bool(v.get("remote")) or None,
+                       "salary": v.get("compensation") or None,
+                       "employment_type": v.get("jobType") or None,
+                       "posted": datetime.fromtimestamp(v["liveStartAt"], timezone.utc).isoformat()
+                                 if v.get("liveStartAt") else None,
+                       "jd_text": strip_html(v.get("description"))}
+            if not new:
+                break
+
+
+def agg_builtin():
+    """Server-rendered cards, 25 a page. The panel is three icon pills:
+    house (workplace), pin (location), trophy (level)."""
+    seen = set()
+    for page in range(1, 12):
+        html = get_text("https://builtin.com/jobs/remote/design-ux" + (f"?page={page}" if page > 1 else ""))
+        parts = re.split(r'<div id="job-card-(\d+)"', html)
+        if len(parts) < 3:
+            break
+        new = 0
+        for jid, body in zip(parts[1::2], parts[2::2]):
+            if jid in seen:
+                continue
+            seen.add(jid)
+            new += 1
+            t = re.search(r'data-id="job-card-title"[^>]*>(.*?)</a>', body, re.S)
+            a = re.search(r'data-alias="(/job/[^"]+)"', body)
+            c = re.search(r'data-id="company-title"[^>]*>\s*<span>(.*?)</span>', body, re.S)
+
+            def pill(icon):
+                m = re.search(r'fa-' + icon + r'[^>]*></i>\s*</div>\s*(?:<div>\s*)?<span[^>]*>([^<]*)</span>', body)
+                return m.group(1).strip() if m else None
+            wp, loc = pill("house-building"), pill("location-dot")
+            summ = re.search(r'class="fs-sm fw-regular mb-md text-gray-04">(.*?)</div>', body, re.S)
+            yield {"company": strip_html(c.group(1), 120).strip() if c else "",
+                   "title": strip_html(t.group(1), 200).strip() if t else "",
+                   "url": "https://builtin.com" + a.group(1) if a else None,
+                   "location": loc or "", "workplace": wp,
+                   "remote": bool(wp and re.search(r"remote", wp, re.I)) or None,
+                   "jd_text": strip_html(summ.group(1)) if summ else None}
+        if not new:
+            break
+
+
+def agg_dribbble():
+    root = ET.fromstring(get_text("https://dribbble.com/jobs.rss"))
+    for item in root.iter("item"):
+        g = lambda t: (item.findtext(t) or "").strip()
+        raw = g("title")
+        m = re.match(r"(.*?) is hiring for a position of (.*?)(?: in (.*))?$", raw, re.S)
+        company = g("{http://purl.org/dc/elements/1.1/}creator") or (m.group(1) if m else "")
+        title, loc = (m.group(2), m.group(3) or "") if m else (raw, "")
+        yield {"company": company.strip(), "title": title.strip(),
+               "url": g("link").split("?")[0], "location": loc.strip(),
+               "remote": bool(re.search(r"remote", loc, re.I)) or None,
+               "posted": g("pubDate") or None, "jd_text": strip_html(g("description"))}
+
+
+def agg_nodesk():
+    """Algolia, with the public search key the site ships in its own JS."""
+    d = _post_json("https://0586L1SOK8-dsn.algolia.net/1/indexes/jobPosts/query",
+                   {"query": "", "hitsPerPage": 1000,
+                    "facetFilters": [["searchFilter:remote-jobs/design"]]},
+                   {"X-Algolia-API-Key": "8dacb58c6f375cba28e19ecf1f03e9e1",
+                    "X-Algolia-Application-Id": "0586L1SOK8", "Referer": "https://nodesk.co/"})
+    for h in d.get("hits", []):
+        regs = [x for x in (h.get("applicantLocationRegions") or []) if x]
+        yield {"company": (h.get("company") or {}).get("name"), "title": h.get("title"),
+               "url": "https://nodesk.co" + (h.get("permalink") or ""),
+               "location": "; ".join(regs), "remote": True,
+               "posted": h.get("datePublished") or None}
+
+
+WTTJ_REMOTE = {"fulltime": "Fully remote", "partial": "Partial remote",
+               "punctual": "Occasional remote"}
+
+
+def agg_wttj():
+    """Welcome to the Jungle's Algolia index, English postings in the UX and
+    design profession. The page's own key needs its referer. The hit carries
+    a summary; deep.py resolves the full posting from their JSON API."""
+    d = _post_json("https://CSEKHVMS53-dsn.algolia.net/1/indexes/wttj_jobs_production_en/query",
+                   {"query": "", "hitsPerPage": 1000,
+                    "facetFilters": [["new_profession.sub_category_reference:user-experience-ux-and-design-xYjM3"],
+                                     ["language:en"]],
+                    "attributesToRetrieve": ["name", "slug", "organization", "offices", "remote",
+                                             "published_at_date", "summary", "profile",
+                                             "salary_yearly_minimum", "salary_maximum", "salary_currency"]},
+                   {"X-Algolia-API-Key": "4bd8f6215d0cc52b26430765769e65a0",
+                    "X-Algolia-Application-Id": "CSEKHVMS53",
+                    "Referer": "https://www.welcometothejungle.com/"})
+    for h in d.get("hits", []):
+        org = h.get("organization") or {}
+        offices = [o for o in (h.get("offices") or []) if isinstance(o, dict)]
+        loc = "; ".join(dict.fromkeys(
+            ", ".join(filter(None, [o.get("city"), o.get("country_code")])) for o in offices))
+        rem = h.get("remote")
+        yield {"company": org.get("name"), "title": h.get("name"),
+               "url": f"https://www.welcometothejungle.com/en/companies/{org.get('slug')}/jobs/{h.get('slug')}",
+               "location": loc, "workplace": WTTJ_REMOTE.get(rem),
+               "remote": True if rem == "fulltime" else (False if rem == "no" else None),
+               "salary": fmt_range(h.get("salary_yearly_minimum"), h.get("salary_maximum"),
+                                   (h.get("salary_currency") or "").upper()),
+               "posted": h.get("published_at_date"),
+               "jd_text": strip_html("\n\n".join(filter(None, [h.get("summary"), h.get("profile")])))}
+
+
+def agg_yc():
+    """Work at a Startup renders its design listing through Inertia: the page
+    props hold the jobs. Its Algolia index answers empty to the public key,
+    so this is the listing as a visitor sees it."""
+    seen = set()
+    for path in ("/jobs?role=design", "/jobs/l/designer"):
+        html = _get_text("https://www.workatastartup.com" + path, {"Accept": "text/html"})
+        m = re.search(r'data-page="([^"]+)"', html)
+        if not m:
+            continue
+        for j in json.loads(unescape(m.group(1))).get("props", {}).get("jobs", []):
+            if not j.get("id") or j["id"] in seen:
+                continue
+            seen.add(j["id"])
+            loc = j.get("location") or ""
+            yield {"company": j.get("companyName"), "title": j.get("title"),
+                   "url": f"https://www.workatastartup.com/jobs/{j['id']}", "location": loc,
+                   "remote": bool(re.search(r"remote", loc, re.I)) or None,
+                   "salary": j.get("salary") or None, "employment_type": j.get("jobType") or None}
+
+
+def agg_eures():
+    """The EU's own portal, Portugal only, through the search API the portal
+    calls. Postings are mostly Portuguese, which the criteria accept."""
+    seen = set()
+    for kw in ("product designer", "ux designer", "ui designer", "design"):
+        for page in range(1, 11):
+            d = _post_json("https://europa.eu/eures/api/jv-searchengine/public/jv-search/search?lang=en",
+                           {"resultsPerPage": 50, "page": page, "sortSearch": "BEST_MATCH",
+                            "keywords": [{"keyword": kw, "specificSearchCode": "EVERYWHERE"}],
+                            "publicationPeriod": None, "occupationUris": [], "skillUris": [],
+                            "requiredExperienceCodes": [], "positionScheduleCodes": [],
+                            "sectorCodes": [], "educationAndQualificationLevelCodes": [],
+                            "positionOfferingCodes": [], "locationCodes": ["pt"],
+                            "euresFlagCodes": [], "otherBenefitsCodes": [], "requiredLanguages": [],
+                            "minNumberPost": None, "sessionId": "radar"},
+                           {"Referer": "https://europa.eu/eures/portal/jv-se/search"})
+            jvs = d.get("jvs") or []
+            for j in jvs:
+                if not j.get("id") or j["id"] in seen:
+                    continue
+                seen.add(j["id"])
+                ts = lambda k: (datetime.fromtimestamp(j[k] / 1000, timezone.utc).isoformat()
+                                if j.get(k) else None)
+                yield {"company": (j.get("employer") or {}).get("name") or "",
+                       "title": j.get("title"),
+                       "url": f"https://europa.eu/eures/portal/jv-se/jv-details/{j['id']}?lang=en",
+                       "location": "Portugal", "posted": ts("creationDate"),
+                       "updated": ts("lastModificationDate"),
+                       "jd_text": strip_html(j.get("description"))}
+            if len(jvs) < 50:
+                break
+
+
+AGGREGATORS.update({"superjobs": agg_superjobs, "euremotejobs": agg_euremotejobs,
+                    "jobspresso": agg_jobspresso, "justremote": agg_justremote,
+                    "wellfound": agg_wellfound, "builtin": agg_builtin,
+                    "dribbble": agg_dribbble, "nodesk": agg_nodesk, "wttj": agg_wttj,
+                    "yc": agg_yc, "eures": agg_eures})
+
+
 SKIP = set()          # sources deliberately not scraped this run
 
 

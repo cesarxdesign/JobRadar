@@ -36,7 +36,53 @@ def api_url(u):
         # The board API does, so fetch the board and match on the job id.
         return (f"https://api.ashbyhq.com/posting-api/job-board/{m.group(1)}"
                 f"?includeCompensation=true#{m.group(2)}"), "ashby"
+    m = re.search(r"welcometothejungle\.com/[a-z]{2}/companies/([^/]+)/jobs/([^/?#]+)", u or "")
+    if m:
+        return (f"https://api.welcometothejungle.com/api/v1/organizations/{m.group(1)}/jobs/{m.group(2)}",
+                "wttj")
+    m = re.search(r"workatastartup\.com/jobs/(\d+)", u or "")
+    if m:
+        # Inertia page: the posting is JSON in data-page, the HTML is a shell.
+        return f"https://www.workatastartup.com/jobs/{m.group(1)}", "yc"
+    m = re.search(r"europa\.eu/eures/portal/jv-se/jv-details/([^/?#]+)", u or "")
+    if m:
+        # The portal is a JS shell; this is the call it makes for the posting.
+        return (f"https://europa.eu/eures/api/jv-searchengine/public/jv/id/{m.group(1)}"
+                f"?requestLang=en&preferredLang=null"), "eures"
     return u, "html"
+
+
+def _yc_job(raw):
+    from html import unescape
+    m = re.search(r'data-page="([^"]+)"', raw)
+    if not m:
+        return {}
+    d = json.loads(unescape(m.group(1))).get("props", {})
+    j, co = d.get("job") or {}, d.get("company") or {}
+    return {"jd": P.strip_html("\n\n".join(filter(None, [j.get("descriptionHtml"),
+                                                          j.get("interviewProcessHtml")]))),
+            "location": j.get("location") or "", "employment_type": j.get("jobType"),
+            "company": co.get("name")}
+
+
+def _eures_job(raw):
+    d = json.loads(raw)
+    profiles = d.get("jvProfiles") or {}
+    pref = d.get("preferredLanguage")
+    prof = profiles.get(pref) or next(iter(profiles.values()), {}) or {}
+    return {"jd": P.strip_html(prof.get("description") or ""),
+            "company": ((prof.get("employer") or {}).get("name") or None)}
+
+
+def _wttj_job(raw):
+    j = json.loads(raw).get("job") or {}
+    offices = [o for o in (j.get("offices") or [j.get("office")]) if isinstance(o, dict)]
+    return {"jd": P.strip_html("\n\n".join(filter(None, [j.get("description"), j.get("profile"),
+                                                          j.get("recruitment_process")]))),
+            "location": "; ".join(dict.fromkeys(
+                ", ".join(filter(None, [o.get("city"), o.get("country_code")])) for o in offices)),
+            "workplace": P.WTTJ_REMOTE.get(j.get("remote")),
+            "company": (j.get("organization") or {}).get("name")}
 
 
 def _ashby(api):
@@ -74,9 +120,15 @@ def fetch_posting(url):
                         "department": j.get("department") or j.get("team"),
                         "company": d.get("name")}
         return {}
-    req = urllib.request.Request(api, headers=P.UA)
+    req = urllib.request.Request(api, headers={**P.UA, "Accept": "text/html,application/json"})
     with urllib.request.urlopen(req, timeout=30) as r:
         raw = r.read().decode("utf-8", "replace")
+    if kind == "wttj":
+        return _wttj_job(raw)
+    if kind == "yc":
+        return _yc_job(raw)
+    if kind == "eures":
+        return _eures_job(raw)
     if kind == "gh":
         j = json.loads(raw)
         locs = [(j.get("location") or {}).get("name")]
@@ -117,9 +169,11 @@ def fetch_original(url):
     api, kind = api_url(url)
     if kind == "ashby":
         return _ashby(api)
-    req = urllib.request.Request(api, headers=P.UA)
+    req = urllib.request.Request(api, headers={**P.UA, "Accept": "text/html,application/json"})
     with urllib.request.urlopen(req, timeout=30) as r:
         raw = r.read().decode("utf-8", "replace")
+    if kind in ("wttj", "yc", "eures"):
+        return {"wttj": _wttj_job, "yc": _yc_job, "eures": _eures_job}[kind](raw).get("jd", "")
     if kind == "gh":
         return P.strip_html(json.loads(raw).get("content") or "")
     if kind == "sr":

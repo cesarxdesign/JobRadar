@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pool as P, read, criteria
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-HOME = os.path.expanduser("~/Claude/radar")
+HOME = os.path.expanduser("~/Claude/JobRadar/current/data")
 
 
 def load_applied():

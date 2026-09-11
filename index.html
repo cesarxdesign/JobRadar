@@ -299,10 +299,13 @@ function fmtJD(t){
 let jdReq=0;
 function loadJD(id){
   const n=++jdReq, el=$("jd"); if(!el) return;
+  // Lane roles ship their description inside results.json, so the board
+  // works from a static host. Cuts and ghosts still ask the local server.
+  if(DATA.jd&&DATA.jd[id]){el.innerHTML=fmtJD(DATA.jd[id]);return;}
   fetch("/api/jd/"+id).then(r=>r.text()).then(t=>{
     if(n!==jdReq||!$("jd")) return;
     $("jd").innerHTML=t.trim()?fmtJD(t):'<span class="none">no description on file for this posting</span>';
-  }).catch(()=>{if($("jd"))$("jd").innerHTML='<span class="none">description needs the local server</span>';});
+  }).catch(()=>{if($("jd"))$("jd").innerHTML='<span class="none">no description on file for this posting</span>';});
 }
 function fact(k,v){return '<div class="fact"><div class="fk">'+k+'</div><div class="fv">'+(v||"—")+'</div></div>';}
 // What the judge extracted from the posting. The pool's own remote/salary

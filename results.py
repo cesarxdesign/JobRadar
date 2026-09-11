@@ -19,11 +19,12 @@ ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
 VERDICTS_FILE = ROOT / "data" / "verdicts.json"
 RESULTS_FILE = ROOT / "data" / "results.json"
+JD_FILE = ROOT / "data" / "jd.json"                   # descriptions, keyed by id
 HINTS_FILE = ROOT / "data" / "applied_hints.json"     # local only, from match.py
 SHIPPED_FILE = ROOT / "data" / "shipped.json"         # every id ever put on the board
 
 
-def build(pool_doc, verdicts_doc, hints=None):
+def build(pool_doc, verdicts_doc, hints=None, jd=None):
     hints = hints or {}
     verdicts = verdicts_doc.get("jobs", {})
     roles, lanes, cut, title_cuts, unjudged = [], {k: [] for k in LANES}, [], 0, 0
@@ -46,7 +47,13 @@ def build(pool_doc, verdicts_doc, hints=None):
             (cut if v["cut"] else lanes[v["lane"]]).append(rec["id"])
     # The board fetches this file. 47,000 title cuts would make it 25MB for
     # rows no lane shows; they stay in verdicts.json with their reasons.
+    # The description of every lane role rides along, so a board served as
+    # static files (GitHub Pages) can show it. Cuts keep needing the local
+    # server: 2,600 of them would triple the file for rows no tab lists.
+    jd = jd or {}
+    lane_ids = [i for lane in lanes.values() for i in lane]
     return {
+        "jd": {i: jd[i][:14000] for i in lane_ids if jd.get(i)},
         "generated_at": pool_doc.get("generated_at"),
         "run_id": pool_doc.get("run_id"),
         "criteria": verdicts_doc.get("criteria"),
@@ -77,7 +84,8 @@ def remember_shipped(built):
 def main():
     built = build(json.loads(POOL_FILE.read_text()),
                   json.loads(VERDICTS_FILE.read_text()),
-                  json.loads(HINTS_FILE.read_text()) if HINTS_FILE.exists() else {})
+                  json.loads(HINTS_FILE.read_text()) if HINTS_FILE.exists() else {},
+                  json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {})
     fresh = remember_shipped(built)
     RESULTS_FILE.write_text(json.dumps(built, indent=1, ensure_ascii=False))
     print(f"wrote {RESULTS_FILE} - {built['counts']}")

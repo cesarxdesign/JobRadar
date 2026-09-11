@@ -26,7 +26,10 @@ import criteria
 # of these MUST be resolved to the original before L2 reads it. A company
 # board is already the original and needs no resolving.
 AGGREGATORS = {"designjobsworld", "himalayas", "jobicy", "remoteok", "remotive",
-               "arbeitnow", "landingjobs", "weworkremotely", "workingnomads"}
+               "arbeitnow", "landingjobs", "weworkremotely", "workingnomads",
+               # from the LinkedIn sweep, 2026-09-11
+               "superjobs", "euremotejobs", "jobspresso", "justremote", "wellfound",
+               "builtin", "dribbble", "nodesk", "wttj", "yc", "eures"}
 THIN = 1200
 
 

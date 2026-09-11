@@ -6,9 +6,11 @@
 #   CLAUDE_CODE_OAUTH_TOKEN  from `claude setup-token` on the Mac. The judge
 #                            runs the same `claude -p` it runs locally.
 name: nightly
+# No night run yet (Cesar, 2026-09-11): manual dispatch only until he says.
+# To re-arm, put the schedule back:
+#   schedule:
+#     - cron: "0 22 * * *"
 on:
-  schedule:
-    - cron: "0 22 * * *"
   workflow_dispatch:
 concurrency:
   group: nightly
