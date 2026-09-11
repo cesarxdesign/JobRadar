@@ -108,6 +108,9 @@ const wkey = r => (r.company + "|" + r.title).toLowerCase();
 // Routing is absent until the one RadarRouting file on the planet is dropped
 // here. Nothing about it is stored in this browser.
 let RR = null, RRH = null, STORED = null;
+// The review batch and the history export are tools for the local server.
+// On the public URL nobody gets them - not the buttons, not the batch file.
+const LOCAL = ["localhost","127.0.0.1"].includes(location.hostname);
 const $ = id => document.getElementById(id);
 const esc = s => (s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
@@ -394,7 +397,7 @@ async function adopt(h){
   d.favorites=Array.isArray(d.favorites)?d.favorites:[];
   RRH=h; RR=d;
   try{await idb("readwrite",s=>s.put(h,"h"));}catch(e){}
-  rrUI(true); render(); $("export").hidden=false;
+  rrUI(true); render(); $("export").hidden=!LOCAL;
 }
 function idb(mode,fn){return new Promise((res,rej)=>{const r=indexedDB.open("radar2-rr",1);
   r.onupgradeneeded=()=>r.result.createObjectStore("h");r.onerror=()=>rej(r.error);
@@ -469,7 +472,7 @@ $("export").onclick=async()=>{
   finally{b.disabled=false;setTimeout(()=>{b.className="route";b.textContent="⇱ Export history";},6000);}
 };
 // The batch and its marks live beside results.json, drawn by batch.py.
-Promise.all([fetch("data/batch.json?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+if(LOCAL) Promise.all([fetch("data/batch.json?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
              fetch("data/marks.json?t="+Date.now()).then(r=>r.ok?r.json():[]).catch(()=>[])])
   .then(([b,m])=>{
     if(!b||!b.roles||!b.roles.length) return;
