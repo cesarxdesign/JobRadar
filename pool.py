@@ -1190,11 +1190,45 @@ def agg_eures():
                 break
 
 
+def agg_salt():
+    """Salt, the recruitment agency (welovesalt.com): server-rendered cards,
+    six a page, keyword search on `k`. Found from a LinkedIn lead, one of
+    their recruiters hiring a Lead Product Designer, 2026-09-11."""
+    seen = set()
+    for page in range(1, 40):
+        try:
+            html = get_text("https://welovesalt.com/jobs" + (f"/page/{page}" if page > 1 else "") + "?k=design")
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                break                  # WordPress: the page past the last one
+            raise
+        new = 0
+        for card in html.split('<li class="job-item">')[1:]:      # nested <li>s inside
+            a = re.search(r'job-item__title">\s*<a href="([^"]+)">(.*?)</a>', card, re.S)
+            if not a or a.group(1) in seen:
+                continue
+            seen.add(a.group(1))
+            new += 1
+            def pill(icon):
+                m = re.search(r'highlights__item-icon--' + icon + r'"></i>\s*<span>(.*?)</span>', card, re.S)
+                return re.sub(r"\s+", " ", strip_html(m.group(1), 200)).strip() if m else None
+            details = [strip_html(x, 60).strip() for x in re.findall(r'job-item__detail">(.*?)</li>', card, re.S)]
+            wp = next((d for d in details if re.search(r"remote|hybrid|on-?site|office", d, re.I)), None)
+            loc = re.sub(r"\s*,\s*", ", ", pill("location") or "")
+            yield {"company": "Salt (agency)", "title": strip_html(a.group(2), 200).strip(),
+                   "url": a.group(1), "location": loc, "workplace": wp,
+                   "remote": bool(wp and re.search(r"remote", wp, re.I)) or (None if wp else (bool(re.search(r"remote", loc, re.I)) or None)),
+                   "salary": pill("money"), "department": pill("star"),
+                   "employment_type": next((d for d in details if d != wp), None)}
+        if not new:
+            break
+
+
 AGGREGATORS.update({"superjobs": agg_superjobs, "euremotejobs": agg_euremotejobs,
                     "jobspresso": agg_jobspresso, "justremote": agg_justremote,
                     "wellfound": agg_wellfound, "builtin": agg_builtin,
                     "dribbble": agg_dribbble, "nodesk": agg_nodesk, "wttj": agg_wttj,
-                    "yc": agg_yc, "eures": agg_eures})
+                    "yc": agg_yc, "eures": agg_eures, "salt": agg_salt})
 
 
 SKIP = set()          # sources deliberately not scraped this run

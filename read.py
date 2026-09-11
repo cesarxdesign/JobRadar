@@ -29,7 +29,7 @@ AGGREGATORS = {"designjobsworld", "himalayas", "jobicy", "remoteok", "remotive",
                "arbeitnow", "landingjobs", "weworkremotely", "workingnomads",
                # from the LinkedIn sweep, 2026-09-11
                "superjobs", "euremotejobs", "jobspresso", "justremote", "wellfound",
-               "builtin", "dribbble", "nodesk", "wttj", "yc", "eures"}
+               "builtin", "dribbble", "nodesk", "wttj", "yc", "eures", "salt"}
 THIN = 1200
 
 

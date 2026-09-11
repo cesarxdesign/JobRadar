@@ -312460,5 +312460,488 @@
   },
   "lane": "unsure",
   "criteria_version": "2026-09-03.1"
+ },
+ "c44eb49fbfc71710": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Location stated as United States with no remote option mentioned.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Bankrate (Red Ventures)",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "c059f5d2632f93dd": {
+  "language_of_the_posting": "english",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "unclear",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Job is onsite in Oakland, California; not in Portugal and no remote arrangement stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior Product Design Manager",
+   "company": "Fivetran",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 201-252k",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "english"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "cda9079da8ac822a": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "No job description provided; role title suggests creative/graphic design rather than product design.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted",
+   "role_verdict"
+  ],
+  "fields": {
+   "role": "Associate Creative Designer",
+   "company": "Workato",
+   "seniority": "junior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "ebaa03d65f2bbeca": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote is limited to Canada; Portugal is outside scope.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Mercor",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "up to $125/hr",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "1fcea6c327eca016": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role requiring sensible distance from London; Portugal does not qualify.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Mid/Senior Product Designer",
+   "company": "Salt (agency)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£80,000.00 per annum",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "a84d761c1f2cf285": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is a good fit (Head of Product Design) but 5 days onsite in London makes it impossible from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Head of Product Design",
+   "company": "Series B AI and physical security startup",
+   "seniority": "head",
+   "remote": "onsite",
+   "onsite_days": 5,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£120,000 - £130,000 per annum",
+   "years_xp": 7,
+   "reports_to": "CEO",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "a75e62a6b1db0d34": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is graphic design/motion/video, not product design; location is Cape Town, hybrid onsite required.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Multimedia Designer",
+   "company": "Salt (agency) - hiring for unnamed client",
+   "seniority": "junior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "South Africa"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "3ab9ee767e426f27": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role in London with 3 days/week onsite requirement; Cesar works from home in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Fintech business (unnamed, hiring via Salt)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£80,000-£95,000 + 15% bonus",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "d13d275f214f115a": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role in London, UK with no remote option for non-UK residents; posting explicitly states 'Applicants must be UK residents. No visa sponsorship or options are available for this role.'",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Service Designer (Interim)",
+   "company": "Local Government Authority (via Salt recruitment)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£542.25 per day",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "47043145aca626fd": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Strong design leadership role, but remote preference for London-based candidates creates ambiguity on Portugal eligibility.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Head of Product Design (UI Leaning)",
+   "company": "Boutique design and development studio (fintech-focused)",
+   "seniority": "head",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "£110,000 - £120,000 per annum",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "2808acdc2b4f5077": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role focuses on packaging and print design; onsite in Johannesburg, South Africa.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Salt (agency placement)",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "South Africa"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "c1b75cce6c7c7907": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role in London, United Kingdom with no remote option for Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Salt",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£70,000.00 per annum",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "70c9bea3ae149656": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in London, UK; not remote, and not in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Financial services organisation (client of Salt)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£70,000.00 per annum",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "af26495d8dd77c47": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "On-site role in Abu Dhabi, 5 days per week required; Cesar works from home in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Elile (via Salt recruitment agency)",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": 5,
+   "countries": [
+    "United Arab Emirates"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "a8308abc572d1034": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role requiring 2 days/month onsite in UK hubs; not based in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Content Designer",
+   "company": "UK bank (major, business and commercial banking team)",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£40,000–£45,000 per annum",
+   "years_xp": 1,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "12784cc546d865b8": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "Remote stated as UK-only; no clear indication Portugal is in scope for this role.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "Salt (recruiting for a fast-growing technology business in defence/military)",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£110,000.00 per annum + 15% bonus + equity",
+   "years_xp": null,
+   "reports_to": "VP of Product",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
  }
 }
