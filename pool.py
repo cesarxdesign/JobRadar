@@ -974,7 +974,11 @@ def month_day_to_date(text):
         d = datetime.strptime(f"{m.group(1)} {m.group(2)}", "%B %d")
     except ValueError:
         return None
-    return f"{datetime.now(timezone.utc).year}-{d.month:02d}-{d.day:02d}"
+    now = datetime.now(timezone.utc)
+    # Current year (Cesar), except a month later than today has not happened
+    # yet - "October 8" seen in September is last October, not a future date.
+    year = now.year - 1 if (d.month, d.day) > (now.month, now.day) else now.year
+    return f"{year}-{d.month:02d}-{d.day:02d}"
 
 
 def agg_jobspresso():
