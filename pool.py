@@ -1378,6 +1378,30 @@ def get_text_charset(url):
     return raw.decode(enc, "replace")
 
 
+
+def uiux_posted(url):
+    """The exact datePosted off the job page. The listing card's age is
+    missing on plenty of rows, and a row with no date inherits first_seen -
+    the board then says 0d beside a posting its own page calls 25d old."""
+    try:
+        html = get_text(url)
+    except Exception:
+        return None
+    for m in re.finditer(r'application/ld\+json[^>]*>(.*?)</script>', html, re.S):
+        try:
+            d = json.loads(m.group(1))
+        except Exception:
+            continue
+        for o in (d if isinstance(d, list) else [d]):
+            if isinstance(o, dict) and o.get("@type") == "JobPosting" and o.get("datePosted"):
+                return str(o["datePosted"])[:10]
+    m = re.search(r'POSTED</span><span[^>]*>(\d+)(d|h|mo|y)<', html)
+    if m:
+        days = {"h": 0, "d": 1, "mo": 30, "y": 365}[m.group(2)] * int(m.group(1))
+        return (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+    return None
+
+
 UIUX_SCOPES = ("remote-anywhere", "remote-europe", "remote-emea", "portugal")
 
 
@@ -1405,17 +1429,10 @@ def agg_uiuxjobsboard():
                 tags = [strip_html(x, 60).strip() for x in
                         re.findall(r'href="/design-jobs/[^"]+"[^>]*>(.*?)</a>', card, re.S)]
                 et = re.search(r'uppercase opacity-80 mr-3">(.*?)</span>', card, re.S)
-                # The card prints an age, not a date ("12d", "3mo"). Without it
-                # the row inherits first_seen and the board says 0d on a posting
-                # that is three weeks old - which is what the source page shows
-                # a person, so it has to come across.
-                age = re.search(r'<div class="text-sm">(\d+)\s*(d|mo|h|y)</div>', card)
-                posted = None
-                if age:
-                    n, unit = int(age.group(1)), age.group(2)
-                    days = {"h": 0, "d": 1, "mo": 30, "y": 365}[unit] * n
-                    posted = (datetime.now(timezone.utc)
-                              - timedelta(days=days)).strftime("%Y-%m-%d")
+                # The card prints an age ("12d"), and not on every card. The
+                # job page prints the real date in its JobPosting, which is
+                # what a person reading the posting sees - so read the page.
+                posted = uiux_posted("https://uiuxjobsboard.com" + a.group(1))
                 yield {"company": strip_html(co.group(1), 120).strip() if co else None,
                        "title": strip_html(ti.group(1), 200).strip() if ti else None,
                        "url": "https://uiuxjobsboard.com" + a.group(1),
