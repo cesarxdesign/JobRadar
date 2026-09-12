@@ -21,6 +21,10 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .bucket{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;margin:14px 0 6px 46px}
 .route.drop{border-color:var(--acc);color:var(--acc);border-style:dashed}
 .route[disabled]{opacity:.5;cursor:wait}
+.filters{display:flex;gap:8px;align-items:center;padding:10px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.filters select{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font-size:12.5px}
+.filters .clear{background:none;border:0;color:var(--dim);font-size:12.5px;cursor:pointer;text-decoration:underline}
+.filters .n{color:var(--dim);font-size:12.5px;margin-left:auto}
 .tabs{display:flex;gap:2px;padding:10px 20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .tab{background:none;border:0;border-bottom:2px solid transparent;color:var(--dim);padding:8px 12px;font-size:13px;cursor:pointer}
 .tab.on{color:var(--fg);border-bottom-color:var(--acc)}
@@ -87,6 +91,27 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
   <button class="tab bt" data-lane="pass" hidden>Passed<span class="n" id="c-pass"></span></button>
   <button class="tab bt" data-lane="cut" hidden>Cut<span class="n" id="c-cut"></span></button>
+</div>
+
+
+<div class="filters" id="filters">
+  <select id="f-date">
+    <option value="">any date</option>
+    <option value="7">posted ≤ 7 days</option>
+    <option value="14">posted ≤ 14 days</option>
+    <option value="30">posted ≤ 30 days</option>
+    <option value="90">posted ≤ 90 days</option>
+    <option value="dated">has a date</option>
+  </select>
+  <select id="f-place"><option value="">anywhere</option></select>
+  <select id="f-sen"><option value="">any seniority</option></select>
+  <select id="f-src"><option value="">any source</option></select>
+  <select id="f-sal">
+    <option value="">salary: any</option>
+    <option value="y">has a salary</option>
+  </select>
+  <button class="clear" id="f-clear">clear</button>
+  <span class="n" id="f-count"></span>
 </div>
 
 <div class="split">
@@ -198,9 +223,64 @@ function haystack(r){
           (f.countries||[]).join(" "),v.role,v.place,(v.why||[]).join(" "),v.reason]
          .filter(Boolean).join(" ").toLowerCase();
 }
+// The filter bar. Every value is read off the role the board already has -
+// no new data, no server. A filter narrows what a lane shows; it never moves
+// a role between lanes, because the lane is the judge's verdict, not a view.
+const F={date:"",place:"",sen:"",src:"",sal:""};
+
+function placeOf(r){
+  const t=((r.location||"")+" "+(f(r).remote||"")+" "+(r.workplace||"")).toLowerCase();
+  if(/portugal|lisbon|lisboa|porto/.test(t)) return "Portugal";
+  if(/worldwide|anywhere|global/.test(t)) return "Worldwide";
+  if(/emea|europe|eu\b|cet/.test(t)) return "Europe / EMEA";
+  if(/united states|usa|u\.s\.|canada|americas|latam/.test(t)) return "Americas";
+  if(/united kingdom|uk\b|london/.test(t)) return "UK";
+  return "Other";
+}
+
 function matches(r){
-  if(!Q) return true;
-  return Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w));
+  if(Q && !Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w))) return false;
+  if(F.date){
+    const d=days(r);
+    if(F.date==="dated"){ if(d===null) return false; }
+    else if(d===null || d>+F.date) return false;
+  }
+  if(F.place && placeOf(r)!==F.place) return false;
+  if(F.sen && (f(r).seniority||"")!==F.sen) return false;
+  if(F.src && String(r.source||"").split("/")[0]!==F.src) return false;
+  if(F.sal==="y" && !f(r).salary) return false;
+  return true;
+}
+
+// The dropdowns are built from what is actually in this board's data, so an
+// option never offers a value that would return nothing.
+function fillFilters(){
+  if(!DATA) return;
+  const rows=DATA.roles.filter(r=>r.active);
+  const opts=(sel,vals,keep)=>{
+    const el=$(sel); if(!el) return;
+    const cur=el.value;
+    el.innerHTML='<option value="">'+keep+'</option>'
+      +vals.map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');
+    el.value=cur;
+  };
+  const uniq=fn=>[...new Set(rows.map(fn).filter(Boolean))].sort();
+  opts("f-place",["Portugal","Worldwide","Europe / EMEA","UK","Americas","Other"]
+        .filter(p=>rows.some(r=>placeOf(r)===p)),"anywhere");
+  opts("f-sen",uniq(r=>f(r).seniority),"any seniority");
+  opts("f-src",uniq(r=>String(r.source||"").split("/")[0]),"any source");
+}
+
+function wireFilters(){
+  const map={"f-date":"date","f-place":"place","f-sen":"sen","f-src":"src","f-sal":"sal"};
+  for(const id in map){
+    const el=$(id); if(!el) continue;
+    el.onchange=()=>{F[map[id]]=el.value;render();};
+  }
+  const c=$("f-clear");
+  if(c) c.onclick=()=>{for(const k in F)F[k]="";
+    for(const id in map){const el=$(id); if(el) el.value="";}
+    render();};
 }
 
 function pool(){
@@ -243,6 +323,11 @@ function render(){
   counts();
   const rows=pool();
   $("list").innerHTML = rows.length ? "" : '<div class="empty">Nothing here.</div>';
+  const fc=$("f-count");
+  if(fc){
+    const all=(DATA.lanes[LANE]||[]).length;
+    fc.textContent = (Q||Object.values(F).some(Boolean)) && all ? rows.length+" of "+all : "";
+  }
   let section=null;
   for(const r of rows){
     const head=INBATCH?null:(LANE==="favorites"?stateOf(r):null);
@@ -447,10 +532,12 @@ function load(){
     DATA=d;
     $("stamp").textContent=(d.counts.active||0)+" active · "+(d.counts.title_cuts||0)+" cut on title · "
       +(d.counts.unjudged?d.counts.unjudged+" not yet judged · ":"")+"updated "+(d.generated_at||"").replace("T"," ").slice(0,16);
+    fillFilters();
     render();
   }).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";})
   .finally(()=>{b.disabled=false;});
 }
+wireFilters();
 $("refresh").onclick=load;
 $("q").oninput=e=>{Q=e.target.value.trim().toLowerCase();SEL=null;render();};
 $("batch").onclick=()=>INBATCH?completeBatch():setBatch(true);

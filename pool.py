@@ -100,6 +100,30 @@ def copy_key(company, title):
             norm(re.sub(r"\([^)]*\)", " ", title or "")))
 
 
+def iso_date(v):
+    """Every adapter's date, one shape. Boards print whatever they like -
+    "2026-09-08T13:55:06Z", "Fri, 28 Aug 2026 13:26:53 +0000", "10-9-2026",
+    "September 2, 2026" - and four shapes in one field means the board cannot
+    sort or filter on it. Normalised here, at ingest, so no adapter has to
+    remember and nothing downstream has to parse.
+
+    Unparseable text is kept as-is rather than dropped: a date we cannot read
+    is still something the page said."""
+    v = (v or "").strip()
+    if not v:
+        return None
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", v)
+    if m:
+        return v[:10]
+    for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%d-%m-%Y", "%B %d, %Y", "%d %B %Y",
+                "%Y/%m/%d", "%m/%d/%Y", "%b %d, %Y"):
+        try:
+            return datetime.strptime(v, fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+    return v
+
+
 def rank(source):
     """A company board is the original; an aggregator republishes it. When
     both report the same posting the board's fields win and the aggregator
@@ -1613,6 +1637,10 @@ def update(previous, found, run_id, stamp):
     seen, minted, merged = set(), 0, 0
     by_copy = {}                              # this run's board postings, by company+title
     for rec in found:
+        # One choke point: every adapter's date lands here on its way in.
+        for f in ("posted", "updated"):
+            if rec.get(f) is not None:
+                rec[f] = iso_date(str(rec[f]))
         k = posting_key(rec.get("url"))
         rid = None
         if rank(rec["source"]) == 1 and not (k or "").startswith(ATS_KEYS):
