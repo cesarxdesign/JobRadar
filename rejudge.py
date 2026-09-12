@@ -4,10 +4,11 @@ import json, os, sys, threading
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import criteria as c, pool as P, read
+import contracts
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 d = json.load(open(f"{ROOT}/data/review.json"))
-pj = {x["id"]: x for x in json.load(open(f"{ROOT}/data/pool.json"))["jobs"]}
+pj = {x["id"]: x for x in contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]}
 ident = {}
 for x in pj.values():
     ident.setdefault(P.identity(x["company"], x["title"]), x)

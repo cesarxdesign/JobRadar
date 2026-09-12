@@ -12,6 +12,7 @@ regress.py) and its roles rejoin the general population.
 import json, os, random, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import criteria as c, judge, pool as P, read
+import contracts
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BATCH = f"{ROOT}/data/batch.json"
@@ -43,7 +44,7 @@ def already_seen():
 
 
 def draw():
-    pool = {j["id"]: j for j in json.load(open(f"{ROOT}/data/pool.json"))["jobs"]}
+    pool = {j["id"]: j for j in contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]}
     vdoc = json.load(open(f"{ROOT}/data/verdicts.json"))
     jd = json.load(open(f"{ROOT}/data/jd.json"))
     seen, n_batched, n_shipped, n_decided = already_seen()

@@ -12,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pool as P, read, criteria
+import contracts
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HOME = os.path.expanduser("~/Claude/JobRadar/current/data")
@@ -19,7 +20,7 @@ HOME = os.path.expanduser("~/Claude/JobRadar/current/data")
 
 def load_applied():
     rr = json.load(open(os.path.join(HOME, "history.json")))
-    pj = json.load(open(f"{ROOT}/data/pool.json"))["jobs"]
+    pj = contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]
     jd = json.load(open(f"{ROOT}/data/jd.json"))
     by = {}
     for r in pj:

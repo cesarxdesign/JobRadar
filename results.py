@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 
 from contracts import DEFAULT_VERDICT, LANES
+import contracts
 
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
@@ -82,7 +83,7 @@ def remember_shipped(built):
 
 
 def main():
-    built = build(json.loads(POOL_FILE.read_text()),
+    built = build(contracts.load_pool(POOL_FILE),
                   json.loads(VERDICTS_FILE.read_text()),
                   json.loads(HINTS_FILE.read_text()) if HINTS_FILE.exists() else {},
                   json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {})

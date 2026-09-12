@@ -24,6 +24,7 @@ import xml.etree.ElementTree as ET
 from html import unescape
 from datetime import datetime, timezone
 from pathlib import Path
+import contracts
 
 # Bump whenever an adapter changes what it captures. pool.json records the
 # version it was scraped with, and the judge refuses to read data older than
@@ -1232,6 +1233,84 @@ AGGREGATORS.update({"superjobs": agg_superjobs, "euremotejobs": agg_euremotejobs
                     "yc": agg_yc, "eures": agg_eures, "salt": agg_salt})
 
 
+# ---------------------------------------------------------------- sweep 2026-09-12
+# Seventeen sources verified by hand before being written (SOURCE_SWEEP.md).
+# Two rules learned there, and they are why these adapters look the way they do:
+#
+#   1. An aggregator's own scope tag is not evidence. region, regionLabel,
+#      applicantLocationRequirements, a country badge - none of it renders as
+#      words a person reads, and all of it lies in the same direction: when a
+#      feed does not know the restriction it prints "Worldwide" rather than
+#      "unknown". tryremotely's said Worldwide on seven of eight roles that were
+#      US-only at the employer's ATS. So these adapters carry location,
+#      workplace and the description, and drop the derived tags. The judge reads
+#      the posting and works out where it is based, the way a person would.
+#
+#   2. A board that rewrites the description is useless to us even when its
+#      fields are good - the location usually lives in the body, and a 1,000
+#      character summary strips it out.
+
+
+def agg_remoteio():
+    """remote.io: JSON, 142 live design roles at time of writing, full
+    description in the payload. `region`/`regionLabel` are theirs, not the
+    posting's - dropped on purpose (see above). locationType renders on the
+    page as Location Type, so it stays."""
+    for page in range(1, 40):
+        d = get_json(f"https://remote.io/api/v2/jobs?category=design&limit=100&page={page}")
+        rows = d.get("data") or []
+        for j in rows:
+            locs = [l.get("name") for l in (j.get("locations") or []) if l.get("name")]
+            yield {"company": j.get("companyName") or j.get("displayName"),
+                   "title": j.get("jobTitle"),
+                   "url": j.get("jobUrl") or j.get("applicationUrl"),
+                   "apply_url": j.get("applicationUrl"),
+                   "location": ", ".join(locs) or j.get("location") or "",
+                   "workplace": j.get("locationType"),
+                   "remote": True if j.get("locationType") == "remote" else None,
+                   "salary": j.get("salaryRange"),
+                   "posted": j.get("publishedAt"), "updated": j.get("updatedAt"),
+                   "jd_text": strip_html(j.get("description"))}
+        pg = d.get("pagination") or {}
+        if not rows or page >= (pg.get("totalPages") or 1):
+            break
+
+
+WOODY_RE = re.compile(r"<item>(.*?)</item>", re.S)
+
+
+def agg_woodyjobs():
+    """woodyjobs.com: one RSS feed, the 100 newest across every category, with
+    the panel fields as their own elements (location, workmode, worktime,
+    seniority) and the whole description inline. Overlaps remote.io heavily -
+    that is fine, rank() keeps the board copy when both see a posting."""
+    def tag(chunk, name):
+        m = re.search(rf"<{name}>(.*?)</{name}>", chunk, re.S)
+        return strip_html(m.group(1), 300).strip() if m else None
+    for chunk in WOODY_RE.findall(get_text("https://www.woodyjobs.com/rss.xml")):
+        title = tag(chunk, "title")
+        if not title:
+            continue
+        # "<role> at <company>" is the feed's title format
+        role, _, company = title.rpartition(" at ")
+        wm = tag(chunk, "workmode")
+        yield {"company": (company or "").strip() or None,
+               "title": (role or title).strip(),
+               "url": tag(chunk, "link"),
+               "location": tag(chunk, "location") or "",
+               "workplace": wm,
+               "remote": bool(wm and re.search(r"remote", wm, re.I)) or None,
+               "employment_type": tag(chunk, "worktime"),
+               "department": tag(chunk, "category"),
+               "posted": tag(chunk, "pubDate"),
+               "jd_text": strip_html(re.search(r"<description>(.*?)</description>",
+                                               chunk, re.S).group(1))
+                          if "<description>" in chunk else None}
+
+
+AGGREGATORS.update({"remoteio": agg_remoteio, "woodyjobs": agg_woodyjobs})
+
+
 SKIP = set()          # sources deliberately not scraped this run
 
 
@@ -1410,7 +1489,7 @@ def main():
         print("ABORT - no reader for: " + ", ".join(gaps), file=sys.stderr)
         return 2
 
-    previous = json.loads(POOL_FILE.read_text())["jobs"] if POOL_FILE.exists() else []
+    previous = contracts.load_pool(POOL_FILE)["jobs"] if POOL_FILE.exists() else []
     stamp = now()
     run_id = stamp
     print(f"pool run {run_id} - {len(previous)} roles carried in", flush=True)
@@ -1449,10 +1528,10 @@ def main():
         print(f"  {carried} descriptions carried forward for roles not fetched this run",
               flush=True)
     tmp = POOL_FILE.with_suffix(".tmp")
-    tmp.write_text(json.dumps({"generated_at": stamp, "run_id": run_id,
-                               "adapter_version": ADAPTER_VERSION,
-                               "sources": {"ok": len(found), "failed": errors},
-                               "jobs": jobs}, indent=1, ensure_ascii=False))
+    tmp.write_text(contracts.pool_text({"generated_at": stamp, "run_id": run_id,
+                                        "adapter_version": ADAPTER_VERSION,
+                                        "sources": {"ok": len(found), "failed": errors}},
+                                       jobs))
     tmp.replace(POOL_FILE)                 # atomic - never a half-written pool
     tmpjd = JD_FILE.with_suffix(".tmp")
     tmpjd.write_text(json.dumps(jd, ensure_ascii=False))
