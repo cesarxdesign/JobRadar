@@ -53,6 +53,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .sect{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;margin:14px 0 6px 46px}
 .card .c{color:var(--dim);font-size:12.5px}
 .meta{display:flex;flex-wrap:wrap;gap:5px 7px;margin-top:7px;font-size:11px;color:var(--dimmer)}
+.days.approx{color:var(--dim);font-style:italic}
 .tag{border:1px solid var(--line);border-radius:20px;padding:2px 8px}
 .tag.y{border-color:var(--good);color:var(--good)}
 .tag.n{border-color:var(--warn);color:var(--warn)}
@@ -213,6 +214,19 @@ function days(r){
   const d=Date.parse(r.posted||r.first_seen||"");
   return isNaN(d)?null:Math.max(0,Math.floor((Date.now()-d)/86400000));
 }
+// Some boards print no date anywhere - not in the header, the side panel, the
+// body or the metadata. For those the age is measured from the day the radar
+// first saw the posting, which is a floor and not the truth: the posting is at
+// least this old. Shown as "≥12d" so it never reads as a real posting date.
+const dated=r=>!!r.posted;
+// "0d" on a role whose posting carries no date reads as a bug, and it is a
+// lie either way - we do not know the age, we only know when we first saw it.
+// Say so: "?" until a day has passed, then "≥3d", which is true.
+function ageLabel(r,d){
+  if(d===null) return "—";
+  if(dated(r)) return d===0?"today":d+"d";
+  return d===0?"?":"≥"+d+"d";
+}
 const byDays=(a,b)=>{const x=days(a),y=days(b);return (x===null)-(y===null)||x-y;};
 // Everything the board knows about a role, as one string to search. The lane
 // is untouched: a filtered role stays in its own column, the rest are hidden.
@@ -340,7 +354,11 @@ function render(){
     const el=document.createElement("div");
     el.className="card"+(SEL===r.id?" sel":"");
     const d=days(r), rt=routing(r.id);
-    el.innerHTML='<div class="days" title="days open">'+(d===null?"—":d+"d")+'</div>'
+    el.innerHTML='<div class="days'+(dated(r)?'':' approx')+'" title="'
+      +(dated(r)?'posted '+esc(r.posted)
+                :'the posting shows no date anywhere; first seen on radar '
+                 +esc(String(r.first_seen||"").slice(0,10))+', so it is at least this old')
+      +'">'+ageLabel(r,d)+'</div>'
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
