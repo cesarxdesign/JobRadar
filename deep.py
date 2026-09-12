@@ -14,6 +14,7 @@ import json, re, sys, threading, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import criteria as c, pool as P
+import contracts
 
 ROOT = Path(__file__).resolve().parent
 THIN = 1200          # under this many characters, go and get the real thing
@@ -199,7 +200,7 @@ def fetch_original(url):
 
 
 def survivors():
-    pool = json.load(open(ROOT / "data" / "pool.json"))["jobs"]
+    pool = contracts.load_pool(ROOT / "data" / "pool.json")["jobs"]
     HAS, EXC = re.compile(c.L1_MUST_HAVE, re.I), re.compile(c.L1_EXCLUDE, re.I)
     JR, LEAD = re.compile(c.L1_JUNIOR, re.I), re.compile(c.L1_NOT_LEADERSHIP, re.I)
     LD = re.compile(c.L1_LEADERSHIP, re.I)

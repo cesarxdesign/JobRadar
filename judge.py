@@ -144,7 +144,7 @@ def write(doc, jobs_verdicts):
 
 
 def main():
-    pool_doc = json.load(open(POOL_FILE))
+    pool_doc = contracts.load_pool(POOL_FILE)
     if pool_doc.get("adapter_version", 0) < P.ADAPTER_VERSION:
         print(f"ABORT - pool scraped with adapter version "
               f"{pool_doc.get('adapter_version', 0)}, code is at {P.ADAPTER_VERSION}. "

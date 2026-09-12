@@ -14,6 +14,7 @@ routing file snapshotted at the time.
 """
 import json, os, sys
 from datetime import datetime, timezone
+import contracts
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -32,7 +33,7 @@ def day(s):
 
 def build():
     rr = json.load(open(RR))
-    pool = {j["id"]: j for j in json.load(open(f"{ROOT}/data/pool.json"))["jobs"]}
+    pool = {j["id"]: j for j in contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]}
     verdicts = json.load(open(f"{ROOT}/data/verdicts.json"))["jobs"]
     jd = json.load(open(f"{ROOT}/data/jd.json"))
     favs = set(rr.get("favorites") or [])

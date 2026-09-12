@@ -10,6 +10,9 @@ not write to it. results derives, it does not decide. Swap the judge and
 nothing else changes shape.
 """
 
+import json
+import pathlib
+
 # ---------------------------------------------------------------- pool
 # What the scrape observes. Normalised at ingest so the judge and the board
 # never parse raw source text.
@@ -78,6 +81,40 @@ ROLE_VERDICTS = ("yes", "no", "unclear")
 PLACE_VERDICTS = ("remote", "pt_onsite", "no", "unclear")
 
 VERDICT_FIELDS = ["role", "place", "lane", "cut", "why", "judged"]
+
+
+# ---------------------------------------------------------------- on disk
+# The pool is written with the field names once, and each posting as an array
+# under them. Written as objects the 25 key names repeat on every row: 27MB of
+# the 80MB file was the literal strings "employment_type": and friends, and
+# indent=1 cost another 5MB in whitespace. One row per line keeps the git diff
+# readable - a changed posting is still a changed line. This is a
+# serialisation detail; nothing above load_pool() ever sees it.
+
+def load_pool(path):
+    """The pool as a dict of records, from either shape on disk."""
+    doc = json.loads(pathlib.Path(path).read_text())
+    if "rows" in doc:
+        fields = doc.pop("fields")
+        # A null in a row means the key was absent, not that it was set to
+        # None - rehydrating it would add jd_text: null to 62k rows and
+        # carry it all the way into the results the board downloads.
+        doc["jobs"] = [{k: v for k, v in zip(fields, row) if v is not None}
+                       for row in doc.pop("rows")]
+    return doc
+
+
+def pool_text(head, jobs):
+    """Serialise head + jobs to the row-array shape, one posting per line."""
+    fields = sorted({k for j in jobs for k in j})
+    out = [json.dumps({**head, "fields": fields}, ensure_ascii=False)[:-1]]
+    out.append(', "rows": [')
+    rows = [json.dumps([j.get(f) for f in fields], ensure_ascii=False,
+                       separators=(",", ":")) for j in jobs]
+    out.append(",\n".join(rows))
+    out.append("]}")
+    return "".join(out)
+
 
 # ---------------------------------------------------------------- lanes
 # Open     both axes say yes: a role for him, that he can do remotely.
