@@ -336395,5 +336395,1837 @@
   },
   "lane": "open",
   "criteria_version": "2026-09-03.1"
+ },
+ "917f08e87aa3d71c": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role requiring 2 days/week onsite in Nijmegen, Netherlands—not Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Trust In SODA",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "Netherlands"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "4709aaeac9df6fc4": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Position is onsite in Toronto, Canada; not remote and not in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Director, WMS Product Design and Engineering",
+   "company": "HelloFresh",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "1326c9a81e82d9ca": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "unclear",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is onsite in Aurora, United States; posting has been filled and no job description is provided.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted",
+   "role_verdict"
+  ],
+  "fields": {
+   "role": "Director, WMS Product Design/Development [OPERATIONS TECHNOLOGY]",
+   "company": "HelloFresh",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "192a58743e486d53": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "unclear",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Position is onsite in Warsaw, Poland; not remote or Portugal-based.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Director, Global WMS Software Engineering and Product Design",
+   "company": "HelloFresh",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "8791c869f7774725": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Product designer role is a fit, but no job description provided to assess location eligibility.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Sr. Product Designer, AI/BI",
+   "company": "Databricks",
+   "seniority": "senior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "22bb3696621cb1f3": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Position is onsite in Berlin, Germany; not remote and not in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Director UX Design",
+   "company": "HelloFresh",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "19d9b4819bcae738": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite role in Warsaw, Poland—not Portugal and no remote option stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UX Designer, Consumer",
+   "company": "HelloFresh",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "020c8121ac303180": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Position is onsite in Canada; not available from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Director UX, Growth",
+   "company": "HelloFresh",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "c9c097d4e536e735": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite role in Berlin, Germany—not remote and not in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "(Senior) Director UX, Operations",
+   "company": "HelloFresh",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "a7b2239fc8477260": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is SEO/e-commerce performance management, not design; requires 2 days/week onsite in Paris.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "GEO, SEO & UX Senior Manager",
+   "company": "Accor (Sofitel, MGallery, Emblems)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": "E-commerce Performance Director",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "01c475ae2845c29b": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite role in San Mateo, CA with no remote option stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Associate Product Designer, Early Career",
+   "company": "Roblox",
+   "seniority": "junior",
+   "remote": "onsite",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 140,450",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "f201908a10756360": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite role in San Mateo, CA with no remote option stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior Product Designer, Monetization",
+   "company": "Roblox",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 255,720–304,560",
+   "years_xp": 8,
+   "reports_to": "Senior Manager of Product Design, Ads & Brands",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "8c6354c390284f6a": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role is restricted to United States; Portugal is not included.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX / UI Designer",
+   "company": "ITGoals",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "b41c23b19d10b540": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Requires active Secret clearance; Portugal is not US jurisdiction.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "E-EFMP UI/UX Designer",
+   "company": "DecisionPoint Corporation",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "e0407a4fa2156ebb": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role is limited to United States; Portugal is not included.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Holiday Channel | My Holiday World",
+   "seniority": "junior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "e4930bfc23304e58": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to US; Allstate does not sponsor employment-based visas and role is US-based.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "Allstate",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 80,000-136,625",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "41d2564f73fbdcbd": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Fully remote role, but explicitly requires US or Canada residency.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Experience Strategy & UX Designer",
+   "company": "Qualified Digital",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 120,000 - 140,000",
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "2363486e0c8f459d": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "yes",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Design systems role with remote work available; Portugal is in Europe and remote is clearly stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer, Design Systems Consultant (AI-Fluent)",
+   "company": "Right Side Up",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-03.1"
+ },
+ "b99aa4bf3b7c8138": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to United States; Portugal is not eligible.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer, Digital Design",
+   "company": "Sand Cherry",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 75,000-85,000",
+   "years_xp": 2,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "21927a64b3602780": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Strong design role but location unclear - posting says 2 locations remote or hybrid without naming them",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UX/UI Designer (software)",
+   "company": "IBBX",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "81a5e33c247abe52": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "yes",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Lead UX Designer role in EMEA remote scope; design leadership aligns with his expertise.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lead UX Designer",
+   "company": "Fueled",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Europe",
+    "Middle East",
+    "Africa"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-03.1"
+ },
+ "caacb8ca453cf938": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to United States; Portugal is not included.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer (UX), HCI",
+   "company": "BJAK",
+   "seniority": "entry level",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "a1395af4688483b6": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "yes",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Remote UX Designer role that explicitly allows work from anywhere, matching his senior product design expertise.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Remote UX Designer",
+   "company": "FreeUp",
+   "seniority": "junior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-03.1"
+ },
+ "d3ae7b70984a88f6": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role requires 8 days/month onsite in CT/ET timezone offices; no Portugal eligibility stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior CX/UX Designer (AI Innovation for Tax & Accounting)",
+   "company": "Wolters Kluwer",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 8,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 85,600-149,400",
+   "years_xp": 2,
+   "reports_to": "Lead CX/UX Designer",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "98cf09e61adbe82a": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to US hiring only; Portugal is not included in scope.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UX Designer - AI",
+   "company": "MeridianLink",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 84,000-133,000 annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "a29e0accf3d27b33": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Hoboken, NJ with no mention of European or remote-Portugal eligibility.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Lead Specialist, UX Designer",
+   "company": "Pearson",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 150,000-175,000",
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "88b87b32d7bcc4c2": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "yes",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Senior UX Designer role with remote US hiring and explicit remote classification.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "yes",
+   "salary": "USD 48,000 - 168,000 annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-03.1"
+ },
+ "82f948ff50b23b9c": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Design role is legitimate, but location of the 2 onsite locations is not stated, making Portugal eligibility unclear.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UX/UI Designer",
+   "company": "Photon",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 57,000 - USD 201,000 annually",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "41344cb389a6d7bf": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to United States only; Portugal cannot access it.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Sr Designer - UX",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 33,000-118,000",
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "800bd03e09fd56d9": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote USA only; posting specifies 'Hiring Remotely in USA' with no indication of European/Portugal eligibility.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UX/UI Digital Product Designer",
+   "company": "Jupe",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": "Head of Product",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "a4bf4a8122b646b7": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role requires 2-3 days/week onsite in Austin, TX—not Portugal or remote.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lead UX Designer (Product Design)",
+   "company": "Rev",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "Head of Product",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "43b6bfcb277af387": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "The posting does not specify which locations are included in 'Remote or Hybrid' - it lists '2 Locations' without naming them, and the company is based in Washington, DC with no clear indication that Portugal is in scope.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid or remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 165,000-238,000 annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "d526ec4f73fc939f": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Strong design role, but locations unspecified and no remote Europe/Portugal language found.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "remote or hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 165,000-238,000 annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "c9ade3a8017dd7f6": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Strong design role but location unclear: posting says 'Remote or Hybrid' at 2 US locations without confirming remote includes Portugal",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "remote or hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "d6bdbe961ab52883": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "Location is '2 Locations' with no geographic detail; no clear statement that Portugal or Europe remote is included.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid or onsite",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "USD 165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "31345b6239a8a28a": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "Location states '2 Locations' and 'Remote or Hybrid' with no clarity on which locations or whether Portugal is included.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 165,000-238,000 annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "ae8b0a42c8537270": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Strong UX design role, but location ambiguous - 2 US locations listed with remote or hybrid, no clarity on which locations or if Portugal-remote is allowed.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 165K-238K",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "9b0e71a438b6cfd6": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "Design role fits; location unclear - 2 US locations listed, remote/hybrid offered, but no geographic scope stated for remote.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "remote or hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 165,000-238,000 annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "cde1aeba96438735": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote or hybrid, but tied to 2 US locations with no statement of Portugal or EU remote eligibility.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 165,000-238,000",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "36647f791024115e": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "unclear",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "Remote or hybrid role but no location specified—could require US presence or onsite days; no clarity on Portugal eligibility.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "remote or hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 165,000-238,000 annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "7c3b32d0031b0da9": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote or hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Job requires Public Trust clearance and is based in US federal government work; no remote-from-Portugal option stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "remote or hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 165k-238k",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "43d39d37f448803d": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote position is restricted to United States; Portugal is not included.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal UX Designer",
+   "company": "Cengage Group",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 102,000-132,000 annually",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "df9598cd72af7712": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role restricted to United States only; Portugal is not eligible.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer, Mobile",
+   "company": "Phreesia",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "EUR 135,000-150,000",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "3352b9cebdad2bb8": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is a good fit but posting explicitly restricts to United States or LATAM, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer",
+   "company": "Lifted, an Upwork Company",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "LATAM"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "79da3a2852e59d58": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "LATAM-only requirement explicitly excludes Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "MyVA Support (MYVAS)",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "LATAM"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "45af908518f3b592": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "yes",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "UX designer role, remote in United States with over half the team working remotely.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Salesforce User Experience Designer",
+   "company": "NeuraFlash (Part of Accenture)",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-03.1"
+ },
+ "3d4528fb5461ad13": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote role is USA-only; Portugal is not included in the scope.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - UX/UI Specialist",
+   "company": "Liberate Labs (posting is for Delineate, an MIT startup)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 9,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "6bfb80ca389a9d73": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Illinois, USA with no remote-from-Portugal option stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Sr. Staff UX Designer",
+   "company": "Motorola Solutions, Inc.",
+   "seniority": "staff",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 82,056-150,000",
+   "years_xp": 1,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "2b6c77556e72903f": {
+  "language_of_the_posting": "German",
+  "language_ok": false,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "posting is written in German",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI / UX Designer",
+   "company": "Everii Germany Gmbh",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "German"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "c4a2413fc8128156": {
+  "language_of_the_posting": "German",
+  "language_ok": false,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting is written in German",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI / UX Designer",
+   "company": "Everii Germany Gmbh",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "German"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "88fc85a0631b1979": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a hardware/electronics engineering role, not product design or UX. Pure engineering, not design.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior Electronics Design Engineer",
+   "company": "EFT Mobility (Quantum-Systems GmbH)",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "822a24fdfc548e9b": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Frankfurt, Germany - not in Portugal and no remote-from-Portugal option stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Product Designer",
+   "company": "FE fundinfo",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "cbedc3d3265473a9": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in London; not remote and not in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Director of Product Design",
+   "company": "Carwow",
+   "seniority": "director",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "VP of Product",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "e6fc8987b737e042": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "yes",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Design role, fully remote with Europe/CET timezone overlap that includes Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer",
+   "company": "Intch",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-03.1"
+ },
+ "5303dd9451b58432": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite role in Toronto, Canada - not Portugal or remote.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior UX Product Designer",
+   "company": "HelloFresh",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "f496b79eca11b234": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "yes",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Remote product design role at a fully remote company with Europe-wide hiring; genuinely product-focused UX/UI work.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer",
+   "company": "Intch",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "open",
+  "criteria_version": "2026-09-03.1"
+ },
+ "7fadd35755d9c2e9": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting requires work in United States (HQ in Massachusetts, regional hubs, or in-person options); no remote-from-Portugal option stated.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Salesforce User Experience Designer - AI & Agentforce",
+   "company": "NeuraFlash, Part of Accenture",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "14ed020fd1c5bc6b": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Pure frontend/full-stack engineering role; posting explicitly restricts to United States despite remote work option.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UI Engineer",
+   "company": "Marchex",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 110k–125k",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "984e86bda2b2bb2b": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is an ASIC physical design engineering role (not a design role), and it requires onsite work in the United States with ITAR export control restrictions.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Principal ASIC Physical Design Engineer",
+   "company": "K2 Space",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 190k–280k",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "afbe4e14238bbc2b": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "ASIC physical design is pure engineering, not design; also requires U.S. person status and onsite work in United States.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior ASIC Physical Design Engineer",
+   "company": "K2 Space",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 170k–250k",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
+ },
+ "e9db5a43f90e5859": {
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Instructional Design is not product/UX/UI design; location explicitly restricts to specific countries and Portugal is not listed.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Instructional Designer – Part Time Temporary",
+   "company": "Northern Pennsylvania Regional College",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Australia",
+    "Canada",
+    "France",
+    "Germany",
+    "India",
+    "Netherlands",
+    "Sweden",
+    "United Kingdom",
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 34/hour",
+   "years_xp": 2,
+   "reports_to": "Director of Dual Enrollment",
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
  }
 }

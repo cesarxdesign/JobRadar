@@ -115,6 +115,9 @@ def iso_date(v):
     m = re.match(r"(\d{4})-(\d{2})-(\d{2})", v)
     if m:
         return v[:10]
+    if re.fullmatch(r"\d{10}|\d{13}", v):      # epoch, seconds or milliseconds
+        t = int(v) / (1000 if len(v) == 13 else 1)
+        return datetime.fromtimestamp(t, timezone.utc).strftime("%Y-%m-%d")
     for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%d-%m-%Y", "%B %d, %Y", "%d %B %Y",
                 "%Y/%m/%d", "%m/%d/%Y", "%b %d, %Y"):
         try:
