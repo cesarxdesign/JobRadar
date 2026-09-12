@@ -1192,12 +1192,13 @@ def agg_eures():
 
 def agg_salt():
     """Salt, the recruitment agency (welovesalt.com): server-rendered cards,
-    six a page, keyword search on `k`. Found from a LinkedIn lead, one of
+    six a page, the whole board (~280 roles), no keyword - the pool has no
+    opinions, L1 does the filtering. Found from a LinkedIn lead, one of
     their recruiters hiring a Lead Product Designer, 2026-09-11."""
     seen = set()
-    for page in range(1, 40):
+    for page in range(1, 120):
         try:
-            html = get_text("https://welovesalt.com/jobs" + (f"/page/{page}" if page > 1 else "") + "?k=design")
+            html = get_text("https://welovesalt.com/jobs" + (f"/page/{page}" if page > 1 else ""))
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 break                  # WordPress: the page past the last one

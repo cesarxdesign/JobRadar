@@ -312943,5 +312943,36 @@
   },
   "lane": "unsure",
   "criteria_version": "2026-09-03.1"
+ },
+ "971751de846d9ebb": {
+  "language_of_the_posting": "English",
+  "language_ok": false,
+  "workplace_as_posted": "not stated",
+  "can_he_do_it_from_portugal": "no",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "No job description provided; only title and location (San Francisco, onsite).",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Principle, Sales Compensation Design",
+   "company": "Five9",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English"
+  },
+  "lane": "unsure",
+  "criteria_version": "2026-09-03.1"
  }
 }
