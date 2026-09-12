@@ -106,18 +106,6 @@ def _ashby(api):
     return ""
 
 
-def _container_job(html, pattern):
-    """A board that prints the description in one container and nothing else
-    machine-readable. uiuxjobsboard's ld+json carries a 150-character teaser,
-    not the posting, so the container is the only honest source."""
-    m = re.search(pattern, html, re.S)
-    if not m:
-        return {}
-    # the container runs to the end of the match; strip_html keeps the block
-    # structure, and the page chrome after it is short enough to be harmless
-    return {"jd": P.strip_html(m.group(1)[:60000])}
-
-
 def fetch_posting(url):
     """The original posting: its text AND the panel it prints beside it.
 
@@ -161,23 +149,6 @@ def fetch_posting(url):
     # net-empregos is ISO-8859-1; decoded as UTF-8 every accented Portuguese
     # company name comes back as replacement characters.
     raw = body.decode(enc, "replace")
-    if kind == "uiux":
-        d = _container_job(raw, r'<div class="job-description[^"]*"[^>]*>(.*)')
-        # The page prints a staleness notice beside the header - "This job post
-        # is over 2 months old and may no longer be available." A person reads
-        # it and discounts the posting, so the judge gets it too, verbatim and
-        # at the top where it is read first.
-        # The notice is split across two spans, so the match has to cross tags.
-        n = re.search(r'(This job post is over .{0,200}?no longer be available\.)', raw, re.S)
-        if n and d.get("jd"):
-            d["jd"] = P.strip_html(n.group(1)).strip() + "\n\n" + d["jd"]
-        return d
-    if kind == "uxrt":
-        return _container_job(raw, r'<div class="[^"]*w-richtext[^"]*"[^>]*>(.*)')
-    if kind == "netempregos":
-        # ISO-8859-1. Decoded as UTF-8 the accents come back as replacement
-        # characters, so re-read the bytes with the charset the page declares.
-        return _container_job(raw, r'<div class="job-description[^"]*"[^>]*>(.*)')
     if kind == "wttj":
         return _wttj_job(raw)
     if kind == "yc":
@@ -217,6 +188,11 @@ def fetch_posting(url):
         return {"jd": P.strip_html("\n\n".join(parts)),
                 "location": P.sr_location(d.get("location")),
                 "company": (d.get("company") or {}).get("name")}
+    # Everything else: the whole page, every word on it. A board prints what
+    # matters wherever it likes - a staleness banner beside the header, the
+    # scope in a sidebar, a deadline in the footer - and picking one container
+    # means a new patch for every board. The judge reads the page like a
+    # person does, chrome and all.
     return {"jd": P.strip_html(raw)}
 
 
