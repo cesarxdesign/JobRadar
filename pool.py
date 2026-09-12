@@ -1461,9 +1461,9 @@ def main():
     print(f"wrote {POOL_FILE} ({POOL_FILE.stat().st_size//1024}K) "
           f"and {JD_FILE} ({JD_FILE.stat().st_size//1024}K)", flush=True)
     # GitHub refuses files over 100MB. Cesar's call (2026-09-12): one file
-    # until it is an actual problem, and a warning when it gets close.
+    # until it is an actual problem, and a warning at 95MB.
     mb = POOL_FILE.stat().st_size / 1048576
-    if mb > 90:
+    if mb > 95:
         print(f"\nWARNING - pool.json is {mb:.0f}MB. GitHub rejects files over 100MB; "
               f"the push will fail soon. Shard it or stop tracking it (see BACKLOG.md).",
               file=sys.stderr, flush=True)
