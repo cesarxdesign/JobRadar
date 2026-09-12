@@ -65,6 +65,7 @@ PANEL = (
     ("department", "Department"),
     ("salary", "Compensation"),
     ("restrictions", "Location Restrictions"),
+    ("posted", "Posted"),
 )
 
 

@@ -22,7 +22,7 @@ import urllib.request
 import uuid
 import xml.etree.ElementTree as ET
 from html import unescape
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import contracts
 
@@ -956,6 +956,27 @@ def agg_euremotejobs():
         page += 1
 
 
+
+def age_to_date(n, unit):
+    """A board that prints "16 Days Ago" instead of a date. Without this the
+    row inherits first_seen and the board says 0d beside a posting the source
+    page calls three weeks old."""
+    days = {"hour": 0, "day": 1, "week": 7, "month": 30, "year": 365}[unit.lower().rstrip("s")]
+    return (datetime.now(timezone.utc) - timedelta(days=days * int(n))).strftime("%Y-%m-%d")
+
+
+def month_day_to_date(text):
+    """Jobspresso prints "August 28" with no year. Current year (Cesar)."""
+    m = re.match(r"([A-Za-z]+)\s+(\d{1,2})", (text or "").strip())
+    if not m:
+        return None
+    try:
+        d = datetime.strptime(f"{m.group(1)} {m.group(2)}", "%B %d")
+    except ValueError:
+        return None
+    return f"{datetime.now(timezone.utc).year}-{d.month:02d}-{d.day:02d}"
+
+
 def agg_jobspresso():
     """WP Job Manager's listing endpoint, the one the page's Load More calls.
     The RSS ignores every filter; this one honours the keyword."""
@@ -974,9 +995,11 @@ def agg_jobspresso():
             company = re.search(r'job_listing-company">\s*<strong>(.*?)</strong>', b, re.S)
             loc = re.search(r'job_listing-location[^>]*>(.*?)</div>', b, re.S)
             loc_s = strip_html(loc.group(1), 200).strip() if loc else ""
+            dt = re.search(r'job_listing-date[^>]*>(?:<date>)?(.*?)<', b, re.S)
             yield {"company": strip_html(company.group(1), 120).strip() if company else "",
                    "title": strip_html(title.group(1), 200).strip() if title else "",
                    "url": href.group(1) if href else None, "location": loc_s,
+                   "posted": month_day_to_date(strip_html(dt.group(1), 40)) if dt else None,
                    "remote": bool(re.search(r"remote|anywhere|worldwide", loc_s, re.I)) or None}
         if not blocks or page >= int(d.get("max_num_pages") or 1):
             break
@@ -1040,6 +1063,20 @@ def agg_wellfound():
                 break
 
 
+
+def builtin_posted(body):
+    """builtin prints "16 Days Ago", but also "Yesterday", "Today" and
+    "Just Posted" - most of the page on any given day."""
+    m = re.search(r"(\d+)\s*(Hour|Day|Week|Month|Year)s?\s*Ago", body, re.I)
+    if m:
+        return age_to_date(m.group(1), m.group(2))
+    if re.search(r"\bYesterday\b", body, re.I):
+        return age_to_date(1, "day")
+    if re.search(r"\b(Today|Just Posted)\b", body, re.I):
+        return age_to_date(0, "day")
+    return None
+
+
 def agg_builtin():
     """Server-rendered cards, 25 a page. The panel is three icon pills:
     house (workplace), pin (location), trophy (level)."""
@@ -1068,6 +1105,7 @@ def agg_builtin():
                    "title": strip_html(t.group(1), 200).strip() if t else "",
                    "url": "https://builtin.com" + a.group(1) if a else None,
                    "location": loc or "", "workplace": wp,
+                   "posted": builtin_posted(body),
                    "remote": bool(wp and re.search(r"remote", wp, re.I)) or None,
                    "jd_text": strip_html(summ.group(1)) if summ else None}
         if not new:
@@ -1363,9 +1401,21 @@ def agg_uiuxjobsboard():
                 tags = [strip_html(x, 60).strip() for x in
                         re.findall(r'href="/design-jobs/[^"]+"[^>]*>(.*?)</a>', card, re.S)]
                 et = re.search(r'uppercase opacity-80 mr-3">(.*?)</span>', card, re.S)
+                # The card prints an age, not a date ("12d", "3mo"). Without it
+                # the row inherits first_seen and the board says 0d on a posting
+                # that is three weeks old - which is what the source page shows
+                # a person, so it has to come across.
+                age = re.search(r'<div class="text-sm">(\d+)\s*(d|mo|h|y)</div>', card)
+                posted = None
+                if age:
+                    n, unit = int(age.group(1)), age.group(2)
+                    days = {"h": 0, "d": 1, "mo": 30, "y": 365}[unit] * n
+                    posted = (datetime.now(timezone.utc)
+                              - timedelta(days=days)).strftime("%Y-%m-%d")
                 yield {"company": strip_html(co.group(1), 120).strip() if co else None,
                        "title": strip_html(ti.group(1), 200).strip() if ti else None,
                        "url": "https://uiuxjobsboard.com" + a.group(1),
+                       "posted": posted,
                        "location": ", ".join(t for t in tags if t),
                        "workplace": next((t for t in tags if re.search(r"remote|hybrid|onsite", t, re.I)), None),
                        "remote": True if any(re.search(r"remote", t, re.I) for t in tags) else None,
