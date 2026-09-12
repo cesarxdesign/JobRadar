@@ -1383,8 +1383,12 @@ def uiux_posted(url):
     """The exact datePosted off the job page. The listing card's age is
     missing on plenty of rows, and a row with no date inherits first_seen -
     the board then says 0d beside a posting its own page calls 25d old."""
+    # Titles carry en-dashes and accents, so the slug is not ASCII. urllib
+    # will not send it raw and the fetch dies silently, leaving the row
+    # dateless - which the board then renders as 0d.
+    safe = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=~-._")
     try:
-        html = get_text(url)
+        html = get_text(safe)
     except Exception:
         return None
     # The page wins (Cesar). What the header prints is what a person reads;

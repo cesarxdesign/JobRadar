@@ -162,7 +162,16 @@ def fetch_posting(url):
     # company name comes back as replacement characters.
     raw = body.decode(enc, "replace")
     if kind == "uiux":
-        return _container_job(raw, r'<div class="job-description[^"]*"[^>]*>(.*)')
+        d = _container_job(raw, r'<div class="job-description[^"]*"[^>]*>(.*)')
+        # The page prints a staleness notice beside the header - "This job post
+        # is over 2 months old and may no longer be available." A person reads
+        # it and discounts the posting, so the judge gets it too, verbatim and
+        # at the top where it is read first.
+        # The notice is split across two spans, so the match has to cross tags.
+        n = re.search(r'(This job post is over .{0,200}?no longer be available\.)', raw, re.S)
+        if n and d.get("jd"):
+            d["jd"] = P.strip_html(n.group(1)).strip() + "\n\n" + d["jd"]
+        return d
     if kind == "uxrt":
         return _container_job(raw, r'<div class="[^"]*w-richtext[^"]*"[^>]*>(.*)')
     if kind == "netempregos":
