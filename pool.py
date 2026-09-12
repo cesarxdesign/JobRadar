@@ -1387,6 +1387,12 @@ def uiux_posted(url):
         html = get_text(url)
     except Exception:
         return None
+    # The page wins (Cesar). What the header prints is what a person reads;
+    # ld+json is the board's own claim about it and only fills the gap.
+    m = re.search(r'POSTED</span><span[^>]*>(\d+)(d|h|mo|y)<', html)
+    if m:
+        days = {"h": 0, "d": 1, "mo": 30, "y": 365}[m.group(2)] * int(m.group(1))
+        return (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
     for m in re.finditer(r'application/ld\+json[^>]*>(.*?)</script>', html, re.S):
         try:
             d = json.loads(m.group(1))
@@ -1395,10 +1401,6 @@ def uiux_posted(url):
         for o in (d if isinstance(d, list) else [d]):
             if isinstance(o, dict) and o.get("@type") == "JobPosting" and o.get("datePosted"):
                 return str(o["datePosted"])[:10]
-    m = re.search(r'POSTED</span><span[^>]*>(\d+)(d|h|mo|y)<', html)
-    if m:
-        days = {"h": 0, "d": 1, "mo": 30, "y": 365}[m.group(2)] * int(m.group(1))
-        return (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
     return None
 
 
