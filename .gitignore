@@ -24,3 +24,6 @@ data/applied_history.*
 data/applications.json
 data/history.json
 data/marks.json
+
+# fetcher's working cache: rebuilt from the boards, not history
+data/originals.json

@@ -1,0 +1,18 @@
+{
+ "gitlab": {
+  "host": "about.gitlab.com",
+  "score": 0.752,
+  "found": "2026-09-12"
+ },
+ "cloudflare": {
+  "host": "developers.cloudflare.com",
+  "score": 0.576,
+  "found": "2026-09-12"
+ },
+ "figma": {
+  "host": "www.figma.com",
+  "score": 0.795,
+  "found": "2026-09-12",
+  "careers": "https://www.figma.com/careers/"
+ }
+}
