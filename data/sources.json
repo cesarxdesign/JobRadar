@@ -1,5 +1,5 @@
 {
- "note": "Radar1 registry (data/companies.json) merged with every source Radar1 actually pulled from. 2026-09-11: 233 boards harvested from superjobs.design's company list, Fetch (greenhouse), Qorelo, Andercore, Prior Labs (ashby), TYTAN (recruitee) from the LinkedIn sweep, plus eleven aggregators from the same sweep (see pool.py).",
+ "note": "Radar1 registry (data/companies.json) merged with every source Radar1 actually pulled from. 2026-09-11: 233 boards harvested from superjobs.design's company list, Fetch (greenhouse), Qorelo, Andercore, Prior Labs (ashby), TYTAN (recruitee) from the LinkedIn sweep, plus eleven aggregators from the same sweep (see pool.py). 2026-09-12: five sources added after the hand sweep (SOURCE_SWEEP.md) - remoteio, woodyjobs, uiuxjobsboard, uxremotetalent, netempregos. netempregos is the Portuguese one: direct employer and agency ads from companies that never appear on a US-style ATS.",
  "watchlist": {
   "ashby": {
    "1password": "1Password",
@@ -963,6 +963,11 @@
   "wttj",
   "yc",
   "eures",
-  "salt"
+  "salt",
+  "remoteio",
+  "woodyjobs",
+  "uiuxjobsboard",
+  "uxremotetalent",
+  "netempregos"
  ]
 }

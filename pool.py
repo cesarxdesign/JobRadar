@@ -1257,7 +1257,17 @@ def agg_remoteio():
     posting's - dropped on purpose (see above). locationType renders on the
     page as Location Type, so it stays."""
     for page in range(1, 40):
-        d = get_json(f"https://remote.io/api/v2/jobs?category=design&limit=100&page={page}")
+        # remote.io rate-limits by IP and answers 403 once it has had enough.
+        # At limit=100 the whole design category is two calls, so this only
+        # ever bites when something else has been hitting the host.
+        for attempt in range(4):
+            try:
+                d = get_json(f"https://remote.io/api/v2/jobs?category=design&limit=100&page={page}")
+                break
+            except urllib.error.HTTPError as e:
+                if e.code not in (403, 429) or attempt == 3:
+                    raise
+                time.sleep(5 * (attempt + 1))
         rows = d.get("data") or []
         for j in rows:
             locs = [l.get("name") for l in (j.get("locations") or []) if l.get("name")]
@@ -1309,6 +1319,131 @@ def agg_woodyjobs():
 
 
 AGGREGATORS.update({"remoteio": agg_remoteio, "woodyjobs": agg_woodyjobs})
+
+
+def get_text_charset(url):
+    """get_text() assumes UTF-8. net-empregos is ISO-8859-1, and decoding it as
+    UTF-8 with errors='replace' turns Espacos Unicos into a row of question
+    marks - every accented Portuguese company name silently corrupted. Honour
+    what the response actually declares."""
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+        raw = r.read()
+        enc = r.headers.get_content_charset()
+    if not enc:
+        m = re.search(rb'charset=["\']?([\w-]+)', raw[:4000], re.I)
+        enc = m.group(1).decode() if m else "utf-8"
+    return raw.decode(enc, "replace")
+
+
+UIUX_SCOPES = ("remote-anywhere", "remote-europe", "remote-emea", "portugal")
+
+
+def agg_uiuxjobsboard():
+    """uiuxjobsboard.com: a design-only board, so no keyword - every row is in
+    discipline and L1 does the rest. Four scopes, 100 cards a page; the card
+    carries the scope as its own links (Remote / Europe), which is what the
+    page shows a person, so that is what we keep."""
+    seen = set()
+    for scope in UIUX_SCOPES:
+        for page in range(1, 30):
+            url = f"https://uiuxjobsboard.com/design-jobs/{scope}" + (f"?page={page}" if page > 1 else "")
+            html = get_text(url)
+            cards = html.split('<div class="border shadow-xs rounded-xl')[1:]
+            new_here = 0
+            for card in cards:
+                a = re.search(r'href="(/job/[^"]+)"(.*?)</a>', card, re.S)
+                if not a or a.group(1) in seen:
+                    continue
+                seen.add(a.group(1))
+                new_here += 1
+                inner = a.group(2)
+                co = re.search(r'<span>(.*?)<span class="text-base', inner, re.S)
+                ti = re.search(r'font-bold">(.*?)</span>', inner, re.S)
+                tags = [strip_html(x, 60).strip() for x in
+                        re.findall(r'href="/design-jobs/[^"]+"[^>]*>(.*?)</a>', card, re.S)]
+                et = re.search(r'uppercase opacity-80 mr-3">(.*?)</span>', card, re.S)
+                yield {"company": strip_html(co.group(1), 120).strip() if co else None,
+                       "title": strip_html(ti.group(1), 200).strip() if ti else None,
+                       "url": "https://uiuxjobsboard.com" + a.group(1),
+                       "location": ", ".join(t for t in tags if t),
+                       "workplace": next((t for t in tags if re.search(r"remote|hybrid|onsite", t, re.I)), None),
+                       "remote": True if any(re.search(r"remote", t, re.I) for t in tags) else None,
+                       "employment_type": strip_html(et.group(1), 60).strip() if et else None}
+            if not new_here:
+                break
+
+
+def agg_uxremotetalent():
+    """uxremotetalent.com: Webflow collection, 25 a page, every row design.
+    The card prints scope, contract, company and a real date. OpenTrain's
+    AI-training listings are a gig marketplace, not a role - dropped."""
+    for page in range(1, 40):
+        url = "https://www.uxremotetalent.com/" + (f"?c0af7a1a_page={page}" if page > 1 else "")
+        html = get_text(url)
+        items = re.split(r'role="listitem"', html)[1:]
+        got = 0
+        for it in items:
+            a = re.search(r'href="(/ux-job/[^"]+)"', it)
+            ti = re.search(r'regular-job-title">(.*?)</h2>', it, re.S)
+            if not a or not ti:
+                continue
+            infos = [strip_html(x, 120).strip() for x in
+                     re.findall(r'regular-job-info[^"]*">(.*?)</div>', it, re.S)]
+            co = re.search(r'card-company-name"><div class="regular-job-info">(.*?)</div>', it, re.S)
+            dt = re.search(r'regular-job-info date">(.*?)</div>', it, re.S)
+            company = strip_html(co.group(1), 120).strip() if co else None
+            if company and "opentrain" in company.lower():
+                continue
+            got += 1
+            scope = infos[0] if infos else ""
+            yield {"company": company, "title": strip_html(ti.group(1), 200).strip(),
+                   "url": "https://www.uxremotetalent.com" + a.group(1),
+                   "location": scope,
+                   "remote": True,          # the whole board is remote roles
+                   "employment_type": infos[1] if len(infos) > 1 else None,
+                   "posted": strip_html(dt.group(1), 40).strip() if dt else None}
+        if not got:
+            break
+
+
+def agg_netempregos():
+    """net-empregos.com: Portugal's biggest general board, category 22 is
+    Arquitectura / Design. Direct employer and agency ads - the kind of
+    Portuguese company that never appears on a US-style ATS, which is the
+    whole reason this source is here. ISO-8859-1, hence get_text_charset."""
+    seen = set()
+    for page in range(1, 25):
+        url = ("https://www.net-empregos.com/pesquisa-empregos.asp?categoria=22"
+               + (f"&page={page}" if page > 1 else ""))
+        html = get_text_charset(url)
+        got = 0
+        for card in html.split('class="job-ad-item"')[1:]:
+            pass
+        # the anchor comes before the detail block, so walk the h2 links instead
+        for m in re.finditer(r'<h2[^>]*><a class="oferta-link"[^>]*href=["\']?(/\d+/[^"\'>]+)["\']?>(.*?)</a>', html, re.S):
+            href, title = m.group(1), strip_html(m.group(2), 200).strip()
+            if href in seen:
+                continue
+            seen.add(href)
+            got += 1
+            block = html[m.end():m.end() + 2500]
+            def li(icon):
+                x = re.search(icon + r'[^>]*></i>\s*(.*?)</li>', block, re.S)
+                return strip_html(x.group(1), 120).strip() if x else None
+            yield {"company": li("flaticon-work"), "title": title,
+                   "url": "https://www.net-empregos.com" + href,
+                   "location": li("flaticon-pin") or "",
+                   "department": li("fa fa-tags"),
+                   "posted": li("flaticon-calendar")}
+        if not got:
+            break
+
+
+AGGREGATORS.update({"uiuxjobsboard": agg_uiuxjobsboard,
+                    "uxremotetalent": agg_uxremotetalent,
+                    "netempregos": agg_netempregos})
+
 
 
 SKIP = set()          # sources deliberately not scraped this run

@@ -50,6 +50,15 @@ def api_url(u):
         # The portal is a JS shell; this is the call it makes for the posting.
         return (f"https://europa.eu/eures/api/jv-searchengine/public/jv/id/{m.group(1)}"
                 f"?requestLang=en&preferredLang=null"), "eures"
+    m = re.search(r"uiuxjobsboard\.com/job/", u or "")
+    if m:
+        return u, "uiux"
+    m = re.search(r"uxremotetalent\.com/ux-job/", u or "")
+    if m:
+        return u, "uxrt"
+    m = re.search(r"net-empregos\.com/\d+/", u or "")
+    if m:
+        return u, "netempregos"
     return u, "html"
 
 
@@ -97,6 +106,18 @@ def _ashby(api):
     return ""
 
 
+def _container_job(html, pattern):
+    """A board that prints the description in one container and nothing else
+    machine-readable. uiuxjobsboard's ld+json carries a 150-character teaser,
+    not the posting, so the container is the only honest source."""
+    m = re.search(pattern, html, re.S)
+    if not m:
+        return {}
+    # the container runs to the end of the match; strip_html keeps the block
+    # structure, and the page chrome after it is short enough to be harmless
+    return {"jd": P.strip_html(m.group(1)[:60000])}
+
+
 def fetch_posting(url):
     """The original posting: its text AND the panel it prints beside it.
 
@@ -123,7 +144,31 @@ def fetch_posting(url):
         return {}
     req = urllib.request.Request(api, headers={**P.UA, "Accept": "text/html,application/json"})
     with urllib.request.urlopen(req, timeout=30) as r:
-        raw = r.read().decode("utf-8", "replace")
+        body = r.read()
+        enc = r.headers.get_content_charset()
+    if not enc:
+        m = re.search(rb'charset=["\']?([\w-]+)', body[:4000], re.I)
+        enc = m.group(1).decode() if m else None
+    if not enc:
+        # net-empregos declares nothing at all and is ISO-8859-1. Let the bytes
+        # decide: utf-8 raises on a latin-1 accent, so a clean utf-8 decode is
+        # proof, and a failure means fall back rather than blot the accents out.
+        try:
+            body.decode("utf-8")
+            enc = "utf-8"
+        except UnicodeDecodeError:
+            enc = "cp1252"
+    # net-empregos is ISO-8859-1; decoded as UTF-8 every accented Portuguese
+    # company name comes back as replacement characters.
+    raw = body.decode(enc, "replace")
+    if kind == "uiux":
+        return _container_job(raw, r'<div class="job-description[^"]*"[^>]*>(.*)')
+    if kind == "uxrt":
+        return _container_job(raw, r'<div class="[^"]*w-richtext[^"]*"[^>]*>(.*)')
+    if kind == "netempregos":
+        # ISO-8859-1. Decoded as UTF-8 the accents come back as replacement
+        # characters, so re-read the bytes with the charset the page declares.
+        return _container_job(raw, r'<div class="job-description[^"]*"[^>]*>(.*)')
     if kind == "wttj":
         return _wttj_job(raw)
     if kind == "yc":
