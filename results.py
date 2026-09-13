@@ -35,6 +35,11 @@ SHIPPED_FILE = ROOT / "data" / "shipped.json"         # every id ever put on the
 # agree before anything is dropped.
 GHOST_DAYS = 69
 GHOST_STATUS = ("no_site", "no_match", "unreadable")
+# "gone" is not the same claim. The others mean we could not find the role at
+# the employer; this means the board's own link is dead - a 404, or a redirect
+# onto a listing page. That is direct evidence about this posting, so it drops
+# at any age rather than waiting for the ten-week rule.
+DEAD_STATUS = ("gone",)
 
 
 def age_days(rec, today=None):
@@ -50,7 +55,11 @@ def is_ghost(rec, originals):
     """Old, and not at the employer. Never on a role fetcher has not reached:
     a bot wall or an unrun lookup is missing evidence, not evidence."""
     o = (originals or {}).get(rec["id"])
-    if not o or o.get("status") not in GHOST_STATUS:
+    if not o:
+        return False
+    if o.get("status") in DEAD_STATUS:
+        return True
+    if o.get("status") not in GHOST_STATUS:
         return False
     a = age_days(rec)
     return a is not None and a > GHOST_DAYS

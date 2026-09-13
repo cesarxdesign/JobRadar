@@ -425,6 +425,23 @@ def fetch_one(rec, jd_text, sites=None):
     if not company or not title:
         return {"status": "no_company"}
 
+    # Cheapest question first, and no model anywhere near it: is the posting
+    # the board pointed at still there. A 404, or a redirect onto a listing
+    # page, settles the role without hunting for the company at all.
+    url = rec.get("url")
+    if url:
+        try:
+            html, final = get(url, timeout=12)
+            if redirected_to_index(url, final):
+                return {"status": "gone", "url": url, "landed": final}
+        except Blocked:
+            pass                       # a bot wall says nothing either way
+        except urllib.error.HTTPError as e:
+            if e.code in (404, 410):
+                return {"status": "gone", "url": url, "why": f"HTTP {e.code}"}
+        except Exception:
+            pass
+
     profile = words(jd_text)
     key = company.lower()
     learned = sites.get(key)
