@@ -102,6 +102,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
     <option value="14">posted ≤ 14 days</option>
     <option value="30">posted ≤ 30 days</option>
     <option value="90">posted ≤ 90 days</option>
+    <option value="180">posted ≤ 6 months</option>
     <option value="dated">has a date</option>
   </select>
   <select id="f-place"><option value="">anywhere</option></select>
@@ -110,6 +111,12 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <select id="f-sal">
     <option value="">salary: any</option>
     <option value="y">has a salary</option>
+  </select>
+  <select id="f-sort">
+    <option value="new">newest first</option>
+    <option value="old">oldest first</option>
+    <option value="sal">salary first</option>
+    <option value="co">company A–Z</option>
   </select>
   <button class="clear" id="f-clear">clear</button>
   <span class="n" id="f-count"></span>
@@ -241,6 +248,20 @@ function haystack(r){
 // no new data, no server. A filter narrows what a lane shows; it never moves
 // a role between lanes, because the lane is the judge's verdict, not a view.
 const F={date:"",place:"",sen:"",src:"",sal:""};
+let SORT="new";
+// A date filter on a newest-first list only removes the oldest rows, which sit
+// below the fold - it works and it looks inert. Sorting is what actually moves
+// the list, so it lives beside the filters rather than buried.
+function salNum(r){
+  const m=String(f(r).salary||"").replace(/[ ,.]/g,"").match(/(\d{4,})/g);
+  return m?Math.max(...m.map(Number)):-1;
+}
+function sortRows(rows){
+  if(SORT==="old") return rows.sort((a,b)=>byDays(b,a));
+  if(SORT==="co")  return rows.sort((a,b)=>String(a.company||"").localeCompare(String(b.company||"")));
+  if(SORT==="sal") return rows.sort((a,b)=>salNum(b)-salNum(a)||byDays(a,b));
+  return rows.sort(byDays);
+}
 
 function placeOf(r){
   const t=((r.location||"")+" "+(f(r).remote||"")+" "+(r.workplace||"")).toLowerCase();
@@ -287,12 +308,14 @@ function fillFilters(){
 
 function wireFilters(){
   const map={"f-date":"date","f-place":"place","f-sen":"sen","f-src":"src","f-sal":"sal"};
+  const so=$("f-sort");
+  if(so) so.onchange=()=>{SORT=so.value;render();};
   for(const id in map){
     const el=$(id); if(!el) continue;
     el.onchange=()=>{F[map[id]]=el.value;render();};
   }
   const c=$("f-clear");
-  if(c) c.onclick=()=>{for(const k in F)F[k]="";
+  if(c) c.onclick=()=>{for(const k in F)F[k]="";SORT="new";if(so)so.value="new";
     for(const id in map){const el=$(id); if(el) el.value="";}
     render();};
 }
@@ -309,7 +332,7 @@ function pool(){
   // a role you have acted on leaves the first three lanes
   else rows=(DATA.lanes[LANE]||[]).map(roleById).filter(r=>r && !routing(r.id));
   rows=rows.filter(matches);
-  if(LANE!=="favorites") return rows.sort(byDays);
+  if(LANE!=="favorites") return sortRows(rows);
   const order=["open","portugal","unsure","applied","discarded","cut"];
   return rows.sort((a,b)=>order.indexOf(stateOf(a))-order.indexOf(stateOf(b))||byDays(a,b));
 }
