@@ -254,7 +254,7 @@ ADAPTERS = {"greenhouse": from_greenhouse, "ashby": from_ashby, "lever": from_le
 # These are Radar1's readers, kept as they were. Two things removed from each:
 #   - title_ok(): Radar1 filtered by title mid-scrape. Pool does not filter.
 #   - per-job enrichment: Radar1 fetched the original page when a listing came
-#     back thin. That is the deep fetch, and it waits for L1.
+#     back thin. That is the deep fetch, and it waits for the parser.
 
 def fmt_range(lo, hi, cur=""):
     def f(n):
@@ -578,7 +578,7 @@ def normalise(raw, source):
 # --------------------------------------------------------------- the run
 # ------------------------------------------------- the remaining 12, ported
 # Listing calls only. Radar1 detail-fetched each role during the scrape; that
-# is the deep fetch and it waits for L1.
+# is the deep fetch and it waits for the parser.
 
 def _name(cfg):
     return cfg.get("name") if isinstance(cfg, dict) else cfg
@@ -1263,7 +1263,7 @@ def agg_eures():
 def agg_salt():
     """Salt, the recruitment agency (welovesalt.com): server-rendered cards,
     six a page, the whole board (~280 roles), no keyword - the pool has no
-    opinions, L1 does the filtering. Found from a LinkedIn lead, one of
+    opinions, the parser does the filtering. Found from a LinkedIn lead, one of
     their recruiters hiring a Lead Product Designer, 2026-09-11."""
     seen = set()
     for page in range(1, 120):
