@@ -130,6 +130,23 @@ def is_challenge(html, status=200):
     return status == 202 or (len(html) < 6000 and bool(CHALLENGE.search(html)))
 
 
+INDEX_PATHS = re.compile(r"^/(jobs|job-?board|careers|search|browse|remote-jobs)/?$", re.I)
+
+
+def redirected_to_index(url, final):
+    """A posting link that lands on a listing page: the job is gone.
+
+    Himalayas answers a removed posting with a redirect to its index rather
+    than a 404, so the link still resolves and drops you on "103,141 Remote
+    Jobs". superjobs relays those URLs, so the role looks alive on the board
+    long after the employer stopped hiring. A 404 is honest; this is not, and
+    it has to be read as absence either way."""
+    if url == final:
+        return False
+    a, b = urllib.parse.urlsplit(url), urllib.parse.urlsplit(final)
+    return bool(INDEX_PATHS.match(b.path or "/")) and len(a.path) > len(b.path)
+
+
 def head_ok(url):
     """Does anything answer here at all."""
     try:
