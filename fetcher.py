@@ -39,6 +39,8 @@ import json
 import pathlib
 import re
 import sys
+import threading
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -53,6 +55,7 @@ ORIGINALS_FILE = ROOT / "data" / "originals.json"
 # Discovery is the expensive half and the answer does not change week to week,
 # so what we learn about a company is kept and reused by every later run.
 SITES_FILE = ROOT / "data" / "company_sites.json"
+LINKS_FILE = ROOT / "data" / "links.json"
 
 TIMEOUT = 15
 # How much of what the posting says about the business has to turn up on the
@@ -92,7 +95,31 @@ def words(text, n=4000):
     return {w for w in s.split() if len(w) > 3 and w not in STOP}
 
 
+_host_at, _host_lock = {}, threading.Lock()
+HOST_GAP = 2.5          # seconds between two hits on the same host
+
+
+def pace(url):
+    """Never two requests to one host inside the gap.
+
+    fetcher walks a company's site - homepage, careers page, job page, often a
+    sitemap - so it hits the same host three or four times in a row. That is
+    exactly the pattern that earns a 429, and ghostbuster's first sweep proved
+    it: 208 of its refusals were ones we caused ourselves.
+    """
+    host = urllib.parse.urlsplit(url).netloc.lower()
+    while True:
+        with _host_lock:
+            now = time.monotonic()
+            wait = HOST_GAP - (now - _host_at.get(host, 0))
+            if wait <= 0:
+                _host_at[host] = now
+                return
+        time.sleep(min(wait, 3))
+
+
 def get(url, timeout=TIMEOUT):
+    pace(url)
     req = urllib.request.Request(url, headers={**P.UA, "Accept": "text/html,*/*"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         body = r.read()
@@ -583,9 +610,15 @@ def main():
     exc = re.compile(criteria.L1_EXCLUDE, re.I)
     # Only what survives L1. A role the title already ruled out does not need
     # its original found - that is the whole reason this runs after L1.
+    # ghostbuster settles liveness first and far more cheaply. Hunting for the
+    # employer of a posting it already found dead is the most expensive way to
+    # learn nothing, so those never enter the queue.
+    links = json.loads(LINKS_FILE.read_text()) if LINKS_FILE.exists() else {}
+    dead = {k for k, v in links.items() if v.get("status") == "gone"}
     todo = [r for r in pool_doc["jobs"]
             if r.get("active") and (r.get("title") or "")
             and must.search(r["title"]) and not exc.search(r["title"])
+            and r["id"] not in dead
             and out.get(r["id"], {}).get("status") not in ("found", "no_site", "no_company")]
     if "--old" in sys.argv:
         # The roles whose absence at the employer actually means something:
