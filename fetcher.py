@@ -606,10 +606,10 @@ def main():
     out = load(ORIGINALS_FILE, {})
     sites = load(SITES_FILE, {})
 
-    must = re.compile(criteria.L1_MUST_HAVE, re.I)
-    exc = re.compile(criteria.L1_EXCLUDE, re.I)
-    # Only what survives L1. A role the title already ruled out does not need
-    # its original found - that is the whole reason this runs after L1.
+    must = re.compile(criteria.PARSE_MUST_HAVE, re.I)
+    exc = re.compile(criteria.PARSE_EXCLUDE, re.I)
+    # Only what survives the parser. A role the title already ruled out does not need
+    # its original found - that is the whole reason this runs after the parser.
     # Work from what is known good, not from the absence of something bad.
     # ghostbuster settles liveness first and far more cheaply, so fetcher takes
     # the postings it confirmed alive and leaves the rest: a role it never
@@ -619,22 +619,43 @@ def main():
     # run.
     links = json.loads(LINKS_FILE.read_text()) if LINKS_FILE.exists() else {}
     alive = {k for k, v in links.items() if v.get("status") == "alive"}
-    known_live = (lambda rid: True) if ("--unchecked" in sys.argv or not links) \
-        else (lambda rid: rid in alive)
+    dead = {k for k, v in links.items() if v.get("status") == "gone"}
     todo = [r for r in pool_doc["jobs"]
             if r.get("active") and (r.get("title") or "")
             and must.search(r["title"]) and not exc.search(r["title"])
-            and known_live(r["id"])
+            and r["id"] not in dead
             and out.get(r["id"], {}).get("status") not in ("found", "no_site", "no_company")]
+
+    # Four tiers, in this order (Cesar):
+    #   1. fresh and confirmed alive      - what he might apply to this week
+    #   2. old and confirmed alive        - real, just stale
+    #   3. fresh, liveness unknown        - ghostbuster has not got to it yet
+    #   4. old, liveness unknown
+    # By the time the confirmed sets are done ghostbuster has usually finished,
+    # so tiers 3 and 4 arrive already settled and shrink to nothing.
+    import results as R
+
+    def tier(r):
+        old_role = (R.age_days(r) or 10**6) > R.GHOST_DAYS
+        return (0 if r["id"] in alive else 1) * 2 + (1 if old_role else 0)
+
+    todo.sort(key=lambda r: (tier(r), R.age_days(r) or 10**6))
     if "--old" in sys.argv:
         # The roles whose absence at the employer actually means something:
         # over ten weeks, and therefore droppable if nobody is hiring for them.
         import results as R
         todo = [r for r in todo if (R.age_days(r) or 0) > R.GHOST_DAYS]
         todo.sort(key=lambda r: -(R.age_days(r) or 0))
+    if "--all" not in sys.argv:
+        # His feed, not the pool. the parser survivors are ~5,000 roles that never
+        # reach the board; the three lanes are ~730 and they are what he reads.
+        # --all opts into the rest.
+        res = json.loads((ROOT / "data" / "results.json").read_text())
+        ids = {i for k in ("open", "portugal", "unsure") for i in res["lanes"].get(k, [])}
+        todo = [r for r in todo if r["id"] in ids]
     if "--lanes" in sys.argv:
         # Only what is actually on the board: the three lanes, minus the 69+
-        # shelf. L1 survivors are 3,500 roles he will never read; these are the
+        # shelf. the parser survivors are 3,500 roles he will never read; these are the
         # ones in front of him.
         import results as R
         res = json.loads((ROOT / "data" / "results.json").read_text())
@@ -644,7 +665,7 @@ def main():
         todo.sort(key=lambda r: R.age_days(r) or 0)
     if "--lanes" in sys.argv:
         # Only what is actually on the board: the three lanes, minus the 69+
-        # shelf. L1 survivors are 3,500 roles he will never read; these are the
+        # shelf. the parser survivors are 3,500 roles he will never read; these are the
         # ones in front of him.
         import results as R
         res = json.loads((ROOT / "data" / "results.json").read_text())

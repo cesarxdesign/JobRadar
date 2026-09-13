@@ -1,10 +1,10 @@
-"""Recall tests for L2. Cesar applied to every role in these sets, so a CUT is
+"""Recall tests for the judge. Cesar applied to every role in these sets, so a CUT is
 a proven false-cut - the one error that is invisible in production.
 
     python3 testl2.py applied   52 v1-applied roles, matched into the pool, WITH JDs
     python3 testl2.py emails    135 roles from application emails, title only
 
-The email set has no JD, so it tests the ROLE axis alone. L2 must not cut on
+The email set has no JD, so it tests the ROLE axis alone. the judge must not cut on
 place without evidence; if it does, that is a bug in the criteria.
 """
 import json, os, sys, threading, time
@@ -45,7 +45,7 @@ def load_emails():
 def main():
     which = sys.argv[1] if len(sys.argv) > 1 else "applied"
     items = load_applied() if which == "applied" else load_emails()
-    print(f"L2 recall test: {which} - {len(items)} roles, criteria {criteria.VERSION}", flush=True)
+    print(f"the judge recall test: {which} - {len(items)} roles, criteria {criteria.VERSION}", flush=True)
     print("every one of these was applied to, so any CUT is a false cut\n", flush=True)
 
     cache = read.load_cache()

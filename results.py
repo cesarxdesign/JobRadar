@@ -95,7 +95,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
             continue
         v = dict(DEFAULT_VERDICT)
         v.update(verdicts.get(rec["id"], {}))
-        if v.get("stage") == "L1":
+        if v.get("stage") == "parse":
             title_cuts += 1          # kept, with its reason, in verdicts.json
             continue
         if not v.get("judged"):
@@ -105,7 +105,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
         role.update({k: x for k, x in (v.get("panel") or {}).items() if x})
         role["verdict"] = v
         roles.append(role)
-        if v.get("judged") and v.get("stage") != "L1":
+        if v.get("judged") and v.get("stage") != "parse":
             (cut if v["cut"] else lanes[v["lane"]]).append(rec["id"])
     # The board fetches this file. 47,000 title cuts would make it 25MB for
     # rows no lane shows; they stay in verdicts.json with their reasons.

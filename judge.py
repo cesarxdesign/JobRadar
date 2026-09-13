@@ -3,10 +3,10 @@
 The second leg. Reads the pool, never writes it. Holds no criteria - those
 live in criteria.py - and writes nothing but its own file.
 
-    L1   title-only word rules (criteria.L1_*). Cheap, binary, readable.
+    the parser   title-only word rules (criteria.PARSE_*). Cheap, binary, readable.
     resolve   every survivor with a thin or missing description gets the
               original posting fetched (deep.py) before anyone judges it.
-    L2   Claude reads the full posting as it renders (read.py), with the
+    the judge   Claude reads the full posting as it renders (read.py), with the
          criteria from criteria.py, and answers ROLE and PLACE.
 
 Every active role gets a verdict, keyed by id. Cuts are kept with their
@@ -33,12 +33,12 @@ POOL_FILE = f"{ROOT}/data/pool.json"
 JD_FILE = f"{ROOT}/data/jd.json"
 VERDICTS_FILE = f"{ROOT}/data/verdicts.json"
 
-HAS, EXC = re.compile(c.L1_MUST_HAVE, re.I), re.compile(c.L1_EXCLUDE, re.I)
-JR, LEAD, NOT = (re.compile(c.L1_JUNIOR, re.I), re.compile(c.L1_LEADERSHIP, re.I),
-                 re.compile(c.L1_NOT_LEADERSHIP, re.I))
+HAS, EXC = re.compile(c.PARSE_MUST_HAVE, re.I), re.compile(c.PARSE_EXCLUDE, re.I)
+JR, LEAD, NOT = (re.compile(c.PARSE_JUNIOR, re.I), re.compile(c.PARSE_LEADERSHIP, re.I),
+                 re.compile(c.PARSE_NOT_LEADERSHIP, re.I))
 
 
-# ---------------------------------------------------------------- L1
+# ---------------------------------------------------------------- the parser
 def l1(title):
     """None when the title passes, else the reason it was cut. Title only."""
     t = title or ""
@@ -54,17 +54,17 @@ def l1(title):
 
 
 def survivors(jobs, jd):
-    """Active roles that pass L1, with whatever description is on file."""
+    """Active roles that pass the parser, with whatever description is on file."""
     return [(x, jd.get(x["id"]) or "") for x in jobs
             if x.get("active") and l1(x.get("title")) is None]
 
 
 # ---------------------------------------------------------------- resolve
 def resolve(items):
-    """Every thin survivor is resolved to the original before L2 sees it.
+    """Every thin survivor is resolved to the original before the judge sees it.
     Aggregators republish a summary; some boards (SmartRecruiters, Workday)
     list postings without a body at all. This is a pipeline step, not a thing
-    to remember: pool -> L1 -> resolve -> L2. Skipping it is how a whole
+    to remember: pool -> the parser -> resolve -> the judge. Skipping it is how a whole
     batch got judged on summaries once."""
     todo = [(rec, jd) for rec, jd in items
             if len(jd or "") < read.THIN and rec.get("url")]
@@ -120,14 +120,14 @@ def resolve(items):
 # ---------------------------------------------------------------- verdicts
 def l1_verdict(reason):
     return {"role": "no", "place": "unclear", "lane": "unsure", "cut": True,
-            "why": [reason], "judged": True, "stage": "L1"}
+            "why": [reason], "judged": True, "stage": "parse"}
 
 
 def l2_verdict(v, text):
     return {"text": text,"role": v.get("role_verdict") or "unclear",
             "place": v.get("place_verdict") or "unclear",
             "lane": v.get("lane") or "unsure", "cut": bool(v.get("cut")),
-            "why": [v.get("reason") or ""], "judged": True, "stage": "L2",
+            "why": [v.get("reason") or ""], "judged": True, "stage": "judge",
             "confidence": v.get("confidence"), "fields": v.get("fields") or {},
             "inferred": v.get("inferred") or []}
 
@@ -136,7 +136,7 @@ def write(doc, jobs_verdicts):
     doc["jobs"] = jobs_verdicts
     from collections import Counter
     doc["counts"] = dict(Counter(
-        ("cut-L1" if v["stage"] == "L1" else "cut-L2" if v["cut"] else v["lane"])
+        ("cut-parse" if v["stage"] == "parse" else "cut-judge" if v["cut"] else v["lane"])
         for v in jobs_verdicts.values()))
     tmp = f"{VERDICTS_FILE}.tmp"
     open(tmp, "w").write(json.dumps(doc, indent=1, ensure_ascii=False))
@@ -153,7 +153,7 @@ def main():
     jobs = pool_doc["jobs"]
     jd = json.load(open(JD_FILE))
     # Only this judge's own verdicts count as history. The file on disk may
-    # be from the old L1-only engine (no "stage"); that is not a verdict.
+    # be from the old the parser-only engine (no "stage"); that is not a verdict.
     previous = (json.load(open(VERDICTS_FILE)).get("jobs", {})
                 if os.path.exists(VERDICTS_FILE) else {})
     previous = {k: v for k, v in previous.items() if isinstance(v, dict) and "stage" in v}
@@ -181,10 +181,10 @@ def main():
     thin = sum(1 for _, t in items if len(t or "") < read.THIN)
     cache = read.load_cache()
     hits = sum(1 for rec, t in items if t and read.key_for(rec, t) in cache)
-    print(f"{len(active)} active roles: {len(out)} cut at L1, {len(items)} survive "
+    print(f"{len(active)} active roles: {len(out)} cut at the parser, {len(items)} survive "
           f"({thin} thin or empty, to resolve). criteria {c.VERSION}, {read.MODEL}",
           flush=True)
-    print(f"  L2: {hits} already read, about {len(items)-hits} reads to make", flush=True)
+    print(f"  the judge: {hits} already read, about {len(items)-hits} reads to make", flush=True)
     if "--dry" in sys.argv:
         print("  --dry: nothing fetched, nothing read, nothing written")
         return 0

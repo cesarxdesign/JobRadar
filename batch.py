@@ -55,7 +55,7 @@ def draw():
         rec = pool.get(rid)
         if not rec or not rec.get("active") or rid in seen:
             continue
-        if v.get("stage") != "L2" or not v.get("judged"):
+        if v.get("stage") != "judge" or not v.get("judged"):
             continue        # a title cut is not a judgement worth reviewing
         (cuts if v["cut"] else passes).append((rec, v))
     random.shuffle(passes); random.shuffle(cuts)

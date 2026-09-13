@@ -1,10 +1,10 @@
-"""deep: fetch the ORIGINAL posting for L1 survivors whose JD is thin.
+"""deep: fetch the ORIGINAL posting for the parser survivors whose JD is thin.
 
 Aggregators republish a summary. designjobsworld's JSON-LD description runs
-about 270 characters - two sentences - and L2 was judging on that. But it
+about 270 characters - two sentences - and the judge was judging on that. But it
 keeps the real ATS link, so the full posting is one request away.
 
-Only L1 survivors are fetched, which is the whole point of judging cheaply
+Only the parser survivors are fetched, which is the whole point of judging cheaply
 first. Results go into data/jd.json beside the rest.
 
     python3 deep.py            # enrich every thin survivor
@@ -231,9 +231,9 @@ def fetch_original(url):
 
 def survivors():
     pool = contracts.load_pool(ROOT / "data" / "pool.json")["jobs"]
-    HAS, EXC = re.compile(c.L1_MUST_HAVE, re.I), re.compile(c.L1_EXCLUDE, re.I)
-    JR, LEAD = re.compile(c.L1_JUNIOR, re.I), re.compile(c.L1_NOT_LEADERSHIP, re.I)
-    LD = re.compile(c.L1_LEADERSHIP, re.I)
+    HAS, EXC = re.compile(c.PARSE_MUST_HAVE, re.I), re.compile(c.PARSE_EXCLUDE, re.I)
+    JR, LEAD = re.compile(c.PARSE_JUNIOR, re.I), re.compile(c.PARSE_NOT_LEADERSHIP, re.I)
+    LD = re.compile(c.PARSE_LEADERSHIP, re.I)
     lead = lambda t: bool(LD.search(t)) and not JR.search("") and not LEAD.search(t)
     out = []
     for x in pool:
@@ -242,7 +242,7 @@ def survivors():
             continue
         if EXC.search(t) and not lead(t):
             continue
-        if re.search(c.L1_JUNIOR, t, re.I):
+        if re.search(c.PARSE_JUNIOR, t, re.I):
             continue
         out.append(x)
     return out

@@ -1,9 +1,9 @@
 """The Judge's criteria. THE ONLY FILE THAT HOLDS AN OPINION.
 
 Two layers:
-  L1  cheap, title-only, runs over the whole pool. Cuts are silent and final,
+  the parser  cheap, title-only, runs over the whole pool. Cuts are silent and final,
       so it only cuts where the title alone is definitive.
-  L2  Claude reads the JD holding these criteria and returns the verdict.
+  the judge  Claude reads the JD holding these criteria and returns the verdict.
 
 Edit this file to change what the radar looks for. Nothing else changes.
 A verdict is frozen when it is made and stamped with VERSION, so changing
@@ -12,31 +12,31 @@ criteria affects roles judged afterwards, not roles already judged.
 
 VERSION = "2026-09-03.1"
 
-# ---------------------------------------------------------------- L1
+# ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
-L1_MUST_HAVE = r"\b(design|designer|ux)\b|(?:^| )ui(?: |$)|ui/ux|ux/ui"
-L1_EXCLUDE = (r"\b(brand|marketing|graphic|motion|research|researcher|"
+PARSE_MUST_HAVE = r"\b(design|designer|ux)\b|(?:^| )ui(?: |$)|ui/ux|ux/ui"
+PARSE_EXCLUDE = (r"\b(brand|marketing|graphic|motion|research|researcher|"
               r"web ?designer|visual ?designer)\b")
 # ...unless the role is design leadership. A Head of Design or Design Director
 # oversees brand, graphic and research rather than doing them, so those words
 # stop being a reason to cut. "Lead" does NOT qualify - a Design Lead is still
 # an IC-scope title.
 # The leadership word must attach to design itself.
-L1_LEADERSHIP = (r"\b(?:head of|director(?: of|,)?)\s+(?:[a-z]{0,12}\s+)?"
+PARSE_LEADERSHIP = (r"\b(?:head of|director(?: of|,)?)\s+(?:[a-z]{0,12}\s+)?"
                  r"(?:design|ui|ux|product design)\b"
                  r"|\b(?:design|ui|ux|product design)\s+director\b")
 # ...but "Art Director" and "Creative Director" are brand titles, not design
-# leadership. Checked separately: as a lookahead inside L1_LEADERSHIP the regex
+# leadership. Checked separately: as a lookahead inside PARSE_LEADERSHIP the regex
 # engine simply retried at a later position and matched anyway.
-L1_NOT_LEADERSHIP = r"\b(?:art|creative)\s+director\b"
+PARSE_NOT_LEADERSHIP = r"\b(?:art|creative)\s+director\b"
 
-L1_JUNIOR = (r"\b(junior|jr\.?|intern|internship|trainee|graduate|new grad|"
+PARSE_JUNIOR = (r"\b(junior|jr\.?|intern|internship|trainee|graduate|new grad|"
              r"entry[- ]level|apprentice|working student|werkstudent|placement|co[- ]?op)\b")
 
-# ---------------------------------------------------------------- L2
+# ---------------------------------------------------------------- the judge
 # Handed to Claude verbatim. Written as instructions to a reader, not as rules
 # for a machine, because a reader is what is on the other end.
-L2_CRITERIA = """
+JUDGE_CRITERIA = """
 BEFORE ANYTHING ELSE, LOOK AT WHAT LANGUAGE THE POSTING IS WRITTEN IN.
 Read the words in the description. English or Portuguese, carry on. Any
 other language - German, French, Spanish, Dutch, Italian, Polish - is a cut,
@@ -126,7 +126,7 @@ IF THERE IS NO JOB DESCRIPTION
   is not evidence about location. Never cut on place with no description.
 """
 
-L2_FIELDS = """
+JUDGE_FIELDS = """
 Extract these fields from the posting. They live on the role afterwards, so
 they matter as much as the verdict.
 
@@ -153,7 +153,7 @@ a posting that never mentions remote work and names an office is onsite, and
 you should say so, but mark it inferred.
 """
 
-L2_OUTPUT = """
+JUDGE_OUTPUT = """
 Return ONE JSON object and nothing else. No prose, no code fence.
 
 {

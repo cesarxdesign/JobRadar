@@ -1,6 +1,7 @@
 """Radar2 — the seam between the four modules.
 
     pool        -> data/pool.json       every role found. no opinions.
+    parser      -> (in judge.py)         title regex. free, cuts 98,000.
     judge       -> data/verdicts.json   criteria cut the pool. the only opinions.
     fetcher     -> data/originals.json  the same role at the employer.
     ghostbuster -> data/links.json      which postings are dead.

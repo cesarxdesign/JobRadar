@@ -43,6 +43,7 @@ import random
 import time
 
 import pool as P
+import results as R
 from fetcher import Blocked, get
 
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -128,8 +129,8 @@ def main():
 
     pool_doc = contracts.load_pool(POOL_FILE)
     out = json.loads(LINKS_FILE.read_text()) if LINKS_FILE.exists() else {}
-    must = re.compile(criteria.L1_MUST_HAVE, re.I)
-    exc = re.compile(criteria.L1_EXCLUDE, re.I)
+    must = re.compile(criteria.PARSE_MUST_HAVE, re.I)
+    exc = re.compile(criteria.PARSE_EXCLUDE, re.I)
 
     todo = [r for r in pool_doc["jobs"]
             if r.get("active") and (r.get("title") or "")
@@ -149,11 +150,19 @@ def main():
         by_host = {}
         for r in todo:
             by_host.setdefault(urllib.parse.urlsplit(r.get("url") or "").netloc, []).append(r)
+        for ring in by_host.values():
+            ring.sort(key=lambda r: ((R.age_days(r) or 10**6) > R.GHOST_DAYS,
+                                     R.age_days(r) or 10**6))
         todo, rings = [], sorted(by_host.values(), key=len, reverse=True)
         for i in range(max((len(v) for v in rings), default=0)):
             for ring in rings:
                 if i < len(ring):
                     todo.append(ring[i])
+    # Fresh before old, always. A dead posting he might have applied to this
+    # week costs him more than a dead one from 2018 that the 69+ shelf already
+    # keeps out of his way. 69 days is the line everywhere in this pipeline.
+    todo.sort(key=lambda r: ((R.age_days(r) or 10**6) > R.GHOST_DAYS,
+                             R.age_days(r) or 10**6))
     if "--limit" in sys.argv:
         todo = todo[:int(sys.argv[sys.argv.index("--limit") + 1])]
 

@@ -156,12 +156,12 @@ def main():
     json.dump(emails, open(f"{ROOT}/data/emails.json", "w"), indent=1, ensure_ascii=False)
     # Only roles that PASSED the judge - the three lanes. Emails cleanse the
     # board he actually reviews; a role the judge cut is not on it, and
-    # matching against the whole pool only invents work. It matched 1,954 L1
+    # matching against the whole pool only invents work. It matched 1,954 the parser
     # survivors before, which is the pool minus titles, not the judge's yes.
     verdicts = json.load(open(f"{ROOT}/data/verdicts.json"))["jobs"]
     def passed(j):
         v = verdicts.get(j["id"]) or {}
-        return v.get("judged") and v.get("stage") == "L2" and not v.get("cut")
+        return v.get("judged") and v.get("stage") == "judge" and not v.get("cut")
     jobs = [j for j in json.load(open(f"{ROOT}/data/pool.json"))["jobs"]
             if j.get("active") and passed(j)]
     by_co = {}

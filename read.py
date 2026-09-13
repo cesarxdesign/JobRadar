@@ -1,4 +1,4 @@
-"""read: the L2 pass. Claude reads a posting holding the judge's criteria.
+"""read: the the judge pass. Claude reads a posting holding the judge's criteria.
 
 One call per role returns BOTH the verdict and the extracted fields, because
 the fields are the evidence for the verdict - asking twice would pay twice for
@@ -23,7 +23,7 @@ import criteria
 
 # Sources that republish somebody else's posting. Their description is a
 # summary - designjobsworld's runs about 270 characters - so a role from one
-# of these MUST be resolved to the original before L2 reads it. A company
+# of these MUST be resolved to the original before the judge reads it. A company
 # board is already the original and needs no resolving.
 AGGREGATORS = {"designjobsworld", "himalayas", "jobicy", "remoteok", "remotive",
                "arbeitnow", "landingjobs", "weworkremotely", "workingnomads",
@@ -92,8 +92,8 @@ def posting_text(rec, jd):
 
 
 def prompt_for(rec, jd):
-    return (criteria.L2_CRITERIA + "\n" + criteria.L2_FIELDS + "\n"
-            + criteria.L2_OUTPUT
+    return (criteria.JUDGE_CRITERIA + "\n" + criteria.JUDGE_FIELDS + "\n"
+            + criteria.JUDGE_OUTPUT
             + "\n\n--- THE POSTING, AS IT RENDERS ON THE PAGE ---\n"
             + posting_text(rec, jd))
 
