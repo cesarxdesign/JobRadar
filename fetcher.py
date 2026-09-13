@@ -490,6 +490,12 @@ def main():
             if r.get("active") and (r.get("title") or "")
             and must.search(r["title"]) and not exc.search(r["title"])
             and out.get(r["id"], {}).get("status") not in ("found", "no_site", "no_company")]
+    if "--old" in sys.argv:
+        # The roles whose absence at the employer actually means something:
+        # over ten weeks, and therefore droppable if nobody is hiring for them.
+        import results as R
+        todo = [r for r in todo if (R.age_days(r) or 0) > R.GHOST_DAYS]
+        todo.sort(key=lambda r: -(R.age_days(r) or 0))
     if "--limit" in sys.argv:
         todo = todo[:int(sys.argv[sys.argv.index("--limit") + 1])]
 

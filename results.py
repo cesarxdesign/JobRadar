@@ -10,6 +10,7 @@ the pool may set - a role the company took down is a different fact.
 
     python3 results.py
 """
+import datetime
 import json
 from pathlib import Path
 
@@ -18,6 +19,7 @@ import contracts
 
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
+ORIGINALS_FILE = ROOT / "data" / "originals.json"
 VERDICTS_FILE = ROOT / "data" / "verdicts.json"
 RESULTS_FILE = ROOT / "data" / "results.json"
 JD_FILE = ROOT / "data" / "jd.json"                   # descriptions, keyed by id
@@ -25,12 +27,45 @@ HINTS_FILE = ROOT / "data" / "applied_hints.json"     # local only, from match.p
 SHIPPED_FILE = ROOT / "data" / "shipped.json"         # every id ever put on the board
 
 
-def build(pool_doc, verdicts_doc, hints=None, jd=None):
+# A posting the aggregator still lists, that the employer's own site does not
+# have, that is also older than ten weeks, is a ghost. uiuxjobsboard serves
+# roles from 2018 - Volkswagen, TUI, Cartrack - and fetcher finds none of them
+# at the company. Under ten weeks the same absence proves nothing: plenty of
+# real jobs sit on boards fetcher cannot read. So the age and the miss have to
+# agree before anything is dropped.
+GHOST_DAYS = 69
+GHOST_STATUS = ("no_site", "no_match", "unreadable")
+
+
+def age_days(rec, today=None):
+    p = str(rec.get("posted") or rec.get("first_seen") or "")[:10]
+    try:
+        d = datetime.date(*map(int, p.split("-")))
+    except Exception:
+        return None
+    return ((today or datetime.date.today()) - d).days
+
+
+def is_ghost(rec, originals):
+    """Old, and not at the employer. Never on a role fetcher has not reached:
+    a bot wall or an unrun lookup is missing evidence, not evidence."""
+    o = (originals or {}).get(rec["id"])
+    if not o or o.get("status") not in GHOST_STATUS:
+        return False
+    a = age_days(rec)
+    return a is not None and a > GHOST_DAYS
+
+
+def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
     hints = hints or {}
     verdicts = verdicts_doc.get("jobs", {})
     roles, lanes, cut, title_cuts, unjudged = [], {k: [] for k in LANES}, [], 0, 0
+    ghosts = 0
     for rec in pool_doc["jobs"]:
         if not rec.get("active"):
+            continue
+        if is_ghost(rec, originals):
+            ghosts += 1
             continue
         v = dict(DEFAULT_VERDICT)
         v.update(verdicts.get(rec["id"], {}))
@@ -59,7 +94,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None):
         "run_id": pool_doc.get("run_id"),
         "criteria": verdicts_doc.get("criteria"),
         "model": verdicts_doc.get("model"),
-        "counts": {**{k: len(v) for k, v in lanes.items()},
+        "counts": {**{k: len(v) for k, v in lanes.items()}, "ghosts": ghosts,
                    "cut": len(cut), "title_cuts": title_cuts, "unjudged": unjudged,
                    "active": sum(1 for r in pool_doc["jobs"] if r.get("active")),
                    "total": len(pool_doc["jobs"])},
@@ -86,7 +121,8 @@ def main():
     built = build(contracts.load_pool(POOL_FILE),
                   json.loads(VERDICTS_FILE.read_text()),
                   json.loads(HINTS_FILE.read_text()) if HINTS_FILE.exists() else {},
-                  json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {})
+                  json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {},
+                  json.loads(ORIGINALS_FILE.read_text()) if ORIGINALS_FILE.exists() else {})
     fresh = remember_shipped(built)
     RESULTS_FILE.write_text(json.dumps(built, indent=1, ensure_ascii=False))
     print(f"wrote {RESULTS_FILE} - {built['counts']}")
