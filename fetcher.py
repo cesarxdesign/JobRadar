@@ -530,6 +530,32 @@ def main():
         import results as R
         todo = [r for r in todo if (R.age_days(r) or 0) > R.GHOST_DAYS]
         todo.sort(key=lambda r: -(R.age_days(r) or 0))
+    if "--lanes" in sys.argv:
+        # Only what is actually on the board: the three lanes, minus the 69+
+        # shelf. L1 survivors are 3,500 roles he will never read; these are the
+        # ones in front of him.
+        import results as R
+        res = json.loads((ROOT / "data" / "results.json").read_text())
+        ids = {i for k in ("open", "portugal", "unsure") for i in res["lanes"].get(k, [])}
+        todo = [r for r in todo if r["id"] in ids
+                and (R.age_days(r) or 10**6) <= R.GHOST_DAYS]
+        todo.sort(key=lambda r: R.age_days(r) or 0)
+    if "--lanes" in sys.argv:
+        # Only what is actually on the board: the three lanes, minus the 69+
+        # shelf. L1 survivors are 3,500 roles he will never read; these are the
+        # ones in front of him.
+        import results as R
+        res = json.loads((ROOT / "data" / "results.json").read_text())
+        ids = {i for k in ("open", "portugal", "unsure") for i in res["lanes"].get(k, [])}
+        todo = [r for r in todo if r["id"] in ids
+                and (R.age_days(r) or 10**6) <= R.GHOST_DAYS]
+        todo.sort(key=lambda r: R.age_days(r) or 0)
+    if "--fresh" in sys.argv:
+        # The live half: young enough that a miss means "serve source only",
+        # not "drop it". Newest first, because those are the ones he is reading.
+        import results as R
+        todo = [r for r in todo if (R.age_days(r) or 10**6) <= R.GHOST_DAYS]
+        todo.sort(key=lambda r: R.age_days(r) or 0)
     if "--limit" in sys.argv:
         todo = todo[:int(sys.argv[sys.argv.index("--limit") + 1])]
 
