@@ -93,6 +93,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab on" data-lane="open">Open<span class="n" id="c-open"></span></button>
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
+  <button class="tab" data-lane="old69">69+<span class="n" id="c-old69"></span></button>
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
@@ -253,6 +254,12 @@ function haystack(r){
 // no new data, no server. A filter narrows what a lane shows; it never moves
 // a role between lanes, because the lane is the judge's verdict, not a view.
 const F={date:"",place:"",sen:"",src:"",sal:""};
+// Anything over 69 days leaves the three lanes and collects in its own. A
+// role that has been open ten weeks is a different kind of thing from a fresh
+// one - mostly it is an aggregator keeping a dead posting alive to pad its
+// count - and it should not sit in the same list as something posted today.
+const OLD_DAYS=69;
+const isOld=r=>{const d=days(r);return d!==null&&d>OLD_DAYS;};
 let SORT="new";
 // A date filter on a newest-first list only removes the oldest rows, which sit
 // below the fold - it works and it looks inert. Sorting is what actually moves
@@ -340,7 +347,10 @@ function pool(){
   else if(LANE==="applied"||LANE==="discarded")
     rows=DATA.roles.filter(r=>r.active && routing(r.id)===LANE).concat(decided(LANE));
   // a role you have acted on leaves the first three lanes
-  else rows=(DATA.lanes[LANE]||[]).map(roleById).filter(r=>r && !routing(r.id));
+  else if(LANE==="old69")
+    rows=["open","portugal","unsure"].flatMap(l=>(DATA.lanes[l]||[]))
+      .map(roleById).filter(r=>r && !routing(r.id) && isOld(r));
+  else rows=(DATA.lanes[LANE]||[]).map(roleById).filter(r=>r && !routing(r.id) && !isOld(r));
   rows=rows.filter(matches);
   if(LANE!=="favorites") return sortRows(rows);
   const order=["open","portugal","unsure","applied","discarded","cut"];
@@ -354,9 +364,12 @@ function counts(){
     return;
   }
   for(const l of ["open","portugal","unsure"]){
-    const n=(DATA.lanes[l]||[]).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length;
+    const n=(DATA.lanes[l]||[]).map(roleById)
+      .filter(r=>r&&!routing(r.id)&&!isOld(r)&&matches(r)).length;
     $("c-"+l).textContent=n||"";
   }
+  $("c-old69").textContent=["open","portugal","unsure"].flatMap(l=>(DATA.lanes[l]||[]))
+    .map(roleById).filter(r=>r&&!routing(r.id)&&isOld(r)&&matches(r)).length||"";
   if(RR){
     for(const l of ["applied","discarded"])
       $("c-"+l).textContent=(DATA.roles.filter(r=>r.active&&routing(r.id)===l)
