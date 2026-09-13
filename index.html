@@ -105,15 +105,16 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 <div class="filters" id="filters">
   <select id="f-date">
     <option value="">any age</option>
-    <option value="-7">under 1 week</option>
-    <option value="-14">under 2 weeks</option>
-    <option value="-21">under 3 weeks</option>
-    <option value="-28">under 4 weeks</option>
-    <option value="-35">under 5 weeks</option>
-    <option value="-42">under 6 weeks</option>
-    <option value="-49">under 7 weeks</option>
-    <option value="-56">under 8 weeks</option>
-    <option value="-63">under 9 weeks</option>
+    <option value="0:7">under 1 week</option>
+    <option value="7:14">1 week (7–14d)</option>
+    <option value="14:21">2 weeks (14–21d)</option>
+    <option value="21:28">3 weeks (21–28d)</option>
+    <option value="28:35">4 weeks (28–35d)</option>
+    <option value="35:42">5 weeks (35–42d)</option>
+    <option value="42:49">6 weeks (42–49d)</option>
+    <option value="49:56">7 weeks (49–56d)</option>
+    <option value="56:63">8 weeks (56–63d)</option>
+    <option value="63:69">9 weeks (63–69d)</option>
     <option value="+69">69+ days</option>
     <option value="dated">has a date at all</option>
   </select>
@@ -301,7 +302,13 @@ function matches(r){
     if(F.date==="dated"){ if(d===null) return false; }
     else if(d===null) return false;
     else if(F.date[0]==="+"){ if(d <= +F.date.slice(1)) return false; }
-    else if(d > Math.abs(+F.date)) return false;
+    else if(F.date.includes(":")){
+      // A band, not a ceiling. "5 weeks" means 35 to 42 days, not everything
+      // under 42 - cumulative ranges all start at zero, so every one of them
+      // showed the same newest roles at the top and the list never moved.
+      const [lo,hi]=F.date.split(":").map(Number);
+      if(d < lo || d >= hi) return false;
+    }
   }
   if(F.place && placeOf(r)!==F.place) return false;
   if(F.sen && (f(r).seniority||"")!==F.sen) return false;
