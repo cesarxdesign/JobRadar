@@ -1,9 +1,11 @@
 """Radar2 — the seam between the four modules.
 
-    pool      -> data/pool.json       every role found. no opinions.
-    judge     -> data/verdicts.json   criteria cut the pool. the only opinions.
-    results   -> data/results.json    what survived, split into three lanes.
-    decisions -> RadarRouting.json    on the Mac. applied/discarded. never here.
+    pool        -> data/pool.json       every role found. no opinions.
+    judge       -> data/verdicts.json   criteria cut the pool. the only opinions.
+    fetcher     -> data/originals.json  the same role at the employer.
+    ghostbuster -> data/links.json      which postings are dead.
+    results     -> data/results.json    what survived, split into three lanes.
+    decisions   -> RadarRouting.json    on the Mac. applied/discarded. never here.
 
 A module may only write the file it owns. The judge may read the pool; it may
 not write to it. results derives, it does not decide. Swap the judge and

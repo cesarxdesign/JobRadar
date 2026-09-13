@@ -500,6 +500,69 @@ def fetch_one(rec, jd_text, sites=None):
             "changed": text_changed(jd_text, orig.get("jd") or "")}
 
 
+def check_link(rec):
+    """Is the posting the board pointed at still there. One request, no model,
+    no company lookup - this is the cheap half of ghost hunting and it answers
+    for itself.
+
+    Dead is a 404, or a redirect onto a listing page: Himalayas answers a
+    removed posting by bouncing you to its index rather than 404ing, so the
+    link resolves and the role looks alive forever.
+    """
+    url = rec.get("url")
+    if not url:
+        return {"status": "no_url"}
+    try:
+        html, final = get(url, timeout=12)
+    except Blocked:
+        return {"status": "blocked", "url": url}
+    except urllib.error.HTTPError as e:
+        if e.code in (404, 410):
+            return {"status": "gone", "url": url, "why": f"HTTP {e.code}"}
+        # 403 is a bot wall and 429 is us knocking too hard - both are the
+        # board refusing to answer, not the job being gone, and calling them
+        # "error" makes 1,000 walls look like 1,000 broken postings.
+        if e.code in (401, 403, 429, 503):
+            return {"status": "blocked", "url": url, "why": f"HTTP {e.code}"}
+        return {"status": "error", "url": url, "why": f"HTTP {e.code}"}
+    except Exception as e:
+        return {"status": "error", "url": url, "why": type(e).__name__}
+    if redirected_to_index(url, final):
+        return {"status": "gone", "url": url, "landed": final}
+    # A board that keeps the page but empties it says the same thing out loud.
+    text = P.strip_html(html, 4000).lower()
+    for phrase in ("no longer available", "this job has expired", "position has been filled",
+                   "no longer accepting applications", "job has been closed",
+                   "vaga encerrada", "oferta expirada"):
+        if phrase in text:
+            return {"status": "gone", "url": url, "why": phrase}
+    return {"status": "alive", "url": url, "final": final}
+
+
+def links_pass(todo, out, save):
+    """Every link, in parallel. No model anywhere in it."""
+    from concurrent.futures import ThreadPoolExecutor
+    import threading
+    lock, done, tally = threading.Lock(), [0], {}
+    t0 = datetime.now(timezone.utc)
+
+    def one(rec):
+        r = check_link(rec)
+        r["when"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        with lock:
+            out[rec["id"]] = {**out.get(rec["id"], {}), "link": r}
+            done[0] += 1
+            tally[r["status"]] = tally.get(r["status"], 0) + 1
+            if done[0] % 20 == 0 or done[0] == len(todo):
+                print(f"  [{done[0]}/{len(todo)}] {tally}  "
+                      f"{(datetime.now(timezone.utc)-t0).seconds}s", flush=True)
+                save()
+    with ThreadPoolExecutor(max_workers=12) as ex:
+        list(ex.map(one, todo))
+    save()
+    return tally
+
+
 def load(path, default):
     try:
         return json.loads(pathlib.Path(path).read_text())
@@ -558,6 +621,30 @@ def main():
         todo.sort(key=lambda r: R.age_days(r) or 0)
     if "--limit" in sys.argv:
         todo = todo[:int(sys.argv[sys.argv.index("--limit") + 1])]
+
+    if "--links" in sys.argv:
+        # Ghost hunting on its own: is the link alive. No company resolution,
+        # no model, twelve at a time.
+        todo = [r for r in pool_doc["jobs"]
+                if r.get("active") and (r.get("title") or "")
+                and must.search(r["title"]) and not exc.search(r["title"])]
+        if "--lanes" in sys.argv:
+            res = json.loads((ROOT / "data" / "results.json").read_text())
+            ids = {i for k in ("open", "portugal", "unsure") for i in res["lanes"].get(k, [])}
+            todo = [r for r in todo if r["id"] in ids]
+        if "--limit" in sys.argv:
+            todo = todo[:int(sys.argv[sys.argv.index("--limit") + 1])]
+
+        def save():
+            for path, doc in ((ORIGINALS_FILE, out), (SITES_FILE, sites)):
+                tmp = path.with_suffix(".tmp")
+                tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1))
+                tmp.replace(path)
+
+        print(f"checking {len(todo)} links", flush=True)
+        tally = links_pass(todo, out, save)
+        print(f"\n{tally}", flush=True)
+        return 0
 
     print(f"{len(todo)} roles to look up ({len(out)} already known, "
           f"{len(sites)} company sites learned)", flush=True)

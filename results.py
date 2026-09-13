@@ -20,6 +20,7 @@ import contracts
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
 ORIGINALS_FILE = ROOT / "data" / "originals.json"
+LINKS_FILE = ROOT / "data" / "links.json"
 VERDICTS_FILE = ROOT / "data" / "verdicts.json"
 RESULTS_FILE = ROOT / "data" / "results.json"
 JD_FILE = ROOT / "data" / "jd.json"                   # descriptions, keyed by id
@@ -57,12 +58,28 @@ def is_ghost(rec, originals):
     o = (originals or {}).get(rec["id"])
     if not o:
         return False
-    if o.get("status") in DEAD_STATUS:
+    # ghostbuster's answer is about this posting's own link, so it stands on
+    # its own at any age. fetcher's misses are about finding the employer,
+    # which only means something once the role is old.
+    if o.get("link", {}).get("status") in DEAD_STATUS or o.get("status") in DEAD_STATUS:
         return True
     if o.get("status") not in GHOST_STATUS:
         return False
     a = age_days(rec)
     return a is not None and a > GHOST_DAYS
+
+
+def merged_evidence():
+    """What fetcher and ghostbuster each concluded, per role, side by side.
+
+    Two files, two different questions - is the role at the employer, and is
+    the board's own link alive - so neither may overwrite the other.
+    """
+    out = json.loads(ORIGINALS_FILE.read_text()) if ORIGINALS_FILE.exists() else {}
+    links = json.loads(LINKS_FILE.read_text()) if LINKS_FILE.exists() else {}
+    for rid, link in links.items():
+        out.setdefault(rid, {})["link"] = link
+    return out
 
 
 def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
@@ -131,7 +148,7 @@ def main():
                   json.loads(VERDICTS_FILE.read_text()),
                   json.loads(HINTS_FILE.read_text()) if HINTS_FILE.exists() else {},
                   json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {},
-                  json.loads(ORIGINALS_FILE.read_text()) if ORIGINALS_FILE.exists() else {})
+                  merged_evidence())
     fresh = remember_shipped(built)
     RESULTS_FILE.write_text(json.dumps(built, indent=1, ensure_ascii=False))
     print(f"wrote {RESULTS_FILE} - {built['counts']}")
