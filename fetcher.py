@@ -610,15 +610,21 @@ def main():
     exc = re.compile(criteria.L1_EXCLUDE, re.I)
     # Only what survives L1. A role the title already ruled out does not need
     # its original found - that is the whole reason this runs after L1.
-    # ghostbuster settles liveness first and far more cheaply. Hunting for the
-    # employer of a posting it already found dead is the most expensive way to
-    # learn nothing, so those never enter the queue.
+    # Work from what is known good, not from the absence of something bad.
+    # ghostbuster settles liveness first and far more cheaply, so fetcher takes
+    # the postings it confirmed alive and leaves the rest: a role it never
+    # reached, or that answered with a wall, is not known to exist, and hunting
+    # for the employer of a posting that may be dead is the most expensive way
+    # to learn nothing. --unchecked takes them anyway when ghostbuster has not
+    # run.
     links = json.loads(LINKS_FILE.read_text()) if LINKS_FILE.exists() else {}
-    dead = {k for k, v in links.items() if v.get("status") == "gone"}
+    alive = {k for k, v in links.items() if v.get("status") == "alive"}
+    known_live = (lambda rid: True) if ("--unchecked" in sys.argv or not links) \
+        else (lambda rid: rid in alive)
     todo = [r for r in pool_doc["jobs"]
             if r.get("active") and (r.get("title") or "")
             and must.search(r["title"]) and not exc.search(r["title"])
-            and r["id"] not in dead
+            and known_live(r["id"])
             and out.get(r["id"], {}).get("status") not in ("found", "no_site", "no_company")]
     if "--old" in sys.argv:
         # The roles whose absence at the employer actually means something:
