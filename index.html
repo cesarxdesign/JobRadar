@@ -104,12 +104,15 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 <div class="filters" id="filters">
   <select id="f-date">
     <option value="">any date</option>
-    <option value="7">posted ≤ 7 days</option>
-    <option value="14">posted ≤ 14 days</option>
-    <option value="30">posted ≤ 30 days</option>
-    <option value="90">posted ≤ 90 days</option>
-    <option value="180">posted ≤ 6 months</option>
-    <option value="dated">has a date</option>
+    <option value="-7">posted in the last 7 days</option>
+    <option value="-14">posted in the last 14 days</option>
+    <option value="-30">posted in the last 30 days</option>
+    <option value="-90">posted in the last 3 months</option>
+    <option value="-180">posted in the last 6 months</option>
+    <option value="+30">older than 30 days</option>
+    <option value="+90">older than 3 months</option>
+    <option value="+180">older than 6 months</option>
+    <option value="dated">has a date at all</option>
   </select>
   <select id="f-place"><option value="">anywhere</option></select>
   <select id="f-sen"><option value="">any seniority</option></select>
@@ -282,9 +285,14 @@ function placeOf(r){
 function matches(r){
   if(Q && !Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w))) return false;
   if(F.date){
+    // "≤ 6 months" was read as "six months old and older", which is a fair
+    // reading of a bad label. Both directions now, spelled out: -N is the last
+    // N days, +N is older than N days.
     const d=days(r);
     if(F.date==="dated"){ if(d===null) return false; }
-    else if(d===null || d>+F.date) return false;
+    else if(d===null) return false;
+    else if(F.date[0]==="+"){ if(d <= +F.date.slice(1)) return false; }
+    else if(d > Math.abs(+F.date)) return false;
   }
   if(F.place && placeOf(r)!==F.place) return false;
   if(F.sen && (f(r).seniority||"")!==F.sen) return false;
