@@ -39,6 +39,9 @@ import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
+import random
+import time
+
 import pool as P
 from fetcher import Blocked, get
 
@@ -47,6 +50,14 @@ POOL_FILE = ROOT / "data" / "pool.json"
 LINKS_FILE = ROOT / "data" / "links.json"
 
 WORKERS = 12
+# Retry pass. A wall is usually the same host complaining about how fast we
+# knocked, not about us knocking at all - 208 of the first sweep's refusals
+# were 429s we caused ourselves. So the slow pass paces per host rather than
+# globally: unrelated boards still run in parallel, and no single board sees
+# two requests inside the gap.
+RETRY_WORKERS = 4
+HOST_GAP = 12.0          # seconds between two requests to the same host
+JITTER = 0.4             # +/- of the gap, so the pattern is not a metronome
 INDEX_PATHS = re.compile(r"^/(jobs|job-?board|careers|search|browse|remote-jobs)/?$", re.I)
 DEAD_PHRASES = ("no longer available", "this job has expired", "position has been filled",
                 "no longer accepting applications", "job has been closed",
@@ -61,13 +72,34 @@ def redirected_to_index(url, final):
     return bool(INDEX_PATHS.match(b.path or "/")) and len(a.path) > len(b.path)
 
 
-def check(rec):
+_host_at = {}
+_host_lock = threading.Lock()
+
+
+def pace(url):
+    """Wait until this host has not been touched for HOST_GAP seconds."""
+    host = urllib.parse.urlsplit(url).netloc.lower()
+    while True:
+        with _host_lock:
+            now = time.monotonic()
+            gap = HOST_GAP * (1 + random.uniform(-JITTER, JITTER))
+            last = _host_at.get(host, 0)
+            if now - last >= gap:
+                _host_at[host] = now
+                return
+            wait = gap - (now - last)
+        time.sleep(min(wait, 5))
+
+
+def check(rec, slow=False):
     """One posting, one request, one verdict about its link."""
     url = rec.get("url")
     if not url:
         return {"status": "no_url"}
+    if slow:
+        pace(url)
     try:
-        html, final = get(url, timeout=12)
+        html, final = get(url, timeout=20 if slow else 12)
     except Blocked:
         return {"status": "blocked", "url": url}
     except urllib.error.HTTPError as e:
@@ -106,6 +138,22 @@ def main():
         res = json.loads((ROOT / "data" / "results.json").read_text())
         ids = {i for k in ("open", "portugal", "unsure") for i in res["lanes"].get(k, [])}
         todo = [r for r in todo if r["id"] in ids]
+    slow = "--retry" in sys.argv or "--slow" in sys.argv
+    if "--retry" in sys.argv:
+        # Only what refused to answer last time. Nothing here is known to be
+        # alive or dead, so a wall is the one outcome worth paying to revisit.
+        was = {k for k, v in out.items() if v.get("status") == "blocked"}
+        todo = [r for r in todo if r["id"] in was]
+        # Fewest-first by host, so the big offenders are spread through the run
+        # instead of stacking at the front behind one 12-second gap.
+        by_host = {}
+        for r in todo:
+            by_host.setdefault(urllib.parse.urlsplit(r.get("url") or "").netloc, []).append(r)
+        todo, rings = [], sorted(by_host.values(), key=len, reverse=True)
+        for i in range(max((len(v) for v in rings), default=0)):
+            for ring in rings:
+                if i < len(ring):
+                    todo.append(ring[i])
     if "--limit" in sys.argv:
         todo = todo[:int(sys.argv[sys.argv.index("--limit") + 1])]
 
@@ -118,7 +166,7 @@ def main():
         tmp.replace(LINKS_FILE)
 
     def one(rec):
-        r = check(rec)
+        r = check(rec, slow=slow)
         r["when"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         with lock:
             out[rec["id"]] = r
@@ -131,8 +179,10 @@ def main():
                       f"{(datetime.now(timezone.utc)-t0).seconds}s", flush=True)
                 save()
 
-    print(f"checking {len(todo)} links, {WORKERS} at a time", flush=True)
-    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+    workers = RETRY_WORKERS if slow else WORKERS
+    print(f"checking {len(todo)} links, {workers} at a time"
+          + (f", {HOST_GAP:.0f}s between hits on the same host" if slow else ""), flush=True)
+    with ThreadPoolExecutor(max_workers=workers) as ex:
         list(ex.map(one, todo))
     save()
     dead = [k for k, v in out.items() if v.get("status") == "gone"]
