@@ -26,6 +26,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
    where it is least findable and most needed. Everything wraps, and the
    count sits with the controls instead of being pushed to the far edge. */
 .filters select{flex:0 1 auto;min-width:0}
+.filters .safari{color:var(--dim);font-size:12.5px;display:flex;align-items:center;gap:4px;cursor:pointer}
 .filters .n{margin-left:0;order:99}
 
 .filters select{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font-size:12.5px}
@@ -131,6 +132,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
     <option value="sal">salary first</option>
     <option value="co">company A–Z</option>
   </select>
+  <label class="safari" title="job links open in Safari; the board stays in Chrome because only Chrome can read and write the routing file"><input type="checkbox" id="f-safari"> Safari</label>
   <button class="clear" id="f-clear">clear</button>
   <span class="n" id="f-count"></span>
 </div>
@@ -292,6 +294,16 @@ function placeOf(r){
   return "Other";
 }
 
+// The board has to run in Chrome - it is the only browser that can read and
+// write the routing file - but a job posting is nicer to read anywhere else.
+// Safari claims x-safari-https:, so an https link handed that scheme opens
+// there while this page stays put. Per-browser setting, off by default.
+let SAFARI = false;
+try { SAFARI = localStorage.getItem("radar-safari") === "1"; } catch (e) {}
+function outbound(u){
+  return SAFARI && /^https:\/\//i.test(u || "") ? "x-safari-" + u : u;
+}
+
 function matches(r){
   if(Q && !Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w))) return false;
   if(F.date){
@@ -340,6 +352,13 @@ function wireFilters(){
   const map={"f-date":"date","f-place":"place","f-sen":"sen","f-src":"src","f-sal":"sal"};
   const so=$("f-sort");
   if(so) so.onchange=()=>{SORT=so.value;render();};
+  const sf=$("f-safari");
+  if(sf){
+    sf.checked=SAFARI;
+    sf.onchange=()=>{SAFARI=sf.checked;
+      try{localStorage.setItem("radar-safari",SAFARI?"1":"0");}catch(e){}
+      render();};
+  }
   for(const id in map){
     const el=$(id); if(!el) continue;
     el.onchange=()=>{F[map[id]]=el.value;render();};
@@ -418,7 +437,7 @@ function render(){
                 :'the posting shows no date anywhere; first seen on radar '
                  +esc(String(r.first_seen||"").slice(0,10))+', so it is at least this old')
       +'">'+ageLabel(r,d)+'</div>'
-      +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
+      +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound(r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
       + (r.gone?'<span class="tag n">no longer posted</span>':placeTag(r))
@@ -508,7 +527,7 @@ function renderPane(){
     + fact("Reports to", esc(f(r).reports_to))
     + fact("Source", esc((r.sources||[r.source]).join(", ")))
     +'</div>'
-    + (r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener" style="color:var(--acc)">Open posting ↗</a>':'')
+    + (r.url?'<a href="'+esc(outbound(r.url))+'" target="_blank" rel="noopener" style="color:var(--acc)">Open posting ↗</a>':'')
     + '<div class="jd" id="jd"><span class="none">loading the description…</span></div>'
     + (v.why&&v.why.length?'<div class="why"><b>Judge said</b> · role '+esc(v.role)+' · place '+esc(v.place)
         +' · '+esc(v.confidence||"")+' confidence · read the '+esc(v.text||"posting")
