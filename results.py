@@ -142,7 +142,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
         roles.append(role)
         if v.get("judged") and v.get("stage") != "parse":
             lane = v["lane"]
-            if not v["cut"] and lane == "open" and placed_elsewhere(rec):
+            if not v["cut"] and lane in ("open", "unsure") and placed_elsewhere(rec):
                 cut.append(rec["id"])          # remote, but somewhere he is not
                 continue
             (cut if v["cut"] else lanes[lane]).append(rec["id"])
