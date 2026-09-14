@@ -44,6 +44,8 @@ import time
 
 import pool as P
 import results as R
+from pool import AGGREGATORS
+from fetcher import ATS_HOSTS
 from fetcher import Blocked, get
 
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -123,6 +125,21 @@ def check(rec, slow=False):
     return {"status": "alive", "url": url}
 
 
+def whose_link(rec):
+    """An aggregator's copy dying is not the job dying.
+
+    uiuxjobsboard dropping a posting means uiuxjobsboard dropped it. The
+    company may still be hiring, and fetcher is the one who can ask. A 404 on
+    the employer's own board is a different claim entirely - that is the job
+    being gone, from the only source that would know.
+    """
+    src = (rec.get("source") or "").split("/")[0]
+    url = rec.get("url") or ""
+    if any(h in url for h in ATS_HOSTS):
+        return "employer"
+    return "aggregator" if src in AGGREGATORS else "employer"
+
+
 def main():
     import contracts
     import criteria
@@ -176,6 +193,7 @@ def main():
 
     def one(rec):
         r = check(rec, slow=slow)
+        r["link_of"] = whose_link(rec)
         r["when"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         with lock:
             out[rec["id"]] = r

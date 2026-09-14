@@ -61,7 +61,20 @@ def is_ghost(rec, originals):
     # ghostbuster's answer is about this posting's own link, so it stands on
     # its own at any age. fetcher's misses are about finding the employer,
     # which only means something once the role is old.
-    if o.get("link", {}).get("status") in DEAD_STATUS or o.get("status") in DEAD_STATUS:
+    link = o.get("link") or {}
+    if link.get("status") in DEAD_STATUS:
+        # Whose link died decides what it proves. The employer's own board
+        # going 404 is the job being gone, from the only source that would
+        # know. An aggregator's copy dying means that board dropped it - the
+        # company may still be hiring, and only fetcher can ask. So an
+        # aggregator's dead link drops the role only once fetcher has also
+        # failed to find it at the employer.
+        if link.get("link_of") == "employer":
+            return True
+        if o.get("status") in ("no_site", "no_match", "gone"):
+            return True
+        return False
+    if o.get("status") in DEAD_STATUS:
         return True
     if o.get("status") not in GHOST_STATUS:
         return False

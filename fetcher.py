@@ -38,6 +38,7 @@ Nothing here depends on one.
 import json
 import pathlib
 import re
+import subprocess
 import sys
 import threading
 import time
@@ -62,6 +63,7 @@ TIMEOUT = 15
 # site before it is the same company. Coursera's own site clears this on the
 # WTTJ copy; the Romanian clera.io does not, at 0.067.
 BUSINESS_FLOOR = 0.13
+NO_AI = "--no-ai" in sys.argv
 TLDS = (".com", ".io", ".co", ".org", ".ai", ".dev", ".app", ".xyz", ".net",
         ".tech", ".design", ".jobs", ".pt", ".eu")
 CAREER_WORDS = r"career|careers|jobs|join-us|join_us|work-with-us|workwithus|hiring|vagas|emprego|recrutamento"
@@ -141,6 +143,8 @@ def get(url, timeout=TIMEOUT):
     return html, final
 
 
+INDEX_PATHS = re.compile(r"^/(jobs|job-?board|careers|search|browse|remote-jobs)/?$", re.I)
+
 CHALLENGE = re.compile(
     r"awsWafCookie|awswaf|Just a moment|cf-browser-verification|__cf_chl|"
     r"cf_chl_opt|Checking your browser|DataDome|datadome|px-captcha|"
@@ -184,6 +188,46 @@ def head_ok(url):
 
 
 # ------------------------------------------------------------------ 1. sites
+CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+
+def render(url, budget=9000):
+    """The page as a browser sees it, JavaScript run.
+
+    This is the difference between working and not. babylist.com/careers has
+    zero job links in its HTML source and 43 in its DOM - the listings are
+    fetched by script after load. Reading source was reading a page that had
+    not happened yet. Chrome is already on the machine; no driver, no install.
+    """
+    if not pathlib.Path(CHROME).exists():
+        raise FileNotFoundError("Chrome not installed")
+    r = subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-sandbox",
+                        f"--virtual-time-budget={budget}", "--dump-dom", url],
+                       capture_output=True, text=True, timeout=budget / 1000 + 25)
+    html = r.stdout or ""
+    if is_challenge(html):
+        raise Blocked(url)
+    return html, url
+
+
+def company_domains(company):
+    """What domain this company actually uses, from an index of companies.
+
+    Not a guess. The old ladder tried name + .com, .io, .org and hoped -
+    Coursera is coursera.org and only turned up because .org happened to be on
+    the list, while half the board never resolved at all. An index answers or
+    it does not, and either is honest.
+    """
+    q = urllib.parse.quote((company or "").strip())
+    try:
+        raw, _ = get(f"https://autocomplete.clearbit.com/v1/companies/suggest?query={q}",
+                     timeout=10)
+        rows = json.loads(raw)
+    except Exception:
+        return []
+    return [r["domain"] for r in rows if isinstance(r, dict) and r.get("domain")][:4]
+
+
 def candidate_sites(company, jd, hint_urls=()):
     """Every plausible home for this company, best guess first.
 
@@ -210,16 +254,10 @@ def candidate_sites(company, jd, hint_urls=()):
         if any(h in host for h in ATS_HOSTS) or slug(company)[:6] in host.replace(".", ""):
             add(host)
 
-    s = slug(company)
-    if s:
-        for tld in TLDS:
-            add(s + tld)
-        # "get<name>.com" and hyphenated multi-word names
-        parts = [w for w in re.sub(r"[^a-z0-9 ]+", " ", company.lower()).split()
-                 if w not in STOP]
-        if len(parts) > 1:
-            add("-".join(parts) + ".com")
-    return out[:14]
+    # An index of real companies, in place of spelling permutations.
+    for d in company_domains(company):
+        add(d)
+    return out[:8]
 
 
 # ------------------------------------------------------------ 2. is it them
@@ -232,9 +270,21 @@ def verify_site(host, company, profile_words):
     """
     try:
         html, final = get("https://" + host)
+    except Blocked:
+        raise
     except Exception:
         return None
     text = P.strip_html(html, 20000)
+    if len(text) < 400:
+        # bungie.net serves ten characters of text and builds the rest in the
+        # browser. Judged on its source it looks like a parked domain and gets
+        # thrown away, and the fall-through then hands Bungie to a shop selling
+        # their merchandise. Render it and look again.
+        try:
+            html, final = render("https://" + host, budget=7000)
+            text = P.strip_html(html, 20000)
+        except Exception:
+            pass
     site_words = words(text)
     if not site_words:
         return None
@@ -254,9 +304,16 @@ def verify_site(host, company, profile_words):
     # "Clera" while the posting describes a fintech doing digital identity.
     # So the business is the gate and the name only corroborates: below the
     # floor, no amount of name agreement gets in.
-    if overlap < BUSINESS_FLOOR or named < 0.5:
+    # The floor existed because candidates were spelling permutations and any
+    # stranger could turn up - clera.io, a Romanian marketing site, scored 1.0
+    # on the name. Candidates now come from a company index, which is itself an
+    # identity claim, so the business check ranks them instead of vetoing:
+    # bungie.net IS Bungie and getcacheflow.com IS Cacheflow, and both were
+    # being thrown away for describing themselves in words the job ad did not
+    # happen to use. A name that does not match at all still fails.
+    if named < 0.5 and overlap < BUSINESS_FLOOR:
         return None
-    score = min(overlap * 3.0, 1.0) * 0.7 + named * 0.3
+    score = min(overlap * 3.0, 1.0) * 0.6 + named * 0.4
     return {"host": urllib.parse.urlsplit(final).netloc.lower(), "score": round(score, 3),
             "named": round(named, 2), "overlap": round(overlap, 3), "html": html}
 
@@ -323,12 +380,26 @@ def find_job(careers, title):
     produce, so nothing here rounds a maybe up to a yes.
     """
     best = None
+    seen_pages = {u.rstrip("/") for u in careers}
     for page in careers:
         try:
             html, final = get(page)
+        except Blocked:
+            try:
+                html, final = render(page)      # a wall for curl, not for Chrome
+            except Exception:
+                continue
         except Exception:
             continue
+        # Source with no jobs in it is not an empty board, it is a board that
+        # has not run yet. Render before concluding anything.
+        if not re.search(r'href="[^"#]*(?:/job|/position|/opening|/vacanc|gh_jid)', html, re.I):
+            try:
+                html, final = render(page)
+            except Exception:
+                pass
         host = urllib.parse.urlsplit(final).netloc
+        seen_pages.add(final.rstrip("/"))
         links = {}
         for m in re.finditer(r'href="([^"#]+)"[^>]*>(.*?)</a>', html, re.S | re.I):
             href, label = m.group(1), P.strip_html(m.group(2), 200).strip()
@@ -338,6 +409,16 @@ def find_job(careers, title):
                 continue
             links.setdefault(urllib.parse.urljoin(final, href), label)
         for url, label in links.items():
+            # A link back to the listing is not the posting. Cloudflare's board
+            # labels each row with the job title but points every one of them
+            # at /careers/jobs/, so the title matched perfectly and the URL was
+            # the page we were already standing on.
+            # A link back to the listing is not the posting. Cloudflare labels
+            # every row with its job title and points all of them at
+            # /careers/jobs/, so the title matched perfectly and the URL was
+            # the page we were already standing on.
+            if url.rstrip("/") in seen_pages or redirected_to_index(page, url):
+                continue
             s = title_match(title, label)
             if not best or s > best["score"]:
                 best = {"url": url, "label": label, "score": round(s, 3),
@@ -438,6 +519,30 @@ def text_changed(a, b):
 
 
 # ------------------------------------------------------------------ the run
+def harvest_links(careers):
+    """Every link on the careers surface, labelled. The regex chooser only
+    looks at hrefs that smell like a job; the model can read the label."""
+    out = {}
+    for page in careers[:4]:
+        try:
+            html, final = get(page)
+            if not re.search(r'href="[^"#]*(?:/job|/position|/opening|gh_jid)', html, re.I):
+                html, final = render(page)
+        except Exception:
+            try:
+                html, final = render(page)
+            except Exception:
+                continue
+        for m in re.finditer(r'href="([^"#]+)"[^>]*>(.*?)</a>', html, re.S | re.I):
+            label = P.strip_html(m.group(2), 120).strip()
+            if not label or len(label) > 110:
+                continue
+            out.setdefault(urllib.parse.urljoin(final, m.group(1)), label)
+        if len(out) > 400:
+            break
+    return out
+
+
 def fetch_one(rec, jd_text, sites=None):
     """The whole chain for one role: company -> site -> careers -> the posting.
 
@@ -484,17 +589,71 @@ def fetch_one(rec, jd_text, sites=None):
         except Exception:
             verified = None
 
+    if not verified and not NO_AI:
+        # Ask first, not last. "What is Bungie's website" is a question with a
+        # known answer, and I spent the evening inferring it from name
+        # frequency on homepages instead - which cannot tell a company from a
+        # fan wiki about it. The model knows bungie.net the way a person does.
+        # Verification stays, but as a veto for an obviously different
+        # business, not as a scorer that outranks the answer.
+        for host in ask_site(company, jd_text)[:2]:
+            try:
+                v = verify_site(host, company, profile)
+            except Blocked:
+                v = None
+            if v is None:
+                # Unreadable is not wrong: plenty of real sites are a
+                # JavaScript shell or behind a wall. Take the answer.
+                v = {"host": host, "score": 0.5, "html": None}
+            if v["score"] >= 0.35:
+                v["via"] = "model"
+                verified = v
+                break
+
     if not verified:
         blocked = False
-        for host in candidate_sites(company, jd_text):
+        # Score every candidate and take the best, never the first over the
+        # bar. Stopping early handed Bungie to bungiestore.com and Cacheflow to
+        # cacheflowe.com, because a shop selling a company's merchandise says
+        # that company's name just as loudly. The index's own ranking breaks
+        # ties - its first answer is usually the company itself.
+        # Take the index at its word, then check it. Its first answer is the
+        # company itself; my scoring kept overriding that with something worse,
+        # because counting how often a name appears cannot tell a company's own
+        # site from a site ABOUT the company - destinypedia.com is a Bungie fan
+        # wiki and says "Bungie" far more than bungie.net does. So: top answers
+        # only, verification as a veto for a clearly different business, and no
+        # wandering down the list looking for something that scores better.
+        for host in candidate_sites(company, jd_text)[:2]:
             try:
                 v = verify_site(host, company, profile)
             except Blocked:
                 blocked = True
-                continue
-            if v and v["score"] >= 0.55:
+                break              # see below
+            if v and v["score"] >= 0.4:
                 verified = v
                 break
+            if v is None:
+                # Unreachable is not "wrong". bungie.net is behind a wall, and
+                # walking on to the next candidate handed Bungie to
+                # bungiestore.com - a shop selling their merchandise, reachable
+                # and wrong. Stop at the first answer we could not read and say
+                # so, rather than accepting whatever answers next.
+                blocked = True
+                break
+        if not verified and not NO_AI:
+            # The ladder failed; ask what it is. Verified the same way after -
+            # a model naming a domain is a lead, not a fact.
+            for host in ask_site(company, jd_text):
+                try:
+                    v = verify_site(host, company, profile)
+                except Blocked:
+                    blocked = True
+                    continue
+                if v and v["score"] >= 0.45:      # the model already narrowed it
+                    v["via"] = "model"
+                    verified = v
+                    break
         if not verified:
             return {"status": "blocked" if blocked else "no_site"}
         sites[key] = {"host": verified["host"], "score": verified["score"],
@@ -506,12 +665,35 @@ def fetch_one(rec, jd_text, sites=None):
         best = find_job(careers, title)
     except Blocked:
         return {"status": "blocked", "at": verified["host"]}
+    if (not best or best["score"] < 0.5) and not NO_AI:
+        url = ask_job(company, title, harvest_links(careers))
+        # The listing is not the posting, whoever picked it. Cloudflare labels
+        # every row with its job title and points all of them at
+        # /careers/jobs/, so a title match there is the page we were already
+        # standing on - and the model falls for it the same way the regex did.
+        pages = {u.rstrip("/") for u in careers}
+        if url and url.rstrip("/") not in pages \
+                and not INDEX_PATHS.match(urllib.parse.urlsplit(url).path or "/"):
+            best = {"url": url, "label": title, "score": 0.99,
+                    "careers": careers[0] if careers else None,
+                    "host": urllib.parse.urlsplit(url).netloc, "via": "model"}
     if not best or best["score"] < 0.5:
         # the company is real and reachable; this role is not on its board
         return {"status": "no_match", "site": verified["host"],
                 "careers": careers[0] if careers else None,
                 "best": best["label"] if best else None,
                 "best_score": best["score"] if best else 0}
+    # One gate for every path into `best` - regex, sitemap or model. A posting
+    # URL has to go deeper than the listing it was found on. Cloudflare labels
+    # every row with its job title and points all of them at /careers/jobs/,
+    # and all three finders fell for it in turn.
+    bp = urllib.parse.urlsplit(best["url"]).path.rstrip("/")
+    for c in careers:
+        cp = urllib.parse.urlsplit(c).path.rstrip("/")
+        if bp == cp or (cp and bp == cp.rsplit("/", 1)[0]):
+            return {"status": "no_match", "site": verified["host"],
+                    "careers": c, "best": best.get("label"),
+                    "why": "matched the listing page, not a posting"}
     sites[key]["careers"] = best["careers"]
 
     try:
@@ -619,7 +801,13 @@ def main():
     # run.
     links = json.loads(LINKS_FILE.read_text()) if LINKS_FILE.exists() else {}
     alive = {k for k, v in links.items() if v.get("status") == "alive"}
-    dead = {k for k, v in links.items() if v.get("status") == "gone"}
+    # Only the employer's own 404 settles it. An aggregator's dead link is a
+    # question for this module, not an answer - it is the case most worth
+    # spending a lookup on.
+    dead = {k for k, v in links.items()
+            if v.get("status") == "gone" and v.get("link_of") == "employer"}
+    orphaned = {k for k, v in links.items()
+                if v.get("status") == "gone" and v.get("link_of") != "employer"}
     todo = [r for r in pool_doc["jobs"]
             if r.get("active") and (r.get("title") or "")
             and must.search(r["title"]) and not exc.search(r["title"])
@@ -637,7 +825,11 @@ def main():
 
     def tier(r):
         old_role = (R.age_days(r) or 10**6) > R.GHOST_DAYS
-        return (0 if r["id"] in alive else 1) * 2 + (1 if old_role else 0)
+        # An orphan - the board's copy is gone and nobody has asked the
+        # company - is the most valuable lookup there is: it decides whether
+        # the role stays at all.
+        known = 0 if r["id"] in orphaned else (1 if r["id"] in alive else 2)
+        return known * 2 + (1 if old_role else 0)
 
     todo.sort(key=lambda r: (tier(r), R.age_days(r) or 10**6))
     if "--old" in sys.argv:
@@ -740,6 +932,60 @@ def main():
     print(f"{len(found)} originals, {len(lied)} disagree with the board they came from",
           flush=True)
     return 0
+
+
+# ------------------------------------------------------------ the fallback
+# The deterministic chain fails two ways, and only one of them is a thinking
+# problem. "Which domain is Coursera?" is something a model already knows -
+# coursera.org, not .com, which my TLD ladder found by luck. "Which of these
+# 200 links is the job?" is trivial to read and hopeless to regex. Those are
+# worth a model call.
+#
+# What a model does NOT fix: a careers page that renders its jobs in
+# JavaScript serves the same empty HTML to Claude as to me, and Cloudflare
+# blocks us both. So this runs only after the cheap path has failed, and it
+# fails honestly when the page has nothing to read.
+
+def _ask_json(prompt):
+    import read
+    try:
+        return read.ask(prompt)
+    except Exception:
+        return None
+
+
+def ask_site(company, jd):
+    """Candidate domains for a company the guess ladder could not find."""
+    r = _ask_json(
+        "Which website belongs to this employer? Use what the job posting says "
+        "about the business to tell it apart from companies with the same name.\n\n"
+        f"COMPANY: {company}\n\nWHAT THEY DO (from their job posting):\n"
+        f"{(jd or '')[:1500]}\n\n"
+        'Return ONE JSON object and nothing else: {"domains": ["best.com", "second.io"], '
+        '"confidence": "high"|"medium"|"low"}. Domains only, no scheme, no path. '
+        "Best guess first, at most three. Empty list if you do not know - a wrong "
+        "company is worse than none.")
+    return [d for d in ((r or {}).get("domains") or []) if isinstance(d, str)][:3]
+
+
+def ask_job(company, title, links):
+    """Which of these careers-page links is the role, if any."""
+    listing = "\n".join(f"{i}. {t[:90]}  ->  {u[:120]}"
+                        for i, (u, t) in enumerate(list(links.items())[:120], 1))
+    if not listing:
+        return None
+    r = _ask_json(
+        f'Which of these links on {company}\'s careers page is the posting for '
+        f'"{title}"?\n\n{listing}\n\n'
+        'Return ONE JSON object and nothing else: {"number": N, "confidence": '
+        '"high"|"medium"|"low"} - or {"number": null} if none of them is that '
+        "role. A different job is worse than no answer; titles may be worded "
+        "differently but must be the same job.")
+    n = (r or {}).get("number")
+    if not isinstance(n, int) or (r or {}).get("confidence") == "low":
+        return None
+    items = list(links.items())[:120]
+    return items[n - 1][0] if 1 <= n <= len(items) else None
 
 
 if __name__ == "__main__":
