@@ -12,6 +12,7 @@ the pool may set - a role the company took down is a different fact.
 """
 import datetime
 import json
+import re
 from pathlib import Path
 
 from contracts import DEFAULT_VERDICT, LANES
@@ -98,6 +99,24 @@ def merged_evidence():
     return out
 
 
+# The page wins on place. When a role's Location line names somewhere that is
+# not Portugal, Europe, the EU, EMEA or worldwide, the role is remote WITHIN
+# that place - "Remote" beside "United States" means the US. The judge kept
+# reading the word "remote" and calling it worldwide: 157 of 575 Open roles
+# were restricted to Paris, London, Berlin, the US, and 18 copies of one
+# Jobgether posting were the same job listed once per country.
+# This reads the rendered Location line, which is exactly what a person
+# reads, and needs no model to do it.
+PLACE_OK = re.compile(r"portugal|lisbon|lisboa|porto|europe|\beu\b|emea|worldwide|"
+                      r"anywhere|global|international", re.I)
+PLACE_BARE = re.compile(r"^\s*(remote|remote job|fully remote|100% remote)?\s*$", re.I)
+
+
+def placed_elsewhere(rec):
+    loc = str(rec.get("location") or "")
+    return not PLACE_BARE.match(loc) and not PLACE_OK.search(loc)
+
+
 def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
     hints = hints or {}
     verdicts = verdicts_doc.get("jobs", {})
@@ -122,7 +141,11 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
         role["verdict"] = v
         roles.append(role)
         if v.get("judged") and v.get("stage") != "parse":
-            (cut if v["cut"] else lanes[v["lane"]]).append(rec["id"])
+            lane = v["lane"]
+            if not v["cut"] and lane == "open" and placed_elsewhere(rec):
+                cut.append(rec["id"])          # remote, but somewhere he is not
+                continue
+            (cut if v["cut"] else lanes[lane]).append(rec["id"])
     # The board fetches this file. 47,000 title cuts would make it 25MB for
     # rows no lane shows; they stay in verdicts.json with their reasons.
     # The description of every lane role rides along, so a board served as

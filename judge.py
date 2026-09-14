@@ -178,6 +178,17 @@ def main():
         if r:
             out[x["id"]] = l1_verdict(r)
     items = survivors(jobs, jd)
+    if "--lanes" in sys.argv:
+        # Re-read only what is on the board. A criteria change that only makes
+        # PLACE stricter cannot rescue a role that was already cut, so every
+        # survivor outside the three lanes keeps the verdict it has and costs
+        # nothing - this is complete, not a sample.
+        res = json.load(open(os.path.join(ROOT, "data", "results.json")))
+        on_board = {i for k in ("open", "portugal", "unsure") for i in res["lanes"].get(k, [])}
+        for rec, _ in items:
+            if rec["id"] not in on_board and rec["id"] in previous:
+                out[rec["id"]] = previous[rec["id"]]
+        items = [(rec, t) for rec, t in items if rec["id"] in on_board]
     thin = sum(1 for _, t in items if len(t or "") < read.THIN)
     cache = read.load_cache()
     hits = sum(1 for rec, t in items if t and read.key_for(rec, t) in cache)
