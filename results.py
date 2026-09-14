@@ -71,15 +71,18 @@ def is_ghost(rec, originals):
         # failed to find it at the employer.
         if link.get("link_of") == "employer":
             return True
-        if o.get("status") in ("no_site", "no_match", "gone"):
-            return True
-        return False
+        # fetcher's silence is not evidence. It finds the employer 13% of the
+        # time, so "I could not find this company's careers page" says
+        # something about fetcher and nothing about the job - and trusting it
+        # dropped 258 roles, halving the Portugal lane, on nothing.
+        return o.get("status") == "gone"
     if o.get("status") in DEAD_STATUS:
-        return True
-    if o.get("status") not in GHOST_STATUS:
-        return False
-    a = age_days(rec)
-    return a is not None and a > GHOST_DAYS
+        return True          # fetcher saw the employer's page and it was gone
+    # The ten-week rule used to drop an old role fetcher could not find at the
+    # employer. It is gone: the rule was only ever as good as fetcher, and
+    # fetcher is not good. Nothing is dropped now without a posting that
+    # actually answered "I am not here" - a 404, or a page saying so.
+    return False
 
 
 def merged_evidence():
