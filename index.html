@@ -439,8 +439,11 @@ function render(){
     el.querySelectorAll("button").forEach(b=>b.onclick=e=>{e.stopPropagation();
       if(b.dataset.w) return markWrong(r);
       if(b.dataset.f) return toggleFav(r.id);
-      if(b.classList.contains("on")) return;
-      decide(r.id,b.dataset.d||null);});
+      // The button that put a role somewhere takes it back out: clicking an
+      // active "discard" un-discards it and the role returns to the lane the
+      // judge gave it. Same for "applied". A dead button is a button you have
+      // to hunt for "clear" to undo.
+      decide(r.id, b.classList.contains("on") ? null : (b.dataset.d||null));});
     $("list").appendChild(el);
   }
   renderPane();
