@@ -1,5 +1,8 @@
 # JobRadar
 
+> **Merged into [cesarxdesign/JobRadar](https://github.com/cesarxdesign/JobRadar) on 2026-09-24**,
+> with its full history, under `_archive/radar/`. This repo is archived (read-only).
+
 Personal nightly scraper for design roles hireable from Portugal.
 Free sources only, Python stdlib only, no dependencies.
 
