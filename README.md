@@ -1,8 +1,12 @@
 # JobRadar
 
-This is the live version. The first version (called Radar1 in comments here)
-is the `Radar` repo, archived read-only with its full history. Every source it
-scraped is in `data/sources.json`.
+Live at **https://cesar-jobradar.vercel.app** (its own Vercel project; every push to `main`
+redeploys it). Also on GitHub Pages at https://cesarxdesign.github.io/JobRadar/.
+
+This is the only version. The first one (called Radar1 in comments here) was the `Radar`
+repo; on 2026-09-24 it was merged in with its full history, every commit kept, under
+`_archive/radar/`, and the `Radar` repo archived read-only. Every source it scraped is in
+`data/sources.json`.
 
 Four modules. Each writes one file. None reaches into another.
 
