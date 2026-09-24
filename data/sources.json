@@ -1,5 +1,5 @@
 {
- "note": "Radar1 registry (data/companies.json) merged with every source Radar1 actually pulled from. 2026-09-11: 233 boards harvested from superjobs.design's company list, Fetch (greenhouse), Qorelo, Andercore, Prior Labs (ashby), TYTAN (recruitee) from the LinkedIn sweep, plus eleven aggregators from the same sweep (see pool.py). 2026-09-12: five sources added after the hand sweep (SOURCE_SWEEP.md) - remoteio, woodyjobs, uiuxjobsboard, uxremotetalent, netempregos. netempregos is the Portuguese one: direct employer and agency ads from companies that never appear on a US-style ATS.",
+ "note": "Radar1 registry (data/companies.json) merged with every source Radar1 actually pulled from. 2026-09-11: 233 boards harvested from superjobs.design's company list, Fetch (greenhouse), Qorelo, Andercore, Prior Labs (ashby), TYTAN (recruitee) from the LinkedIn sweep, plus eleven aggregators from the same sweep (see pool.py). 2026-09-12: five sources added after the hand sweep (SOURCE_SWEEP.md) - remoteio, woodyjobs, uiuxjobsboard, uxremotetalent, netempregos. netempregos is the Portuguese one: direct employer and agency ads from companies that never appear on a US-style ATS. 2026-09-24: merged with the old Radar repo (v1) before it was archived. Radar listed three boards this file had elsewhere: greenhouse/wise (here on smartrecruiters), ashby/happyrobot (here as happyrobot.ai), lever/eneba (here on ashby). Both kept; a dead one fails soft.",
  "watchlist": {
   "ashby": {
    "1password": "1Password",
@@ -294,7 +294,8 @@
    "ziina": "ziina",
    "qorelo": "Qorelo",
    "andercore": "Andercore",
-   "prior-labs": "Prior Labs"
+   "prior-labs": "Prior Labs",
+   "happyrobot": "Happyrobot.ai"
   },
   "bamboohr": {
    "brndwgn": "BRND WGN",
@@ -556,7 +557,8 @@
    "udio": "udio",
    "valtech": "valtech",
    "zetaglobal": "zetaglobal",
-   "fetch": "Fetch"
+   "fetch": "Fetch",
+   "wise": "Wise"
   },
   "jazzhr": {
    "codekeeper": "Codekeeper",
@@ -654,7 +656,8 @@
    "thunkable": "thunkable",
    "wattpad": "wattpad",
    "wealthfront": "wealthfront",
-   "zeta": "zeta"
+   "zeta": "zeta",
+   "eneba": "Eneba"
   },
   "manatal": {
    "humanit": "HumanIT Digital Consulting",
