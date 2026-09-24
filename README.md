@@ -1,4 +1,8 @@
-# Radar2
+# JobRadar
+
+This is the live version. The first version (called Radar1 in comments here)
+is the `Radar` repo, archived read-only with its full history. Every source it
+scraped is in `data/sources.json`.
 
 Four modules. Each writes one file. None reaches into another.
 

@@ -1,4 +1,4 @@
-# Radar2 nightly: pool -> judge -> results, committed back so the board is
+# JobRadar nightly: pool -> judge -> results, committed back so the board is
 # fresh by morning. 22:00 UTC is 23:00 in Lisbon through October and 22:00
 # after the clocks change; either way it is done long before 9am.
 #
@@ -37,7 +37,7 @@ jobs:
         run: python3 results.py
       - name: commit
         run: |
-          git config user.name "Radar2 nightly"
+          git config user.name "JobRadar nightly"
           git config user.email "cesarxdesign@gmail.com"
           git add data/pool.json data/reads.json data/verdicts.json data/results.json
           git diff --cached --quiet || git commit -m "nightly $(date -u +%F)"

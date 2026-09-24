@@ -1,4 +1,4 @@
-"""Radar2 — the seam between the four modules.
+"""JobRadar — the seam between the four modules.
 
     pool        -> data/pool.json       every role found. no opinions.
     parser      -> (in judge.py)         title regex. free, cuts 98,000.

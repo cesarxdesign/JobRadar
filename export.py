@@ -73,7 +73,7 @@ def build():
     rows.sort(key=lambda r: (r["decision"] != "applied", r["decided_on"] or ""), reverse=False)
     rows.sort(key=lambda r: r["decision"] != "applied")
     return {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            "about": "Cesar's job-hunt decisions from Radar2. applied = he applied; "
+            "about": "Cesar's job-hunt decisions from JobRadar. applied = he applied; "
                      "discarded = he saw it and passed. Fields after 'judge' were read "
                      "off the posting by the judge, not typed by him.",
             "counts": {k: sum(1 for r in rows if r["decision"] == k)
