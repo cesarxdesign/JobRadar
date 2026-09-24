@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JobRadar</title>
+<style>
+:root {
+  --bg: #fafaf8; --card: #ffffff; --ink: #1a1a18; --mut: #8a8a84;
+  --line: #e8e8e4; --acc: #0a6b48; --amber: #b45309; --amber-bg: #fef3e2;
+  --chip: #f1f1ee; --danger: #a33;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131312; --card: #1c1c1a; --ink: #ecece8; --mut: #8f8f88;
+    --line: #2a2a27; --acc: #4ade80; --amber: #fbbf24; --amber-bg: #3a2c10;
+    --chip: #262623; --danger: #f87171;
+  }
+}
+* { box-sizing: border-box; margin: 0; }
+html { overflow-x: clip; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 40px 20px 120px;
+}
+.wrap { max-width: 1560px; margin: 0 auto; display: flex; gap: 22px; align-items: flex-start; }
+#leftcol { flex: 0 1 540px; min-width: 430px; }
+#listcol { min-width: 0; }
+.topbar { position: sticky; top: 0; z-index: 6; background: var(--bg);
+          padding: 40px 14px 16px; margin: -40px -14px 0; }
+.topbar .tabs { margin-bottom: 0; }
+#preview {
+  position: sticky; top: 18px; height: calc(100vh - 36px); min-width: 0;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.pvhead { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.pvhead b { font-size: 15px; }
+.pvhead .co { color: var(--mut); font-size: 13px; }
+.pvhead a { color: var(--acc); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.pvhead #pv-cv { margin-left: auto; }
+.pvhead #pv-orig { margin-left: 0; }
+.pvhead #pv-src { color: var(--mut); }
+.pvbody { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.unsure-why {
+  padding: 10px 16px; font-size: 12.5px; font-weight: 600;
+  color: var(--amber); background: var(--amber-bg); border-bottom: 1px solid var(--line);
+}
+.pvbody iframe { width: 100%; flex: 1; min-height: 0; border: 0; background: #fff; }
+.brief { padding: 22px; overflow-y: auto; width: 100%; flex: 1; min-height: 0; }
+.brief .tiles { display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 18px; }
+.brief h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.09em; color: var(--mut); margin: 18px 0 8px; }
+.brief ul { padding-left: 18px; font-size: 14px; }
+.brief li { margin-bottom: 4px; }
+.brief .jd { white-space: pre-wrap; font-size: 13.5px; line-height: 1.55; color: var(--ink); opacity: 0.92; }
+.brief .goapply {
+  display: inline-block; background: var(--acc); color: var(--bg); font-weight: 700;
+  border-radius: 9px; padding: 11px 20px; text-decoration: none; margin-bottom: 6px;
+}
+.brief .noframe { color: var(--mut); font-size: 12px; margin: 6px 0 14px; }
+#preview { flex: 1; }
+@media (max-width: 1100px) { .wrap { display: block; } #leftcol { min-width: 0; } #preview { display: none; } }
+header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+header h1 { line-height: 1; }
+h1 { font-size: 22px; letter-spacing: -0.02em; }
+.stamp { color: var(--mut); font-size: 13px; flex: 1; }
+.gear { background: none; border: 0; color: var(--mut); font-size: 16px; cursor: pointer; }
+.newcount { background: var(--amber-bg); color: var(--amber); font: 700 12px/1 inherit;
+            border-radius: 999px; padding: 6px 11px; white-space: nowrap; }
+.newcount:empty { display: none; }
+.pending { color: var(--mut); font: 600 12px/1 inherit; border: 1px solid var(--line);
+           border-radius: 999px; padding: 6px 11px; white-space: nowrap; }
+.pending:empty { display: none; }
+.tabs { display: flex; gap: 4px; margin: 18px 0 16px; border-bottom: 1px solid var(--line); }
+.tab {
+  background: none; border: 0; color: var(--mut); font: 600 14px/1 inherit;
+  padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.tab.on { color: var(--ink); border-bottom-color: var(--ink); }
+.tab .n { color: var(--mut); font-weight: 400; margin-left: 4px; }
+.scrape {
+  background: var(--card); border: 1px solid var(--line); color: var(--ink);
+  border-radius: 999px; padding: 7px 14px; font: 600 13px/1 inherit; cursor: pointer;
+}
+.scrape:hover { border-color: var(--acc); color: var(--acc); }
+.scrape[disabled] { opacity: 0.5; cursor: wait; }
+h2 {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--mut); margin: 30px 0 10px; display: flex; gap: 8px; align-items: center;
+}
+h2 .n { background: var(--chip); border-radius: 999px; padding: 2px 9px; font-size: 11px; }
+.job {
+  display: flex; gap: 14px; align-items: center; background: var(--card);
+  border: 1px solid var(--line); border-radius: 10px; padding: 13px 16px; margin-bottom: 8px;
+  cursor: pointer;
+}
+.job.sel { border-color: var(--acc); box-shadow: 0 0 0 1px var(--acc); }
+.job { padding: 15px 18px; }
+.jrow1 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.jrow1 .co { font-weight: 600; }
+.jrow1 .hq { color: var(--mut); font-size: 13px; max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.jrow1 .sal { margin-left: auto; }
+.jrow2 { display: flex; gap: 26px; margin-top: 10px; flex-wrap: wrap; }
+.cell { min-width: 52px; }
+.cell i {
+  display: block; font-style: normal; font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.09em; color: var(--mut); margin-bottom: 2px;
+}
+.cell b { font-size: 13px; font-weight: 600; color: var(--ink); }
+.cell b.dim { color: var(--mut); font-weight: 400; }
+.cell b.yes { color: var(--acc); }
+.cell b.no { color: var(--danger); }
+.cell b.today { color: var(--amber); }
+.jmain { flex: 1; min-width: 0; }
+.jtitle { font-weight: 600; text-decoration: none; color: var(--ink); }
+.jtitle:hover { color: var(--acc); }
+.jmeta { color: var(--mut); font-size: 13px; margin-top: 3px; display: flex; gap: 10px; flex-wrap: wrap; }
+.jmeta .co { color: var(--ink); font-weight: 500; }
+.sal { color: var(--acc); font-weight: 600; font-size: 13px; white-space: nowrap; }
+.badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.06em; border-radius: 5px;
+  padding: 3px 7px; text-transform: uppercase; white-space: nowrap;
+}
+.b-new { background: var(--amber-bg); color: var(--amber); }
+.b-pt { background: var(--acc); color: var(--bg); }
+.b-ok { background: var(--chip); color: var(--acc); }
+.b-edit { background: var(--amber); color: var(--bg); }
+.jacts { display: flex; gap: 6px; }
+.jacts button {
+  background: none; border: 1px solid var(--line); color: var(--mut);
+  border-radius: 7px; padding: 5px 10px; font: 12px/1 inherit; cursor: pointer; white-space: nowrap;
+}
+.jacts button:hover { color: var(--ink); border-color: var(--mut); }
+.jacts .applied.on { color: var(--acc); border-color: var(--acc); }
+.empty { color: var(--mut); padding: 8px 2px 20px; font-size: 14px; }
+.cohead { display: flex; align-items: baseline; gap: 10px; margin: 18px 0 8px; padding: 0 2px; }
+.cohead b { font-size: 14px; }
+.cohead .cohead-days { font-size: 12px; font-weight: 700; color: var(--amber); min-width: 52px; }
+.cohead .n { background: var(--chip); border-radius: 999px; padding: 2px 9px; font-size: 11px; color: var(--mut); }
+.job.ingroup { margin-left: 18px; }
+.settings {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 16px; margin: 16px 0; font-size: 13px; display: none;
+}
+.settings.open { display: block; }
+.settings p { color: var(--mut); margin-bottom: 8px; }
+.settings input {
+  width: 100%; background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 7px; padding: 7px 10px; font: 13px monospace; margin: 4px 0 8px;
+}
+.settings a { color: var(--acc); }
+.settings button { background: var(--ink); color: var(--bg); border: 0; border-radius: 7px; padding: 7px 14px; font: 600 12px/1 inherit; cursor: pointer; }
+.sync { color: var(--mut); font-size: 12px; margin-left: 10px; }
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: var(--bg); border-radius: 999px; padding: 10px 20px;
+  font-size: 13px; opacity: 0; transition: opacity 0.3s; pointer-events: none; max-width: 90vw;
+}
+.toast.show { opacity: 1; }
+footer { margin-top: 50px; color: var(--mut); font-size: 12px; border-top: 1px solid var(--line); padding-top: 16px; }
+footer .bad { color: var(--danger); }
+@media (max-width: 640px) {
+  .job { flex-wrap: wrap; }
+  .jacts { width: 100%; justify-content: flex-end; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="leftcol">
+  <div class="topbar">
+    <header>
+      <h1>JobRadar</h1>
+      <span class="stamp" id="stamp">loading…</span>
+      <span class="pending" id="pending" title="scraped but not yet read by the JD judge — held back until fully filtered"></span>
+      <span class="newcount" id="newcount" title="new roles added on the last run (Open + Portugal + Unsure)"></span>
+      <button class="scrape" id="scrape" title="full local run when TCV is up, cloud scrape otherwise">↻ Run now</button>
+
+    </header>
+    <nav class="tabs">
+      <button class="tab on" data-tab="open">Open<span class="n" id="c-open"></span></button>
+      <button class="tab" data-tab="portugal">Portugal<span class="n" id="c-portugal"></span></button>
+      <button class="tab" data-tab="unsure">Unsure<span class="n" id="c-unsure"></span></button>
+    </div>
+    <div class="pvbody" id="pv-body"><div class="brief"><span class="empty">Select a role on the left.</span></div></div>
+  </aside>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+"use strict";
+const REPO = "cesarxdesign/Radar";
+const LS = "jobradar-v2";
+// Public board: no triage. state stays empty so nothing can render from it,
+// and nothing is ever written. Decisions live only on the Mac.
+const state = Object.freeze({ jobs: Object.freeze({}), verdicts: Object.freeze({}),
+                             editsig: Object.freeze({}), emails: Object.freeze({}) });
+function save() {}
+
+const CUT_SHOWN = 60;  // enough to spot-check a bad rule, not a wall of history
+const BUCKET = { pt: "Portugal / Lisbon", eu: "Remote · Europe", ww: "Remote · Worldwide", ok: "OK’d by you", tiebreak: "Unsure" };
+let DATA = null, FACTS = {}, JDS = null, CVS = {}, tab = "open";
+let SEL = null, PV = null;
+
+// ---------- helpers ----------
+function esc(s) { return (s || "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c])); }
+function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : "#"; }
+function norm(s) { return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); }
+function when(j) { const t = new Date(j.posted || j.first_seen).getTime(); return isNaN(t) ? 0 : t; }
+function days(j) {
+  // posted only - first_seen is when WE first saw it, not when it was published
+  // last touched by the company where the source exposes it, else published
+  const d = j.updated || j.posted;
+  const t = new Date(d || 0).getTime();
+  if (!d || isNaN(t)) return null;
+  // show the best date we have, even a stale ATS createdAt - a real number
+  // sorts to the bottom the same way "?" would, and at least says something
+  return Math.max(0, Math.floor((Date.now() - t) / 864e5));
+}
+function daysCell(dd, j) {
+  return cell(dd === 1 ? "day" : "days",
+    dd === null ? "?" : String(dd),
+    dd === null ? "dim" : (dd === 0 ? "today" : ""),
+    dd === null ? "publish date unknown — first seen by the radar " + (j.first_seen || "").slice(0, 10) : "");
+}
+function bucketOf(j) {
+  const v = state.verdicts[j.id];
+  if (v) return v.v === "y" ? "ok" : "no";
+  // the JD itself confirming Portugal lifts a role out of Unsure
+  if (j.bucket === "tiebreak" && FACTS[j.id] && /^yes/i.test(FACTS[j.id].portugal || ""))
+    return "eu";
+  return j.bucket;
+}
+function variantKey(j) {
+  // same company, same title once (FTC/Contract/city)-style parentheticals go
+  return norm(j.company) + "|" + norm((j.title || "").replace(/\([^)]*\)/g, " "));
+}
+// A posting's content signature: the JD hash the scraper stamps, else the ATS
+// "last edited" date. Applied is sticky forever (you can't unapply), but a
+// DISCARDED role whose JD later changes has effectively become a new posting -
+// something in it might change your mind - so it comes back for a second look.
+function editSig(j) { return j.updated || j.jdhash || ""; }
+function isReopened(j) {
+  return state.jobs[j.id] === "discarded" && state.editsig[j.id]
+      && editSig(j) && editSig(j) !== state.editsig[j.id];
+}
+function propagateVariants() {
+  // a verdict on one posting variant covers its twins - ZOE/Air Apps style
+  if (changed) { save(); }
+}
+function unsureReason(j) {
+  if (j.why) return j.why;  // the judge pass names the failing criterion
+  const loc = (j.location || "").trim();
+  if (!loc) return "the source lists no location at all";
+  if (/hybrid/i.test(loc)) return "hybrid in \u201c" + loc + "\u201d";
+  if (/remote/i.test(loc)) return "remote, but the stated scope is \u201c" + loc + "\u201d \u2014 Portugal not guaranteed";
+  return "location reads \u201c" + loc + "\u201d \u2014 no Portugal / Europe / Worldwide signal";
+}
+function toast(msg, ms) {
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._tm); t._tm = setTimeout(() => t.classList.remove("show"), ms || 2600);
+}
+
+// ---------- scrape now ----------
+function pollUpdate(btn, minutes) {
+  const was = DATA.generated_at;
+  const poll = setInterval(async () => {
+    try {
+      const d = await (await fetch("data/jobs.json?t=" + Date.now())).json();
+      if (d.generated_at !== was) {
+        clearInterval(poll); DATA = d; stamp(); render();
+        btn.disabled = false; btn.textContent = "↻ Run now";
+        toast("Updated — " + d.counts.new + " new");
+      }
+    } catch (e) {}
+  }, 30000);
+  setTimeout(() => { clearInterval(poll); btn.disabled = false; btn.textContent = "↻ Run now"; },
+             minutes * 60000);
+}
+async function scrapeNow() {
+  const btn = document.getElementById("scrape");
+  btn.disabled = true; btn.textContent = "↻ running…";
+  // TCV on his Mac runs the FULL pipeline (scrape + facts + CVs) on demand
+  try {
+    await fetch("http://127.0.0.1:8765/api/run-radar", { method: "POST", mode: "no-cors" });
+    toast("Full run started on this Mac — scrape, facts, CVs. Give it a while.");
+    pollUpdate(btn, 45);
+    return;
+  } catch (e) {}
+  btn.disabled = false; btn.textContent = "↻ Run now";
+  toast("TCV isn’t running here — start it on the Mac to run the pipeline.");
+}
+
+// ---------- cards ----------
+function selectJob(id) {
+  if (SEL === id) return;
+  SEL = id;
+  render();
+}
+function goToJob(id) {
+  const j = DATA.jobs.find(x => x.id === id && x.active);
+  if (!j) return;
+  const st = state.jobs[id];
+  tab = st === "applied" ? "applied" : st === "discarded" ? "discarded"
+      : bucketOf(j) === "tiebreak" ? "unsure" : "open";
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x.dataset.tab === tab));
+  SEL = id;
+  render();
+}
+function renderPreview() {
+  const j = SEL && DATA.jobs.find(x => x.id === SEL);
+  if (!j || PV === j.id) return;
+  PV = j.id;
+  const target = safeUrl(j.apply_url || j.url);
+  document.getElementById("pv-title").textContent = j.title;
+  document.getElementById("pv-co").textContent = j.company;
+  const cvBtn = document.getElementById("pv-cv");
+  const cv = CVS[j.id];
+  cvBtn.style.display = cv ? "" : "none";
+  // night-run CVs live in the repo (cvs/<id>/...) and open anywhere;
+  // pre-move CVs are Mac paths and still go through the local reveal
+  const cvWeb = cv && cv.path && !cv.path.startsWith("/") && !cv.path.startsWith("~");
+  cvBtn.title = (cv && cv.label) || (cvWeb ? "open the tailored CV" : "reveal the tailored CV in Finder");
+  cvBtn.href = cvWeb ? encodeURI(cv.path) : "#";
+  cvBtn.target = cvWeb ? "_blank" : "";
+  cvBtn.onclick = cvWeb ? null : e => {
+    e.preventDefault();
+    fetch("http://127.0.0.1:8765/api/reveal", { method: "POST", mode: "no-cors",
+      body: JSON.stringify({ path: cv.path }) })
+      .then(() => toast("Revealed in Finder"))
+      .catch(() => toast("TCV isn't running — double-click TCV.command first"));
+  };
+  const orig = document.getElementById("pv-orig");
+  const srcBtn = document.getElementById("pv-src");
+  orig.href = target; orig.style.display = j.apply_url ? "" : "none";
+  srcBtn.onclick = null;
+  const origin = j.derived_from && DATA.jobs.find(x => x.id === j.derived_from && x.active);
+  if (origin) {
+    // derived role: Source jumps to the radar job that led us to this board
+    srcBtn.href = "#"; srcBtn.textContent = "Source: " + origin.company + " ●";
+    srcBtn.style.display = "";
+    srcBtn.onclick = e => { e.preventDefault(); goToJob(origin.id); };
+  } else {
+    srcBtn.textContent = "Source ↗";
+    srcBtn.href = safeUrl(j.url);
+    srcBtn.style.display = (j.apply_url && j.apply_url !== j.url) ? "" : "none";
+  }
+  orig.style.marginLeft = cv ? "" : "auto";
+  srcBtn.style.marginLeft = (cv || j.apply_url) ? "" : "auto";
+  const body = document.getElementById("pv-body");
+  const why = opts.cut
+    ? '<div class="unsure-why">Cut because ' + esc(j.why || "no reason recorded") + "</div>"
+    : bucketOf(j) === "tiebreak"
+    ? '<div class="unsure-why">Unsure because ' + esc(unsureReason(j)) + "</div>" : "";
+  if (j.frameable) {
+    body.innerHTML = why + '<iframe sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" src="' + esc(target) + '"></iframe>';
+    return;
+  }
+  const f = FACTS[j.id] || {};
+  const pt = ptSituation(j, f);
+  const dd = days(j);
+  let h = why + '<div class="brief">' +
+    '<a class="goapply" href="' + esc(target) + '" target="_blank" rel="noopener">Open application ↗</a>' +
+    (j.frameable ? "" : '<div class="noframe">this site refuses embedding — the form opens in a new tab</div>') +
+    '<div class="tiles">' +
+      cell("salary", esc(f.salary || j.salary || ""), (f.salary || j.salary) ? "yes" : "dim") +
+      cell("remote", esc(f.remote || ""), "") +
+      cell("portugal", esc(pt[0]), pt[1]) +
+      cell("years", esc(f.years_experience || (j.xp || "").replace(/y$/, "")), "") +
+      daysCell(dd, j) +
+    "</div>";
+  if (j.board_roles && j.board_roles.length)
+    h += "<h3>Live on their board right now</h3><ul>" + j.board_roles.map(r =>
+      '<li><a href="' + esc(safeUrl(r.url)) + '" target="_blank" rel="noopener">' + esc(r.title) + "</a>" +
+      (r.location ? ' <span style="color:var(--mut)">— ' + esc(r.location) + "</span>" : "") + "</li>").join("") + "</ul>";
+  if (f.must_haves && f.must_haves.length)
+    h += "<h3>Hard requirements</h3><ul>" + f.must_haves.map(m => "<li>" + esc(m) + "</li>").join("") + "</ul>";
+  if (JDS === null) {
+    JDS = {};
+    fetch("data/jds.json?t=" + Date.now()).then(r => r.json()).then(d => {
+      JDS = d.jobs || {}; PV = null; renderPreview();
+    }).catch(() => {});
+    h += "<h3>Posting</h3><div class='jd'>loading…</div>";
+  } else if (JDS[j.id] && JDS[j.id].jd) {
+    h += "<h3>Posting</h3><div class='jd'>" + esc(JDS[j.id].jd) + "</div>";
+  }
+  h += "</div>";
+  body.innerHTML = h;
+}
+function cell(label, value, cls, tip) {
+  return '<span class="cell"><i>' + label + "</i><b" + (cls ? ' class="' + cls + '"' : "") +
+         (tip ? ' title="' + esc(tip) + '"' : "") + ">" +
+         (value || "—") + "</b></span>";
+}
+function ptSituation(j, f) {
+  if ((f.portugal || "").toLowerCase() === "yes") return ["Yes", "yes"];
+  if ((f.portugal || "").toLowerCase() === "no") return ["No", "no"];
+  const b = bucketOf(j);
+  if (b === "pt") return ["Yes — named", "yes"];
+  if (b === "ok") return ["Yes — you OK’d", "yes"];
+  if (b === "eu") return ["Likely — " + (j.market || "Europe"), "yes"];
+  if (b === "ww") return ["Likely — worldwide", "yes"];
+  return ["Unclear", "dim"];
+}
+function card(j, opts) {
+  const st = state.jobs[j.id] || "";
+  const b = bucketOf(j);
+  const f = (FACTS && FACTS[j.id]) || {};
+  const el = document.createElement("div");
+  el.className = "job" + (SEL === j.id ? " sel" : "");
+  el.onclick = e => { if (!e.target.closest("a,button")) selectJob(j.id); };
+  const dd = days(j);
+  const remote = f.remote || (/hybrid/i.test(j.location) ? "Hybrid"
+      : /remote/i.test(j.location) ? "Remote"
+      : (j.direct === false || j.apply_url) ? "Remote" : "");
+  const years = f.years_experience || (j.xp ? j.xp.replace(/y$/, "") : "");
+  const pt = ptSituation(j, f);
+  const salary = f.salary || j.salary;
+  el.innerHTML =
+    '<div class="jmain">' +
+      '<div class="jrow1">' +
+        '<a class="jtitle" href="' + esc(safeUrl(j.apply_url || j.url)) + '" target="_blank" rel="noopener">' + esc(j.title) + "</a>" +
+        (opts.isNew ? ' <span class="badge b-new">new</span>' : "") +
+        (isReopened(j) ? ' <span class="badge b-edit" title="You discarded this, but the company has since edited the description — a second look.">JD edited</span>' : "") +
+        (b === "pt" ? ' <span class="badge b-pt">PT</span>' : "") +
+        (b === "ok" ? ' <span class="badge b-ok">ok’d</span>' : "") +
+        '<span class="co">' + esc(j.company) + "</span>" +
+        '<span class="hq" title="' + esc(j.location) + '">' + esc(f.country || j.location || "") + "</span>" +
+        (salary ? '<span class="sal">' + esc(salary) + "</span>" : "") +
+      "</div>" +
+      '<div class="jrow2">' +
+        daysCell(dd, j) +
+        cell("remote", esc(remote), "") +
+        cell("portugal", esc(pt[0]), pt[1]) +
+        cell("years", esc(years), years ? "" : "dim") +
+        cell("via", esc(j.source.split("/")[0]) + (j.apply_url ? (j.apply_kind === "careers" ? " → careers" : " → direct") : ""), "dim") +
+      "</div>" +
+    "</div>" +
+    "";
+  const on = (cls, fn) => { const b2 = el.querySelector(cls); if (b2) b2.onclick = fn; };
+  return el;
+}
+
+// ---------- render ----------
+function section(root, label, jobs, opts) {
+  if (!jobs.length) return;
+  const h = document.createElement("h2");
+  h.innerHTML = esc(label) + ' <span class="n">' + jobs.length + "</span>";
+  root.appendChild(h);
+  jobs.forEach(j => root.appendChild(card(j, Object.assign({ isNew: j.first_run === DATA.run_id }, opts))));
+}
+function render() {
+  const root = document.getElementById("sections");
+  root.innerHTML = "";
+  propagateVariants();
+  // one flat list per tab, sorted by the DAYS count - nothing else
+  const byDays = (a, b2) => {
+    const da = days(a), db = days(b2);
+    if (da === null && db === null) return when(b2) - when(a);
+    if (da === null) return 1;
+    if (db === null) return -1;
+    return da - db;
+  };
+  const act = DATA.jobs.filter(j => j.active).sort(byDays);
+  const inbox = act.filter(j => !state.jobs[j.id]);
+  // physically-in-Portugal roles (onsite/hybrid) get their own tab, even when
+  // the role itself is still unsure - remote-from-Portugal stays in Open
+  // bucket is the judge's authoritative call - location text alone misleads
+  // (an EU-remote role can list Portugal among 20 hiring countries)
+  const isPT = j => bucketOf(j) === "pt" && /portugal|lisbon|lisboa/i.test(j.location || "") && !/remote/i.test(j.location || "");
+  // INGESTION IS INGESTION: a role reaches the board only after it has passed
+  // the WHOLE filter, JD judge included. Scraped-but-unjudged roles are held
+  // back as "pending" - never shown half-filtered, whoever triggered the run.
+  const done = inbox.filter(j => j.judged || state.verdicts[j.id]);
+  const pending = inbox.filter(j => !j.judged && !state.verdicts[j.id]);
+  // discarded roles whose JD has since changed come back to Unsure for review
+  const reopened = act.filter(isReopened);
+  const pools = {
+    open: done.filter(j => !isPT(j) && bucketOf(j) !== "tiebreak"),
+    portugal: done.filter(isPT),
+    unsure: done.filter(j => !isPT(j) && bucketOf(j) === "tiebreak").concat(reopened).sort(byDays),
+  };
+  for (const t in pools)
+    document.getElementById("c-" + t).textContent = pools[t].length || "";
+  const pn = document.getElementById("pending");
+  if (pn) pn.textContent = pending.length ? pending.length + " pending judge" : "";
+  // survivors of the last run: new, still active (judge cuts are inactive),
+  // and by definition untriaged - i.e. exactly what landed in Open/Portugal/Unsure
+  const fresh = act.filter(j => j.first_run === DATA.run_id).length;
+  document.getElementById("newcount").textContent = fresh ? "+" + fresh + " new" : "";
+
+  const visible = pools[tab] || pools.open;
+  if (!visible.some(j => j.id === SEL)) SEL = visible.length ? visible[0].id : null;
+  if (!visible.length) {
+    const EMPTY = { open: "No open roles match.", applied: "Nothing applied yet.",
+                    discarded: "Nothing discarded.", unsure: "Nothing unsure.",
+                    portugal: "No onsite/hybrid roles in Portugal right now.",
+                    cut: "The judge has not cut anything." };
+    root.innerHTML = '<div class="empty">' + EMPTY[tab] + "</div>";
+  } else {
+    const done = tab === "applied" || tab === "discarded";
+    const opts = j => ({ isNew: j.first_run === DATA.run_id, done: done,
+                         unsure: tab === "unsure", cut: tab === "cut" });
+    // company grouping - sticky AND anchored per run: a group keeps the list
+    // position and header of its newest role AT FORMATION (frozen by id), even
+    // after that role is applied/discarded, so the group never jumps while you
+    // triage it. It only leaves the list once every role in it is cleared.
+    let G = { run: null, tabs: {} };
+    try { G = JSON.parse(localStorage.getItem("radar_groups") || "null") || G; } catch (e) {}
+    if (G.run !== DATA.run_id) G = { run: DATA.run_id, tabs: {} };
+    // proto-less maps: a company named "Constructor" must not collide with
+    // Object.prototype (norm("Constructor") === "constructor")
+    const gset = G.tabs[tab] = Object.assign(Object.create(null), G.tabs[tab]);
+    const byCo = Object.create(null);
+    visible.forEach(j => { const c = norm(j.company); (byCo[c] = byCo[c] || []).push(j); });
+    // form groups; anchor each to its newest role's id (frozen once set).
+    // visible is byDays-sorted so byCo[c][0] is the newest at formation.
+    for (const c in byCo) if (byCo[c].length >= 2 && typeof gset[c] !== "string") gset[c] = byCo[c][0].id;
+    try { localStorage.setItem("radar_groups", JSON.stringify(G)); } catch (e) {}
+    const jobById = Object.create(null);
+    DATA.jobs.forEach(j => { jobById[j.id] = j; });
+    // build render units with a frozen sort anchor (the anchor role, looked up
+    // anywhere in DATA so it survives being triaged/inactive)
+    const units = [];
+    const seen = Object.create(null);
+    visible.forEach(j => {
+      const c = norm(j.company);
+      if (!(c in gset)) { units.push({ solo: j, days: days(j), when: when(j) }); return; }
+      if (seen[c]) return;
+      seen[c] = true;
+      const anchor = jobById[gset[c]] || byCo[c][0];
+      units.push({ rows: byCo[c], anchor: anchor, days: days(anchor), when: when(anchor) });
+    });
+    units.sort((a, b2) => {
+      if (a.days === null && b2.days === null) return b2.when - a.when;
+      if (a.days === null) return 1;
+      if (b2.days === null) return -1;
+      return a.days - b2.days;
+    });
+    units.forEach(u => {
+      if (u.solo) { root.appendChild(card(u.solo, opts(u.solo))); return; }
+      const dd = u.days;
+      const h = document.createElement("div");
+      h.className = "cohead";
+      h.innerHTML = '<span class="cohead-days">' + (dd === null ? "?" : dd + (dd === 1 ? " day" : " days")) + "</span>" +
+        "<b>" + esc(u.anchor.company) + "</b>" +
+        '<span class="n">' + u.rows.length + (u.rows.length === 1 ? " role" : " roles") + "</span>";
+      root.appendChild(h);
+      u.rows.forEach(x => { const el = card(x, opts(x)); el.classList.add("ingroup"); root.appendChild(el); });
+    });
+  }
+
+  renderPreview();
+  const s = DATA.sources || {};
+  const bad = Object.keys(s).filter(k => !s[k].ok);
+  document.getElementById("foot").innerHTML =
+    Object.keys(s).length + " sources · " + DATA.counts.active + " active roles · " +
+    (DATA.counts.new ? DATA.counts.new + " new overnight" : "no new overnight") +
+    (bad.length ? ' · <span class="bad">down: ' + bad.map(esc).join(", ") + "</span>" : "");
+}
+function stamp() {
+  const t = new Date(DATA.generated_at);
+  document.getElementById("stamp").textContent =
+    "updated " + t.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+}
+
+// ---------- wiring ----------
+document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+  tab = b.dataset.tab;
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x === b));
+  render();
+});
+document.getElementById("scrape").onclick = scrapeNow;
+fetch("data/facts.json?t=" + Date.now()).then(r => r.ok ? r.json() : {}).then(f => {
+  FACTS = f || {}; if (DATA) render();
+}).catch(() => {});
+fetch("data/cvs.json?t=" + Date.now()).then(r => r.ok ? r.json() : {}).then(d => {
+  CVS = d || {}; PV = null; if (DATA) render();
+}).catch(() => {});
+fetch("data/jobs.json?t=" + Date.now()).then(r => r.json()).then(d => {
+  DATA = d; stamp(); render();
+}).catch(() => {
+  document.getElementById("stamp").textContent = "couldn't load data/jobs.json — run scrape.py first";
+});
+</script>
+</body>
+</html>
