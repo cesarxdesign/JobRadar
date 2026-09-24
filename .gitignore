@@ -15,6 +15,7 @@ data/test_emails.json
 
 # Email extraction: his inbox, local only
 data/emails*
+data/jobradar_email_sweep.json
 data/applied_hints.json
 relay.html
 data/applied_history.*
