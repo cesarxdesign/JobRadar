@@ -1,7 +1,9 @@
 # JobRadar
 
-Live at **https://cesar-jobradar.vercel.app** (its own Vercel project; every push to `main`
-redeploys it). Also on GitHub Pages at https://cesarxdesign.github.io/JobRadar/.
+Live at **https://cesarxdesign.github.io/JobRadar/** on GitHub Pages; every push to `main`
+redeploys it. The old address, https://cesar-jobradar.vercel.app, only redirects there: Vercel
+deploys `vercel.json` alone (see `.vercelignore`), since each full deploy counts against its
+free storage.
 
 This is the only version. The first one (called Radar1 in comments here) was the `Radar`
 repo; on 2026-09-24 it was merged in with its full history, every commit kept, under
