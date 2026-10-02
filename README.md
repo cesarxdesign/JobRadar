@@ -8,6 +8,20 @@ repo; on 2026-09-24 it was merged in with its full history, every commit kept, u
 `_archive/radar/`, and the `Radar` repo archived read-only. Every source it scraped is in
 `data/sources.json`.
 
+## What it is for
+
+Getting a job. Everything else is judged against this chain:
+
+    a job           needs interviews
+    interviews      need applications that get called back
+    applications    need roles, found and shown
+    roles           are only worth showing if he can apply to them, so the criteria must be right
+
+He applies to every role that fits. A company's Staff, Senior and Lead postings are three
+jobs and three applications. So an application matches one posting or none: a similar title
+at the same company is not a match, and a role that is not certainly applied to stays live.
+A role shown twice costs a glance. A role wrongly hidden costs an application.
+
 Four modules. Each writes one file. None reaches into another.
 
     pool.py      the internet      -> data/pool.json      every role found, no opinions

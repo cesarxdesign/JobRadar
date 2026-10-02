@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-09-03.1"
+VERSION = "2026-10-02.2"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -110,6 +110,17 @@ AXIS 2 - PLACE. Can he do this job while living in Portugal?
     Work it out from the posting - headquarters, offices, the entity named.
     Spain only. France, Germany and Italy stay NO.
 
+  WORKING HOURS ARE NOT A PLACE. "Must overlap with US Eastern hours",
+  "within CET to ET timezones", "available 9am-3pm Pacific" say when he
+  works, not where he may live. He will work any hours. Never answer NO on
+  hours or timezone alone - judge the place from where the posting says a
+  person may live or be hired.
+
+  THE RIGHT TO WORK IS A PLACE. "Must be authorized to work in the United
+  States", "US work authorization required", "must have the right to work in
+  the UK", "no visa sponsorship" beside a single country: that is NO. He has
+  the right to work in Portugal and the EU, nowhere else.
+
   UNCLEAR when you genuinely cannot tell. Do not guess NO.
 
 
@@ -208,3 +219,78 @@ def lane_for(role_verdict, place_verdict):
     if role_verdict == "yes" and place_verdict == "remote":
         return "open"
     return "unsure"
+
+
+# ---------------------------------------------------------------- the vision pass
+# What vision.py tells the reader before the criteria above. The reader is no
+# longer handed fields pasted together: it is handed the page, every word a
+# browser put on screen, and has to find the posting in it.
+VISION_HEAD = """
+You are reading ONE web page: a job posting, loaded in a real browser. Below
+is every word visible on that page, top to bottom, exactly as a person would
+see it - the site's menus, banners, cookie notices, ads, the posting itself,
+the footer, and often a list of OTHER jobs. Read all of it.
+
+The posting is the main content of the page. Menus and "related jobs" are not
+the posting: a location or a title in a list of other jobs says nothing about
+this job. But a banner or a line about THIS job - "this role is no longer
+available", "applications closed", "US only", "Germany only" - is the posting
+speaking, wherever on the page it sits, and it outranks any tag.
+
+FIRST QUESTION, BEFORE ANYTHING ELSE: IS THIS POSTING STILL OPEN?
+  no          the page says so in words: no longer available, closed, filled,
+              archived, expired, job not found, no longer accepting
+              applications.
+  unreadable  the page is not a job posting at all: an error, a login wall,
+              a "checking your browser" page, an empty shell, a list of jobs
+              with no single posting.
+  yes         otherwise. An old date is NOT closed. Never answer "no" because
+              a posting looks old - only because the page says it is closed.
+"""
+
+VISION_OUTPUT = """
+Return ONE JSON object and nothing else. No prose, no code fence.
+
+{
+  "posting_open": "yes" | "no" | "unreadable",
+  "open_quote": "the exact words on the page that say it is closed or unreadable, else null",
+  "language_of_the_posting": "the language the DESCRIPTION is written in",
+  "language_ok": true | false,
+  "workplace_as_posted": "remote" | "hybrid" | "onsite" | "not stated",
+  "can_he_do_it_from_portugal": "yes" | "no" | "unclear",
+  "place_quote": "the exact words on the page that decided the place, copied, under 30 words",
+  "role_verdict": "yes" | "no" | "unclear",
+  "place_verdict": "remote" | "pt_onsite" | "no" | "unclear",
+  "cut": true | false,
+  "reason": "one short sentence - what decided it",
+  "confidence": "high" | "medium" | "low",
+  "inferred": ["names of fields you inferred rather than read"],
+  "fields": {
+    "role": "...", "company": "...", "seniority": "...",
+    "remote": "...", "onsite_days": null, "countries": [],
+    "portugal_ok": "...", "salary": null, "years_xp": null,
+    "reports_to": null, "language": "...", "posted": null
+  }
+}
+
+fields.posted is the date the page itself prints for this posting, as written
+("January 26", "3 weeks ago"), or null.
+
+When posting_open is "no" or "unreadable", still fill what you can and set
+the verdicts to "unclear"; the page being closed is the whole answer.
+
+language_ok is true only for English or Portuguese. When it is false, cut MUST
+be true, role_verdict MUST be "no", and reason MUST be "posting is written in
+<language>".
+
+place_quote must be words that are really on the page. Answer
+workplace_as_posted and can_he_do_it_from_portugal BEFORE place_verdict, and
+let them decide it:
+  can_he_do_it_from_portugal "no"      -> place_verdict MUST be "no"
+  "yes" and workplace_as_posted remote -> place_verdict "remote"
+  "yes" and hybrid or onsite in Portugal -> place_verdict "pt_onsite"
+  "unclear"                            -> place_verdict "unclear"
+A hybrid or onsite job anywhere but Portugal is "no", however good the role.
+
+Otherwise cut is true when role_verdict is "no" OR place_verdict is "no".
+"""

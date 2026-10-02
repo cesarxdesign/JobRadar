@@ -29,3 +29,10 @@ data/marks.json
 # fetcher's working cache: rebuilt from the boards, not history
 data/originals.json
 data/links.json
+
+# Screenshots of each posting as the vision pass saw it. Rebuilt by every run.
+data/shots/
+
+# His applications: which companies, which roles. Never public.
+data/sweep_overrides.json
+data/battery/

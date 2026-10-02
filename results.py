@@ -25,6 +25,7 @@ LINKS_FILE = ROOT / "data" / "links.json"
 VERDICTS_FILE = ROOT / "data" / "verdicts.json"
 RESULTS_FILE = ROOT / "data" / "results.json"
 JD_FILE = ROOT / "data" / "jd.json"                   # descriptions, keyed by id
+VISION_FILE = ROOT / "data" / "vision.json"           # the page, read in a browser
 HINTS_FILE = ROOT / "data" / "applied_hints.json"     # local only, from match.py
 SHIPPED_FILE = ROOT / "data" / "shipped.json"         # every id ever put on the board
 
@@ -117,8 +118,27 @@ def placed_elsewhere(rec):
     return not PLACE_BARE.match(loc) and not PLACE_OK.search(loc)
 
 
-def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
+def from_vision(v):
+    """A vision verdict in the shape the board already draws. Where vision has
+    read the page, its answer is the verdict: the old judge read a copy."""
+    why = [v.get("reason")]
+    if v.get("place_quote"):
+        why.append('the page says: "' + v["place_quote"] + '"')
+    if v.get("open_quote"):
+        why.append('the page says: "' + str(v["open_quote"]) + '"')
+    emp, board = v.get("employer") or {}, v.get("board") or {}
+    return {"role": v.get("role_verdict"), "place": v.get("place_verdict"), "lane": v.get("lane"),
+            "cut": v.get("lane") == "cut", "why": [w for w in why if w], "judged": True,
+            "text": "employer's page" if v.get("read") == "employer" else "job board's copy",
+            "stage": "vision", "confidence": v.get("confidence"), "fields": v.get("fields") or {},
+            "inferred": v.get("inferred") or [], "read": v.get("read"), "read_url": v.get("read_url"),
+            "shot": emp.get("shot") or board.get("shot"), "read_at": v.get("at")}
+
+
+def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=None):
     hints = hints or {}
+    vision = vision or {}
+    closed, vcut = [], []
     verdicts = verdicts_doc.get("jobs", {})
     roles, lanes, cut, title_cuts, unjudged = [], {k: [] for k in LANES}, [], 0, 0
     ghosts = 0
@@ -127,6 +147,16 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
             continue
         if is_ghost(rec, originals):
             ghosts += 1
+            continue
+        vis = vision.get(rec["id"])
+        if vis:
+            # Vision decides, and nothing it saw is dropped: a closed posting
+            # and a cut each get a list the board can open.
+            role = dict(rec)
+            role["verdict"] = from_vision(vis)
+            roles.append(role)
+            lane = vis.get("lane")
+            (lanes[lane] if lane in lanes else closed if lane == "closed" else vcut).append(rec["id"])
             continue
         v = dict(DEFAULT_VERDICT)
         v.update(verdicts.get(rec["id"], {}))
@@ -160,11 +190,14 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None):
         "criteria": verdicts_doc.get("criteria"),
         "model": verdicts_doc.get("model"),
         "counts": {**{k: len(v) for k, v in lanes.items()}, "ghosts": ghosts,
-                   "cut": len(cut), "title_cuts": title_cuts, "unjudged": unjudged,
+                   "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut),
+                   "vision_read": len(vision), "title_cuts": title_cuts, "unjudged": unjudged,
                    "active": sum(1 for r in pool_doc["jobs"] if r.get("active")),
                    "total": len(pool_doc["jobs"])},
         "lanes": lanes,
         "cut": cut,
+        "closed": closed,
+        "vcut": vcut,
         "sources": pool_doc.get("sources", {}),
         "roles": roles,
     }
@@ -187,7 +220,8 @@ def main():
                   json.loads(VERDICTS_FILE.read_text()),
                   json.loads(HINTS_FILE.read_text()) if HINTS_FILE.exists() else {},
                   json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {},
-                  merged_evidence())
+                  merged_evidence(),
+                  json.loads(VISION_FILE.read_text()) if VISION_FILE.exists() else {})
     fresh = remember_shipped(built)
     RESULTS_FILE.write_text(json.dumps(built, indent=1, ensure_ascii=False))
     print(f"wrote {RESULTS_FILE} - {built['counts']}")
