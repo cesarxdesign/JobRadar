@@ -120,6 +120,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
+  <button class="tab rr" data-lane="incorrect" hidden title="calls the filter got wrong, for the morning review">Incorrect<span class="n" id="c-incorrect"></span></button>
   <button class="tab rr" data-lane="stats" hidden>Stats</button>
   <button class="tab bt" data-lane="pass" hidden>Passed<span class="n" id="c-pass"></span></button>
   <button class="tab bt" data-lane="cut" hidden>Cut<span class="n" id="c-cut"></span></button>
@@ -250,6 +251,24 @@ function routing(id){return RR ? (RR.decisions.find(d=>d.id===id)||{}).decision 
 // A favorite is a favorite whatever else happens to it. It lives in the
 // routing file beside the decisions and shows the role's current state.
 function fav(id){return !!(RR&&RR.favorites.includes(id));}
+// "Incorrect" is not "discard". Discard says he does not want the job;
+// incorrect says the filter made the wrong call - a closed role that is open,
+// a cut that should have passed, an Open role he cannot take. The role stays
+// where it is. The mark, with what the filter said at the time, goes in the
+// routing file and is what gets reviewed each morning.
+const wrongOf=id=>RR&&(RR.incorrect||[]).find(x=>x.id===id);
+function toggleIncorrect(r){
+  RR.incorrect=RR.incorrect||[];
+  if(wrongOf(r.id)) RR.incorrect=RR.incorrect.filter(x=>x.id!==r.id);
+  else{
+    const note=prompt("What did the filter get wrong? (optional)","");
+    if(note===null) return;
+    const v=r.verdict||{};
+    RR.incorrect.push({id:r.id,at:new Date().toISOString(),note,company:r.company,title:r.title,url:r.url,
+      shown_in:LANE,lane:v.lane,role:v.role,place:v.place,why:v.why,read:v.read,read_url:v.read_url,stage:v.stage});
+  }
+  writeRR();render();
+}
 function toggleFav(id){RR.favorites=fav(id)?RR.favorites.filter(x=>x!==id):[...RR.favorites,id];writeRR();render();}
 const LANES=["open","portugal","unsure"];
 const laneOf=r=>LANES.find(l=>(DATA.lanes[l]||[]).includes(r.id));
@@ -414,6 +433,9 @@ function pool(){
   else if(LANE==="applied"||LANE==="discarded")
     rows=DATA.roles.filter(r=>r.active && routing(r.id)===LANE).concat(decided(LANE));
   // a role you have acted on leaves the first three lanes
+  else if(LANE==="incorrect")
+    rows=(RR?RR.incorrect||[]:[]).map(x=>roleById(x.id)||{id:x.id,company:x.company,title:x.title,url:x.url,active:true,gone:true,
+      posted:x.at,first_seen:x.at,verdict:{why:x.why||[],fields:{}}});
   else if(LANE==="closed"||LANE==="vcut")
     rows=(DATA[LANE]||[]).map(roleById).filter(r=>r && !routing(r.id));
   else if(LANE==="old69")
@@ -445,6 +467,7 @@ function counts(){
     for(const l of ["applied","discarded"])
       $("c-"+l).textContent=(DATA.roles.filter(r=>r.active&&routing(r.id)===l)
         .concat(decided(l)).filter(matches)).length||"";
+    $("c-incorrect").textContent=(RR.incorrect||[]).length||"";
     $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)&&matches(r)).length||"";
   }
 }
@@ -496,12 +519,14 @@ function render(){
           +'<button class="star'+(fav(r.id)?" on":"")+'" data-f="1" title="favorite">'+(fav(r.id)?"★":"☆")+'</button>'
           +'<button data-d="applied" class="'+(rt==="applied"?"on":"")+'">applied</button>'
           +'<button data-d="discarded" class="'+(rt==="discarded"?"on":"")+'">discard</button>'
-          +(rt?'<button data-d="">clear</button>':'')+'</div>':'');
+          +(rt?'<button data-d="">clear</button>':'')
+          +'<button data-x="1" class="wrong'+(wrongOf(r.id)?" on":"")+'" title="'+esc((wrongOf(r.id)||{}).note||"the filter got this one wrong")+'">'+(wrongOf(r.id)?"✓ incorrect":"incorrect")+'</button></div>':'');
     el.onclick=()=>{SEL=r.id;render();};
     el.querySelectorAll("a").forEach(a=>a.onclick=e=>e.stopPropagation());
     el.querySelectorAll("button").forEach(b=>b.onclick=e=>{e.stopPropagation();
       if(b.dataset.w) return markWrong(r);
       if(b.dataset.f) return toggleFav(r.id);
+      if(b.dataset.x) return toggleIncorrect(r);
       // The button that put a role somewhere takes it back out: clicking an
       // active "discard" un-discards it and the role returns to the lane the
       // judge gave it. Same for "applied". A dead button is a button you have
