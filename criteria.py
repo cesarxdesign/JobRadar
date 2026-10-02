@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-02.2"
+VERSION = "2026-10-02.5"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -59,6 +59,10 @@ AXIS 1 - ROLE. Is this a role for him?
        design leadership (head, director, manager of design).
   YES  engineering roles that lean design - Design Engineer, UI/UX Engineer,
        Design Technologist. He judges the balance himself; let them through.
+       The TITLE has to say design, UX or UI. An engineer's title that leans
+       the other way - "Frontend Engineer", "Frontend Leaning Engineer",
+       "Creative Developer", "Product Engineer" - is engineering: NO, however
+       much design the description talks about.
   NO   the posting is really brand, marketing, graphic design, motion, logos,
        campaigns, or user research as its own discipline.
        EXCEPT at Head of / Director of Design level, where he oversees those
@@ -102,6 +106,24 @@ AXIS 2 - PLACE. Can he do this job while living in Portugal?
   Remote tied to a city - "Remote-NYC", "Paris - Full Remote" - is remote in
   that city. Do not widen it to the whole country, and do not widen it to
   Europe, unless the posting says so.
+
+  THE LINE UNDER THE TITLE, AND "BASED IN", ARE THE PLACE OF THIS POSTING.
+  Hiring systems print the location right under the job title - "US",
+  "Germany", "France", "London" - and agencies open with "our partner is
+  looking for a Senior Product Designer based in Germany". That is the first
+  thing a person sees and it is where THIS posting is. The same job is often
+  posted once per country; each copy is for its own country.
+    It names one country or city that is not Portugal, and nothing on the
+    page clearly widens it                                    -> NO.
+    It names one country or city that is not Portugal, and further down
+    the page says something wider - "eligible European locations",
+    "authorized to work in the US, Canada, LATAM or Europe", "salary
+    adjusted for Europe", "EMEA" -                            -> UNCLEAR.
+    The page contradicts itself. He reads it and decides. It is NEVER
+    remote/yes: wider words lower down do not erase the country at the top.
+  Only when the line under the title is itself wide - Europe, EMEA,
+  Worldwide, Anywhere, Remote with no country, or a list that contains
+  Portugal - can the answer be yes.
 
   SPAIN IS THE ONE EXCEPTION, because Spain borders Portugal.
     Remote-Spain and the company is Spanish        -> NO. They mean Spain.
@@ -252,11 +274,13 @@ VISION_OUTPUT = """
 Return ONE JSON object and nothing else. No prose, no code fence.
 
 {
+  "same_job": "yes" | "no",
   "posting_open": "yes" | "no" | "unreadable",
   "open_quote": "the exact words on the page that say it is closed or unreadable, else null",
   "language_of_the_posting": "the language the DESCRIPTION is written in",
   "language_ok": true | false,
   "workplace_as_posted": "remote" | "hybrid" | "onsite" | "not stated",
+  "location_under_the_title": "the location the page prints beside or under the job title, and any 'based in ...' line, copied exactly; null if there is none",
   "can_he_do_it_from_portugal": "yes" | "no" | "unclear",
   "place_quote": "the exact words on the page that decided the place, copied, under 30 words",
   "role_verdict": "yes" | "no" | "unclear",
@@ -273,6 +297,11 @@ Return ONE JSON object and nothing else. No prose, no code fence.
   }
 }
 
+same_job: you are told which role the pool lists. "no" only when the page
+is plainly a posting for a DIFFERENT job (another title, another company) or
+an advert for something else. A longer or shorter wording of the same title
+is the same job.
+
 fields.posted is the date the page itself prints for this posting, as written
 ("January 26", "3 weeks ago"), or null.
 
@@ -282,6 +311,11 @@ the verdicts to "unclear"; the page being closed is the whole answer.
 language_ok is true only for English or Portuguese. When it is false, cut MUST
 be true, role_verdict MUST be "no", and reason MUST be "posting is written in
 <language>".
+
+Answer location_under_the_title BEFORE can_he_do_it_from_portugal. When it
+names a single country or city that is not Portugal, can_he_do_it_from_portugal
+is "no", or "unclear" if the page says something wider further down. It is not
+"yes".
 
 place_quote must be words that are really on the page. Answer
 workplace_as_posted and can_he_do_it_from_portugal BEFORE place_verdict, and

@@ -27,19 +27,23 @@ import json, os, re, subprocess, sys, threading, time
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import contracts, criteria, judge, read, render
+import contracts, criteria, employer, judge, read, render
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = f"{ROOT}/data/vision.json"
 MODEL = os.environ.get("RADAR_VISION_MODEL", "sonnet")
 WORKERS = 4
 MAX_CHARS = 30000          # a long posting is ~10k; this is the page, menus and all
+# A page costs about 6,500 tokens to read. The old judge spent 30,000 on each
+# because it sent the CLI's whole system prompt and tool list along, and nobody
+# measured it. This is measured every run, and a run that drifts above the
+# ceiling stops itself rather than spend his tokens on a mistake.
+CEILING = 12000            # tokens per page, in + out, averaged
+RUNS_LOG = f"{ROOT}/data/vision_runs.jsonl"
 
 # A page that is certainly gone needs no reader. Only what cannot be argued
 # with: the server said gone, or the page is nothing but the sentence.
-GONE = re.compile(r"(?i)job not found|no longer available|no longer accepting|position (has been|is) (filled|closed)|"
-                  r"this job (is|has) (closed|expired)|job (has )?expired|posting (has )?(expired|closed)|"
-                  r"was archived|page not found|404")
+GONE = employer.GONE
 UIUX_GONE = "This role is no longer available!"
 WALL = re.compile(r"(?i)just a moment|checking your browser|verify you are human|enable javascript and cookies|access denied")
 
@@ -70,6 +74,8 @@ def ask(prompt):
                     + (u.get("cache_read_input_tokens") or 0)
                 _usage["out"] += u.get("output_tokens") or 0
                 _usage["usd"] += env.get("total_cost_usd") or 0
+                if _usage["calls"] >= 10 and (_usage["in"] + _usage["out"]) / _usage["calls"] > CEILING:
+                    _usage["stop"] = True
             return read.parse(env.get("result") or "")
         except subprocess.TimeoutExpired:
             last = "timeout"
@@ -94,42 +100,73 @@ def gone(page):
     return None
 
 
-def see(br, rec):
+def off_the_posting(rec, page):
+    """The board sent us somewhere else: its home page, a list of jobs. An
+    expired listing often redirects instead of saying so."""
+    return page.get("url") != page.get("asked") and not employer.has_title(rec["title"], page)
+
+
+def reader(rec, page):
+    prompt = (criteria.VISION_HEAD + criteria.JUDGE_CRITERIA + criteria.JUDGE_FIELDS + criteria.VISION_OUTPUT
+              + f"\n\nThe pool lists this role as: {rec.get('title')} at {rec.get('company')}."
+              + f"\nPage address: {page.get('url')}\nPage title: {page.get('title')}"
+              + "\n\n--- EVERY WORD VISIBLE ON THE PAGE ---\n" + (page.get("text") or "")[:MAX_CHARS])
+    return ask(prompt)
+
+
+def see(finder, rec):
     """Everything vision knows about one role."""
+    br = finder.br
     is_board = "/" not in (rec.get("source") or "")
-    pages = render.posting(br, rec["url"], shot_id=rec["id"], is_board=is_board)
-    board, emp = pages["board"], pages["employer"]
+    first = br.page(rec["url"], shot=render.shot_path(rec["id"]))
+    board, emp, found, tried = (first, None, None, []) if is_board else (None, first, None, [])
+    if is_board:
+        found, tried = finder.find(rec, board)
+        emp = found and found["page"]
+    keep = ("url", "status", "shot", "error")
     v = {"id": rec["id"], "at": time.strftime("%Y-%m-%dT%H:%M:%S"), "criteria": criteria.VERSION,
          "model": MODEL, "pool_url": rec["url"],
-         "board": board and {k: board.get(k) for k in ("url", "status", "shot", "error")},
-         "employer": emp and {k: emp.get(k) for k in ("url", "status", "shot", "error", "via")}}
-    # The employer's page is the posting. The board's is a copy of it.
-    page = emp if emp and len(emp.get("text") or "") > 200 else board
-    v["read"] = "employer" if page is emp and emp else "board"
-    v["read_url"] = page.get("url") if page else None
+         "board": board and {k: board.get(k) for k in keep},
+         "employer": emp and {k: emp.get(k) for k in keep},
+         "found_by": found and found["how"], "looked": tried}
 
-    dead = gone(emp) or gone(board)
-    if dead:
-        return {**v, "lane": "closed", "posting_open": "no", "open_quote": dead, "reason": "the page says it is closed",
-                "stage": "render"}
+    # The employer's page is the posting; the board's is a copy of it. So the
+    # employer decides whether the job is open - a board calling it closed is
+    # wrong about one in eight that the employer still lists.
+    if found and found.get("gone"):
+        return {**v, "lane": "closed", "posting_open": "no", "closed_by": "employer", "read": "employer",
+                "read_url": emp.get("url"), "open_quote": found["gone"], "stage": "render",
+                "reason": "the employer says it is closed"}
+    if not is_board and gone(emp):
+        return {**v, "lane": "closed", "posting_open": "no", "closed_by": "employer", "read": "employer",
+                "read_url": emp.get("url"), "open_quote": gone(emp), "stage": "render",
+                "reason": "the employer says it is closed"}
+    if is_board and not found:
+        dead = gone(board) or (off_the_posting(rec, board) and "the board sent the link somewhere else: " + str(board.get("url")))
+        if dead:
+            return {**v, "lane": "closed", "posting_open": "no", "closed_by": "board", "read": "board",
+                    "read_url": board.get("url"), "open_quote": dead, "stage": "render",
+                    "reason": "the board says it is closed, and the employer's posting was not found"}
+
+    page = emp if emp and len(emp.get("text") or "") > 200 else board
+    v["read"] = "employer" if emp is not None and page is emp else "board"
+    v["read_url"] = page.get("url") if page else None
     text = (page or {}).get("text") or ""
     if len(text) < 200 or WALL.search(text[:600]):
         return {**v, "lane": "unsure", "posting_open": "unreadable", "stage": "render",
                 "open_quote": " ".join(text.split())[:160] or (page or {}).get("error"),
                 "reason": "the page could not be read in the browser"}
-
-    prompt = (criteria.VISION_HEAD + criteria.JUDGE_CRITERIA + criteria.JUDGE_FIELDS + criteria.VISION_OUTPUT
-              + f"\n\nThe pool lists this role as: {rec.get('title')} at {rec.get('company')}."
-              + f"\nPage address: {page.get('url')}\nPage title: {page.get('title')}"
-              + "\n\n--- EVERY WORD VISIBLE ON THE PAGE ---\n" + text[:MAX_CHARS])
     try:
-        a = ask(prompt)
+        a = reader(rec, page)
     except Exception as e:
         return {**v, "lane": "unsure", "stage": "error", "reason": f"the reader failed: {e}"}
     v.update(a)
     v["stage"] = "vision"
-    if a.get("posting_open") == "no":
-        v["lane"] = "closed"
+    if a.get("same_job") == "no":
+        v["lane"] = "unsure"
+        v["reason"] = "the page read is a different job · " + str(a.get("reason") or "")
+    elif a.get("posting_open") == "no":
+        v["lane"], v["closed_by"] = "closed", v["read"]
     elif a.get("posting_open") == "unreadable":
         v["lane"] = "unsure"
     else:
@@ -137,6 +174,21 @@ def see(br, rec):
         v["lane"] = lane or "cut"
         if a.get("language_ok") is False:
             v["lane"] = "cut"
+        # A real design role cut on place is the cut that hides a job he
+        # wanted, and place is where two readings of one page disagree. So
+        # that cut has to be confident, and has to survive a second reading.
+        if v["lane"] == "cut" and a.get("role_verdict") != "no" and a.get("language_ok") is not False:
+            if a.get("confidence") != "high":
+                v["lane"], v["reason"] = "unsure", "cut on place, but not sure of it · " + str(a.get("reason") or "")
+            else:
+                try:
+                    b = reader(rec, page)
+                    v["second_place"] = b.get("place_verdict")
+                    if b.get("place_verdict") != "no":
+                        v["lane"] = "unsure"
+                        v["reason"] = "two readings disagree on place · " + str(a.get("reason") or "")
+                except Exception:
+                    pass
         # Open is a promise that the employer's own page was read.
         if v["lane"] in ("open", "portugal") and v["read"] == "board":
             v["lane_if_employer"] = v["lane"]
@@ -172,16 +224,19 @@ def main():
     if not rows:
         return
     br, t0, n = render.Browser(), time.time(), [0]
+    finder = employer.Finder(br, jobs)
 
     def one(rec):
+        if _usage.get("stop"):
+            return
         try:
-            v = see(br, rec)
+            v = see(finder, rec)
         except Exception as e:
             v = {"id": rec["id"], "lane": "unsure", "stage": "error", "reason": f"{type(e).__name__}: {e}"}
         with _lock:
             out[rec["id"]] = v
             n[0] += 1
-            print(f"  [{n[0]}/{len(rows)}] {v['lane']:8} {v.get('read', '-'):8} {rec['company'][:22]:22} | "
+            print(f"  [{n[0]}/{len(rows)}] {v['lane']:8} {v.get('read', '-'):8} {str(v.get('found_by') or ''):7} {rec['company'][:22]:22} | "
                   f"{rec['title'][:38]:38} | {str(v.get('place_quote') or v.get('open_quote') or v.get('reason'))[:70]}", flush=True)
             if n[0] % 10 == 0:
                 json.dump(out, open(OUT, "w"), indent=1, ensure_ascii=False)
@@ -193,12 +248,19 @@ def main():
         br.close()
         json.dump(out, open(OUT, "w"), indent=1, ensure_ascii=False)
     import collections
-    c = collections.Counter(out[r["id"]]["lane"] for r in rows)
+    c = collections.Counter(out[r["id"]]["lane"] for r in rows if r["id"] in out)
     u = _usage
     print(f"done in {time.time() - t0:.0f}s: {dict(c)}")
     if u["calls"]:
         print(f"{u['calls']} pages read by {MODEL}: {u['in']:,} tokens in, {u['out']:,} out, "
               f"{(u['in'] + u['out']) // u['calls']:,} per page, ${u['usd']:.2f} at API prices")
+        with open(RUNS_LOG, "a") as f:
+            f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "roles": len(rows), "pages_read": u["calls"],
+                                "tokens_per_page": (u["in"] + u["out"]) // u["calls"], "model": MODEL,
+                                "criteria": criteria.VERSION, "lanes": dict(c)}) + "\n")
+    if u.get("stop"):
+        print(f"STOPPED: reading a page was costing more than {CEILING:,} tokens. Something is wrong with the call.")
+        sys.exit(3)
 
 
 if __name__ == "__main__":

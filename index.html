@@ -522,7 +522,11 @@ function render(){
           +(rt?'<button data-d="">clear</button>':'')
           +'<button data-x="1" class="wrong'+(wrongOf(r.id)?" on":"")+'" title="'+esc((wrongOf(r.id)||{}).note||"the filter got this one wrong")+'">'+(wrongOf(r.id)?"✓ incorrect":"incorrect")+'</button></div>':'');
     el.onclick=()=>{SEL=r.id;render();};
-    el.querySelectorAll("a").forEach(a=>a.onclick=e=>e.stopPropagation());
+    // Opening the posting selects its row too: he opens it, applies, comes
+    // back, and the row he was on has to be the one still highlighted.
+    el.querySelectorAll("a").forEach(a=>a.onclick=e=>{e.stopPropagation();SEL=r.id;
+      document.querySelectorAll(".card.sel").forEach(c=>c.classList.remove("sel"));
+      el.classList.add("sel");renderPane();});
     el.querySelectorAll("button").forEach(b=>b.onclick=e=>{e.stopPropagation();
       if(b.dataset.w) return markWrong(r);
       if(b.dataset.f) return toggleFav(r.id);

@@ -6,9 +6,8 @@ over its DevTools socket: load the URL, let its scripts run, and take back
 what is on screen - every word of the rendered page, where the address bar
 ended up, the status the server answered with, and a screenshot.
 
-For a posting on a job board it then does what he would do: press Apply, and
-read the page that opens. That page is the employer's own, and it is the one
-that says "Germany only".
+Finding the employer's own page for a posting that came from a job board is
+employer.py's job; this only loads pages.
 
 No dependencies: the websocket client below is the little of the protocol
 DevTools needs.
@@ -36,8 +35,14 @@ PAGE_JS = r"""
       seen.add(h); apply.push({href: h, text: t, external: new URL(h).hostname.replace(/^www\./, '') !== host});
     }
   }
+  const links = [], had = new Set();
+  for (const a of document.querySelectorAll('a[href]')) {
+    if (!/^https?:/.test(a.href) || had.has(a.href) || links.length >= 500) continue;
+    had.add(a.href);
+    links.push({href: a.href, text: (a.innerText || a.getAttribute('aria-label') || '').trim().replace(/\s+/g, ' ').slice(0, 120)});
+  }
   return JSON.stringify({url: location.href, title: document.title,
-    text: document.body ? document.body.innerText : '', apply,
+    text: document.body ? document.body.innerText : '', apply, links,
     height: Math.max(document.documentElement.scrollHeight, document.body ? document.body.scrollHeight : 0)});
 })()
 """
@@ -154,7 +159,7 @@ class Browser:
     def page(self, url, shot=None, settle=2.5, timeout=25):
         """Load one URL and report what rendered. Never raises for a bad page:
         a page that will not load is a fact about the posting."""
-        out = {"asked": url, "url": url, "status": None, "title": "", "text": "", "apply": [], "error": None}
+        out = {"asked": url, "url": url, "status": None, "title": "", "text": "", "apply": [], "links": [], "error": None}
         try:
             tab = self._http("/json/new?about:blank", "PUT")
         except Exception as e:
@@ -165,7 +170,7 @@ class Browser:
             ev = []
             ws.call("Page.enable")
             ws.call("Network.enable")
-            ws.call("Page.navigate", events=ev, url=url)
+            frame = ws.call("Page.navigate", events=ev, url=url).get("frameId")
             ws.drain(timeout, ev, until="Page.loadEventFired")
             ws.drain(settle, ev)                               # scripts paint after load
             for _ in range(3):
@@ -174,10 +179,12 @@ class Browser:
                 if len(got.get("text", "")) > 400:
                     break
                 ws.drain(2.5, ev)                              # a slow single-page app
-            out.update({k: got.get(k, out.get(k)) for k in ("url", "title", "text", "apply")})
-            # the status of the document that ended up on screen, after redirects
+            out.update({k: got.get(k, out.get(k)) for k in ("url", "title", "text", "apply", "links")})
+            # The status of the page itself, after redirects. An embedded
+            # frame answers too - 29 of 72 pages ended on one - and its 200
+            # was hiding the page's own 404.
             docs = [e["params"]["response"] for e in ev if e["method"] == "Network.responseReceived"
-                    and e["params"].get("type") == "Document"]
+                    and e["params"].get("type") == "Document" and e["params"].get("frameId") == frame]
             if docs:
                 out["status"] = docs[-1]["status"]
             if shot:
@@ -214,35 +221,8 @@ def site(u):
     return ".".join(parts[-3:] if len(parts) > 2 and len(parts[-2]) <= 3 and len(parts[-1]) == 2 else parts[-2:])
 
 
-SOCIAL = re.compile(r"linkedin\.com/(share|sharing)|twitter\.com|x\.com/intent|facebook\.com|whatsapp|mailto:|t\.me/", re.I)
-
-
-def posting(br, url, shot_id=None, is_board=False):
-    """The page behind a pool row and, when that row is a board's copy, the
-    employer's page behind its Apply button.
-
-    Returns {"board": page | None, "employer": page | None}. `employer` is set
-    only when the browser really ended up on another site - never guessed.
-    """
-    first = br.page(url, shot=f"{SHOTS}/{shot_id}.jpg" if shot_id else None)
-    if not is_board:
-        return {"board": None, "employer": first}
-    out = {"board": first, "employer": None}
-    links = [a for a in first.get("apply") or [] if not SOCIAL.search(a["href"])]
-    links.sort(key=lambda a: (not a["external"], len(a["text"])))
-    for a in links[:2]:
-        nxt = br.page(a["href"], shot=f"{SHOTS}/{shot_id}.employer.jpg" if shot_id else None)
-        if nxt.get("text") and site(nxt["url"]) != site(first["url"]):
-            # Apply often opens the form, one level below the posting itself.
-            up = re.sub(r"/(apply|application)/?(\?.*)?$", "", nxt["url"])
-            if up != nxt["url"]:
-                par = br.page(up, shot=f"{SHOTS}/{shot_id}.employer.jpg" if shot_id else None)
-                if len(par.get("text") or "") > len(nxt["text"]):
-                    nxt = par
-            nxt["via"] = a["href"]
-            out["employer"] = nxt
-            break
-    return out
+def shot_path(shot_id, kind=""):
+    return f"{SHOTS}/{shot_id}{'.' + kind if kind else ''}.jpg" if shot_id else None
 
 
 if __name__ == "__main__":
@@ -250,13 +230,9 @@ if __name__ == "__main__":
     try:
         for u in sys.argv[1:]:
             t = time.time()
-            r = posting(b, u, shot_id="probe-" + re.sub(r"\W+", "-", u)[-40:], is_board="--board" in sys.argv)
-            for k in ("board", "employer"):
-                p = r[k]
-                if p:
-                    print(f"[{k}] {p['status']} {p['url']}\n   title: {p['title'][:90]}\n   {len(p['text'])} chars, "
-                          f"{len(p['apply'])} apply links, shot {p.get('shot')}, error {p['error']}")
-                    print("   " + " ".join(p["text"].split())[:300])
-            print(f"   {time.time() - t:.1f}s")
+            p = b.page(u)
+            print(f"{p['status']} {p['url']}\n   title: {p['title'][:90]}\n   {len(p['text'])} chars, "
+                  f"{len(p['links'])} links, error {p['error']}\n   " + " ".join(p["text"].split())[:300]
+                  + f"\n   {time.time() - t:.1f}s")
     finally:
         b.close()

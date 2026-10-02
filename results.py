@@ -17,6 +17,7 @@ from pathlib import Path
 
 from contracts import DEFAULT_VERDICT, LANES
 import contracts
+import judge
 
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
@@ -149,6 +150,12 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             ghosts += 1
             continue
         vis = vision.get(rec["id"])
+        # The parser reads the title as it is TODAY. An id outlives a retitle,
+        # so a role that was a design title when vision read it and is now
+        # "Frontend Leaning Engineer" is out, whatever was said before.
+        if vis and judge.l1(rec.get("title")) is not None:
+            title_cuts += 1
+            continue
         if vis:
             # Vision decides, and nothing it saw is dropped: a closed posting
             # and a cut each get a list the board can open.
