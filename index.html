@@ -520,7 +520,7 @@ function render(){
           +'<button data-d="applied" class="'+(rt==="applied"?"on":"")+'">applied</button>'
           +'<button data-d="discarded" class="'+(rt==="discarded"?"on":"")+'">discard</button>'
           +(rt?'<button data-d="">clear</button>':'')
-          +'<button data-x="1" class="wrong'+(wrongOf(r.id)?" on":"")+'" title="'+esc((wrongOf(r.id)||{}).note||"the filter got this one wrong")+'">'+(wrongOf(r.id)?"✓ incorrect":"incorrect")+'</button></div>':'');
+          +'<button data-x="1" class="'+(wrongOf(r.id)?"on":"")+'" title="'+esc((wrongOf(r.id)||{}).note||"the filter got this one wrong")+'">'+(wrongOf(r.id)?"✓ incorrect":"incorrect")+'</button></div>':'');
     el.onclick=()=>{SEL=r.id;render();};
     // Opening the posting selects its row too: he opens it, applies, comes
     // back, and the row he was on has to be the one still highlighted.
