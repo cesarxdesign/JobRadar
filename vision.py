@@ -170,7 +170,12 @@ def see(finder, rec):
     elif a.get("posting_open") == "unreadable":
         v["lane"] = "unsure"
     else:
-        lane = criteria.lane_for(a.get("role_verdict"), a.get("place_verdict"))
+        # The reader lists what the page says; the place is worked out from the list.
+        place, why = criteria.place_from_signals(a.get("place_signals"), a.get("workplace_as_posted"), a.get("place_verdict"))
+        v["reader_place"], v["place_verdict"] = a.get("place_verdict"), place
+        if why:
+            v["reason"] = why + " · " + str(a.get("reason") or "")
+        lane = criteria.lane_for(a.get("role_verdict"), place)
         v["lane"] = lane or "cut"
         if a.get("language_ok") is False:
             v["lane"] = "cut"
@@ -183,8 +188,8 @@ def see(finder, rec):
             else:
                 try:
                     b = reader(rec, page)
-                    v["second_place"] = b.get("place_verdict")
-                    if b.get("place_verdict") != "no":
+                    v["second_place"] = criteria.place_from_signals(b.get("place_signals"), b.get("workplace_as_posted"), b.get("place_verdict"))[0]
+                    if v["second_place"] != "no":
                         v["lane"] = "unsure"
                         v["reason"] = "two readings disagree on place · " + str(a.get("reason") or "")
                 except Exception:

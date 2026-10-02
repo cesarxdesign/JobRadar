@@ -123,7 +123,11 @@ def from_vision(v):
     """A vision verdict in the shape the board already draws. Where vision has
     read the page, its answer is the verdict: the old judge read a copy."""
     why = [v.get("reason")]
-    if v.get("place_quote"):
+    sig = [x for x in v.get("place_signals") or [] if isinstance(x, dict) and x.get("says") != "says_nothing"]
+    for x in sig:
+        why.append(("Portugal in" if x.get("says") == "portugal_in" else "Portugal OUT") + " · " + str(x.get("where"))
+                   + ': "' + str(x.get("quote")) + '"')
+    if v.get("place_quote") and not sig:
         why.append('the page says: "' + v["place_quote"] + '"')
     if v.get("open_quote"):
         why.append('the page says: "' + str(v["open_quote"]) + '"')

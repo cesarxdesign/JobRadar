@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-02.5"
+VERSION = "2026-10-02.7"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -281,6 +281,11 @@ Return ONE JSON object and nothing else. No prose, no code fence.
   "language_ok": true | false,
   "workplace_as_posted": "remote" | "hybrid" | "onsite" | "not stated",
   "location_under_the_title": "the location the page prints beside or under the job title, and any 'based in ...' line, copied exactly; null if there is none",
+  "place_signals": [
+    {"quote": "the exact words, copied from the page",
+     "where": "under the title" | "opening paragraph" | "body" | "side panel" | "footer or small print",
+     "says": "portugal_in" | "portugal_out" | "says_nothing"}
+  ],
   "can_he_do_it_from_portugal": "yes" | "no" | "unclear",
   "place_quote": "the exact words on the page that decided the place, copied, under 30 words",
   "role_verdict": "yes" | "no" | "unclear",
@@ -312,6 +317,41 @@ language_ok is true only for English or Portuguese. When it is false, cut MUST
 be true, role_verdict MUST be "no", and reason MUST be "posting is written in
 <language>".
 
+place_signals is the heart of this. List EVERY statement on the page about
+where the person must live, be based, be located, be eligible, be authorized
+to work, or come to an office. Do not stop at the first one. Do not pick the
+one you believe. Go through the whole page - the line under the title, the
+opening paragraph, the body, the requirements, the benefits, the side panel,
+the small print at the bottom - and list each one separately, even when two
+of them contradict each other. ESPECIALLY when they contradict each other.
+
+A list of locations printed together - "United States; United Kingdom;
+Portugal", "London / Lisbon / Remote" - is ONE statement, not one per place:
+copy the whole list as one quote and judge the list (it contains Portugal,
+or it does not).
+
+For each one, taken ON ITS OWN, say what it means for a person living in
+Portugal:
+  portugal_out   a single country, state or city that is not in Portugal
+                 ("US", "Germany", "based in France", "London");
+                 a list of countries that does not contain Portugal;
+                 a region that does not contain Portugal (North America,
+                 LATAM, APAC, UK, DACH, Nordics);
+                 Europe / EU / EMEA / worldwide WITH PORTUGAL EXCLUDED
+                 ("Europe except Portugal", "anywhere but ...Portugal",
+                 "not available in Portugal") - that is NOT Europe, it is
+                 Portugal out;
+                 the right to work in one such country;
+                 hybrid or onsite at an office outside Portugal.
+  portugal_in    Portugal, Lisbon, Porto or any place in Portugal named;
+                 a list of countries that contains Portugal;
+                 Europe, EU, EMEA, Worldwide, Global, Anywhere, with no
+                 exclusion of Portugal attached to it.
+  says_nothing   "remote" with no geography; working hours and timezones;
+                 where the company has offices or was founded.
+Then you may give your own place_verdict - but the lane is worked out from
+this list, so the list has to be complete and each item honest on its own.
+
 Answer location_under_the_title BEFORE can_he_do_it_from_portugal. When it
 names a single country or city that is not Portugal, can_he_do_it_from_portugal
 is "no", or "unclear" if the page says something wider further down. It is not
@@ -328,3 +368,38 @@ A hybrid or onsite job anywhere but Portugal is "no", however good the role.
 
 Otherwise cut is true when role_verdict is "no" OR place_verdict is "no".
 """
+
+
+def place_from_signals(signals, workplace, model_place):
+    """The place verdict, worked out here and not by the reader.
+
+    The reader kept finding one sentence it liked and stopping: a posting
+    headed "Germany" went to Open on "eligible European locations" further
+    down. So the reader only lists what the page says, every statement, and
+    the arithmetic is done where it cannot be talked out of it:
+
+        out, and nothing in      -> no
+        out AND in               -> unclear. The page contradicts itself.
+                                    Likely a cut - but he looks. Never Open.
+        in, and nothing out      -> remote, or pt_onsite when it is an office
+        nothing either way       -> remote only if the page says remote and
+                                    the reader agrees; else unclear
+    And Open needs the reader to agree: if it says anything but yes, unclear.
+    """
+    says = [s.get("says") for s in signals or [] if isinstance(s, dict)]
+    out, inn = "portugal_out" in says, "portugal_in" in says
+    if out and inn:
+        return "unclear", "the page says both: Portugal in, and Portugal out"
+    if out:
+        return "no", None
+    onsite = (workplace or "").lower() in ("hybrid", "onsite")
+    if inn:
+        want = "pt_onsite" if onsite else "remote"
+        if model_place == want:
+            return want, None
+        if model_place == "pt_onsite" or (model_place == "remote" and not onsite):
+            return model_place, None
+        return "unclear", "the page allows Portugal, but the reader did not say yes"
+    if (workplace or "").lower() == "remote" and model_place == "remote":
+        return "remote", None
+    return "unclear", "the page does not say where"
