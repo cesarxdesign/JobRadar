@@ -36,3 +36,6 @@ data/shots/
 # His applications: which companies, which roles. Never public.
 data/sweep_overrides.json
 data/battery/
+
+# One-off harvests of a board, kept for reference
+data/remoteio_harvest.json
