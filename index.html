@@ -647,6 +647,7 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
+      + causes(r).map(c=>'<span class="tag n" title="'+esc(c[1])+'" style="font-weight:700;letter-spacing:.6px;text-transform:uppercase;font-size:10px">'+c[0]+'</span>').join("")
       + (REVIEW&&flagOf(r.id)?'<span class="tag n" style="border-style:dashed">wrong: '+esc(flagOf(r.id).wrong.join(", "))+'</span>':'')
       + (retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
           +esc(LANE_NAME[retagOf(r.id).from]||retagOf(r.id).from)+' → '+esc(LANE_NAME[retagOf(r.id).to])+'</span>':'')
@@ -736,6 +737,23 @@ function placeTag(r){
 // (or in) Portugal - so the box names which one it failed, then the words on
 // the page that say so. Anything else that kept it out of Open (only the
 // board's copy was read, the page would not load) is named as what it is.
+// The same answer as the box, as tags on the card: which question kept this
+// role out of Open, readable down the list without opening each one.
+function causes(r){
+  const v=r.verdict||{}, lab=labelOf(r);
+  if(!["unsure","cut","closed"].includes(lab)||(!v.read_at&&v.stage!=="vision")) return [];
+  if(lab==="closed"||v.open==="no") return [["closed","the page says the job is no longer open"]];
+  if(/different job/.test(v.reason||"")) return [["page","the page read was a different job"]];
+  if(v.open==="unreadable"||/could not be read in the browser/.test(v.reason||"")) return [["page","the page could not be read"]];
+  const out=[];
+  if(v.language_ok===false) out.push(["language","written in "+(v.language||"another language")]);
+  if(v.role==="no") out.push(["role","not a role you would take"]);
+  else if(v.role==="unclear") out.push(["role","could not tell what the role is"]);
+  if(v.place==="no") out.push(["location","cannot be done from Portugal"]);
+  else if(v.place==="unclear") out.push(["location","the page does not clearly say where, or says both"]);
+  if(lab==="unsure"&&v.read==="board"&&v.role!=="no"&&v.place!=="no") out.push(["source","only the job board's copy was read"]);
+  return out;
+}
 function whyBox(r){
   const v=r.verdict||{}, lab=labelOf(r);
   if(!v.read_at&&v.stage!=="vision") return "";
