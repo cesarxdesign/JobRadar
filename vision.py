@@ -202,6 +202,13 @@ def see(finder, rec):
     return v
 
 
+def save(out):
+    """Whole file or nothing: results.py reads this while a run is still going."""
+    tmp = OUT + ".tmp"
+    json.dump(out, open(tmp, "w"), indent=1, ensure_ascii=False)
+    os.replace(tmp, OUT)
+
+
 def pick(jobs, done):
     args = sys.argv
     if "--ids" in args:
@@ -251,14 +258,14 @@ def main():
             print(f"  [{n[0]}/{len(rows)}] {v['lane']:8} {v.get('read', '-'):8} {str(v.get('found_by') or ''):7} {rec['company'][:22]:22} | "
                   f"{rec['title'][:38]:38} | {str(v.get('place_quote') or v.get('open_quote') or v.get('reason'))[:70]}", flush=True)
             if n[0] % 10 == 0:
-                json.dump(out, open(OUT, "w"), indent=1, ensure_ascii=False)
+                save(out)
 
     try:
         with ThreadPoolExecutor(WORKERS) as ex:
             list(ex.map(one, rows))
     finally:
         br.close()
-        json.dump(out, open(OUT, "w"), indent=1, ensure_ascii=False)
+        save(out)
     import collections
     c = collections.Counter(out[r["id"]]["lane"] for r in rows if r["id"] in out)
     u = _usage
