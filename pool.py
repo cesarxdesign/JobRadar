@@ -1461,7 +1461,15 @@ def agg_uiuxjobsboard():
     for scope in UIUX_SCOPES:
         for page in range(1, 30):
             url = f"https://uiuxjobsboard.com/design-jobs/{scope}" + (f"?page={page}" if page > 1 else "")
-            html = uiux_get(url)
+            try:
+                html = uiux_get(url)
+            except urllib.error.HTTPError as e:
+                # Past the last page the board answers 404, not an empty
+                # page. That was the whole "block": every run died at the end
+                # of the first scope and the source was thrown away.
+                if e.code == 404 and page > 1:
+                    break
+                raise
             cards = html.split('<div class="border shadow-xs rounded-xl')[1:]
             new_here = 0
             for card in cards:
