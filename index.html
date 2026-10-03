@@ -1133,7 +1133,7 @@ async function pullNotes(){
   // the inbox search by company. The file's copy of those is always the truth.
   // and the roles the sweep is certain he applied to: add the ones the board has not got
   for(const d of ext.decisions||[])
-    if(d.by==="sweep"&&!RR.decisions.some(x=>x.id===d.id)){RR.decisions.push(d);changed=true;}
+    if(d.by&&!RR.decisions.some(x=>x.id===d.id)){RR.decisions.push(d);changed=true;}
   for(const k of ["applications","inbound","inbox"])
     if(ext[k]&&JSON.stringify(ext[k])!==JSON.stringify(RR[k])){RR[k]=ext[k];changed=true;}
   return changed;
