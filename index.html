@@ -1205,8 +1205,8 @@ function load(){
     const c=d.counts;
     $("stamp").textContent=c.design!=null
       ?(c.active||0).toLocaleString()+" postings scraped · "+c.design.toLocaleString()+" with a design title · "
-        +(c.design-c.waiting).toLocaleString()+" read on their page · "+c.waiting.toLocaleString()+" still to read · updated "
-        +(d.generated_at||"").replace("T"," ").slice(0,16)
+        +(c.design-c.waiting).toLocaleString()+" read on their page · "+c.waiting.toLocaleString()+" still to read · board updated "
+        +(d.built_at||d.generated_at||"").replace("T"," ").slice(0,16)
       :(c.active||0)+" active · updated "+(d.generated_at||"").replace("T"," ").slice(0,16);
     fillFilters();
     render();

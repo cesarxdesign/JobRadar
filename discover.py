@@ -79,6 +79,36 @@ def probe(company, titles):
     return {"unconfirmed": seen} if seen else None
 
 
+URL_BOARDS = [("ashby", re.compile(r"jobs\.ashbyhq\.com/([^/?#]+)/", re.I)),
+              ("greenhouse", re.compile(r"greenhouse\.io/([^/?#]+)/jobs/", re.I)),
+              ("lever", re.compile(r"jobs\.lever\.co/([^/?#]+)/", re.I)),
+              ("workable", re.compile(r"apply\.workable\.com/([^/?#]+)/j/", re.I)),
+              ("smartrecruiters", re.compile(r"jobs\.smartrecruiters\.com/([^/?#]+)/", re.I)),
+              ("recruitee", re.compile(r"https?://([a-z0-9-]+)\.recruitee\.com/", re.I)),
+              ("teamtailor", re.compile(r"https?://([a-z0-9.-]+\.teamtailor\.com)/", re.I))]
+
+
+def from_links(jobs, src):
+    """A job board often links a posting straight to the company's hiring
+    system, and that address names the company's whole board. No guessing:
+    every design-titled role whose link is one of these gives up its board."""
+    added = 0
+    for j in jobs:
+        if not j.get("active") or "/" in (j.get("source") or "") or judge.l1(j.get("title")) is not None:
+            continue
+        for platform, rx in URL_BOARDS:
+            m = rx.search(j.get("url") or "")
+            if not m:
+                continue
+            key = m.group(1)
+            lst = src["watchlist"].setdefault(platform, {})
+            if key.lower() not in {str(k).lower() for k in lst} and key.lower() not in ("embed", "jobs", "j", "o"):
+                lst[key] = j.get("company") or key
+                added += 1
+            break
+    return added
+
+
 def main():
     dry = "--dry" in sys.argv
     jobs = contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]
@@ -94,6 +124,10 @@ def main():
                 todo.setdefault(c, set()).add(j["title"])
     if "--limit" in sys.argv:
         todo = dict(list(todo.items())[:int(sys.argv[sys.argv.index("--limit") + 1])])
+    linked = from_links(jobs, src)
+    if linked and not dry:
+        json.dump(src, open(SOURCES, "w"), indent=1, ensure_ascii=False)
+    print(f"discover: {linked} company boards read straight off posting links", flush=True)
     print(f"discover: {len(todo)} companies seen only on job boards, {len(done)} already asked", flush=True)
     lock, n, t0 = threading.Lock(), [0], time.time()
 

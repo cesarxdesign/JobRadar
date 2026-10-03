@@ -295,7 +295,7 @@ def reader(rec, page):
 def see(finder, rec):
     """Everything vision knows about one role."""
     br = finder.br
-    is_board = "/" not in (rec.get("source") or "")
+    is_board = "/" not in (rec.get("source") or "") and not employer.ATS.search(rec.get("url") or "")
     first = br.page(rec["url"], shot=render.shot_path(rec["id"]))
     listed_gone = None
     if not is_board:

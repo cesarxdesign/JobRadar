@@ -1319,6 +1319,66 @@ AGGREGATORS.update({"superjobs": agg_superjobs, "euremotejobs": agg_euremotejobs
 #      character summary strips it out.
 
 
+def haystack_key():
+    """Haystack's site reads its jobs from a public database feed, with a
+    public key that ships in its own page script. The key is read from there
+    each run, as a browser would get it, and kept nowhere."""
+    html = get_text("https://haystack.cv/jobs")
+    for src in re.findall(r'<script[^>]+src="([^"]+\.js)"', html):
+        js = get_text(urllib.parse.urljoin("https://haystack.cv/", src))
+        m = re.search(r"eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{40,}\.[A-Za-z0-9_-]{20,}", js)
+        host = re.search(r"https://[a-z0-9]+\.supabase\.co", js)
+        if m and host:
+            return host.group(0), m.group(0)
+    raise RuntimeError("haystack: the feed key was not found in the page script")
+
+
+def agg_haystack():
+    """haystack.cv: half a million postings of every kind. Its feed is asked
+    only for live roles with a design word in the title that are remote or in
+    Portugal. Each row carries the link it sends applicants to, which is
+    usually the employer's own hiring system - so the row lands on the
+    employer's posting, not on a copy."""
+    host, key = haystack_key()
+    cols = "id,title,company,apply_url,city,state,country,work_mode,job_type,posted_at,activated_at,salary"
+    # One plain question at a time: a combined query over half a million rows
+    # times out on their side. Each title word, once for remote and once for Portugal.
+    # A rare word makes their database read every row and give up, so a
+    # question that times out is skipped, not fatal: "designer" carries
+    # nearly every title that matters, and the rest are a bonus.
+    words = ("designer", "design%20lead", "head%20of%20design", "design%20director", "design%20manager",
+             "design%20engineer", "design", "ux", "ui/ux")
+    seen = set()
+    for where in ("work_mode=eq.remote", "country=eq.Portugal"):
+        for w in words:
+            for start in range(0, 12000, 500):
+                req = urllib.request.Request(
+                    f"{host}/rest/v1/jobs?select={cols}&is_active=eq.true&title=ilike.*{w}*&{where}&limit=500&offset={start}",
+                    headers={"apikey": key, "Authorization": "Bearer " + key, **UA})
+                try:
+                    with urllib.request.urlopen(req, timeout=60) as r:
+                        rows = json.loads(r.read().decode("utf-8", "replace"))
+                except urllib.error.HTTPError as e:
+                    if w == "designer" and where.startswith("work_mode") and start == 0:
+                        raise                      # the one question that has to work
+                    break
+                for j in rows:
+                    if j["id"] in seen:
+                        continue
+                    seen.add(j["id"])
+                    place = ", ".join(x for x in (j.get("city"), j.get("state"), j.get("country")) if x)
+                    mode = (j.get("work_mode") or "").lower()
+                    yield {"company": j.get("company"), "title": j.get("title"),
+                           "url": j.get("apply_url") or f"https://haystack.cv/jobs/{j['id']}",
+                           "location": place or None, "remote": mode == "remote" or None,
+                           "workplace": {"remote": "Remote", "hybrid": "Hybrid", "on-site": "On-site"}.get(mode),
+                           "employment_type": j.get("job_type"), "salary": j.get("salary"),
+                           "posted": (j.get("posted_at") or j.get("activated_at") or "")[:10] or None}
+                if len(rows) < 500:
+                    break
+                time.sleep(0.3)
+
+
 def agg_remoteio():
     """remote.io shows its listings to a person's browser and nothing to a
     script, so the pool cannot fetch it. tabs.py reads the listings off the
@@ -1368,7 +1428,7 @@ def agg_woodyjobs():
                           if "<description>" in chunk else None}
 
 
-AGGREGATORS.update({"remoteio": agg_remoteio, "woodyjobs": agg_woodyjobs})
+AGGREGATORS.update({"remoteio": agg_remoteio, "woodyjobs": agg_woodyjobs, "haystack": agg_haystack})
 
 
 def get_text_charset(url):

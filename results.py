@@ -294,6 +294,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         # its own page, and the pane is for the verdict. So none is shipped.
         "jd": {},
         "generated_at": pool_doc.get("generated_at"),
+        "built_at": datetime.datetime.now().astimezone().isoformat(timespec="minutes"),
         "run_id": pool_doc.get("run_id"),
         "criteria": verdicts_doc.get("criteria"),
         "model": verdicts_doc.get("model"),
