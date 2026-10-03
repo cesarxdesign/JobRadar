@@ -666,7 +666,7 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
-      + (RR&&!routing(r.id)&&beenBefore(r)?'<span class="tag" style="border-style:dashed" title="'+esc(historyOf(r).apps.map(a=>(a.role||"role not named")+" · "+(a.sent||"?")+(a.rejected?" · rejected "+a.rejected:"")).concat(historyOf(r).mails.map(m=>m.subject+" · "+m.date)).join("\n"))+'">✉ applied here before</span>':'')
+      + (RR&&!routing(r.id)&&beenBefore(r)?'<span class="tag" style="border-style:dashed" title="'+esc(historyOf(r).apps.map(a=>(a.role||"role not named")+" · "+(a.sent||"?")+(a.rejected?" · rejected "+a.rejected:"")).concat(historyOf(r).mails.map(m=>m.subject+" · "+m.date)).join("\n"))+'">'+(likelyThis(r).length?'<b style="color:var(--bad)">✉ likely applied to this one</b>':'✉ applied here before')+'</span>':'')
       + (openNote(r.id)?'<span class="tag" style="border-style:dashed" title="'+esc(openNote(r.id).text)+'">✎ note</span>':'')
       + (REVIEW&&flagOf(r.id)?'<span class="tag n" style="border-style:dashed">wrong: '+esc(flagOf(r.id).wrong.join(", "))+'</span>':'')
       + (retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
@@ -786,13 +786,21 @@ function historyOf(r){
 // job hunt: those postings are long gone and he would apply again without a
 // thought, so nothing older counts as history.
 const SINCE="2026-06-01";
+// An email often names the job more loosely than the posting does: "Senior
+// Product Designer" in the thank-you, "Senior Product Designer (Growth)" on
+// the page. When every word of the email's title is in the posting's, the
+// email is most likely about this very posting, and the board says so.
+const tw=t=>String(t||"").toLowerCase().replace(/\bsr\b\.?/g,"senior").match(/[a-z0-9]+/g)||[];
+const sameRole=(mailTitle,postTitle)=>{const a=tw(mailTitle),b=new Set(tw(postTitle));return a.length>1&&a.every(w=>b.has(w));};
+const likelyThis=r=>historyOf(r).apps.filter(a=>sameRole(a.role,r.title));
 const beenBefore=r=>{const h=historyOf(r);return h.apps.length>0||h.mails.some(m=>m.kind==="application");};
 function historyBox(r){
   const h=historyOf(r);
   if(!h.apps.length&&!h.mails.length) return "";
   const mail=t=>'<a style="color:var(--dim)" target="_blank" rel="noopener" href="https://mail.google.com/mail/?authuser=cesarxdesign@gmail.com#all/'+esc(t)+'">✉</a>';
   return '<div class="notes"><div class="fk">Your history with this company</div>'
-    +h.apps.map(a=>'<div class="past"><div>'+esc(a.role||"role not named in the email")+'</div><div class="when">'
+    +h.apps.map(a=>'<div class="past"'+(sameRole(a.role,r.title)?' style="border-left-color:var(--bad)"':'')+'><div>'+esc(a.role||"role not named in the email")
+        +(sameRole(a.role,r.title)?' <b style="color:var(--bad)">· most likely this posting</b>':'')+'</div><div class="when">'
         +(a.clicked?'you marked it applied ':'applied '+(a.approx?'around ':''))+esc(a.sent||"?")
         +(a.callback?' · <span style="color:var(--good)">callback '+esc(a.callback)+'</span>':'')
         +(a.rejected?' · <span style="color:var(--bad)">rejected '+esc(a.rejected)+'</span>':'')
