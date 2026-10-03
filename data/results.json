@@ -5,15 +5,16 @@
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 225,
+  "open": 181,
   "portugal": 13,
-  "unsure": 98,
+  "unsure": 80,
   "ghosts": 0,
   "cut": 1887,
   "closed": 372,
-  "vision_cut": 1721,
+  "vision_cut": 1734,
   "agency": 29,
-  "not_read": 135,
+  "not_read": 122,
+  "folded": 62,
   "vision_read": 2805,
   "title_cuts": 65999,
   "design": 4480,
@@ -25,33 +26,23 @@
  "lanes": {
   "open": [
    "46cb75312c1543a9",
-   "9f13512b752a4e73",
    "221bc0c2253e4acf",
    "649439618fc841b4",
    "673d7747ca55446b",
    "bcd9d37039f7480f",
    "6a3d0d8655884b6b",
    "4171928a88854822",
-   "84b688a3b3b842f0",
    "4bfc7320c29a44ec",
-   "c536014bca834d34",
    "b633247f8eef4d01",
    "ab262d6ce5864af9",
    "3f500d17eb484cb1",
-   "5195c27072124402",
-   "36489cbba8914ade",
-   "b7b809bc45274619",
    "6bd0214c620346eb",
-   "4cbb84db3a5f4a7d",
-   "bce4bedc757f40d3",
    "36e62bb7f9f64c98",
    "5da250776e844a45",
    "302605f75fca4e85",
    "3ad56928f1df4598",
    "52fb1032ee24401e",
    "f0c4ce6032e24525",
-   "6253f5c11ddc4639",
-   "3189004b21f34f2c",
    "1a19ca846fb34eda",
    "34c5b662aac64a0d",
    "6a0d7eaaa3914f15",
@@ -63,21 +54,16 @@
    "7bb7a1402091437c",
    "7d807a9968914f89",
    "64c3b638e11c44f4",
-   "f86ef0b3893b47e4",
-   "635732cbc9274f9d",
    "a79be1645a19402b",
    "62eb0c0336044a34",
    "960574433a434d8b",
    "a561789cf4304b61",
-   "2dfbc400c7ef4e38",
    "91bb766873614306",
    "7fcf437a726e4319",
    "4581c7c9e3dd47cc",
    "0ce3aec1aaf24ed9",
    "5fe3a844dbde45b5",
    "fb6343a3e9704221",
-   "fe313d909dde4bf3",
-   "7a85eaf8e062426f",
    "0b9653fe94e0470e",
    "7937767d03ee48c5",
    "e2db9b31cd2c47b2",
@@ -85,7 +71,6 @@
    "b9aee4c287e2491b",
    "0c4e7c79a771435c",
    "c510f630db844fd7",
-   "57fc84cb292f4cbf",
    "73ef00ba46c248a1",
    "d0b4a46153364b76",
    "ba9ba088d0b64bd0",
@@ -100,7 +85,6 @@
    "9e0ebb1705db46e4",
    "96b0e5adf1d74d66",
    "558e3105d99a4a01",
-   "703835b58d9347cb",
    "134935c5b9454894",
    "d988958c5b944035",
    "7c8b6bbe0a4447ad",
@@ -123,12 +107,9 @@
    "fdff6090c8134a1e",
    "d079545e4b5b4734",
    "a968358da03e4998",
-   "2e8b683ec6074364",
    "3b8d66560b634bd3",
    "c0ca9e9ec121405e",
    "6e4cf94e3c104812",
-   "3748915db49f44f4",
-   "3e5898f02dd442a4",
    "2f4c95fc3ec0481d",
    "cf89c91493284a6e",
    "d4d7006087124d05",
@@ -151,29 +132,19 @@
    "0ba8fbf86a2b46e9",
    "8e4086ef53154c2a",
    "9a29426a79c647a6",
-   "692ae089a3bc46ac",
-   "24a2a05c3a014fc1",
    "9563510d07c041a8",
-   "1e4388744e72443a",
    "1568c92687564068",
    "6a52154858de4163",
    "e20cb05583eb47dd",
-   "e42a3f350e7a447d",
-   "722d5a45c43b4b6e",
-   "a609749721384c31",
-   "bdbb03b53c9541de",
    "59703a9cd9b44f33",
    "04a5e71158894fd7",
    "bdb158e95ce2469e",
    "4391a5ec672a4aac",
    "6c90584d072c4c3a",
-   "c50b6f874a704400",
-   "f8bff83ac48b4f8a",
    "f0d89176745d4426",
    "739b4a5418244f5f",
    "fffc15682c7c43f9",
    "1dc6596dfc104a75",
-   "62764d20dab0433c",
    "434fe25f9f064a13",
    "9c39d9488ffa4b51",
    "6778451a78a84952",
@@ -182,12 +153,9 @@
    "1c4afbebbe644a90",
    "5ec779a7cf6940bf",
    "873f24c58dc040c4",
-   "d54e6bb4145e4df7",
    "317f40eca0b1485d",
-   "9cd878fb1dd04836",
    "a97b3f0f5c3449cb",
    "763ccf510a214597",
-   "ab83f1a192954d71",
    "3c0e949cdc4d4a62",
    "a8d03956a4614ca8",
    "c822ef1f2bda42e0",
@@ -207,12 +175,8 @@
    "b841a60085d74f51",
    "75e49164cb8a4645",
    "d3dc287c1d854520",
-   "75dc7e1947444d4e",
-   "838ed206694448d4",
    "9aa7795678a34bb5",
    "fb004cabb642499c",
-   "71a61dbfc67e454a",
-   "fec63ce387ee4e7e",
    "86ddbe75db49447e",
    "2a695862bda248ad",
    "cdead5c75e024a62",
@@ -228,7 +192,6 @@
    "b64e20d79dea4898",
    "45a68f8eb823497a",
    "ce07873353e84493",
-   "550babe5d91e4694",
    "cab529d7aa4b4bd0",
    "3d36c7b85f04466b",
    "0d5f42a717a74c07",
@@ -238,16 +201,10 @@
    "a405961c81344875",
    "01db07b795eb403d",
    "81b775f6425c4e7a",
-   "20e825e6006642d7",
    "514be1be2e5d4d4c",
-   "000ce152b8af436e",
-   "1b763a5591b549cd",
-   "8aaf74347cb54bdc",
    "b3e35c118dd0495e",
-   "b4c98fa0dba945fe",
    "ed773c1cb4a84aa8",
    "3d386819a84b41d4",
-   "d6ba7d09610542f1",
    "ee1d06ce3471432c"
   ],
   "portugal": [
@@ -276,11 +233,8 @@
    "6bb0ea51f00e4a6d",
    "d9aaef2a26b943cc",
    "026d0a790a964861",
-   "d4aaf6d067084bdd",
    "2f710b8cfb3c43d1",
    "f152019c00f04558",
-   "9fc9f80a06434f74",
-   "663efd2e9eca4f67",
    "089e851d6bc942f8",
    "0dfbe88158124739",
    "9244885fc1494bdd",
@@ -290,33 +244,21 @@
    "1d9103c452a94126",
    "b5ae084458e64fca",
    "c30b36c90e6e44a8",
-   "c5391c8625c74e1f",
    "39588ef0520e479e",
    "706aa58585f64e60",
    "fd3b57f7c2a344cb",
-   "b70cfdafe50042fd",
-   "8556829fc436446f",
-   "e49db1c4544a4096",
-   "24533fcc5fb64147",
-   "f014b7d1de454cc4",
-   "8a4661300f824d77",
-   "4f2bda0a99d6417a",
-   "b99841682eca45fa",
-   "ee8e3d113b414686",
    "f77a2c6dc5e94c19",
    "8843c558b15141b4",
    "2677dc9bad484eba",
    "eb19541d37874d42",
    "c9a342e083204b63",
    "fb2e933cbdcd4391",
-   "e0bf582cfaf34b23",
    "07c8557f439f4cc1",
    "11a43d3099d34592",
    "0b9d2e44ccfc45f0",
    "aec592e69a924ab3",
    "4abd04037a454af4",
    "6e1e39a99c9543dc",
-   "6b29750da18c4c18",
    "5a832a508ec942c3",
    "c20a9b9751fd421c",
    "78412d4c6b924bcb",
@@ -339,8 +281,6 @@
    "a13b18c4338146c2",
    "3afc4ceebd0d47cb",
    "9c403c71a625475b",
-   "9a033ed8c4d74cd3",
-   "b5b77523bd934a32",
    "ca8a0e7c2b054a07",
    "ac5d2e6aa5644b8b",
    "94846806360e4676",
@@ -362,7 +302,6 @@
    "81bcfbfca61a480a",
    "e8fd434bf91c4863",
    "c112cd3f6c2e4d2d",
-   "236a598d10be490f",
    "f94d4a71f8e1498a"
   ]
  },
@@ -2695,10 +2634,12 @@
   "015ef432c0424c66",
   "981c174aa70645ca",
   "deef9c41ed4d49a2",
+  "016739eca09743ae",
   "9a1f9b17c59b48ed",
   "b7f7bd2c0ece48d3",
   "f259ced8f9224425",
   "19e0b1a3325243b1",
+  "9a20237571804366",
   "fa9324a78ab74c78",
   "9de61f4d04c949a6",
   "9e55fc65995341e8",
@@ -2778,7 +2719,18 @@
   "4e491ee95a6e4bd8",
   "9212d3e78ba141e0",
   "c07fa27cb0bc48cd",
+  "770fd7fb5b5147e8",
+  "744ffd4e92cc458a",
+  "308065a2425a4948",
+  "1575e2abde854826",
+  "727d1890f00d428f",
+  "5c5b3d0e3f7e448f",
+  "929d0b5affa7486a",
+  "d3aa37be46d84005",
+  "b99bd00661294e88",
+  "8e10a65a32ae4518",
   "5397a288816d4c6f",
+  "36c5316eff924949",
   "9a9c4c2078bb401d",
   "0bc9e27a95e74bde",
   "0e714d50def74e82",
@@ -4391,34 +4343,21 @@
   "b7f57a30096448f0",
   "74dfc49c98a44b2a",
   "72c2b17f2c9c41c8",
-  "016739eca09743ae",
   "6457aa8bced149f3",
-  "9a20237571804366",
   "b7d115a773b0400c",
   "09f961d7e9ad4686",
   "5b70602d7e6547aa",
-  "770fd7fb5b5147e8",
-  "744ffd4e92cc458a",
   "de590644168644d3",
-  "308065a2425a4948",
   "5f06b7f6770d4746",
-  "1575e2abde854826",
-  "727d1890f00d428f",
-  "5c5b3d0e3f7e448f",
   "93099f8b700f4ce9",
   "e32f93860cd043b0",
   "45958986c9f547d6",
   "89d291edc0aa4491",
   "dc31f6901e2e4cd1",
-  "929d0b5affa7486a",
-  "d3aa37be46d84005",
-  "b99bd00661294e88",
   "61474654b6464651",
   "2f99257df8114391",
   "02df04c69f2d407a",
-  "8e10a65a32ae4518",
   "f37b9b9e2f9744f2",
-  "36c5316eff924949",
   "b7ec8e36fe6e459c",
   "39c84edf1a094dd9",
   "93f7c46385e24ca3",
@@ -10910,7 +10849,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/673d7747ca55446b.jpg",
-    "read_at": "2026-10-02T18:26:50"
+    "read_at": "2026-10-02T18:26:50",
+    "copies": [
+     {
+      "id": "fe313d909dde4bf3",
+      "url": "https://euremotejobs.com/job/lead-product-designer-marketplace/",
+      "read_url": "https://circle.so/careers/ashby--c6fd95f5-d7f8-4297-be2d-e91d19052469",
+      "source": "euremotejobs",
+      "posted": "2026-08-29",
+      "location": "Worldwide",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -12721,7 +12672,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4bfc7320c29a44ec.jpg",
-    "read_at": "2026-10-02T18:27:05"
+    "read_at": "2026-10-02T18:27:05",
+    "copies": [
+     {
+      "id": "20e825e6006642d7",
+      "url": "https://euremotejobs.com/job/senior-staff-product-designer/",
+      "read_url": "https://jobs.ashbyhq.com/n8n/fe05c209-8069-4a88-aeba-8da23488cd30",
+      "source": "euremotejobs",
+      "posted": "2026-03-29",
+      "location": "Europe, UK",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -17632,7 +17595,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/36e62bb7f9f64c98.jpg",
-    "read_at": "2026-10-02T18:27:55"
+    "read_at": "2026-10-02T18:27:55",
+    "copies": [
+     {
+      "id": "1b763a5591b549cd",
+      "url": "https://euremotejobs.com/job/senior-design-manager-infrastructure/",
+      "read_url": "https://job-boards.greenhouse.io/canonical/jobs/5995321",
+      "source": "euremotejobs",
+      "posted": "2026-01-28",
+      "location": "EMEA",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -17709,7 +17684,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5da250776e844a45.jpg",
-    "read_at": "2026-10-02T18:27:58"
+    "read_at": "2026-10-02T18:27:58",
+    "copies": [
+     {
+      "id": "000ce152b8af436e",
+      "url": "https://euremotejobs.com/job/staff-design-engineer-cloud-networking-ux/",
+      "read_url": "https://job-boards.greenhouse.io/canonical/jobs/7574469",
+      "source": "euremotejobs",
+      "posted": "2026-02-02",
+      "location": "EMEA",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -19479,7 +19466,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f0c4ce6032e24525.jpg",
-    "read_at": "2026-10-02T18:28:14"
+    "read_at": "2026-10-02T18:28:14",
+    "copies": [
+     {
+      "id": "c5391c8625c74e1f",
+      "url": "https://builtin.com/job/lead-ux-designer-emea/9328342",
+      "read_url": "https://builtin.com/job/lead-ux-designer-emea/9328342",
+      "source": "builtin",
+      "posted": null,
+      "location": "USA",
+      "lane": "unsure",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -30566,7 +30565,19 @@
     "if_employer": "open",
     "found_by": null,
     "shot": "data/shots/6a0d7eaaa3914f15.jpg",
-    "read_at": "2026-10-03T18:30:03"
+    "read_at": "2026-10-03T18:30:03",
+    "copies": [
+     {
+      "id": "3e5898f02dd442a4",
+      "url": "https://wellfound.com/jobs/4634229-course-writer-and-editor-ux-ui-and-ai-clone-clone",
+      "read_url": "https://wellfound.com/jobs/4634229-course-writer-and-editor-ux-ui-and-ai-clone-clone",
+      "source": "wellfound",
+      "posted": "2026-08-26",
+      "location": "Texas; Remote: Canada, Europe, United States, South Africa, Middle East, Asia",
+      "lane": "open",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -49606,16 +49617,16 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · This is the company's full job-list page, not a posting; 'Senior Product Design Engineer' does not appear anywhere on it, so no single posting can be read."
+     "the page read is a different job · The page is a job board listing 39 open positions, not a single posting; the role 'Senior Product Design Engineer' from the pool does not appear anywhere on this page at all."
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": null,
+     "role": "Senior Product Design Engineer",
      "company": "Eight Sleep",
-     "seniority": "unstated",
+     "seniority": "senior",
      "remote": "unstated",
      "onsite_days": null,
      "countries": [],
@@ -49629,16 +49640,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/EightSleep",
-    "reason": "the page read is a different job · This is the company's full job-list page, not a posting; 'Senior Product Design Engineer' does not appear anywhere on it, so no single posting can be read.",
+    "reason": "the page read is a different job · The page is a job board listing 39 open positions, not a single posting; the role 'Senior Product Design Engineer' from the pool does not appear anywhere on this page at all.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "",
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/9d4d2942f5724acf.employer.jpg",
-    "read_at": "2026-10-03T20:37:20"
+    "read_at": "2026-10-03T21:36:49"
    }
   },
   {
@@ -49780,21 +49791,22 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is the full Greenhouse job-board listing of 104 openings, not the individual job posting page - no description to read",
-     "Portugal OUT · body: \"Parsdorf, Bavaria, Germany\"",
-     "the page says: \"104 jobs - list of job titles with no single posting opened\""
+     "page is a job board listing of 104 roles with no single job description for this posting - unreadable as a posting",
+     "Portugal OUT · body: \"(Senior) Design Engineer (m/f/d) ... Parsdorf, Bavaria, Germany\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "(Senior) Design Engineer (m/f/d)",
      "company": "Isar Aerospace SE",
      "seniority": "senior",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "Germany"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -49802,17 +49814,20 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "seniority",
+     "remote"
+    ],
     "read": "employer",
     "read_url": "https://job-boards.eu.greenhouse.io/isaraerospace",
-    "reason": "page is the full Greenhouse job-board listing of 104 openings, not the individual job posting page - no description to read",
+    "reason": "page is a job board listing of 104 roles with no single job description for this posting - unreadable as a posting",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
     "quote": "Parsdorf, Bavaria, Germany",
     "signals": [
      {
-      "quote": "Parsdorf, Bavaria, Germany",
+      "quote": "(Senior) Design Engineer (m/f/d) ... Parsdorf, Bavaria, Germany",
       "where": "body",
       "says": "portugal_out"
      }
@@ -49820,7 +49835,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/139d4c3648ef40e1.employer.jpg",
-    "read_at": "2026-10-03T20:37:21"
+    "read_at": "2026-10-03T21:36:49"
    }
   },
   {
@@ -50970,9 +50985,8 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "Page is the full Yassir job-board listing with no individual job description, only a title and location tag, so it reads as unreadable per the rules; role title alone is clearly design.",
-     "Portugal OUT · body: \"Product Designer HYBRID — FULL-TIMEALGIERS, ALGERIA\"",
-     "the page says: \"a list of jobs with no single posting; no individual job description page was loaded\""
+     "page is a full job listing index with no opened individual posting/description, only a title and a hybrid Algiers, Algeria location tag",
+     "Portugal OUT · body: \"Product Designer HYBRID — FULL-TIMEALGIERS, ALGERIA\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -50987,22 +51001,22 @@
      "countries": [
       "Algeria"
      ],
-     "portugal_ok": "unclear",
+     "portugal_ok": "no",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
-     "language": "English",
+     "language": "unstated",
      "posted": null
     },
     "inferred": [
-     "remote"
+     "workplace_as_posted"
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/Yassir",
-    "reason": "Page is the full Yassir job-board listing with no individual job description, only a title and location tag, so it reads as unreadable per the rules; role title alone is clearly design.",
+    "reason": "page is a full job listing index with no opened individual posting/description, only a title and a hybrid Algiers, Algeria location tag",
     "open": "unreadable",
     "language_ok": true,
-    "language": "English",
+    "language": "unstated",
     "quote": "HYBRID — FULL-TIMEALGIERS, ALGERIA",
     "signals": [
      {
@@ -51014,7 +51028,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/1ab83c25739746bc.employer.jpg",
-    "read_at": "2026-10-03T20:37:26"
+    "read_at": "2026-10-03T21:36:49"
    }
   },
   {
@@ -51808,7 +51822,8 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · page is a list of all current openings at Vivaldi Group, not a single job posting with a description"
+     "This is a list of job openings with no single posting opened - only titles, locations and tags are shown, no job description.",
+     "Portugal OUT · body: \"Designer / Posted 10 months ago / Hybrid / Munich, Bavaria, Germany / Creative / Full time\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -51818,29 +51833,39 @@
      "role": "Designer",
      "company": "Vivaldi Group",
      "seniority": "unstated",
-     "remote": "unstated",
+     "remote": "hybrid",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "Germany"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": null
+     "posted": "10 months ago"
     },
-    "inferred": [],
+    "inferred": [
+     "workplace_as_posted"
+    ],
     "read": "employer",
     "read_url": "https://apply.workable.com/vivaldi-group/",
-    "reason": "the page read is a different job · page is a list of all current openings at Vivaldi Group, not a single job posting with a description",
+    "reason": "This is a list of job openings with no single posting opened - only titles, locations and tags are shown, no job description.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": null,
-    "signals": [],
+    "quote": "Designer ... Hybrid ... Munich, Bavaria, Germany",
+    "signals": [
+     {
+      "quote": "Designer / Posted 10 months ago / Hybrid / Munich, Bavaria, Germany / Creative / Full time",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/afa8f19928bd4014.employer.jpg",
-    "read_at": "2026-10-03T20:37:36"
+    "read_at": "2026-10-03T21:36:48"
    }
   },
   {
@@ -53412,15 +53437,14 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · Page is the company's general careers listing with 29 jobs, not the specific Product Designer intern posting named in the pool.",
-     "the page says: \"This is a list of 29 job openings, not a single job posting for 'Stage/Alternance - Product Designer (H/F)'\""
+     "the page read is a different job · This is a generic careers listing page of 29 jobs, not the specific 'Stage/Alternance - Product Designer' posting - no single job description is present."
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Stage/Alternance - Product Designer (H/F)",
+     "role": null,
      "company": "Withings",
      "seniority": "unstated",
      "remote": "unstated",
@@ -53436,16 +53460,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/withings/",
-    "reason": "the page read is a different job · Page is the company's general careers listing with 29 jobs, not the specific Product Designer intern posting named in the pool.",
+    "reason": "the page read is a different job · This is a generic careers listing page of 29 jobs, not the specific 'Stage/Alternance - Product Designer' posting - no single job description is present.",
     "open": "unreadable",
-    "language_ok": true,
+    "language_ok": false,
     "language": "French",
-    "quote": "",
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/b7f57a30096448f0.employer.jpg",
-    "read_at": "2026-10-03T20:37:37"
+    "read_at": "2026-10-03T21:36:48"
    }
   },
   {
@@ -54105,14 +54129,14 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · page is the company's full job board listing with no single 'Product Designer' posting opened; the closest title shown is 'Member of Technical Staff, Product Design', located New York/Buenos Aires/San Francisco, on-site."
+     "the page read is a different job · The page is the company's full jobs board listing 75 open roles, not a single opened posting for 'Product Designer'; the closest matching title ('Member of Technical Staff, Product Design') is on-site in New York/Buenos Aires/San Francisco only, so there is no readable single posting to evaluate."
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": null,
+     "role": "Product Designer",
      "company": "Profound",
      "seniority": "unstated",
      "remote": "unstated",
@@ -54126,11 +54150,13 @@
      "posted": null
     },
     "inferred": [
-     "company"
+     "role",
+     "company",
+     "language"
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/profound",
-    "reason": "the page read is a different job · page is the company's full job board listing with no single 'Product Designer' posting opened; the closest title shown is 'Member of Technical Staff, Product Design', located New York/Buenos Aires/San Francisco, on-site.",
+    "reason": "the page read is a different job · The page is the company's full jobs board listing 75 open roles, not a single opened posting for 'Product Designer'; the closest matching title ('Member of Technical Staff, Product Design') is on-site in New York/Buenos Aires/San Francisco only, so there is no readable single posting to evaluate.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -54139,7 +54165,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/74dfc49c98a44b2a.employer.jpg",
-    "read_at": "2026-10-03T20:37:38"
+    "read_at": "2026-10-03T21:36:49"
    }
   },
   {
@@ -54327,9 +54353,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · the page is a list of 45 open roles at the company and does not contain a posting for the named job at all",
-     "the page says: \"no matching posting found on page\"",
-     "the page says: \"Open Positions (45) — page lists all openings, no posting for 'Vehicle Product Design Architecture, Integration Lead' exists among them\""
+     "the page read is a different job · this is a list of 45 open roles with no single posting page, and the title 'Vehicle Product Design Architecture, Integration Lead' does not appear anywhere in the list"
     ],
     "judged": true,
     "text": "employer's page",
@@ -54337,7 +54361,7 @@
     "confidence": "high",
     "fields": {
      "role": "Vehicle Product Design Architecture, Integration Lead",
-     "company": "Also (Ridealso)",
+     "company": "Ridealso",
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
@@ -54352,16 +54376,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/ridealso",
-    "reason": "the page read is a different job · the page is a list of 45 open roles at the company and does not contain a posting for the named job at all",
+    "reason": "the page read is a different job · this is a list of 45 open roles with no single posting page, and the title 'Vehicle Product Design Architecture, Integration Lead' does not appear anywhere in the list",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "no matching posting found on page",
+    "quote": "",
     "signals": [],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/72c2b17f2c9c41c8.employer.jpg",
-    "read_at": "2026-10-03T20:37:40"
+    "read_at": "2026-10-03T21:37:04"
    }
   },
   {
@@ -58394,32 +58418,53 @@
    "title": "Corporate Designer - Aesthetics Specialist",
    "url": "https://himalayas.app/companies/mercor/jobs/corporate-designer-aesthetics-specialist",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is restricted to Germany, and the role is corporate/graphic design evaluation work, not product/UX/UI design.",
+     "Portugal OUT · side panel: \"Remote · open to: Germany\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Corporate Designer - Aesthetics Specialist",
+     "company": "Mercor",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "$65–$100/hour",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/corporate-designer-aesthetics-specialist",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is restricted to Germany, and the role is corporate/graphic design evaluation work, not product/UX/UI design.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Germany",
+    "signals": [
+     {
+      "quote": "Remote · open to: Germany",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/016739eca09743ae.jpg",
-    "read_at": "2026-10-03T20:37:47"
+    "read_at": "2026-10-03T21:37:10"
    }
   },
   {
@@ -58466,7 +58511,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6457aa8bced149f3.jpg",
-    "read_at": "2026-10-03T20:37:47"
+    "read_at": "2026-10-03T21:37:12"
    }
   },
   {
@@ -58870,32 +58915,77 @@
    "title": "Staff Product Designer, Business Banking",
    "url": "https://himalayas.app/companies/monzo/jobs/staff-product-designer-business-banking",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to UK-based remote work, with UK relocation and visa sponsorship, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United Kingdom\"",
+     "Portugal OUT · opening paragraph: \"📍London or UK Remote\"",
+     "Portugal OUT · body: \"We'll help you relocate to the UK.\"",
+     "Portugal OUT · body: \"We can sponsor your visa.\"",
+     "Portugal OUT · body: \"This role can be based in our London office, but we're open to distributed working within the UK (with ad hoc meetings in London).\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer, Business Banking",
+     "company": "Monzo",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£110,000 - £125,000",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/monzo/jobs/staff-product-designer-business-banking",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to UK-based remote work, with UK relocation and visa sponsorship, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United Kingdom",
+    "signals": [
+     {
+      "quote": "Remote · open to: United Kingdom",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "📍London or UK Remote",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We'll help you relocate to the UK.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We can sponsor your visa.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This role can be based in our London office, but we're open to distributed working within the UK (with ad hoc meetings in London).",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9a20237571804366.jpg",
-    "read_at": "2026-10-03T20:37:54"
+    "read_at": "2026-10-03T21:37:14"
    }
   },
   {
@@ -75881,13 +75971,13 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "Page is a careers listing of multiple openings, not a single job posting with a description - unreadable.",
-     "Portugal OUT · body: \"Munich, Bavaria, Germany\""
+     "page is a list of job openings, not a single job posting with a description",
+     "Portugal OUT · body: \"Senior Designer ... Hybrid ... Munich, Bavaria, Germany ... Creative ... Full time\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Senior Designer",
      "company": "Vivaldi Group",
@@ -75904,21 +75994,17 @@
      "language": "English",
      "posted": "10 months ago"
     },
-    "inferred": [
-     "seniority",
-     "remote",
-     "countries"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/vivaldi-group/",
-    "reason": "Page is a careers listing of multiple openings, not a single job posting with a description - unreadable.",
+    "reason": "page is a list of job openings, not a single job posting with a description",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "Senior Designer ... Hybrid ... Munich, Bavaria, Germany",
+    "quote": "Hybrid Munich, Bavaria, Germany",
     "signals": [
      {
-      "quote": "Munich, Bavaria, Germany",
+      "quote": "Senior Designer ... Hybrid ... Munich, Bavaria, Germany ... Creative ... Full time",
       "where": "body",
       "says": "portugal_out"
      }
@@ -75926,7 +76012,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/b7d115a773b0400c.employer.jpg",
-    "read_at": "2026-10-03T20:37:52"
+    "read_at": "2026-10-03T21:37:20"
    }
   },
   {
@@ -89405,7 +89491,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/62eb0c0336044a34.jpg",
-    "read_at": "2026-10-02T17:18:30"
+    "read_at": "2026-10-02T17:18:30",
+    "copies": [
+     {
+      "id": "9cd878fb1dd04836",
+      "url": "https://euremotejobs.com/job/senior-product-designer-6/",
+      "read_url": "https://jobs.ashbyhq.com/lemlist/80038def-5f02-4847-8da9-492370491573",
+      "source": "euremotejobs",
+      "posted": "2026-07-16",
+      "location": "Europe",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -103936,7 +104034,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/09f961d7e9ad4686.jpg",
-    "read_at": "2026-10-03T20:37:57"
+    "read_at": "2026-10-03T21:37:24"
    }
   },
   {
@@ -103982,7 +104080,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5b70602d7e6547aa.jpg",
-    "read_at": "2026-10-03T20:38:00"
+    "read_at": "2026-10-03T21:37:24"
    }
   },
   {
@@ -104003,32 +104101,68 @@
    "title": "Remote Packaging Designer for CPG Company",
    "url": "https://himalayas.app/companies/pearl-talent/jobs/remote-packaging-designer-for-cpg-company",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is packaging/brand design (not product/UX/UI), and the posting restricts location to LATAM, Philippines, South Africa/Mexico, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Mexico\"",
+     "Portugal OUT · side panel: \"Work From Anywhere in LATAM, PH, SA\"",
+     "Portugal OUT · body: \"Health Coverage for PH-based talents: HMO coverage after 3 months for full-time employees\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Packaging Designer",
+     "company": "CPG Company (client of Pearl Talent)",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Mexico",
+      "LATAM",
+      "Philippines",
+      "South Africa"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/pearl-talent/jobs/remote-packaging-designer-for-cpg-company",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is packaging/brand design (not product/UX/UI), and the posting restricts location to LATAM, Philippines, South Africa/Mexico, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Mexico / Work From Anywhere in LATAM, PH, SA",
+    "signals": [
+     {
+      "quote": "Remote · open to: Mexico",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Work From Anywhere in LATAM, PH, SA",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Health Coverage for PH-based talents: HMO coverage after 3 months for full-time employees",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/770fd7fb5b5147e8.jpg",
-    "read_at": "2026-10-03T20:38:05"
+    "read_at": "2026-10-03T21:37:25"
    }
   },
   {
@@ -104095,32 +104229,59 @@
    "title": "UI/UX Designer",
    "url": "https://himalayas.app/companies/benelynk/jobs/ui-ux-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is explicitly restricted to United States, requiring US work authorization via E-Verify.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · footer or small print: \"BeneLynk participates in E-Verify. We will provide the U.S. Social Security Administration (SSA) and, if necessary, the U.S. Department of Homeland Security (DHS) with information from each new employer's Form I-9 to confirm work authorization.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "UI/UX Designer",
+     "company": "Benelynk",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "Up to $150k annually",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/benelynk/jobs/ui-ux-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is explicitly restricted to United States, requiring US work authorization via E-Verify.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "BeneLynk participates in E-Verify. We will provide the U.S. Social Security Administration (SSA) and, if necessary, the U.S. Department of Homeland Security (DHS) with information from each new employer's Form I-9 to confirm work authorization.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/744ffd4e92cc458a.jpg",
-    "read_at": "2026-10-03T20:38:05"
+    "read_at": "2026-10-03T21:37:30"
    }
   },
   {
@@ -104166,7 +104327,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/de590644168644d3.jpg",
-    "read_at": "2026-10-03T20:38:08"
+    "read_at": "2026-10-03T21:37:32"
    }
   },
   {
@@ -104187,32 +104348,59 @@
    "title": "Lead Automation & Design Engineer (Remote, NC, US, 99999)",
    "url": "https://himalayas.app/companies/gxo-logistics/jobs/lead-automation-design-engineer-remote-nc-us-99999",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is an Industrial Engineer / warehouse automation design position (not product/UX design), and location is restricted to the United States.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · under the title: \"Lead Automation & Design Engineer (Remote, NC, US, 99999)\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Lead Industrial Engineer, Warehouse Design",
+     "company": "GXO Logistics",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 4,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/gxo-logistics/jobs/lead-automation-design-engineer-remote-nc-us-99999",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is an Industrial Engineer / warehouse automation design position (not product/UX design), and location is restricted to the United States.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Lead Automation & Design Engineer (Remote, NC, US, 99999)",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/308065a2425a4948.jpg",
-    "read_at": "2026-10-03T20:38:10"
+    "read_at": "2026-10-03T21:37:35"
    }
   },
   {
@@ -104258,7 +104446,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5f06b7f6770d4746.jpg",
-    "read_at": "2026-10-03T20:38:10"
+    "read_at": "2026-10-03T21:37:35"
    }
   },
   {
@@ -104325,32 +104513,53 @@
    "title": "Machine Design Engineer - Contract",
    "url": "https://himalayas.app/companies/disher-talent/jobs/machine-design-engineer-contract",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Mechanical/machine design engineering role, not product/UX/UI design, and restricted to United States.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Machine Design Engineer - Contract",
+     "company": "DISHER Talent",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 2,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/disher-talent/jobs/machine-design-engineer-contract",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Mechanical/machine design engineering role, not product/UX/UI design, and restricted to United States.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1575e2abde854826.jpg",
-    "read_at": "2026-10-03T20:38:15"
+    "read_at": "2026-10-03T21:37:37"
    }
   },
   {
@@ -104371,32 +104580,71 @@
    "title": "Senior Design Director - Digital Infrastructure & Mission Critical Facilities",
    "url": "https://himalayas.app/companies/aecom/jobs/senior-design-director-digital-infrastructure-mission-critical-facilities",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is architectural/infrastructure design leadership (not product/UX/UI design) and the position is US-only remote with no sponsorship.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"This position is fully remote within the United States.\"",
+     "Portugal OUT · body: \"Sponsorship for US employment authorization is not available now or in the future for this position.\"",
+     "Portugal OUT · body: \"all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Design Director - Digital Infrastructure & Mission Critical Facilities",
+     "company": "AECOM",
+     "seniority": "director",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 8,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/aecom/jobs/senior-design-director-digital-infrastructure-mission-critical-facilities",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is architectural/infrastructure design leadership (not product/UX/UI design) and the position is US-only remote with no sponsorship.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This position is fully remote within the United States.",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position is fully remote within the United States.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Sponsorship for US employment authorization is not available now or in the future for this position.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/727d1890f00d428f.jpg",
-    "read_at": "2026-10-03T20:38:15"
+    "read_at": "2026-10-03T21:37:43"
    }
   },
   {
@@ -104417,32 +104665,65 @@
    "title": "Senior Product Designer",
    "url": "https://himalayas.app/companies/accelint/jobs/senior-product-designer-7795120682",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to United States candidates and requires US citizenship for security clearance, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Ability to obtain and maintain a U.S. national security clearance.\"",
+     "Portugal OUT · body: \"the candidate must be a US Citizen and either currently possess this National Security eligibility\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer",
+     "company": "Accelint",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/accelint/jobs/senior-product-designer-7795120682",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to United States candidates and requires US citizenship for security clearance, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Ability to obtain and maintain a U.S. national security clearance.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "the candidate must be a US Citizen and either currently possess this National Security eligibility",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5c5b3d0e3f7e448f.jpg",
-    "read_at": "2026-10-03T20:38:18"
+    "read_at": "2026-10-03T21:37:45"
    }
   },
   {
@@ -104488,7 +104769,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/93099f8b700f4ce9.jpg",
-    "read_at": "2026-10-03T20:38:20"
+    "read_at": "2026-10-03T21:37:45"
    }
   },
   {
@@ -104622,7 +104903,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · Page is a generic Pinterest careers job-listing/search page showing 168 unrelated jobs, not the actual 'Product Designer II, Notifications' posting."
+     "the page read is a different job · Page loaded is Pinterest's generic careers search/listing page showing 168 unrelated jobs, not the actual posting for Product Designer II, Notifications."
     ],
     "judged": true,
     "text": "job board's copy",
@@ -104631,7 +104912,7 @@
     "fields": {
      "role": "Product Designer II, Notifications",
      "company": "Pinterest",
-     "seniority": "unstated",
+     "seniority": "mid",
      "remote": "unstated",
      "onsite_days": null,
      "countries": [],
@@ -104645,7 +104926,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.pinterestcareers.com/jobs/?gh_jid=8123052",
-    "reason": "the page read is a different job · Page is a generic Pinterest careers job-listing/search page showing 168 unrelated jobs, not the actual 'Product Designer II, Notifications' posting.",
+    "reason": "the page read is a different job · Page loaded is Pinterest's generic careers search/listing page showing 168 unrelated jobs, not the actual posting for Product Designer II, Notifications.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -104654,7 +104935,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e32f93860cd043b0.jpg",
-    "read_at": "2026-10-03T20:38:14"
+    "read_at": "2026-10-03T21:37:47"
    }
   },
   {
@@ -104681,7 +104962,8 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · Page shows the generic Pinterest careers job-search listing with unrelated job results, not the actual Product Design Manager II, Ad Formats posting content."
+     "the page read is a different job · page is a generic job search/listing page with no single posting for Product Design Manager II, Ad Formats",
+     "the page says: \"Displaying 1 to 20 of 168 matching jobs\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -104704,7 +104986,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.pinterestcareers.com/jobs/?gh_jid=7684636",
-    "reason": "the page read is a different job · Page shows the generic Pinterest careers job-search listing with unrelated job results, not the actual Product Design Manager II, Ad Formats posting content.",
+    "reason": "the page read is a different job · page is a generic job search/listing page with no single posting for Product Design Manager II, Ad Formats",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -104713,7 +104995,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/45958986c9f547d6.jpg",
-    "read_at": "2026-10-03T20:38:17"
+    "read_at": "2026-10-03T21:37:49"
    }
   },
   {
@@ -105069,7 +105351,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/89d291edc0aa4491.jpg",
-    "read_at": "2026-10-03T20:38:25"
+    "read_at": "2026-10-03T21:37:56"
    }
   },
   {
@@ -105168,7 +105450,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/dc31f6901e2e4cd1.jpg",
-    "read_at": "2026-10-03T20:38:25"
+    "read_at": "2026-10-03T21:37:57"
    }
   },
   {
@@ -105189,32 +105471,53 @@
    "title": "Corporate Designer - Fully Remote | Upto $100/hr",
    "url": "https://himalayas.app/companies/mercor/jobs/corporate-designer-fully-remote-upto-100-hr-1399876684",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is restricted to United Kingdom, not Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United Kingdom\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Corporate Designer - Fully Remote",
+     "company": "Mercor",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "$65–$100/hour",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/corporate-designer-fully-remote-upto-100-hr-1399876684",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is restricted to United Kingdom, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United Kingdom",
+    "signals": [
+     {
+      "quote": "Remote · open to: United Kingdom",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/929d0b5affa7486a.jpg",
-    "read_at": "2026-10-03T20:38:28"
+    "read_at": "2026-10-03T21:38:02"
    }
   },
   {
@@ -105295,32 +105598,53 @@
    "title": "Production Designer",
    "url": "https://himalayas.app/companies/remote-raven/jobs/production-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "The role is a production/graphic design position (not product/UX/UI design) and it is explicitly open only to candidates in the Philippines.",
+     "Portugal OUT · side panel: \"Remote · open to: Philippines\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Production Designer",
+     "company": "Remote Raven",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Philippines"
+     ],
+     "portugal_ok": "no",
+     "salary": "$6-$7/hr",
+     "years_xp": null,
+     "reports_to": "Graphic Designer",
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/remote-raven/jobs/production-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "The role is a production/graphic design position (not product/UX/UI design) and it is explicitly open only to candidates in the Philippines.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Philippines",
+    "signals": [
+     {
+      "quote": "Remote · open to: Philippines",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d3aa37be46d84005.jpg",
-    "read_at": "2026-10-03T20:38:30"
+    "read_at": "2026-10-03T21:38:04"
    }
   },
   {
@@ -105341,32 +105665,59 @@
    "title": "Lead UX/UI Designer (all genders)",
    "url": "https://himalayas.app/companies/justplay-gmbh/jobs/lead-ux-ui-designer-all-genders-6671268473",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but explicitly open only to Germany, not Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Germany\"",
+     "Portugal OUT · body: \"Germany-Based Benefits : 25 vacation days, free Wellhub gold subscription, free monthly Deutschland-Ticket, and a monthly €50 tax-free internet contribution\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Lead UX/UI Designer (all genders)",
+     "company": "JustPlay GmbH",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/justplay-gmbh/jobs/lead-ux-ui-designer-all-genders-6671268473",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but explicitly open only to Germany, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Germany",
+    "signals": [
+     {
+      "quote": "Remote · open to: Germany",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Germany-Based Benefits : 25 vacation days, free Wellhub gold subscription, free monthly Deutschland-Ticket, and a monthly €50 tax-free internet contribution",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b99bd00661294e88.jpg",
-    "read_at": "2026-10-03T20:38:30"
+    "read_at": "2026-10-03T21:38:05"
    }
   },
   {
@@ -106094,7 +106445,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/61474654b6464651.jpg",
-    "read_at": "2026-10-03T20:38:35"
+    "read_at": "2026-10-03T21:38:07"
    }
   },
   {
@@ -106140,7 +106491,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/2f99257df8114391.jpg",
-    "read_at": "2026-10-03T20:38:35"
+    "read_at": "2026-10-03T21:38:08"
    }
   },
   {
@@ -106186,7 +106537,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/02df04c69f2d407a.jpg",
-    "read_at": "2026-10-03T20:38:36"
+    "read_at": "2026-10-03T21:38:08"
    }
   },
   {
@@ -106399,32 +106750,53 @@
    "title": "Lead Product Designer",
    "url": "https://himalayas.app/companies/wati/jobs/lead-product-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but restricted to India only.",
+     "Portugal OUT · side panel: \"Remote · open to: India\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Lead Product Designer",
+     "company": "WATI",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "India"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/wati/jobs/lead-product-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but restricted to India only.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: India",
+    "signals": [
+     {
+      "quote": "Remote · open to: India",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8e10a65a32ae4518.jpg",
-    "read_at": "2026-10-03T20:38:38"
+    "read_at": "2026-10-03T21:38:18"
    }
   },
   {
@@ -106546,7 +106918,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f37b9b9e2f9744f2.jpg",
-    "read_at": "2026-10-03T20:38:40"
+    "read_at": "2026-10-03T21:38:18"
    }
   },
   {
@@ -106613,32 +106985,71 @@
    "title": "EverWell - Lead Product Designer (Remote, New Zealand)",
    "url": "https://himalayas.app/companies/evercommerce/jobs/everwell-lead-product-designer-remote-new-zealand",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but restricted to New Zealand, requiring legal right to work there.",
+     "Portugal OUT · side panel: \"Remote · open to: New Zealand\"",
+     "Portugal OUT · body: \"This role is full time, permanent and can be based anywhere in New Zealand.\"",
+     "Portugal OUT · body: \"You must be legally entitled to work in New Zealand.\"",
+     "Portugal OUT · body: \"We have office space in Auckland, Wellington, and Dunedin\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Lead Product Designer",
+     "company": "EverWell (EverCommerce)",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "New Zealand"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/evercommerce/jobs/everwell-lead-product-designer-remote-new-zealand",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but restricted to New Zealand, requiring legal right to work there.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: New Zealand",
+    "signals": [
+     {
+      "quote": "Remote · open to: New Zealand",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This role is full time, permanent and can be based anywhere in New Zealand.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "You must be legally entitled to work in New Zealand.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We have office space in Auckland, Wellington, and Dunedin",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/36c5316eff924949.jpg",
-    "read_at": "2026-10-03T20:38:40"
+    "read_at": "2026-10-03T21:38:18"
    }
   },
   {
@@ -106684,7 +107095,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b7ec8e36fe6e459c.jpg",
-    "read_at": "2026-10-03T20:38:45"
+    "read_at": "2026-10-03T21:38:28"
    }
   },
   {
@@ -106730,7 +107141,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/39c84edf1a094dd9.jpg",
-    "read_at": "2026-10-03T20:38:46"
+    "read_at": "2026-10-03T21:38:29"
    }
   },
   {
@@ -107137,7 +107548,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/93f7c46385e24ca3.jpg",
-    "read_at": "2026-10-03T20:38:46"
+    "read_at": "2026-10-03T21:38:37"
    }
   },
   {
@@ -107182,7 +107593,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ac23f6559bcc433a.jpg",
-    "read_at": "2026-10-03T20:38:48"
+    "read_at": "2026-10-03T21:38:39"
    }
   },
   {
@@ -107227,7 +107638,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b2cb56ee30cd4f16.jpg",
-    "read_at": "2026-10-03T20:38:50"
+    "read_at": "2026-10-03T21:38:39"
    }
   },
   {
@@ -107272,7 +107683,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d67d42a410ee40ba.jpg",
-    "read_at": "2026-10-03T20:38:51"
+    "read_at": "2026-10-03T21:38:39"
    }
   },
   {
@@ -107317,7 +107728,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/18c043652b5d4ee1.jpg",
-    "read_at": "2026-10-03T20:38:56"
+    "read_at": "2026-10-03T21:38:39"
    }
   },
   {
@@ -107362,7 +107773,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9cb80970cede444c.jpg",
-    "read_at": "2026-10-03T20:38:56"
+    "read_at": "2026-10-03T21:38:44"
    }
   },
   {
@@ -107407,7 +107818,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/dabb5ea60ea94928.jpg",
-    "read_at": "2026-10-03T20:38:59"
+    "read_at": "2026-10-03T21:38:49"
    }
   },
   {
@@ -107452,7 +107863,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3cfca86c3e154ccb.jpg",
-    "read_at": "2026-10-03T20:39:00"
+    "read_at": "2026-10-03T21:38:49"
    }
   },
   {
@@ -107497,7 +107908,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4b41a894df5f4963.jpg",
-    "read_at": "2026-10-03T20:39:01"
+    "read_at": "2026-10-03T21:38:49"
    }
   },
   {
@@ -107543,7 +107954,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f377a4b6007b4544.jpg",
-    "read_at": "2026-10-03T20:39:06"
+    "read_at": "2026-10-03T21:38:50"
    }
   },
   {
@@ -107589,7 +108000,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b9ca7b7ef5c044f6.jpg",
-    "read_at": "2026-10-03T20:39:06"
+    "read_at": "2026-10-03T21:38:54"
    }
   },
   {
@@ -107635,7 +108046,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ce01ad65363d4517.jpg",
-    "read_at": "2026-10-03T20:39:06"
+    "read_at": "2026-10-03T21:38:58"
    }
   },
   {
@@ -112656,7 +113067,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/5fe3a844dbde45b5.employer.jpg",
-    "read_at": "2026-10-03T12:36:35"
+    "read_at": "2026-10-03T12:36:35",
+    "copies": [
+     {
+      "id": "b4c98fa0dba945fe",
+      "url": "https://jobs.ashbyhq.com/ruby-labs/1e548ada-6632-4ef8-ae90-476970b5a4b1",
+      "read_url": "https://jobs.ashbyhq.com/ruby-labs/1e548ada-6632-4ef8-ae90-476970b5a4b1",
+      "source": "ashby/ruby-labs",
+      "posted": "2026-09-21",
+      "location": "Ukraine; Turkey; European Union; Serbia; Georgia",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -112866,7 +113289,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/fb6343a3e9704221.employer.jpg",
-    "read_at": "2026-10-02T17:20:25"
+    "read_at": "2026-10-02T17:20:25",
+    "copies": [
+     {
+      "id": "d6ba7d09610542f1",
+      "url": "https://job-boards.greenhouse.io/strike/jobs/6166903004",
+      "read_url": "https://job-boards.greenhouse.io/strike/jobs/6166903004",
+      "source": "greenhouse/strike",
+      "posted": "2026-08-28",
+      "location": "Remote, Americas & Europe; Remote",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -113477,7 +113912,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/0b9653fe94e0470e.employer.jpg",
-    "read_at": "2026-10-02T17:20:32"
+    "read_at": "2026-10-02T17:20:32",
+    "copies": [
+     {
+      "id": "4cbb84db3a5f4a7d",
+      "url": "https://jobs.ashbyhq.com/walrus/e6c66391-6ac7-4251-b893-4a9fc6d63f5c",
+      "read_url": "https://jobs.ashbyhq.com/walrus/e6c66391-6ac7-4251-b893-4a9fc6d63f5c",
+      "source": "ashby/walrus",
+      "posted": "2026-08-14",
+      "location": "Europe (Remote)",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -114050,7 +114497,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/7937767d03ee48c5.employer.jpg",
-    "read_at": "2026-10-03T18:36:25"
+    "read_at": "2026-10-03T18:36:25",
+    "copies": [
+     {
+      "id": "75dc7e1947444d4e",
+      "url": "https://jobs.ashbyhq.com/kota/17be8362-a6d0-49fa-a127-53d66ca8745e",
+      "read_url": "https://jobs.ashbyhq.com/kota/17be8362-a6d0-49fa-a127-53d66ca8745e",
+      "source": "ashby/kota",
+      "posted": "2026-08-04",
+      "location": "Remote; Europe; Dublin; London",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -114455,7 +114914,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7fb21e2376cb46b2.employer.jpg",
-    "read_at": "2026-10-02T17:20:46"
+    "read_at": "2026-10-02T17:20:46",
+    "copies": [
+     {
+      "id": "84b688a3b3b842f0",
+      "url": "https://jobs.ashbyhq.com/jimdo.com/83a1dd1e-1003-418d-9c71-9ac3eab42566",
+      "read_url": "https://jobs.ashbyhq.com/jimdo.com/83a1dd1e-1003-418d-9c71-9ac3eab42566",
+      "source": "ashby/jimdo.com",
+      "posted": "2026-07-28",
+      "location": "Germany; Italy; Portugal; Spain",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -114717,7 +115188,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b9aee4c287e2491b.employer.jpg",
-    "read_at": "2026-10-02T17:21:01"
+    "read_at": "2026-10-02T17:21:01",
+    "copies": [
+     {
+      "id": "838ed206694448d4",
+      "url": "https://jobs.ashbyhq.com/kota/8c003490-b698-4280-9689-b4b702e2c813",
+      "read_url": "https://jobs.ashbyhq.com/kota/8c003490-b698-4280-9689-b4b702e2c813",
+      "source": "ashby/kota",
+      "posted": "2026-07-27",
+      "location": "Remote; Europe",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -119559,7 +120042,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/026d0a790a964861.employer.jpg",
-    "read_at": "2026-10-03T11:52:22"
+    "read_at": "2026-10-03T11:52:22",
+    "copies": [
+     {
+      "id": "d4aaf6d067084bdd",
+      "url": "https://jobspresso.co/job/senior-product-designer-product-growth/",
+      "read_url": "https://job-boards.greenhouse.io/webflow?error=true",
+      "source": "jobspresso",
+      "posted": "2026-08-18",
+      "location": "United States",
+      "lane": "unsure",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -124095,7 +124590,19 @@
     "if_employer": "open",
     "found_by": null,
     "shot": "data/shots/134935c5b9454894.jpg",
-    "read_at": "2026-10-02T18:32:21"
+    "read_at": "2026-10-02T18:32:21",
+    "copies": [
+     {
+      "id": "703835b58d9347cb",
+      "url": "https://jobspresso.co/job/front-end-designer-2/",
+      "read_url": "https://jobspresso.co/job/front-end-designer-2/",
+      "source": "jobspresso",
+      "posted": "2025-12-06",
+      "location": "Anywhere",
+      "lane": "open",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -127994,7 +128501,29 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f152019c00f04558.jpg",
-    "read_at": "2026-10-03T18:57:58"
+    "read_at": "2026-10-03T18:57:58",
+    "copies": [
+     {
+      "id": "9fc9f80a06434f74",
+      "url": "https://wellfound.com/jobs/2811018-senior-product-designer",
+      "read_url": "https://wellfound.com/jobs/2811018-senior-product-designer",
+      "source": "wellfound",
+      "posted": "2023-09-30",
+      "location": "Ireland",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "663efd2e9eca4f67",
+      "url": "https://wellfound.com/jobs/2811019-senior-product-designer",
+      "read_url": "https://wellfound.com/jobs/2811019-senior-product-designer",
+      "source": "wellfound",
+      "posted": "2023-09-30",
+      "location": "Spain",
+      "lane": "unsure",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -130911,7 +131440,19 @@
     "if_employer": "open",
     "found_by": null,
     "shot": "data/shots/a968358da03e4998.jpg",
-    "read_at": "2026-10-03T12:39:10"
+    "read_at": "2026-10-03T12:39:10",
+    "copies": [
+     {
+      "id": "2e8b683ec6074364",
+      "url": "https://wellfound.com/jobs/4496986-full-time-senior-product-designer-with-strong-ai-experience-clone",
+      "read_url": "https://wellfound.com/jobs/4496986-full-time-senior-product-designer-with-strong-ai-experience-clone",
+      "source": "wellfound",
+      "posted": "2026-07-22",
+      "location": "Miami; Montreal",
+      "lane": "open",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -139889,7 +140430,59 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/706aa58585f64e60.jpg",
-    "read_at": "2026-10-03T12:20:52"
+    "read_at": "2026-10-03T12:20:52",
+    "copies": [
+     {
+      "id": "b70cfdafe50042fd",
+      "url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "8556829fc436446f",
+      "url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "24533fcc5fb64147",
+      "url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "b99841682eca45fa",
+      "url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "ee8e3d113b414686",
+      "url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -139962,7 +140555,49 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/fd3b57f7c2a344cb.jpg",
-    "read_at": "2026-10-03T12:21:05"
+    "read_at": "2026-10-03T12:21:05",
+    "copies": [
+     {
+      "id": "e49db1c4544a4096",
+      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "f014b7d1de454cc4",
+      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "8a4661300f824d77",
+      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     },
+     {
+      "id": "4f2bda0a99d6417a",
+      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
+      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
+      "source": "builtin",
+      "posted": null,
+      "location": "2 Locations",
+      "lane": "unsure",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -158286,7 +158921,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9563510d07c041a8.employer.jpg",
-    "read_at": "2026-10-02T17:25:06"
+    "read_at": "2026-10-02T17:25:06",
+    "copies": [
+     {
+      "id": "e42a3f350e7a447d",
+      "url": "https://www.uxremotetalent.com/ux-job/ux-ui-designer-5",
+      "read_url": "https://join.com/companies/apex-crocom/16730638-ux-ui-designer-web-and-landing-pages",
+      "source": "uxremotetalent",
+      "posted": "2026-09-02",
+      "location": "Anywhere in the World",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -161342,7 +161989,39 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1568c92687564068.employer.jpg",
-    "read_at": "2026-10-02T17:26:18"
+    "read_at": "2026-10-02T17:26:18",
+    "copies": [
+     {
+      "id": "722d5a45c43b4b6e",
+      "url": "https://www.uxremotetalent.com/ux-job/ui-product-designer-2",
+      "read_url": "https://job-boards.greenhouse.io/protonai/jobs/6147656004",
+      "source": "uxremotetalent",
+      "posted": "2026-08-31",
+      "location": "Europe Only",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "bdbb03b53c9541de",
+      "url": "https://www.uxremotetalent.com/ux-job/ui-product-designer",
+      "read_url": "https://job-boards.greenhouse.io/protonai/jobs/6147656004",
+      "source": "uxremotetalent",
+      "posted": "2026-08-25",
+      "location": "Europe Only",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "7a85eaf8e062426f",
+      "url": "https://euremotejobs.com/job/ui-product-designer/",
+      "read_url": "https://job-boards.greenhouse.io/protonai/jobs/6147656004?utm_source=jobs&utm_medium=euremotejobs",
+      "source": "euremotejobs",
+      "posted": "2026-08-21",
+      "location": "Europe, UK",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -161404,7 +162083,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6a52154858de4163.employer.jpg",
-    "read_at": "2026-10-02T17:26:20"
+    "read_at": "2026-10-02T17:26:20",
+    "copies": [
+     {
+      "id": "6b29750da18c4c18",
+      "url": "https://www.uxremotetalent.com/ux-job/ux-ui-designer-4",
+      "read_url": "https://apply.workable.com/european-dynamics/j/E2798679E7",
+      "source": "uxremotetalent",
+      "posted": "2026-08-13",
+      "location": "Europe Only",
+      "lane": "unsure",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -166134,7 +166825,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/59703a9cd9b44f33.employer.jpg",
-    "read_at": "2026-10-02T18:37:35"
+    "read_at": "2026-10-02T18:37:35",
+    "copies": [
+     {
+      "id": "3189004b21f34f2c",
+      "url": "https://jobs.lever.co/jito/97151aba-e3eb-483d-b56c-34711b873760",
+      "read_url": "https://jobs.lever.co/jito/97151aba-e3eb-483d-b56c-34711b873760",
+      "source": "lever/jito",
+      "posted": "2026-08-04",
+      "location": "Worldwide, but must be willing to attend regular EST meetings",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -166309,7 +167012,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/04a5e71158894fd7.employer.jpg",
-    "read_at": "2026-10-02T18:37:38"
+    "read_at": "2026-10-02T18:37:38",
+    "copies": [
+     {
+      "id": "6253f5c11ddc4639",
+      "url": "https://job-boards.greenhouse.io/xapo61/jobs/7802655003",
+      "read_url": "https://job-boards.greenhouse.io/xapo61/jobs/7802655003",
+      "source": "greenhouse/xapo61",
+      "posted": "2026-07-22",
+      "location": "Gibraltar - Remote; Global",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -176854,7 +177569,19 @@
     "if_employer": null,
     "found_by": "apply",
     "shot": "data/shots/01e08461a0964781.employer.jpg",
-    "read_at": "2026-10-03T12:16:09"
+    "read_at": "2026-10-03T12:16:09",
+    "copies": [
+     {
+      "id": "e0bf582cfaf34b23",
+      "url": "https://www.welcometothejungle.com/en/companies/instacart/jobs/senior-product-designer-order-quality_new-york_oskwpdmw",
+      "read_url": "https://www.instacart.careers/job?gh_jid=8160008",
+      "source": "wttj",
+      "posted": "2026-08-30",
+      "location": "New-York, US",
+      "lane": "unsure",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -177501,7 +178228,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/188f254a99494078.jpg",
-    "read_at": "2026-10-02T18:40:03"
+    "read_at": "2026-10-02T18:40:03",
+    "copies": [
+     {
+      "id": "d54e6bb4145e4df7",
+      "url": "https://euremotejobs.com/job/senior-design-manager/",
+      "read_url": "https://jobs.ashbyhq.com/pennylane/ec92cb34-4490-499d-8b79-3adcf58dbf9a",
+      "source": "euremotejobs",
+      "posted": "2026-09-21",
+      "location": "France, Italy, Portugal, Spain, Sweden",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -185660,7 +186399,29 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/fffc15682c7c43f9.employer.jpg",
-    "read_at": "2026-10-02T17:31:26"
+    "read_at": "2026-10-02T17:31:26",
+    "copies": [
+     {
+      "id": "f86ef0b3893b47e4",
+      "url": "https://intermedia.pinpointhq.com/en/postings/5f05d585-5f26-4af9-90d7-b97509f4327b",
+      "read_url": "https://intermedia.pinpointhq.com/en/postings/5f05d585-5f26-4af9-90d7-b97509f4327b",
+      "source": "pinpoint/intermedia",
+      "posted": null,
+      "location": "Portugal",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "635732cbc9274f9d",
+      "url": "https://intermedia.pinpointhq.com/en/postings/0b819de3-e36f-44e5-8baf-f785a7f4680a",
+      "read_url": "https://intermedia.pinpointhq.com/en/postings/0b819de3-e36f-44e5-8baf-f785a7f4680a",
+      "source": "pinpoint/intermedia",
+      "posted": null,
+      "location": "Portugal",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -187457,7 +188218,19 @@
     "if_employer": "open",
     "found_by": null,
     "shot": "data/shots/2809078f29474e3f.jpg",
-    "read_at": "2026-10-02T18:40:51"
+    "read_at": "2026-10-02T18:40:51",
+    "copies": [
+     {
+      "id": "62764d20dab0433c",
+      "url": "https://wellfound.com/jobs/4688454-ui-ux-designer",
+      "read_url": "https://wellfound.com/jobs/4688454-ui-ux-designer",
+      "source": "wellfound",
+      "posted": "2026-09-09",
+      "location": "Tokyo; Seoul",
+      "lane": "open",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -197322,7 +198095,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/317f40eca0b1485d.employer.jpg",
-    "read_at": "2026-10-02T17:54:11"
+    "read_at": "2026-10-02T17:54:11",
+    "copies": [
+     {
+      "id": "236a598d10be490f",
+      "url": "https://jobs.ashbyhq.com/triggerdev/d1197ead-55d9-4a9c-b577-715ee20b732c",
+      "read_url": "https://jobs.ashbyhq.com/triggerdev/d1197ead-55d9-4a9c-b577-715ee20b732c",
+      "source": "ashby/triggerdev",
+      "posted": "2026-09-16",
+      "location": "Remote or Hybrid UK",
+      "lane": "unsure",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -217522,7 +218307,19 @@
     "if_employer": "open",
     "found_by": null,
     "shot": "data/shots/63704e3c489f46a8.jpg",
-    "read_at": "2026-10-03T20:42:39"
+    "read_at": "2026-10-03T20:42:39",
+    "copies": [
+     {
+      "id": "3748915db49f44f4",
+      "url": "https://wellfound.com/jobs/4634225-course-writer-and-editor-ux-ui-and-ai-clone",
+      "read_url": "https://wellfound.com/jobs/4634225-course-writer-and-editor-ux-ui-and-ai-clone",
+      "source": "wellfound",
+      "posted": "2026-08-26",
+      "location": "Texas; Remote: Canada, Europe, United States, South Africa, Middle East, Asia",
+      "lane": "open",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -221816,7 +222613,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3afc4ceebd0d47cb.jpg",
-    "read_at": "2026-10-03T11:21:11"
+    "read_at": "2026-10-03T11:21:11",
+    "copies": [
+     {
+      "id": "b5b77523bd934a32",
+      "url": "https://www.woodyjobs.com/design/205405-senior-product-designer-uxui-edai",
+      "read_url": "https://www.woodyjobs.com/design/205405-senior-product-designer-uxui-edai",
+      "source": "woodyjobs",
+      "posted": "2026-09-29",
+      "location": "France",
+      "lane": "unsure",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -223163,7 +223972,29 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/463cda044ca74455.employer.jpg",
-    "read_at": "2026-10-03T11:24:35"
+    "read_at": "2026-10-03T11:24:35",
+    "copies": [
+     {
+      "id": "692ae089a3bc46ac",
+      "url": "https://www.welcometothejungle.com/en/companies/runway-1/jobs/senior-staff-product-designer-growth_us_pxahumdq",
+      "read_url": "https://jobs.ashbyhq.com/runway-ml/28e151ac-cb29-4695-9041-a9e352624111",
+      "source": "wttj",
+      "posted": "2026-08-05",
+      "location": "US",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "24a2a05c3a014fc1",
+      "url": "https://www.welcometothejungle.com/en/companies/runway-1/jobs/senior-staff-product-designer_fr_z7yxkb46",
+      "read_url": "https://jobs.ashbyhq.com/runway-ml/e0fec99f-ae6e-4f92-ac1a-7d227179261f",
+      "source": "wttj",
+      "posted": "2026-07-17",
+      "location": "US",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -225511,7 +226342,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/e184c6026a4c4aa1.employer.jpg",
-    "read_at": "2026-10-03T10:28:14"
+    "read_at": "2026-10-03T10:28:14",
+    "copies": [
+     {
+      "id": "8aaf74347cb54bdc",
+      "url": "https://uiuxjobsboard.com/job/1623426-remote-anywhere-ux-ui-product-designer",
+      "read_url": "https://jobs.ashbyhq.com/the-flex/6a0c4b4e-7090-4dcc-a4eb-28fed5d76e62",
+      "source": "uiuxjobsboard",
+      "posted": "2026-10-01",
+      "location": "Remote, Anywhere",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -225581,7 +226424,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/7784c9786ccf4699.employer.jpg",
-    "read_at": "2026-10-03T10:28:28"
+    "read_at": "2026-10-03T10:28:28",
+    "copies": [
+     {
+      "id": "ab83f1a192954d71",
+      "url": "https://uiuxjobsboard.com/job/1611326-remote-europe-ux-product-lead",
+      "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
+      "source": "uiuxjobsboard",
+      "posted": "2026-09-21",
+      "location": "Remote, Europe",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -225910,7 +226765,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/ef2252c355ac4592.employer.jpg",
-    "read_at": "2026-10-03T11:25:25"
+    "read_at": "2026-10-03T11:25:25",
+    "copies": [
+     {
+      "id": "a609749721384c31",
+      "url": "https://www.uxremotetalent.com/ux-job/interactive-designer-816mw",
+      "read_url": "https://neboagency.applytojob.com/apply/lBP649tGjR/Interactive-Designer",
+      "source": "uxremotetalent",
+      "posted": "2026-08-26",
+      "location": "USA Only",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -237781,7 +238648,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/86ddbe75db49447e.jpg",
-    "read_at": "2026-10-03T11:38:03"
+    "read_at": "2026-10-03T11:38:03",
+    "copies": [
+     {
+      "id": "57fc84cb292f4cbf",
+      "url": "https://euremotejobs.com/job/product-designer-5/",
+      "read_url": "https://betterme.breezy.hr/p/f0af8f3023a2-product-designer",
+      "source": "euremotejobs",
+      "posted": "2026-07-17",
+      "location": "Worldwide",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -266434,7 +267313,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/b64e20d79dea4898.employer.jpg",
-    "read_at": "2026-10-03T12:29:07"
+    "read_at": "2026-10-03T12:29:07",
+    "copies": [
+     {
+      "id": "36489cbba8914ade",
+      "url": "https://jobs.ashbyhq.com/roompricegenie/1a8e6c59-9eb5-4d62-94f9-871fc9a7c0d4",
+      "read_url": "https://jobs.ashbyhq.com/roompricegenie/1a8e6c59-9eb5-4d62-94f9-871fc9a7c0d4",
+      "source": "ashby/roompricegenie",
+      "posted": "2026-09-25",
+      "location": "Remote Germany; Remote Portugal; Remote Netherlands; Remote Spain; Remote UK",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -266509,7 +267400,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/45a68f8eb823497a.employer.jpg",
-    "read_at": "2026-10-03T12:29:19"
+    "read_at": "2026-10-03T12:29:19",
+    "copies": [
+     {
+      "id": "71a61dbfc67e454a",
+      "url": "https://jobs.ashbyhq.com/chromatic/75693ed5-b8de-4cf0-a38a-ac259a6f05ef",
+      "read_url": "https://jobs.ashbyhq.com/chromatic/75693ed5-b8de-4cf0-a38a-ac259a6f05ef",
+      "source": "ashby/chromatic",
+      "posted": "2026-09-25",
+      "location": "Remote | North America or Europe",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -266580,7 +267483,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/ce07873353e84493.employer.jpg",
-    "read_at": "2026-10-03T12:29:25"
+    "read_at": "2026-10-03T12:29:25",
+    "copies": [
+     {
+      "id": "fec63ce387ee4e7e",
+      "url": "https://jobs.ashbyhq.com/splitmetrics/64fea555-d27c-4d58-9cbc-2bf19b33c6fb",
+      "read_url": "https://jobs.ashbyhq.com/splitmetrics/64fea555-d27c-4d58-9cbc-2bf19b33c6fb",
+      "source": "ashby/splitmetrics",
+      "posted": "2026-09-29",
+      "location": "Remote - Europe Time Zones; Portugal; Serbia; Spain",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -266654,7 +267569,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/2c9bb1d6b7264594.employer.jpg",
-    "read_at": "2026-10-03T12:29:30"
+    "read_at": "2026-10-03T12:29:30",
+    "copies": [
+     {
+      "id": "9a033ed8c4d74cd3",
+      "url": "https://www.woodyjobs.com/design/205470-senior-product-designer-trm",
+      "read_url": "https://www.woodyjobs.com/design/205470-senior-product-designer-trm",
+      "source": "woodyjobs",
+      "posted": "2026-09-29",
+      "location": "United States",
+      "lane": "unsure",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -267477,7 +268404,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/3d36c7b85f04466b.employer.jpg",
-    "read_at": "2026-10-03T12:30:50"
+    "read_at": "2026-10-03T12:30:50",
+    "copies": [
+     {
+      "id": "c50b6f874a704400",
+      "url": "https://jobs.ashbyhq.com/revenuecat/c3fe34a4-dc40-4ac5-b707-7d99eaf13fc4",
+      "read_url": "https://jobs.ashbyhq.com/revenuecat/c3fe34a4-dc40-4ac5-b707-7d99eaf13fc4",
+      "source": "ashby/revenuecat",
+      "posted": "2026-09-18",
+      "location": "Americas; EMEA",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -267559,7 +268498,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/0d5f42a717a74c07.employer.jpg",
-    "read_at": "2026-10-03T12:30:53"
+    "read_at": "2026-10-03T12:30:53",
+    "copies": [
+     {
+      "id": "f8bff83ac48b4f8a",
+      "url": "https://jobs.ashbyhq.com/revenuecat/a897e317-9c65-46d5-ace3-25ec6f7b4a0c",
+      "read_url": "https://jobs.ashbyhq.com/revenuecat/a897e317-9c65-46d5-ace3-25ec6f7b4a0c",
+      "source": "ashby/revenuecat",
+      "posted": "2026-09-18",
+      "location": "Americas; APAC; EMEA",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -268728,7 +269679,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/82d0d28aa112488a.employer.jpg",
-    "read_at": "2026-10-03T12:32:45"
+    "read_at": "2026-10-03T12:32:45",
+    "copies": [
+     {
+      "id": "bce4bedc757f40d3",
+      "url": "https://jobs.ashbyhq.com/wundergraph/822c2b09-155e-448d-bb89-4976d0d99667",
+      "read_url": "https://jobs.ashbyhq.com/wundergraph/822c2b09-155e-448d-bb89-4976d0d99667",
+      "source": "ashby/wundergraph",
+      "posted": "2026-08-20",
+      "location": "EMEA",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -269149,7 +270112,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/606ae7e8e43c4730.employer.jpg",
-    "read_at": "2026-10-03T12:33:48"
+    "read_at": "2026-10-03T12:33:48",
+    "copies": [
+     {
+      "id": "c536014bca834d34",
+      "url": "https://jobs.ashbyhq.com/paddle/e8297f02-7942-4772-a04d-3bdb61a1231d",
+      "read_url": "https://jobs.ashbyhq.com/paddle/e8297f02-7942-4772-a04d-3bdb61a1231d",
+      "source": "ashby/paddle",
+      "posted": "2026-08-04",
+      "location": "UK; Portugal; Ireland",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -269379,7 +270354,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/485bc3757e2346ae.employer.jpg",
-    "read_at": "2026-10-03T12:34:17"
+    "read_at": "2026-10-03T12:34:17",
+    "copies": [
+     {
+      "id": "b7b809bc45274619",
+      "url": "https://jobs.ashbyhq.com/secfix/3fd72701-24db-48a3-a3df-9c889d26b86b",
+      "read_url": "https://jobs.ashbyhq.com/secfix/3fd72701-24db-48a3-a3df-9c889d26b86b",
+      "source": "ashby/secfix",
+      "posted": "2026-07-31",
+      "location": "Remote - Europe; Remote - Munich",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -269455,7 +270442,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/a405961c81344875.employer.jpg",
-    "read_at": "2026-10-03T12:34:33"
+    "read_at": "2026-10-03T12:34:33",
+    "copies": [
+     {
+      "id": "5195c27072124402",
+      "url": "https://jobs.ashbyhq.com/revenuecat/54153e40-8c3d-4512-b65a-a1515d7bef53",
+      "read_url": "https://jobs.ashbyhq.com/revenuecat/54153e40-8c3d-4512-b65a-a1515d7bef53",
+      "source": "ashby/revenuecat",
+      "posted": "2026-07-21",
+      "location": "Americas; APAC; EMEA",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -269524,7 +270523,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/01db07b795eb403d.employer.jpg",
-    "read_at": "2026-10-03T12:34:51"
+    "read_at": "2026-10-03T12:34:51",
+    "copies": [
+     {
+      "id": "2dfbc400c7ef4e38",
+      "url": "https://jobs.ashbyhq.com/signoz/ea04f41f-62c2-40a2-996f-6d7389d80124",
+      "read_url": "https://jobs.ashbyhq.com/signoz/ea04f41f-62c2-40a2-996f-6d7389d80124",
+      "source": "ashby/signoz",
+      "posted": "2026-06-30",
+      "location": "India; Europe",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -269603,7 +270614,19 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/81b775f6425c4e7a.employer.jpg",
-    "read_at": "2026-10-03T12:35:06"
+    "read_at": "2026-10-03T12:35:06",
+    "copies": [
+     {
+      "id": "9f13512b752a4e73",
+      "url": "https://jobs.ashbyhq.com/ashby/188cc71b-a625-4022-94dc-7c43fa1a8b06",
+      "read_url": "https://jobs.ashbyhq.com/ashby/188cc71b-a625-4022-94dc-7c43fa1a8b06",
+      "source": "ashby/ashby",
+      "posted": "2026-06-12",
+      "location": "Portugal; Spain; Italy; Switzerland; Croatia; Ireland; Stockholm; Romania; Barcelona; Berlin; Sweden; Estonia",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -270995,7 +272018,19 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/b3e35c118dd0495e.employer.jpg",
-    "read_at": "2026-10-03T12:30:18"
+    "read_at": "2026-10-03T12:30:18",
+    "copies": [
+     {
+      "id": "1e4388744e72443a",
+      "url": "https://uiuxjobsboard.com/job/1595326-remote-europe-ux-designer",
+      "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
+      "source": "uiuxjobsboard",
+      "posted": "2026-09-07",
+      "location": "Remote, Europe",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -273408,7 +274443,19 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ee1d06ce3471432c.jpg",
-    "read_at": "2026-10-03T12:46:58"
+    "read_at": "2026-10-03T12:46:58",
+    "copies": [
+     {
+      "id": "550babe5d91e4694",
+      "url": "https://euremotejobs.com/job/senior-product-designer-11/",
+      "read_url": "https://job-boards.eu.greenhouse.io/whitetech/jobs/4987197101?utm_source=jobs&utm_medium=euremotejobs",
+      "source": "euremotejobs",
+      "posted": "2026-09-30",
+      "location": "EMEA",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
    }
   },
   {

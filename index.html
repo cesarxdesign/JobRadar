@@ -610,6 +610,7 @@ function render(){
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
       + (RR&&!routing(r.id)&&beenBefore(r)?'<span class="tag" style="border-style:dashed" title="'+esc(historyOf(r).apps.map(a=>(a.role||"role not named")+" · "+(a.sent||"?")+(a.rejected?" · rejected "+a.rejected:"")).concat(historyOf(r).mails.map(m=>m.subject+" · "+m.date)).join("\n"))+'">'+(likelyThis(r).length?'<b style="color:var(--bad)">✉ likely applied to this one</b>':'✉ maybe applied before')+'</span>':'')
+      + (RR&&((r.verdict||{}).copies||[]).length?'<span class="tag" style="border-style:dashed" title="the same job is listed '+((r.verdict.copies.length)+1)+' times; this is the one to use">×'+(r.verdict.copies.length+1)+'</span>':'')
       + (openNote(r.id)?'<span class="tag" style="border-style:dashed" title="'+esc(openNote(r.id).text)+'">✎ note</span>':'')
       + (RR&&flagOf(r.id)?'<span class="tag n" style="border-style:dashed">wrong: '+esc(flagOf(r.id).wrong.join(", "))+'</span>':'')
       + (retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
@@ -782,6 +783,17 @@ const sameRole=(m,p)=>roleMatch(m,p)==="likely";
 const likelyThis=r=>historyOf(r).apps.filter(a=>sameRole(a.role,r.title));
 const beenBefore=r=>{const h=historyOf(r);
   return h.apps.some(a=>roleMatch(a.role,r.title))||(!h.apps.length&&h.mails.some(m=>m.kind==="application"));};
+// The same job, listed elsewhere. One card is shown; these are the others.
+function copiesBox(r){
+  const c=(r.verdict||{}).copies||[];
+  if(!c.length) return "";
+  const host=u=>{try{return new URL(u).hostname.replace(/^www\./,"");}catch(e){return u||"";}};
+  return '<div class="notes"><div class="fk">The same job, also listed</div>'
+    +c.map(x=>'<div class="past"><div><a href="'+esc(outbound(x.read_url||x.url))+'" target="_blank" rel="noopener" style="color:var(--acc)">'
+        +esc(host(x.read_url||x.url))+' ↗</a>'+(x.location?' · '+esc(x.location):'')+'</div><div class="when">'
+        +(x.posted?'posted '+esc(String(x.posted).slice(0,10))+' · ':'')+esc(x.read==="employer"?"the employer’s page":"a job board’s copy")
+        +' · the filter called it '+esc(LANE_NAME[x.lane]||x.lane||"?")+'</div></div>').join("")+'</div>';
+}
 function historyBox(r){
   const h=historyOf(r);
   if(!h.apps.length&&!h.mails.length) return "";
@@ -925,6 +937,7 @@ function renderPane(){
           +(isMulti(r)?"take this company back out of Multihire":"move every role of this company to the Multihire lane, now and in later runs")+'">'
           +(isMulti(r)?"✓ multihire":"label as multihire")+'</button>':'')+'</div>'
     + whyBox(r)
+    + copiesBox(r)
     + historyBox(r)
     + notesBox(r)
     + (r.gone?'<div class="why">This posting is no longer on the board - the company took it '

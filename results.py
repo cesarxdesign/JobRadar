@@ -146,6 +146,60 @@ def from_vision(v):
             "shot": emp.get("shot") or board.get("shot"), "read_at": v.get("at")}
 
 
+CO_JUNK = re.compile(r"\b(app|inc|llc|ltd|gmbh|labs|foundation|bank|ai|careers|group|the|technologies|software)\b", re.I)
+
+
+def job_key(role):
+    """One job, however many times it is listed: the company and the title's words."""
+    v = role.get("verdict") or {}
+    co = (v.get("fields") or {}).get("company") or role.get("company") or ""
+    co = re.sub(r"[^a-z0-9]", "", CO_JUNK.sub(" ", co.lower()))
+    title = re.sub(r"\([^)]*\)", " ", (role.get("title") or "").lower())       # (Remote), (m/f/d), (Spain)
+    return co, " ".join(re.findall(r"[a-z0-9]+", title))
+
+
+def fold(lanes, by_id):
+    """Show a job once.
+
+    The same job reaches the board several ways: through two or three job
+    boards and the employer's own page, or as one posting per country. He
+    wants one card. Which one:
+      - the copy that is for Portugal, when the copies differ by place;
+      - else the one read on the employer's own page;
+      - else the most recently posted.
+    The others are not shown as cards. They ride on the one that is, so the
+    preview can list them with their links.
+    """
+    groups = {}
+    for lane, ids in lanes.items():
+        for i in ids:
+            groups.setdefault(job_key(by_id[i]), []).append(i)
+    order = {"portugal": 0, "open": 1, "unsure": 2}
+    folded = 0
+    for key, ids in groups.items():
+        if len(ids) < 2 or not key[0] or not key[1]:
+            continue
+
+        def rank(i):
+            r, v = by_id[i], by_id[i]["verdict"]
+            where = f"{r.get('location') or ''} {' '.join(str(x.get('quote')) for x in v.get('signals') or [] if x.get('says') == 'portugal_in')}"
+            return (order.get(v.get("lane"), 3), 0 if re.search(r"portugal|lisbo|porto\b", where, re.I) else 1,
+                    0 if v.get("read") == "employer" else 1, "~" + str(r.get("posted") or r.get("first_seen") or "")[::-1])
+        ids.sort(key=rank)
+        ids.sort(key=lambda i: str(by_id[i].get("posted") or by_id[i].get("first_seen") or ""), reverse=True)
+        ids.sort(key=lambda i: rank(i)[:3])
+        keep, rest = ids[0], ids[1:]
+        by_id[keep]["verdict"]["copies"] = [
+            {"id": i, "url": by_id[i].get("url"), "read_url": by_id[i]["verdict"].get("read_url"),
+             "source": by_id[i].get("source"), "posted": by_id[i].get("posted"), "location": by_id[i].get("location"),
+             "lane": by_id[i]["verdict"].get("lane"), "read": by_id[i]["verdict"].get("read")} for i in rest]
+        gone = set(rest)
+        for lane in lanes:
+            lanes[lane] = [i for i in lanes[lane] if i not in gone]
+        folded += len(rest)
+    return folded
+
+
 def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=None):
     hints = hints or {}
     vision = vision or {}
@@ -227,6 +281,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
                 cut.append(rec["id"])          # remote, but somewhere he is not
                 continue
             (cut if v["cut"] else lanes[lane]).append(rec["id"])
+    folded = fold(lanes, {r["id"]: r for r in roles})
     # The board fetches this file. 47,000 title cuts would make it 25MB for
     # rows no lane shows; they stay in verdicts.json with their reasons.
     # The description of every lane role rides along, so a board served as
@@ -243,7 +298,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "criteria": verdicts_doc.get("criteria"),
         "model": verdicts_doc.get("model"),
         "counts": {**{k: len(v) for k, v in lanes.items()}, "ghosts": ghosts,
-                   "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut), "agency": len(agency), "not_read": len(unread),
+                   "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut), "agency": len(agency), "not_read": len(unread), "folded": folded,
                    "vision_read": len(vision), "title_cuts": title_cuts,
                    # what the board's top line says: design-titled roles, and how many vision has read
                    "design": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None),
