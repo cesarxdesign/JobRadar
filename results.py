@@ -137,6 +137,11 @@ def from_vision(v):
             "text": "employer's page" if v.get("read") == "employer" else "job board's copy",
             "stage": "vision", "confidence": v.get("confidence"), "fields": v.get("fields") or {},
             "inferred": v.get("inferred") or [], "read": v.get("read"), "read_url": v.get("read_url"),
+            # for the box at the top of the preview: which of the two questions it failed, and the words
+            "reason": v.get("reason"), "open": v.get("posting_open"), "language_ok": v.get("language_ok"),
+            "language": v.get("language_of_the_posting"), "quote": v.get("place_quote"),
+            "signals": [x for x in v.get("place_signals") or [] if isinstance(x, dict) and x.get("says") != "says_nothing"],
+            "if_employer": v.get("lane_if_employer"), "found_by": v.get("found_by"),
             "shot": emp.get("shot") or board.get("shot"), "read_at": v.get("at")}
 
 
