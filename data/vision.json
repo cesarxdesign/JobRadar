@@ -97377,5 +97377,5145 @@
   "reader_place": "no",
   "lane": "cut",
   "second_place": "no"
+ },
+ "87a6254c4fbe457a": {
+  "id": "87a6254c4fbe457a",
+  "at": "2026-10-03T12:08:31",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/airhelp/jobs/senior-product-designer-b2b-product_barcelona_erbabrik",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/airhelp/jobs/senior-product-designer-b2b-product_barcelona_erbabrik",
+   "status": 200,
+   "shot": "data/shots/87a6254c4fbe457a.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://apply.workable.com/airhelp/j/18A8C03F58/",
+   "status": 200,
+   "shot": "data/shots/87a6254c4fbe457a.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://apply.workable.com/airhelp/j/18A8C03F58/"
+  ],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/airhelp/j/18A8C03F58/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Barcelona, Catalonia, Spain / Berlin, Berlin, Germany / Warsaw, Masovian Voivodeship, Poland / Gdańsk, Pomeranian Voivodeship, Poland / Kraków, Lesser Poland Voivodeship, Poland",
+  "place_signals": [
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Barcelona, Catalonia, Spain / Berlin, Berlin, Germany / Warsaw, Masovian Voivodeship, Poland / Gdańsk, Pomeranian Voivodeship, Poland / Kraków, Lesser Poland Voivodeship, Poland",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Berlin: 85 000 - 95 000 Euro/year (full employment contract)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Barcelona: 70 000 - 80 000 Euro/year (full employment contract)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Gdańsk, Warszawa, Kraków: - If you join us as a full-time employee: 18 000 - 25 000 PLN/month",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Barcelona, Catalonia, Spain / Berlin, Berlin, Germany / Warsaw... Gdańsk... Kraków...",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role tied to specific offices in Spain, Germany and Poland, with no Portugal option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer (B2B Product)",
+   "company": "AirHelp",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Spain",
+    "Germany",
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": "Berlin 85,000-95,000 EUR/year; Barcelona 70,000-80,000 EUR/year; Gdańsk/Warszawa/Kraków 18,000-25,000 PLN/month (employee) or 20,000-27,000 PLN net+VAT/month (contractor)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "f3dfc254b7ed4fe0": {
+  "id": "f3dfc254b7ed4fe0",
+  "at": "2026-10-03T12:08:48",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDUwMDk4IDE0MQ?lang=en",
+  "board": {
+   "url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDUwMDk4IDE0MQ?lang=en",
+   "status": 200,
+   "shot": "data/shots/f3dfc254b7ed4fe0.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDUwMDk4IDE0MQ?lang=en",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "4835574 GANDARELA , Ave - Portugal",
+  "place_signals": [
+   {
+    "quote": "4835574 GANDARELA , Ave - Portugal",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Se reside em Portugal Continental, deve candidatar-se através do iefponline",
+    "where": "footer or small print",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "4835574 GANDARELA , Ave - Portugal",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is a fashion/textile pattern-maker role (translating sketches into garment patterns), not a digital product/UX/UI design job.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "DESIGNER DE TÊXTEIS E MODA",
+   "company": "DN Serviço de Emprego de Guimarães (employer not named beyond sector)",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": "From 1300 EUR per month",
+   "years_xp": 1,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "18/09/2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "73815d85a2444756": {
+  "id": "73815d85a2444756",
+  "at": "2026-10-03T12:08:43",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/noibu-technologies/jobs/senior-ux-designer-16-month-contract_ca_amftu4ak",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/noibu-technologies/jobs/senior-ux-designer-16-month-contract_ca_amftu4ak",
+   "status": 200,
+   "shot": "data/shots/73815d85a2444756.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://jobs.ashbyhq.com/noibu/ab592de1-dffc-4b9a-8ad1-66bffe47ea50",
+   "link: https://wttj.notion.site/legal-hub",
+   "apply: https://jobs.ashbyhq.com/noibu/ab592de1-dffc-4b9a-8ad1-66bffe47ea50"
+  ],
+  "read": "board",
+  "read_url": "https://www.welcometothejungle.com/en/companies/noibu-technologies/jobs/senior-ux-designer-16-month-contract_ca_amftu4ak",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Canada / Fully-remote",
+  "place_signals": [
+   {
+    "quote": "Permanent contract Canada Fully-remote",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The workplace Canada",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "90-day away policy: You can work abroad for up to 90 days per calendar year.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Canada / Fully-remote",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting is remote but explicitly scoped to Canada, with a 90-day-abroad policy confirming the base location is Canada, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer (16 Month Contract)",
+   "company": "Noibu Technologies",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "15 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "452f046578524de0": {
+  "id": "452f046578524de0",
+  "at": "2026-10-03T12:09:05",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.uxremotetalent.com/ux-job/ux-designer----trase-systems",
+  "board": {
+   "url": "https://www.uxremotetalent.com/ux-job/ux-designer----trase-systems",
+   "status": 200,
+   "shot": "data/shots/452f046578524de0.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/redcellpartners?error=true",
+   "status": 200,
+   "shot": "data/shots/452f046578524de0.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://job-boards.greenhouse.io/redcellpartners?error=true"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/redcellpartners?error=true",
+  "same_job": "no",
+  "posting_open": "unreadable",
+  "open_quote": "error=true",
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "",
+  "role_verdict": "unclear",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page read is a different job · Page is a Greenhouse job board error/listing page with no single posting for UX Designer at Trase Systems; it only shows a list of unrelated open roles.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Trase Systems",
+   "seniority": "unstated",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure"
+ },
+ "7668045dd73d4e2d": {
+  "id": "7668045dd73d4e2d",
+  "at": "2026-10-03T12:09:00",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/medius/jobs/product-designer_london_lkm5btoo",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/medius/jobs/product-designer_london_lkm5btoo",
+   "status": 200,
+   "shot": "data/shots/7668045dd73d4e2d.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://career.medius.com/jobs/8355161-product-designer",
+   "status": 200,
+   "shot": "data/shots/7668045dd73d4e2d.employer.jpg",
+   "error": null
+  },
+  "found_by": "apply",
+  "looked": [
+   "link: https://wttj.notion.site/legal-hub",
+   "apply: https://career.medius.com/jobs/8355161-product-designer"
+  ],
+  "read": "employer",
+  "read_url": "https://career.medius.com/jobs/8355161-product-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "PRODUCT DEVELOPMENT · LONDON, MANCHESTER · HYBRID",
+  "place_signals": [
+   {
+    "quote": "PRODUCT DEVELOPMENT · LONDON, MANCHESTER · HYBRID",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Locations London, Manchester",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote status Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "#LI-HYBRID",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "the geographic location in which the role is performed",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "PRODUCT DEVELOPMENT · LONDON, MANCHESTER · HYBRID",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in London or Manchester, UK - not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Medius",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 2,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "e59694f4bdf54de3": {
+  "id": "e59694f4bdf54de3",
+  "at": "2026-10-03T12:09:10",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDUwMjAzIDE0MQ?lang=en",
+  "board": {
+   "url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDUwMjAzIDE0MQ?lang=en",
+   "status": 200,
+   "shot": "data/shots/e59694f4bdf54de3.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDUwMjAzIDE0MQ?lang=en",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "3800792 EIXO , Região de Aveiro - Portugal",
+    "where": "body",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Se reside em Portugal Continental, deve candidatar-se através do iefponline aqui",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "3800792 EIXO , Região de Aveiro - Portugal",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is a graphic design production role (Illustrator/Photoshop/CorelDRAW for print materials), not product/UX/UI design.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Designer, gráfico ou de comunicação e multimédia",
+   "company": "unstated (manufacturer of lighting equipment)",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": "From 950 EUR per month",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "18/09/2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "b6bc4e78d1af404f": {
+  "id": "b6bc4e78d1af404f",
+  "at": "2026-10-03T12:09:15",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15934956/designer-de-interiores-arquitecto-m-f/",
+  "board": {
+   "url": "https://www.net-empregos.com/15934956/designer-de-interiores-arquitecto-m-f/",
+   "status": 200,
+   "shot": "data/shots/b6bc4e78d1af404f.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15934956/designer-de-interiores-arquitecto-m-f/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Lisboa",
+  "place_signals": [
+   {
+    "quote": "Lisboa",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Atendimento personalizado ao cliente final e gestão de tarefas relacionadas com o mesmo.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Lisboa",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "Role is Interior Designer/Architect for furniture stores, not a product/UX/UI design role.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Designer de Interiores/Arquitecto (m/f)",
+   "company": "Lineacasa Interiores",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "17-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "42448c4a49f14259": {
+  "id": "42448c4a49f14259",
+  "at": "2026-10-03T12:09:17",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/gleanwork/jobs/4506459005",
+  "board": {
+   "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4506459005",
+   "status": 200,
+   "shot": "data/shots/42448c4a49f14259.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/gleanwork",
+   "status": 200,
+   "shot": "data/shots/42448c4a49f14259.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://job-boards.greenhouse.io/gleanwork"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/gleanwork",
+  "same_job": "yes",
+  "posting_open": "unreadable",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": "Mountain View, CA",
+  "place_signals": [
+   {
+    "quote": "Head of Product Design / Mountain View, CA",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Head of Product Design - Mountain View, CA",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "page is only the company's job board list with no individual posting/description for this role, just a title and location in a list",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Head of Product Design",
+   "company": "Glean",
+   "seniority": "head",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure"
+ },
+ "4b9a419a073448fc": {
+  "id": "4b9a419a073448fc",
+  "at": "2026-10-03T12:09:34",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://dribbble.com/jobs/310307-Product-Designer-Mobile-Apps",
+  "board": {
+   "url": "https://dribbble.com/jobs/310307-Product-Designer-Mobile-Apps",
+   "status": 200,
+   "shot": "data/shots/4b9a419a073448fc.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://dribbble.com/jobs/310307-Product-Designer-Mobile-Apps",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Barcelona, Spain",
+  "place_signals": [
+   {
+    "quote": "Location: Barcelona, Spain",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote Friendly",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "paid relocation support if you're moving to Barcelona",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "400+ builders across Barcelona and İstanbul",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "top-notch office in the heart of the city",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Location: Barcelona, Spain / Remote Friendly",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "cut on place, but not sure of it · Posting names Barcelona, Spain with a 'Remote Friendly' tag and relocation support, but company base is unclear (Barcelona and Istanbul both mentioned), so under the Spain exception this stays unclear rather than a cut.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Product Designer (Mobile Apps)",
+   "company": "Codeway",
+   "seniority": "senior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Sep 17, 2026"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "e7b298e5c0ea4d44": {
+  "id": "e7b298e5c0ea4d44",
+  "at": "2026-10-03T12:09:56",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/skapa/jobs/product-designer-senior-paris_paris_SKAPA_3Ogm9Py",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/skapa/jobs/product-designer-senior-paris_paris_SKAPA_3Ogm9Py",
+   "status": 200,
+   "shot": "data/shots/e7b298e5c0ea4d44.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://wttj.notion.site/legal-hub"
+  ],
+  "read": "board",
+  "read_url": "https://www.welcometothejungle.com/en/companies/skapa/jobs/product-designer-senior-paris_paris_SKAPA_3Ogm9Py",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "French",
+  "language_ok": false,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Paris",
+  "place_signals": [
+   {
+    "quote": "Paris",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "A few days at home",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "74 Rue du Temple, 75003 Paris, France",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Paris",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "posting is written in French",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer Senior Paris",
+   "company": "Skapa",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "French",
+   "posted": "16 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "dd42551e35034ddc": {
+  "id": "dd42551e35034ddc",
+  "at": "2026-10-03T12:09:59",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15973480/designer-grafico-m-f/",
+  "board": {
+   "url": "https://www.net-empregos.com/15973480/designer-grafico-m-f/",
+   "status": 200,
+   "shot": "data/shots/dd42551e35034ddc.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15973480/designer-grafico-m-f/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Lisboa",
+  "place_signals": [
+   {
+    "quote": "Lisboa",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Localização: Quinta da Boavista, Alenquer – Regime presencial",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Quinta da Boavista, Alenquer – Regime presencial",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is a graphic design role (labelling, packaging, social media visuals) in Marketing & Design, not product/UX design, so it fails the role test despite being onsite in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Designer Gráfico (M/F)",
+   "company": "Casa Santos Lima - Companhia das Vinhas S.A.",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 2,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "16-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "45958986c9f547d6": {
+  "id": "45958986c9f547d6",
+  "at": "2026-10-03T12:10:14",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.pinterestcareers.com/jobs/?gh_jid=7684636",
+  "board": {
+   "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7684636",
+   "status": 200,
+   "shot": "data/shots/45958986c9f547d6.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.pinterestcareers.com/jobs/?gh_jid=7684636",
+  "same_job": "no",
+  "posting_open": "unreadable",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": null,
+  "role_verdict": "unclear",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page read is a different job · page loaded is a generic Pinterest careers search results listing 168 jobs, not the specific Product Design Manager II, Ad Formats posting",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": null,
+   "company": "Pinterest",
+   "seniority": "unstated",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure"
+ },
+ "a4b2fc8b0f5048d8": {
+  "id": "a4b2fc8b0f5048d8",
+  "at": "2026-10-03T12:10:16",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15961092/a-linha-da-vizinha-esta-a-recrutar-designer-lisboa/",
+  "board": {
+   "url": "https://www.net-empregos.com/15961092/a-linha-da-vizinha-esta-a-recrutar-designer-lisboa/",
+   "status": 200,
+   "shot": "data/shots/a4b2fc8b0f5048d8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15961092/a-linha-da-vizinha-esta-a-recrutar-designer-lisboa/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Lisboa",
+  "place_signals": [
+   {
+    "quote": "A Linha da Vizinha procura um/a Designer de Interiores para integrar a sua equipa em Lisboa.",
+    "where": "opening paragraph",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Lisboa",
+    "where": "side panel",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "A Linha da Vizinha procura um/a Designer de Interiores para integrar a sua equipa em Lisboa.",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "this is an Interior Designer role (furniture, lighting, AutoCAD/Photoshop) not product/UX/UI design, so role fails even though location is Lisbon.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Designer de Interiores",
+   "company": "A Linha da Vizinha",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "16-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "9221b1e53ee642d0": {
+  "id": "9221b1e53ee642d0",
+  "at": "2026-10-03T12:10:20",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4718693-product-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4718693-product-designer",
+   "status": 200,
+   "shot": "data/shots/9221b1e53ee642d0.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4718693-product-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (India)",
+  "place_signals": [
+   {
+    "quote": "Remote (India)",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hires remotely in India",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Visa Sponsorship Not Available",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Preferred Timezones Eastern Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Relocation Not Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Overlap availability across IST and ET working hours.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote (India) | Hires remotely in India",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role hires remotely only within India, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Rescue Rituals",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": "₹30,000 – ₹70,000",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "328d0ff271724e70": {
+  "id": "328d0ff271724e70",
+  "at": "2026-10-03T12:10:38",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-ui-designer-reach/11216189",
+  "board": {
+   "url": "https://builtin.com/job/ux-ui-designer-reach/11216189",
+   "status": 200,
+   "shot": "data/shots/328d0ff271724e70.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-ui-designer-reach/11216189",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This compensation range is specific to the United States",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to the United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer, Reach",
+   "company": "Riverside Insights",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "90K-120K Annually",
+   "years_xp": 4,
+   "reports_to": "Product Director",
+   "language": "English",
+   "posted": "17 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "cf25dd4caef54391": {
+  "id": "cf25dd4caef54391",
+  "at": "2026-10-03T12:10:45",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/kingfisher-france/jobs/modern-desktop-product-designer_hampton",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/kingfisher-france/jobs/modern-desktop-product-designer_hampton",
+   "status": 200,
+   "shot": "data/shots/cf25dd4caef54391.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://careers-kingfisher2.icims.com/jobs/157557/modern-desktop-product-designer/job?mobi",
+   "link: https://wttj.notion.site/legal-hub",
+   "apply: https://careers-kingfisher2.icims.com/jobs/157557/modern-desktop-product-designer/job"
+  ],
+  "read": "board",
+  "read_url": "https://www.welcometothejungle.com/en/companies/kingfisher-france/jobs/modern-desktop-product-designer_hampton",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Hampton",
+  "place_signals": [
+   {
+    "quote": "Permanent contract Hampton",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We can base this role out of either our Paddington or Southampton offices, with an expectation of 12 days a month in the office and travel between sites as required.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our hybrid model blends home working for focus with time spent connecting and collaborating - whether in our offices or at offsite locations. On average, around 60% of your time will involve in-person collaboration.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hampton, England, United Kingdom",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "We can base this role out of either our Paddington or Southampton offices, with an expectation of 12 days a month in the office",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is an IT infrastructure/desktop service design job (Windows 11, InTune, Autopilot), not product/UX design, and it is hybrid onsite in UK offices (Paddington/Southampton), not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Modern Desktop Product Designer",
+   "company": "Kingfisher",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 12,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "16 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "7034b609eaf440b6": {
+  "id": "7034b609eaf440b6",
+  "at": "2026-10-03T12:11:02",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/headway/jobs/staff-product-designer_washington_qu3m4nic",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/headway/jobs/staff-product-designer_washington_qu3m4nic",
+   "status": 200,
+   "shot": "data/shots/7034b609eaf440b6.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/headway/3e71f549-4318-48ff-9be6-57ffc5f3aece",
+   "status": 200,
+   "shot": "data/shots/7034b609eaf440b6.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/headway/3e71f549-4318-48ff-9be6-57ffc5f3aece"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/headway/3e71f549-4318-48ff-9be6-57ffc5f3aece",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "New York, NY; San Francisco, CA; Seattle, WA",
+  "place_signals": [
+   {
+    "quote": "New York, NY; San Francisco, CA; Seattle, WA",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "based on a variety of factors including qualifications, experience, and geographic location",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Over 75,000 providers across all 50 states run their practice on our software",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "New York, NY; San Francisco, CA; Seattle, WA",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Location is restricted to specific US cities with no wider remote language.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Product Designer, Design Systems",
+   "company": "Headway",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "New York, NY",
+    "San Francisco, CA",
+    "Seattle, WA"
+   ],
+   "portugal_ok": "no",
+   "salary": "$180K – $225K",
+   "years_xp": 5,
+   "reports_to": "design systems lead",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "7cda754dcded4d9b": {
+  "id": "7cda754dcded4d9b",
+  "at": "2026-10-03T12:11:11",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer/11204529",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer/11204529",
+   "status": 200,
+   "shot": "data/shots/7cda754dcded4d9b.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer/11204529",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Tuniform is a Tunisian social media and creator-monetization platform ... connecting creators with their communities through a culturally relevant platform",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Miaoli City",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "2 Locations / Remote or Hybrid",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page does not say where · Design role fits, but posting gives no specific country - only '2 Locations' and 'Remote or Hybrid' with no geography stated, so place cannot be determined.",
+  "confidence": "low",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "UI / UX Designer",
+   "company": "Tuniform",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "17 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "05c5a1f21e304947": {
+  "id": "05c5a1f21e304947",
+  "at": "2026-10-03T12:10:57",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/lead-ux-designer/11198751",
+  "board": {
+   "url": "https://builtin.com/job/lead-ux-designer/11198751",
+   "status": 200,
+   "shot": "data/shots/05c5a1f21e304947.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/lead-ux-designer/11198751",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Remote US and Canada",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our targeted starting base salary in the United States for this position considers a variety of factors",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "#LI-Remote #LI-US",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Location: Remote US and Canada",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is explicitly Remote US and Canada only, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lead UX Designer",
+   "company": "Applied Systems",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "$120,000-$165,000 USD",
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English",
+   "posted": "17 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "6778451a78a84952": {
+  "id": "6778451a78a84952",
+  "at": "2026-10-03T12:11:28",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-product-designer/11198057",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-product-designer/11198057",
+   "status": 200,
+   "shot": "data/shots/6778451a78a84952.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-product-designer/11198057",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "5 Locations / Remote",
+  "place_signals": [
+   {
+    "quote": "5 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "You'll work directly with US-based founders and product owners",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "US hours overlap. Available through roughly 5 PM EST for live client coordination.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Fully remote and async-friendly, with required overlap through ~5 PM EST for client sessions",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "only the job board's copy could be read · Design role stated as fully remote with no country restriction, only a US-hours overlap requirement which is a timezone not a place limit.",
+  "confidence": "medium",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "UI/UX Product Designer",
+   "company": "Bolder Apps",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English",
+   "posted": "17 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "unsure",
+  "lane_if_employer": "open"
+ },
+ "8f0875b0ca2d4294": {
+  "id": "8f0875b0ca2d4294",
+  "at": "2026-10-03T12:11:45",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/3531152-electrical-harness-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/3531152-electrical-harness-designer",
+   "status": 200,
+   "shot": "data/shots/8f0875b0ca2d4294.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/3531152-electrical-harness-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (United States)",
+  "place_signals": [
+   {
+    "quote": "Remote (United States)",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hires remotely in United States",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote Work Policy: Remote only / Company Location: United States",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Visa Sponsorship: Not Available",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation: Not Allowed",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Candidates must be willing to undergo a background check and comply with US space regulations and security protocols.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote (United States)",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Electrical harness/hardware engineering role (not design/UX/UI) and the job is US-only remote work.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Electrical Harness Designer",
+   "company": "Space Ocean",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": "project's technical lead",
+   "language": "English",
+   "posted": "Reposted: 2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "79d05996020b4fdf": {
+  "id": "79d05996020b4fdf",
+  "at": "2026-10-03T12:11:55",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://jobspresso.co/job/senior-product-designer-2/",
+  "board": {
+   "url": "https://jobspresso.co/job/senior-product-designer-2/",
+   "status": 200,
+   "shot": "data/shots/79d05996020b4fdf.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.lever.co/creativemarket/9537280e-5f19-4c96-b9e5-810b8defabf0",
+   "status": 404,
+   "shot": "data/shots/79d05996020b4fdf.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://jobs.lever.co/creativemarket/9537280e-5f19-4c96-b9e5-810b8defabf0"
+  ],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/creativemarket/9537280e-5f19-4c96-b9e5-810b8defabf0",
+  "open_quote": "the employer's page answered 404",
+  "stage": "render",
+  "reason": "the employer says it is closed"
+ },
+ "0cab4f89a85f40be": {
+  "id": "0cab4f89a85f40be",
+  "at": "2026-10-03T12:11:57",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/current/jobs/senior-product-designer_york_h6paii6c",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/current/jobs/senior-product-designer_york_h6paii6c",
+   "status": 200,
+   "shot": "data/shots/0cab4f89a85f40be.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://current.com/careers/open-positions/?id=8196494&gh_jid=8196494",
+   "status": 200,
+   "shot": "data/shots/0cab4f89a85f40be.employer.jpg",
+   "error": null
+  },
+  "found_by": "apply",
+  "looked": [
+   "link: https://wttj.notion.site/legal-hub",
+   "apply: https://current.com/careers/open-positions/?id=8196494&gh_jid=8196494"
+  ],
+  "read": "employer",
+  "read_url": "https://current.com/careers/open-positions/?id=8196494&gh_jid=8196494",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "New York",
+  "place_signals": [
+   {
+    "quote": "Location\n\nNew York",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Job Type\n\nPermanent",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Location New York",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Location is stated as New York with no remote mention, so it is onsite there, not reachable from Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Current",
+   "seniority": "senior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [
+    "New York"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "fbc0869bbd4547ec": {
+  "id": "fbc0869bbd4547ec",
+  "at": "2026-10-03T12:12:07",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15925835/design-santo-tirso-entrada-imediata/",
+  "board": {
+   "url": "https://www.net-empregos.com/15925835/design-santo-tirso-entrada-imediata/",
+   "status": 200,
+   "shot": "data/shots/fbc0869bbd4547ec.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15925835/design-santo-tirso-entrada-imediata/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Porto",
+  "place_signals": [
+   {
+    "quote": "Porto",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Design - Santo Tirso - entrada imediata",
+    "where": "under the title",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Porto",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is a technical CAD/furniture drafting role (3D modeling of kitchens and cabinetry for factory production), not product/UX/UI design.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Design - Santo Tirso - entrada imediata",
+   "company": "Vitor R Coelho Lda",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "15-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "26f8c07c1a2a4110": {
+  "id": "26f8c07c1a2a4110",
+  "at": "2026-10-03T12:12:09",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15939416/estagio-profissional-na-area-do-design-nivel-iv-e-v/",
+  "board": {
+   "url": "https://www.net-empregos.com/15939416/estagio-profissional-na-area-do-design-nivel-iv-e-v/",
+   "status": 200,
+   "shot": "data/shots/26f8c07c1a2a4110.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15939416/estagio-profissional-na-area-do-design-nivel-iv-e-v/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Aveiro",
+  "place_signals": [
+   {
+    "quote": "Aveiro",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Contacto com um ambiente internacional.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Aveiro",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is a junior graphic design internship (Design Gráfico/Comunicação) with an age cap of 35, not a product/UX/UI design role for a senior product designer.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Estágio Profissional na área do Design nível IV e V",
+   "company": "Heliotextil-Etiquetas e Passamanarias SA",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "15-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "491bd1cd95574b2a": {
+  "id": "491bd1cd95574b2a",
+  "at": "2026-10-03T12:12:05",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/3246111-design-manager-5-years-leadership-founding-role-equity-only",
+  "board": {
+   "url": "https://wellfound.com/jobs/3246111-design-manager-5-years-leadership-founding-role-equity-only",
+   "status": 200,
+   "shot": "data/shots/491bd1cd95574b2a.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/3246111-design-manager-5-years-leadership-founding-role-equity-only",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (India)",
+  "place_signals": [
+   {
+    "quote": "Remote (India)",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hires remotely in India",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Company Location Hyderabad",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Visa Sponsorship Not Available",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Preferred Timezones Maldives Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Collaboration Hours 10:00 AM - 6:00 PM Maldives Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Relocation Not Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote (India) | Hires remotely in India",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is design leadership (fits), but the posting explicitly restricts hiring to remote-in-India only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Manager, 5+ years (Leadership Founding role, Equity-only)",
+   "company": "ReviewDale",
+   "seniority": "head",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "369dfbc66b2745a8": {
+  "id": "369dfbc66b2745a8",
+  "at": "2026-10-03T12:12:19",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15807070/designer-de-interiores-f-m/",
+  "board": {
+   "url": "https://www.net-empregos.com/15807070/designer-de-interiores-f-m/",
+   "status": 200,
+   "shot": "data/shots/369dfbc66b2745a8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15807070/designer-de-interiores-f-m/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Coimbra",
+  "place_signals": [
+   {
+    "quote": "Coimbra",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Desenvolver projetos de design de interiores para clientes particulares e empresariais",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Coimbra",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "Interior design role (furniture/decor), not product/UX/UI design, so it is cut on role despite being onsite in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Designer de Interiores (F/M)",
+   "company": "Unissima Home Couture, Lda",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "15-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "77b74b0fd0a44a98": {
+  "id": "77b74b0fd0a44a98",
+  "at": "2026-10-03T12:12:29",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15666696/arquiteto-designer-de-interiores-f-m/",
+  "board": {
+   "url": "https://www.net-empregos.com/15666696/arquiteto-designer-de-interiores-f-m/",
+   "status": 200,
+   "shot": "data/shots/77b74b0fd0a44a98.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15666696/arquiteto-designer-de-interiores-f-m/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Coimbra",
+  "place_signals": [
+   {
+    "quote": "Coimbra",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "📍 Local: Soure, Coimbra",
+    "where": "body",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "📌 Tipo de oferta: Full-time - Presencial",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "📍 Local: Soure, Coimbra / 📌 Tipo de oferta: Full-time - Presencial",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is a residential interior architecture/design role (physical interiors), not product/UX/UI design, so it is not a fit for Cesar.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Arquiteto - designer de Interiores (F/M)",
+   "company": "Unissima Home Couture, Lda",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "15-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "8b5f634476f54c51": {
+  "id": "8b5f634476f54c51",
+  "at": "2026-10-03T12:12:32",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15927119/designer-criativo-senior-design-de-interiores-m-f/",
+  "board": {
+   "url": "https://www.net-empregos.com/15927119/designer-criativo-senior-design-de-interiores-m-f/",
+   "status": 200,
+   "shot": "data/shots/8b5f634476f54c51.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15927119/designer-criativo-senior-design-de-interiores-m-f/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Lisboa",
+  "place_signals": [
+   {
+    "quote": "Lisboa",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Situação regular de residência em Portugal",
+    "where": "body",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Carta de condução e disponibilidade para deslocações",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Situação regular de residência em Portugal",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is an interior design role (furniture, materials, AutoCAD/SketchUp, residential/commercial projects), not product/UX/UI design.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Designer Criativo Sénior-Design de Interiores (M/F)",
+   "company": "ANA RITA SOARES-DESIGN DE INTERIORES, UNIP. LDA",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "15-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "9c39d9488ffa4b51": {
+  "id": "9c39d9488ffa4b51",
+  "at": "2026-10-03T12:12:34",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4717818-full-stack-web-developer-ui-ux-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4717818-full-stack-web-developer-ui-ux-designer",
+   "status": 200,
+   "shot": "data/shots/9c39d9488ffa4b51.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4717818-full-stack-web-developer-ui-ux-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (Everywhere)",
+  "place_signals": [
+   {
+    "quote": "Remote ( Everywhere )",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hires remotely in Everywhere",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Company Location Brussels",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "VECTRA International is purely a remote work environment",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote ( Everywhere )",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "only the job board's copy could be read · Title explicitly includes UI/UX Designer and the job is remote worldwide, which includes Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "Full-Stack Web Developer & UI/UX Designer",
+   "company": "VECTRA International",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "unsure",
+  "lane_if_employer": "open"
+ },
+ "b1606521e8fa4bd3": {
+  "id": "b1606521e8fa4bd3",
+  "at": "2026-10-03T12:12:41",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-ui-designer-springfield/11196006",
+  "board": {
+   "url": "https://builtin.com/job/ux-ui-designer-springfield/11196006",
+   "status": 200,
+   "shot": "data/shots/b1606521e8fa4bd3.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-ui-designer-springfield/11196006",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "UX / UI Designer - Springfield",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "44K-154K Annually",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "UX / UI Designer - Springfield ... 2 Locations / In-Office or Remote",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "cut on place, but not sure of it · Title names a US city (Springfield) and salary is in USD, but the panel only says '2 Locations / In-Office or Remote' without naming the countries, so geography is unclear.",
+  "confidence": "low",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "UX / UI Designer",
+   "company": "Photon",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 44,000-154,000 Annually",
+   "years_xp": 2,
+   "reports_to": null,
+   "language": "English",
+   "posted": "18 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "b77085cdc2e247ed": {
+  "id": "b77085cdc2e247ed",
+  "at": "2026-10-03T12:12:52",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/11179317",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/11179317",
+   "status": 200,
+   "shot": "data/shots/b77085cdc2e247ed.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/11179317",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in USA",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in USA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote position.",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in USA",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to the USA, which excludes Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "IntelliSource Technologies Pvt Ltd",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "18 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "2175764acf16412d": {
+  "id": "2175764acf16412d",
+  "at": "2026-10-03T12:13:08",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.uxremotetalent.com/ux-job/visual-ui-designer",
+  "board": {
+   "url": "https://www.uxremotetalent.com/ux-job/visual-ui-designer",
+   "status": 200,
+   "shot": "data/shots/2175764acf16412d.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://apply.workable.com/pack-gamified-shopping/?not_found=true",
+   "apply: https://apply.workable.com/pack-gamified-shopping/?not_found=true"
+  ],
+  "read": "board",
+  "read_url": "https://www.uxremotetalent.com/ux-job/visual-ui-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Canada Only",
+  "place_signals": [
+   {
+    "quote": "Canada Only",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote work within Canada",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Canada Only",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is visual/UI design leaning into branding and digital art rather than product design, and it is restricted to Canada only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Visual & UI Designer",
+   "company": "Pack",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "SEPTEMBER 15, 2026"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "a97b3f0f5c3449cb": {
+  "id": "a97b3f0f5c3449cb",
+  "at": "2026-10-03T12:13:08",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4717813-senior-website-developer-ui-ux-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4717813-senior-website-developer-ui-ux-designer",
+   "status": 200,
+   "shot": "data/shots/a97b3f0f5c3449cb.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4717813-senior-website-developer-ui-ux-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (Everywhere)",
+  "place_signals": [
+   {
+    "quote": "Remote (Everywhere)",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hires remotely in Everywhere",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Company Location Brussels",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "VECTRA International is purely a remote work environment",
+    "where": "footer or small print",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Relocation Not Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote (Everywhere)",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "only the job board's copy could be read · Title explicitly includes UI/UX Designer and the posting states remote work hires everywhere.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Website Developer & UI/UX Designer",
+   "company": "VECTRA International",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Everywhere"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "unsure",
+  "lane_if_employer": "open"
+ },
+ "b66a72b65fd74313": {
+  "id": "b66a72b65fd74313",
+  "at": "2026-10-03T12:13:37",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://bitwarden.com/careers/7775970003/?gh_jid=7775970003",
+  "board": {
+   "url": "https://bitwarden.com/careers/7775970003/?gh_jid=7775970003",
+   "status": 404,
+   "shot": "data/shots/b66a72b65fd74313.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "board",
+  "read": "board",
+  "read_url": "https://bitwarden.com/careers/7775970003/?gh_jid=7775970003",
+  "open_quote": "the server answered 404: Uh oh. 404 It seems you have stumbled into an empty vault. The way out is easy – return to our home page or contact us.",
+  "stage": "render",
+  "reason": "the board says it is closed, and the employer's posting was not found"
+ },
+ "441626aea64b4fe0": {
+  "id": "441626aea64b4fe0",
+  "at": "2026-10-03T12:13:33",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.vml.com/careers/job/8675696002?gh_jid=8675696002",
+  "board": {
+   "url": "https://www.vml.com/careers/job/8675696002?gh_jid=8675696002",
+   "status": 403,
+   "shot": "data/shots/441626aea64b4fe0.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.vml.com/careers/job/8675696002?gh_jid=8675696002",
+  "same_job": "unclear",
+  "posting_open": "unreadable",
+  "open_quote": "Performing security verification / This website uses a security service to protect against malicious bots.",
+  "language_of_the_posting": "unstated",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Performing security verification",
+  "role_verdict": "unclear",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "page is a Cloudflare bot-check screen, not the actual job posting content",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Director",
+   "company": "VML",
+   "seniority": "director",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "unstated",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure"
+ },
+ "71dc6b356e3e4d70": {
+  "id": "71dc6b356e3e4d70",
+  "at": "2026-10-03T12:13:30",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4716552-front-end-product-designer-engineer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4716552-front-end-product-designer-engineer",
+   "status": 200,
+   "shot": "data/shots/71dc6b356e3e4d70.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4716552-front-end-product-designer-engineer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (United States)",
+  "place_signals": [
+   {
+    "quote": "Remote ( United States )",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hires remotely in United States",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Company Location Toronto",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Visa Sponsorship Not Available",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Preferred Timezones Pacific Time, Mountain Time, Central Time, Eastern Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote ( United States )",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role title includes 'designer' so it passes the role check, but the posting is explicitly Remote (United States) with visa sponsorship not available, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Front-end product designer/engineer",
+   "company": "Poodle AI Labs",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "869c93cd4fed466f": {
+  "id": "869c93cd4fed466f",
+  "at": "2026-10-03T12:13:50",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4716444-video-content-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4716444-video-content-designer",
+   "status": 200,
+   "shot": "data/shots/869c93cd4fed466f.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4716444-video-content-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Remote (Everywhere) • Bangalore Urban",
+  "place_signals": [
+   {
+    "quote": "Remote (Everywhere) • Bangalore Urban",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hires remotely in Everywhere",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Ability to work from our Bangalore office",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Bangalore\nWork Mode: On-site",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Ability to work from our Bangalore office ... Location: Bangalore Work Mode: On-site",
+  "role_verdict": "no",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "the page says both: Portugal in, and Portugal out · Role is video/motion content design (not product/UX/UI design), and the posting requires onsite work from the Bangalore office.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Video Content Designer",
+   "company": "DarkRange.ai",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 2,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "434fe25f9f064a13": {
+  "id": "434fe25f9f064a13",
+  "at": "2026-10-03T12:13:53",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4716647-founding-product-ux-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4716647-founding-product-ux-designer",
+   "status": 200,
+   "shot": "data/shots/434fe25f9f064a13.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4716647-founding-product-ux-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (Everywhere)",
+  "place_signals": [
+   {
+    "quote": "Remote (Everywhere)",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hires remotely in Everywhere",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote Work Policy: Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Company Location: Toronto",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Visa Sponsorship: Not Available",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Relocation: Not Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Preferred Timezones: Pacific Time, Mountain Time, Central Time, Eastern Time, Atlantic Time, Brasilia Summer Time, Central European Time, Eastern European Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Collaboration Hours 10:00 AM - 1:00 PM Eastern Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We work remotely with flexible schedules, clear ownership and agreed collaboration hours. Team members must maintain at least three hours of overlap with Eastern Time on working days.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote (Everywhere) | Hires remotely in Everywhere",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "only the job board's copy could be read · Design/UX title and remote-everywhere scope both clear him through.",
+  "confidence": "high",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "Founding Product & UX Designer",
+   "company": "Taskclan",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Everywhere"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "unsure",
+  "lane_if_employer": "open"
+ },
+ "532ea7c2f0c4448a": {
+  "id": "532ea7c2f0c4448a",
+  "at": "2026-10-03T12:14:02",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4703992-ai-artwork-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4703992-ai-artwork-designer",
+   "status": 200,
+   "shot": "data/shots/532ea7c2f0c4448a.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4703992-ai-artwork-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (Europe +3) • London",
+  "place_signals": [
+   {
+    "quote": "Remote (Europe +3) • London",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Job Location: London",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote Work Policy: Onsite or remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hires remotely in Europe - United States - United Kingdom - Eastern Europe",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Preferred Timezones: Central European Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Relocation: Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Hires remotely in Europe - United States - United Kingdom - Eastern Europe",
+  "role_verdict": "no",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "the page says both: Portugal in, and Portugal out · Role is AI/graphic artwork design for a home decor brand (creative/graphic design, not product/UX/UI design), so it fails the role test despite the place being remote and open to Europe.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "AI Designer",
+   "company": "Stealth",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Europe",
+    "United States",
+    "United Kingdom",
+    "Eastern Europe"
+   ],
+   "portugal_ok": "yes",
+   "salary": "£35k – £65k",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "cut"
+ },
+ "ab37637b09e94913": {
+  "id": "ab37637b09e94913",
+  "at": "2026-10-03T12:14:19",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://jobspresso.co/job/lead-product-designer-4/",
+  "board": {
+   "url": "https://jobspresso.co/job/lead-product-designer-4/",
+   "status": 200,
+   "shot": "data/shots/ab37637b09e94913.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.lever.co/yelp/06214f23-2b88-4187-b3e9-c1bc83fe2667",
+   "status": 404,
+   "shot": "data/shots/ab37637b09e94913.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://jobs.lever.co/yelp/06214f23-2b88-4187-b3e9-c1bc83fe2667"
+  ],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/yelp/06214f23-2b88-4187-b3e9-c1bc83fe2667",
+  "open_quote": "the employer's page answered 404",
+  "stage": "render",
+  "reason": "the employer says it is closed"
+ },
+ "64463b57d5fb4844": {
+  "id": "64463b57d5fb4844",
+  "at": "2026-10-03T12:12:58",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://dribbble.com/jobs/310175-Design-Engineer-UI",
+  "board": {
+   "url": "https://dribbble.com/jobs/310175-Design-Engineer-UI",
+   "status": 200,
+   "shot": "data/shots/64463b57d5fb4844.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://dribbble.com/jobs/310175-Design-Engineer-UI",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "German",
+  "language_ok": false,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Essen, Germany",
+  "place_signals": [
+   {
+    "quote": "Location: Essen, Germany",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote Friendly",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Essen oder remote, überall in Europa.",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Essen oder remote, überall in Europa.",
+  "role_verdict": "no",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "the page says both: Portugal in, and Portugal out · posting is written in German",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Design Engineer / UI",
+   "company": "BRYGHT",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Germany",
+    "Europe"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "6-Stelliges Gehalt + Bonus + Anteile am Unternehmen",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "German",
+   "posted": "Sep 15, 2026"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "cut"
+ },
+ "873f24c58dc040c4": {
+  "id": "873f24c58dc040c4",
+  "at": "2026-10-03T12:14:10",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.uxremotetalent.com/ux-job/design-contractor",
+  "board": {
+   "url": "https://www.uxremotetalent.com/ux-job/design-contractor",
+   "status": 200,
+   "shot": "data/shots/873f24c58dc040c4.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://tribalvision.applytojob.com/apply/kL4Ewq1BHZ/Design-Contractor-UX-Web-Video-Photography-Etc",
+   "status": 200,
+   "shot": "data/shots/873f24c58dc040c4.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://tribalvision.applytojob.com/apply/kL4Ewq1BHZ/Design-Contractor-UX-Web-Video-Photog"
+  ],
+  "read": "employer",
+  "read_url": "https://tribalvision.applytojob.com/apply/kL4Ewq1BHZ/Design-Contractor-UX-Web-Video-Photography-Etc",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Contractors are required to provide their own equipment and software licenses.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Title says Design Contractor (UX, Web, etc.) and location is stated simply as Remote with no restricting country.",
+  "confidence": "medium",
+  "inferred": [
+   "portugal_ok"
+  ],
+  "fields": {
+   "role": "Design Contractor (UX, Web, Video, Photography etc.)",
+   "company": "TribalVision",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "open"
+ },
+ "960446c9b84a4203": {
+  "id": "960446c9b84a4203",
+  "at": "2026-10-03T12:14:28",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer/10638385",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer/10638385",
+   "status": 200,
+   "shot": "data/shots/960446c9b84a4203.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer/10638385",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote project and there are no geographical restrictions for the role",
+    "where": "body",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Work remotely 4–6 hours/week with a global nonprofit",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "This is a remote project and there are no geographical restrictions for the role",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page says both: Portugal in, and Portugal out · Title tag says US-remote but body explicitly states no geographical restrictions, contradicting the location line",
+  "confidence": "medium",
+  "inferred": [
+   "countries"
+  ],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Bridges for Enterprise",
+   "seniority": "junior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": 2,
+   "reports_to": "UI/UX Manager",
+   "language": "English",
+   "posted": "20 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "38de45b073c44e3c": {
+  "id": "38de45b073c44e3c",
+  "at": "2026-10-03T12:14:32",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer/10638383",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer/10638383",
+   "status": 200,
+   "shot": "data/shots/38de45b073c44e3c.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer/10638383",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote project and there are no geographical restrictions for the role",
+    "where": "body",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Must be able to work in timezone (GMT and within GMT +/- 3 hrs)",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "This is a remote project and there are no geographical restrictions for the role",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page says both: Portugal in, and Portugal out · Title line says US-remote but the requirements explicitly say no geographical restrictions, making the location unclear.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Bridges for Enterprise",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "1K-1K Annually",
+   "years_xp": 3,
+   "reports_to": "UI/UX Manager",
+   "language": "English",
+   "posted": "20 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "60e30b45ed8740b4": {
+  "id": "60e30b45ed8740b4",
+  "at": "2026-10-03T12:14:34",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ux-ui-designer-modern-ai-platform/11153935",
+  "board": {
+   "url": "https://builtin.com/job/senior-ux-ui-designer-modern-ai-platform/11153935",
+   "status": 200,
+   "shot": "data/shots/60e30b45ed8740b4.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ux-ui-designer-modern-ai-platform/11153935",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Fully remote",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "The posting states it is hiring remotely in United States only, with no language widening this to Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX/UI Designer - Modern AI Platform",
+   "company": "Modern.ai",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "20 Days Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "4eeb069d347347ff": {
+  "id": "4eeb069d347347ff",
+  "at": "2026-10-03T12:14:54",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/roku/jobs/design-engineer-ux-product_san-jose_sj3dc6mw",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/roku/jobs/design-engineer-ux-product_san-jose_sj3dc6mw",
+   "status": 200,
+   "shot": "data/shots/4eeb069d347347ff.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://www.weareroku.com/jobs/design-engineer-ux-product-san-jose-california-united-states?gh_jid=8189529",
+   "status": 200,
+   "shot": "data/shots/4eeb069d347347ff.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://www.weareroku.com/jobs/design-engineer-ux-product-san-jose-california-united-state"
+  ],
+  "read": "employer",
+  "read_url": "https://www.weareroku.com/jobs/design-engineer-ux-product-san-jose-california-united-states?gh_jid=8189529",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "User Experience | San Jose, United States",
+  "place_signals": [
+   {
+    "quote": "Design Engineer, UX Product - San Jose, California, United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "User Experience | San Jose, United States | ID: 11493",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "For California Only - The estimated annual base salary for this position is between $200,000- $220,000 annually.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Roku fosters an inclusive and collaborative environment where teams generally work in the office Monday through Thursday. Fridays are generally flexible for remote work, except for employees whose specific roles or assigned office location require five days' a week attendance.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Locations: San Jose, California, United States",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Design Engineer, UX Product - San Jose, California, United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is onsite/hybrid in San Jose, California, with no mention of remote or Portugal eligibility.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Design Engineer, UX Product",
+   "company": "Roku",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 4,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$200,000-$220,000 (California only)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "14b2a617289d425b": {
+  "id": "14b2a617289d425b",
+  "at": "2026-10-03T12:14:49",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/smartsheet/jobs/senior-product-designer_us_jlsfdhw7",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/smartsheet/jobs/senior-product-designer_us_jlsfdhw7",
+   "status": 200,
+   "shot": "data/shots/14b2a617289d425b.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8191836",
+   "status": 200,
+   "shot": "data/shots/14b2a617289d425b.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://job-boards.greenhouse.io/smartsheet/jobs/8191836"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/smartsheet/jobs/8191836",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "-REMOTE, USA-",
+  "place_signals": [
+   {
+    "quote": "-REMOTE, USA-",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "you may work remotely from anywhere in the US where Smartsheet is a registered employer",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Teleworking options from any registered location in the U.S. (role specific)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "US Base Salary Pay Range $135,000 - $190,000 USD",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you legally authorized to work in the United States?*",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "#LI-Remote",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "you may work remotely from anywhere in the US where Smartsheet is a registered employer",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to the USA, explicitly excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer I (Remote Eligible)",
+   "company": "Smartsheet",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$135,000 - $190,000 USD",
+   "years_xp": 7,
+   "reports_to": "Manager, Product Design",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "b94dbc03ffc640c1": {
+  "id": "b94dbc03ffc640c1",
+  "at": "2026-10-03T12:15:05",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/ed-ai/jobs/8962bb35-a161-403b-836d-8be6d27f51eb",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/ed-ai/jobs/8962bb35-a161-403b-836d-8be6d27f51eb",
+   "status": 200,
+   "shot": "data/shots/b94dbc03ffc640c1.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://wttj.notion.site/legal-hub",
+   "careers: https://www.welcometothejungle.com/fr/companies/ed-ai/jobs/8962bb35-a161-403b-836d-8be6d27",
+   "careers: https://www.welcometothejungle.com/fr/companies/ed-ai/jobs/8962bb35-a161-403b-836d-8be6d27"
+  ],
+  "read": "board",
+  "read_url": "https://www.welcometothejungle.com/en/companies/ed-ai/jobs/8962bb35-a161-403b-836d-8be6d27f51eb",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Paris",
+  "place_signals": [
+   {
+    "quote": "Paris",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "A few days at home",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Paris office, 4 days in-office / 1 day remote.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Based in Paris (or willing to relocate). This role is 4 days in-office, 1 day remote.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Paris, Ile-de-France, France",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Based in Paris (or willing to relocate). This role is 4 days in-office, 1 day remote.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role requires being based in Paris with 4 days in-office, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Ed.ai",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 4,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": "€45K to 70K",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "20 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "8b41b61c672146bc": {
+  "id": "8b41b61c672146bc",
+  "at": "2026-10-03T12:14:54",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/evenup/jobs/director-of-product-design_us_dlaaqdbi",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/evenup/jobs/director-of-product-design_us_dlaaqdbi",
+   "status": 200,
+   "shot": "data/shots/8b41b61c672146bc.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/evenup/de8b71b1-c665-4852-863f-899ee4943701",
+   "status": 200,
+   "shot": "data/shots/8b41b61c672146bc.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://jobs.ashbyhq.com/evenup/de8b71b1-c665-4852-863f-899ee4943701"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/evenup/de8b71b1-c665-4852-863f-899ee4943701",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "San Francisco (hybrid); Toronto (hybrid)",
+  "place_signals": [
+   {
+    "quote": "San Francisco (hybrid); Toronto (hybrid)",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "US (remote) $206,975 – $243,500 • Offers Equity",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Canada (remote) CA$177,942 – CA$209,344 • Offers Equity",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "401(k) for US-based employees and RRSP for Canada-based employees.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "10 US observed holidays, and Canadian statutory holidays by province.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hubs in San Francisco and Toronto.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "San Francisco (hybrid); Toronto (hybrid)",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is only offered hybrid in San Francisco/Toronto or remote within the US/Canada; Portugal is never included.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Director of Product Design",
+   "company": "EvenUp",
+   "seniority": "director",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "US (remote) $206,975 – $243,500; San Francisco (hybrid) $222,700 – $262,000; Canada (remote) CA$177,942 – CA$209,344; Toronto (hybrid) CA$186,560 – CA$219,482",
+   "years_xp": 10,
+   "reports_to": "Head of Design",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "15442258c5324908": {
+  "id": "15442258c5324908",
+  "at": "2026-10-03T12:15:43",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15357271/estamos-a-recrutar-designer-de-interiores/",
+  "board": {
+   "url": "https://www.net-empregos.com/15357271/estamos-a-recrutar-designer-de-interiores/",
+   "status": 200,
+   "shot": "data/shots/15442258c5324908.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15357271/estamos-a-recrutar-designer-de-interiores/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Lisboa",
+  "place_signals": [
+   {
+    "quote": "Lisboa",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Zona de Lisboa",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Zona de Lisboa",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is an interior designer role (not product/UX/UI design), so it does not fit Cesar's discipline.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "DESIGNER DE INTERIORES",
+   "company": "SD, Lda",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "12-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "f97122dd36ed4ca0": {
+  "id": "f97122dd36ed4ca0",
+  "at": "2026-10-03T12:15:39",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ux-designer/9486269",
+  "board": {
+   "url": "https://builtin.com/job/senior-ux-designer/9486269",
+   "status": 200,
+   "shot": "data/shots/f97122dd36ed4ca0.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/cleo?error=true"
+  ],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ux-designer/9486269",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: Rockford, IL",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "United States",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "posting is explicitly for remote hiring within the United States only, with no mention of Portugal or Europe",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "Cleo",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "140K-160K Annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "931ed515bd214aab": {
+  "id": "931ed515bd214aab",
+  "at": "2026-10-03T12:16:06",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.net-empregos.com/15738803/designer-gestor-de-clientes-de-casas-de-banho-m-f-lisboa/",
+  "board": {
+   "url": "https://www.net-empregos.com/15738803/designer-gestor-de-clientes-de-casas-de-banho-m-f-lisboa/",
+   "status": 200,
+   "shot": "data/shots/931ed515bd214aab.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.net-empregos.com/15738803/designer-gestor-de-clientes-de-casas-de-banho-m-f-lisboa/",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Lisboa",
+  "place_signals": [
+   {
+    "quote": "Lisboa",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "No âmbito da abertura do nosso novo showroom no Parque das Nações",
+    "where": "opening paragraph",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Residente na zona.",
+    "where": "body",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Disponibilidade para trabalhar de segunda-feira a sábado, com uma folga semanal",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Lisboa",
+  "role_verdict": "no",
+  "place_verdict": "pt_onsite",
+  "cut": true,
+  "reason": "This is a retail bathroom-showroom sales/design role (client service, 3D quotes, order management), not product/UX/UI design, so it is not a fit for Cesar despite being onsite in Lisbon.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Designer/ Gestor de Clientes de Casas de Banho (m/f)",
+   "company": "Casa Peixoto",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": "12-9-2026"
+  },
+  "stage": "vision",
+  "reader_place": "pt_onsite",
+  "lane": "cut"
+ },
+ "01e08461a0964781": {
+  "id": "01e08461a0964781",
+  "at": "2026-10-03T12:16:09",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/instacart/jobs/senior-product-designer-lifecycle-growth_new-york_rfwwgri7",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/instacart/jobs/senior-product-designer-lifecycle-growth_new-york_rfwwgri7",
+   "status": 200,
+   "shot": "data/shots/01e08461a0964781.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://www.instacart.careers/job?gh_jid=8191763",
+   "status": 200,
+   "shot": "data/shots/01e08461a0964781.employer.jpg",
+   "error": null
+  },
+  "found_by": "apply",
+  "looked": [
+   "link: https://wttj.notion.site/legal-hub",
+   "apply: https://www.instacart.careers/job?gh_jid=8191763"
+  ],
+  "read": "employer",
+  "read_url": "https://www.instacart.careers/job?gh_jid=8191763",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page does not say where · No actual job description or location details were rendered on the page, only the title and generic company boilerplate.",
+  "confidence": "low",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "Senior Product Designer II - Lifecycle & Growth",
+   "company": "Instacart",
+   "seniority": "senior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "604f3f5ef0a446aa": {
+  "id": "604f3f5ef0a446aa",
+  "at": "2026-10-03T12:16:11",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/cribl/jobs/senior-user-experience-designer-security_us_iz4cjjjx",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/cribl/jobs/senior-user-experience-designer-security_us_iz4cjjjx",
+   "status": 200,
+   "shot": "data/shots/604f3f5ef0a446aa.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://wttj.notion.site/legal-hub",
+   "apply: https://cribl.io/job-detail/6181112004/"
+  ],
+  "read": "board",
+  "read_url": "https://www.welcometothejungle.com/en/companies/cribl/jobs/senior-user-experience-designer-security_us_iz4cjjjx",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "United States of America",
+  "place_signals": [
+   {
+    "quote": "United States of America",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Fully-remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We are a remote-first company and work happens across many time-zones - you may be required to occasionally perform duties outside your standard working hours",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "The workplace United States of America",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "United States of America",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting is remote but explicitly tied to the United States of America, with no wider geography stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior User Experience Designer (Security)",
+   "company": "Cribl",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States of America"
+   ],
+   "portugal_ok": "no",
+   "salary": "$150K to 175K",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "20 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "54d20d3d613444d4": {
+  "id": "54d20d3d613444d4",
+  "at": "2026-10-03T12:16:24",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4707975-e-learning-developer-instructional-designer",
+  "board": {
+   "url": "https://wellfound.com/jobs/4707975-e-learning-developer-instructional-designer",
+   "status": 200,
+   "shot": "data/shots/54d20d3d613444d4.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4707975-e-learning-developer-instructional-designer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (Everywhere)",
+  "place_signals": [
+   {
+    "quote": "Remote (Everywhere)",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hires remotely in Everywhere",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote Work Policy: Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Company Location: Atlanta",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Preferred Timezones: Eastern Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Collaboration Hours: 9:00 AM - 6:00 PM Eastern Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Relocation: Not Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote (Everywhere)",
+  "role_verdict": "no",
+  "place_verdict": "remote",
+  "cut": true,
+  "reason": "Role is instructional design / e-learning curriculum development, not product/UX/UI design, so it is not a fit for Cesar despite the remote-everywhere location.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "E-Learning Developer / Instructional Designer",
+   "company": "Earlston Academy",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Everywhere"
+   ],
+   "portugal_ok": "yes",
+   "salary": "$15k – $30k",
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 weeks ago"
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "cut"
+ },
+ "41a5a9764d2d4e32": {
+  "id": "41a5a9764d2d4e32",
+  "at": "2026-10-03T12:16:29",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/function/jobs/senior-product-designer-suppco_us_wszcf7nq",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/function/jobs/senior-product-designer-suppco_us_wszcf7nq",
+   "status": 200,
+   "shot": "data/shots/41a5a9764d2d4e32.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.gem.com/function-health/am9icG9zdDoEzsxA1hjacuM6jm5-Qrs4",
+   "status": 200,
+   "shot": "data/shots/41a5a9764d2d4e32.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://jobs.gem.com/function-health/am9icG9zdDoEzsxA1hjacuM6jm5-Qrs4"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.gem.com/function-health/am9icG9zdDoEzsxA1hjacuM6jm5-Qrs4",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "US - Remote",
+  "place_signals": [
+   {
+    "quote": "US - Remote",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "SuppCo - Product",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We are a remote-first organization that meets quarterly for team onsites in person.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our team is primarily based in the New York and Los Angeles areas, and our onsites are mostly held in NYC, though occasional travel may be expected.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "New York Tri-State area candidates are preferred but not required.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "US - Remote",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Posting is tagged 'US - Remote' and the body confirms the team is US-based, with no mention of hiring outside the US.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer — SuppCo",
+   "company": "SuppCo (Function Health)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": "Head of Product",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "f027df87b0b44e60": {
+  "id": "f027df87b0b44e60",
+  "at": "2026-10-03T12:16:24",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/servicenow/jobs/director-of-product-design-it-service-management_santa-clara-ca_f4bdavna",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/servicenow/jobs/director-of-product-design-it-service-management_santa-clara-ca_f4bdavna",
+   "status": 200,
+   "shot": "data/shots/f027df87b0b44e60.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/ServiceNow/744000147693009",
+   "status": 200,
+   "shot": "data/shots/f027df87b0b44e60.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.smartrecruiters.com/ServiceNow/744000147693009"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/ServiceNow/744000147693009",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Building A,B,C 2225 Lawson Lane, 95054 Santa Clara, CALIFORNIA, United States",
+  "place_signals": [
+   {
+    "quote": "Region: AMS - North America and Canada",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Persona: Flexible or Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Building A,B,C 2225 Lawson Lane, 95054 Santa Clara, CALIFORNIA, United States",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "For positions in this location, we offer a base pay of $221,200 - $387,100",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "ServiceNow may confirm the distance between your primary residence and the closest ServiceNow office using a third-party service",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Region: AMS - North America and Canada",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is based in Santa Clara, California (North America region), with no mention of Portugal or Europe eligibility.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Director, Product Design, IT Service Management",
+   "company": "ServiceNow",
+   "seniority": "director",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "$221,200 - $387,100",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "bf048a82843d4989": {
+  "id": "bf048a82843d4989",
+  "at": "2026-10-03T12:16:53",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://welovesalt.com/jobs/head-of-product-design-715129",
+  "board": {
+   "url": "https://welovesalt.com/jobs/head-of-product-design-715129",
+   "status": 200,
+   "shot": "data/shots/bf048a82843d4989.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://welovesalt.com/jobs/head-of-product-design-715129",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "United Kingdom, London",
+  "place_signals": [
+   {
+    "quote": "United Kingdom, London",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Environment: In-office",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "📍 London (Old Street) | 5 days onsite | £120k (flexible for the right person + equity + benefits)",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "London (Old Street) | 5 days onsite",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is onsite 5 days a week in London, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Head of Product Design",
+   "company": "Series B AI and physical security startup (client, name not given; agency is Salt)",
+   "seniority": "head",
+   "remote": "onsite",
+   "onsite_days": 5,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£120,000.00 - £130,000.00 per annum",
+   "years_xp": 7,
+   "reports_to": "CEO",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "7b026bfd1ba14824": {
+  "id": "7b026bfd1ba14824",
+  "at": "2026-10-03T12:16:58",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer/9728301",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer/9728301",
+   "status": 200,
+   "shot": "data/shots/7b026bfd1ba14824.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer/9728301",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Remote",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Competitive salary and remote flexibility",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to hiring within the United States.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "UltaHost",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "Competitive (USD)",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 Hours Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "d2620a277efa4299": {
+  "id": "d2620a277efa4299",
+  "at": "2026-10-03T12:16:52",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://welovesalt.com/jobs/mid-senior-product-designer-715146",
+  "board": {
+   "url": "https://welovesalt.com/jobs/mid-senior-product-designer-715146",
+   "status": 200,
+   "shot": "data/shots/d2620a277efa4299.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://welovesalt.com/jobs/mid-senior-product-designer-715146",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "United Kingdom, London",
+  "place_signals": [
+   {
+    "quote": "United Kingdom, London",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Environment: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Mid/Senior Product Designer | Remote/Hybrid | £65,000-£80,000 base + benefits",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Largely remote or Hybrid – need to be a sensible distance from London.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Location: Largely remote or Hybrid – need to be a sensible distance from London.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "role must be a sensible distance from London, excluding Portugal",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Mid/Senior Product Designer",
+   "company": "unstated (client of Salt agency, fintech)",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£65,000-£80,000 per annum",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "4142441ce40042da": {
+  "id": "4142441ce40042da",
+  "at": "2026-10-03T12:17:04",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://welovesalt.com/jobs/multimedia-designer-715113",
+  "board": {
+   "url": "https://welovesalt.com/jobs/multimedia-designer-715113",
+   "status": 200,
+   "shot": "data/shots/4142441ce40042da.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://welovesalt.com/jobs/multimedia-designer-715113",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "South Africa, Cape Town",
+  "place_signals": [
+   {
+    "quote": "South Africa, Cape Town",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "📍 Claremont, Cape Town",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Environment: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "South Africa, Cape Town",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is graphic/motion/video design (not product/UX/UI), and it's a hybrid job in Cape Town, South Africa.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Multimedia Designer",
+   "company": "Salt's client (unnamed)",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "South Africa"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "c5391c8625c74e1f": {
+  "id": "c5391c8625c74e1f",
+  "at": "2026-10-03T12:17:22",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/lead-ux-designer-emea/9328342",
+  "board": {
+   "url": "https://builtin.com/job/lead-ux-designer-emea/9328342",
+   "status": 200,
+   "shot": "data/shots/c5391c8625c74e1f.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/lead-ux-designer-emea/9328342",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in USA",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in USA",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Remote — EMEA (Open to applicants in Europe, the Middle East and Africa)",
+    "where": "opening paragraph",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Intentionally remote, our team thrives in a culture that values flexibility, creativity, and cutting-edge technology.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Hiring Remotely in USA ... Location: Remote — EMEA (Open to applicants in Europe, the Middle East and Africa)",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page says both: Portugal in, and Portugal out · Side panel says USA-only remote but opening paragraph widens it to EMEA, a direct contradiction the posting never resolves.",
+  "confidence": "low",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer | EMEA | Contract",
+   "company": "Fueled",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA",
+    "EMEA"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "3978c62f38174a55": {
+  "id": "3978c62f38174a55",
+  "at": "2026-10-03T12:17:25",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-uiux-designer/3998188",
+  "board": {
+   "url": "https://builtin.com/job/senior-uiux-designer/3998188",
+   "status": 200,
+   "shot": "data/shots/3978c62f38174a55.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-uiux-designer/3998188",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Hiring Remotely in University City, MO, USA / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in University City, MO, USA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible work from anywhere model with a strong preference for those living in St. Louis.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "NO OFFSHORE FIRMS. Seeking local St. Louis craftspeople.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Offshore firms and recruiters DO NOT APPLY.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "NO OFFSHORE FIRMS. Seeking local St. Louis craftspeople.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Company explicitly seeks local St. Louis craftspeople and rejects offshore firms, ruling out someone living in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Integrity",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "197270ce74fd4b81": {
+  "id": "197270ce74fd4b81",
+  "at": "2026-10-03T12:17:51",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/remote-ux-designer/7938338",
+  "board": {
+   "url": "https://builtin.com/job/remote-ux-designer/7938338",
+   "status": 200,
+   "shot": "data/shots/197270ce74fd4b81.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/remote-ux-designer/7938338",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in St. Petersburg, FL, USA",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in St. Petersburg, FL, USA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "connecting business owners with talented freelancers and remote workers from all over the world",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Freelancers located in the state of California will be required to provide an EIN for tax purposes.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in St. Petersburg, FL, USA",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Remote is tied to a US city (St. Petersburg, FL) with a California-specific tax clause, indicating US-only hiring.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Remote UX Designer",
+   "company": "FreeUp",
+   "seniority": "junior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "97d10d5e746344f6": {
+  "id": "97d10d5e746344f6",
+  "at": "2026-10-03T12:17:42",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/sr-ux-designer/9787964",
+  "board": {
+   "url": "https://builtin.com/job/sr-ux-designer/9787964",
+   "status": 200,
+   "shot": "data/shots/97d10d5e746344f6.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/sr-ux-designer/9787964",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "4 Locations / Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "4 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Canada External Job Ad",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "we're searching for a Senior UX Designer to join our EZLynx Product Team on a remote or hybrid basis in the United States",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This position requires the employee to reside and work from one of the following provinces: Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Ontario, PEI, Saskatchewan.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The total anticipated annual compensation range for this existing position is CA$100,000 - $140,000 per year",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "This position requires the employee to reside and work from one of the following provinces: Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Ontario, PEI, Saskatchewan.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting explicitly requires residency in specific Canadian provinces, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "Applied Systems",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Canada (Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Ontario, PEI, Saskatchewan)"
+   ],
+   "portugal_ok": "no",
+   "salary": "CA$100,000 - $140,000 Annually",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "a3c65bca214640cc": {
+  "id": "a3c65bca214640cc",
+  "at": "2026-10-03T12:18:04",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-designer/10813468",
+  "board": {
+   "url": "https://builtin.com/job/ux-designer/10813468",
+   "status": 200,
+   "shot": "data/shots/a3c65bca214640cc.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-designer/10813468",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Interviews will be conducted via virtual meetings and/or onsite.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to hiring within the United States.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer",
+   "company": "BJAK",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "c817ff691e5f41bc": {
+  "id": "c817ff691e5f41bc",
+  "at": "2026-10-03T12:18:18",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/sr-designer-ux-new-york/10809578",
+  "board": {
+   "url": "https://builtin.com/job/sr-designer-ux-new-york/10809578",
+   "status": 200,
+   "shot": "data/shots/c817ff691e5f41bc.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/sr-designer-ux-new-york/10809578",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "Sr Designer - UX - New York",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is not available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Sr Designer - UX - New York",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Title and location specify New York with no mention of Portugal or wider remote eligibility.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Sr Designer - UX",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 39,000-139,000 Annually",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "01ec72ce94004f4e": {
+  "id": "01ec72ce94004f4e",
+  "at": "2026-10-03T12:18:28",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-designer/7416909",
+  "board": {
+   "url": "https://builtin.com/job/ux-designer/7416909",
+   "status": 200,
+   "shot": "data/shots/01ec72ce94004f4e.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-designer/7416909",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in Ohio, USA",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in Ohio, USA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "$67,000.00 - $87,100.00 USD",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in Ohio, USA",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to Ohio, USA, which excludes Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Cengage Group",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 67,000-87,100 Annually",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "879a8191c4374f34": {
+  "id": "879a8191c4374f34",
+  "at": "2026-10-03T12:18:42",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-cx-ux-designer-ai-innovation-tax-accounting-hybrid-ct-et-r0056827/9303373",
+  "board": {
+   "url": "https://builtin.com/job/senior-cx-ux-designer-ai-innovation-tax-accounting-hybrid-ct-et-r0056827/9303373",
+   "status": 200,
+   "shot": "data/shots/879a8191c4374f34.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-cx-ux-designer-ai-innovation-tax-accounting-hybrid-ct-et-r0056827/9303373",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "14 Locations / Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "14 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hybrid: Eight days a month we come together in the closest office (CT/ET time zone) within 50 miles to experience the value of connecting with colleagues.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Please view the site office location directory for potential office preferences nationwide.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Must be legally authorized to work in the United States without employer sponsorship, now or in the future.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Create tax and accounting solutions tailored for compliance-heavy environments in North America",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Applicants may be required to appear onsite at a Wolters Kluwer office as part of the recruitment process.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be legally authorized to work in the United States without employer sponsorship, now or in the future.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role tied to a US office (CT/ET time zone) and requires US work authorization, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior CX/UX Designer (AI Innovation for Tax & Accounting)",
+   "company": "Wolters Kluwer",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 8,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 85,600-149,400 Annually",
+   "years_xp": 2,
+   "reports_to": "Lead CX/UX Designer",
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
  }
 }
