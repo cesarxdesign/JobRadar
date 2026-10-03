@@ -228,6 +228,12 @@ def match(apps, jobs):
             continue
         same = [j for j in cands if words(j["title"]) == words(a["role"])]
         up = [j for j in same if (j.get("posted") or j["first_seen"][:10]) <= a["applied"]]
+        # Two rows can be one job: the same posting listed twice, one of them
+        # already taken down. A dead copy must not stop the live one matching -
+        # that is how "Senior Product Designer (UX)" at Moniepoint, applied to
+        # and rejected, sat in Open. So when several fit, the live ones decide.
+        if len(up) > 1 and len([j for j in up if j.get("active")]) == 1:
+            up = [j for j in up if j.get("active")]
         if len(up) == 1 and not a.get("approx"):
             a["role_ids"] = [up[0]["id"]]
             sure += 1
