@@ -443,7 +443,9 @@ AGENCIES = (r"jobgether|jobs ?for ?humanity|micro1|crossover|toptal|proxify|turi
             r"lhh|adecco|randstad|manpower|michael ?page|hays\b|robert ?(half|walters)|kelly ?services|"
             r"vivid ?resourcing|g2 ?recruitment|plexus|signify ?tech|huntingcube|emagine|humanit\b|"
             r"crossing ?hurdles|remoterocketship|arc\.dev|\barc\b|flexhire|scaleup|rightfit|discovered ?mena|"
-            r"spencer ?riley|workana|andela|bairesdev|x-?team|supportninja")
+            r"spencer ?riley|workana|andela|bairesdev|x-?team|supportninja|"
+            # not agencies, but they flood the boards with the same posting over and over (his call)
+            r"codekeeper")
 
 
 def is_agency(company, source="", posted_by=None):
