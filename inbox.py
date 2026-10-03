@@ -30,7 +30,7 @@ return {from:s?s.getAttribute('name')||'':'',email:s?s.getAttribute('email')||''
 snippet:((tr.querySelector('.y2')||{}).textContent||'').replace(/\\s+/g,' '),date:d?d.getAttribute('title')||'':'',
 tid:t?t.getAttribute('data-legacy-thread-id')||'':''};}))"""
 
-BODY = """(()=>{const x=new XMLHttpRequest();x.open('GET',location.pathname+'?ui=2&ik='+GLOBALS[9]+'&view=pt&search=all&th=%s',false);x.send();
+BODY = """(()=>{const x=new XMLHttpRequest();x.open('GET',location.pathname+'?ui=2&view=pt&search=all&th=%s',false);x.send();
 const h=x.responseText;const b=h.slice(h.indexOf('<body'));
 return b.replace(/<style[\\s\\S]*?<\\/style>/gi,'').replace(/<script[\\s\\S]*?<\\/script>/gi,'').replace(/<(br|\\/p|\\/div|\\/tr|\\/td|\\/h\\d|\\/li|hr)[^>]*>/gi,'\\n')
 .replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/[ \\t]+/g,' ').replace(/\\n\\s*\\n+/g,'\\n').trim().slice(0,7000);})()"""
@@ -109,7 +109,12 @@ def main():
         print(f"inbox: {len(rows)} threads since {since}, {len(new)} new")
         bodies = []
         for r in new:
-            bodies.append({"tid": r["tid"], "body": tabs.js(tab, BODY % r["tid"], timeout=60)})
+            body = tabs.js(tab, BODY % r["tid"], timeout=60)
+            if len(body) < 80:
+                print(f"  text not fetched, left for next time: {r['subject'][:50]}")
+                continue
+            bodies.append({"tid": r["tid"], "body": body})
+        new = [r for r in new if r["tid"] in {b["tid"] for b in bodies}]
     finally:
         try:
             tabs.js(tab, "location.hash='#inbox'")

@@ -31,6 +31,18 @@ def osa(script, timeout=60):
     return r.stdout.rstrip("\n")
 
 
+def every(part):
+    """Every open tab whose address contains `part`."""
+    out = osa('tell application "Google Chrome"\nset o to ""\nrepeat with w from 1 to count of windows\n'
+              'repeat with t from 1 to count of tabs of window w\n'
+              'set o to o & w & "\t" & t & "\t" & (URL of tab t of window w) & "\n"\nend repeat\nend repeat\nreturn o\nend tell')
+    tabs = [(int(w), int(t), url) for w, t, url in (line.split("\t")[:3] for line in out.splitlines() if line.count("\t") >= 2)
+            if part in url]
+    if not tabs:
+        raise NoTab(f"no Chrome tab open on {part}")
+    return tabs
+
+
 def find(part):
     """(window index, tab index) of the first open tab whose address contains `part`."""
     out = osa('tell application "Google Chrome"\nset o to ""\nrepeat with w from 1 to count of windows\n'
@@ -56,10 +68,17 @@ REMOTEIO_JS = """JSON.stringify([...document.querySelectorAll('a[data-testid^="c
 
 
 def remoteio():
-    """The listings showing on his remote.io tab, as he left it. The page is
-    not reloaded and not paged: what a person would see on that tab is read."""
-    tab = find("remote.io")
-    rows = json.loads(js(tab, REMOTEIO_JS) or "[]")
+    """The listings showing on his remote.io tabs, as he left them. A page is
+    not reloaded and not paged: what a person would see on each tab is read.
+    The list is newest first, 30 to a page, so page 1 holds each day's new
+    postings; to cover more he opens page 2 and 3 in tabs of their own, and
+    every remote.io tab that is open gets read."""
+    rows, had = [], set()
+    for tab in every("remote.io"):
+        for r in json.loads(js(tab, REMOTEIO_JS) or "[]"):
+            if r["url"] not in had:
+                had.add(r["url"])
+                rows.append(r)
     path = f"{ROOT}/data/remoteio_rows.json"
     old = json.load(open(path))["rows"] if os.path.exists(path) else []
     seen = {r["url"] for r in rows}

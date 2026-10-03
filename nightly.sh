@@ -32,6 +32,9 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "p
 
 ATS="ashby,greenhouse,lever,workable,recruitee,teamtailor,smartrecruiters,bamboohr,breezy,join,personio,rippling,pinpoint,jazzhr,manatal"
 
+# Radar's own hidden Chrome, left over from a stopped run, answers AppleScript
+# in place of his: with one alive, the script reads the wrong browser's tabs.
+pkill -f "radar-chrome-" 2>/dev/null; sleep 2
 echo "-- his tabs";          python3 tabs.py remoteio
 echo "-- scrape";            caffeinate -i python3 pool.py | tail -6
 echo "-- discover";          caffeinate -i python3 discover.py | tail -3
