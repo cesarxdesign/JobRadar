@@ -778,10 +778,14 @@ function historyOf(r){
   const tids=new Set(apps.flatMap(a=>a.tids));
   for(const d of RR.decisions) if(d.decision==="applied"&&d.id!==r.id&&!d.by&&keys.has(coKey(d.company))
       &&!apps.some(a=>a.role===d.title)) apps.push({role:d.title,sent:String(d.at||"").slice(0,10),clicked:true,tids:[]});
-  const mails=[...keys].flatMap(k=>(RR.inbox||{})[k]||[]).filter(m=>!tids.has(m.tid));
-  return {apps:apps.sort((a,b)=>String(b.sent||"").localeCompare(String(a.sent||""))),mails};
+  const mails=[...keys].flatMap(k=>(RR.inbox||{})[k]||[]).filter(m=>!tids.has(m.tid)&&String(m.date)>=SINCE);
+  return {apps:apps.filter(a=>!a.sent||a.sent>=SINCE).sort((a,b)=>String(b.sent||"").localeCompare(String(a.sent||""))),mails};
 }
 // an application his inbox proves, or an email from the company that reads like one
+// This search began in June 2026. What he applied to before that is another
+// job hunt: those postings are long gone and he would apply again without a
+// thought, so nothing older counts as history.
+const SINCE="2026-06-01";
 const beenBefore=r=>{const h=historyOf(r);return h.apps.length>0||h.mails.some(m=>m.kind==="application");};
 function historyBox(r){
   const h=historyOf(r);
