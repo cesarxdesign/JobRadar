@@ -144,6 +144,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
   <button class="tab" data-lane="old69">69+<span class="n" id="c-old69"></span></button>
+  <button class="tab" data-lane="agency" title="roles posted by recruiters, staffing firms and sites that list jobs on behalf of someone else">Agencies<span class="n" id="c-agency"></span></button>
   <button class="tab" data-lane="closed" title="the page itself says the job is closed or gone">Closed<span class="n" id="c-closed"></span></button>
   <button class="tab" data-lane="vcut" title="read in the browser and cut, with the words that decided it">Cut<span class="n" id="c-vcut"></span></button>
   <button class="tab" data-lane="reviewed" hidden title="what you re-laned or flagged in this batch">Reviewed<span class="n" id="c-reviewed"></span></button>
@@ -574,6 +575,8 @@ function pool(){
   else if(LANE==="incorrect")
     rows=(RR?RR.incorrect||[]:[]).map(x=>roleById(x.id)||{id:x.id,company:x.company,title:x.title,url:x.url,active:true,gone:true,
       posted:x.at,first_seen:x.at,verdict:{why:x.why||[],fields:{}}});
+  else if(LANE==="agency")
+    rows=sortRows((DATA.agency||[]).map(roleById).filter(r=>r && !routing(r.id) && matches(r)));
   else if(LANE==="closed"||LANE==="vcut")
     rows=laneIds(LANE==="vcut"?"cut":"closed").map(roleById).filter(r=>r && !routing(r.id));
   else if(LANE==="old69")
@@ -605,6 +608,7 @@ function counts(){
       .filter(r=>r&&!routing(r.id)&&!isOld(r)&&matches(r)&&!(PASS.includes(l)&&beenBefore(r))).length;
     $("c-"+l).textContent=n||"";
   }
+  $("c-agency").textContent=(DATA.agency||[]).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
   for(const l of ["closed","vcut"])
     $("c-"+l).textContent=laneIds(l==="vcut"?"cut":"closed").map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
   $("c-old69").textContent=["open","portugal","unsure"].flatMap(laneIds)

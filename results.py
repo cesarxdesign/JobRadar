@@ -18,6 +18,7 @@ from pathlib import Path
 from contracts import DEFAULT_VERDICT, LANES
 import contracts
 import judge
+import criteria
 
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
@@ -148,7 +149,7 @@ def from_vision(v):
 def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=None):
     hints = hints or {}
     vision = vision or {}
-    closed, vcut = [], []
+    closed, vcut, agency = [], [], []
     verdicts = verdicts_doc.get("jobs", {})
     roles, lanes, cut, title_cuts, unjudged = [], {k: [] for k in LANES}, [], 0, 0
     ghosts = 0
@@ -172,6 +173,15 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             role["verdict"] = from_vision(vis)
             roles.append(role)
             lane = vis.get("lane")
+            # A role an agency posts would otherwise sit in Open beside the
+            # employer's own postings, several times over. It gets its own lane.
+            if lane in lanes and criteria.is_agency((vis.get("fields") or {}).get("company") or rec.get("company"),
+                                                    (rec.get("source") or "").split("/", 1)[1] if "/" in (rec.get("source") or "") else "",
+                                                    vis.get("posted_by")):
+                role["verdict"]["agency"] = True
+                role["verdict"]["hiring_for"] = vis.get("hiring_for")
+                agency.append(rec["id"])
+                continue
             (lanes[lane] if lane in lanes else closed if lane == "closed" else vcut).append(rec["id"])
             continue
         v = dict(DEFAULT_VERDICT)
@@ -208,7 +218,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "criteria": verdicts_doc.get("criteria"),
         "model": verdicts_doc.get("model"),
         "counts": {**{k: len(v) for k, v in lanes.items()}, "ghosts": ghosts,
-                   "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut),
+                   "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut), "agency": len(agency),
                    "vision_read": len(vision), "title_cuts": title_cuts,
                    # what the board's top line says: design-titled roles, and how many vision has read
                    "design": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None),
@@ -220,6 +230,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "cut": cut,
         "closed": closed,
         "vcut": vcut,
+        "agency": agency,
         "sources": pool_doc.get("sources", {}),
         "roles": roles,
     }

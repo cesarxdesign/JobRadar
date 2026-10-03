@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-02.7"
+VERSION = "2026-10-03.1"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -275,6 +275,8 @@ Return ONE JSON object and nothing else. No prose, no code fence.
 
 {
   "same_job": "yes" | "no",
+  "posted_by": "employer" | "agency",
+  "hiring_for": "the company the job is actually at, when an agency names it; else null",
   "posting_open": "yes" | "no" | "unreadable",
   "open_quote": "the exact words on the page that say it is closed or unreadable, else null",
   "language_of_the_posting": "the language the DESCRIPTION is written in",
@@ -301,6 +303,11 @@ Return ONE JSON object and nothing else. No prose, no code fence.
     "reports_to": null, "language": "...", "posted": null
   }
 }
+
+posted_by is "agency" when the posting is put up by someone other than the
+company the job is at: a recruiter, a staffing or consulting firm placing
+people with clients, a talent marketplace, or a site that lists roles "on
+behalf of a partner company" or "for our client". "employer" otherwise.
 
 same_job: you are told which role the pool lists. "no" only when the page
 is plainly a posting for a DIFFERENT job (another title, another company) or
@@ -403,3 +410,24 @@ def place_from_signals(signals, workplace, model_place):
     if (workplace or "").lower() == "remote" and model_place == "remote":
         return "remote", None
     return "unclear", "the page does not say where"
+
+
+# Intermediaries: recruiters, staffing firms, talent marketplaces and sites
+# that post jobs "on behalf of a partner company". A role from one of these
+# is not the employer's own posting - the same job is often listed once per
+# country - so the board keeps them in their own lane, out of Open. The
+# reader also says so per posting (posted_by); this list catches the ones
+# read before it was asked, and the ones whose pages never admit it.
+AGENCIES = (r"jobgether|jobs ?for ?humanity|micro1|crossover|toptal|proxify|turing\b|braintrust|mercor|"
+            r"hirehire|onhires|good ?maven|nameless ?ventures|wave ?talent|just ?gabs|workfully|design ?jobs ?world|"
+            r"lhh|adecco|randstad|manpower|michael ?page|hays\b|robert ?(half|walters)|kelly ?services|"
+            r"vivid ?resourcing|g2 ?recruitment|plexus|signify ?tech|huntingcube|emagine|humanit\b|"
+            r"crossing ?hurdles|remoterocketship|arc\.dev|\barc\b|flexhire|scaleup|rightfit|discovered ?mena|"
+            r"spencer ?riley|workana|andela|bairesdev|x-?team|supportninja")
+
+
+def is_agency(company, source="", posted_by=None):
+    import re
+    if posted_by == "agency":
+        return True
+    return bool(re.search(AGENCIES, f"{company or ''} {source or ''}", re.I))
