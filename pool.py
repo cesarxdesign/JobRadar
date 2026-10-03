@@ -957,33 +957,30 @@ def agg_superjobs():
 
 
 def agg_euremotejobs():
-    """WordPress with WP Job Manager: the REST API pages the design category
-    at 100 a call. Regions are taxonomy ids, resolved once per run."""
-    base = "https://euremotejobs.com/wp-json/wp/v2"
-    cat = next((c["id"] for c in get_json(f"{base}/job-categories?slug=design")), None)
-    if cat is None:
-        return
-    regions = {r["id"]: unescape(r.get("name") or "")
-               for r in get_json(f"{base}/job_listing_region?per_page=100")}
-    page = 1
-    while True:
-        req = urllib.request.Request(
-            f"{base}/job-listings?job-categories={cat}&per_page=100&page={page}", headers=UA)
-        with urllib.request.urlopen(req, timeout=30) as r:
-            rows = json.loads(r.read().decode("utf-8", "replace"))
-            pages = int(r.headers.get("X-WP-TotalPages") or 1)
-        for j in rows:
-            meta = j.get("meta") or {}
-            loc = ", ".join(regions[i] for i in (j.get("job_listing_region") or []) if regions.get(i))
-            yield {"company": unescape(meta.get("_company_name") or ""),
-                   "title": unescape((j.get("title") or {}).get("rendered") or ""),
-                   "url": j.get("link"), "location": loc or "Remote", "remote": True,
-                   "posted": j.get("date"), "updated": j.get("modified"),
-                   "jd_text": strip_html((j.get("content") or {}).get("rendered"))}
-        if page >= pages or not rows:
+    """The design category, off its listing pages. The site used to offer a
+    REST API and closed it (401 "Not available") in autumn 2026; the pages a
+    person reads are still there, 40 cards each, and a card carries the title,
+    the company, the region the board prints, the type and the date."""
+    seen, base = set(), "https://euremotejobs.com/job-category/design/"
+    for page in range(1, 60):
+        html = get_text(base if page == 1 else f"{base}page/{page}/")
+        cards = re.findall(r'<a href="(https://euremotejobs\.com/job/[^"]+)" class="job-card-link">(.*?)</a>', html, re.S)
+        fresh = 0
+        for url, card in cards:
+            if url in seen:
+                continue
+            seen.add(url)
+            fresh += 1
+            g = lambda rx: (lambda m: strip_html(m.group(1), 200).strip() if m else None)(re.search(rx, card, re.S))
+            loc = g(r'class="meta-item meta-location">(.*?)</div>')
+            when = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})', card)
+            yield {"company": g(r'class="company-name">(.*?)</div>'), "title": g(r'class="job-title">(.*?)</h2>'),
+                   "url": url, "location": loc, "posted": when.group(1) if when else None,
+                   "employment_type": g(r'class="meta-item meta-type">(.*?)</div>'),
+                   "remote": True, "workplace": "Remote"}
+        if not fresh:
             break
-        page += 1
-
+        time.sleep(0.5)
 
 
 def age_to_date(n, unit):
@@ -1417,7 +1414,7 @@ def uiux_posted(url):
     # dateless - which the board then renders as 0d.
     safe = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=~-._")
     try:
-        html = get_text(safe)
+        html = uiux_get(safe, tries=2)
     except Exception:
         return None
     # The page wins (Cesar). What the header prints is what a person reads;
@@ -1440,6 +1437,21 @@ def uiux_posted(url):
 UIUX_SCOPES = ("remote-anywhere", "remote-europe", "remote-emea", "portugal")
 
 
+def uiux_get(url, tries=4):
+    """uiuxjobsboard answers a few hundred requests and then refuses for a
+    while. One refusal used to fail the whole source - 75 roles in, all
+    thrown away, and nothing new from the board since. So: go slower, and
+    when it refuses, wait and ask again."""
+    for i in range(tries):
+        try:
+            time.sleep(0.6)
+            return get_text(url)
+        except urllib.error.HTTPError as e:
+            if e.code not in (403, 429, 500, 502, 503) or i == tries - 1:
+                raise
+            time.sleep(30 * (i + 1))
+
+
 def agg_uiuxjobsboard():
     """uiuxjobsboard.com: a design-only board, so no keyword - every row is in
     discipline and L1 does the rest. Four scopes, 100 cards a page; the card
@@ -1449,7 +1461,7 @@ def agg_uiuxjobsboard():
     for scope in UIUX_SCOPES:
         for page in range(1, 30):
             url = f"https://uiuxjobsboard.com/design-jobs/{scope}" + (f"?page={page}" if page > 1 else "")
-            html = get_text(url)
+            html = uiux_get(url)
             cards = html.split('<div class="border shadow-xs rounded-xl')[1:]
             new_here = 0
             for card in cards:
