@@ -120,6 +120,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
+  <button class="tab rr" data-lane="review" hidden title="50 at a time, every outcome mixed: what the filter did with each role">Review<span class="n" id="c-review"></span></button>
   <button class="tab rr" data-lane="incorrect" hidden title="calls the filter got wrong, for the morning review">Incorrect<span class="n" id="c-incorrect"></span></button>
   <button class="tab rr" data-lane="stats" hidden>Stats</button>
   <button class="tab bt" data-lane="pass" hidden>Passed<span class="n" id="c-pass"></span></button>
@@ -256,6 +257,23 @@ function fav(id){return !!(RR&&RR.favorites.includes(id));}
 // a cut that should have passed, an Open role he cannot take. The role stays
 // where it is. The mark, with what the filter said at the time, goes in the
 // routing file and is what gets reviewed each morning.
+// Review: the filter's calls, 50 at a time, whatever lane they landed in -
+// Open, Unsure, Closed and Cut together, newest read first. He marks the
+// wrong ones Incorrect and moves on; what he has been through is remembered
+// in the routing file, so the next 50 are always ones he has not seen.
+const REVIEW_N=50;
+const LANE_NAME={open:"Open",portugal:"Portugal",unsure:"Unsure",closed:"Closed",cut:"Cut"};
+function reviewAll(){
+  const seen=new Set(RR?RR.reviewed||[]:[]);
+  return DATA.roles.filter(r=>r.verdict&&r.verdict.stage==="vision"||r.verdict&&r.verdict.read_at)
+    .filter(r=>!seen.has(r.id)&&!routing(r.id))
+    .sort((a,b)=>String(b.verdict.read_at||"").localeCompare(String(a.verdict.read_at||"")));
+}
+function reviewDone(){
+  const ids=reviewAll().slice(0,REVIEW_N).map(r=>r.id);
+  RR.reviewed=[...(RR.reviewed||[]),...ids];
+  writeRR();SEL=null;render();$("list").scrollTop=0;
+}
 const wrongOf=id=>RR&&(RR.incorrect||[]).find(x=>x.id===id);
 function toggleIncorrect(r){
   RR.incorrect=RR.incorrect||[];
@@ -433,6 +451,7 @@ function pool(){
   else if(LANE==="applied"||LANE==="discarded")
     rows=DATA.roles.filter(r=>r.active && routing(r.id)===LANE).concat(decided(LANE));
   // a role you have acted on leaves the first three lanes
+  else if(LANE==="review") return reviewAll().slice(0,REVIEW_N);
   else if(LANE==="incorrect")
     rows=(RR?RR.incorrect||[]:[]).map(x=>roleById(x.id)||{id:x.id,company:x.company,title:x.title,url:x.url,active:true,gone:true,
       posted:x.at,first_seen:x.at,verdict:{why:x.why||[],fields:{}}});
@@ -467,6 +486,7 @@ function counts(){
     for(const l of ["applied","discarded"])
       $("c-"+l).textContent=(DATA.roles.filter(r=>r.active&&routing(r.id)===l)
         .concat(decided(l)).filter(matches)).length||"";
+    $("c-review").textContent=reviewAll().length||"";
     $("c-incorrect").textContent=(RR.incorrect||[]).length||"";
     $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)&&matches(r)).length||"";
   }
@@ -486,6 +506,12 @@ function render(){
   if(fc){
     const all=(DATA.lanes[LANE]||[]).length;
     fc.textContent = (Q||Object.values(F).some(Boolean)) && all ? rows.length+" of "+all : "";
+  }
+  if(LANE==="review"&&!INBATCH&&rows.length){
+    const h=document.createElement("div");h.className="acts";h.style.cssText="margin:0 0 10px;align-items:center";
+    h.innerHTML='<button id="rv-next" class="on" style="cursor:pointer">Done with these '+rows.length+' → next</button>'
+      +'<span style="color:var(--dim);font-size:12px">mark the wrong calls Incorrect, then move on · '+reviewAll().length+' left</span>';
+    $("list").appendChild(h);$("rv-next").onclick=reviewDone;
   }
   let section=null;
   for(const r of rows){
@@ -507,6 +533,7 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
+      + (LANE==="review"&&r.verdict?'<span class="tag '+(["open","portugal"].includes(r.verdict.lane)?"y":r.verdict.lane==="unsure"?"":"n")+'">→ '+(LANE_NAME[r.verdict.lane]||r.verdict.lane)+'</span>':'')
       + (r.gone?'<span class="tag n">no longer posted</span>':placeTag(r))
       + (r.location?'<span class="tag">'+esc(r.location)+'</span>':'')
       + (f(r).salary?'<span class="tag y">'+esc(f(r).salary)+'</span>':'')
