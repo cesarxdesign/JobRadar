@@ -43,3 +43,6 @@ data/remoteio_harvest.json
 # The night run's own log
 data/nightly.log
 data/nightly.launchd.log
+
+# Every page as vision read it. Large, and rebuilt by reading.
+data/pages/

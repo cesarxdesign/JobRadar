@@ -371,6 +371,13 @@ def see(finder, rec):
         return {**v, "lane": "unsure", "posting_open": "unreadable", "stage": "render",
                 "open_quote": " ".join(text.split())[:160] or (page or {}).get("error"),
                 "reason": "the page could not be read in the browser"}
+    # The page as it was read, kept so the battery can try a new rule on the
+    # same words later, and so a wrong call can be traced to what was on screen.
+    try:
+        os.makedirs(f"{ROOT}/data/pages", exist_ok=True)
+        open(f"{ROOT}/data/pages/{rec['id']}.txt", "w").write(text[:MAX_CHARS])
+    except Exception:
+        pass
     a = reader(rec, page)              # ReaderDown goes up: the role stays unread, for the next run
     v.update(a)
     v["stage"] = "vision"

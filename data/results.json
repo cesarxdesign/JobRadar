@@ -11,9 +11,9 @@
   "ghosts": 0,
   "cut": 1887,
   "closed": 372,
-  "vision_cut": 1734,
+  "vision_cut": 1742,
   "agency": 29,
-  "not_read": 122,
+  "not_read": 114,
   "folded": 62,
   "vision_read": 2805,
   "title_cuts": 65999,
@@ -2731,6 +2731,14 @@
   "8e10a65a32ae4518",
   "5397a288816d4c6f",
   "36c5316eff924949",
+  "d4b115f6d8b24c1f",
+  "a00e0daffc124be7",
+  "3b5e792413924a71",
+  "ad6bbe6c8e434b6e",
+  "929d7ff7a314493e",
+  "225c4aa396174730",
+  "a3c6a81f360e487e",
+  "49435d751a924291",
   "9a9c4c2078bb401d",
   "0bc9e27a95e74bde",
   "0e714d50def74e82",
@@ -4374,21 +4382,13 @@
   "ce01ad65363d4517",
   "9ffdd867fa4942c2",
   "58d2e2481fa84074",
-  "d4b115f6d8b24c1f",
   "75bad57ac08e4fb8",
-  "a00e0daffc124be7",
   "c0369966ee9f47da",
-  "3b5e792413924a71",
   "b8852d530b724112",
-  "ad6bbe6c8e434b6e",
-  "929d7ff7a314493e",
   "50ec4e19640142a9",
-  "225c4aa396174730",
-  "a3c6a81f360e487e",
   "8d11ddf11a77442c",
   "b4b32df366b34a6a",
   "1b13be4e8efb46ed",
-  "49435d751a924291",
   "e42634e48a184a14",
   "9e60841f1ceb4598",
   "98aacadacb9f4f2d",
@@ -108092,7 +108092,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9ffdd867fa4942c2.jpg",
-    "read_at": "2026-10-03T20:39:09"
+    "read_at": "2026-10-03T21:38:59"
    }
   },
   {
@@ -108138,7 +108138,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/58d2e2481fa84074.jpg",
-    "read_at": "2026-10-03T20:39:10"
+    "read_at": "2026-10-03T21:39:00"
    }
   },
   {
@@ -108159,32 +108159,53 @@
    "title": "Product Designer",
    "url": "https://himalayas.app/companies/swingdev/jobs/product-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is explicitly 'Remote · open to: Poland', excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Poland\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "SwingDev",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Poland"
+     ],
+     "portugal_ok": "no",
+     "salary": "14 000 – 17 000 PLN + VAT on B2B",
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/swingdev/jobs/product-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is explicitly 'Remote · open to: Poland', excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Poland",
+    "signals": [
+     {
+      "quote": "Remote · open to: Poland",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d4b115f6d8b24c1f.jpg",
-    "read_at": "2026-10-03T20:39:11"
+    "read_at": "2026-10-03T21:39:00"
    }
   },
   {
@@ -108230,7 +108251,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/75bad57ac08e4fb8.jpg",
-    "read_at": "2026-10-03T20:39:16"
+    "read_at": "2026-10-03T21:39:00"
    }
   },
   {
@@ -108251,32 +108272,88 @@
    "title": "Staff Product Designer",
    "url": "https://himalayas.app/companies/customer-io/jobs/staff-product-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Remote role restricted to a specific list of countries in the Americas; Portugal is not included.",
+     "Portugal OUT · side panel: \"Remote · open to: Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, French Guiana, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, Uruguay, Venezuela\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer",
+     "company": "Customer.io",
+     "seniority": "principal",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Antigua and Barbuda",
+      "Argentina",
+      "Bahamas",
+      "Barbados",
+      "Belize",
+      "Bolivia",
+      "Brazil",
+      "Canada",
+      "Chile",
+      "Colombia",
+      "Costa Rica",
+      "Cuba",
+      "Dominica",
+      "Dominican Republic",
+      "Ecuador",
+      "El Salvador",
+      "French Guiana",
+      "Grenada",
+      "Guatemala",
+      "Guyana",
+      "Haiti",
+      "Honduras",
+      "Jamaica",
+      "Mexico",
+      "Nicaragua",
+      "Panama",
+      "Paraguay",
+      "Peru",
+      "Saint Kitts and Nevis",
+      "Saint Lucia",
+      "Saint Vincent and the Grenadines",
+      "Suriname",
+      "Trinidad and Tobago",
+      "United States",
+      "Uruguay",
+      "Venezuela"
+     ],
+     "portugal_ok": "no",
+     "salary": "$245k-$276k USD",
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/customer-io/jobs/staff-product-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Remote role restricted to a specific list of countries in the Americas; Portugal is not included.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Antigua and Barbuda, Argentina, Bahamas, ... United States, Uruguay, Venezuela",
+    "signals": [
+     {
+      "quote": "Remote · open to: Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, French Guiana, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, Uruguay, Venezuela",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a00e0daffc124be7.jpg",
-    "read_at": "2026-10-03T20:39:16"
+    "read_at": "2026-10-03T21:39:05"
    }
   },
   {
@@ -108322,7 +108399,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c0369966ee9f47da.jpg",
-    "read_at": "2026-10-03T20:39:16"
+    "read_at": "2026-10-03T21:39:09"
    }
   },
   {
@@ -108343,32 +108420,59 @@
    "title": "UI/UX Engineer Specialist",
    "url": "https://himalayas.app/companies/guidehouse/jobs/ui-ux-engineer-specialist",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but explicitly restricted to the United States; Portugal is excluded.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · side panel: \"Clearance Required: Ability to Obtain Public Trust\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "UI/UX Engineer Specialist",
+     "company": "Guidehouse",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$98,000.00-$163,000.00",
+     "years_xp": 6,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/guidehouse/jobs/ui-ux-engineer-specialist",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but explicitly restricted to the United States; Portugal is excluded.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Clearance Required: Ability to Obtain Public Trust",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3b5e792413924a71.jpg",
-    "read_at": "2026-10-03T20:39:19"
+    "read_at": "2026-10-03T21:39:10"
    }
   },
   {
@@ -108414,7 +108518,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b8852d530b724112.jpg",
-    "read_at": "2026-10-03T20:39:21"
+    "read_at": "2026-10-03T21:39:10"
    }
   },
   {
@@ -108435,32 +108539,53 @@
    "title": "UX Designer - Fully Remote | Upto $125/hr",
    "url": "https://himalayas.app/companies/mercor/jobs/ux-designer-fully-remote-upto-125-hr-9438372961",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is explicitly remote but restricted to Canada only",
+     "Portugal OUT · side panel: \"Remote · open to: Canada\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "UX Designer",
+     "company": "Mercor",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "$50–$125/hour",
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/ux-designer-fully-remote-upto-125-hr-9438372961",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is explicitly remote but restricted to Canada only",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Canada",
+    "signals": [
+     {
+      "quote": "Remote · open to: Canada",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ad6bbe6c8e434b6e.jpg",
-    "read_at": "2026-10-03T20:39:21"
+    "read_at": "2026-10-03T21:39:10"
    }
   },
   {
@@ -108481,32 +108606,53 @@
    "title": "Technical UI Designer",
    "url": "https://himalayas.app/companies/devoted-studios/jobs/technical-ui-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is explicitly 'Remote · open to: Canada', excluding Portugal, despite the title containing 'UI'.",
+     "Portugal OUT · side panel: \"Remote · open to: Canada\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Technical UI Designer",
+     "company": "Devoted Studios",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/devoted-studios/jobs/technical-ui-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is explicitly 'Remote · open to: Canada', excluding Portugal, despite the title containing 'UI'.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Canada",
+    "signals": [
+     {
+      "quote": "Remote · open to: Canada",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/929d7ff7a314493e.jpg",
-    "read_at": "2026-10-03T20:39:26"
+    "read_at": "2026-10-03T21:39:19"
    }
   },
   {
@@ -108552,7 +108698,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/50ec4e19640142a9.jpg",
-    "read_at": "2026-10-03T20:39:26"
+    "read_at": "2026-10-03T21:39:21"
    }
   },
   {
@@ -108573,32 +108719,53 @@
    "title": "Lead Product Designer (Commerce)",
    "url": "https://himalayas.app/companies/highlevel/jobs/lead-product-designer-commerce",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is explicitly restricted to United States remote, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Lead Product Designer (Commerce)",
+     "company": "HighLevel",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 7,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/highlevel/jobs/lead-product-designer-commerce",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is explicitly restricted to United States remote, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/225c4aa396174730.jpg",
-    "read_at": "2026-10-03T20:39:27"
+    "read_at": "2026-10-03T21:39:26"
    }
   },
   {
@@ -108619,32 +108786,59 @@
    "title": "Corporate Account Director, Planning, Design, and Construction (PD&C)",
    "url": "https://himalayas.app/companies/fortive/jobs/corporate-account-director-planning-design-and-construction-pd-c",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "This is a sales/account management role (not design), and it is remote only within the United States.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Valid U.S. driver's license.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Corporate Account Director, Planning, Design, and Construction (PD&C)",
+     "company": "Fortive",
+     "seniority": "director",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "204600 - 380600",
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/fortive/jobs/corporate-account-director-planning-design-and-construction-pd-c",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "This is a sales/account management role (not design), and it is remote only within the United States.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Valid U.S. driver's license.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a3c6a81f360e487e.jpg",
-    "read_at": "2026-10-03T20:39:29"
+    "read_at": "2026-10-03T21:39:31"
    }
   },
   {
@@ -108690,7 +108884,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8d11ddf11a77442c.jpg",
-    "read_at": "2026-10-03T20:39:31"
+    "read_at": "2026-10-03T21:39:34"
    }
   },
   {
@@ -108736,7 +108930,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b4b32df366b34a6a.jpg",
-    "read_at": "2026-10-03T20:39:31"
+    "read_at": "2026-10-03T21:39:35"
    }
   },
   {
@@ -108782,7 +108976,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1b13be4e8efb46ed.jpg",
-    "read_at": "2026-10-03T20:39:37"
+    "read_at": "2026-10-03T21:39:44"
    }
   },
   {
@@ -108803,32 +108997,53 @@
    "title": "Commercial Office Furniture Designer",
    "url": "https://himalayas.app/companies/tahche-outsourcing-services-inc/jobs/commercial-office-furniture-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "This is a furniture/space-planning design role (not product/UX/UI design) and the location is explicitly restricted to the United States.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Commercial Office Furniture Designer",
+     "company": "Tahche Outsourcing Services Inc",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/tahche-outsourcing-services-inc/jobs/commercial-office-furniture-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "This is a furniture/space-planning design role (not product/UX/UI design) and the location is explicitly restricted to the United States.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/49435d751a924291.jpg",
-    "read_at": "2026-10-03T20:39:37"
+    "read_at": "2026-10-03T21:39:45"
    }
   },
   {
@@ -109284,7 +109499,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e42634e48a184a14.jpg",
-    "read_at": "2026-10-03T20:39:37"
+    "read_at": "2026-10-03T21:39:47"
    }
   },
   {
@@ -109574,7 +109789,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3b83bb216ed14c54.jpg",
-    "read_at": "2026-10-03T20:39:47"
+    "read_at": "2026-10-03T21:39:56"
    }
   },
   {
@@ -109620,7 +109835,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/bbaba6fc766c4453.jpg",
-    "read_at": "2026-10-03T20:39:47"
+    "read_at": "2026-10-03T21:39:58"
    }
   },
   {
