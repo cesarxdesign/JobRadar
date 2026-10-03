@@ -102517,5 +102517,3703 @@
   "reader_place": "no",
   "lane": "cut",
   "second_place": "no"
+ },
+ "809b502ab7d64a43": {
+  "id": "809b502ab7d64a43",
+  "at": "2026-10-03T12:18:12",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/product-designer-ux-hci/10813466",
+  "board": {
+   "url": "https://builtin.com/job/product-designer-ux-hci/10813466",
+   "status": 200,
+   "shot": "data/shots/809b502ab7d64a43.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/product-designer-ux-hci/10813466",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: Petaling Jaya",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting is remote but restricted to United States, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer (UX), HCI",
+   "company": "BJAK",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "f07a709396964f10": {
+  "id": "f07a709396964f10",
+  "at": "2026-10-03T12:18:55",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-designer-dallas-tx/10789085",
+  "board": {
+   "url": "https://builtin.com/job/ux-designer-dallas-tx/10789085",
+   "status": 200,
+   "shot": "data/shots/f07a709396964f10.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-designer-dallas-tx/10789085",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "UX Designer -Dallas, TX",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is not available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "UX Designer -Dallas, TX ... 2 Locations / In-Office or Remote",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "cut on place, but not sure of it · Title names Dallas, TX with 'In-Office or Remote' and no wider geography stated, so location is ambiguous but not clearly excluded or included for Portugal",
+  "confidence": "low",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 35,000-123,000 Annually",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "8a667b070534422e": {
+  "id": "8a667b070534422e",
+  "at": "2026-10-03T12:17:21",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-designer-ii/10917030",
+  "board": {
+   "url": "https://builtin.com/job/ux-designer-ii/10917030",
+   "status": 200,
+   "shot": "data/shots/8a667b070534422e.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-designer-ii/10917030",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "US Citizenship or Green Card only - we do not offer Sponsorship",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "US Residency for at least the past 3 years",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote First, Remote Only Culture",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States; US Citizenship or Green Card only - we do not offer Sponsorship",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role requires US citizenship/Green Card and US residency, so Portugal-based candidate is excluded.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer II",
+   "company": "Bellese Technologies",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "91K-121K Annually",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "8c7da2f7f5b04969": {
+  "id": "8c7da2f7f5b04969",
+  "at": "2026-10-03T12:19:15",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ux-designer/10779461",
+  "board": {
+   "url": "https://builtin.com/job/senior-ux-designer/10779461",
+   "status": 200,
+   "shot": "data/shots/8c7da2f7f5b04969.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ux-designer/10779461",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "#LI-REMOTE",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "A reasonable estimate of the current base pay range for this position is $104,400 to $156,600 annually. ... The range for this position in other geographic locations may differ.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Softchoice, a World Wide Technology company, supports commercial and SMB markets in the U.S. and Canada.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting explicitly states hiring remotely in United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "World Wide Technology",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 104,400-156,600 annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "2640af42d8414c1e": {
+  "id": "2640af42d8414c1e",
+  "at": "2026-10-03T12:19:16",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ux-designer/10768033",
+  "board": {
+   "url": "https://builtin.com/job/senior-ux-designer/10768033",
+   "status": 200,
+   "shot": "data/shots/2640af42d8414c1e.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ux-designer/10768033",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Certain states and localities require employers to post a reasonable estimate of the salary range.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Softchoice, a World Wide Technology company, supports commercial and SMB markets in the U.S. and Canada.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "#LI-REMOTE",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Posting is remote but restricted to the United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "Softchoice",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 104,400-156,600 annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "90ab34d718b64d92": {
+  "id": "90ab34d718b64d92",
+  "at": "2026-10-03T12:19:18",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ux-interface-designer/10298239",
+  "board": {
+   "url": "https://builtin.com/job/senior-ux-interface-designer/10298239",
+   "status": 200,
+   "shot": "data/shots/90ab34d718b64d92.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ux-interface-designer/10298239",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in Falls Church, VA, USA",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in Falls Church, VA, USA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is a remote work from home role",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Computer World Services Corp. ... serves both Defense and Civilian federal government customers",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in Falls Church, VA, USA",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote work is tied specifically to Falls Church, VA, USA, with no wider eligibility stated, and the company is a US federal/defense contractor.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Interface Designer",
+   "company": "Computer World Services Corp.",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "130K-160K Annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "ebed76fad1934fd6": {
+  "id": "ebed76fad1934fd6",
+  "at": "2026-10-03T12:19:40",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/sr-designer-ux-new-york/9913324",
+  "board": {
+   "url": "https://builtin.com/job/sr-designer-ux-new-york/9913324",
+   "status": 200,
+   "shot": "data/shots/ebed76fad1934fd6.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/sr-designer-ux-new-york/9913324",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "Sr Designer - UX - New York",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is not available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Sr Designer - UX - New York",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Title and posting are tied to New York with no clear widening to Europe or Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Sr Designer - UX",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 39,000-136,000 Annually",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "918b04de654a47a8": {
+  "id": "918b04de654a47a8",
+  "at": "2026-10-03T12:19:42",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ux-designer-new-jersey/9914341",
+  "board": {
+   "url": "https://builtin.com/job/senior-ux-designer-new-jersey/9914341",
+   "status": 200,
+   "shot": "data/shots/918b04de654a47a8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ux-designer-new-jersey/9914341",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to hiring within the United States only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 48,000-168,000 Annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "8b341ed9631c4cf5": {
+  "id": "8b341ed9631c4cf5",
+  "at": "2026-10-03T12:19:53",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer-dallas-tx/9914448",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer-dallas-tx/9914448",
+   "status": 200,
+   "shot": "data/shots/8b341ed9631c4cf5.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer-dallas-tx/9914448",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "UI/UX Designer - Dallas, TX",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Minimum Compensation: USD 44,000 / Maximum Compensation: USD 154,000",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This position is available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "UI/UX Designer - Dallas, TX",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Posting is tied to Dallas, TX with USD compensation and no mention of international or Portugal eligibility.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "USD 44,000-154,000 Annually",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "565a0d3303df4c30": {
+  "id": "565a0d3303df4c30",
+  "at": "2026-10-03T12:19:47",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-ui-designer-jersey-city-nj/9914295",
+  "board": {
+   "url": "https://builtin.com/job/ux-ui-designer-jersey-city-nj/9914295",
+   "status": 200,
+   "shot": "data/shots/565a0d3303df4c30.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-ui-designer-jersey-city-nj/9914295",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to the United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer",
+   "company": "Photon",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 44,000-154,000 Annually",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "39588ef0520e479e": {
+  "id": "39588ef0520e479e",
+  "at": "2026-10-03T12:20:02",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-ui-designer-onsite/9914410",
+  "board": {
+   "url": "https://builtin.com/job/ux-ui-designer-onsite/9914410",
+   "status": 200,
+   "shot": "data/shots/39588ef0520e479e.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-ui-designer-onsite/9914410",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations; In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "UX/UI Designer | Onsite",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Minimum Compensation: USD 57,000 / Maximum Compensation: USD 201,000",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "2 Locations; In-Office or Remote",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page does not say where · Title says Onsite but panel says 'In-Office or Remote' with '2 Locations' unnamed, so geography cannot be determined.",
+  "confidence": "low",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "UX/UI Designer | Onsite",
+   "company": "Photon",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "USD 57,000-201,000 Annually",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "8fa391b5d4da4e5b": {
+  "id": "8fa391b5d4da4e5b",
+  "at": "2026-10-03T12:20:26",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer-dallas-tx/9914534",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer-dallas-tx/9914534",
+   "status": 200,
+   "shot": "data/shots/8fa391b5d4da4e5b.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer-dallas-tx/9914534",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "UI/UX Designer - Dallas, TX",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Compensation, Benefits and Duration ... USD",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "UI/UX Designer - Dallas, TX",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Posting is tied to Dallas, TX with USD salary and no mention of remote-from-Europe eligibility.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Photon",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 50,000-175,000 Annually",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "554fb31da1d94461": {
+  "id": "554fb31da1d94461",
+  "at": "2026-10-03T12:20:17",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer/9914749",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer/9914749",
+   "status": 200,
+   "shot": "data/shots/554fb31da1d94461.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer/9914749",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "2 Locations / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: US",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Engagement Model: Individual Contributor, working at client location",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are seeking a Senior UI/UX Product Designer to work onsite with a client's product and engineering teams in downtown Toronto.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Ability to work independently at client locations",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Onsite work at client location (downtown Toronto)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This position is not available for independent contractors",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "We are seeking a Senior UI/UX Product Designer to work onsite with a client's product and engineering teams in downtown Toronto.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is onsite with a client in the US/Toronto, not available from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 48,000-168,000 Annually",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "b950ff1907554f2b": {
+  "id": "b950ff1907554f2b",
+  "at": "2026-10-03T12:20:09",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-designer-new-york/9913903",
+  "board": {
+   "url": "https://builtin.com/job/ux-designer-new-york/9913903",
+   "status": 200,
+   "shot": "data/shots/b950ff1907554f2b.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-designer-new-york/9913903",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This position is not available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to the United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 36,000-127,000 Annually",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "421b1a7f41f842eb": {
+  "id": "421b1a7f41f842eb",
+  "at": "2026-10-03T12:20:37",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-product-designer-toronto-canada-individual-contributor-fte-only/9914535",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-product-designer-toronto-canada-individual-contributor-fte-only/9914535",
+   "status": 200,
+   "shot": "data/shots/421b1a7f41f842eb.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-product-designer-toronto-canada-individual-contributor-fte-only/9914535",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "2 Locations / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Toronto, Canada – Onsite",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are seeking a Senior UI/UX Product Designer to work onsite with a client's product and engineering teams in downtown Toronto.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is Toronto-first and onsite",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Ability to work independently at client locations",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Location: Toronto, Canada – Onsite",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is onsite in Toronto, Canada, not available from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UI/UX (Product) Designer",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "20f72d87c20a4c67": {
+  "id": "20f72d87c20a4c67",
+  "at": "2026-10-03T12:20:47",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/sr-designer-ux-new-york/10673575",
+  "board": {
+   "url": "https://builtin.com/job/sr-designer-ux-new-york/10673575",
+   "status": 200,
+   "shot": "data/shots/20f72d87c20a4c67.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/sr-designer-ux-new-york/10673575",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / In-Office or Remote",
+  "place_signals": [
+   {
+    "quote": "Sr Designer - UX - New York",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "39K-139K Annually",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: London",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is not available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Sr Designer - UX - New York",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Job title and listing specify New York, with no wider location or Portugal/Europe eligibility stated anywhere on the page.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Sr Designer - UX - New York",
+   "company": "Photon",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "USD 39,000-139,000 Annually",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "5a022f2114774b27": {
+  "id": "5a022f2114774b27",
+  "at": "2026-10-03T12:20:46",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer-chicago/10691136",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer-chicago/10691136",
+   "status": 200,
+   "shot": "data/shots/5a022f2114774b27.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer-chicago/10691136",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This position is available for independent contractors",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but explicitly restricted to hiring within the United States.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Photon",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 42,000-147,000 Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "fd3b57f7c2a344cb": {
+  "id": "fd3b57f7c2a344cb",
+  "at": "2026-10-03T12:21:05",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578895",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578895",
+   "status": 200,
+   "shot": "data/shots/fd3b57f7c2a344cb.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578895",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · US federal contractor role requiring a Public Trust security clearance, which requires US work eligibility, ruling out someone based in Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "b70cfdafe50042fd": {
+  "id": "b70cfdafe50042fd",
+  "at": "2026-10-03T12:21:11",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
+   "status": 200,
+   "shot": "data/shots/b70cfdafe50042fd.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "supporting a wide-ranging technical support initiative for a large Federal agency",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role requires US federal Public Trust clearance supporting a US federal agency, effectively restricting it to US-authorized workers only.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "8556829fc436446f": {
+  "id": "8556829fc436446f",
+  "at": "2026-10-03T12:21:13",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
+   "status": 200,
+   "shot": "data/shots/8556829fc436446f.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · US federal government Public Trust clearance requirement restricts the role to US-based/eligible candidates.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "6ad1cd394c4442d8": {
+  "id": "6ad1cd394c4442d8",
+  "at": "2026-10-03T12:21:37",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578487",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578487",
+   "status": 200,
+   "shot": "data/shots/6ad1cd394c4442d8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578487",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "CGS is seeking a Senior UI/UX Designer to join our team supporting a wide-ranging technical support initiative for a large Federal agency.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role supports US federal government work requiring a Public Trust clearance, which effectively restricts eligibility to the US; no Portugal remote option is stated.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "742458cec1684790": {
+  "id": "742458cec1684790",
+  "at": "2026-10-03T12:21:34",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578315",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578315",
+   "status": 200,
+   "shot": "data/shots/742458cec1684790.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578315",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations / Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "supporting a wide-ranging technical support initiative for a large Federal agency",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "US federal government contract requiring Public Trust clearance, which demands US work authorization/residency.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "e49db1c4544a4096": {
+  "id": "e49db1c4544a4096",
+  "at": "2026-10-03T12:22:00",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
+   "status": 200,
+   "shot": "data/shots/e49db1c4544a4096.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Federal contractor role requiring US Public Trust clearance and USWDS/508 compliance ties the job to the United States, not remote-eligible from Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "24533fcc5fb64147": {
+  "id": "24533fcc5fb64147",
+  "at": "2026-10-03T12:22:09",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
+   "status": 200,
+   "shot": "data/shots/24533fcc5fb64147.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role requires US federal Public Trust clearance and compliance with US Web Design System standards, restricting it to US-based/eligible candidates.",
+  "confidence": "medium",
+  "inferred": [
+   "portugal_ok"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "f014b7d1de454cc4": {
+  "id": "f014b7d1de454cc4",
+  "at": "2026-10-03T12:22:25",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
+   "status": 200,
+   "shot": "data/shots/f014b7d1de454cc4.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · US federal contractor role requiring Public Trust security clearance means US residency/citizenship, excluding Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "f24ea38c40f343e8": {
+  "id": "f24ea38c40f343e8",
+  "at": "2026-10-03T12:22:33",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578891",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578891",
+   "status": 200,
+   "shot": "data/shots/f24ea38c40f343e8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578891",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "supporting a wide-ranging technical support initiative for a large Federal agency",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "US federal government contract requiring Public Trust clearance eligibility excludes someone living in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "ded7c467e56f4cf4": {
+  "id": "ded7c467e56f4cf4",
+  "at": "2026-10-03T12:22:49",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578890",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578890",
+   "status": 200,
+   "shot": "data/shots/ded7c467e56f4cf4.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578890",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "CGS is seeking a Senior UI/UX Designer to join our team supporting a wide-ranging technical support initiative for a large Federal agency.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Federal contractor role requiring US Public Trust security clearance for a US federal agency, making it unavailable to someone living in Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "portugal_ok"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "84f738b0166b4bc8": {
+  "id": "84f738b0166b4bc8",
+  "at": "2026-10-03T12:23:17",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578974",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578974",
+   "status": 200,
+   "shot": "data/shots/84f738b0166b4bc8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578974",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "CGS is seeking a Senior UI/UX Designer to join our team supporting a wide-ranging technical support initiative for a large Federal agency.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Requires obtaining a US government Public Trust clearance to support a US federal agency, which effectively restricts the role to the US regardless of the generic 'Remote or Hybrid' tag.",
+  "confidence": "medium",
+  "inferred": [
+   "portugal_ok"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "1e82d6c588a142bd": {
+  "id": "1e82d6c588a142bd",
+  "at": "2026-10-03T12:23:17",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578938",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578938",
+   "status": 200,
+   "shot": "data/shots/1e82d6c588a142bd.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578938",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "supporting a wide-ranging technical support initiative for a large Federal agency",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role requires US federal Public Trust clearance and supports a US federal agency, restricting it to the US.",
+  "confidence": "high",
+  "inferred": [
+   "portugal_ok"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "d5ef6684857c4b22": {
+  "id": "d5ef6684857c4b22",
+  "at": "2026-10-03T12:21:43",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578851",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578851",
+   "status": 200,
+   "shot": "data/shots/d5ef6684857c4b22.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578851",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "165K-238K Annually",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role requires US Public Trust security clearance, which rules out someone living in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "4f2bda0a99d6417a": {
+  "id": "4f2bda0a99d6417a",
+  "at": "2026-10-03T12:24:21",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
+   "status": 200,
+   "shot": "data/shots/4f2bda0a99d6417a.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "CGS is seeking a Senior UI/UX Designer to join our team supporting a wide-ranging technical support initiative for a large Federal agency.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role requires a US federal Public Trust clearance and supports a US federal agency, so it cannot be done from Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "8a4661300f824d77": {
+  "id": "8a4661300f824d77",
+  "at": "2026-10-03T12:23:54",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
+   "status": 200,
+   "shot": "data/shots/8a4661300f824d77.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role requires US Public Trust clearance and USWDS federal compliance, making it US-only despite 'Remote or Hybrid' label.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "706aa58585f64e60": {
+  "id": "706aa58585f64e60",
+  "at": "2026-10-03T12:20:52",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578966",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578966",
+   "status": 200,
+   "shot": "data/shots/706aa58585f64e60.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578966",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Requires obtaining a US Public Trust clearance for a federal agency, restricting the role to US-authorized workers.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "b99841682eca45fa": {
+  "id": "b99841682eca45fa",
+  "at": "2026-10-03T12:25:06",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
+   "status": 200,
+   "shot": "data/shots/b99841682eca45fa.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role requires US Public Trust clearance for a federal agency contract, which demands US work authorization/residency, ruling out Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "portugal_ok"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "ee8e3d113b414686": {
+  "id": "ee8e3d113b414686",
+  "at": "2026-10-03T12:25:15",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
+   "status": 200,
+   "shot": "data/shots/ee8e3d113b414686.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · US federal contractor role requiring Public Trust clearance (US work authorization/citizenship), making it unavailable to someone based in Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "120K-200K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "80a4fe267d674198": {
+  "id": "80a4fe267d674198",
+  "at": "2026-10-03T12:25:31",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/principal-ux-designer/9525193",
+  "board": {
+   "url": "https://builtin.com/job/principal-ux-designer/9525193",
+   "status": 200,
+   "shot": "data/shots/80a4fe267d674198.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/principal-ux-designer/9525193",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "102K-132K Annually",
+    "where": "under the title",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "role is remote but restricted to the United States",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal UX Designer",
+   "company": "Cengage Group",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 101,900 - 132,450 annually (plus 15% target bonus)",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "c9faf37bdfdd40f7": {
+  "id": "c9faf37bdfdd40f7",
+  "at": "2026-10-03T12:25:40",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ux-designer-mobile/10227890",
+  "board": {
+   "url": "https://builtin.com/job/senior-ux-designer-mobile/10227890",
+   "status": 200,
+   "shot": "data/shots/c9faf37bdfdd40f7.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ux-designer-mobile/10227890",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in United States",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: U.S. Remote (ET/CT regions)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote position open to candidates located within the United States.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Total Cash Compensation for U.S.-based employees range from $135,000-$150,000",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Located within the United States (U.S. remote, ET/CT regions)",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "This is a remote position open to candidates located within the United States.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to candidates located within the United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer, Mobile",
+   "company": "Phreesia",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$135,000-$150,000",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "18ecb848455340fb": {
+  "id": "18ecb848455340fb",
+  "at": "2026-10-03T12:25:58",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer/9840233",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer/9840233",
+   "status": 200,
+   "shot": "data/shots/18ecb848455340fb.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer/9840233",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "3 Locations / Remote",
+  "place_signals": [
+   {
+    "quote": "3 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "this position is fully remote and can be based anywhere in the U.S.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Collaborate daily with engineering, product, and advisory teams across time zones",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "with flexibility based on experience and location",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "this position is fully remote and can be based anywhere in the U.S.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is fully remote but explicitly restricted to anywhere in the U.S., excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "Consertus, Inc.",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$140,000–$180,000 annually",
+   "years_xp": 7,
+   "reports_to": "CTO",
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "f33df4115f6840a6": {
+  "id": "f33df4115f6840a6",
+  "at": "2026-10-03T12:24:46",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578941",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578941",
+   "status": 200,
+   "shot": "data/shots/f33df4115f6840a6.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578941",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations, Remote or Hybrid",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "CGS is seeking a Senior UI/UX Designer to join our team supporting a wide-ranging technical support initiative for a large Federal agency.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role requires a US federal Public Trust clearance for a US federal agency, which someone living in Portugal cannot obtain/hold.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted",
+   "countries"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "a497186253c44dfb": {
+  "id": "a497186253c44dfb",
+  "at": "2026-10-03T12:26:21",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ux-ui-designer/9510036",
+  "board": {
+   "url": "https://builtin.com/job/ux-ui-designer/9510036",
+   "status": 200,
+   "shot": "data/shots/a497186253c44dfb.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ux-ui-designer/9510036",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in Fort Lauderdale, FL, USA",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in Fort Lauderdale, FL, USA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "In-Office or Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This is a remote position.",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "HQ: Fort Lauderdale, FL",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in Fort Lauderdale, FL, USA",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote is tied specifically to Fort Lauderdale, FL, USA, not widened anywhere on the page.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX UI Designer",
+   "company": "Pharmavise Corporation",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "0f44de58d0ad4bc8": {
+  "id": "0f44de58d0ad4bc8",
+  "at": "2026-10-03T12:26:26",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/ui-ux-designer/8942119",
+  "board": {
+   "url": "https://builtin.com/job/ui-ux-designer/8942119",
+   "status": 200,
+   "shot": "data/shots/0f44de58d0ad4bc8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/ui-ux-designer/8942119",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Hiring Remotely in USA",
+  "place_signals": [
+   {
+    "quote": "Hiring Remotely in USA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Job Title: Senior UI/UX Graphic Designer (Ukraine-based Only)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You'll be working closely with a team of Ukrainian developers, so familiarity with agile, collaborative remote work is key.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our team thrives in a fully remote environment",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hiring Remotely in USA ... Senior UI/UX Graphic Designer (Ukraine-based Only)",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Posting states Hiring Remotely in USA and the body explicitly restricts the role to Ukraine-based candidates only, excluding Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "UI/ UX Designer",
+   "company": "Catch Creation",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "0a92ec658b5548c3": {
+  "id": "0a92ec658b5548c3",
+  "at": "2026-10-03T12:26:47",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.workatastartup.com/jobs/103734",
+  "board": {
+   "url": "https://www.workatastartup.com/jobs/103734",
+   "status": 200,
+   "shot": "data/shots/0a92ec658b5548c3.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://www.workatastartup.com/",
+   "status": 200,
+   "shot": "data/shots/0a92ec658b5548c3.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://www.workatastartup.com/"
+  ],
+  "read": "employer",
+  "read_url": "https://www.workatastartup.com/",
+  "same_job": "no",
+  "posting_open": "unreadable",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": null,
+  "role_verdict": "unclear",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page read is a different job · page is the Work at a Startup homepage listing many jobs, not a single job posting, and the only Lance listing shown is 'Product Engineer', not 'Design Engineer'",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": null,
+   "company": "Lance",
+   "seniority": "unstated",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure"
+ },
+ "4103efacc775401f": {
+  "id": "4103efacc775401f",
+  "at": "2026-10-03T12:26:56",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.workatastartup.com/jobs/105320",
+  "board": {
+   "url": "https://www.workatastartup.com/jobs/105320",
+   "status": 200,
+   "shot": "data/shots/4103efacc775401f.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://www.workatastartup.com/",
+   "link: https://www.workatastartup.com/jobs",
+   "link: https://www.workatastartup.com/learn",
+   "apply: https://account.ycombinator.com/?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplicati"
+  ],
+  "read": "board",
+  "read_url": "https://www.workatastartup.com/jobs/105320",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "San Francisco, CA, US",
+  "place_signals": [
+   {
+    "quote": "San Francisco, CA, US",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Will sponsor",
+    "where": "side panel",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "San Francisco, CA, US",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite in San Francisco with no remote option for Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Founding Product Designer",
+   "company": "Moritz",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$120K - $180K",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "ba63902b27de4104": {
+  "id": "ba63902b27de4104",
+  "at": "2026-10-03T12:27:15",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.workatastartup.com/jobs/95458",
+  "board": {
+   "url": "https://www.workatastartup.com/jobs/95458",
+   "status": 200,
+   "shot": "data/shots/ba63902b27de4104.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://www.workatastartup.com/",
+   "status": 200,
+   "shot": "data/shots/ba63902b27de4104.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://www.workatastartup.com/"
+  ],
+  "read": "employer",
+  "read_url": "https://www.workatastartup.com/",
+  "same_job": "no",
+  "posting_open": "unreadable",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": null,
+  "role_verdict": "unclear",
+  "place_verdict": "unclear",
+  "cut": false,
+  "reason": "the page read is a different job · page is the general Work at a Startup job listing/homepage, not a single job posting, and the Domu Technology Inc. listing shown is 'Technical Account Manager - Brazil', not the pooled 'UI/UX Product Designer' role.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Technical Account Manager - Brazil",
+   "company": "Domu Technology Inc.",
+   "seniority": "unstated",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [
+    "BR"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "$30K - $45K",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure"
+ },
+ "ddf8cb5a7fb64298": {
+  "id": "ddf8cb5a7fb64298",
+  "at": "2026-10-03T12:27:26",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.workatastartup.com/jobs/80903",
+  "board": {
+   "url": "https://www.workatastartup.com/jobs/80903",
+   "status": null,
+   "shot": null,
+   "error": "ConnectionError: browser closed the socket"
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.workatastartup.com/jobs/80903",
+  "lane": "unsure",
+  "posting_open": "unreadable",
+  "stage": "render",
+  "open_quote": "ConnectionError: browser closed the socket",
+  "reason": "the page could not be read in the browser"
+ },
+ "d6edebe741c34eea": {
+  "id": "d6edebe741c34eea",
+  "at": "2026-10-03T12:27:15",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.workatastartup.com/jobs/90037",
+  "board": {
+   "url": "https://www.workatastartup.com/jobs/90037",
+   "status": 200,
+   "shot": "data/shots/d6edebe741c34eea.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://www.workatastartup.com/",
+   "link: https://www.workatastartup.com/jobs",
+   "link: https://www.workatastartup.com/learn",
+   "apply: https://account.ycombinator.com/?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplicati"
+  ],
+  "read": "board",
+  "read_url": "https://www.workatastartup.com/jobs/90037",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "New York City",
+  "place_signals": [
+   {
+    "quote": "New York City",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Visa: US citizen/visa only",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Based in NYC and excited to work onsite. We build better when we're in the same room.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Based in NYC and excited to work onsite. We build better when we're in the same room.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite in New York City, US citizen/visa only - not accessible from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Autonomous Technologies Group",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$115K - $125K",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "8af805fcd1584d90": {
+  "id": "8af805fcd1584d90",
+  "at": "2026-10-03T12:27:26",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.workatastartup.com/jobs/100384",
+  "board": {
+   "url": "https://www.workatastartup.com/jobs/100384",
+   "status": 200,
+   "shot": "data/shots/8af805fcd1584d90.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://www.workatastartup.com/",
+   "link: https://www.workatastartup.com/jobs",
+   "link: https://www.workatastartup.com/learn",
+   "apply: https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com"
+  ],
+  "read": "board",
+  "read_url": "https://www.workatastartup.com/jobs/100384",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "San Francisco",
+  "place_signals": [
+   {
+    "quote": "Location San Francisco",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a full-time, in-person role based in San Francisco (Presidio) - we work from the office 5 days a week.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You must be based in the Bay Area or willing to relocate before starting.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We require US work authorization , but are open to O-1 or J-1 visa sponsorship for exceptional candidates.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Visa US citizen/visa only",
+    "where": "side panel",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "This is a full-time, in-person role based in San Francisco (Presidio) - we work from the office 5 days a week.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite full-time role in San Francisco requiring US work authorization, not possible from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Wordware",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": 5,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$140K - $220K",
+   "years_xp": 5,
+   "reports_to": "CEO and Head of Product",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "79c281c3553d4b44": {
+  "id": "79c281c3553d4b44",
+  "at": "2026-10-03T12:23:42",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578752",
+  "board": {
+   "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578752",
+   "status": 200,
+   "shot": "data/shots/79c281c3553d4b44.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578752",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "2 Locations",
+  "place_signals": [
+   {
+    "quote": "2 Locations",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote or Hybrid",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be able to obtain a Public Trust.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "supporting a wide-ranging technical support initiative for a large Federal agency",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Experience designing web and mobile applications that are compliant with 508 and US Web Design System (USWDS) standards.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HQ: Washington, DC",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Must be able to obtain a Public Trust.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role requires US Public Trust clearance for a US federal agency, which rules out someone based in Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "countries"
+  ],
+  "fields": {
+   "role": "Senior UI/UX Designer II",
+   "company": "Contact Government Services, LLC",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "165K-238K Annually",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "One Month Ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
  }
 }

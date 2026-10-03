@@ -132,10 +132,19 @@ class WS:
             pass
 
 
+class BrowserDown(Exception):
+    """Chrome cannot be started. Nothing read after this would mean anything."""
+
+
 class Browser:
     """One headless Chrome, its own throwaway profile, a tab per page."""
 
     def __init__(self):
+        import threading
+        self._lock = threading.Lock()
+        self.launch()
+
+    def launch(self):
         self.dir = tempfile.mkdtemp(prefix="radar-chrome-")
         self.p = subprocess.Popen(
             [CHROME, "--headless=new", "--remote-debugging-port=0", f"--user-data-dir={self.dir}",
@@ -160,11 +169,26 @@ class Browser:
         """Load one URL and report what rendered. Never raises for a bad page:
         a page that will not load is a fact about the posting."""
         out = {"asked": url, "url": url, "status": None, "title": "", "text": "", "apply": [], "links": [], "error": None}
-        try:
-            tab = self._http("/json/new?about:blank", "PUT")
-        except Exception as e:
-            out["error"] = f"browser: {e}"
-            return out
+        tab = None
+        for attempt in range(3):
+            try:
+                tab = self._http("/json/new?about:blank", "PUT")
+                break
+            except Exception as e:
+                # Chrome itself has gone. It died once mid-run and the next
+                # 733 roles were all filed "could not be read". A dead browser
+                # is not a fact about a posting: start it again, and if it
+                # will not come back, stop the run instead of writing lies.
+                with self._lock:
+                    if self.p.poll() is not None or attempt:
+                        try:
+                            self.p.kill()
+                        except Exception:
+                            pass
+                        self.launch()
+                last = e
+        if tab is None:
+            raise BrowserDown(f"the browser will not start: {last}")
         ws = WS(tab["webSocketDebuggerUrl"])
         try:
             ev = []

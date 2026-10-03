@@ -252,6 +252,10 @@ def main():
             return
         try:
             v = see(finder, rec)
+        except render.BrowserDown as e:
+            _usage["stop"] = True
+            print(f"STOPPED: {e}", flush=True)
+            return
         except Exception as e:
             v = {"id": rec["id"], "lane": "unsure", "stage": "error", "reason": f"{type(e).__name__}: {e}"}
         with _lock:
