@@ -7,11 +7,11 @@
  "counts": {
   "open": 181,
   "portugal": 13,
-  "unsure": 81,
+  "unsure": 80,
   "ghosts": 0,
   "cut": 1887,
   "closed": 372,
-  "vision_cut": 1766,
+  "vision_cut": 1767,
   "agency": 32,
   "not_read": 86,
   "folded": 62,
@@ -227,7 +227,6 @@
    "f66ae0410d0a4a96",
    "1cdec415aed64c58",
    "984c19f1478c40ef",
-   "7d59651cd5e946ab",
    "9ecc48f5253342f3",
    "1007498977ec4091",
    "6bb0ea51f00e4a6d",
@@ -2690,6 +2689,7 @@
   "521d965b0ec742ed",
   "8680c03158e44a85",
   "c7ef31649a604555",
+  "7d59651cd5e946ab",
   "45e081fd150d4d83",
   "60c4abfddc054da4",
   "be24baca0ca24279",
@@ -76032,27 +76032,28 @@
    "title": "Senior Product Designer (f/m/d)",
    "url": "https://apply.workable.com/shiftmove/j/1B9C517A12/",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page read is a different job · Page states the job is no longer available, and the listed openings show no matching Senior Product Designer posting.",
-     "the page says: \"This job is no longer available.\"",
-     "the page says: \"This job is no longer available.\""
+     "Role is hybrid in Berlin, Germany, with no wider remote scope mentioned.",
+     "Portugal OUT · under the title: \"Berlin, Berlin, Germany\""
     ],
     "judged": true,
-    "text": "job board's copy",
+    "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Senior Product Designer (f/m/d)",
+     "role": "Senior Product Designer - Growth (all genders)",
      "company": "Shiftmove",
      "seniority": "senior",
-     "remote": "unstated",
+     "remote": "hybrid",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
@@ -76060,18 +76061,24 @@
      "posted": null
     },
     "inferred": [],
-    "read": "board",
-    "read_url": "https://apply.workable.com/shiftmove/?not_found=true",
-    "reason": "the page read is a different job · Page states the job is no longer available, and the listed openings show no matching Senior Product Designer posting.",
-    "open": "no",
+    "read": "employer",
+    "read_url": "https://apply.workable.com/shiftmove/j/FA3A9056CD",
+    "reason": "Role is hybrid in Berlin, Germany, with no wider remote scope mentioned.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "This job is no longer available.",
-    "signals": [],
+    "quote": "Hybrid ... Berlin, Berlin, Germany",
+    "signals": [
+     {
+      "quote": "Berlin, Berlin, Germany",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
-    "found_by": null,
-    "shot": "data/shots/7d59651cd5e946ab.jpg",
-    "read_at": "2026-10-03T20:25:19"
+    "found_by": "careers",
+    "shot": "data/shots/7d59651cd5e946ab.employer.jpg",
+    "read_at": "2026-10-03T21:48:52"
    }
   },
   {
@@ -191592,54 +191599,59 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "only the job board's copy could be read · Design leadership role, explicitly 100% remote within Europe, which includes Portugal.",
-     "Portugal in · under the title: \"Europe Only\"",
-     "Portugal in · body: \"100% remote work within Europe\""
+     "Lead UI/UX design role explicitly listing Portugal among remote-eligible countries.",
+     "Portugal in · under the title: \"Serbia Romania Turkey Poland Spain Portugal\"",
+     "Portugal in · body: \"100% remote, flexible work with a small, experienced team.\""
     ],
     "judged": true,
-    "text": "job board's copy",
+    "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Lead UI/UX Designer",
+     "role": "Lead UI/UX Designer - Mobile Casual F2P Games",
      "company": "UserWise",
      "seniority": "lead",
      "remote": "remote",
      "onsite_days": null,
      "countries": [
-      "Europe"
+      "Serbia",
+      "Romania",
+      "Turkey",
+      "Poland",
+      "Spain",
+      "Portugal"
      ],
      "portugal_ok": "yes",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "SEPTEMBER 15, 2026"
+     "posted": null
     },
     "inferred": [],
-    "read": "board",
-    "read_url": "https://www.uxremotetalent.com/ux-job/lead-ui-ux-designer",
-    "reason": "Design leadership role, explicitly 100% remote within Europe, which includes Portugal.",
+    "read": "employer",
+    "read_url": "https://apply.workable.com/userwise-services/j/0853FED995",
+    "reason": "Lead UI/UX design role explicitly listing Portugal among remote-eligible countries.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "100% remote work within Europe",
+    "quote": "Serbia Romania Turkey Poland Spain Portugal",
     "signals": [
      {
-      "quote": "Europe Only",
+      "quote": "Serbia Romania Turkey Poland Spain Portugal",
       "where": "under the title",
       "says": "portugal_in"
      },
      {
-      "quote": "100% remote work within Europe",
+      "quote": "100% remote, flexible work with a small, experienced team.",
       "where": "body",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
-    "found_by": null,
-    "shot": "data/shots/5ec779a7cf6940bf.jpg",
-    "read_at": "2026-10-02T18:41:17"
+    "if_employer": null,
+    "found_by": "link",
+    "shot": "data/shots/5ec779a7cf6940bf.employer.jpg",
+    "read_at": "2026-10-03T21:53:00"
    }
   },
   {
