@@ -202,7 +202,11 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "model": verdicts_doc.get("model"),
         "counts": {**{k: len(v) for k, v in lanes.items()}, "ghosts": ghosts,
                    "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut),
-                   "vision_read": len(vision), "title_cuts": title_cuts, "unjudged": unjudged,
+                   "vision_read": len(vision), "title_cuts": title_cuts,
+                   # what the board's top line says: design-titled roles, and how many vision has read
+                   "design": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None),
+                   "waiting": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None
+                                  and r["id"] not in vision), "unjudged": unjudged,
                    "active": sum(1 for r in pool_doc["jobs"] if r.get("active")),
                    "total": len(pool_doc["jobs"])},
         "lanes": lanes,

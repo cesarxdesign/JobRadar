@@ -213,7 +213,14 @@ def pick(jobs, done):
         rows = [j for j in jobs if j["id"] in want]
     else:   # --new: the freshest first, they are the ones worth applying to
         rows = [j for j in jobs if j.get("active") and judge.l1(j.get("title")) is None]
+        # Where a job is most likely hiding, first: roles nothing has ever
+        # judged; then roles the old judge cut on a job board's copy, which
+        # it could not trust; last the ones it cut on the employer's own
+        # text. Newest first within each.
+        old = json.load(open(f"{ROOT}/data/verdicts.json"))["jobs"] if os.path.exists(f"{ROOT}/data/verdicts.json") else {}
+        rank = lambda j: 0 if not old.get(j["id"], {}).get("judged") else 1 if "/" not in j["source"] else 2
         rows.sort(key=lambda j: j.get("posted") or j.get("first_seen") or "", reverse=True)
+        rows.sort(key=rank)
     if "--again" not in args:
         rows = [j for j in rows if j["id"] not in done]
     if "--limit" in args:
