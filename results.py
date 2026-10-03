@@ -200,7 +200,9 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
     jd = jd or {}
     lane_ids = [i for lane in lanes.values() for i in lane]
     return {
-        "jd": {i: jd[i][:14000] for i in lane_ids if jd.get(i)},
+        # The board no longer prints the description: he reads a posting on
+        # its own page, and the pane is for the verdict. So none is shipped.
+        "jd": {},
         "generated_at": pool_doc.get("generated_at"),
         "run_id": pool_doc.get("run_id"),
         "criteria": verdicts_doc.get("criteria"),

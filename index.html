@@ -803,12 +803,10 @@ function renderPane(){
     + (v.why&&v.why.length&&v.stage==="vision"?'<div class="why"><b>Read in the browser</b> · '+esc(v.text)+' · role '+esc(v.role||"?")+' · place '+esc(v.place||"?")
         +' · '+esc(v.confidence||"")+'<ul>'+v.why.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>':'')
     + (LOCAL&&v.shot?'<details class="why"><summary>the page as it was read</summary><img src="'+esc(v.shot)+'?t='+esc(v.read_at||"")+'" style="width:100%;border:1px solid var(--line);border-radius:8px;margin-top:8px" onerror="this.parentNode.remove()"></details>':'')
-    + '<div class="jd" id="jd"><span class="none">loading the description…</span></div>'
     + (v.why&&v.why.length&&v.stage!=="vision"?'<div class="why"><b>Judge said</b> · role '+esc(v.role)+' · place '+esc(v.place)
         +' · '+esc(v.confidence||"")+' confidence · read the '+esc(v.text||"posting")
         +'<ul>'+v.why.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>':'');
   $("pane").querySelectorAll(".flag").forEach(b=>b.onclick=()=>toggleFlag(r,b.dataset.k));
-  loadJD(r.id);
 }
 
 // ---------- Stats ----------
