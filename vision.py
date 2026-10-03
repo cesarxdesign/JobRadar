@@ -22,6 +22,7 @@ Three things the old judge got wrong and this does not do:
     python3 vision.py --ids a,b,c        # these
     python3 vision.py --fresh            # --new, minus roles the old judge cut on employer text
     python3 vision.py --limit 50         # at most this many
+    python3 vision.py --employer         # roles judged on a board's copy: try again for the company's page
     python3 vision.py --again            # re-read even if already read
 """
 import json, os, re, subprocess, sys, threading, time
@@ -300,9 +301,15 @@ def see(finder, rec):
     if not is_board:
         first, listed_gone = employer_page(br, rec, first)
     board, emp, found, tried = (first, None, None, []) if is_board else (None, first, None, [])
+    feed = None
     if is_board:
-        found, tried = finder.find(rec, board)
+        # a board whose page is behind a security screen still has a feed, and
+        # the feed names the link it sends applicants to: the way to the employer
+        feed = himalayas_feed(rec) if unread(board) else None
+        found, tried = finder.find(rec, board, hint=(feed or {}).get("apply"))
         emp = found and found["page"]
+    if is_board and not found and rec["id"] in PREV:
+        return {**PREV[rec["id"]], "looked": tried, "looked_at": time.strftime("%Y-%m-%dT%H:%M:%S")}   # still only the board's copy: nothing new to read
     keep = ("url", "status", "shot", "error")
     v = {"id": rec["id"], "at": time.strftime("%Y-%m-%dT%H:%M:%S"), "criteria": criteria.VERSION,
          "model": MODEL, "pool_url": rec["url"],
@@ -352,7 +359,7 @@ def see(finder, rec):
             page, text = fed, fed["text"]
             v["read"], v["read_url"], v["fed"] = "employer", fed["url"], True
     if (len(text) < 200 or WALL.search(text[:600])) and is_board and not found:
-        fed = himalayas_feed(rec)
+        fed = feed
         if fed and len(fed["text"]) > 400:
             page, text = fed, fed["text"]
             v["read"], v["read_url"], v["fed"] = "board", rec["url"], True
@@ -429,8 +436,17 @@ def save(out):
     os.replace(tmp, OUT)
 
 
+PREV = {}          # --employer: the verdicts already made on a board's copy, kept unless the employer's page turns up
+
+
 def pick(jobs, done):
     args = sys.argv
+    if "--employer" in args:           # roles judged on a board's copy: look for the company's own page again
+        rows = [j for j in jobs if j["id"] in done and done[j["id"]].get("read") == "board"
+                and done[j["id"]].get("stage") == "vision" and done[j["id"]].get("lane") in ("open", "portugal", "unsure")
+                and "/" not in (j.get("source") or "")]
+        PREV.update({j["id"]: done[j["id"]] for j in rows})
+        return rows
     if "--unread" in args:             # the roles filed "page could not be read", to try again
         rows = [j for j in jobs if j["id"] in done and (done[j["id"]].get("posting_open") == "unreadable"
                 or "could not be read" in str(done[j["id"]].get("reason")))]

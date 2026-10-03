@@ -7,13 +7,13 @@
  "counts": {
   "open": 181,
   "portugal": 13,
-  "unsure": 80,
+  "unsure": 81,
   "ghosts": 0,
   "cut": 1887,
   "closed": 372,
-  "vision_cut": 1742,
-  "agency": 29,
-  "not_read": 114,
+  "vision_cut": 1766,
+  "agency": 32,
+  "not_read": 86,
   "folded": 62,
   "vision_read": 2805,
   "title_cuts": 65999,
@@ -256,6 +256,7 @@
    "07c8557f439f4cc1",
    "11a43d3099d34592",
    "0b9d2e44ccfc45f0",
+   "0f5b2900f64b4b04",
    "aec592e69a924ab3",
    "4abd04037a454af4",
    "6e1e39a99c9543dc",
@@ -2739,8 +2740,31 @@
   "225c4aa396174730",
   "a3c6a81f360e487e",
   "49435d751a924291",
+  "9e60841f1ceb4598",
+  "98aacadacb9f4f2d",
+  "01ecade3486742a2",
+  "5949a788dfcb435f",
+  "6672fbc6e16c4e3b",
+  "8f831f7edee44660",
+  "9b33aa0d05254c7c",
+  "bd9d741134e341c5",
+  "8e10f8d1dbb048c5",
+  "ca37d5a46b23433e",
+  "3a5eb3710f2a441a",
+  "4af5b346bc704ba0",
   "9a9c4c2078bb401d",
+  "1c76f354736f4111",
+  "cffed1d1242e470e",
   "0bc9e27a95e74bde",
+  "2007a6edde0f4396",
+  "46dcbcc493684f3f",
+  "77b5e2635c6b409e",
+  "ff1fb4d4adc24a95",
+  "2451d2b96c92428d",
+  "9bef6bd41b774992",
+  "c02c4105f29c454b",
+  "efb2613481074dcd",
+  "50496d1ffa564f44",
   "0e714d50def74e82",
   "281dddc7a8fd4dda",
   "d9cf83df504e4ff9",
@@ -3027,6 +3051,7 @@
   "6d7002ca0e984d53",
   "5e4bdd397c6c4706",
   "eed09cf17f8e44fd",
+  "909e341ce7ad492c",
   "2e9e9013f5cd4f06",
   "456580fc4e9540fe",
   "c164e1b308764219",
@@ -4314,6 +4339,9 @@
  ],
  "agency": [
   "4144a68adad34eaf",
+  "cdf83d536b7447f5",
+  "b4e595ae12034f76",
+  "bc9a234974bb4414",
   "ced79d8aa56f46f6",
   "ed06d4e1b8dd460b",
   "cbaec4f8aced4de6",
@@ -4390,59 +4418,31 @@
   "b4b32df366b34a6a",
   "1b13be4e8efb46ed",
   "e42634e48a184a14",
-  "9e60841f1ceb4598",
-  "98aacadacb9f4f2d",
-  "cdf83d536b7447f5",
   "3b83bb216ed14c54",
   "bbaba6fc766c4453",
-  "01ecade3486742a2",
-  "5949a788dfcb435f",
   "704ba3a73b634926",
-  "6672fbc6e16c4e3b",
   "9b6e8cd5b96a4807",
-  "8f831f7edee44660",
-  "9b33aa0d05254c7c",
-  "bd9d741134e341c5",
   "756fbeb63d4348b8",
-  "8e10f8d1dbb048c5",
   "62dd3c7300234421",
   "ad5d25fdc4a74961",
-  "ca37d5a46b23433e",
-  "3a5eb3710f2a441a",
   "41f29e99238f41d4",
-  "4af5b346bc704ba0",
-  "1c76f354736f4111",
   "49cad2bd08b0495b",
-  "cffed1d1242e470e",
   "1dd970fb8a4a4b44",
   "db46fb2a08f94557",
   "8108f00a5b484da6",
   "af29a1af79044ff4",
-  "2007a6edde0f4396",
-  "46dcbcc493684f3f",
-  "77b5e2635c6b409e",
-  "ff1fb4d4adc24a95",
-  "2451d2b96c92428d",
-  "b4e595ae12034f76",
-  "bc9a234974bb4414",
   "9a6303d79ea345e3",
-  "9bef6bd41b774992",
   "0e85dc7c004845df",
-  "c02c4105f29c454b",
-  "efb2613481074dcd",
   "1e508858069145c4",
   "8e32ae7e3a394f67",
   "2e04a8691e924eb4",
   "5fa7ffe517c74101",
-  "50496d1ffa564f44",
   "8dd301e196774af1",
   "45ad22473e3e4643",
   "d5fc844e6dd94b6a",
   "2dc6c294a7774ee7",
   "b69d819df20f4807",
   "76c4740baebd481f",
-  "909e341ce7ad492c",
-  "0f5b2900f64b4b04",
   "5b2293ac64f34405",
   "fc019924790541f9",
   "441626aea64b4fe0",
@@ -109626,32 +109626,53 @@
    "title": "Product Design Specialist - Fully Remote | Upto $150/hr",
    "url": "https://himalayas.app/companies/mercor/jobs/product-design-specialist-fully-remote-upto-150-hr-2873166232",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to candidates in India despite being remote.",
+     "Portugal OUT · side panel: \"Remote · open to: India\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Product Design Specialist (UI / UX Design Expert)",
+     "company": "Mercor",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "India"
+     ],
+     "portugal_ok": "no",
+     "salary": "$80–$150/hour",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/product-design-specialist-fully-remote-upto-150-hr-2873166232",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to candidates in India despite being remote.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: India",
+    "signals": [
+     {
+      "quote": "Remote · open to: India",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9e60841f1ceb4598.jpg",
-    "read_at": "2026-10-03T20:39:40"
+    "read_at": "2026-10-03T21:39:50"
    }
   },
   {
@@ -109672,32 +109693,53 @@
    "title": "Senior Design Expert - UX Specialist",
    "url": "https://himalayas.app/companies/mercor/jobs/senior-design-expert-ux-specialist",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to Germany, so remote eligibility excludes Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Germany\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Design Expert - UX Specialist",
+     "company": "Mercor",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "$150–$250/hour",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/senior-design-expert-ux-specialist",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to Germany, so remote eligibility excludes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Germany",
+    "signals": [
+     {
+      "quote": "Remote · open to: Germany",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/98aacadacb9f4f2d.jpg",
-    "read_at": "2026-10-03T20:39:41"
+    "read_at": "2026-10-03T21:39:52"
    }
   },
   {
@@ -109718,32 +109760,55 @@
    "title": "Product Design Expert - UX Specialist",
    "url": "https://himalayas.app/companies/mercor/jobs/product-design-expert-ux-specialist",
    "verdict": {
-    "role": null,
-    "place": null,
+    "role": "yes",
+    "place": "no",
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "cut on place, but not sure of it · Side panel restricts to Germany while the body just says 'Location: Remote' with no country, a contradiction the posting doesn't resolve.",
+     "Portugal OUT · side panel: \"Remote · open to: Germany\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "medium",
+    "fields": {
+     "role": "Product Design Expert - UX Specialist",
+     "company": "mercor",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "unclear",
+     "salary": "$50–$125/hour",
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/product-design-expert-ux-specialist",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "cut on place, but not sure of it · Side panel restricts to Germany while the body just says 'Location: Remote' with no country, a contradiction the posting doesn't resolve.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Germany",
+    "signals": [
+     {
+      "quote": "Remote · open to: Germany",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/cdf83d536b7447f5.jpg",
-    "read_at": "2026-10-03T20:39:42"
+    "read_at": "2026-10-03T21:39:55",
+    "agency": true,
+    "hiring_for": null
    }
   },
   {
@@ -109856,32 +109921,59 @@
    "title": "EDC Clinical Trial Designer",
    "url": "https://himalayas.app/companies/lifelancer/jobs/edc-clinical-trial-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is clinical data/EDC form design (not product/UX/UI design) and the job is remote restricted to the United States.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Job Location: Durham, North Carolina, United States of America\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "EDC Clinical Trial Designer",
+     "company": "IQVIA",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$68,500.00 - $171,100.00",
+     "years_xp": 2,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/lifelancer/jobs/edc-clinical-trial-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is clinical data/EDC form design (not product/UX/UI design) and the job is remote restricted to the United States.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Job Location: Durham, North Carolina, United States of America",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/01ecade3486742a2.jpg",
-    "read_at": "2026-10-03T20:39:47"
+    "read_at": "2026-10-03T21:40:02"
    }
   },
   {
@@ -109902,32 +109994,65 @@
    "title": "Senior Product Designer - Mariana Tek",
    "url": "https://himalayas.app/companies/ourxplor/jobs/senior-product-designer-mariana-tek",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but explicitly restricted to residents of Canada, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Canada\"",
+     "Portugal OUT · footer or small print: \"To be considered for employment, you must be legally authorized to work in Canada. This applies to remote roles too, as we can only employ people who reside within Canada.\"",
+     "Portugal OUT · footer or small print: \"We're also not able to offer contractor arrangements or Employer of Record engagements for this position at this stage.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer - Mariana Tek",
+     "company": "Xplor",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/ourxplor/jobs/senior-product-designer-mariana-tek",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but explicitly restricted to residents of Canada, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "we can only employ people who reside within Canada",
+    "signals": [
+     {
+      "quote": "Remote · open to: Canada",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "To be considered for employment, you must be legally authorized to work in Canada. This applies to remote roles too, as we can only employ people who reside within Canada.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We're also not able to offer contractor arrangements or Employer of Record engagements for this position at this stage.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5949a788dfcb435f.jpg",
-    "read_at": "2026-10-03T20:39:50"
+    "read_at": "2026-10-03T21:40:06"
    }
   },
   {
@@ -109973,7 +110098,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/704ba3a73b634926.jpg",
-    "read_at": "2026-10-03T20:39:51"
+    "read_at": "2026-10-03T21:40:08"
    }
   },
   {
@@ -109994,32 +110119,77 @@
    "title": "User Experience (UX) Designer - Clearance Required",
    "url": "https://himalayas.app/companies/logistics-management-institute/jobs/user-experience-ux-designer-clearance-required",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to the United States and requires U.S. citizenship and an active Secret clearance.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"U.S. citizenship and ability to meet government security, suitability, and system-access requirements associated with the position.\"",
+     "Portugal OUT · opening paragraph: \"This position requires an active Secret clearance.\"",
+     "Portugal OUT · body: \"Active SECRET Clearance\"",
+     "Portugal OUT · footer or small print: \"Job Locations US-Remote\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "User Experience (UX) Designer - Clearance Required",
+     "company": "Logistics Management Institute",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 100,000 - 140,000",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/logistics-management-institute/jobs/user-experience-ux-designer-clearance-required",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to the United States and requires U.S. citizenship and an active Secret clearance.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "U.S. citizenship and ability to meet government security, suitability, and system-access requirements associated with the position.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position requires an active Secret clearance.",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Active SECRET Clearance",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Job Locations US-Remote",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6672fbc6e16c4e3b.jpg",
-    "read_at": "2026-10-03T20:39:52"
+    "read_at": "2026-10-03T21:40:12"
    }
   },
   {
@@ -110065,7 +110235,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9b6e8cd5b96a4807.jpg",
-    "read_at": "2026-10-03T20:39:57"
+    "read_at": "2026-10-03T21:40:16"
    }
   },
   {
@@ -110086,32 +110256,59 @@
    "title": "Facade Designer/Engineer (029-1238)",
    "url": "https://himalayas.app/companies/hunt-st/jobs/facade-designer-engineer-029-1238",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is restricted to Philippines-based candidates and is also facade engineering, not product/UX design.",
+     "Portugal OUT · side panel: \"Remote · open to: Philippines\"",
+     "Portugal OUT · body: \"​​Looking for Philippines-based candidates\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Facade Designer/Engineer",
+     "company": "Vertex (via Hunt St)",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Philippines"
+     ],
+     "portugal_ok": "no",
+     "salary": "$2,500 AUD / Monthly",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/hunt-st/jobs/facade-designer-engineer-029-1238",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is restricted to Philippines-based candidates and is also facade engineering, not product/UX design.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Philippines",
+    "signals": [
+     {
+      "quote": "Remote · open to: Philippines",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "​​Looking for Philippines-based candidates",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8f831f7edee44660.jpg",
-    "read_at": "2026-10-03T20:39:57"
+    "read_at": "2026-10-03T21:40:17"
    }
   },
   {
@@ -110132,32 +110329,61 @@
    "title": "UX Designer | Upto $125/hr",
    "url": "https://himalayas.app/companies/mercor/jobs/ux-designer-upto-125-hr-7725766578",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role restricted to candidates based in the US, UK, or Canada, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Based in the US, UK, or Canada.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "UX Designer",
+     "company": "Mercor",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States",
+      "United Kingdom",
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "$50-125/hour",
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/ux-designer-upto-125-hr-7725766578",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role restricted to candidates based in the US, UK, or Canada, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Based in the US, UK, or Canada.",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Based in the US, UK, or Canada.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9b33aa0d05254c7c.jpg",
-    "read_at": "2026-10-03T20:39:57"
+    "read_at": "2026-10-03T21:40:19"
    }
   },
   {
@@ -110178,32 +110404,59 @@
    "title": "Founding Designer",
    "url": "https://himalayas.app/companies/headstarter/jobs/founding-designer-7088382678",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to United States-based candidates, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Location: Remote (US-based preferred)\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Founding Designer",
+     "company": "Headstarter",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/headstarter/jobs/founding-designer-7088382678",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to United States-based candidates, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: Remote (US-based preferred)",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/bd9d741134e341c5.jpg",
-    "read_at": "2026-10-03T20:40:00"
+    "read_at": "2026-10-03T21:40:21"
    }
   },
   {
@@ -110249,7 +110502,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/756fbeb63d4348b8.jpg",
-    "read_at": "2026-10-03T20:40:02"
+    "read_at": "2026-10-03T21:40:27"
    }
   },
   {
@@ -110322,32 +110575,60 @@
    "title": "Staff UX/UI Designer",
    "url": "https://himalayas.app/companies/robots-pencils/jobs/staff-ux-ui-designer-1202964548",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is restricted to applicants in Colombia or Argentina only.",
+     "Portugal OUT · side panel: \"Remote · open to: Argentina\"",
+     "Portugal OUT · opening paragraph: \"APPLICATIONS FROM OUTSIDE COLOMBIA AND ARGENTINA WILL NOT BE CONSIDERED FOR THIS ROLE\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Staff UX/UI Designer",
+     "company": "Robots & Pencils",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Argentina",
+      "Colombia"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 6,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/robots-pencils/jobs/staff-ux-ui-designer-1202964548",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is restricted to applicants in Colombia or Argentina only.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "APPLICATIONS FROM OUTSIDE COLOMBIA AND ARGENTINA WILL NOT BE CONSIDERED FOR THIS ROLE",
+    "signals": [
+     {
+      "quote": "Remote · open to: Argentina",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "APPLICATIONS FROM OUTSIDE COLOMBIA AND ARGENTINA WILL NOT BE CONSIDERED FOR THIS ROLE",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8e10f8d1dbb048c5.jpg",
-    "read_at": "2026-10-03T20:40:02"
+    "read_at": "2026-10-03T21:40:30"
    }
   },
   {
@@ -110393,7 +110674,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/62dd3c7300234421.jpg",
-    "read_at": "2026-10-03T20:40:07"
+    "read_at": "2026-10-03T21:40:32"
    }
   },
   {
@@ -110439,7 +110720,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ad5d25fdc4a74961.jpg",
-    "read_at": "2026-10-03T20:40:07"
+    "read_at": "2026-10-03T21:40:34"
    }
   },
   {
@@ -110555,32 +110836,59 @@
    "title": "Lead Product Designer - Builder",
    "url": "https://himalayas.app/companies/highlevel/jobs/lead-product-designer-builder",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is explicitly restricted to India, not Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: India\"",
+     "Portugal OUT · body: \"Work in a 100% remote environment where thoughtful collaboration across US and India time zones is part of everyday work.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Lead Product Designer - Builder",
+     "company": "HighLevel",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "India"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 7,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/highlevel/jobs/lead-product-designer-builder",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is explicitly restricted to India, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: India",
+    "signals": [
+     {
+      "quote": "Remote · open to: India",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Work in a 100% remote environment where thoughtful collaboration across US and India time zones is part of everyday work.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ca37d5a46b23433e.jpg",
-    "read_at": "2026-10-03T20:40:08"
+    "read_at": "2026-10-03T21:40:38"
    }
   },
   {
@@ -110601,32 +110909,53 @@
    "title": "Design Director",
    "url": "https://himalayas.app/companies/valerie-group/jobs/design-director",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is explicitly 'Remote · open to: United Arab Emirates' only, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United Arab Emirates\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Design Director",
+     "company": "Valerie Group",
+     "seniority": "director",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Arab Emirates"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 8,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/valerie-group/jobs/design-director",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is explicitly 'Remote · open to: United Arab Emirates' only, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United Arab Emirates",
+    "signals": [
+     {
+      "quote": "Remote · open to: United Arab Emirates",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3a5eb3710f2a441a.jpg",
-    "read_at": "2026-10-03T20:40:10"
+    "read_at": "2026-10-03T21:40:40"
    }
   },
   {
@@ -110672,7 +111001,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/41f29e99238f41d4.jpg",
-    "read_at": "2026-10-03T20:40:12"
+    "read_at": "2026-10-03T21:40:43"
    }
   },
   {
@@ -110693,32 +111022,71 @@
    "title": "Design Lead",
    "url": "https://himalayas.app/companies/logistics-management-institute/jobs/design-lead",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role requires US citizenship and security clearance, restricted to United States - not available from Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"This position is anticipated to be majority remote, but with the ability to travel and visit the client's offices in Washington, D.C. as frequently as needed.\"",
+     "Portugal OUT · body: \"Applicants must meet eligibility requirements for a U.S. Government security clearance. Only US Citizens are eligible for a security clearance.\"",
+     "Portugal OUT · footer or small print: \"Job Locations US-Remote\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Design Lead",
+     "company": "Logistics Management Institute",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$122,209-$211,317",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/logistics-management-institute/jobs/design-lead",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role requires US citizenship and security clearance, restricted to United States - not available from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Only US Citizens are eligible for a security clearance... LMI will only consider applicants with security clearances or applicants who are eligible for security clearances",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position is anticipated to be majority remote, but with the ability to travel and visit the client's offices in Washington, D.C. as frequently as needed.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Applicants must meet eligibility requirements for a U.S. Government security clearance. Only US Citizens are eligible for a security clearance.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Job Locations US-Remote",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4af5b346bc704ba0.jpg",
-    "read_at": "2026-10-03T20:40:12"
+    "read_at": "2026-10-03T21:40:44"
    }
   },
   {
@@ -110865,32 +111233,66 @@
    "title": "EDC Clinical Trial Designer - FSP (Homebased - UK)",
    "url": "https://himalayas.app/companies/lifelancer/jobs/edc-clinical-trial-designer-fsp-homebased-uk",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "role is clinical data management/EDC design, not product/UX design, and location is UK/US with no Portugal eligibility",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Job Location: Livingston, West Lothian, United Kingdom\"",
+     "Portugal OUT · body: \"This role is not eligible for UK visa sponsorship\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "EDC Clinical Trial Designer - FSP (Homebased - UK)",
+     "company": "IQVIA",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom",
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 2,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/lifelancer/jobs/edc-clinical-trial-designer-fsp-homebased-uk",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "role is clinical data management/EDC design, not product/UX design, and location is UK/US with no Portugal eligibility",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Job Location: Livingston, West Lothian, United Kingdom",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Job Location: Livingston, West Lothian, United Kingdom",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This role is not eligible for UK visa sponsorship",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1c76f354736f4111.jpg",
-    "read_at": "2026-10-03T20:40:18"
+    "read_at": "2026-10-03T21:40:47"
    }
   },
   {
@@ -110936,7 +111338,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/49cad2bd08b0495b.jpg",
-    "read_at": "2026-10-03T20:40:18"
+    "read_at": "2026-10-03T21:40:47"
    }
   },
   {
@@ -110957,32 +111359,59 @@
    "title": "Digital Experience Design Director",
    "url": "https://himalayas.app/companies/slate-auto/jobs/digital-experience-design-director-4474580361",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but restricted to the United States, requiring US work authorization with no visa sponsorship.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Applicants must be authorized to work in the United States on a permanent basis. We are unable to offer visa sponsorship at this time.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Digital Experience Design Director",
+     "company": "Slate",
+     "seniority": "director",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "222,431.00 - 370,719.00 USD",
+     "years_xp": 15,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/slate-auto/jobs/digital-experience-design-director-4474580361",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but restricted to the United States, requiring US work authorization with no visa sponsorship.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Applicants must be authorized to work in the United States on a permanent basis.",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Applicants must be authorized to work in the United States on a permanent basis. We are unable to offer visa sponsorship at this time.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/cffed1d1242e470e.jpg",
-    "read_at": "2026-10-03T20:40:18"
+    "read_at": "2026-10-03T21:40:53"
    }
   },
   {
@@ -111097,7 +111526,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1dd970fb8a4a4b44.jpg",
-    "read_at": "2026-10-03T20:40:20"
+    "read_at": "2026-10-03T21:40:58"
    }
   },
   {
@@ -111143,7 +111572,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/db46fb2a08f94557.jpg",
-    "read_at": "2026-10-03T20:40:22"
+    "read_at": "2026-10-03T21:41:02"
    }
   },
   {
@@ -111189,7 +111618,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8108f00a5b484da6.jpg",
-    "read_at": "2026-10-03T20:40:22"
+    "read_at": "2026-10-03T21:41:07"
    }
   },
   {
@@ -111235,7 +111664,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/af29a1af79044ff4.jpg",
-    "read_at": "2026-10-03T20:40:28"
+    "read_at": "2026-10-03T21:41:08"
    }
   },
   {
@@ -111256,32 +111685,59 @@
    "title": "Director of Product Design, Sustainability Management",
    "url": "https://himalayas.app/companies/workiva/jobs/director-of-product-design-sustainability-management",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to candidates in the United States, which excludes Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Salary range in the US: $177,000.00 - $290,000.00\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Director of Product Design, Sustainability Management",
+     "company": "Workiva",
+     "seniority": "director",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 177,000 - 290,000",
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/workiva/jobs/director-of-product-design-sustainability-management",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to candidates in the United States, which excludes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Salary range in the US: $177,000.00 - $290,000.00",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/2007a6edde0f4396.jpg",
-    "read_at": "2026-10-03T20:40:28"
+    "read_at": "2026-10-03T21:41:11"
    }
   },
   {
@@ -111302,32 +111758,59 @@
    "title": "Practice Manager - RTSM Technical Design",
    "url": "https://himalayas.app/companies/lifelancer/jobs/practice-manager-rtsm-technical-design",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is a technical team-management/coding leadership position, not a design role, and the posting is explicitly US-only (Boston, MA / open to United States).",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Job Location: Boston, MA\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Practice Manager - RTSM Technical Design",
+     "company": "Veeva Systems",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$100,000 - $200,000",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/lifelancer/jobs/practice-manager-rtsm-technical-design",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is a technical team-management/coding leadership position, not a design role, and the posting is explicitly US-only (Boston, MA / open to United States).",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Job Location: Boston, MA",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/46dcbcc493684f3f.jpg",
-    "read_at": "2026-10-03T20:40:28"
+    "read_at": "2026-10-03T21:41:11"
    }
   },
   {
@@ -111348,32 +111831,60 @@
    "title": "Conversational Designer (Remote, Any Location, MA)",
    "url": "https://himalayas.app/companies/foundever/jobs/conversational-designer-remote-any-location-ma",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role requires eligibility to work in Morocco (panel says Madagascar), neither is Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Madagascar\"",
+     "Portugal OUT · body: \"This is a remote role, candidate must be located and eligible to work in Morocco.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Conversational Designer",
+     "company": "Foundever",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Morocco",
+      "Madagascar"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/foundever/jobs/conversational-designer-remote-any-location-ma",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role requires eligibility to work in Morocco (panel says Madagascar), neither is Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "candidate must be located and eligible to work in Morocco",
+    "signals": [
+     {
+      "quote": "Remote · open to: Madagascar",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This is a remote role, candidate must be located and eligible to work in Morocco.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/77b5e2635c6b409e.jpg",
-    "read_at": "2026-10-03T20:40:30"
+    "read_at": "2026-10-03T21:41:13"
    }
   },
   {
@@ -111394,32 +111905,59 @@
    "title": "Senior Designer (Principle Prototyping)",
    "url": "https://himalayas.app/companies/instrument/jobs/senior-designer-principle-prototyping",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is design/prototyping focused (yes), but location is explicitly restricted to United States.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"Contract compensation is determined by location, experience, and skillset. We have three regional pay ranges that are adjusted for cost of living (US1 +15%, US2 +7.5%, US3 Base)\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Designer (Principle Prototyping)",
+     "company": "Instrument",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$65-96 per hour",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/instrument/jobs/senior-designer-principle-prototyping",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is design/prototyping focused (yes), but location is explicitly restricted to United States.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Contract compensation is determined by location, experience, and skillset. We have three regional pay ranges that are adjusted for cost of living (US1 +15%, US2 +7.5%, US3 Base)",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ff1fb4d4adc24a95.jpg",
-    "read_at": "2026-10-03T20:40:32"
+    "read_at": "2026-10-03T21:41:18"
    }
   },
   {
@@ -111440,32 +111978,53 @@
    "title": "Visual Design Specialist - Fully Remote | Upto $150/hr",
    "url": "https://himalayas.app/companies/mercor/jobs/visual-design-specialist-fully-remote-upto-150-hr-7349064855",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is graphic/brand/visual design grading work (not product/UX/UI design) and location is restricted to United Kingdom.",
+     "Portugal OUT · side panel: \"Remote · open to: United Kingdom\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Visual Design Specialist / Design Expert",
+     "company": "Mercor",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "$80-150/hour",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/visual-design-specialist-fully-remote-upto-150-hr-7349064855",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is graphic/brand/visual design grading work (not product/UX/UI design) and location is restricted to United Kingdom.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United Kingdom",
+    "signals": [
+     {
+      "quote": "Remote · open to: United Kingdom",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/2451d2b96c92428d.jpg",
-    "read_at": "2026-10-03T20:40:33"
+    "read_at": "2026-10-03T21:41:19"
    }
   },
   {
@@ -111486,32 +112045,55 @@
    "title": "Product Design Expert - Vibecoding",
    "url": "https://himalayas.app/companies/mercor/jobs/product-design-expert-vibecoding",
    "verdict": {
-    "role": null,
-    "place": null,
+    "role": "yes",
+    "place": "no",
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "cut on place, but not sure of it · side panel restricts the role to Germany while the body just says Remote, creating a genuine contradiction over location",
+     "Portugal OUT · side panel: \"Remote · open to: Germany\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "medium",
+    "fields": {
+     "role": "Product Design Expert - Vibecoding",
+     "company": "Mercor",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "unclear",
+     "salary": "$70–$80/hour",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/product-design-expert-vibecoding",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "cut on place, but not sure of it · side panel restricts the role to Germany while the body just says Remote, creating a genuine contradiction over location",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Germany",
+    "signals": [
+     {
+      "quote": "Remote · open to: Germany",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b4e595ae12034f76.jpg",
-    "read_at": "2026-10-03T20:40:38"
+    "read_at": "2026-10-03T21:41:19",
+    "agency": true,
+    "hiring_for": null
    }
   },
   {
@@ -111532,32 +112114,55 @@
    "title": "Senior Design Expert - UX Focus",
    "url": "https://himalayas.app/companies/mercor/jobs/senior-design-expert-ux-focus",
    "verdict": {
-    "role": null,
-    "place": null,
+    "role": "yes",
+    "place": "no",
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "cut on place, but not sure of it · Side panel restricts this remote contractor role to Germany only, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Germany\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "medium",
+    "fields": {
+     "role": "Senior Design Expert - UX Focus",
+     "company": "Mercor",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "$150–$250/hour",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/senior-design-expert-ux-focus",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "cut on place, but not sure of it · Side panel restricts this remote contractor role to Germany only, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Germany",
+    "signals": [
+     {
+      "quote": "Remote · open to: Germany",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/bc9a234974bb4414.jpg",
-    "read_at": "2026-10-03T20:40:38"
+    "read_at": "2026-10-03T21:41:31",
+    "agency": true,
+    "hiring_for": null
    }
   },
   {
@@ -111603,7 +112208,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9a6303d79ea345e3.jpg",
-    "read_at": "2026-10-03T20:40:38"
+    "read_at": "2026-10-03T21:41:38"
    }
   },
   {
@@ -111624,32 +112229,53 @@
    "title": "Founding Designer (Code-First / 100% Remote)",
    "url": "https://himalayas.app/companies/neobim-gmbh/jobs/founding-designer-code-first-100-remote",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Location is explicitly 'Remote · open to: Germany', excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Germany\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Founding Designer (Code-First / 100% Remote)",
+     "company": "neoBIM GmbH",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/neobim-gmbh/jobs/founding-designer-code-first-100-remote",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Location is explicitly 'Remote · open to: Germany', excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Germany",
+    "signals": [
+     {
+      "quote": "Remote · open to: Germany",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9bef6bd41b774992.jpg",
-    "read_at": "2026-10-03T20:40:41"
+    "read_at": "2026-10-03T21:41:39"
    }
   },
   {
@@ -111695,7 +112321,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/0e85dc7c004845df.jpg",
-    "read_at": "2026-10-03T20:40:43"
+    "read_at": "2026-10-03T21:41:42"
    }
   },
   {
@@ -111716,32 +112342,53 @@
    "title": "Sr Product Designer",
    "url": "https://himalayas.app/companies/valu/jobs/sr-product-designer",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but explicitly restricted to Egypt, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Egypt\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Sr Product Designer",
+     "company": "valU",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Egypt"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": "Product Design Lead",
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/valu/jobs/sr-product-designer",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but explicitly restricted to Egypt, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Egypt",
+    "signals": [
+     {
+      "quote": "Remote · open to: Egypt",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c02c4105f29c454b.jpg",
-    "read_at": "2026-10-03T20:40:43"
+    "read_at": "2026-10-03T21:41:43"
    }
   },
   {
@@ -111762,32 +112409,59 @@
    "title": "Director, Digital Design",
    "url": "https://himalayas.app/companies/teach-for-america/jobs/director-digital-design",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is remote but restricted to candidates in the United States, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: United States\"",
+     "Portugal OUT · body: \"The applicable salary range for each U.S.-based role is based on where the employee works\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Director, Digital Design",
+     "company": "Teach For America",
+     "seniority": "director",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$74,300 - $115,000 (tiered by US location)",
+     "years_xp": 4,
+     "reports_to": "SMD, Creative Director - Design",
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/teach-for-america/jobs/director-digital-design",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is remote but restricted to candidates in the United States, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "The applicable salary range for each U.S.-based role is based on where the employee works",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/efb2613481074dcd.jpg",
-    "read_at": "2026-10-03T20:40:49"
+    "read_at": "2026-10-03T21:41:48"
    }
   },
   {
@@ -111833,7 +112507,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1e508858069145c4.jpg",
-    "read_at": "2026-10-03T20:40:49"
+    "read_at": "2026-10-03T21:41:49"
    }
   },
   {
@@ -111879,7 +112553,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8e32ae7e3a394f67.jpg",
-    "read_at": "2026-10-03T20:40:49"
+    "read_at": "2026-10-03T21:41:53"
    }
   },
   {
@@ -111925,7 +112599,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/2e04a8691e924eb4.jpg",
-    "read_at": "2026-10-03T20:40:51"
+    "read_at": "2026-10-03T21:41:56"
    }
   },
   {
@@ -111971,7 +112645,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5fa7ffe517c74101.jpg",
-    "read_at": "2026-10-03T20:40:53"
+    "read_at": "2026-10-03T21:41:59"
    }
   },
   {
@@ -111992,32 +112666,72 @@
    "title": "Senior Product Designer - Manage",
    "url": "https://himalayas.app/companies/instrumentl/jobs/senior-product-designer-manage",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"himalayas.app Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website \""
+     "Role is open only to Canada and the United States, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote · open to: Canada, United States\"",
+     "Portugal OUT · body: \"You can design from anywhere in the continental U.S. or Canada as long as you have 4+ hours of overlap with the Pacific time zone.\"",
+     "Portugal OUT · body: \"For US-based candidates, the target salary range for this role is $160,000 – $205,000 USD\"",
+     "Portugal OUT · body: \"For candidates based in Canada, compensation varies by province\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer - Manage",
+     "company": "Instrumentl",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada",
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 160,000 - 205,000",
+     "years_xp": 7,
+     "reports_to": "Head of Design",
+     "language": "English",
+     "posted": null
+    },
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/instrumentl/jobs/senior-product-designer-manage",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "reason": "Role is open only to Canada and the United States, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote · open to: Canada, United States",
+    "signals": [
+     {
+      "quote": "Remote · open to: Canada, United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "You can design from anywhere in the continental U.S. or Canada as long as you have 4+ hours of overlap with the Pacific time zone.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "For US-based candidates, the target salary range for this role is $160,000 – $205,000 USD",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "For candidates based in Canada, compensation varies by province",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/50496d1ffa564f44.jpg",
-    "read_at": "2026-10-03T20:40:53"
+    "read_at": "2026-10-03T21:42:03"
    }
   },
   {
@@ -112354,13 +113068,14 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "Page is only a list of job-opening cards (title, Remote, United Kingdom, Technology, Full time) with no actual job description page reachable - no single posting to evaluate.",
-     "Portugal OUT · under the title: \"United Kingdom\""
+     "page is only a list of job openings with no actual job description to read",
+     "Portugal OUT · under the title: \"United Kingdom\"",
+     "the page says: \"a list of job openings with no single job description for Senior Product Designer\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "low",
     "fields": {
      "role": "Senior Product Designer",
      "company": "C the Signs",
@@ -112378,13 +113093,11 @@
      "posted": "3 months ago"
     },
     "inferred": [
-     "remote",
-     "countries",
-     "seniority"
+     "remote"
     ],
     "read": "employer",
     "read_url": "https://apply.workable.com/c-the-signs/",
-    "reason": "Page is only a list of job-opening cards (title, Remote, United Kingdom, Technology, Full time) with no actual job description page reachable - no single posting to evaluate.",
+    "reason": "page is only a list of job openings with no actual job description to read",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -112399,7 +113112,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/8dd301e196774af1.employer.jpg",
-    "read_at": "2026-10-03T20:40:59"
+    "read_at": "2026-10-03T21:42:11"
    }
   },
   {
@@ -112647,18 +113360,19 @@
    "title": "Design Lead",
    "url": "https://apply.workable.com/j/1A198E56FD",
    "verdict": {
-    "role": "yes",
+    "role": "unclear",
     "place": "unclear",
     "lane": "unsure",
     "cut": false,
     "why": [
-     "This is the company's job index page listing several openings with only card summaries, not the individual job posting with a full description.",
-     "Portugal OUT · body: \"Design Lead ... Remote United States Technology Full time\""
+     "page is a list of job openings, not the single opened job description, so no detail beyond the card is available",
+     "Portugal OUT · body: \"Design Lead Posted 6 months ago Remote United States Technology Full time\"",
+     "the page says: \"Job Openings (page shows a list of multiple job cards, not a single opened posting)\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "low",
     "fields": {
      "role": "Design Lead",
      "company": "C the Signs",
@@ -112676,19 +113390,19 @@
      "posted": "6 months ago"
     },
     "inferred": [
-     "countries",
-     "remote"
+     "role",
+     "company"
     ],
     "read": "employer",
     "read_url": "https://apply.workable.com/c-the-signs/",
-    "reason": "This is the company's job index page listing several openings with only card summaries, not the individual job posting with a full description.",
+    "reason": "page is a list of job openings, not the single opened job description, so no detail beyond the card is available",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
     "quote": "Remote United States",
     "signals": [
      {
-      "quote": "Design Lead ... Remote United States Technology Full time",
+      "quote": "Design Lead Posted 6 months ago Remote United States Technology Full time",
       "where": "body",
       "says": "portugal_out"
      }
@@ -112696,7 +113410,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/45ad22473e3e4643.employer.jpg",
-    "read_at": "2026-10-03T20:40:59"
+    "read_at": "2026-10-03T21:42:17"
    }
   },
   {
@@ -112722,15 +113436,16 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is only a list of job openings with no single posting/description loaded for this role",
-     "Portugal OUT · footer or small print: \"Remote India Engineering\""
+     "the page read is a different job · Page is a list of all job openings, not the actual posting page, so there is no description to judge.",
+     "Portugal OUT · body: \"Remote India Engineering\"",
+     "the page says: \"This page is a list of job openings with no single job description open; no posting content for 'UI/UX Designer - AI-Native Healthcare SaaS' is shown.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "low",
+    "confidence": "high",
     "fields": {
-     "role": "UI/UX Designer - AI-Native Healthcare SaaS",
+     "role": "UI/UX Designer - AI-Native Healthcare SaaS | Zenara Health",
      "company": "Zenara Health",
      "seniority": "unstated",
      "remote": "unstated",
@@ -112745,13 +113460,10 @@
      "language": "English",
      "posted": "7 months ago"
     },
-    "inferred": [
-     "role",
-     "company"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/zenara-health/",
-    "reason": "page is only a list of job openings with no single posting/description loaded for this role",
+    "reason": "the page read is a different job · Page is a list of all job openings, not the actual posting page, so there is no description to judge.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -112759,14 +113471,14 @@
     "signals": [
      {
       "quote": "Remote India Engineering",
-      "where": "footer or small print",
+      "where": "body",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/d5fc844e6dd94b6a.employer.jpg",
-    "read_at": "2026-10-03T20:41:05"
+    "read_at": "2026-10-03T21:42:22"
    }
   },
   {
@@ -113321,20 +114033,23 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · page is a company careers listing of many openings, not a single job posting page, and the listed 'Product Designer' title does not match the pool's 'Product Designer (Well-Being Coach)'",
-     "the page says: \"Ukraine Remote (Any Location)\""
+     "the page read is a different job · Page is the company's full job-listing index, not a single posting with a description for this specific role.",
+     "Portugal OUT · body: \"Product Designer — Ukraine — Remote (Any Location)Full-Time\"",
+     "the page says: \"This page lists all current openings at BetterMe with no single job description; the specific posting 'Product Designer (Well-Being Coach)' does not appear as a distinct page.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "low",
     "fields": {
-     "role": "Product Designer (Well-Being Coach)",
+     "role": "Product Designer",
      "company": "BetterMe",
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "Ukraine"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -113345,16 +114060,22 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://betterme.breezy.hr/",
-    "reason": "the page read is a different job · page is a company careers listing of many openings, not a single job posting page, and the listed 'Product Designer' title does not match the pool's 'Product Designer (Well-Being Coach)'",
+    "reason": "the page read is a different job · Page is the company's full job-listing index, not a single posting with a description for this specific role.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "Ukraine Remote (Any Location)",
-    "signals": [],
+    "quote": "Product Designer - Ukraine - Remote (Any Location)",
+    "signals": [
+     {
+      "quote": "Product Designer — Ukraine — Remote (Any Location)Full-Time",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/2dc6c294a7774ee7.employer.jpg",
-    "read_at": "2026-10-03T20:41:07"
+    "read_at": "2026-10-03T21:42:26"
    }
   },
   {
@@ -115309,7 +116030,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · Page is the general Tabby careers job-listing page; the specific posting 'Senior Product Designer, Tabby Shop' is not present among the 55 listed jobs, so there is no single posting to read."
+     "the page read is a different job · This is the general Tabby careers job-board listing page, not a posting for 'Senior Product Designer, Tabby Shop' - that title does not appear anywhere in the 55 listed jobs."
     ],
     "judged": true,
     "text": "employer's page",
@@ -115332,7 +116053,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://tabby.pinpointhq.com/",
-    "reason": "the page read is a different job · Page is the general Tabby careers job-listing page; the specific posting 'Senior Product Designer, Tabby Shop' is not present among the 55 listed jobs, so there is no single posting to read.",
+    "reason": "the page read is a different job · This is the general Tabby careers job-board listing page, not a posting for 'Senior Product Designer, Tabby Shop' - that title does not appear anywhere in the 55 listed jobs.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -115341,7 +116062,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/b69d819df20f4807.employer.jpg",
-    "read_at": "2026-10-03T20:41:07"
+    "read_at": "2026-10-03T21:42:27"
    }
   },
   {
@@ -126254,8 +126975,8 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · this is the company's general careers landing page, not an actual Product Designer job posting - no description, requirements, or specific listing exists here",
-     "the page says: \"View open jobs\""
+     "the page read is a different job · This is the generic 'Work With Us' company page with a link to open jobs, not an actual Product Designer job posting - no description, requirements, or specific role details exist.",
+     "the page says: \"Explore the remote job opportunities at Automattic. Work from anywhere\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -126278,16 +126999,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://automattic.com/work-with-us/",
-    "reason": "the page read is a different job · this is the company's general careers landing page, not an actual Product Designer job posting - no description, requirements, or specific listing exists here",
+    "reason": "the page read is a different job · This is the generic 'Work With Us' company page with a link to open jobs, not an actual Product Designer job posting - no description, requirements, or specific role details exist.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "View open jobs",
+    "quote": "Explore the remote job opportunities at Automattic. Work from anywhere",
     "signals": [],
     "if_employer": null,
     "found_by": "apply",
     "shot": "data/shots/76c4740baebd481f.employer.jpg",
-    "read_at": "2026-10-03T20:41:15"
+    "read_at": "2026-10-03T21:42:31"
    }
   },
   {
@@ -150056,13 +150777,14 @@
    "title": "AI Experience Designer, France - BCG X",
    "url": "https://www.welcometothejungle.com/en/companies/boston-consulting-group/jobs/ai-experience-designer-france-bcg-x_paris",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is an empty shell with only BCG site navigation, footer, and a chatbot widget - no actual job title, side panel, or description is rendered.",
-     "the page says: \"No job description, side panel, or posting content is present on the page - only site navigation, footer, and a chatbot widget.\""
+     "Posting is tied to Paris, France with no remote or wider location statement anywhere on the page.",
+     "Portugal OUT · under the title: \"Location\nParis, France\"",
+     "Portugal OUT · under the title: \"AI Experience Designer, France - BCG X\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -150070,31 +150792,46 @@
     "confidence": "high",
     "fields": {
      "role": "AI Experience Designer, France - BCG X",
-     "company": "Boston Consulting Group",
+     "company": "Boston Consulting Group (BCG X)",
      "seniority": "unstated",
-     "remote": "unstated",
+     "remote": "onsite",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "France"
+     ],
+     "portugal_ok": "no",
      "salary": null,
-     "years_xp": null,
+     "years_xp": 2,
      "reports_to": null,
-     "language": "unstated",
+     "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "remote"
+    ],
     "read": "employer",
     "read_url": "https://careers.bcg.com/global/en/job/BCG1US57751EXTERNALENGLOBAL/AI-Experience-Designer-France-BCG-X?utm_source=indeed&utm_medium=phenom-feeds",
-    "reason": "The page is an empty shell with only BCG site navigation, footer, and a chatbot widget - no actual job title, side panel, or description is rendered.",
-    "open": "unreadable",
+    "reason": "Posting is tied to Paris, France with no remote or wider location statement anywhere on the page.",
+    "open": "yes",
     "language_ok": true,
-    "language": "unstated",
-    "quote": "",
-    "signals": [],
+    "language": "English",
+    "quote": "Paris, France",
+    "signals": [
+     {
+      "quote": "Location\nParis, France",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "AI Experience Designer, France - BCG X",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": "apply",
     "shot": "data/shots/909e341ce7ad492c.employer.jpg",
-    "read_at": "2026-10-03T20:41:32"
+    "read_at": "2026-10-03T21:42:47"
    }
   },
   {
@@ -156002,20 +156739,20 @@
    "title": "Lead Product Designer (Care Access Network)",
    "url": "https://www.welcometothejungle.com/en/companies/zocdoc/jobs/lead-product-designer-care-access-network_new-york_7i4casd5",
    "verdict": {
-    "role": "unclear",
+    "role": "yes",
     "place": "unclear",
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is only the application form with no job description or location details, so it cannot be judged as a real posting",
-     "the page says: \"What is your state of residence?*\""
+     "the page does not say where · page shows only the application form with no job description, so role is judged from title but place cannot be determined",
+     "the page says: \"no job description is present on this page to state a location\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "low",
     "fields": {
-     "role": "Lead Product Designer (Care Access Network)",
+     "role": "Lead Product Designer, Care Access Network",
      "company": "Zocdoc",
      "seniority": "lead",
      "remote": "unstated",
@@ -156029,22 +156766,20 @@
      "posted": null
     },
     "inferred": [
-     "role",
-     "company",
-     "seniority"
+     "language"
     ],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/zocdoc/jobs/8010748",
-    "reason": "page is only the application form with no job description or location details, so it cannot be judged as a real posting",
-    "open": "unreadable",
+    "reason": "the page does not say where · page shows only the application form with no job description, so role is judged from title but place cannot be determined",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "What is your state of residence?*",
+    "quote": "no job description is present on this page to state a location",
     "signals": [],
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/0f5b2900f64b4b04.employer.jpg",
-    "read_at": "2026-10-03T20:41:20"
+    "read_at": "2026-10-03T21:42:38"
    }
   },
   {
@@ -167338,8 +168073,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is only an application form linking out to the real job description, which is not present here",
-     "the page says: \"This application is for the Senior Product Designer role at CutTime. If you haven't already, you can view the job description here.\"",
+     "page is an application form linking out to the actual job description, which is not present here",
      "the page says: \"This application is for the Senior Product Designer role at CutTime. If you haven't already, you can view the job description here.\""
     ],
     "judged": true,
@@ -167363,16 +168097,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://cuttimehq.notion.site/3baeede14d2d80dd8b56d98e9aa035d6",
-    "reason": "page is only an application form linking out to the real job description, which is not present here",
+    "reason": "page is an application form linking out to the actual job description, which is not present here",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "This application is for the Senior Product Designer role at CutTime. If you haven't already, you can view the job description here.",
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/5b2293ac64f34405.employer.jpg",
-    "read_at": "2026-10-03T20:41:21"
+    "read_at": "2026-10-03T21:42:39"
    }
   },
   {
@@ -168479,9 +169213,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · Page is a job list/search results with the target posting failing to load - no actual posting content present.",
-     "the page says: \"Failed to load position details\"",
-     "the page says: \"Failed to load position details\""
+     "the page read is a different job · page is a search results listing of 269 jobs with no single posting for Senior UX/UI Designer at Fortive"
     ],
     "judged": true,
     "text": "employer's page",
@@ -168504,16 +169236,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://fortive.eightfold.ai/careers?start=0&pid=&sort_by=hot",
-    "reason": "the page read is a different job · Page is a job list/search results with the target posting failing to load - no actual posting content present.",
+    "reason": "the page read is a different job · page is a search results listing of 269 jobs with no single posting for Senior UX/UI Designer at Fortive",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "Failed to load position details",
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": "apply",
     "shot": "data/shots/fc019924790541f9.employer.jpg",
-    "read_at": "2026-10-03T20:41:24"
+    "read_at": "2026-10-03T21:42:43"
    }
   },
   {
@@ -185172,7 +185904,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/441626aea64b4fe0.jpg",
-    "read_at": "2026-10-03T20:41:39"
+    "read_at": "2026-10-03T21:42:50"
    }
   },
   {
@@ -185519,7 +186251,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4a7e31efef274366.jpg",
-    "read_at": "2026-10-03T20:41:45"
+    "read_at": "2026-10-03T21:42:51"
    }
   },
   {
@@ -185565,7 +186297,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4da0bbe605544e4b.jpg",
-    "read_at": "2026-10-03T20:41:48"
+    "read_at": "2026-10-03T21:42:55"
    }
   },
   {
@@ -186725,7 +187457,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · Page is the company's careers overview listing all openings, not a single posting for Senior Product Designer (Dil Mil); that specific role does not appear anywhere in the list."
+     "the page read is a different job · Page is the company's general openings/landing page listing dozens of unrelated jobs; no posting for 'Senior Product Designer (Dil Mil)' appears anywhere on it."
     ],
     "judged": true,
     "text": "employer's page",
@@ -186748,7 +187480,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://social-discovery-ventures.breezy.hr/",
-    "reason": "the page read is a different job · Page is the company's careers overview listing all openings, not a single posting for Senior Product Designer (Dil Mil); that specific role does not appear anywhere in the list.",
+    "reason": "the page read is a different job · Page is the company's general openings/landing page listing dozens of unrelated jobs; no posting for 'Senior Product Designer (Dil Mil)' appears anywhere on it.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -186757,7 +187489,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/e134cf3edc894fc4.employer.jpg",
-    "read_at": "2026-10-03T20:41:47"
+    "read_at": "2026-10-03T21:42:56"
    }
   },
   {
@@ -201908,8 +202640,9 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · page is a 404 error / job board listing with no single job description, not an actual posting",
-     "the page says: \"error=404 / page shows only a job board listing, no single posting content\""
+     "page is a 404 job-search listing with no actual posting content to read",
+     "Portugal OUT · body: \"Product Designer, LHH CTM / United States\"",
+     "the page says: \"page address contains error=404; page shows only a careers search/listing page with no single job description\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -201921,7 +202654,9 @@
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "United States"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -201932,16 +202667,22 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.jobvite.com/careers/lhhcareers/jobs?error=404",
-    "reason": "the page read is a different job · page is a 404 error / job board listing with no single job description, not an actual posting",
+    "reason": "page is a 404 job-search listing with no actual posting content to read",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Product Designer, LHH CTM — United States",
+    "signals": [
+     {
+      "quote": "Product Designer, LHH CTM / United States",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/85827f0469d7423f.employer.jpg",
-    "read_at": "2026-10-03T20:41:53"
+    "read_at": "2026-10-03T21:42:57"
    }
   },
   {
@@ -219488,7 +220229,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c27cf73a476a4a50.jpg",
-    "read_at": "2026-10-03T20:42:52"
+    "read_at": "2026-10-03T21:43:00"
    }
   },
   {
@@ -219604,7 +220345,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is a job board listing with only a title and 'Remote' tag, no actual job description to evaluate",
+     "page is only the job listing index with no actual job description, just a title and 'Remote' tag",
      "the page says: \"Remote\""
     ],
     "judged": true,
@@ -219628,7 +220369,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/carrotfertility",
-    "reason": "page is a job board listing with only a title and 'Remote' tag, no actual job description to evaluate",
+    "reason": "page is only the job listing index with no actual job description, just a title and 'Remote' tag",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -219637,7 +220378,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/a4a49cc200cc4590.employer.jpg",
-    "read_at": "2026-10-03T20:42:55"
+    "read_at": "2026-10-03T21:42:57"
    }
   },
   {
@@ -220324,7 +221065,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/0f5cbdc6cb01456d.jpg",
-    "read_at": "2026-10-03T20:43:05"
+    "read_at": "2026-10-03T21:43:04"
    }
   },
   {
@@ -220701,7 +221442,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f89acad6546d4fbe.jpg",
-    "read_at": "2026-10-03T20:43:10"
+    "read_at": "2026-10-03T21:43:06"
    }
   },
   {
@@ -220851,8 +221592,8 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is the full job board listing, not the individual posting's description, so it cannot be read as a single job posting",
-     "Portugal OUT · body: \"Human Design Program Lead (F/H/X) ... Delivery Operations • Paris, France • Full time • Hybrid\""
+     "Page is the full Kraken jobs listing, not the individual posting page for this role, so there is no description to confirm role or location.",
+     "Portugal OUT · body: \"Human Design Program Lead (F/H/X) • Delivery Operations • Paris, France • Full time • Hybrid\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -220874,17 +221615,20 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "remote",
+     "portugal_ok"
+    ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/krakentech",
-    "reason": "page is the full job board listing, not the individual posting's description, so it cannot be read as a single job posting",
+    "reason": "Page is the full Kraken jobs listing, not the individual posting page for this role, so there is no description to confirm role or location.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "Human Design Program Lead (F/H/X) Delivery Operations • Paris, France • Full time • Hybrid",
+    "quote": "Delivery Operations • Paris, France • Full time • Hybrid",
     "signals": [
      {
-      "quote": "Human Design Program Lead (F/H/X) ... Delivery Operations • Paris, France • Full time • Hybrid",
+      "quote": "Human Design Program Lead (F/H/X) • Delivery Operations • Paris, France • Full time • Hybrid",
       "where": "body",
       "says": "portugal_out"
      }
@@ -220892,7 +221636,7 @@
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/2236669737a6444d.employer.jpg",
-    "read_at": "2026-10-03T20:43:17"
+    "read_at": "2026-10-03T21:43:14"
    }
   },
   {
@@ -246681,7 +247425,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is only the application form with no job description or location content, so it cannot be read as a posting"
+     "page is only the application form with no job description, side panel, or location stated"
     ],
     "judged": true,
     "text": "employer's page",
@@ -246704,16 +247448,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/zocdoc/jobs/8082068",
-    "reason": "page is only the application form with no job description or location content, so it cannot be read as a posting",
+    "reason": "page is only the application form with no job description, side panel, or location stated",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "",
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b0a039130a6b4c84.jpg",
-    "read_at": "2026-10-03T20:45:37"
+    "read_at": "2026-10-03T21:43:07"
    }
   },
   {
@@ -246742,7 +247486,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page shows only the application form with no job description, so role and location cannot be judged, though visa and US-state questions suggest a US-based role",
+     "page is only an application form with no job title block, side panel, or description - no actual posting content to judge.",
      "Portugal OUT · body: \"Do you now, or will you in the future, require sponsorship for employment visa status (e.g., H-1B visa status, etc.) to work legally for Zocdoc, Inc. in the United States?\"",
      "Portugal OUT · body: \"What is your state of residence?\""
     ],
@@ -246764,14 +247508,17 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "role",
+     "company"
+    ],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/zocdoc/jobs/7612536",
-    "reason": "page shows only the application form with no job description, so role and location cannot be judged, though visa and US-state questions suggest a US-based role",
+    "reason": "page is only an application form with no job title block, side panel, or description - no actual posting content to judge.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "What is your state of residence?",
+    "quote": "Do you now, or will you in the future, require sponsorship for employment visa status ... to work legally for Zocdoc, Inc. in the United States?",
     "signals": [
      {
       "quote": "Do you now, or will you in the future, require sponsorship for employment visa status (e.g., H-1B visa status, etc.) to work legally for Zocdoc, Inc. in the United States?",
@@ -246787,7 +247534,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f85635c5262b40c4.jpg",
-    "read_at": "2026-10-03T20:45:46"
+    "read_at": "2026-10-03T21:43:08"
    }
   },
   {
@@ -252225,7 +252972,9 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "page is only the application form, no job description or location content is present"
+     "page is an empty application form with no job description, side panel, or location content",
+     "the page says: \"no job description or location information present on the page\"",
+     "the page says: \"Apply for this job (page contains only an application form, no job description or posting content)\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -252248,16 +252997,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/beyondtrust/jobs/8240671",
-    "reason": "page is only the application form, no job description or location content is present",
+    "reason": "page is an empty application form with no job description, side panel, or location content",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": null,
+    "quote": "no job description or location information present on the page",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c1b17fee522348a2.jpg",
-    "read_at": "2026-10-03T20:50:52"
+    "read_at": "2026-10-03T21:43:09"
    }
   },
   {

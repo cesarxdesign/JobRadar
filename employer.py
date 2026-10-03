@@ -115,8 +115,9 @@ class Finder:
                 page = par
         return {"page": page, "how": how, "gone": is_gone(page)}
 
-    def find(self, rec, board):
-        """The employer's posting for a board row, or None. `tried` says where it looked."""
+    def find(self, rec, board, hint=None):
+        """The employer's posting for a board row, or None. `tried` says where it looked.
+        `hint` is a link the board itself gives as where to apply (its feed's applicationLink)."""
         tried, rid = [], rec["id"]
         co, title = squash(rec["company"]), words(rec["title"])
 
@@ -137,6 +138,12 @@ class Finder:
         links = [a for a in (board or {}).get("links") or []]
         host = lambda a: urllib.parse.urlparse(a["href"]).hostname or ""
 
+        # 1b the link the board's own feed sends applicants to
+        if hint and not NOT_EMPLOYER.search(urllib.parse.urlparse(hint).hostname or ""):
+            r = self.judge(rec, self.load(hint, rid), "feed", tried)
+            if r:
+                return r, tried
+
         # 2 a link on the board's page: the hiring system first, then the company's site
         ats = [a for a in links if ATS.search(host(a)) and not NOT_EMPLOYER.search(host(a))]
         for a in ats[:3]:
@@ -144,11 +151,12 @@ class Finder:
             if r:
                 return r, tried
 
-        # Steps 3 and 4 are off. The search engine answers one query and then
-        # asks if we are a robot, so step 3 found almost nothing while costing
-        # most of a role's time (a run of 1,571 roles was heading for six
-        # hours). discover.py does this job properly now: it finds a company's
-        # own hiring board once, and step 1 picks the posting up from the pool.
+        # Step 3, the search engine, is off: it answers one query and then asks
+        # if we are a robot. Everything else is still tried, in order - the
+        # pool, the hiring-system link on the board's page, the link the board
+        # itself sends applicants to, the company's own site and its careers
+        # page, the Apply button. A board's copy is only what is left when all
+        # of those have failed (his call: always try for the company's page).
         if not SEARCH:
             hits = []
         # 3 search: the exact title and the company
@@ -168,7 +176,7 @@ class Finder:
                 sites.append(page)
 
         # 4 the company's own site: a link on the board, or what search turned up
-        for a in links if SEARCH else []:
+        for a in links:
             if co and co in squash(host(a)) and not NOT_EMPLOYER.search(host(a)) and len(sites) < 3:
                 sites.append(self.load(a["href"], rid))
         for sp in sites[:3]:
