@@ -147,6 +147,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab" data-lane="closed" title="the page itself says the job is closed or gone">Closed<span class="n" id="c-closed"></span></button>
   <button class="tab" data-lane="vcut" title="read in the browser and cut, with the words that decided it">Cut<span class="n" id="c-vcut"></span></button>
   <button class="tab" data-lane="reviewed" hidden title="what you re-laned or flagged in this batch">Reviewed<span class="n" id="c-reviewed"></span></button>
+  <button class="tab rr" data-lane="before" hidden title="roles that pass, at companies your inbox says you have applied to before">Applied before<span class="n" id="c-before"></span></button>
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
@@ -405,6 +406,7 @@ function toggleIncorrect(r){
 }
 function toggleFav(id){RR.favorites=fav(id)?RR.favorites.filter(x=>x!==id):[...RR.favorites,id];writeRR();render();}
 const LANES=["open","portugal","unsure"];
+const PASS=["open","portugal"];
 const laneOf=r=>LANES.find(l=>(DATA.lanes[l]||[]).includes(r.id));
 const stateOf=r=>routing(r.id)||laneOf(r)||"cut";
 
@@ -576,8 +578,10 @@ function pool(){
     rows=laneIds(LANE==="vcut"?"cut":"closed").map(roleById).filter(r=>r && !routing(r.id));
   else if(LANE==="old69")
     rows=["open","portugal","unsure"].flatMap(laneIds)
-      .map(roleById).filter(r=>r && !routing(r.id) && isOld(r));
-  else rows=laneIds(LANE).map(roleById).filter(r=>r && !routing(r.id) && !isOld(r));
+      .map(roleById).filter(r=>r && !routing(r.id) && isOld(r) && !(laneOf(r)!=="unsure"&&beenBefore(r)));
+  else if(LANE==="before")
+    rows=["open","portugal"].flatMap(laneIds).map(roleById).filter(r=>r && !routing(r.id) && beenBefore(r));
+  else rows=laneIds(LANE).map(roleById).filter(r=>r && !routing(r.id) && !isOld(r) && !(PASS.includes(LANE)&&beenBefore(r)));
   rows=rows.filter(matches);
   if(LANE!=="favorites") return sortRows(rows);
   const order=["open","portugal","unsure","applied","discarded","cut"];
@@ -598,7 +602,7 @@ function counts(){
   }
   for(const l of ["open","portugal","unsure"]){
     const n=laneIds(l).map(roleById)
-      .filter(r=>r&&!routing(r.id)&&!isOld(r)&&matches(r)).length;
+      .filter(r=>r&&!routing(r.id)&&!isOld(r)&&matches(r)&&!(PASS.includes(l)&&beenBefore(r))).length;
     $("c-"+l).textContent=n||"";
   }
   for(const l of ["closed","vcut"])
@@ -609,6 +613,7 @@ function counts(){
     for(const l of ["applied","discarded"])
       $("c-"+l).textContent=(DATA.roles.filter(r=>r.active&&routing(r.id)===l)
         .concat(decided(l)).filter(matches)).length||"";
+    $("c-before").textContent=PASS.flatMap(laneIds).map(roleById).filter(r=>r&&!routing(r.id)&&beenBefore(r)&&matches(r)).length||"";
     $("c-incorrect").textContent=(RR.incorrect||[]).length||"";
     $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)&&matches(r)).length||"";
   }
@@ -661,6 +666,7 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
+      + (RR&&!routing(r.id)&&beenBefore(r)?'<span class="tag" style="border-style:dashed" title="'+esc(historyOf(r).apps.map(a=>(a.role||"role not named")+" · "+(a.sent||"?")+(a.rejected?" · rejected "+a.rejected:"")).concat(historyOf(r).mails.map(m=>m.subject+" · "+m.date)).join("\n"))+'">✉ applied here before</span>':'')
       + (openNote(r.id)?'<span class="tag" style="border-style:dashed" title="'+esc(openNote(r.id).text)+'">✎ note</span>':'')
       + (REVIEW&&flagOf(r.id)?'<span class="tag n" style="border-style:dashed">wrong: '+esc(flagOf(r.id).wrong.join(", "))+'</span>':'')
       + (retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
@@ -753,6 +759,44 @@ function placeTag(r){
 // (or in) Portugal - so the box names which one it failed, then the words on
 // the page that say so. Anything else that kept it out of Open (only the
 // board's copy was read, the page would not load) is named as what it is.
+// His history with a company. Companies reject and repost, and a posting
+// comes back under a slightly different title, so "have I applied here?" is
+// asked of the company, not the posting: every application his inbox proves
+// (RR.applications, from the email sweep), every "applied" he clicked on
+// another of its roles, and any other email that names it (RR.inbox).
+// A role that would be Open at such a company is not hidden and not marked
+// applied - one application is one posting - it moves to its own lane,
+// "Applied before", with the history beside it, and he decides.
+const CO_JUNK=/\b(app|inc|llc|ltd|gmbh|labs|foundation|bank|ai|cro|careers|social|ug|intelligent|cloud|communications|life|technologies|software|group|the)\b/gi;
+const coKey=n=>String(n||"").toLowerCase().replace(/careers$/,"").replace(CO_JUNK," ").replace(/[^a-z0-9]/g,"").replace(/\d+$/,"");
+function historyOf(r){
+  if(!RR) return {apps:[],mails:[]};
+  const keys=new Set([coKey(r.company),coKey(((r.verdict||{}).fields||{}).company)].filter(k=>k.length>=3));
+  const apps=(RR.applications||[]).filter(a=>keys.has(coKey(a.company)))
+    .map(a=>({role:a.role,sent:a.applied,approx:a.approx,rejected:a.rejected,withdrawn:a.withdrawn,
+              callback:(a.callbacks||[]).filter(c=>!c.auto).map(c=>c.date)[0],tids:a.tids||[]}));
+  const tids=new Set(apps.flatMap(a=>a.tids));
+  for(const d of RR.decisions) if(d.decision==="applied"&&d.id!==r.id&&!d.by&&keys.has(coKey(d.company))
+      &&!apps.some(a=>a.role===d.title)) apps.push({role:d.title,sent:String(d.at||"").slice(0,10),clicked:true,tids:[]});
+  const mails=[...keys].flatMap(k=>(RR.inbox||{})[k]||[]).filter(m=>!tids.has(m.tid));
+  return {apps:apps.sort((a,b)=>String(b.sent||"").localeCompare(String(a.sent||""))),mails};
+}
+// an application his inbox proves, or an email from the company that reads like one
+const beenBefore=r=>{const h=historyOf(r);return h.apps.length>0||h.mails.some(m=>m.kind==="application");};
+function historyBox(r){
+  const h=historyOf(r);
+  if(!h.apps.length&&!h.mails.length) return "";
+  const mail=t=>'<a style="color:var(--dim)" target="_blank" rel="noopener" href="https://mail.google.com/mail/?authuser=cesarxdesign@gmail.com#all/'+esc(t)+'">✉</a>';
+  return '<div class="notes"><div class="fk">Your history with this company</div>'
+    +h.apps.map(a=>'<div class="past"><div>'+esc(a.role||"role not named in the email")+'</div><div class="when">'
+        +(a.clicked?'you marked it applied ':'applied '+(a.approx?'around ':''))+esc(a.sent||"?")
+        +(a.callback?' · <span style="color:var(--good)">callback '+esc(a.callback)+'</span>':'')
+        +(a.rejected?' · <span style="color:var(--bad)">rejected '+esc(a.rejected)+'</span>':'')
+        +(a.withdrawn?' · you withdrew '+esc(a.withdrawn):'')
+        +(!a.rejected&&!a.callback&&!a.clicked?' · no reply':'')+' '+a.tids.map(mail).join(" ")+'</div></div>').join("")
+    +h.mails.map(m=>'<div class="past"><div>'+esc(m.subject)+'</div><div class="when">'+esc(m.date)+' · '+esc(m.from)+' '+mail(m.tid)+'</div></div>').join("")
+    +'</div>';
+}
 // Notes: anything he wants looked at later, on any role in any lane. One
 // open note per role, saved in the routing file with what the board showed at
 // the time. A note that has been read is marked reviewed (with the answer,
@@ -856,6 +900,7 @@ function renderPane(){
   $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
     +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
     + whyBox(r)
+    + historyBox(r)
     + notesBox(r)
     + (r.gone?'<div class="why">This posting is no longer on the board - the company took it '
         +'down, or the judge has not re-read it yet. Your decision is kept.</div>':'')
@@ -1046,6 +1091,10 @@ async function pullNotes(){
     const n=(RR.notes||[]).find(n=>n.id===x.id&&n.at===x.at);
     if(n&&x.reviewed&&(!n.reviewed||n.answer!==x.answer)){n.reviewed=x.reviewed;n.answer=x.answer;changed=true;}
   }
+  // the sweep's findings are written from outside too: his applications, and
+  // the inbox search by company. The file's copy of those is always the truth.
+  for(const k of ["applications","inbound","inbox"])
+    if(ext[k]&&JSON.stringify(ext[k])!==JSON.stringify(RR[k])){RR[k]=ext[k];changed=true;}
   return changed;
 }
 window.addEventListener("focus",async()=>{try{if(await pullNotes()) render();}catch(e){}});
