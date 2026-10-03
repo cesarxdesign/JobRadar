@@ -39,3 +39,7 @@ data/battery/
 
 # One-off harvests of a board, kept for reference
 data/remoteio_harvest.json
+
+# The night run's own log
+data/nightly.log
+data/nightly.launchd.log
