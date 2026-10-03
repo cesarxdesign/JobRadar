@@ -86,6 +86,11 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .verdict ul{margin:0 0 0 18px;padding:0;color:var(--dim)}
 .verdict li{margin:2px 0}
 .verdict .in{color:var(--good)}.verdict .out{color:var(--warn)}
+.verdict .flag{flex:none;background:none;border:1px solid var(--line);color:var(--dim);border-radius:6px;padding:1px 8px;font-size:11px;cursor:pointer}
+.verdict .flag:hover{border-color:var(--warn);color:var(--warn)}
+.verdict .flag.on{background:var(--warn);border-color:var(--warn);color:#fff}
+.verdict.ok{border-color:var(--line)}
+.verdict .k.ok{color:var(--good);border-color:var(--good)}
 .verdict .sum{margin-top:10px;color:var(--dim);font-size:12px}
 [hidden]{display:none!important}
 .stats{padding:20px 24px;max-width:1100px}
@@ -127,6 +132,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab" data-lane="old69">69+<span class="n" id="c-old69"></span></button>
   <button class="tab" data-lane="closed" title="the page itself says the job is closed or gone">Closed<span class="n" id="c-closed"></span></button>
   <button class="tab" data-lane="vcut" title="read in the browser and cut, with the words that decided it">Cut<span class="n" id="c-vcut"></span></button>
+  <button class="tab" data-lane="reviewed" hidden title="what you re-laned or flagged in this batch">Reviewed<span class="n" id="c-reviewed"></span></button>
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
@@ -298,9 +304,32 @@ function reviewBatch(){
   if(RR.review_batch.length) writeRR();
   return RR.review_batch;
 }
+// A flag is him saying which part of the reasoning was wrong - the role
+// call, the location call, the source - without having to say what the
+// right lane is. One role can carry several. While he is still on a role its
+// flags can change, so it stays put (HOLD) until he clicks another one; then
+// it goes to Reviewed.
+let HOLD=null;
+const flagOf=id=>RR&&(RR.flags||[]).find(x=>x.id===id);
+const isMoved=r=>!!retagOf(r.id)||(!!flagOf(r.id)&&HOLD!==r.id);
+function toggleFlag(r,k){
+  const v=r.verdict||{};
+  let f=flagOf(r.id);
+  if(!f){f={id:r.id,at:new Date().toISOString(),wrong:[],label:labelOf(r),company:r.company,title:r.title,url:r.url,
+            read:v.read,read_url:v.read_url,role:v.role,place:v.place,reason:v.reason,signals:v.signals,quote:v.quote};
+         RR.flags=[...(RR.flags||[]),f];}
+  f.wrong=f.wrong.includes(k)?f.wrong.filter(x=>x!==k):[...f.wrong,k];
+  f.at=new Date().toISOString();
+  if(!f.wrong.length) RR.flags=RR.flags.filter(x=>x.id!==r.id);
+  HOLD=r.id;
+  writeRR();render();
+}
+function reviewedRows(){
+  return reviewBatch().map(roleById).filter(r=>r&&isMoved(r)&&matches(r));
+}
 function reviewRows(l){
   const rows=reviewBatch().map(roleById).filter(r=>r&&groupOf(r)===l&&matches(r));
-  return {fresh:sortRows(rows.filter(r=>!retagOf(r.id))),moved:rows.filter(r=>retagOf(r.id))};
+  return {fresh:sortRows(rows.filter(r=>!isMoved(r)))};
 }
 // A retag is him overruling the filter on one role: "you called this Unsure,
 // it is Open". It is kept with what the filter said and why, it moves the
@@ -326,7 +355,8 @@ function laneIds(l){
 }
 function reviewDone(){
   const batch=reviewBatch().map(roleById).filter(Boolean), at=new Date().toISOString();
-  RR.confirmed=[...(RR.confirmed||[]),...batch.filter(r=>!retagOf(r.id)).map(r=>({id:r.id,label:labelOf(r),at}))];
+  HOLD=null;
+  RR.confirmed=[...(RR.confirmed||[]),...batch.filter(r=>!isMoved(r)).map(r=>({id:r.id,label:labelOf(r),at}))];
   RR.reviewed=[...(RR.reviewed||[]),...batch.map(r=>r.id)];
   RR.review_batch=[];
   writeRR();SEL=null;render();$("list").scrollTop=0;
@@ -518,10 +548,8 @@ function pool(){
   if(INBATCH) return BATCH.roles.filter(r=>r.bucket===BUCKET).filter(matches)
     .sort((a,b)=>a.n-b.n);
   let rows;
-  if(REVIEW&&REVIEW_TABS.includes(LANE)){
-    const v=reviewRows(TAB_LANE(LANE));
-    return v.fresh.concat(v.moved);
-  }
+  if(REVIEW&&LANE==="reviewed") return reviewedRows();
+  if(REVIEW&&REVIEW_TABS.includes(LANE)) return reviewRows(TAB_LANE(LANE)).fresh;
   if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id))
       .concat((RR?RR.favorites:[]).filter(id=>!DATA.roles.some(r=>r.id===id)).map(ghost).filter(Boolean));
   else if(LANE==="applied"||LANE==="discarded")
@@ -546,6 +574,7 @@ function counts(){
   if(REVIEW&&!INBATCH){
     // in review a lane's number is what is still waiting to be looked at
     for(const l of REVIEW_TABS) $("c-"+l).textContent=reviewRows(TAB_LANE(l)).fresh.length||"";
+    $("c-reviewed").textContent=reviewedRows().length||"";
     return;
   }
   if(INBATCH){
@@ -573,6 +602,7 @@ function counts(){
 
 function render(){
   if(!DATA) return;
+  if(HOLD&&SEL!==HOLD) HOLD=null;
   counts();
   // Stats is not a lane of roles: it takes the whole page, and only exists
   // while the routing file is attached, because every number in it is his.
@@ -586,24 +616,24 @@ function render(){
     const all=(DATA.lanes[LANE]||[]).length;
     fc.textContent = (Q||Object.values(F).some(Boolean)) && all ? rows.length+" of "+all : "";
   }
-  const inReview=REVIEW&&!INBATCH&&REVIEW_TABS.includes(LANE);
+  const inReview=REVIEW&&!INBATCH&&(REVIEW_TABS.includes(LANE)||LANE==="reviewed");
   if(inReview){
-    const all=reviewBatch().map(roleById).filter(Boolean), moved=all.filter(r=>retagOf(r.id)).length;
+    const all=reviewBatch().map(roleById).filter(Boolean), moved=all.filter(isMoved).length;
     const h=document.createElement("div");h.className="acts";h.style.cssText="margin:0 0 10px;align-items:center";
     h.innerHTML=(all.length?'<button id="rv-next" class="on" style="cursor:pointer">Done with these '+all.length+' → next batch</button>':'')
-      +'<span style="color:var(--dim);font-size:12px">'+(all.length?'this batch: '+all.length+' roles across Open, Portugal, Unsure and Cut · move only the wrong ones · '
-      +moved+' moved':'nothing left to review')+'</span>';
+      +'<span style="color:var(--dim);font-size:12px">'+(all.length?'this batch: '+all.length+' roles · re-lane or flag only the wrong ones; they go to Reviewed · '
+      +moved+' in Reviewed':'nothing left to review')+'</span>';
     $("list").appendChild(h);
     if(all.length) $("rv-next").onclick=reviewDone;
   }
   let section=null;
   for(const r of rows){
-    const head=INBATCH?null:inReview?(retagOf(r.id)?"moved":null):(LANE==="favorites"?stateOf(r):null);
+    const head=INBATCH?null:(LANE==="favorites"?stateOf(r):null);
     if(head&&head!==section){
       section=head;
       const h=document.createElement("div");h.className=INBATCH?"bucket":"sect";
       h.textContent=INBATCH?(head==="pass"?"passed the judge":"cut by the judge")
-        :head==="moved"?"Reviewed · you moved these out of "+LANE_NAME[TAB_LANE(LANE)]+" · they now sit in the lane you chose":head;
+        :head;
       $("list").appendChild(h);
     }
     const el=document.createElement("div");
@@ -617,6 +647,7 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
+      + (REVIEW&&flagOf(r.id)?'<span class="tag n" style="border-style:dashed">wrong: '+esc(flagOf(r.id).wrong.join(", "))+'</span>':'')
       + (retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
           +esc(LANE_NAME[retagOf(r.id).from]||retagOf(r.id).from)+' → '+esc(LANE_NAME[retagOf(r.id).to])+'</span>':'')
       + (stampOf(r.id)?'<span class="tag" title="what the filter called this role when you acted on it" style="border-style:dashed">was '
@@ -707,36 +738,43 @@ function placeTag(r){
 // board's copy was read, the page would not load) is named as what it is.
 function whyBox(r){
   const v=r.verdict||{}, lab=labelOf(r);
-  if(!["unsure","cut","closed"].includes(lab)||v.stage!=="vision"&&!v.read_at) return "";
-  const q=(k,h)=>'<div class="vq"><span class="k">'+k+'</span><span class="h">'+esc(h)+'</span></div>';
+  if(!v.read_at&&v.stage!=="vision") return "";
+  if(!REVIEW&&!["unsure","cut","closed"].includes(lab)) return "";
+  const f=flagOf(r.id), on=k=>f&&f.wrong.includes(k);
+  const q=(k,h,ok)=>'<div class="vq">'+(REVIEW?'<button class="flag'+(on(k)?" on":"")+'" data-k="'+k+'" title="this part of the reasoning is wrong">'
+      +(on(k)?"✗ wrong":"wrong?")+'</button>':'')+'<span class="k'+(ok?" ok":"")+'">'+k+'</span><span class="h">'+esc(h)+'</span></div>';
   const sig=(v.signals||[]).map(x=>'<li><span class="'+(x.says==="portugal_in"?"in":"out")+'">'
       +(x.says==="portugal_in"?"Portugal in":"Portugal out")+'</span> · '+esc(x.where||"")+' · “'+esc(x.quote||"")+'”</li>').join("");
   const quote=v.quote?'<li>“'+esc(v.quote)+'”</li>':"";
-  let out="";
-  if(lab==="closed"||v.open==="no")
-    return '<div class="verdict">'+q("Closed","The page says this job is no longer open")
-      +'<ul>'+(v.why||[]).filter(w=>/page says|employer|answered/.test(w)).map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>';
   const sum=v.reason?'<div class="sum">Reader’s summary: '+esc(v.reason)+'</div>':"";
+  const wrap=(x,ok)=>'<div class="verdict'+(ok?" ok":"")+'">'+x+sum+'</div>';
+  if(lab==="closed"||v.open==="no")
+    return wrap(q("closed","The page says this job is no longer open")
+      +'<ul>'+(v.why||[]).filter(w=>/page says|employer|answered/.test(w)).map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul>');
   // when the page itself was the problem there is no verdict on role or place to show
   if(/different job/.test(v.reason||""))
-    return '<div class="verdict">'+q("Page","The page that was read is not this job, so nothing was decided")+sum+'</div>';
+    return wrap(q("page","The page that was read is not this job, so nothing was decided"));
   if(v.open==="unreadable"||/could not be read in the browser/.test(v.reason||""))
-    return '<div class="verdict">'+q("Page","The page could not be read, so nothing was decided")
-      +(v.quote?'<ul><li>the page showed: “'+esc(v.quote)+'”</li></ul>':"")+sum+'</div>';
+    return wrap(q("page","The page could not be read, so nothing was decided")
+      +(v.quote?'<ul><li>the page showed: “'+esc(v.quote)+'”</li></ul>':""));
   const shaky=/not sure of it|two readings disagree/.test(v.reason||"");
-  if(v.language_ok===false) out+=q("Language","The posting is written in "+(v.language||"another language"));
-  if(v.role==="no") out+=q("Role","Not a role you would take");
-  else if(v.role==="unclear") out+=q("Role","Could not tell what the role is");
-  if(v.place==="no") out+=q("Location",shaky?"Probably cannot be done from Portugal, but the reading was not certain":"Cannot be done from Portugal")+'<ul>'+(sig||quote)+'</ul>';
+  let out="";
+  if(v.language_ok===false) out+=q("language","The posting is written in "+(v.language||"another language"));
+  // the two questions, always both in review, so either can be called wrong
+  if(v.role==="no") out+=q("role","Not a role you would take");
+  else if(v.role==="unclear") out+=q("role","Could not tell what the role is");
+  else if(REVIEW) out+=q("role","A role you would take",true);
+  if(v.place==="no") out+=q("location",shaky?"Probably cannot be done from Portugal, but the reading was not certain":"Cannot be done from Portugal")+'<ul>'+(sig||quote)+'</ul>';
   else if(v.place==="unclear"){
     const both=(v.signals||[]).some(x=>x.says==="portugal_in")&&(v.signals||[]).some(x=>x.says==="portugal_out");
-    out+=q("Location",both?"The page says both: Portugal in, and Portugal out":"The page does not clearly say where")+'<ul>'+(sig||quote)+'</ul>';
+    out+=q("location",both?"The page says both: Portugal in, and Portugal out":"The page does not clearly say where")+'<ul>'+(sig||quote)+'</ul>';
   }
+  else if(REVIEW) out+=q("location",v.place==="pt_onsite"?"In Portugal, at an office":"Can be done from Portugal",true)+'<ul>'+(sig||quote)+'</ul>';
   if(lab==="unsure"&&v.read==="board"&&v.role!=="no"&&v.place!=="no")
-    out+=q("Source","Only the job board’s copy was read; the employer’s own posting was not found")
+    out+=q("source","Only the job board’s copy was read; the employer’s own posting was not found")
       +'<ul><li>On the board’s copy it reads as '+esc(LANE_NAME[v.if_employer]||v.if_employer||"a pass")+'. Boards mislabel location, so it is not trusted for Open.</li></ul>';
-  if(!out) out=q(lab==="cut"?"Cut":"Unsure","See the reader’s summary");
-  return '<div class="verdict">'+out+sum+'</div>';
+  else if(REVIEW) out+=q("source",v.read==="employer"?"Read on the employer’s own page":"Read on the job board’s copy",v.read==="employer");
+  return wrap(out,["open","portugal"].includes(lab));
 }
 function renderPane(){
   const r=SEL&&roleById(SEL);
@@ -769,6 +807,7 @@ function renderPane(){
     + (v.why&&v.why.length&&v.stage!=="vision"?'<div class="why"><b>Judge said</b> · role '+esc(v.role)+' · place '+esc(v.place)
         +' · '+esc(v.confidence||"")+' confidence · read the '+esc(v.text||"posting")
         +'<ul>'+v.why.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>':'');
+  $("pane").querySelectorAll(".flag").forEach(b=>b.onclick=()=>toggleFlag(r,b.dataset.k));
   loadJD(r.id);
 }
 
@@ -999,9 +1038,10 @@ function setReview(on){
   // Four lanes in review. Closed is a fact about the page, not a judgement
   // to re-lane; the rest are for applying.
   document.querySelectorAll(".tab:not(.bt)").forEach(t=>{
-    const keep=REVIEW_TABS.includes(t.dataset.lane)||t.dataset.lane==="favorites";
-    t.hidden=on?!keep:(t.classList.contains("rr")&&!RR);});
-  if(on&&!REVIEW_TABS.includes(LANE)){
+    const keep=REVIEW_TABS.includes(t.dataset.lane)||["favorites","reviewed"].includes(t.dataset.lane);
+    t.hidden=on?!keep:(t.dataset.lane==="reviewed"||(t.classList.contains("rr")&&!RR));});
+  HOLD=null;
+  if(on?!REVIEW_TABS.includes(LANE):LANE==="reviewed"){
     LANE="open";
     document.querySelectorAll(".tab:not(.bt)").forEach(x=>x.classList.toggle("on",x.dataset.lane===LANE));
   }
