@@ -267,13 +267,33 @@ let REVIEW=false;
 const REVIEW_N=50;
 const LANE_NAME={open:"Open",portugal:"Portugal",unsure:"Unsure",closed:"Closed",cut:"Cut"};
 const TAB_LANE=l=>l==="vcut"?"cut":l;
-const REVIEW_TABS=["open","portugal","unsure","closed","vcut"];
+// Review is 50 roles, not the whole board: a batch drawn across the three
+// outcomes that matter - Open (with Portugal), Unsure, Cut - newest read
+// first. Cut gets the most seats because a wrong cut is the one mistake he
+// never sees otherwise. The batch is kept in the routing file until he
+// finishes it, so it is the same 50 if he comes back to it.
+const REVIEW_TABS=["open","unsure","vcut"];
+const REVIEW_SEATS={open:15,unsure:15,cut:20};
+const groupOf=r=>{const l=labelOf(r);return l==="portugal"?"open":l;};
 const baseIds=l=>l==="closed"?DATA.closed||[]:l==="cut"?DATA.vcut||[]:DATA.lanes[l]||[];
+function reviewBatch(){
+  const live=new Set(DATA.roles.map(r=>r.id)), seen=new Set(RR.reviewed||[]);
+  let ids=(RR.review_batch||[]).filter(i=>live.has(i)&&!seen.has(i));
+  if(ids.length) return ids;
+  const free=l=>(l==="open"?baseIds("open").concat(baseIds("portugal")):baseIds(l)).map(roleById)
+    .filter(r=>r&&!seen.has(r.id)&&!routing(r.id)&&!retagOf(r.id))
+    .sort((a,b)=>String((b.verdict||{}).read_at||"").localeCompare(String((a.verdict||{}).read_at||"")));
+  const by={open:free("open"),unsure:free("unsure"),cut:free("cut")}, take=[];
+  for(const l in by) take.push(...by[l].splice(0,REVIEW_SEATS[l]));
+  // a lane that ran short gives its seats to the others
+  for(const l of ["cut","unsure","open"]) take.push(...by[l].splice(0,REVIEW_N-take.length));
+  RR.review_batch=take.slice(0,REVIEW_N).map(r=>r.id);
+  if(RR.review_batch.length) writeRR();
+  return RR.review_batch;
+}
 function reviewRows(l){
-  const seen=new Set(RR.reviewed||[]);
-  const rows=baseIds(l).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r));
-  return {fresh:sortRows(rows.filter(r=>!retagOf(r.id)&&!seen.has(r.id))),
-          moved:rows.filter(r=>retagOf(r.id))};
+  const rows=reviewBatch().map(roleById).filter(r=>r&&groupOf(r)===l&&matches(r));
+  return {fresh:sortRows(rows.filter(r=>!retagOf(r.id))),moved:rows.filter(r=>retagOf(r.id))};
 }
 // A retag is him overruling the filter on one role: "you called this Unsure,
 // it is Open". It is kept with what the filter said and why, it moves the
@@ -298,9 +318,10 @@ function laneIds(l){
   return base.filter(i=>!moved.has(i)).concat(RR.retags.filter(x=>x.to===l).map(x=>x.id));
 }
 function reviewDone(){
-  const batch=reviewRows(TAB_LANE(LANE)).fresh.slice(0,REVIEW_N), at=new Date().toISOString();
-  RR.confirmed=[...(RR.confirmed||[]),...batch.map(r=>({id:r.id,label:labelOf(r),at}))];
+  const batch=reviewBatch().map(roleById).filter(Boolean), at=new Date().toISOString();
+  RR.confirmed=[...(RR.confirmed||[]),...batch.filter(r=>!retagOf(r.id)).map(r=>({id:r.id,label:labelOf(r),at}))];
   RR.reviewed=[...(RR.reviewed||[]),...batch.map(r=>r.id)];
+  RR.review_batch=[];
   writeRR();SEL=null;render();$("list").scrollTop=0;
 }
 // What the filter called a role: its lane, or Closed / Cut.
@@ -492,7 +513,7 @@ function pool(){
   let rows;
   if(REVIEW&&REVIEW_TABS.includes(LANE)){
     const v=reviewRows(TAB_LANE(LANE));
-    return v.fresh.slice(0,REVIEW_N).concat(v.moved);
+    return v.fresh.concat(v.moved);
   }
   if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id))
       .concat((RR?RR.favorites:[]).filter(id=>!DATA.roles.some(r=>r.id===id)).map(ghost).filter(Boolean));
@@ -518,7 +539,6 @@ function counts(){
   if(REVIEW&&!INBATCH){
     // in review a lane's number is what is still waiting to be looked at
     for(const l of REVIEW_TABS) $("c-"+l).textContent=reviewRows(TAB_LANE(l)).fresh.length||"";
-    $("c-old69").textContent="";
     return;
   }
   if(INBATCH){
@@ -561,13 +581,13 @@ function render(){
   }
   const inReview=REVIEW&&!INBATCH&&REVIEW_TABS.includes(LANE);
   if(inReview){
-    const v=reviewRows(TAB_LANE(LANE)), n=Math.min(REVIEW_N,v.fresh.length), name=LANE_NAME[TAB_LANE(LANE)];
+    const all=reviewBatch().map(roleById).filter(Boolean), moved=all.filter(r=>retagOf(r.id)).length;
     const h=document.createElement("div");h.className="acts";h.style.cssText="margin:0 0 10px;align-items:center";
-    h.innerHTML=(n?'<button id="rv-next" class="on" style="cursor:pointer">These '+n+' belong in '+name+' → next</button>':'')
-      +'<span style="color:var(--dim);font-size:12px">'+(n?'move only the ones that do not belong here · ':'nothing left to review in '+name+' · ')
-      +v.fresh.length+' to review · '+v.moved.length+' moved</span>';
+    h.innerHTML=(all.length?'<button id="rv-next" class="on" style="cursor:pointer">Done with these '+all.length+' → next batch</button>':'')
+      +'<span style="color:var(--dim);font-size:12px">'+(all.length?'this batch: '+all.length+' roles across Open, Unsure and Cut · move only the wrong ones · '
+      +moved+' moved':'nothing left to review')+'</span>';
     $("list").appendChild(h);
-    if(n) $("rv-next").onclick=reviewDone;
+    if(all.length) $("rv-next").onclick=reviewDone;
   }
   let section=null;
   for(const r of rows){
@@ -923,8 +943,11 @@ function setReview(on){
   const b=$("review");
   b.className="route"+(on?" on":"");
   b.textContent=on?"Review · on":"Review";
-  // 69+ is a shelf for applying, not a label the filter gave; in review its roles sit in their own lanes
-  document.querySelector('.tab[data-lane="old69"]').hidden=on;
+  // Three lanes in review. Portugal sits inside Open; Closed is a fact about
+  // the page, not a judgement to re-lane; the rest are for applying.
+  document.querySelectorAll(".tab:not(.bt)").forEach(t=>{
+    const keep=REVIEW_TABS.includes(t.dataset.lane)||t.dataset.lane==="favorites";
+    t.hidden=on?!keep:(t.classList.contains("rr")&&!RR);});
   if(on&&!REVIEW_TABS.includes(LANE)){
     LANE="open";
     document.querySelectorAll(".tab:not(.bt)").forEach(x=>x.classList.toggle("on",x.dataset.lane===LANE));
