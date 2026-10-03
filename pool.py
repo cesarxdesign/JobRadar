@@ -692,10 +692,12 @@ def from_jazzhr(slug, cfg=None):
 
 
 def from_manatal(slug, cfg=None):
-    base = f"https://www.careers-page.com/{slug}"
+    # Two shapes: www.careers-page.com/<slug>, with /job/<code> links, and a
+    # company's own <name>.careers-page.com, with /jobs/<uuid> links (Mamo).
+    base = f"https://{slug}/" if "." in slug else f"https://www.careers-page.com/{slug}"
     html = get_text(base)
     seen = set()
-    for m in re.finditer(r'<a\b[^>]*href="([^"]*/job/[A-Za-z0-9]+)"[^>]*>(.*?)</a>', html, re.S | re.I):
+    for m in re.finditer(r'<a\b[^>]*href="([^"]*/jobs?/[A-Za-z0-9-]+)"[^>]*>(.*?)</a>', html, re.S | re.I):
         u = urllib.parse.urljoin(base, m.group(1))
         if u in seen:
             continue

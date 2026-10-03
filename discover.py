@@ -32,7 +32,8 @@ FOUND = f"{ROOT}/data/discovered.json"        # every probe's answer, so a compa
 PLATFORMS = [("ashby", "{s}"), ("greenhouse", "{s}"), ("lever", "{s}"), ("workable", "{s}"),
              ("recruitee", "{s}"), ("teamtailor", "{s}.teamtailor.com"), ("smartrecruiters", "{s}"),
              ("bamboohr", "{s}"), ("breezy", "{s}"), ("join", "{s}"), ("personio", "{s}.jobs.personio.com"),
-             ("rippling", "{s}"), ("pinpoint", "{s}"), ("jazzhr", "{s}")]
+             ("rippling", "{s}"), ("pinpoint", "{s}"), ("jazzhr", "{s}"),
+             ("manatal", "{s}.careers-page.com"), ("manatal", "{s}")]
 JUNK = re.compile(r"\b(inc|llc|ltd|limited|gmbh|sa|s\.a\.|lda|plc|co|corp|corporation|company|group|the)\b\.?", re.I)
 
 
