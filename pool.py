@@ -1320,41 +1320,23 @@ AGGREGATORS.update({"superjobs": agg_superjobs, "euremotejobs": agg_euremotejobs
 
 
 def agg_remoteio():
-    """remote.io: JSON, 142 live design roles at time of writing, full
-    description in the payload. `region`/`regionLabel` are theirs, not the
-    posting's - dropped on purpose (see above). locationType renders on the
-    page as Location Type, so it stays."""
-    for page in range(1, 40):
-        # remote.io rate-limits by IP and answers 403 once it has had enough.
-        # At limit=100 the whole design category is two calls, so this only
-        # ever bites when something else has been hitting the host.
-        for attempt in range(4):
-            try:
-                d = get_json(f"https://remote.io/api/v2/jobs?category=design&limit=100&page={page}")
-                break
-            except urllib.error.HTTPError as e:
-                if e.code not in (403, 429) or attempt == 3:
-                    raise
-                time.sleep(5 * (attempt + 1))
-        rows = d.get("data") or []
-        for j in rows:
-            locs = [l.get("name") for l in (j.get("locations") or []) if l.get("name")]
-            yield {"company": j.get("companyName") or j.get("displayName"),
-                   "title": j.get("jobTitle"),
-                   "url": j.get("jobUrl") or j.get("applicationUrl"),
-                   "apply_url": j.get("applicationUrl"),
-                   "location": ", ".join(locs) or j.get("location") or "",
-                   "workplace": j.get("locationType"),
-                   "remote": True if j.get("locationType") == "remote" else None,
-                   "salary": j.get("salaryRange"),
-                   "posted": j.get("publishedAt"), "updated": j.get("updatedAt"),
-                   "jd_text": strip_html(j.get("description"))}
-        pg = d.get("pagination") or {}
-        if not rows or page >= (pg.get("totalPages") or 1):
-            break
-
-
-WOODY_RE = re.compile(r"<item>(.*?)</item>", re.S)
+    """remote.io shows its listings to a person's browser and nothing to a
+    script, so the pool cannot fetch it. tabs.py reads the listings off the
+    tab he leaves open in Chrome and saves them; this hands them to the pool.
+    A file older than three days means the tab has not been open: the source
+    fails, and its roles are carried forward, not dropped."""
+    path = ROOT / "data" / "remoteio_rows.json"
+    if not path.exists():
+        raise FileNotFoundError("no remote.io listings saved: open the tab in Chrome")
+    d = json.loads(path.read_text())
+    if d.get("at", "") < (datetime.now() - timedelta(days=3)).strftime("%Y-%m-%dT%H:%M:%S"):
+        raise RuntimeError("the remote.io listings are more than three days old")
+    for r in d.get("rows") or []:
+        tail = r.get("text", "")
+        for part in (r.get("title") or "", r.get("company") or ""):
+            tail = tail.replace(part, " ", 1)
+        yield {"company": re.sub(r"[®™]", "", r.get("company") or "").strip(), "title": r.get("title"),
+               "url": r.get("url"), "location": " ".join(tail.split())[:120] or None, "remote": True}
 
 
 def agg_woodyjobs():

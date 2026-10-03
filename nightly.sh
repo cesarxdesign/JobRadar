@@ -3,9 +3,11 @@
 # fresh postings by morning. Started by launchd:
 #   ~/Library/LaunchAgents/com.cesarxdesign.jobradar.plist
 #
+#   tabs      the remote.io tab he leaves open in Chrome, read for its listings
 #   scrape    every source: company boards and the job boards
 #   discover  companies seen only on a job board -> their own hiring board
 #   scrape    the hiring boards just found, so their roles are read tonight
+#   inbox     new mail on the Gmail tab he leaves open -> applications
 #   read      every design-titled role vision has not read, on its real page
 #   publish   lanes rebuilt and pushed; and every 20 minutes while reading
 #
@@ -30,6 +32,7 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "p
 
 ATS="ashby,greenhouse,lever,workable,recruitee,teamtailor,smartrecruiters,bamboohr,breezy,join,personio,rippling,pinpoint,jazzhr,manatal"
 
+echo "-- his tabs";          python3 tabs.py remoteio
 echo "-- scrape";            caffeinate -i python3 pool.py | tail -6
 echo "-- discover";          caffeinate -i python3 discover.py | tail -3
 echo "-- scrape new boards"; caffeinate -i python3 pool.py --only "$ATS" | tail -4
