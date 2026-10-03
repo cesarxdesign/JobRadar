@@ -5,19 +5,19 @@
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 71,
+  "open": 72,
   "portugal": 3,
-  "unsure": 91,
+  "unsure": 97,
   "ghosts": 0,
   "cut": 2948,
   "closed": 50,
-  "vision_cut": 471,
+  "vision_cut": 484,
   "agency": 21,
-  "vision_read": 1055,
+  "vision_read": 1075,
   "title_cuts": 65886,
   "design": 4152,
-  "waiting": 3445,
-  "unjudged": 31787,
+  "waiting": 3425,
+  "unjudged": 31767,
   "active": 101328,
   "total": 164153
  },
@@ -88,6 +88,7 @@
    "e27e7967c927496d",
    "e184c6026a4c4aa1",
    "7784c9786ccf4699",
+   "fb004cabb642499c",
    "cdead5c75e024a62",
    "d711863e00f84b83",
    "3e0178b1c5504ff7",
@@ -180,6 +181,12 @@
    "fed7f9994893401d",
    "973084d8bb6b4cc0",
    "c8aa07c14f34461d",
+   "620600904e2145bb",
+   "78cf3a3f5ce64eb4",
+   "4c6a3f4558d944d8",
+   "abaeed965a2c45b3",
+   "2178a21d78c24a48",
+   "de84101db601431e",
    "afd19d5f23f54622",
    "368983400d534529",
    "9d21382436a144bf",
@@ -3573,6 +3580,8 @@
   "fbcf984908c44659",
   "369e14e06b8749a4",
   "7462eafe253746a8",
+  "4c6da25420fd4db4",
+  "2cf0898c51b1459d",
   "5e419de294ac4ba4",
   "e48d63e31c4640a8",
   "c0db4ebd1d18430e",
@@ -3607,13 +3616,19 @@
   "9c5fdc3932174fd6",
   "50fbebd0f92a4de1",
   "a7fc1ce538dc4920",
+  "0b2104395f8a4445",
+  "c420df03ceb043f8",
+  "d7550738d8ba4522",
   "c4523c1491a241b1",
   "ab461b5868014dbc",
   "6bea754fa8d942b6",
   "fbb3d7509ee9484e",
   "962986dacac54628",
   "e5a6d4ce35504f62",
+  "51c52449185a41c1",
+  "6a28b6c60bb64ac7",
   "c1b0f4f7b9fc459c",
+  "07d00eff84e04e9e",
   "827367e083794b90",
   "184dbcb791b24c9b",
   "307e0fc541cc4bcb",
@@ -3624,6 +3639,9 @@
   "dc01d8dce71c4e4d",
   "fab81486b1ef4b18",
   "993d785ad9df40cf",
+  "01c3621b81254fb3",
+  "67fea228988f4a25",
+  "3732ba83038344b1",
   "07f1086394f8488c",
   "da58fba8d6a44b54",
   "83a55b9da0e74fcc",
@@ -3666,7 +3684,9 @@
   "d865773bb6d64f1e",
   "ea7aec80f37943ef",
   "95128f5e0e014023",
+  "a8d31384b3234981",
   "a6d1f69697834b41",
+  "c33d60c721c14885",
   "d741c14f819d4b96"
  ],
  "agency": [
@@ -189950,6 +189970,175 @@
   },
   {
    "active": true,
+   "company": "rga",
+   "department": "Addition",
+   "first_run": "2026-10-02T15:38:05+00:00",
+   "first_seen": "2026-10-02T15:38:05+00:00",
+   "id": "4c6da25420fd4db4",
+   "jdhash": "6002",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "New York, NY; United States",
+   "posted": "2026-10-01",
+   "source": "greenhouse/rga",
+   "sources": [
+    "greenhouse/rga",
+    "superjobs"
+   ],
+   "title": "Design Director",
+   "url": "https://www.rga.com/careers/8226439?gh_jid=8226439",
+   "years_xp": 8,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is design leadership (fits), but location is New York, NY-based preferred, not Portugal.",
+     "Portugal OUT · under the title: \"NEW YORK, NEW YORK, UNITED STATES\"",
+     "Portugal OUT · side panel: \"Location: NY-based preferred\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Design Director",
+     "company": "R/GA (Addition)",
+     "seniority": "director",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 8,
+     "reports_to": "ECD",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.rga.com/careers/8226439?gh_jid=8226439",
+    "reason": "Role is design leadership (fits), but location is New York, NY-based preferred, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "NEW YORK, NEW YORK, UNITED STATES / Location: NY-based preferred",
+    "signals": [
+     {
+      "quote": "NEW YORK, NEW YORK, UNITED STATES",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: NY-based preferred",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/4c6da25420fd4db4.jpg",
+    "read_at": "2026-10-03T11:15:50"
+   }
+  },
+  {
+   "active": true,
+   "company": "okta",
+   "department": "Product Design & UXR-650",
+   "first_run": "2026-10-02T15:38:05+00:00",
+   "first_seen": "2026-10-02T15:38:05+00:00",
+   "id": "2cf0898c51b1459d",
+   "jdhash": "7246",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Toronto, Ontario, Canada; Toronto; Toronto, ON, Canada",
+   "posted": "2026-10-01",
+   "salary": "$168,000 — $231,000",
+   "source": "greenhouse/okta",
+   "sources": [
+    "greenhouse/okta",
+    "superjobs"
+   ],
+   "title": "Principal Product Designer – UI Platform",
+   "url": "https://www.okta.com/company/careers/opportunity/8145887?gh_jid=8145887",
+   "years_xp": 10,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Hybrid role requiring 2 days/week in Toronto office, Canada - not available from Portugal.",
+     "Portugal OUT · under the title: \"Toronto, Ontario, Canada\"",
+     "Portugal OUT · body: \"**Must attend in person orientation in Toronto on the first Tuesday.\"",
+     "Portugal OUT · body: \"**Must go into the Toronto office 2 days a week.\"",
+     "Portugal OUT · body: \"#LI-Hybrid\"",
+     "Portugal OUT · side panel: \"Below is the annual salary range for candidates located in Canada.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Principal Product Designer – UI Platform",
+     "company": "Okta",
+     "seniority": "principal",
+     "remote": "hybrid",
+     "onsite_days": 2,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "CAD 168,000-231,000",
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.okta.com/company/careers/rd/principal-product-designer-ui-platform-8145887/",
+    "reason": "Hybrid role requiring 2 days/week in Toronto office, Canada - not available from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Must go into the Toronto office 2 days a week.",
+    "signals": [
+     {
+      "quote": "Toronto, Ontario, Canada",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "**Must attend in person orientation in Toronto on the first Tuesday.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "**Must go into the Toronto office 2 days a week.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "#LI-Hybrid",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Below is the annual salary range for candidates located in Canada.",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/2cf0898c51b1459d.jpg",
+    "read_at": "2026-10-03T11:15:55"
+   }
+  },
+  {
+   "active": true,
    "company": "waymo",
    "department": "ProdOps (WY1)",
    "first_run": "2026-10-02T15:38:05+00:00",
@@ -193242,6 +193431,280 @@
    "employment_type": "FullTime",
    "first_run": "2026-10-03T09:52:27+00:00",
    "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "0b2104395f8a4445",
+   "jdhash": "2696",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "San Francisco",
+   "posted": "2026-10-01",
+   "remote": false,
+   "reports_to": "Head of Marketing",
+   "salary": "$80,000 to $100,000",
+   "source": "ashby/clera",
+   "sources": [
+    "ashby/clera"
+   ],
+   "title": "Social Media & Content Designer",
+   "url": "https://jobs.ashbyhq.com/clera/badd70b1-f57b-49ca-8867-5195f5854834",
+   "workplace": "onsite",
+   "years_xp": 2,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a social media/content marketing role (not product/UX/UI design) and it is onsite/hybrid in San Francisco with no remote-from-Portugal option.",
+     "Portugal OUT · side panel: \"Location: San Francisco\"",
+     "Portugal OUT · side panel: \"Location Type: On-site\"",
+     "Portugal OUT · body: \"Willingness to work from the San Francisco office at least three days per week.\"",
+     "Portugal OUT · body: \"Based in San Francisco, California. Hybrid arrangement with a strong preference for at least three days per week in the office. Remote candidates who are an exceptional fit will also be considered.\"",
+     "Portugal OUT · body: \"Visa sponsorship is not available for this role.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Social Media & Content Designer",
+     "company": "Clera",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": 3,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$80,000 to $100,000 USD annually",
+     "years_xp": 2,
+     "reports_to": "Head of Marketing",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/clera/badd70b1-f57b-49ca-8867-5195f5854834",
+    "reason": "This is a social media/content marketing role (not product/UX/UI design) and it is onsite/hybrid in San Francisco with no remote-from-Portugal option.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Based in San Francisco, California. Hybrid arrangement with a strong preference for at least three days per week in the office.",
+    "signals": [
+     {
+      "quote": "Location: San Francisco",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location Type: On-site",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Willingness to work from the San Francisco office at least three days per week.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Based in San Francisco, California. Hybrid arrangement with a strong preference for at least three days per week in the office. Remote candidates who are an exceptional fit will also be considered.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Visa sponsorship is not available for this role.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/0b2104395f8a4445.jpg",
+    "read_at": "2026-10-03T11:16:01"
+   }
+  },
+  {
+   "active": true,
+   "company": "clera",
+   "department": "Engineering",
+   "employment_type": "FullTime",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "c420df03ceb043f8",
+   "jdhash": "2115",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Berlin",
+   "posted": "2026-10-01",
+   "remote": false,
+   "source": "ashby/clera",
+   "sources": [
+    "ashby/clera"
+   ],
+   "title": "Product Designer",
+   "url": "https://jobs.ashbyhq.com/clera/c495c73a-e9a1-49be-a747-50f92fc484ac",
+   "workplace": "onsite",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is onsite in Berlin, Germany with no remote option, which excludes Portugal.",
+     "Portugal OUT · side panel: \"Berlin\"",
+     "Portugal OUT · body: \"Must be able to work on-site in Berlin; visa sponsorship is not available.\"",
+     "Portugal OUT · body: \"On-site in Berlin, Germany. This role is not available on a remote basis. Visa sponsorship is not offered.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "Clera",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/clera/c495c73a-e9a1-49be-a747-50f92fc484ac",
+    "reason": "Role is onsite in Berlin, Germany with no remote option, which excludes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "On-site in Berlin, Germany. This role is not available on a remote basis.",
+    "signals": [
+     {
+      "quote": "Berlin",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Must be able to work on-site in Berlin; visa sponsorship is not available.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "On-site in Berlin, Germany. This role is not available on a remote basis. Visa sponsorship is not offered.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/c420df03ceb043f8.jpg",
+    "read_at": "2026-10-03T11:16:05"
+   }
+  },
+  {
+   "active": true,
+   "company": "clera",
+   "department": "Engineering",
+   "employment_type": "FullTime",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "d7550738d8ba4522",
+   "jdhash": "2641",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "San Francisco",
+   "posted": "2026-10-01",
+   "remote": false,
+   "salary": "$180,000 to $220,000",
+   "source": "ashby/clera",
+   "sources": [
+    "ashby/clera"
+   ],
+   "title": "Founding Design Engineer",
+   "url": "https://jobs.ashbyhq.com/clera/6382c2b5-a577-453e-be8e-ad897bb9a870",
+   "workplace": "onsite",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Onsite in San Francisco five days a week with US work authorization required - not doable from Portugal.",
+     "Portugal OUT · side panel: \"San Francisco\"",
+     "Portugal OUT · side panel: \"On-site\"",
+     "Portugal OUT · body: \"On-site in San Francisco, California, five days per week. Candidates must be based in San Francisco or willing and able to relocate.\"",
+     "Portugal OUT · body: \"Authorized to work in the United States without visa sponsorship.\"",
+     "Portugal OUT · body: \"No visa sponsorship is available.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Founding Design Engineer",
+     "company": "Clera",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": 5,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$180,000 to $220,000 USD annually",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/clera/6382c2b5-a577-453e-be8e-ad897bb9a870",
+    "reason": "Onsite in San Francisco five days a week with US work authorization required - not doable from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "On-site in San Francisco, California, five days per week. Candidates must be based in San Francisco or willing and able to relocate.",
+    "signals": [
+     {
+      "quote": "San Francisco",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "On-site",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "On-site in San Francisco, California, five days per week. Candidates must be based in San Francisco or willing and able to relocate.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Authorized to work in the United States without visa sponsorship.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "No visa sponsorship is available.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/d7550738d8ba4522.jpg",
+    "read_at": "2026-10-03T11:16:11"
+   }
+  },
+  {
+   "active": true,
+   "company": "clera",
+   "department": "Engineering",
+   "employment_type": "FullTime",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
    "id": "c4523c1491a241b1",
    "jdhash": "1767",
    "last_seen": "2026-10-03T09:52:27+00:00",
@@ -193320,6 +193783,89 @@
     "found_by": null,
     "shot": "data/shots/c4523c1491a241b1.jpg",
     "read_at": "2026-10-03T11:12:13"
+   }
+  },
+  {
+   "active": true,
+   "company": "duck-duck-go",
+   "department": "Design",
+   "employment_type": "FullTime",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "fb004cabb642499c",
+   "jdhash": "7586",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Remote",
+   "posted": "2026-10-01",
+   "remote": true,
+   "salary": "$ 178,500",
+   "source": "ashby/duck-duck-go",
+   "sources": [
+    "arbeitnow",
+    "ashby/duck-duck-go"
+   ],
+   "title": "Senior Product Designer, Design Systems",
+   "url": "https://jobs.ashbyhq.com/duck-duck-go/46757e0c-981c-4925-b007-b6f1829ae1be",
+   "workplace": "remote",
+   "years_xp": 7,
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Design-systems senior product designer role at a remote-first company with no country restriction stated.",
+     "Portugal in · side panel: \"Location: Remote\"",
+     "Portugal in · side panel: \"Location Type: Remote\"",
+     "Portugal in · opening paragraph: \"remote-first team of 300+ on a mission to raise the standard of trust online\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer, Design Systems",
+     "company": "DuckDuckGo",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "yes",
+     "salary": "$178,500 USD annually and stock options",
+     "years_xp": 7,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/duck-duck-go/46757e0c-981c-4925-b007-b6f1829ae1be",
+    "reason": "Design-systems senior product designer role at a remote-first company with no country restriction stated.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote; Location Type: Remote; remote-first team of 300+",
+    "signals": [
+     {
+      "quote": "Location: Remote",
+      "where": "side panel",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Location Type: Remote",
+      "where": "side panel",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "remote-first team of 300+ on a mission to raise the standard of trust online",
+      "where": "opening paragraph",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/fb004cabb642499c.jpg",
+    "read_at": "2026-10-03T11:16:17"
    }
   },
   {
@@ -193739,6 +194285,182 @@
   {
    "active": true,
    "company": "okta",
+   "department": "SW Eng - Applications-674",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "51c52449185a41c1",
+   "jdhash": "5207",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Toronto, Ontario, Canada; Toronto; Toronto, ON, Canada",
+   "posted": "2026-10-01",
+   "salary": "$118,000 — $162,000",
+   "source": "greenhouse/okta",
+   "sources": [
+    "greenhouse/okta"
+   ],
+   "title": "Senior Software Engineer in Test, UI Platform",
+   "url": "https://www.okta.com/company/careers/opportunity/8071448?gh_jid=8071448",
+   "years_xp": 5,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a Software Engineer in Test (QE/automation) position, not a design title, and the job is located in Toronto, Canada with Canada-specific salary.",
+     "Portugal OUT · under the title: \"Toronto, Ontario, Canada\"",
+     "Portugal OUT · body: \"Below is the annual salary range for candidates located in Canada.\"",
+     "Portugal OUT · body: \"The annual base salary range for this position for candidates located in Canada is between:$118,000—$162,000 CAD\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Software Engineer in Test, UI Platform",
+     "company": "Okta",
+     "seniority": "senior",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "CAD 118,000-162,000",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "remote"
+    ],
+    "read": "employer",
+    "read_url": "https://www.okta.com/company/careers/rd/senior-software-engineer-in-test-ui-platform-8071448/",
+    "reason": "Role is a Software Engineer in Test (QE/automation) position, not a design title, and the job is located in Toronto, Canada with Canada-specific salary.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Toronto, Ontario, Canada",
+    "signals": [
+     {
+      "quote": "Toronto, Ontario, Canada",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Below is the annual salary range for candidates located in Canada.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "The annual base salary range for this position for candidates located in Canada is between:$118,000—$162,000 CAD",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/51c52449185a41c1.jpg",
+    "read_at": "2026-10-03T11:16:23"
+   }
+  },
+  {
+   "active": true,
+   "company": "okta",
+   "department": "Product Design & UXR-650",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "6a28b6c60bb64ac7",
+   "jdhash": "7452",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Bellevue, Washington; Chicago, Illinois; New York, New York; Washington, DC; Bellevue; Bellevue, WA, United States",
+   "posted": "2026-10-01",
+   "salary": "$156,000 — $215,000",
+   "source": "greenhouse/okta",
+   "sources": [
+    "greenhouse/okta"
+   ],
+   "title": "Staff Product Designer - Okta Identity Governance",
+   "url": "https://www.okta.com/company/careers/opportunity/8247059?gh_jid=8247059",
+   "years_xp": 7,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Hybrid role requiring 2 days/week in a specific US office, not available in Portugal.",
+     "Portugal OUT · under the title: \"Bellevue, Washington; Chicago, Illinois; New York, New York; Washington, DC\"",
+     "Portugal OUT · body: \"This person must attend in person orientation the first week of employment in either San Francisco or Chicago.\"",
+     "Portugal OUT · body: \"This person must go into the office 2 days a week.\"",
+     "Portugal OUT · body: \"Below is the annual base salary range for candidates located in California (excluding San Francisco Bay Area), Colorado, Illinois, New York and Washington.\"",
+     "Portugal OUT · body: \"#LI-Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer - Okta Identity Governance",
+     "company": "Okta",
+     "seniority": "staff",
+     "remote": "hybrid",
+     "onsite_days": 2,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 156,000-215,000",
+     "years_xp": 7,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.okta.com/company/careers/rd/staff-product-designer-okta-identity-governance-8247059/",
+    "reason": "Hybrid role requiring 2 days/week in a specific US office, not available in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This person must go into the office 2 days a week.",
+    "signals": [
+     {
+      "quote": "Bellevue, Washington; Chicago, Illinois; New York, New York; Washington, DC",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This person must attend in person orientation the first week of employment in either San Francisco or Chicago.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This person must go into the office 2 days a week.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Below is the annual base salary range for candidates located in California (excluding San Francisco Bay Area), Colorado, Illinois, New York and Washington.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "#LI-Hybrid",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6a28b6c60bb64ac7.jpg",
+    "read_at": "2026-10-03T11:16:28"
+   }
+  },
+  {
+   "active": true,
+   "company": "okta",
    "department": "SW Eng - Core Identity-670",
    "first_run": "2026-10-03T09:52:27+00:00",
    "first_seen": "2026-10-03T09:52:27+00:00",
@@ -193827,6 +194549,93 @@
     "found_by": null,
     "shot": "data/shots/c1b0f4f7b9fc459c.jpg",
     "read_at": "2026-10-03T11:12:28"
+   }
+  },
+  {
+   "active": true,
+   "company": "airbnb",
+   "department": "Art and Creative",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "07d00eff84e04e9e",
+   "jdhash": "7162",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "United States",
+   "posted": "2026-10-01",
+   "salary": "$180,000 — $223,000",
+   "source": "greenhouse/airbnb",
+   "sources": [
+    "greenhouse/airbnb"
+   ],
+   "title": "Staff UX Writer, AI",
+   "url": "https://careers.airbnb.com/positions/8240421?gh_jid=8240421",
+   "years_xp": 10,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but restricted to US states only, excluding Portugal.",
+     "Portugal OUT · under the title: \"United States\"",
+     "Portugal OUT · body: \"This position is US - Remote Eligible.\"",
+     "Portugal OUT · body: \"you must live in a state where Airbnb, Inc. has a registered entity\"",
+     "Portugal OUT · footer or small print: \"Airbnb, Inc. can hire employees in states where we have registered entities. Currently, employees cannot be located/live in: Alaska, Mississippi, and North Dakota.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff UX Writer, AI",
+     "company": "Airbnb",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$180,000—$223,000 USD",
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.airbnb.com/positions/8240421/?gh_jid=8240421",
+    "reason": "Role is remote but restricted to US states only, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This position is US - Remote Eligible... you must live in a state where Airbnb, Inc. has a registered entity.",
+    "signals": [
+     {
+      "quote": "United States",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position is US - Remote Eligible.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "you must live in a state where Airbnb, Inc. has a registered entity",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Airbnb, Inc. can hire employees in states where we have registered entities. Currently, employees cannot be located/live in: Alaska, Mississippi, and North Dakota.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/07d00eff84e04e9e.jpg",
+    "read_at": "2026-10-03T11:16:32"
    }
   },
   {
@@ -194801,6 +195610,366 @@
   },
   {
    "active": true,
+   "company": "psiquantum",
+   "department": "Engineering",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "620600904e2145bb",
+   "jdhash": "5658",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Palo Alto, California, United States; Milpitas, California, United States",
+   "posted": "2026-10-01",
+   "salary": "$114,000 — $125,000",
+   "source": "greenhouse/psiquantum",
+   "sources": [
+    "greenhouse/psiquantum"
+   ],
+   "title": "Mechanical Design Drafter",
+   "url": "https://www.psiquantum.com/apply?gh_jid=7603137003",
+   "verdict": {
+    "role": "unclear",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "page is an empty apply shell with only cookie banner, nav and footer - no actual job posting content loaded"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Mechanical Design Drafter",
+     "company": "PsiQuantum",
+     "seniority": "unstated",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.psiquantum.com/apply?gh_jid=7603137003",
+    "reason": "page is an empty apply shell with only cookie banner, nav and footer - no actual job posting content loaded",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "English",
+    "quote": "",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/620600904e2145bb.jpg",
+    "read_at": "2026-10-03T11:16:34"
+   }
+  },
+  {
+   "active": true,
+   "company": "psiquantum",
+   "department": "Engineering",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "78cf3a3f5ce64eb4",
+   "jdhash": "7659",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Daresbury, England, United Kingdom",
+   "posted": "2026-10-01",
+   "salary": "£50,000 — £56,000",
+   "source": "greenhouse/psiquantum",
+   "sources": [
+    "greenhouse/psiquantum"
+   ],
+   "title": "Mechanical Design Engineer – Photonic Hardware",
+   "url": "https://www.psiquantum.com/apply?gh_jid=7727655003",
+   "years_xp": 1,
+   "verdict": {
+    "role": "unclear",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "page is an empty apply shell with only site navigation/footer, no job description content loaded"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Mechanical Design Engineer – Photonic Hardware",
+     "company": "PsiQuantum",
+     "seniority": "unstated",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.psiquantum.com/apply?gh_jid=7727655003",
+    "reason": "page is an empty apply shell with only site navigation/footer, no job description content loaded",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "English",
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/78cf3a3f5ce64eb4.jpg",
+    "read_at": "2026-10-03T11:16:37"
+   }
+  },
+  {
+   "active": true,
+   "company": "psiquantum",
+   "department": "Engineering",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "4c6a3f4558d944d8",
+   "jdhash": "5656",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Palo Alto, California, United States",
+   "posted": "2026-10-01",
+   "salary": "$120,000 — $145,000",
+   "source": "greenhouse/psiquantum",
+   "sources": [
+    "greenhouse/psiquantum"
+   ],
+   "title": "Photonics Circuit Designer",
+   "url": "https://www.psiquantum.com/apply?gh_jid=7743064003",
+   "years_xp": 5,
+   "verdict": {
+    "role": "unclear",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "the page read is a different job · page is just the generic apply shell with site navigation and footer, no actual job posting content",
+     "the page says: \"GLOBAL FACILITIES Australia Chicago United Kingdom\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Photonics Circuit Designer",
+     "company": "PsiQuantum",
+     "seniority": "unstated",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.psiquantum.com/apply?gh_jid=7743064003",
+    "reason": "the page read is a different job · page is just the generic apply shell with site navigation and footer, no actual job posting content",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "English",
+    "quote": "GLOBAL FACILITIES Australia Chicago United Kingdom",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/4c6a3f4558d944d8.jpg",
+    "read_at": "2026-10-03T11:16:44"
+   }
+  },
+  {
+   "active": true,
+   "company": "psiquantum",
+   "department": "Engineering",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "abaeed965a2c45b3",
+   "jdhash": "6810",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Milpitas, California, United States",
+   "posted": "2026-10-01",
+   "salary": "$235,600 — $276,800",
+   "source": "greenhouse/psiquantum",
+   "sources": [
+    "greenhouse/psiquantum"
+   ],
+   "title": "Principal Hardware Design Engineer",
+   "url": "https://www.psiquantum.com/apply?gh_jid=8007039003",
+   "years_xp": 10,
+   "verdict": {
+    "role": "unclear",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "Page is an empty apply shell with only nav/footer content, no actual job posting text."
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Principal Hardware Design Engineer",
+     "company": "PsiQuantum",
+     "seniority": "principal",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.psiquantum.com/apply?gh_jid=8007039003",
+    "reason": "Page is an empty apply shell with only nav/footer content, no actual job posting text.",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "English",
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/abaeed965a2c45b3.jpg",
+    "read_at": "2026-10-03T11:16:46"
+   }
+  },
+  {
+   "active": true,
+   "company": "psiquantum",
+   "department": "Engineering",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "2178a21d78c24a48",
+   "jdhash": "11955",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Milpitas, California, United States",
+   "posted": "2026-10-01",
+   "salary": "$176,500 — $207,400",
+   "source": "greenhouse/psiquantum",
+   "sources": [
+    "greenhouse/psiquantum"
+   ],
+   "title": "Senior/Staff Electro-Optic Hardware Design Engineer",
+   "url": "https://www.psiquantum.com/apply?gh_jid=8008536003",
+   "verdict": {
+    "role": "unclear",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "page is just the site shell/apply page with no actual job posting content loaded",
+     "the page says: \"no job description present on page\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior/Staff Electro-Optic Hardware Design Engineer",
+     "company": "PsiQuantum",
+     "seniority": "senior",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.psiquantum.com/apply?gh_jid=8008536003",
+    "reason": "page is just the site shell/apply page with no actual job posting content loaded",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "English",
+    "quote": "no job description present on page",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/2178a21d78c24a48.jpg",
+    "read_at": "2026-10-03T11:16:48"
+   }
+  },
+  {
+   "active": true,
+   "company": "psiquantum",
+   "department": "Engineering",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "de84101db601431e",
+   "jdhash": "6178",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Milpitas, California, United States",
+   "posted": "2026-10-01",
+   "salary": "$201,400 — $236,600",
+   "source": "greenhouse/psiquantum",
+   "sources": [
+    "greenhouse/psiquantum"
+   ],
+   "title": "Staff Hardware Design Engineer (open to other levels)",
+   "url": "https://www.psiquantum.com/apply?gh_jid=7791701003",
+   "years_xp": 7,
+   "verdict": {
+    "role": "unclear",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "page is an empty apply-page shell with only site navigation and footer, no job description content loaded"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Hardware Design Engineer (open to other levels)",
+     "company": "PsiQuantum",
+     "seniority": "staff",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.psiquantum.com/apply?gh_jid=7791701003",
+    "reason": "page is an empty apply-page shell with only site navigation and footer, no job description content loaded",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "English",
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/de84101db601431e.jpg",
+    "read_at": "2026-10-03T11:16:54"
+   }
+  },
+  {
+   "active": true,
    "company": "instacart",
    "department": "Research & Design",
    "first_run": "2026-10-03T09:52:27+00:00",
@@ -195151,6 +196320,260 @@
     "found_by": null,
     "shot": "data/shots/993d785ad9df40cf.jpg",
     "read_at": "2026-10-03T11:13:27"
+   }
+  },
+  {
+   "active": true,
+   "company": "formlabs",
+   "department": "Product",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "01c3621b81254fb3",
+   "jdhash": "5053",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Somerville, MA; Somerville, Massachusetts; Somerville, MA, United States",
+   "posted": "2026-10-01",
+   "salary": "$135,000 — $180,000",
+   "source": "greenhouse/formlabs",
+   "sources": [
+    "greenhouse/formlabs"
+   ],
+   "title": "Senior Software Product Designer",
+   "url": "https://careers.formlabs.com/job/8248182/apply/?gh_jid=8248182",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Onsite role based in Somerville, MA with no remote or Portugal mention.",
+     "Portugal OUT · side panel: \"Location: Somerville, MA\"",
+     "Portugal OUT · body: \"Ample on-site parking & pre-tax commuter benefits\"",
+     "Portugal OUT · body: \"Healthy on-site lunches, snacks, beverages, & treats\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Software Product Designer",
+     "company": "Formlabs",
+     "seniority": "senior",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$135,000—$180,000 USD",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "workplace_as_posted"
+    ],
+    "read": "employer",
+    "read_url": "https://careers.formlabs.com/job/8248182/apply/?gh_jid=8248182",
+    "reason": "Onsite role based in Somerville, MA with no remote or Portugal mention.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Somerville, MA",
+    "signals": [
+     {
+      "quote": "Location: Somerville, MA",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Ample on-site parking & pre-tax commuter benefits",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Healthy on-site lunches, snacks, beverages, & treats",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/01c3621b81254fb3.jpg",
+    "read_at": "2026-10-03T11:16:54"
+   }
+  },
+  {
+   "active": true,
+   "company": "redcellpartners",
+   "department": "MyPattern",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "67fea228988f4a25",
+   "jdhash": "8474",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Remote; USA; RCP HQ (McLean, VA); McLean, Virginia, United States",
+   "posted": "2026-10-01",
+   "remote": true,
+   "salary": "$160,000-$175,000",
+   "source": "greenhouse/redcellpartners",
+   "sources": [
+    "greenhouse/redcellpartners",
+    "uxremotetalent"
+   ],
+   "title": "Senior Product Designer",
+   "url": "https://job-boards.greenhouse.io/redcellpartners/jobs/5195297007",
+   "years_xp": 5,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but restricted to USA, requiring US work authorization.",
+     "Portugal OUT · under the title: \"Remote; USA\"",
+     "Portugal OUT · body: \"Do you have authorization to work in the United States?\"",
+     "Portugal OUT · body: \"Are you a U.S. Citizen?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer",
+     "company": "MyPattern (Red Cell Partners)",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "USA"
+     ],
+     "portugal_ok": "no",
+     "salary": "$160,000-$175,000 + equity",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/redcellpartners/jobs/5195297007",
+    "reason": "Role is remote but restricted to USA, requiring US work authorization.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote; USA",
+    "signals": [
+     {
+      "quote": "Remote; USA",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Do you have authorization to work in the United States?",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you a U.S. Citizen?",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/67fea228988f4a25.jpg",
+    "read_at": "2026-10-03T11:16:57"
+   }
+  },
+  {
+   "active": true,
+   "company": "mypattern",
+   "department": "MyPattern",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "3732ba83038344b1",
+   "jdhash": "7260",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Remote; USA; RCP HQ (McLean, VA); McLean, Virginia, United States",
+   "posted": "2026-10-01",
+   "remote": true,
+   "salary": "$160,000-$175,000",
+   "source": "greenhouse/mypattern",
+   "sources": [
+    "greenhouse/mypattern",
+    "uxremotetalent"
+   ],
+   "title": "Senior Product Designer",
+   "url": "https://job-boards.greenhouse.io/mypattern/jobs/5254329007",
+   "years_xp": 5,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Location is stated as Remote, USA, and application requires US work authorization, excluding Portugal.",
+     "Portugal OUT · under the title: \"Remote; USA\"",
+     "Portugal OUT · footer or small print: \"Are you a U.S. Citizen?\"",
+     "Portugal OUT · footer or small print: \"Do you have authorization to work in the United States?\"",
+     "Portugal OUT · footer or small print: \"Do you require sponsorship now or in the future?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer",
+     "company": "MyPattern",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "USA"
+     ],
+     "portugal_ok": "no",
+     "salary": "$160,000-$175,000 + equity",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/mypattern/jobs/5254329007",
+    "reason": "Location is stated as Remote, USA, and application requires US work authorization, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote; USA",
+    "signals": [
+     {
+      "quote": "Remote; USA",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you a U.S. Citizen?",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Do you have authorization to work in the United States?",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Do you require sponsorship now or in the future?",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3732ba83038344b1.jpg",
+    "read_at": "2026-10-03T11:17:01"
    }
   },
   {
@@ -200038,6 +201461,82 @@
   },
   {
    "active": true,
+   "company": "The Collecting Group",
+   "department": "Brand Design",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "a8d31384b3234981",
+   "jdhash": "3894",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "London",
+   "posted": "2026-10-01",
+   "source": "woodyjobs",
+   "sources": [
+    "woodyjobs"
+   ],
+   "title": "Creative Designer",
+   "url": "https://www.woodyjobs.com/brand-design/205676-creative-designer-the-collecting-group",
+   "workplace": "Onsite",
+   "years_xp": 2,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Onsite brand/graphic design role in London, not a product/UX design role and not in Portugal.",
+     "Portugal OUT · side panel: \"United Kingdom — London\"",
+     "Portugal OUT · opening paragraph: \"we're looking for a Creative Designer to join us in our London HQ\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Creative Designer",
+     "company": "The Collecting Group",
+     "seniority": "mid",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 2,
+     "reports_to": null,
+     "language": "English",
+     "posted": "yesterday"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.woodyjobs.com/brand-design/205676-creative-designer-the-collecting-group",
+    "reason": "Onsite brand/graphic design role in London, not a product/UX design role and not in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "we're looking for a Creative Designer to join us in our London HQ",
+    "signals": [
+     {
+      "quote": "United Kingdom — London",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "we're looking for a Creative Designer to join us in our London HQ",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a8d31384b3234981.jpg",
+    "read_at": "2026-10-03T11:17:12"
+   }
+  },
+  {
+   "active": true,
    "company": "Bask Health",
    "employment_type": "Full-time",
    "first_run": "2026-10-03T09:52:27+00:00",
@@ -200101,6 +201600,73 @@
     "found_by": "link",
     "shot": "data/shots/a6d1f69697834b41.employer.jpg",
     "read_at": "2026-10-03T11:11:25"
+   }
+  },
+  {
+   "active": true,
+   "company": "Nimble",
+   "employment_type": "Contract",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "c33d60c721c14885",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "USA Only",
+   "posted": "2026-10-02",
+   "remote": true,
+   "source": "uxremotetalent",
+   "sources": [
+    "uxremotetalent"
+   ],
+   "title": "UI Artist",
+   "url": "https://www.uxremotetalent.com/ux-job/ui-artist-1wq87",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Remote is tied to North Carolina, United States with no wider location mentioned, so it excludes Portugal.",
+     "Portugal OUT · under the title: \"RemoteNorth Carolina, United States\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "UI Artist (Game Industry)",
+     "company": "Nimble Workforce",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 2,
+     "reports_to": null,
+     "language": "English",
+     "posted": "7 days ago"
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.workable.com/view/1Fs6oxufnjMkHAX1L8PfTL/remote-ui-artist-(game-industry)-in-north-carolina-at-nimble-workforce",
+    "reason": "Remote is tied to North Carolina, United States with no wider location mentioned, so it excludes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote North Carolina, United States",
+    "signals": [
+     {
+      "quote": "RemoteNorth Carolina, United States",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "link",
+    "shot": "data/shots/c33d60c721c14885.employer.jpg",
+    "read_at": "2026-10-03T11:15:45"
    }
   },
   {
