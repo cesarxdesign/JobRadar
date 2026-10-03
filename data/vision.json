@@ -56253,5 +56253,760 @@
   "stage": "vision",
   "reader_place": "no",
   "lane": "cut"
+ },
+ "470d291003c347c7": {
+  "id": "470d291003c347c7",
+  "at": "2026-10-03T11:17:19",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.woodyjobs.com/ui/205513-figma-design-systems-specialist---017-1357-hunt-st",
+  "board": {
+   "url": "https://www.woodyjobs.com/ui/205513-figma-design-systems-specialist---017-1357-hunt-st",
+   "status": 200,
+   "shot": "data/shots/470d291003c347c7.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.woodyjobs.com/ui/205513-figma-design-systems-specialist---017-1357-hunt-st",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "🇵🇭 Philippines",
+  "place_signals": [
+   {
+    "quote": "🇵🇭 Philippines",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote role that will be set up as an independent contractor engagement.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "🇵🇭 Philippines",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "cut on place, but not sure of it · Role is remote but explicitly for the Philippines, with no wider geography stated.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Figma Design Systems Specialist",
+   "company": "Hunt St",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Philippines"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "1 day"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "fdb2feaf0d304635": {
+  "id": "fdb2feaf0d304635",
+  "at": "2026-10-03T11:17:26",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.woodyjobs.com/design/205672-product-designer-propeller",
+  "board": {
+   "url": "https://www.woodyjobs.com/design/205672-product-designer-propeller",
+   "status": 200,
+   "shot": "data/shots/fdb2feaf0d304635.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.woodyjobs.com/design/205672-product-designer-propeller",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Australia — Sydney",
+  "place_signals": [
+   {
+    "quote": "Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Australia — Sydney",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid work arrangements and WFH equipment provided",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Thrive in a distributed team, working autonomously across locations and time zones",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hybrid — Australia — Sydney",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Sydney, Australia with no wider remote eligibility stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Propeller",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Australia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "1 day"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "40faecbbc8f54def": {
+  "id": "40faecbbc8f54def",
+  "at": "2026-10-03T11:17:29",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.woodyjobs.com/design/205671-product-designer-platzi",
+  "board": {
+   "url": "https://www.woodyjobs.com/design/205671-product-designer-platzi",
+   "status": 200,
+   "shot": "data/shots/40faecbbc8f54def.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.woodyjobs.com/design/205671-product-designer-platzi",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Hybrid — Mexico — Mexico City; Colombia — Bogota",
+  "place_signals": [
+   {
+    "quote": "Hybrid 🇲🇽 Mexico — Mexico City 🇨🇴 Colombia — Bogota",
+    "where": "side panel",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hybrid — Mexico — Mexico City / Colombia — Bogota",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Mexico City or Bogota, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Platzi",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Mexico",
+    "Colombia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English",
+   "posted": "1 day"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "ea1df60e2a5b4656": {
+  "id": "ea1df60e2a5b4656",
+  "at": "2026-10-03T11:17:32",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.woodyjobs.com/design/205635-forward-deployed-designer-pirxe",
+  "board": {
+   "url": "https://www.woodyjobs.com/design/205635-forward-deployed-designer-pirxe",
+   "status": 200,
+   "shot": "data/shots/ea1df60e2a5b4656.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.woodyjobs.com/design/205635-forward-deployed-designer-pirxe",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote, Poland",
+  "place_signals": [
+   {
+    "quote": "🪂 Remote 🇵🇱 Poland",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "English that allows you to comfortably work with international clients.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "🪂 Remote 🇵🇱 Poland",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is a brand/visual design position for client creative systems, and the posting is remote tied specifically to Poland, not Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Forward Deployed Designer",
+   "company": "Pirxe",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "yesterday"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "15f4cb2b710d4526": {
+  "id": "15f4cb2b710d4526",
+  "at": "2026-10-03T11:17:41",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.woodyjobs.com/others/205617-learning-experience-designer-contract-easyllama",
+  "board": {
+   "url": "https://www.woodyjobs.com/others/205617-learning-experience-designer-contract-easyllama",
+   "status": 200,
+   "shot": "data/shots/15f4cb2b710d4526.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.woodyjobs.com/others/205617-learning-experience-designer-contract-easyllama",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "United States",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "United States",
+    "where": "side panel",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "🪂 Remote 🇺🇸 United States",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is instructional/learning design (not product/UX/UI design) and location is Remote-United States, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Learning Experience Designer (Contract)",
+   "company": "EasyLlama",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "yesterday"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "15695e07ef4e4dc1": {
+  "id": "15695e07ef4e4dc1",
+  "at": "2026-10-03T11:17:56",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4772697-founding-designer-part-time",
+  "board": {
+   "url": "https://wellfound.com/jobs/4772697-founding-designer-part-time",
+   "status": 200,
+   "shot": "data/shots/15695e07ef4e4dc1.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4772697-founding-designer-part-time",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (Everywhere)",
+  "place_signals": [
+   {
+    "quote": "Remote (Everywhere)",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hires remotely in Everywhere",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote only",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Visa Sponsorship: Not Available",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Preferred Timezones: Pacific Time, Eastern Time, Central European Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Collaboration Hours: 9:00 AM - 11:00 AM Eastern Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Relocation: Not Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote (Everywhere)",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "only the job board's copy could be read · Design-titled role, remote hires everywhere, includes Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "Founding Designer (Part-Time)",
+   "company": "NorthAssay",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Everywhere"
+   ],
+   "portugal_ok": "yes",
+   "salary": "$20k – $30k",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "unsure",
+  "lane_if_employer": "open"
+ },
+ "9f163e72f60041cf": {
+  "id": "9f163e72f60041cf",
+  "at": "2026-10-03T11:18:04",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://www.woodyjobs.com/design/205600-manager-product-design-studio-etsy",
+  "board": {
+   "url": "https://www.woodyjobs.com/design/205600-manager-product-design-studio-etsy",
+   "status": 200,
+   "shot": "data/shots/9f163e72f60041cf.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://careers.etsy.com/jobs/manager-product-design-studio-brooklyn-new-york-united-states",
+   "status": 200,
+   "shot": "data/shots/9f163e72f60041cf.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://careers.etsy.com/jobs/manager-product-design-studio-brooklyn-new-york-united-state"
+  ],
+  "read": "employer",
+  "read_url": "https://careers.etsy.com/jobs/manager-product-design-studio-brooklyn-new-york-united-states",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Hybrid - Brooklyn",
+  "place_signals": [
+   {
+    "quote": "Hybrid Brooklyn",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We prioritize candidates based within commutable distance of Etsy's Brooklyn Office. Depending on proximity, we ask team members to come in once or twice per week.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote candidates outside commutable distance may be considered on a case-by-case basis, with the expectation of occasional travel to the office.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Etsy uses two geographic pay zones ... Geo-1, covering the New York City metropolitan area, San Francisco Bay Area, and Seattle metropolitan area, and one called Geo-2, covering all other U.S. locations.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "We prioritize candidates based within commutable distance of Etsy's Brooklyn Office.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Brooklyn, NY with US pay zones, not available from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Manager, Product Design, Studio",
+   "company": "Etsy",
+   "seniority": "director",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "Geo-1: 182,000.00 - 246,000.00 USD Annual; Geo-2: 164,000.00 - 222,000.00 USD Annual",
+   "years_xp": null,
+   "reports_to": "Director of Product Design for UX Platform",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "a13b18c4338146c2": {
+  "id": "a13b18c4338146c2",
+  "at": "2026-10-03T11:18:05",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/4787162-ui-ux-designer-clone",
+  "board": {
+   "url": "https://wellfound.com/jobs/4787162-ui-ux-designer-clone",
+   "status": 200,
+   "shot": "data/shots/a13b18c4338146c2.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/4787162-ui-ux-designer-clone",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Remote (Everywhere)",
+  "place_signals": [
+   {
+    "quote": "Remote (Everywhere)",
+    "where": "under the title",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hires remotely in Everywhere",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Company Location Coimbatore",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hiring: Freelance UI/UX & Framer Designer (Coimbatore / Hybrid)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)",
+  "role_verdict": "yes",
+  "place_verdict": "unclear",
+  "cut": true,
+  "reason": "the page says both: Portugal in, and Portugal out · Role requires occasional in-person catchups in Coimbatore, India, making it hybrid-onsite outside Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "years_xp"
+  ],
+  "fields": {
+   "role": "UI/UX Designer (Clone)",
+   "company": "Apex Studio Labs",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "₹20,000 – ₹25,000",
+   "years_xp": 0,
+   "reports_to": null,
+   "language": "English",
+   "posted": "2 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "unsure"
+ },
+ "d2ef720b6ece4a3e": {
+  "id": "d2ef720b6ece4a3e",
+  "at": "2026-10-03T11:18:16",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://weworkremotely.com/remote-jobs/pearl-remote-senior-packaging-designer-for-consumer-goods-company",
+  "board": {
+   "url": "https://weworkremotely.com/remote-jobs/pearl-remote-senior-packaging-designer-for-consumer-goods-company",
+   "status": 200,
+   "shot": "data/shots/d2ef720b6ece4a3e.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://weworkremotely.com/remote-jobs/pearl-remote-senior-packaging-designer-for-consumer-goods-company",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Work From Anywhere in LATAM",
+  "place_signals": [
+   {
+    "quote": "Work From Anywhere in LATAM",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Schedule: EST | Flexible hours with Eastern Time overlap for stakeholder presentations",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote Work: Fully remote—work from anywhere",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Health Coverage for PH-based talents: HMO coverage after 3 months for full-time employees",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Work From Anywhere in LATAM",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is packaging/graphic design (not product/UX/UI) and the posting restricts hiring to LATAM.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Packaging Designer",
+   "company": "Pearl (client - consumer products brand)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "LATAM"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "3b3b325290a84e4c": {
+  "id": "3b3b325290a84e4c",
+  "at": "2026-10-03T11:18:22",
+  "criteria": "2026-10-02.7",
+  "model": "sonnet",
+  "pool_url": "https://wellfound.com/jobs/3641005-ux-engineer",
+  "board": {
+   "url": "https://wellfound.com/jobs/3641005-ux-engineer",
+   "status": 200,
+   "shot": "data/shots/3b3b325290a84e4c.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://wellfound.com/jobs/3641005-ux-engineer",
+  "same_job": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (Tamil Nadu) • Chennai",
+  "place_signals": [
+   {
+    "quote": "Remote (Tamil Nadu)",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Chennai",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Job Location: Chennai",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hires remotely in Tamil Nadu",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Onsite or remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Visa Sponsorship: Not Available",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Relocation: Not Allowed",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Preferred Timezones: Pacific Time",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote (Tamil Nadu) • Chennai ... Hires remotely in Tamil Nadu",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role hires remotely only within Tamil Nadu, India, not Portugal",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Engineer",
+   "company": "Agent42 Labs",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India (Tamil Nadu)"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 2,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Reposted: 2 days ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
  }
 }

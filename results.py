@@ -173,6 +173,16 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             role["verdict"] = from_vision(vis)
             roles.append(role)
             lane = vis.get("lane")
+            # A rule that changes how the evidence is weighed should not need
+            # every page read again: the statements the reader listed are on
+            # file, so the newest rule is applied to them here.
+            if lane == "unsure" and vis.get("stage") == "vision" and vis.get("role_verdict") != "no" \
+                    and vis.get("posting_open") == "yes" and criteria.top_line_out(vis.get("place_signals")) \
+                    and any(isinstance(s, dict) and s.get("says") == "portugal_in" for s in vis.get("place_signals") or []):
+                lane = "cut"
+                role["verdict"].update({"lane": "cut", "cut": True, "place": "no",
+                                        "reason": "the line at the top of the page says where; the wider words "
+                                                  "lower down are boilerplate · " + str(vis.get("reason") or "")})
             # A role an agency posts would otherwise sit in Open beside the
             # employer's own postings, several times over. It gets its own lane.
             if lane in lanes and criteria.is_agency((vis.get("fields") or {}).get("company") or rec.get("company"),

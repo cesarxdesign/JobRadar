@@ -7,17 +7,17 @@
  "counts": {
   "open": 72,
   "portugal": 3,
-  "unsure": 97,
+  "unsure": 100,
   "ghosts": 0,
   "cut": 2948,
   "closed": 50,
-  "vision_cut": 484,
-  "agency": 21,
-  "vision_read": 1075,
+  "vision_cut": 503,
+  "agency": 9,
+  "vision_read": 1085,
   "title_cuts": 65886,
   "design": 4152,
-  "waiting": 3425,
-  "unjudged": 31767,
+  "waiting": 3415,
+  "unjudged": 31757,
   "active": 101328,
   "total": 164153
  },
@@ -171,6 +171,8 @@
    "763ccf510a214597",
    "4c4c274987de46a8",
    "428d6e874be748e6",
+   "15695e07ef4e4dc1",
+   "a13b18c4338146c2",
    "f3ce080a5a464b1e",
    "c5fca875149c47bf",
    "ca8a0e7c2b054a07",
@@ -198,7 +200,8 @@
    "818cb30f1b644086",
    "9a2f7cd4ab5f478c",
    "e3232492e3fb4dc4",
-   "d8f394f2cb124fd3"
+   "d8f394f2cb124fd3",
+   "470d291003c347c7"
   ]
  },
  "cut": [
@@ -3450,7 +3453,15 @@
   "687c80587d314cbe",
   "1b3b4fc3e4b742f5",
   "428172e1cdc34bda",
+  "d3c29f3a2e8243b2",
+  "8f487ea467164f4e",
+  "db2b1bb9639c4cbf",
+  "c20d8e43486945de",
   "08cf8d0eba5b4e3b",
+  "9a65fbeb06e9402f",
+  "25226ce8dc964901",
+  "88075489a881463c",
+  "ee97637a22254a99",
   "c5a301b49a344182",
   "cf5e4e5265ca4c4e",
   "ceefba20b7b54f58",
@@ -3479,7 +3490,11 @@
   "5a5f56f70cae4479",
   "4f7b2381e0694519",
   "4110648e23b74102",
+  "bbdec51dd9994a97",
+  "9a63c0c033ed4d9b",
+  "3aa99cbda053491d",
   "5f318a029fd2414c",
+  "c9e94469649a4ee8",
   "35fe13e8697c444f",
   "e5c1a34f969d48f9",
   "110347f1582c4620",
@@ -3579,6 +3594,7 @@
   "d88cdb8b795e4f09",
   "fbcf984908c44659",
   "369e14e06b8749a4",
+  "d2ef720b6ece4a3e",
   "7462eafe253746a8",
   "4c6da25420fd4db4",
   "2cf0898c51b1459d",
@@ -3586,6 +3602,7 @@
   "e48d63e31c4640a8",
   "c0db4ebd1d18430e",
   "62e7fd9b6f4b4604",
+  "3b3b325290a84e4c",
   "72a3784c471d450a",
   "e42cad59bcfa4f8e",
   "6a86cefdd5ca429d",
@@ -3685,6 +3702,11 @@
   "ea7aec80f37943ef",
   "95128f5e0e014023",
   "a8d31384b3234981",
+  "fdb2feaf0d304635",
+  "40faecbbc8f54def",
+  "ea1df60e2a5b4656",
+  "15f4cb2b710d4526",
+  "9f163e72f60041cf",
   "a6d1f69697834b41",
   "c33d60c721c14885",
   "d741c14f819d4b96"
@@ -3692,19 +3714,7 @@
  "agency": [
   "4144a68adad34eaf",
   "cbaec4f8aced4de6",
-  "d3c29f3a2e8243b2",
-  "8f487ea467164f4e",
-  "db2b1bb9639c4cbf",
-  "c20d8e43486945de",
-  "9a65fbeb06e9402f",
-  "25226ce8dc964901",
-  "88075489a881463c",
-  "ee97637a22254a99",
   "8d57f803c1464596",
-  "bbdec51dd9994a97",
-  "9a63c0c033ed4d9b",
-  "3aa99cbda053491d",
-  "c9e94469649a4ee8",
   "740e1604387447f8",
   "a4293becb5c645a1",
   "6a4cc8393ac740c4",
@@ -180587,9 +180597,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Title line says Germany, but benefits widen it to 'eligible European locations', which is unclear whether Portugal qualifies.",
      "Portugal OUT · under the title: \"Germany\"",
@@ -180620,7 +180630,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/1820b518-91fd-49e5-a215-f3851da6c84c",
-    "reason": "the page says both: Portugal in, and Portugal out · Title line says Germany, but benefits widen it to 'eligible European locations', which is unclear whether Portugal qualifies.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Title line says Germany, but benefits widen it to 'eligible European locations', which is unclear whether Portugal qualifies.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -180645,9 +180655,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d3c29f3a2e8243b2.jpg",
-    "read_at": "2026-10-02T18:41:27",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:41:27"
    }
   },
   {
@@ -180674,9 +180682,9 @@
    "years_xp": 6,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Top of posting says US-based, but body widens eligibility to Europe (which includes Portugal), creating a contradiction the posting itself does not resolve.",
      "Portugal OUT · under the title: \"USResearch & Development – Design /Full-Time /Remote\"",
@@ -180711,7 +180719,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/1f496194-1d38-452a-845f-1e8f1088b673",
-    "reason": "the page says both: Portugal in, and Portugal out · Top of posting says US-based, but body widens eligibility to Europe (which includes Portugal), creating a contradiction the posting itself does not resolve.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Top of posting says US-based, but body widens eligibility to Europe (which includes Portugal), creating a contradiction the posting itself does not resolve.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -180746,9 +180754,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8f487ea467164f4e.jpg",
-    "read_at": "2026-10-02T18:41:30",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:41:30"
    }
   },
   {
@@ -180773,9 +180779,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Posting names France under the title but later states the role is fully remote from eligible European locations, so the location is unclear rather than excluded.",
      "Portugal OUT · under the title: \"France\"",
@@ -180806,7 +180812,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/2a4ee881-e52a-4d15-8d7a-7a7f21e3427f",
-    "reason": "the page says both: Portugal in, and Portugal out · Posting names France under the title but later states the role is fully remote from eligible European locations, so the location is unclear rather than excluded.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Posting names France under the title but later states the role is fully remote from eligible European locations, so the location is unclear rather than excluded.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -180831,9 +180837,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/db2b1bb9639c4cbf.jpg",
-    "read_at": "2026-10-02T18:41:37",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:41:37"
    }
   },
   {
@@ -180858,9 +180862,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Named location is Ireland, but benefits section widens eligibility to European locations, creating an unclear case per the posting's own contradiction.",
      "Portugal OUT · opening paragraph: \"Our partner is looking for a Senior Product Designer based in Ireland.\"",
@@ -180890,7 +180894,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/6e4d5eab-3120-4cd9-a215-2d7059bd7bea",
-    "reason": "the page says both: Portugal in, and Portugal out · Named location is Ireland, but benefits section widens eligibility to European locations, creating an unclear case per the posting's own contradiction.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Named location is Ireland, but benefits section widens eligibility to European locations, creating an unclear case per the posting's own contradiction.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -180910,9 +180914,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c20d8e43486945de.jpg",
-    "read_at": "2026-10-02T18:41:45",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:41:45"
    }
   },
   {
@@ -181002,9 +181004,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Posting names UK under the title but later says fully remote from eligible European locations, which widens but does not confirm Portugal eligibility.",
      "Portugal OUT · under the title: \"UKResearch & Development – Design /Full-Time /Remote\"",
@@ -181035,7 +181037,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/8bac5f4d-1c2c-42a8-a691-163e92274f27",
-    "reason": "the page says both: Portugal in, and Portugal out · Posting names UK under the title but later says fully remote from eligible European locations, which widens but does not confirm Portugal eligibility.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Posting names UK under the title but later says fully remote from eligible European locations, which widens but does not confirm Portugal eligibility.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -181060,9 +181062,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9a65fbeb06e9402f.jpg",
-    "read_at": "2026-10-02T18:41:50",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:41:50"
    }
   },
   {
@@ -181087,9 +181087,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
      "Portugal OUT · under the title: \"Spain\"",
@@ -181122,7 +181122,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/ce267460-c258-4c82-a45d-fa787b92116c",
-    "reason": "the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -181147,9 +181147,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/25226ce8dc964901.jpg",
-    "read_at": "2026-10-02T18:41:51",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:41:51"
    }
   },
   {
@@ -181174,9 +181172,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Named location is Switzerland but benefits state fully remote from eligible European locations, contradicting the top line.",
      "Portugal OUT · under the title: \"SwitzerlandResearch & Development – Design /Full-Time /Remote\"",
@@ -181207,7 +181205,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/e1a2a2d9-ef78-4010-a2b9-e2204128afca",
-    "reason": "the page says both: Portugal in, and Portugal out · Named location is Switzerland but benefits state fully remote from eligible European locations, contradicting the top line.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Named location is Switzerland but benefits state fully remote from eligible European locations, contradicting the top line.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -181232,9 +181230,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/88075489a881463c.jpg",
-    "read_at": "2026-10-02T18:42:02",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:42:02"
    }
   },
   {
@@ -181259,9 +181255,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Named country (Netherlands) under title but benefits section widens it to 'eligible European locations', creating a contradiction he must decide himself.",
      "Portugal OUT · under the title: \"Netherlands\"",
@@ -181291,7 +181287,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/f406c9ae-9888-4b53-819b-b60f55538046",
-    "reason": "the page says both: Portugal in, and Portugal out · Named country (Netherlands) under title but benefits section widens it to 'eligible European locations', creating a contradiction he must decide himself.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Named country (Netherlands) under title but benefits section widens it to 'eligible European locations', creating a contradiction he must decide himself.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -181316,9 +181312,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ee97637a22254a99.jpg",
-    "read_at": "2026-10-02T18:42:04",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:42:04"
    }
   },
   {
@@ -183249,9 +183243,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Posting opens naming UK specifically but later widens eligibility to the whole EMEA region, which includes Portugal, creating a genuine contradiction.",
      "Portugal OUT · under the title: \"UKResearch & Development – Design /Contract /Remote\"",
@@ -183283,7 +183277,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/216fbbd5-d302-46ea-b6d0-a026e53c4441",
-    "reason": "the page says both: Portugal in, and Portugal out · Posting opens naming UK specifically but later widens eligibility to the whole EMEA region, which includes Portugal, creating a genuine contradiction.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Posting opens naming UK specifically but later widens eligibility to the whole EMEA region, which includes Portugal, creating a genuine contradiction.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -183308,9 +183302,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/bbdec51dd9994a97.jpg",
-    "read_at": "2026-10-02T18:42:22",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:42:22"
    }
   },
   {
@@ -183335,9 +183327,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Title says UX Designer based in France, but benefits section widens eligibility to the whole EMEA region, which includes Portugal - the page contradicts itself on location.",
      "Portugal OUT · under the title: \"France\"",
@@ -183368,7 +183360,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/3b6faf9f-745a-4396-aca9-f77cb3a0b7a0",
-    "reason": "the page says both: Portugal in, and Portugal out · Title says UX Designer based in France, but benefits section widens eligibility to the whole EMEA region, which includes Portugal - the page contradicts itself on location.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Title says UX Designer based in France, but benefits section widens eligibility to the whole EMEA region, which includes Portugal - the page contradicts itself on location.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -183393,9 +183385,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9a63c0c033ed4d9b.jpg",
-    "read_at": "2026-10-02T18:42:23",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:42:23"
    }
   },
   {
@@ -183420,9 +183410,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
      "Portugal OUT · under the title: \"Spain\"",
@@ -183453,7 +183443,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/874af8eb-94c8-4743-ad9d-52d4aaf54b99",
-    "reason": "the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -183478,9 +183468,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3aa99cbda053491d.jpg",
-    "read_at": "2026-10-02T18:42:40",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:42:40"
    }
   },
   {
@@ -183569,9 +183557,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Switzerland is named under the title, but benefits text widens eligibility to the EMEA region, which includes Portugal, creating a contradiction the posting itself does not resolve.",
      "Portugal OUT · under the title: \"Switzerland\"",
@@ -183604,7 +183592,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/ce82015c-761e-4d5d-bb22-ec55b20f9319",
-    "reason": "the page says both: Portugal in, and Portugal out · Switzerland is named under the title, but benefits text widens eligibility to the EMEA region, which includes Portugal, creating a contradiction the posting itself does not resolve.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Switzerland is named under the title, but benefits text widens eligibility to the EMEA region, which includes Portugal, creating a contradiction the posting itself does not resolve.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -183629,9 +183617,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c9e94469649a4ee8.jpg",
-    "read_at": "2026-10-02T18:42:43",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-02T18:42:43"
    }
   },
   {
@@ -189881,6 +189867,74 @@
   },
   {
    "active": true,
+   "company": "Pearl",
+   "first_run": "2026-10-02T15:38:05+00:00",
+   "first_seen": "2026-10-02T15:38:05+00:00",
+   "id": "d2ef720b6ece4a3e",
+   "jdhash": "5325",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Santo Domingo",
+   "posted": "2026-09-30",
+   "remote": true,
+   "source": "weworkremotely",
+   "sources": [
+    "weworkremotely"
+   ],
+   "title": "Remote Senior Packaging Designer for Consumer Goods Company",
+   "url": "https://weworkremotely.com/remote-jobs/pearl-remote-senior-packaging-designer-for-consumer-goods-company",
+   "years_xp": 3,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is packaging/graphic design (not product/UX/UI) and the posting restricts hiring to LATAM.",
+     "Portugal OUT · opening paragraph: \"Work From Anywhere in LATAM\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Packaging Designer",
+     "company": "Pearl (client - consumer products brand)",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "LATAM"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": "3 days ago"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://weworkremotely.com/remote-jobs/pearl-remote-senior-packaging-designer-for-consumer-goods-company",
+    "reason": "Role is packaging/graphic design (not product/UX/UI) and the posting restricts hiring to LATAM.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Work From Anywhere in LATAM",
+    "signals": [
+     {
+      "quote": "Work From Anywhere in LATAM",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/d2ef720b6ece4a3e.jpg",
+    "read_at": "2026-10-03T11:18:16"
+   }
+  },
+  {
+   "active": true,
    "company": "roblox",
    "department": "UI/UX",
    "first_run": "2026-10-02T15:38:05+00:00",
@@ -190471,6 +190525,257 @@
     "found_by": null,
     "shot": "data/shots/62e7fd9b6f4b4604.jpg",
     "read_at": "2026-10-03T10:35:48"
+   }
+  },
+  {
+   "active": true,
+   "company": "NorthAssay",
+   "employment_type": "contract",
+   "first_run": "2026-10-02T15:38:05+00:00",
+   "first_seen": "2026-10-02T15:38:05+00:00",
+   "id": "15695e07ef4e4dc1",
+   "jdhash": "1150",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Remote",
+   "posted": "2026-09-30",
+   "remote": true,
+   "salary": "$20k – $30k • No equity",
+   "source": "wellfound",
+   "sources": [
+    "wellfound"
+   ],
+   "title": "Founding Designer (Part-Time)",
+   "url": "https://wellfound.com/jobs/4772697-founding-designer-part-time",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "only the job board's copy could be read · Design-titled role, remote hires everywhere, includes Portugal.",
+     "Portugal in · under the title: \"Remote (Everywhere)\"",
+     "Portugal in · side panel: \"Hires remotely in Everywhere\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Founding Designer (Part-Time)",
+     "company": "NorthAssay",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Everywhere"
+     ],
+     "portugal_ok": "yes",
+     "salary": "$20k – $30k",
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": "2 days ago"
+    },
+    "inferred": [
+     "seniority"
+    ],
+    "read": "board",
+    "read_url": "https://wellfound.com/jobs/4772697-founding-designer-part-time",
+    "reason": "only the job board's copy could be read · Design-titled role, remote hires everywhere, includes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote (Everywhere)",
+    "signals": [
+     {
+      "quote": "Remote (Everywhere)",
+      "where": "under the title",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Hires remotely in Everywhere",
+      "where": "side panel",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": "open",
+    "found_by": null,
+    "shot": "data/shots/15695e07ef4e4dc1.jpg",
+    "read_at": "2026-10-03T11:17:56"
+   }
+  },
+  {
+   "active": true,
+   "company": "Apex Studio Labs",
+   "employment_type": "contract",
+   "first_run": "2026-10-02T15:38:05+00:00",
+   "first_seen": "2026-10-02T15:38:05+00:00",
+   "id": "a13b18c4338146c2",
+   "jdhash": "1018",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Coimbatore",
+   "posted": "2026-09-30",
+   "remote": true,
+   "salary": "₹20,000 – ₹25,000 • No equity",
+   "source": "wellfound",
+   "sources": [
+    "wellfound"
+   ],
+   "title": "UI/UX Designer (Clone)",
+   "url": "https://wellfound.com/jobs/4787162-ui-ux-designer-clone",
+   "verdict": {
+    "role": "yes",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "the page says both: Portugal in, and Portugal out · Role requires occasional in-person catchups in Coimbatore, India, making it hybrid-onsite outside Portugal.",
+     "Portugal in · under the title: \"Remote (Everywhere)\"",
+     "Portugal in · side panel: \"Hires remotely in Everywhere\"",
+     "Portugal OUT · body: \"Hiring: Freelance UI/UX & Framer Designer (Coimbatore / Hybrid)\"",
+     "Portugal OUT · body: \"Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "UI/UX Designer (Clone)",
+     "company": "Apex Studio Labs",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "no",
+     "salary": "₹20,000 – ₹25,000",
+     "years_xp": 0,
+     "reports_to": null,
+     "language": "English",
+     "posted": "2 days ago"
+    },
+    "inferred": [
+     "years_xp"
+    ],
+    "read": "board",
+    "read_url": "https://wellfound.com/jobs/4787162-ui-ux-designer-clone",
+    "reason": "the page says both: Portugal in, and Portugal out · Role requires occasional in-person catchups in Coimbatore, India, making it hybrid-onsite outside Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)",
+    "signals": [
+     {
+      "quote": "Remote (Everywhere)",
+      "where": "under the title",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Hires remotely in Everywhere",
+      "where": "side panel",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Hiring: Freelance UI/UX & Framer Designer (Coimbatore / Hybrid)",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a13b18c4338146c2.jpg",
+    "read_at": "2026-10-03T11:18:05"
+   }
+  },
+  {
+   "active": true,
+   "company": "Agent42 Labs",
+   "employment_type": "full-time",
+   "first_run": "2026-10-02T15:38:05+00:00",
+   "first_seen": "2026-10-02T15:38:05+00:00",
+   "id": "3b3b325290a84e4c",
+   "jdhash": "1646",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Chennai; Remote: Tamil Nadu, India",
+   "posted": "2026-09-30",
+   "remote": true,
+   "salary": "No equity",
+   "source": "wellfound",
+   "sources": [
+    "wellfound"
+   ],
+   "title": "UX Engineer",
+   "url": "https://wellfound.com/jobs/3641005-ux-engineer",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role hires remotely only within Tamil Nadu, India, not Portugal",
+     "Portugal OUT · under the title: \"Remote (Tamil Nadu)\"",
+     "Portugal OUT · under the title: \"Chennai\"",
+     "Portugal OUT · side panel: \"Job Location: Chennai\"",
+     "Portugal OUT · side panel: \"Hires remotely in Tamil Nadu\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "UX Engineer",
+     "company": "Agent42 Labs",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "India (Tamil Nadu)"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 2,
+     "reports_to": null,
+     "language": "English",
+     "posted": "Reposted: 2 days ago"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://wellfound.com/jobs/3641005-ux-engineer",
+    "reason": "Role hires remotely only within Tamil Nadu, India, not Portugal",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote (Tamil Nadu) • Chennai ... Hires remotely in Tamil Nadu",
+    "signals": [
+     {
+      "quote": "Remote (Tamil Nadu)",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Chennai",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Job Location: Chennai",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hires remotely in Tamil Nadu",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3b3b325290a84e4c.jpg",
+    "read_at": "2026-10-03T11:18:22"
    }
   },
   {
@@ -201533,6 +201838,441 @@
     "found_by": null,
     "shot": "data/shots/a8d31384b3234981.jpg",
     "read_at": "2026-10-03T11:17:12"
+   }
+  },
+  {
+   "active": true,
+   "company": "Hunt St",
+   "department": "UI",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "470d291003c347c7",
+   "jdhash": "4714",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Philippines",
+   "posted": "2026-10-01",
+   "remote": true,
+   "source": "woodyjobs",
+   "sources": [
+    "woodyjobs"
+   ],
+   "title": "Figma Design Systems Specialist",
+   "url": "https://www.woodyjobs.com/ui/205513-figma-design-systems-specialist---017-1357-hunt-st",
+   "workplace": "Remote",
+   "years_xp": 5,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "cut on place, but not sure of it · Role is remote but explicitly for the Philippines, with no wider geography stated.",
+     "Portugal OUT · side panel: \"🇵🇭 Philippines\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Figma Design Systems Specialist",
+     "company": "Hunt St",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Philippines"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": "1 day"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.woodyjobs.com/ui/205513-figma-design-systems-specialist---017-1357-hunt-st",
+    "reason": "cut on place, but not sure of it · Role is remote but explicitly for the Philippines, with no wider geography stated.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "🇵🇭 Philippines",
+    "signals": [
+     {
+      "quote": "🇵🇭 Philippines",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/470d291003c347c7.jpg",
+    "read_at": "2026-10-03T11:17:19"
+   }
+  },
+  {
+   "active": true,
+   "company": "Propeller",
+   "department": "Product Design",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "fdb2feaf0d304635",
+   "jdhash": "2598",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Sydney",
+   "posted": "2026-10-01",
+   "source": "woodyjobs",
+   "sources": [
+    "woodyjobs"
+   ],
+   "title": "Product Designer",
+   "url": "https://www.woodyjobs.com/design/205672-product-designer-propeller",
+   "workplace": "Hybrid",
+   "years_xp": 3,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Hybrid role based in Sydney, Australia with no wider remote eligibility stated.",
+     "Portugal OUT · side panel: \"Australia — Sydney\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "Propeller",
+     "seniority": "mid",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Australia"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": "1 day"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.woodyjobs.com/design/205672-product-designer-propeller",
+    "reason": "Hybrid role based in Sydney, Australia with no wider remote eligibility stated.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Hybrid — Australia — Sydney",
+    "signals": [
+     {
+      "quote": "Australia — Sydney",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/fdb2feaf0d304635.jpg",
+    "read_at": "2026-10-03T11:17:26"
+   }
+  },
+  {
+   "active": true,
+   "company": "Platzi",
+   "department": "Product Design",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "40faecbbc8f54def",
+   "jdhash": "3590",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Mexico City",
+   "posted": "2026-10-01",
+   "source": "woodyjobs",
+   "sources": [
+    "woodyjobs"
+   ],
+   "title": "Product Designer",
+   "url": "https://www.woodyjobs.com/design/205671-product-designer-platzi",
+   "workplace": "Hybrid",
+   "years_xp": 4,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Hybrid role based in Mexico City or Bogota, not Portugal.",
+     "Portugal OUT · side panel: \"Hybrid 🇲🇽 Mexico — Mexico City 🇨🇴 Colombia — Bogota\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "Platzi",
+     "seniority": "mid",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Mexico",
+      "Colombia"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 4,
+     "reports_to": null,
+     "language": "English",
+     "posted": "1 day"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.woodyjobs.com/design/205671-product-designer-platzi",
+    "reason": "Hybrid role based in Mexico City or Bogota, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Hybrid — Mexico — Mexico City / Colombia — Bogota",
+    "signals": [
+     {
+      "quote": "Hybrid 🇲🇽 Mexico — Mexico City 🇨🇴 Colombia — Bogota",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/40faecbbc8f54def.jpg",
+    "read_at": "2026-10-03T11:17:29"
+   }
+  },
+  {
+   "active": true,
+   "company": "Pirxe",
+   "department": "Product Design",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "ea1df60e2a5b4656",
+   "jdhash": "2402",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "Poland",
+   "posted": "2026-10-01",
+   "remote": true,
+   "source": "woodyjobs",
+   "sources": [
+    "woodyjobs"
+   ],
+   "title": "Forward Deployed Designer",
+   "url": "https://www.woodyjobs.com/design/205635-forward-deployed-designer-pirxe",
+   "workplace": "Remote",
+   "years_xp": 3,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a brand/visual design position for client creative systems, and the posting is remote tied specifically to Poland, not Portugal.",
+     "Portugal OUT · side panel: \"🪂 Remote 🇵🇱 Poland\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Forward Deployed Designer",
+     "company": "Pirxe",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Poland"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": "yesterday"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.woodyjobs.com/design/205635-forward-deployed-designer-pirxe",
+    "reason": "Role is a brand/visual design position for client creative systems, and the posting is remote tied specifically to Poland, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "🪂 Remote 🇵🇱 Poland",
+    "signals": [
+     {
+      "quote": "🪂 Remote 🇵🇱 Poland",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/ea1df60e2a5b4656.jpg",
+    "read_at": "2026-10-03T11:17:32"
+   }
+  },
+  {
+   "active": true,
+   "company": "EasyLlama",
+   "department": "Others",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "15f4cb2b710d4526",
+   "jdhash": "3408",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "United States",
+   "posted": "2026-10-01",
+   "remote": true,
+   "source": "woodyjobs",
+   "sources": [
+    "woodyjobs"
+   ],
+   "title": "Learning Experience Designer",
+   "url": "https://www.woodyjobs.com/others/205617-learning-experience-designer-contract-easyllama",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is instructional/learning design (not product/UX/UI design) and location is Remote-United States, not Portugal.",
+     "Portugal OUT · side panel: \"United States\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Learning Experience Designer (Contract)",
+     "company": "EasyLlama",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": "yesterday"
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.woodyjobs.com/others/205617-learning-experience-designer-contract-easyllama",
+    "reason": "Role is instructional/learning design (not product/UX/UI design) and location is Remote-United States, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "🪂 Remote 🇺🇸 United States",
+    "signals": [
+     {
+      "quote": "United States",
+      "where": "side panel",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/15f4cb2b710d4526.jpg",
+    "read_at": "2026-10-03T11:17:41"
+   }
+  },
+  {
+   "active": true,
+   "company": "Etsy",
+   "department": "Product Design",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-03T09:52:27+00:00",
+   "first_seen": "2026-10-03T09:52:27+00:00",
+   "id": "9f163e72f60041cf",
+   "jdhash": "5485",
+   "last_seen": "2026-10-03T09:52:27+00:00",
+   "location": "United States",
+   "posted": "2026-10-01",
+   "remote": true,
+   "source": "woodyjobs",
+   "sources": [
+    "woodyjobs"
+   ],
+   "title": "Manager, Product Design, Studio",
+   "url": "https://www.woodyjobs.com/design/205600-manager-product-design-studio-etsy",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Hybrid role based in Brooklyn, NY with US pay zones, not available from Portugal.",
+     "Portugal OUT · under the title: \"Hybrid Brooklyn\"",
+     "Portugal OUT · body: \"We prioritize candidates based within commutable distance of Etsy's Brooklyn Office. Depending on proximity, we ask team members to come in once or twice per week.\"",
+     "Portugal OUT · body: \"Etsy uses two geographic pay zones ... Geo-1, covering the New York City metropolitan area, San Francisco Bay Area, and Seattle metropolitan area, and one called Geo-2, covering all other U.S. locations.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Manager, Product Design, Studio",
+     "company": "Etsy",
+     "seniority": "director",
+     "remote": "hybrid",
+     "onsite_days": 2,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "Geo-1: 182,000.00 - 246,000.00 USD Annual; Geo-2: 164,000.00 - 222,000.00 USD Annual",
+     "years_xp": null,
+     "reports_to": "Director of Product Design for UX Platform",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.etsy.com/jobs/manager-product-design-studio-brooklyn-new-york-united-states",
+    "reason": "Hybrid role based in Brooklyn, NY with US pay zones, not available from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "We prioritize candidates based within commutable distance of Etsy's Brooklyn Office.",
+    "signals": [
+     {
+      "quote": "Hybrid Brooklyn",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We prioritize candidates based within commutable distance of Etsy's Brooklyn Office. Depending on proximity, we ask team members to come in once or twice per week.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Etsy uses two geographic pay zones ... Geo-1, covering the New York City metropolitan area, San Francisco Bay Area, and Seattle metropolitan area, and one called Geo-2, covering all other U.S. locations.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "careers",
+    "shot": "data/shots/9f163e72f60041cf.employer.jpg",
+    "read_at": "2026-10-03T11:18:04"
    }
   },
   {

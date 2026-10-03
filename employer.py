@@ -43,6 +43,7 @@ NOT_EMPLOYER = re.compile(r"uiuxjobsboard|uxremotetalent|euremotejobs|jobspresso
 GONE = re.compile(r"(?i)job not found|no longer available|no longer accepting|position (has been|is) (filled|closed)|"
                   r"this job (is|has) (closed|expired)|job (has )?expired|posting (has )?(expired|closed)|"
                   r"job .{0,40}was archived|this position is closed")
+SEARCH = False
 STOP = {"the", "a", "an", "and", "for", "of", "to", "in", "at", "remote", "m", "f", "d", "x", "w", "h", "mfd", "fmd"}
 
 
@@ -143,9 +144,16 @@ class Finder:
             if r:
                 return r, tried
 
+        # Steps 3 and 4 are off. The search engine answers one query and then
+        # asks if we are a robot, so step 3 found almost nothing while costing
+        # most of a role's time (a run of 1,571 roles was heading for six
+        # hours). discover.py does this job properly now: it finds a company's
+        # own hiring board once, and step 1 picks the posting up from the pool.
+        if not SEARCH:
+            hits = []
         # 3 search: the exact title and the company
         q = urllib.parse.quote(f'"{rec["title"]}" {rec["company"]}')
-        sr = self.br.page("https://search.brave.com/search?q=" + q, settle=1.5)
+        sr = self.br.page("https://search.brave.com/search?q=" + q, settle=1.5) if SEARCH else {}
         hits = [a for a in sr.get("links") or [] if not NOT_EMPLOYER.search(host(a))]
         hits.sort(key=lambda a: (not ATS.search(host(a)), co not in squash(a["href"])))
         sites = []
@@ -160,7 +168,7 @@ class Finder:
                 sites.append(page)
 
         # 4 the company's own site: a link on the board, or what search turned up
-        for a in links:
+        for a in links if SEARCH else []:
             if co and co in squash(host(a)) and not NOT_EMPLOYER.search(host(a)) and len(sites) < 3:
                 sites.append(self.load(a["href"], rid))
         for sp in sites[:3]:

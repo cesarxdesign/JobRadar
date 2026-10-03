@@ -32,7 +32,7 @@ import contracts, criteria, employer, judge, read, render
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = f"{ROOT}/data/vision.json"
 MODEL = os.environ.get("RADAR_VISION_MODEL", "sonnet")
-WORKERS = 4
+WORKERS = 6
 MAX_CHARS = 30000          # a long posting is ~10k; this is the page, menus and all
 # A page costs about 6,500 tokens to read. The old judge spent 30,000 on each
 # because it sent the CLI's whole system prompt and tool list along, and nobody
@@ -183,7 +183,9 @@ def see(finder, rec):
         # wanted, and place is where two readings of one page disagree. So
         # that cut has to be confident, and has to survive a second reading.
         if v["lane"] == "cut" and a.get("role_verdict") != "no" and a.get("language_ok") is not False:
-            if a.get("confidence") != "high":
+            if criteria.top_line_out(a.get("place_signals")):
+                pass                        # the posting's own top line said so: nothing to doubt
+            elif a.get("confidence") != "high":
                 v["lane"], v["reason"] = "unsure", "cut on place, but not sure of it · " + str(a.get("reason") or "")
             else:
                 try:

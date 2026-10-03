@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-03.1"
+VERSION = "2026-10-03.2"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -377,6 +377,16 @@ Otherwise cut is true when role_verdict is "no" OR place_verdict is "no".
 """
 
 
+TOP = ("under the title", "opening paragraph")
+
+
+def top_line_out(signals):
+    """Portugal is ruled out at the top of the page, and nothing at the top lets it back in."""
+    at = lambda says: any(s.get("says") == says and str(s.get("where") or "").lower() in TOP
+                          for s in signals or [] if isinstance(s, dict))
+    return at("portugal_out") and not at("portugal_in")
+
+
 def place_from_signals(signals, workplace, model_place):
     """The place verdict, worked out here and not by the reader.
 
@@ -386,16 +396,26 @@ def place_from_signals(signals, workplace, model_place):
     the arithmetic is done where it cannot be talked out of it:
 
         out, and nothing in      -> no
-        out AND in               -> unclear. The page contradicts itself.
-                                    Likely a cut - but he looks. Never Open.
+        out AND in               -> it depends on WHERE each one is.
+            out at the top of the page (the line under the title, the opening
+            paragraph) and in only further down -> no. The top line is written
+            for this posting - "based in France" on one copy, "based in
+            Germany" on the next. The wider words lower down are the same
+            paragraph pasted onto every role, and they do not change it.
+            (His call, 2026-10-03, on the Jobgether copies.)
+            anything else -> unclear. The page contradicts itself where it
+            matters; he looks. Never Open.
         in, and nothing out      -> remote, or pt_onsite when it is an office
         nothing either way       -> remote only if the page says remote and
                                     the reader agrees; else unclear
     And Open needs the reader to agree: if it says anything but yes, unclear.
     """
-    says = [s.get("says") for s in signals or [] if isinstance(s, dict)]
+    sig = [s for s in signals or [] if isinstance(s, dict)]
+    says = [s.get("says") for s in sig]
     out, inn = "portugal_out" in says, "portugal_in" in says
     if out and inn:
+        if top_line_out(sig):
+            return "no", "the line at the top of the page says where; the wider words lower down are boilerplate"
         return "unclear", "the page says both: Portugal in, and Portugal out"
     if out:
         return "no", None
