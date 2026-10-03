@@ -46,7 +46,10 @@ RUNS_LOG = f"{ROOT}/data/vision_runs.jsonl"
 # with: the server said gone, or the page is nothing but the sentence.
 GONE = employer.GONE
 UIUX_GONE = "This role is no longer available!"
-WALL = re.compile(r"(?i)just a moment|checking your browser|verify you are human|enable javascript and cookies|access denied")
+# "Performing security verification" was missing from this list, so 115 of
+# these screens were handed to the reader as if they were postings.
+WALL = re.compile(r"(?i)just a moment|checking your browser|verify you are human|enable javascript and cookies|access denied|"
+                  r"performing security verification|security service to protect|this site can.t be reached|ERR_[A-Z0-9_]{4,}")
 
 _lock = threading.Lock()
 _usage = {"calls": 0, "in": 0, "out": 0, "usd": 0.0}
@@ -151,6 +154,106 @@ def off_the_posting(rec, page):
     return page.get("url") != page.get("asked") and not employer.has_title(rec["title"], page)
 
 
+LISTING = re.compile(r"(?i)open positions|current openings|job openings|open roles|all jobs|view all (open )?(jobs|positions|roles)|"
+                     r"search (for )?jobs|filter by|\d+ (jobs|positions|openings)\b")
+
+
+def unread(page):
+    text = (page or {}).get("text") or ""
+    return len(text) < 200 or bool(WALL.search(text[:600]))
+
+
+def employer_page(br, rec, first):
+    """The employer's posting, tried the ways that actually fail in practice.
+
+    221 roles sat in Unsure as "page could not be read", and almost none of
+    them were a robot check - a visible browser reads them no better than a
+    hidden one. What was really happening:
+      - a company's careers site shows a Greenhouse posting inside a frame
+        (ionq.com/job?gh_jid=..., psiquantum.com/apply?gh_jid=...). The words
+        are in the frame, not the page, so the page read as empty. The same
+        posting is on Greenhouse's own address, in the open.
+      - a slow careers site had not finished drawing when it was read.
+      - the posting was gone and its link opened the company's list of jobs,
+        which is not unreadable: it is the employer saying the job is closed.
+    Returns (page, gone) - gone is the sentence that says the posting is closed.
+    """
+    page, title = first, rec.get("title")
+    ok = lambda p: not unread(p) and employer.has_title(title, p)
+    src = rec.get("source") or ""
+    m = re.search(r"gh_jid=(\d+)|greenhouse\.io/[^/]+/jobs/(\d+)", rec.get("url") or "")
+    framed = bool(m) and "greenhouse.io" not in (rec.get("url") or "")     # the title is in the menu, the posting in a frame
+    if ok(page) and not framed:
+        return page, None
+    if m and src.startswith("greenhouse/"):
+        jid, slug = m.group(1) or m.group(2), src.split("/", 1)[1]
+        for host in ("job-boards.greenhouse.io", "job-boards.eu.greenhouse.io", "boards.greenhouse.io"):
+            alt = br.page(f"https://{host}/{slug}/jobs/{jid}", shot=render.shot_path(rec["id"]))
+            if ok(alt):
+                return alt, None
+            if not unread(alt) and (alt.get("status") in (404, 410) or "error=true" in (alt.get("url") or "")
+                                    or LISTING.search((alt.get("text") or "")[:3000])):
+                return alt, "the employer's board no longer has this posting: its link opens the list of open jobs"
+    if ok(page) and len(page.get("text") or "") > 2500:
+        return page, None                  # the company's own page did carry the posting after all
+    if unread(page) or not employer.has_title(title, page):
+        slow = br.page(rec["url"], shot=render.shot_path(rec["id"]), settle=8)      # a slow site, given time
+        if ok(slow):
+            return slow, None
+        if not unread(slow):
+            page = slow
+    # On a hiring system, a posting's own address that now shows a list of jobs is a closed posting.
+    if not unread(page) and not employer.has_title(title, page) and employer.ATS.search(page.get("url") or "") \
+            and LISTING.search((page.get("text") or "")[:3000]):
+        return page, "the employer's board no longer has this posting: its link opens the list of open jobs"
+    return page, None
+
+
+def greenhouse_feed(rec):
+    """A posting's own text from Greenhouse's public feed, for a link that
+    carries a Greenhouse job number (…?gh_jid=123) but opens a page we cannot
+    read - VML's careers site sits behind a security screen, and a job board
+    gave us the link with a two-line summary. The feed is the employer's
+    hiring system speaking, so this is the employer's posting."""
+    import urllib.request
+    m = re.search(r"gh_jid=(\d+)", rec.get("url") or "")
+    if not m:
+        return None
+    name = re.findall(r"[a-z0-9]+", (rec.get("company") or "").lower())
+    for slug in dict.fromkeys(["".join(name), "-".join(name), name[0] if name else ""]):
+        if len(slug) < 2:
+            continue
+        try:
+            req = urllib.request.Request(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs/{m.group(1)}",
+                                         headers={"User-Agent": "Mozilla/5.0"})
+            d = json.loads(urllib.request.urlopen(req, timeout=20).read())
+        except Exception:
+            continue
+        import pool as P
+        body = P.strip_html(d.get("content") or "")
+        offices = "; ".join(o.get("name") or "" for o in d.get("offices") or [])
+        if len(body) > 400 and employer.has_title(rec.get("title"), {"title": d.get("title"), "text": ""}):
+            return {"url": d.get("absolute_url") or rec["url"], "title": d.get("title"),
+                    "text": f"{d.get('title')}\n{rec.get('company')}\n\nLocation\n{(d.get('location') or {}).get('name') or ''}\n"
+                            + (f"\nOffices\n{offices}\n" if offices else "") + "\n" + body}
+    return None
+
+
+_jd = {}
+
+
+def stored_text(rid):
+    """The description the pool scraped for a role. Loaded once, when first needed: the file is large."""
+    with _jd_lock:
+        if "all" not in _jd:
+            path = f"{ROOT}/data/jd.json"
+            _jd["all"] = json.load(open(path)) if os.path.exists(path) else {}
+    return _jd["all"].get(rid) or ""
+
+
+_jd_lock = threading.Lock()
+
+
 def reader(rec, page):
     prompt = (criteria.VISION_HEAD + criteria.JUDGE_CRITERIA + criteria.JUDGE_FIELDS + criteria.VISION_OUTPUT
               + f"\n\nThe pool lists this role as: {rec.get('title')} at {rec.get('company')}."
@@ -164,6 +267,9 @@ def see(finder, rec):
     br = finder.br
     is_board = "/" not in (rec.get("source") or "")
     first = br.page(rec["url"], shot=render.shot_path(rec["id"]))
+    listed_gone = None
+    if not is_board:
+        first, listed_gone = employer_page(br, rec, first)
     board, emp, found, tried = (first, None, None, []) if is_board else (None, first, None, [])
     if is_board:
         found, tried = finder.find(rec, board)
@@ -182,9 +288,9 @@ def see(finder, rec):
         return {**v, "lane": "closed", "posting_open": "no", "closed_by": "employer", "read": "employer",
                 "read_url": emp.get("url"), "open_quote": found["gone"], "stage": "render",
                 "reason": "the employer says it is closed"}
-    if not is_board and gone(emp):
+    if not is_board and (listed_gone or gone(emp)):
         return {**v, "lane": "closed", "posting_open": "no", "closed_by": "employer", "read": "employer",
-                "read_url": emp.get("url"), "open_quote": gone(emp), "stage": "render",
+                "read_url": emp.get("url"), "open_quote": listed_gone or gone(emp), "stage": "render",
                 "reason": "the employer says it is closed"}
     if is_board and not found:
         dead = gone(board) or (off_the_posting(rec, board) and "the board sent the link somewhere else: " + str(board.get("url")))
@@ -197,6 +303,36 @@ def see(finder, rec):
     v["read"] = "employer" if emp is not None and page is emp else "board"
     v["read_url"] = page.get("url") if page else None
     text = (page or {}).get("text") or ""
+    shell = not is_board and (len(text) < 200 or WALL.search(text[:600]) or not employer.has_title(rec.get("title"), page or {})
+                              or len(text) < 1500)
+    if shell:
+        # A company page that frames its posting, or will not load. The pool
+        # read this posting from the employer's own hiring system, so the
+        # employer's words are on file: the description and the location as
+        # the system gives them. That is the employer's posting, not a copy.
+        fed = stored_text(rec["id"])
+        if len(fed) > 400:
+            panel = "\n".join(f"{k}\n{rec.get(f)}\n" for f, k in (("location", "Location"), ("workplace", "Location Type"),
+                              ("employment_type", "Employment Type"), ("department", "Department")) if rec.get(f))
+            page = {"url": rec["url"], "title": rec.get("title"),
+                    "text": f"{rec.get('title')}\n{rec.get('company')}\n\n{panel}\n{fed}"}
+            text, v["read"], v["read_url"], v["fed"] = page["text"], "employer", rec["url"], True
+    if (len(text) < 200 or WALL.search(text[:600])) and "gh_jid=" in (rec.get("url") or ""):
+        fed = greenhouse_feed(rec)
+        if fed:
+            page, text = fed, fed["text"]
+            v["read"], v["read_url"], v["fed"] = "employer", fed["url"], True
+    if (len(text) < 200 or WALL.search(text[:600])) and is_board and not found:
+        # The board will not show its page to a script (himalayas, behind a
+        # security check). The pool still holds what the board's own feed
+        # said about the job. That is a board's copy - never enough for Open -
+        # but it is enough to cut what is plainly not for him, and to say why
+        # the rest is Unsure, instead of leaving all of it as "not read".
+        fed = stored_text(rec["id"])
+        if len(fed) > 400:
+            page = {"url": rec["url"], "title": rec.get("title"),
+                    "text": f"{rec.get('title')}\n{rec.get('company')}\n\nLocation\n{rec.get('location') or ''}\n\n{fed}"}
+            text, v["read"], v["read_url"], v["fed"] = page["text"], "board", rec["url"], True
     if len(text) < 200 or WALL.search(text[:600]):
         return {**v, "lane": "unsure", "posting_open": "unreadable", "stage": "render",
                 "open_quote": " ".join(text.split())[:160] or (page or {}).get("error"),
@@ -255,6 +391,12 @@ def save(out):
 
 def pick(jobs, done):
     args = sys.argv
+    if "--unread" in args:             # the roles filed "page could not be read", to try again
+        rows = [j for j in jobs if j["id"] in done and (done[j["id"]].get("posting_open") == "unreadable"
+                or "could not be read" in str(done[j["id"]].get("reason")))]
+        if "--limit" in args:
+            rows = rows[:int(args[args.index("--limit") + 1])]
+        return rows
     if "--ids" in args:
         want = set(args[args.index("--ids") + 1].split(","))
         rows = [j for j in jobs if j["id"] in want]

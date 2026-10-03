@@ -149,7 +149,7 @@ def from_vision(v):
 def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=None):
     hints = hints or {}
     vision = vision or {}
-    closed, vcut, agency = [], [], []
+    closed, vcut, agency, unread = [], [], [], []
     verdicts = verdicts_doc.get("jobs", {})
     roles, lanes, cut, title_cuts, unjudged = [], {k: [] for k in LANES}, [], 0, 0
     ghosts = 0
@@ -184,6 +184,13 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
                 role["verdict"].update({"lane": "cut", "cut": True, "place": "no",
                                         "reason": "the line at the top of the page says where; the wider words "
                                                   "lower down are boilerplate · " + str(vis.get("reason") or "")})
+            # Unsure means it was read and the answer is not clear. A page that
+            # could not be read at all is a different thing and gets its own
+            # list, so Unsure holds only roles worth his judgement.
+            if lane == "unsure" and (vis.get("posting_open") == "unreadable"
+                                     or "could not be read" in str(vis.get("reason"))):
+                unread.append(rec["id"])
+                continue
             # A role an agency posts would otherwise sit in Open beside the
             # employer's own postings, several times over. It gets its own lane.
             if lane in lanes and criteria.is_agency((vis.get("fields") or {}).get("company") or rec.get("company"),
@@ -229,7 +236,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "criteria": verdicts_doc.get("criteria"),
         "model": verdicts_doc.get("model"),
         "counts": {**{k: len(v) for k, v in lanes.items()}, "ghosts": ghosts,
-                   "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut), "agency": len(agency),
+                   "cut": len(cut), "closed": len(closed), "vision_cut": len(vcut), "agency": len(agency), "not_read": len(unread),
                    "vision_read": len(vision), "title_cuts": title_cuts,
                    # what the board's top line says: design-titled roles, and how many vision has read
                    "design": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None),
@@ -242,6 +249,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "closed": closed,
         "vcut": vcut,
         "agency": agency,
+        "unread": unread,
         "sources": pool_doc.get("sources", {}),
         "roles": roles,
     }

@@ -145,6 +145,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
   <button class="tab rr" data-lane="old69" hidden>69+<span class="n" id="c-old69"></span></button>
   <button class="tab rr" hidden data-lane="agency" title="recruiters and sites that post on behalf of others, and companies you have labelled as posting the same roles over and over">Multihire<span class="n" id="c-agency"></span></button>
+  <button class="tab rr" hidden data-lane="unread" title="roles whose page could not be loaded at all: nothing was judged">Not read<span class="n" id="c-unread"></span></button>
   <button class="tab rr" hidden data-lane="closed" title="the page itself says the job is closed or gone">Closed<span class="n" id="c-closed"></span></button>
   <button class="tab rr" hidden data-lane="vcut" title="read in the browser and cut, with the words that decided it">Cut<span class="n" id="c-vcut"></span></button>
   <button class="tab rr" data-lane="before" hidden title="roles that pass, at companies your inbox says you have applied to before">Applied before<span class="n" id="c-before"></span></button>
@@ -522,6 +523,8 @@ function pool(){
       posted:x.at,first_seen:x.at,verdict:{why:x.why||[],fields:{}}});
   else if(LANE==="agency")
     rows=sortRows(multiIds().map(roleById).filter(r=>r && !routing(r.id) && matches(r)));
+  else if(LANE==="unread")
+    rows=sortRows((DATA.unread||[]).map(roleById).filter(r=>r && !routing(r.id) && matches(r)));
   else if(LANE==="closed"||LANE==="vcut")
     rows=laneIds(LANE==="vcut"?"cut":"closed").map(roleById).filter(r=>r && !routing(r.id));
   else if(LANE==="old69")
@@ -548,6 +551,7 @@ function counts(){
     $("c-"+l).textContent=n||"";
   }
   $("c-agency").textContent=multiIds().map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
+  $("c-unread").textContent=(DATA.unread||[]).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
   for(const l of ["closed","vcut"])
     $("c-"+l).textContent=laneIds(l==="vcut"?"cut":"closed").map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
   $("c-old69").textContent=["open","portugal","unsure"].flatMap(laneIds)

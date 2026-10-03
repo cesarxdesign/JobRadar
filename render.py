@@ -139,17 +139,25 @@ class BrowserDown(Exception):
 class Browser:
     """One headless Chrome, its own throwaway profile, a tab per page."""
 
-    def __init__(self):
+    def __init__(self, visible=False):
+        """visible=True runs Chrome as an ordinary window, not hidden. Plenty
+        of sites show a hidden browser a "verify you are human" screen and let
+        an ordinary one straight through, with nothing to click: remote.io,
+        and most of the 221 pages vision could not read. Nothing is solved or
+        clicked for it - a page that still asks is still unread."""
         import threading
         self._lock = threading.Lock()
+        self.visible = visible
         self.launch()
 
     def launch(self):
         self.dir = tempfile.mkdtemp(prefix="radar-chrome-")
         self.p = subprocess.Popen(
-            [CHROME, "--headless=new", "--remote-debugging-port=0", f"--user-data-dir={self.dir}",
-             "--no-first-run", "--no-default-browser-check", "--disable-gpu", "--mute-audio",
-             "--window-size=1280,1600", "--lang=en-US",
+            [CHROME, *([] if self.visible else ["--headless=new", "--disable-gpu"]),
+             "--remote-debugging-port=0", f"--user-data-dir={self.dir}",
+             "--no-first-run", "--no-default-browser-check", "--mute-audio",
+             "--window-size=1280,1600", "--window-position=40,40", "--lang=en-US",
+             "--disable-session-crashed-bubble", "--disable-features=Translate",
              # headless Chrome announces itself as HeadlessChrome; boards refuse that on sight
              "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
              "(KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"],
