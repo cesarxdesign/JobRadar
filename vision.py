@@ -52,7 +52,11 @@ _lock = threading.Lock()
 _usage = {"calls": 0, "in": 0, "out": 0, "usd": 0.0}
 
 
-LIMIT = re.compile(r"(?i)usage limit|limit reached|rate.?limit|quota|out of (extra )?usage|resets? (at|in)|overloaded")
+# The wording that got past the first version, word for word: "You've hit your
+# session limit · resets 3pm (Europe/Lisbon)". It was not recognised, 25 roles
+# failed in a row, and the run stopped five hours before he came back. Any
+# mention of a limit or a reset is a limit.
+LIMIT = re.compile(r"(?i)\blimit\b|\bresets?\b|quota|out of (extra )?usage|overloaded|too many requests|\b429\b")
 
 
 class ReaderDown(Exception):
@@ -116,7 +120,7 @@ def ask(prompt):
                 _usage["out"] += u.get("output_tokens") or 0
                 _usage["usd"] += env.get("total_cost_usd") or 0
                 if _usage["calls"] >= 10 and (_usage["in"] + _usage["out"]) / _usage["calls"] > CEILING:
-                    _usage["stop"] = True
+                    _usage["stop"] = _usage["over"] = True
             return read.parse(env.get("result") or "")
         except subprocess.TimeoutExpired:
             last = "timeout"
@@ -335,9 +339,11 @@ def main():
             f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "roles": len(rows), "pages_read": u["calls"],
                                 "tokens_per_page": (u["in"] + u["out"]) // u["calls"], "model": MODEL,
                                 "criteria": criteria.VERSION, "lanes": dict(c)}) + "\n")
-    if u.get("stop"):
+    if u.get("over"):
         print(f"STOPPED: reading a page was costing more than {CEILING:,} tokens. Something is wrong with the call.")
         sys.exit(3)
+    if u.get("stop"):
+        sys.exit(4)
 
 
 if __name__ == "__main__":
