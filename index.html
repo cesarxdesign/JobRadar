@@ -274,6 +274,21 @@ function reviewDone(){
   RR.reviewed=[...(RR.reviewed||[]),...ids];
   writeRR();SEL=null;render();$("list").scrollTop=0;
 }
+// What the filter called a role: its lane, or Closed / Cut, or the 69+ shelf.
+function labelOf(r){
+  const v=r.verdict||{};
+  if((DATA.closed||[]).includes(r.id)) return "closed";
+  if((DATA.vcut||[]).includes(r.id)||(DATA.cut||[]).includes(r.id)) return "cut";
+  return laneOf(r)||v.lane||null;
+}
+// The stamp a role carries once he has acted on it. Decisions made before
+// stamps existed have none, and say so rather than guess.
+function stampOf(id){
+  if(!RR) return null;
+  const d=RR.decisions.find(x=>x.id===id), w=(RR.incorrect||[]).find(x=>x.id===id);
+  if(!d&&!w) return null;
+  return (d&&(d.label||d.lane))||(w&&(w.label||w.lane))||"not labeled";
+}
 const wrongOf=id=>RR&&(RR.incorrect||[]).find(x=>x.id===id);
 function toggleIncorrect(r){
   RR.incorrect=RR.incorrect||[];
@@ -283,7 +298,7 @@ function toggleIncorrect(r){
     if(note===null) return;
     const v=r.verdict||{};
     RR.incorrect.push({id:r.id,at:new Date().toISOString(),note,company:r.company,title:r.title,url:r.url,
-      shown_in:LANE,lane:v.lane,role:v.role,place:v.place,why:v.why,read:v.read,read_url:v.read_url,stage:v.stage});
+      shown_in:LANE,label:(wrongOf(r.id)||{}).label||stampOf(r.id)||labelOf(r),lane:v.lane,role:v.role,place:v.place,why:v.why,read:v.read,read_url:v.read_url,stage:v.stage});
   }
   writeRR();render();
 }
@@ -533,6 +548,8 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
+      + (stampOf(r.id)?'<span class="tag" title="what the filter called this role when you acted on it" style="border-style:dashed">was '
+          +esc(LANE_NAME[stampOf(r.id)]||stampOf(r.id))+'</span>':'')
       + (LANE==="review"&&r.verdict?'<span class="tag '+(["open","portugal"].includes(r.verdict.lane)?"y":r.verdict.lane==="unsure"?"":"n")+'">→ '+(LANE_NAME[r.verdict.lane]||r.verdict.lane)+'</span>':'')
       + (r.gone?'<span class="tag n">no longer posted</span>':placeTag(r))
       + (r.location?'<span class="tag">'+esc(r.location)+'</span>':'')
@@ -685,6 +702,16 @@ function weekChart(A){
         +'<text x="'+(p+4)+'" y="'+(H+30)+'" font-size="10" fill="var(--acc)">'+esc(m.label)+'</text>';}).join("")
     +'</svg>';
 }
+// The filter's labels against what he did. Applied from Unsure or Cut is the
+// filter being too cautious; Incorrect is him saying so outright.
+function stampTable(){
+  const L=["open","portugal","unsure","closed","cut","not labeled"], acts=["applied","discarded","incorrect"];
+  const n=(l,a)=>a==="incorrect"?(RR.incorrect||[]).filter(x=>(x.label||x.lane||"not labeled")===l).length
+    :RR.decisions.filter(d=>d.decision===a&&(d.label||d.lane||"not labeled")===l).length;
+  return '<table><tr><th>Filter called it</th>'+acts.map(a=>'<th class="num">'+a+'</th>').join("")+'</tr>'
+    +L.filter(l=>acts.some(a=>n(l,a))).map(l=>'<tr><td>'+esc(LANE_NAME[l]||l)+'</td>'
+      +acts.map(a=>'<td class="num">'+(n(l,a)||'<span class="dim">·</span>')+'</td>').join("")+'</tr>').join("")+'</table>';
+}
 function renderStats(){
   const A=applications(), T=tally(A), el=$("stats");
   const inbound=(RR.inbound||[]).length;
@@ -707,6 +734,7 @@ function renderStats(){
     +'<table><tr><th>Period</th><th class="num">Applied</th><th class="num">Callbacks</th><th class="num">Rejected</th><th class="num">No reply</th></tr>'
     +P.map(p=>row(esc(p.label),tally(p.apps),(p.from||"start")+" → "+(p.to==="9999"?"today":p.to))).join("")
     +'</table>'
+    +'<h3>What you acted on, by what the filter had called it</h3>'+stampTable()
     +'<h3>Milestones</h3><div class="ms"><input type="date" id="ms-d"><select id="ms-k"><option>CV</option><option>Folio</option><option>Other</option></select>'
     +'<input id="ms-l" placeholder="what changed" size="34"><button class="route" id="ms-add">Add milestone</button></div>'
     +'<table style="margin-top:8px">'+[...(RR.milestones||[])].sort((a,b)=>a.date.localeCompare(b.date)).map(m=>
@@ -737,9 +765,14 @@ function decide(id,d){
     const f=(r.verdict&&r.verdict.fields)||{}, v=r.verdict||{};
     // Snapshot what Radar knew at the moment he decided. The posting will
     // come down; the history should not thin out with it.
+    // The stamp: what the filter called this role at the moment he acted on
+    // it, and why. A tab is where a role sits today; the stamp is what it was
+    // labeled, kept for good. An application to a role stamped Unsure is the
+    // evidence for whether Unsure was the right call.
     RR.decisions.push({id,decision:d,company:r.company,title:r.title,
       at:new Date().toISOString(),url:r.url,location:r.location,
       workplace:r.workplace,source:r.source,posted:r.posted,
+      label:labelOf(r),label_why:v.why,label_read:v.read,label_stage:v.stage,
       lane:v.lane,seniority:f.seniority,remote:f.remote,salary:f.salary,
       countries:f.countries});
   }
