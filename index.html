@@ -107,6 +107,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <span class="stamp" id="batch-when"></span>
   <button class="route" id="batch" hidden>Review last batch</button>
   <button class="route" id="export" hidden title="write the decision history for Claude to read">⇱ Export history</button>
+  <button class="route" id="review" hidden title="the same board, with the buttons swapped: move a role to the lane it belongs in">Review</button>
   <button class="route" id="route">⇱ RadarRoute</button>
 </header>
 
@@ -120,7 +121,6 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
-  <button class="tab rr" data-lane="review" hidden title="50 at a time, every outcome mixed: what the filter did with each role">Review<span class="n" id="c-review"></span></button>
   <button class="tab rr" data-lane="incorrect" hidden title="calls the filter got wrong, for the morning review">Incorrect<span class="n" id="c-incorrect"></span></button>
   <button class="tab rr" data-lane="stats" hidden>Stats</button>
   <button class="tab bt" data-lane="pass" hidden>Passed<span class="n" id="c-pass"></span></button>
@@ -257,17 +257,23 @@ function fav(id){return !!(RR&&RR.favorites.includes(id));}
 // a cut that should have passed, an Open role he cannot take. The role stays
 // where it is. The mark, with what the filter said at the time, goes in the
 // routing file and is what gets reviewed each morning.
-// Review: the filter's calls, 50 at a time, whatever lane they landed in -
-// Open, Unsure, Closed and Cut together, newest read first. He marks the
-// wrong ones Incorrect and moves on; what he has been through is remembered
-// in the routing file, so the next 50 are always ones he has not seen.
+// Review is a switch, not a place. The board stays as it is - same lanes,
+// same cards - and the buttons on each card become "move to this lane".
+// In review every lane shows what the FILTER put there, 50 at a time; a role
+// he moves drops to the bottom of the lane it came from, under a divider, so
+// he can see what he changed. Whatever he leaves alone in a finished batch
+// is recorded as correctly placed.
+let REVIEW=false;
 const REVIEW_N=50;
 const LANE_NAME={open:"Open",portugal:"Portugal",unsure:"Unsure",closed:"Closed",cut:"Cut"};
-function reviewAll(){
-  const seen=new Set(RR?RR.reviewed||[]:[]);
-  return DATA.roles.filter(r=>r.verdict&&r.verdict.stage==="vision"||r.verdict&&r.verdict.read_at)
-    .filter(r=>!seen.has(r.id)&&!routing(r.id))
-    .sort((a,b)=>String(b.verdict.read_at||"").localeCompare(String(a.verdict.read_at||"")));
+const TAB_LANE=l=>l==="vcut"?"cut":l;
+const REVIEW_TABS=["open","portugal","unsure","closed","vcut"];
+const baseIds=l=>l==="closed"?DATA.closed||[]:l==="cut"?DATA.vcut||[]:DATA.lanes[l]||[];
+function reviewRows(l){
+  const seen=new Set(RR.reviewed||[]);
+  const rows=baseIds(l).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r));
+  return {fresh:sortRows(rows.filter(r=>!retagOf(r.id)&&!seen.has(r.id))),
+          moved:rows.filter(r=>retagOf(r.id))};
 }
 // A retag is him overruling the filter on one role: "you called this Unsure,
 // it is Open". It is kept with what the filter said and why, it moves the
@@ -292,12 +298,12 @@ function laneIds(l){
   return base.filter(i=>!moved.has(i)).concat(RR.retags.filter(x=>x.to===l).map(x=>x.id));
 }
 function reviewDone(){
-  const batch=reviewAll().slice(0,REVIEW_N), ids=batch.map(r=>r.id), at=new Date().toISOString();
-  RR.confirmed=[...(RR.confirmed||[]),...batch.filter(r=>!retagOf(r.id)).map(r=>({id:r.id,label:labelOf(r),at}))];
-  RR.reviewed=[...(RR.reviewed||[]),...ids];
+  const batch=reviewRows(TAB_LANE(LANE)).fresh.slice(0,REVIEW_N), at=new Date().toISOString();
+  RR.confirmed=[...(RR.confirmed||[]),...batch.map(r=>({id:r.id,label:labelOf(r),at}))];
+  RR.reviewed=[...(RR.reviewed||[]),...batch.map(r=>r.id)];
   writeRR();SEL=null;render();$("list").scrollTop=0;
 }
-// What the filter called a role: its lane, or Closed / Cut, or the 69+ shelf.
+// What the filter called a role: its lane, or Closed / Cut.
 function labelOf(r){
   const v=r.verdict||{};
   if((DATA.closed||[]).includes(r.id)) return "closed";
@@ -484,12 +490,15 @@ function pool(){
   if(INBATCH) return BATCH.roles.filter(r=>r.bucket===BUCKET).filter(matches)
     .sort((a,b)=>a.n-b.n);
   let rows;
+  if(REVIEW&&REVIEW_TABS.includes(LANE)){
+    const v=reviewRows(TAB_LANE(LANE));
+    return v.fresh.slice(0,REVIEW_N).concat(v.moved);
+  }
   if(LANE==="favorites") rows=DATA.roles.filter(r=>r.active && fav(r.id))
       .concat((RR?RR.favorites:[]).filter(id=>!DATA.roles.some(r=>r.id===id)).map(ghost).filter(Boolean));
   else if(LANE==="applied"||LANE==="discarded")
     rows=DATA.roles.filter(r=>r.active && routing(r.id)===LANE).concat(decided(LANE));
   // a role you have acted on leaves the first three lanes
-  else if(LANE==="review") return reviewAll().slice(0,REVIEW_N);
   else if(LANE==="incorrect")
     rows=(RR?RR.incorrect||[]:[]).map(x=>roleById(x.id)||{id:x.id,company:x.company,title:x.title,url:x.url,active:true,gone:true,
       posted:x.at,first_seen:x.at,verdict:{why:x.why||[],fields:{}}});
@@ -506,6 +515,12 @@ function pool(){
 }
 
 function counts(){
+  if(REVIEW&&!INBATCH){
+    // in review a lane's number is what is still waiting to be looked at
+    for(const l of REVIEW_TABS) $("c-"+l).textContent=reviewRows(TAB_LANE(l)).fresh.length||"";
+    $("c-old69").textContent="";
+    return;
+  }
   if(INBATCH){
     for(const b of ["pass","cut"])
       $("c-"+b).textContent=BATCH.roles.filter(r=>r.bucket===b&&matches(r)).length||"";
@@ -524,7 +539,6 @@ function counts(){
     for(const l of ["applied","discarded"])
       $("c-"+l).textContent=(DATA.roles.filter(r=>r.active&&routing(r.id)===l)
         .concat(decided(l)).filter(matches)).length||"";
-    $("c-review").textContent=reviewAll().length||"";
     $("c-incorrect").textContent=(RR.incorrect||[]).length||"";
     $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)&&matches(r)).length||"";
   }
@@ -545,20 +559,24 @@ function render(){
     const all=(DATA.lanes[LANE]||[]).length;
     fc.textContent = (Q||Object.values(F).some(Boolean)) && all ? rows.length+" of "+all : "";
   }
-  if(LANE==="review"&&!INBATCH&&rows.length){
+  const inReview=REVIEW&&!INBATCH&&REVIEW_TABS.includes(LANE);
+  if(inReview){
+    const v=reviewRows(TAB_LANE(LANE)), n=Math.min(REVIEW_N,v.fresh.length), name=LANE_NAME[TAB_LANE(LANE)];
     const h=document.createElement("div");h.className="acts";h.style.cssText="margin:0 0 10px;align-items:center";
-    h.innerHTML='<button id="rv-next" class="on" style="cursor:pointer">Done with these '+rows.length+' → next</button>'
-      +'<span style="color:var(--dim);font-size:12px">retag only the wrong ones; the rest count as correct · '
-      +rows.filter(r=>retagOf(r.id)).length+' retagged · '+reviewAll().length+' left</span>';
-    $("list").appendChild(h);$("rv-next").onclick=reviewDone;
+    h.innerHTML=(n?'<button id="rv-next" class="on" style="cursor:pointer">These '+n+' belong in '+name+' → next</button>':'')
+      +'<span style="color:var(--dim);font-size:12px">'+(n?'move only the ones that do not belong here · ':'nothing left to review in '+name+' · ')
+      +v.fresh.length+' to review · '+v.moved.length+' moved</span>';
+    $("list").appendChild(h);
+    if(n) $("rv-next").onclick=reviewDone;
   }
   let section=null;
   for(const r of rows){
-    const head=INBATCH?null:(LANE==="favorites"?stateOf(r):null);
+    const head=INBATCH?null:inReview?(retagOf(r.id)?"moved":null):(LANE==="favorites"?stateOf(r):null);
     if(head&&head!==section){
       section=head;
       const h=document.createElement("div");h.className=INBATCH?"bucket":"sect";
-      h.textContent=INBATCH?(head==="pass"?"passed the judge":"cut by the judge"):head;
+      h.textContent=INBATCH?(head==="pass"?"passed the judge":"cut by the judge")
+        :head==="moved"?"Reviewed · you moved these out of "+LANE_NAME[TAB_LANE(LANE)]+" · they now sit in the lane you chose":head;
       $("list").appendChild(h);
     }
     const el=document.createElement("div");
@@ -572,12 +590,10 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
-      + (LANE!=="review"&&retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
+      + (retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
           +esc(LANE_NAME[retagOf(r.id).from]||retagOf(r.id).from)+' → '+esc(LANE_NAME[retagOf(r.id).to])+'</span>':'')
       + (stampOf(r.id)?'<span class="tag" title="what the filter called this role when you acted on it" style="border-style:dashed">was '
           +esc(LANE_NAME[stampOf(r.id)]||stampOf(r.id))+'</span>':'')
-      + (LANE==="review"?'<span class="tag '+(["open","portugal"].includes(labelOf(r))?"y":labelOf(r)==="unsure"?"":"n")+'" style="font-weight:600">tagged '
-          +esc(LANE_NAME[labelOf(r)]||labelOf(r))+'</span>':'')
       + (r.gone?'<span class="tag n">no longer posted</span>':placeTag(r))
       + (r.location?'<span class="tag">'+esc(r.location)+'</span>':'')
       + (f(r).salary?'<span class="tag y">'+esc(f(r).salary)+'</span>':'')
@@ -586,7 +602,7 @@ function render(){
       +'</div></div>'
       + (INBATCH?'<div class="acts"><button class="wrong '+(W[wkey(r)]?"on":"")+'" data-w="1">'
             +(W[wkey(r)]?"✓ wrong":"Wrong")+'</button></div>'
-         : RR&&LANE==="review"?'<div class="acts" title="retag only the ones the filter got wrong">'
+         : inReview?'<div class="acts" title="retag only the ones the filter got wrong">'
           +'<button class="star'+(fav(r.id)?" on":"")+'" data-f="1" title="favorite: come back to it later">'+(fav(r.id)?"★":"☆")+'</button>'
           +RETAG.map(t=>{const cur=(labelOf(r)==="portugal"?"open":labelOf(r))===t, on=(retagOf(r.id)||{}).to===t;
               return cur&&!retagOf(r.id)?'<button disabled style="opacity:.35;cursor:default">'+LANE_NAME[t]+'</button>'
@@ -831,6 +847,8 @@ function writeRR(){
 }
 function rrUI(on){
   document.querySelectorAll(".tab.rr").forEach(t=>{t.hidden=!on;});
+  $("review").hidden=!on;
+  if(!on&&REVIEW) setReview(false);
   const b=$("route");
   b.textContent=on?"⇱ RadarRoute · on":"⇱ RadarRoute";
   b.title=on?"RadarRouting.json is attached; every decision writes back to it":"Drop RadarRouting.json here, or click to pick it";
@@ -900,6 +918,20 @@ wireFilters();
 $("refresh").onclick=load;
 $("q").oninput=e=>{Q=e.target.value.trim().toLowerCase();SEL=null;render();};
 $("batch").onclick=()=>INBATCH?completeBatch():setBatch(true);
+function setReview(on){
+  REVIEW=on;SEL=null;
+  const b=$("review");
+  b.className="route"+(on?" on":"");
+  b.textContent=on?"Review · on":"Review";
+  // 69+ is a shelf for applying, not a label the filter gave; in review its roles sit in their own lanes
+  document.querySelector('.tab[data-lane="old69"]').hidden=on;
+  if(on&&!REVIEW_TABS.includes(LANE)){
+    LANE="open";
+    document.querySelectorAll(".tab:not(.bt)").forEach(x=>x.classList.toggle("on",x.dataset.lane===LANE));
+  }
+  render();
+}
+$("review").onclick=()=>setReview(!REVIEW);
 $("export").onclick=async()=>{
   const b=$("export");b.disabled=true;b.textContent="writing…";
   try{
