@@ -20,6 +20,7 @@ Three things the old judge got wrong and this does not do:
     python3 vision.py --lanes            # every role in the current lanes
     python3 vision.py --new              # parser survivors never read by vision
     python3 vision.py --ids a,b,c        # these
+    python3 vision.py --fresh            # --new, minus roles the old judge cut on employer text
     python3 vision.py --limit 50         # at most this many
     python3 vision.py --again            # re-read even if already read
 """
@@ -51,6 +52,43 @@ _lock = threading.Lock()
 _usage = {"calls": 0, "in": 0, "out": 0, "usd": 0.0}
 
 
+LIMIT = re.compile(r"(?i)usage limit|limit reached|rate.?limit|quota|out of (extra )?usage|resets? (at|in)|overloaded")
+
+
+class ReaderDown(Exception):
+    """The reader could not answer. Not a fact about the posting: the role stays unread."""
+
+
+def wait_for_reset(msg):
+    """His plan's usage ran out. Nothing is wrong with the run, so it does not
+    end and it does not guess: it sleeps, asks a one-word question every ten
+    minutes, and carries on from the same role the moment an answer comes."""
+    with _limit_lock:                      # one sleeper; the other readers queue behind it
+        if time.time() - _limit["cleared"] < 120:
+            return                         # another reader has just seen it come back
+        m = re.search(r"\|(\d{10})\b", msg or "")
+        until = int(m.group(1)) if m else None
+        print(f"PAUSED {time.strftime('%H:%M')}: usage limit ({str(msg)[:90]}). "
+              + (f"Resets about {time.strftime('%H:%M', time.localtime(until))}. " if until else "")
+              + "Waiting; the run picks up by itself.", flush=True)
+        while True:
+            time.sleep(max(60, min(600, (until - time.time()) + 30)) if until and until > time.time() else 600)
+            try:
+                r = subprocess.run(["claude", "-p", "Reply with the word ok.", "--output-format", "json", "--model", MODEL,
+                                    "--system-prompt", "Reply with one word.", "--tools", "", "--strict-mcp-config",
+                                    "--setting-sources", ""], capture_output=True, text=True, timeout=120,
+                                   env=read.cli_env(), cwd="/tmp")
+                if not json.loads(r.stdout).get("is_error"):
+                    break
+            except Exception:
+                pass
+        _limit["cleared"] = time.time()
+        print(f"RESUMED {time.strftime('%H:%M')}", flush=True)
+
+
+_limit_lock, _limit = threading.Lock(), {"cleared": 0}
+
+
 def ask(prompt):
     """One page, one answer. The CLI's own system prompt and tools are 30,000
     tokens a call and none of it is needed to read a page, so they are off."""
@@ -65,6 +103,9 @@ def ask(prompt):
             env = json.loads(r.stdout)
             if env.get("is_error"):
                 last = "api: " + str(env.get("result"))[:160]
+                if LIMIT.search(str(env.get("result"))):
+                    wait_for_reset(str(env.get("result")))
+                    return ask(prompt)
                 time.sleep(4 * 2 ** attempt)
                 continue
             u = env.get("usage") or {}
@@ -81,7 +122,7 @@ def ask(prompt):
             last = "timeout"
         except Exception as e:
             last = f"{type(e).__name__}: {e}"
-    raise RuntimeError(last)
+    raise ReaderDown(last)
 
 
 def gone(page):
@@ -156,10 +197,7 @@ def see(finder, rec):
         return {**v, "lane": "unsure", "posting_open": "unreadable", "stage": "render",
                 "open_quote": " ".join(text.split())[:160] or (page or {}).get("error"),
                 "reason": "the page could not be read in the browser"}
-    try:
-        a = reader(rec, page)
-    except Exception as e:
-        return {**v, "lane": "unsure", "stage": "error", "reason": f"the reader failed: {e}"}
+    a = reader(rec, page)              # ReaderDown goes up: the role stays unread, for the next run
     v.update(a)
     v["stage"] = "vision"
     if a.get("same_job") == "no":
@@ -230,6 +268,8 @@ def pick(jobs, done):
         rank = lambda j: 0 if not old.get(j["id"], {}).get("judged") else 1 if "/" not in j["source"] else 2
         rows.sort(key=lambda j: j.get("posted") or j.get("first_seen") or "", reverse=True)
         rows.sort(key=rank)
+        if "--fresh" in args:              # everything except what the old judge cut on the employer's own text
+            rows = [j for j in rows if rank(j) < 2]
     if "--again" not in args:
         rows = [j for j in rows if j["id"] not in done]
     if "--limit" in args:
@@ -257,8 +297,20 @@ def main():
             print(f"STOPPED: {e}", flush=True)
             return
         except Exception as e:
-            v = {"id": rec["id"], "lane": "unsure", "stage": "error", "reason": f"{type(e).__name__}: {e}"}
+            # Whatever went wrong went wrong with us, not with the posting.
+            # No verdict is written; the role is read again next time. A long
+            # streak of these means something is broken, and the run stops.
+            with _lock:
+                n[0] += 1
+                _usage["failed"] = _usage.get("failed", 0) + 1
+                _usage["streak"] = _usage.get("streak", 0) + 1
+                print(f"  [{n[0]}/{len(rows)}] NOT READ {rec['company'][:22]} | {rec['title'][:38]} | {type(e).__name__}: {str(e)[:80]}", flush=True)
+                if _usage["streak"] >= 25:
+                    _usage["stop"] = True
+                    print("STOPPED: 25 roles in a row could not be read.", flush=True)
+            return
         with _lock:
+            _usage["streak"] = 0
             out[rec["id"]] = v
             n[0] += 1
             print(f"  [{n[0]}/{len(rows)}] {v['lane']:8} {v.get('read', '-'):8} {str(v.get('found_by') or ''):7} {rec['company'][:22]:22} | "
