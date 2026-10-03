@@ -239,6 +239,35 @@ def greenhouse_feed(rec):
     return None
 
 
+def himalayas_feed(rec):
+    """A himalayas posting, from himalayas' own feed. Its pages show a script
+    a security screen, but its search feed answers with the full description,
+    the countries it is restricted to, the time zones, and the link it sends
+    applicants to. Everything the page would have said."""
+    import urllib.request, urllib.parse
+    if "himalayas.app" not in (rec.get("url") or ""):
+        return None
+    try:
+        q = urllib.parse.quote(f"{rec.get('title')} {rec.get('company')}")
+        req = urllib.request.Request(f"https://himalayas.app/jobs/api/search?q={q}&limit=10", headers={"User-Agent": "Mozilla/5.0"})
+        rows = json.loads(urllib.request.urlopen(req, timeout=25).read()).get("jobs") or []
+    except Exception:
+        return None
+    base = rec["url"].rstrip("/")
+    j = next((x for x in rows if (x.get("guid") or "").rstrip("/") == base), None) \
+        or next((x for x in rows if (x.get("guid") or "").startswith(base)), None)
+    if not j:
+        return None
+    import pool as P
+    where = ", ".join(j.get("locationRestrictions") or []) or "no country restriction listed"
+    tz = j.get("timezoneRestrictions")
+    return {"url": rec["url"], "title": j.get("title"), "apply": j.get("applicationLink"),
+            "text": f"{j.get('title')}\n{j.get('companyName')}\n\nLocation\nRemote · open to: {where}\n"
+                    + (f"\nTime zones\n{tz}\n" if tz else "")
+                    + (f"\nEmployment Type\n{j.get('employmentType')}\n" if j.get("employmentType") else "")
+                    + "\n" + P.strip_html(j.get("description") or "")}
+
+
 _jd = {}
 
 
@@ -323,6 +352,11 @@ def see(finder, rec):
             page, text = fed, fed["text"]
             v["read"], v["read_url"], v["fed"] = "employer", fed["url"], True
     if (len(text) < 200 or WALL.search(text[:600])) and is_board and not found:
+        fed = himalayas_feed(rec)
+        if fed and len(fed["text"]) > 400:
+            page, text = fed, fed["text"]
+            v["read"], v["read_url"], v["fed"] = "board", rec["url"], True
+    if (len(text) < 200 or WALL.search(text[:600])) and is_board and not found:
         # The board will not show its page to a script (himalayas, behind a
         # security check). The pool still holds what the board's own feed
         # said about the job. That is a board's copy - never enough for Open -
@@ -374,11 +408,10 @@ def see(finder, rec):
                         v["reason"] = "two readings disagree on place · " + str(a.get("reason") or "")
                 except Exception:
                     pass
-        # Open is a promise that the employer's own page was read.
-        if v["lane"] in ("open", "portugal") and v["read"] == "board":
-            v["lane_if_employer"] = v["lane"]
-            v["lane"] = "unsure"
-            v["reason"] = "only the job board's copy could be read · " + str(a.get("reason") or "")
+        # A role is judged on what there is. Plenty of companies have no
+        # careers page, and a posting that reads as a role for him, doable from
+        # Portugal, is Open even when the only copy is a job board's (his call,
+        # 2026-10-03). The board says which it was: the SOURCE tag is grey.
     return v
 
 

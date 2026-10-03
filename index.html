@@ -858,10 +858,8 @@ function causesOnly(r){
   out.push(v.place==="no"?["location","bad","cannot be done from Portugal"]
     :v.place==="unclear"?["location","bad","the page does not clearly say where, or says both"]
     :["location","ok",v.place==="pt_onsite"?"in Portugal, at an office":"can be done from Portugal"]);
-  const boardOnly=lab==="unsure"&&!src&&v.role!=="no"&&v.place!=="no";
   out.push(src?["source","ok","read on the employer's own page"]
-    :boardOnly?["source","bad","only the job board's copy was read"]
-    :off("source","read on the job board's copy; not what decided it"));
+    :off("source","read on a job board's copy: the employer's own page was not found"));
   if(v.language_ok===false) out.push(["language","bad","written in "+(v.language||"another language")]);
   return out;
 }
@@ -914,10 +912,7 @@ function whyBox(r){
     out+=q("location",both?"The page says both: Portugal in, and Portugal out":"The page does not clearly say where")+'<ul>'+(sig||quote)+'</ul>';
   }
   else out+=q("location",v.place==="pt_onsite"?"In Portugal, at an office":"Can be done from Portugal",true)+'<ul>'+(sig||quote)+'</ul>';
-  if(lab==="unsure"&&v.read==="board"&&v.role!=="no"&&v.place!=="no")
-    out+=q("source","Only the job board’s copy was read; the employer’s own posting was not found")
-      +'<ul><li>On the board’s copy it reads as '+esc(LANE_NAME[v.if_employer]||v.if_employer||"a pass")+'. Boards mislabel location, so it is not trusted for Open.</li></ul>';
-  else out+=q("source",v.read==="employer"?"Read on the employer’s own page":"Read on the job board’s copy",v.read==="employer");
+  out+=q("source",v.read==="employer"?"Read on the employer’s own page":"Read on a job board’s copy; the employer’s own page was not found",v.read==="employer");
   return wrap(out,["open","portugal"].includes(lab));
 }
 function renderPane(){

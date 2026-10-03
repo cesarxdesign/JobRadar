@@ -184,6 +184,13 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
                 role["verdict"].update({"lane": "cut", "cut": True, "place": "no",
                                         "reason": "the line at the top of the page says where; the wider words "
                                                   "lower down are boilerplate · " + str(vis.get("reason") or "")})
+            # Judged on the data there is (his call, 2026-10-03): a role that
+            # passed on a job board's copy was being held in Unsure only for
+            # being a copy. It goes to the lane the reading gave it.
+            if lane == "unsure" and vis.get("lane_if_employer") in lanes:
+                lane = vis["lane_if_employer"]
+                role["verdict"].update({"lane": lane, "reason": str(vis.get("reason") or "").replace(
+                    "only the job board's copy could be read · ", "")})
             # Unsure means it was read and the answer is not clear. A page that
             # could not be read at all is a different thing and gets its own
             # list, so Unsure holds only roles worth his judgement.
