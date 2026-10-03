@@ -96,6 +96,12 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .verdict .flag.on{background:var(--warn);border-color:var(--warn);color:#fff}
 .verdict.ok{border-color:var(--line)}
 .verdict .k.ok{color:var(--good);border-color:var(--good)}
+.notes{margin:12px 0 4px}
+.notes textarea{width:100%;min-height:64px;margin-top:6px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:13px;resize:vertical}
+.notes textarea:focus{outline:none;border-color:var(--acc)}
+.notes .past{border-left:2px solid var(--line);padding:2px 0 2px 10px;margin:8px 0;font-size:13px}
+.notes .past .ans{color:var(--acc);margin-top:3px}
+.notes .past .when{color:var(--dimmer);font-size:11px;margin-top:2px}
 .verdict .sum{margin-top:10px;color:var(--dim);font-size:12px}
 [hidden]{display:none!important}
 .stats{padding:20px 24px;max-width:1100px}
@@ -652,6 +658,7 @@ function render(){
       +'<div class="body"><div class="t">'+(r.url?'<a href="'+esc(outbound((r.verdict&&r.verdict.read_url)||r.url))+'" target="_blank" rel="noopener">'+esc(r.title)+'</a>':esc(r.title))+'</div>'
       +'<div class="c">'+esc(r.company)+'</div>'
       +'<div class="meta">'
+      + (openNote(r.id)?'<span class="tag" style="border-style:dashed" title="'+esc(openNote(r.id).text)+'">✎ note</span>':'')
       + (REVIEW&&flagOf(r.id)?'<span class="tag n" style="border-style:dashed">wrong: '+esc(flagOf(r.id).wrong.join(", "))+'</span>':'')
       + (retagOf(r.id)?'<span class="tag" style="border-style:dashed" title="the filter called it '+esc(retagOf(r.id).from)+'; you moved it">you: '
           +esc(LANE_NAME[retagOf(r.id).from]||retagOf(r.id).from)+' → '+esc(LANE_NAME[retagOf(r.id).to])+'</span>':'')
@@ -743,6 +750,33 @@ function placeTag(r){
 // (or in) Portugal - so the box names which one it failed, then the words on
 // the page that say so. Anything else that kept it out of Open (only the
 // board's copy was read, the page would not load) is named as what it is.
+// Notes: anything he wants looked at later, on any role in any lane. One
+// open note per role, saved in the routing file with what the board showed at
+// the time. A note that has been read is marked reviewed (with the answer,
+// when there is one) and stays as history; the box opens again for the next.
+const DRAFT={};       // what he has typed and not saved yet, so a re-render does not eat it
+const openNote=id=>RR&&(RR.notes||[]).find(n=>n.id===id&&!n.reviewed);
+function saveNote(r,text){
+  const v=r.verdict||{}, cur=openNote(r.id);
+  text=text.trim();
+  RR.notes=(RR.notes||[]).filter(n=>n!==cur);
+  if(text) RR.notes.push({id:r.id,at:cur?cur.at:new Date().toISOString(),edited:new Date().toISOString(),text,
+    company:r.company,title:r.title,url:r.url,read_url:v.read_url,label:labelOf(r),tab:LANE,in_review:REVIEW,
+    role:v.role,place:v.place,reason:v.reason,reviewed:null});
+  delete DRAFT[r.id];
+  writeRR();toast(text?"note saved":"note removed");render();
+}
+function notesBox(r){
+  if(!RR) return "";
+  const past=(RR.notes||[]).filter(n=>n.id===r.id&&n.reviewed).sort((a,b)=>a.at.localeCompare(b.at));
+  const cur=openNote(r.id);
+  return '<div class="notes"><div class="fk">Notes</div>'
+    +past.map(n=>'<div class="past"><div>'+esc(n.text)+'</div>'+(n.answer?'<div class="ans">↳ '+esc(n.answer)+'</div>':'')
+        +'<div class="when">'+esc(n.at.slice(0,10))+' · reviewed '+esc(String(n.reviewed).slice(0,10))+'</div></div>').join("")
+    +'<textarea id="note" placeholder="anything about this role to look at later">'+esc(DRAFT[r.id]!=null?DRAFT[r.id]:cur?cur.text:"")+'</textarea>'
+    +'<div class="acts" style="margin-top:6px"><button id="note-save">'+(cur?"Update note":"Save note")+'</button>'
+    +(cur?'<span style="color:var(--dim);font-size:12px;align-self:center">saved '+esc(cur.edited.slice(0,16).replace("T"," "))+' · not reviewed yet</span>':'')+'</div></div>';
+}
 // The same answer as the box, as tags on the card: which question kept this
 // role out of Open, readable down the list without opening each one.
 function causes(r){
@@ -807,6 +841,7 @@ function renderPane(){
   $("pane").innerHTML='<h2 style="margin:0;font-size:16px">'+esc(r.title)+'</h2>'
     +'<div class="c" style="color:var(--dim)">'+esc(r.company)+'</div>'
     + whyBox(r)
+    + notesBox(r)
     + (r.gone?'<div class="why">This posting is no longer on the board - the company took it '
         +'down, or the judge has not re-read it yet. Your decision is kept.</div>':'')
     +'<div class="facts">'
@@ -831,6 +866,12 @@ function renderPane(){
         +' · '+esc(v.confidence||"")+' confidence · read the '+esc(v.text||"posting")
         +'<ul>'+v.why.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ul></div>':'');
   $("pane").querySelectorAll(".flag").forEach(b=>b.onclick=()=>toggleFlag(r,b.dataset.k));
+  if($("note-save")){
+    $("note-save").onclick=()=>saveNote(r,$("note").value);
+    $("note").oninput=e=>{DRAFT[r.id]=e.target.value;};
+    // Cmd+Enter saves, so a note never needs the mouse
+    $("note").onkeydown=e=>{if((e.metaKey||e.ctrlKey)&&e.key==="Enter") saveNote(r,$("note").value);};
+  }
 }
 
 // ---------- Stats ----------
@@ -963,15 +1004,36 @@ function writeRR(){
   if(!RRH) return;
   // Spread first: the file also carries applications and milestones, and a
   // write that named only decisions and favorites would drop them.
-  const snapshot=JSON.stringify({...RR,updated:new Date().toISOString(),decisions:RR.decisions,favorites:RR.favorites},null,1);
   rrChain = rrChain.then(async()=>{
     try{
+      await pullNotes();
+      const snapshot=JSON.stringify({...RR,updated:new Date().toISOString(),decisions:RR.decisions,favorites:RR.favorites},null,1);
       const w=await RRH.createWritable();
       await w.write(snapshot);
       await w.close();
+      LASTMOD=(await RRH.getFile()).lastModified;
     }catch(e){toast("ROUTING NOT SAVED: "+e.message);}
   });
 }
+// His notes are read in a Claude session, which marks them reviewed in the
+// file itself. The board holds the file in memory and writes all of it back,
+// so before every write, and whenever the window comes back into focus, it
+// looks at what changed on disk and takes the review marks from there.
+let LASTMOD=0;
+async function pullNotes(){
+  if(!RRH) return false;
+  const f=await RRH.getFile();
+  if(f.lastModified<=LASTMOD) return false;
+  LASTMOD=f.lastModified;
+  let ext; try{ext=JSON.parse(await f.text());}catch(e){return false;}
+  let changed=false;
+  for(const x of ext.notes||[]){
+    const n=(RR.notes||[]).find(n=>n.id===x.id&&n.at===x.at);
+    if(n&&x.reviewed&&(!n.reviewed||n.answer!==x.answer)){n.reviewed=x.reviewed;n.answer=x.answer;changed=true;}
+  }
+  return changed;
+}
+window.addEventListener("focus",async()=>{try{if(await pullNotes()) render();}catch(e){}});
 function rrUI(on){
   document.querySelectorAll(".tab.rr").forEach(t=>{t.hidden=!on;});
   $("review").hidden=!on;
@@ -984,7 +1046,7 @@ async function adopt(h){
   const d=JSON.parse(await (await h.getFile()).text());
   if(!d||!Array.isArray(d.decisions)) throw new Error("not a routing file");
   d.favorites=Array.isArray(d.favorites)?d.favorites:[];
-  RRH=h; RR=d;
+  RRH=h; RR=d; LASTMOD=(await h.getFile()).lastModified;
   try{await idb("readwrite",s=>s.put(h,"h"));}catch(e){}
   rrUI(true); render(); $("export").hidden=!LOCAL;
 }
