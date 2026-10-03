@@ -178,7 +178,8 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             # file, so the newest rule is applied to them here.
             if lane == "unsure" and vis.get("stage") == "vision" and vis.get("role_verdict") != "no" \
                     and vis.get("posting_open") == "yes" and criteria.top_line_out(vis.get("place_signals")) \
-                    and any(isinstance(s, dict) and s.get("says") == "portugal_in" for s in vis.get("place_signals") or []):
+                    and not any(isinstance(s, dict) and s.get("says") == "portugal_out" and "spain" in str(s.get("quote")).lower()
+                                for s in vis.get("place_signals") or []):       # Spain is the one "unclear" by rule
                 lane = "cut"
                 role["verdict"].update({"lane": "cut", "cut": True, "place": "no",
                                         "reason": "the line at the top of the page says where; the wider words "

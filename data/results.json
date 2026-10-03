@@ -7,12 +7,12 @@
  "counts": {
   "open": 72,
   "portugal": 3,
-  "unsure": 100,
+  "unsure": 97,
   "ghosts": 0,
   "cut": 2948,
   "closed": 50,
-  "vision_cut": 503,
-  "agency": 9,
+  "vision_cut": 508,
+  "agency": 7,
   "vision_read": 1085,
   "title_cuts": 65886,
   "design": 4152,
@@ -105,7 +105,6 @@
    "8f1ca5037b504e32",
    "89f5061a3fbc4ea9",
    "a69c9814a2744e32",
-   "ac1f21c6863e4e50",
    "c991ee8f7b7d4897",
    "3651e9ceb40f42d3",
    "c0b6d761c149414d",
@@ -123,7 +122,6 @@
    "a00e0daffc124be7",
    "26a50bdc74b54cf7",
    "977c58f5f54f470b",
-   "3593449d1b3d4285",
    "134935c5b9454894",
    "d988958c5b944035",
    "7c8b6bbe0a4447ad",
@@ -174,7 +172,6 @@
    "15695e07ef4e4dc1",
    "a13b18c4338146c2",
    "f3ce080a5a464b1e",
-   "c5fca875149c47bf",
    "ca8a0e7c2b054a07",
    "ac5d2e6aa5644b8b",
    "4fd1163410284819",
@@ -3220,6 +3217,7 @@
   "360bd480cf8a4e74",
   "1c1769b1babc4b13",
   "edfdb505dd9148f3",
+  "ac1f21c6863e4e50",
   "3c8a7a4699e24836",
   "4b4f564e87734195",
   "1b07920ed81a4f21",
@@ -3326,6 +3324,7 @@
   "4e491ee95a6e4bd8",
   "9212d3e78ba141e0",
   "c07fa27cb0bc48cd",
+  "3593449d1b3d4285",
   "5e50f9ce23394e09",
   "270b9b3dc1d34829",
   "3a472da106bb4d96",
@@ -3459,7 +3458,6 @@
   "c20d8e43486945de",
   "08cf8d0eba5b4e3b",
   "9a65fbeb06e9402f",
-  "25226ce8dc964901",
   "88075489a881463c",
   "ee97637a22254a99",
   "c5a301b49a344182",
@@ -3492,7 +3490,6 @@
   "4110648e23b74102",
   "bbdec51dd9994a97",
   "9a63c0c033ed4d9b",
-  "3aa99cbda053491d",
   "5f318a029fd2414c",
   "c9e94469649a4ee8",
   "35fe13e8697c444f",
@@ -3614,6 +3611,7 @@
   "02151883586b4fde",
   "69e79fc459764cbb",
   "19748c1822e14fc1",
+  "c5fca875149c47bf",
   "51576ecfb76c49d5",
   "4e00eb77b04c4917",
   "71faaf39d63842e0",
@@ -3669,8 +3667,12 @@
   "a5cda48854fc4967",
   "46ee187b7f974bc9",
   "67dbbd811bd64fb0",
+  "6a4cc8393ac740c4",
   "164835197a2c4ecf",
+  "ad8622167a8c4d36",
   "907c3c6a91c14845",
+  "8bb173e1a9a14478",
+  "655dfa393ab64ef7",
   "3593cd806bc94083",
   "e56adcfe44714d25",
   "2858f9bb79654329",
@@ -3714,13 +3716,11 @@
  "agency": [
   "4144a68adad34eaf",
   "cbaec4f8aced4de6",
+  "25226ce8dc964901",
   "8d57f803c1464596",
+  "3aa99cbda053491d",
   "740e1604387447f8",
-  "a4293becb5c645a1",
-  "6a4cc8393ac740c4",
-  "ad8622167a8c4d36",
-  "8bb173e1a9a14478",
-  "655dfa393ab64ef7"
+  "a4293becb5c645a1"
  ],
  "sources": {
   "ok": 105703,
@@ -20919,8 +20919,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is stated as Prague, Czechia with no widening remote statement found elsewhere on the page.",
      "Portugal OUT · under the title: \"Prague, Czechia\"",
@@ -20949,7 +20949,7 @@
     ],
     "read": "employer",
     "read_url": "https://www.make.com/en/careers-detail?gh_jid=7647667003",
-    "reason": "cut on place, but not sure of it · Location is stated as Prague, Czechia with no widening remote statement found elsewhere on the page.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Location is stated as Prague, Czechia with no widening remote statement found elsewhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -121199,8 +121199,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is stated as 'Anywhere in US', restricting the role to the United States.",
      "Portugal OUT · under the title: \"Anywhere in US\""
@@ -121228,7 +121228,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobspresso.co/job/product-designer/",
-    "reason": "cut on place, but not sure of it · Location is stated as 'Anywhere in US', restricting the role to the United States.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Location is stated as 'Anywhere in US', restricting the role to the United States.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -181087,9 +181087,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "no",
-    "lane": "cut",
-    "cut": true,
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
     "why": [
      "the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
      "Portugal OUT · under the title: \"Spain\"",
@@ -181122,7 +181122,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/ce267460-c258-4c82-a45d-fa787b92116c",
-    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
+    "reason": "the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -181147,7 +181147,9 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/25226ce8dc964901.jpg",
-    "read_at": "2026-10-02T18:41:51"
+    "read_at": "2026-10-02T18:41:51",
+    "agency": true,
+    "hiring_for": null
    }
   },
   {
@@ -183410,9 +183412,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "no",
-    "lane": "cut",
-    "cut": true,
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
     "why": [
      "the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
      "Portugal OUT · under the title: \"Spain\"",
@@ -183443,7 +183445,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/874af8eb-94c8-4743-ad9d-52d4aaf54b99",
-    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
+    "reason": "the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -183468,7 +183470,9 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3aa99cbda053491d.jpg",
-    "read_at": "2026-10-02T18:42:40"
+    "read_at": "2026-10-02T18:42:40",
+    "agency": true,
+    "hiring_for": null
    }
   },
   {
@@ -191785,8 +191789,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page read is a different job · Posting is titled 'Staff Product Designer, Growth' (different from pool's 'Consumer' role) and is Remote - United States only, excluding Portugal.",
      "Portugal OUT · under the title: \"Remote - United States\"",
@@ -191817,7 +191821,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/reddit/jobs/7701558",
-    "reason": "the page read is a different job · Posting is titled 'Staff Product Designer, Growth' (different from pool's 'Consumer' role) and is Remote - United States only, excluding Portugal.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page read is a different job · Posting is titled 'Staff Product Designer, Growth' (different from pool's 'Consumer' role) and is Remote - United States only, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -198166,8 +198170,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Title line names Switzerland specifically, but the posting also calls the role 'fully remote' and 'fully distributed international' without excluding other countries, so the geographic scope is ambiguous.",
      "Portugal OUT · under the title: \"SwitzerlandResearch & Development – Design /Full-Time /Remote\"",
@@ -198198,7 +198202,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/4e879ac6-a2e1-4752-b196-2993082d2b6a",
-    "reason": "cut on place, but not sure of it · Title line names Switzerland specifically, but the posting also calls the role 'fully remote' and 'fully distributed international' without excluding other countries, so the geographic scope is ambiguous.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Title line names Switzerland specifically, but the posting also calls the role 'fully remote' and 'fully distributed international' without excluding other countries, so the geographic scope is ambiguous.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -198218,9 +198222,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6a4cc8393ac740c4.jpg",
-    "read_at": "2026-10-03T11:13:51",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-03T11:13:51"
    }
   },
   {
@@ -198326,8 +198328,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting names Romania specifically under the title but also describes the role as fully remote and distributed, creating a contradiction.",
      "Portugal OUT · under the title: \"Romania\"",
@@ -198356,7 +198358,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/bcc8a78c-1b25-4f41-93bb-20bdc37fc7d8",
-    "reason": "cut on place, but not sure of it · Posting names Romania specifically under the title but also describes the role as fully remote and distributed, creating a contradiction.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Posting names Romania specifically under the title but also describes the role as fully remote and distributed, creating a contradiction.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -198376,9 +198378,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ad8622167a8c4d36.jpg",
-    "read_at": "2026-10-03T11:14:00",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-03T11:14:00"
    }
   },
   {
@@ -198484,8 +198484,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting states the role is based in Ireland with no wider geography named elsewhere.",
      "Portugal OUT · under the title: \"IrelandResearch & Development – Design /Full-Time /Remote\"",
@@ -198514,7 +198514,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/e660315e-8ceb-41ac-bd92-309f0b0bcf23",
-    "reason": "cut on place, but not sure of it · Posting states the role is based in Ireland with no wider geography named elsewhere.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Posting states the role is based in Ireland with no wider geography named elsewhere.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -198534,9 +198534,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8bb173e1a9a14478.jpg",
-    "read_at": "2026-10-03T11:14:07",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-03T11:14:07"
    }
   },
   {
@@ -198564,8 +198562,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting names Netherlands specifically but also describes a fully distributed, remote international environment, so the location is unclear.",
      "Portugal OUT · under the title: \"NetherlandsResearch & Development – Design /Full-Time /Remote\"",
@@ -198594,7 +198592,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/f59ef366-bcdd-43cc-950f-835cffd7a828",
-    "reason": "cut on place, but not sure of it · Posting names Netherlands specifically but also describes a fully distributed, remote international environment, so the location is unclear.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Posting names Netherlands specifically but also describes a fully distributed, remote international environment, so the location is unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -198614,9 +198612,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/655dfa393ab64ef7.jpg",
-    "read_at": "2026-10-03T11:14:14",
-    "agency": true,
-    "hiring_for": null
+    "read_at": "2026-10-03T11:14:14"
    }
   },
   {
