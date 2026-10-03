@@ -267,27 +267,25 @@ let REVIEW=false;
 const REVIEW_N=50;
 const LANE_NAME={open:"Open",portugal:"Portugal",unsure:"Unsure",closed:"Closed",cut:"Cut"};
 const TAB_LANE=l=>l==="vcut"?"cut":l;
-// Review is 50 roles, not the whole board: a batch drawn across the three
-// outcomes that matter - Open (with Portugal), Unsure, Cut - newest read
-// first. Cut gets the most seats because a wrong cut is the one mistake he
-// never sees otherwise. The batch is kept in the routing file until he
-// finishes it, so it is the same 50 if he comes back to it.
-const REVIEW_TABS=["open","unsure","vcut"];
-const REVIEW_SEATS={open:15,unsure:15,cut:20};
-const groupOf=r=>{const l=labelOf(r);return l==="portugal"?"open":l;};
+// Review is one batch, not the whole board: drawn across Open, Portugal,
+// Unsure and Cut, newest read first. The batch is kept in the routing file
+// until he finishes it, so it is the same batch if he comes back to it.
+const REVIEW_TABS=["open","portugal","unsure","vcut"];
+// His split (2026-10-03). A lane with fewer than its seats gives what it has.
+const REVIEW_SEATS={open:30,portugal:10,unsure:15,cut:10};
+const REVIEW_MIX=Object.values(REVIEW_SEATS).join("/");
+const groupOf=r=>labelOf(r);
 const baseIds=l=>l==="closed"?DATA.closed||[]:l==="cut"?DATA.vcut||[]:DATA.lanes[l]||[];
 function reviewBatch(){
   const live=new Set(DATA.roles.map(r=>r.id)), seen=new Set(RR.reviewed||[]);
   let ids=(RR.review_batch||[]).filter(i=>live.has(i)&&!seen.has(i));
-  if(ids.length) return ids;
-  const free=l=>(l==="open"?baseIds("open").concat(baseIds("portugal")):baseIds(l)).map(roleById)
+  if(ids.length&&RR.review_mix===REVIEW_MIX) return ids;
+  const free=l=>baseIds(l).map(roleById)
     .filter(r=>r&&!seen.has(r.id)&&!routing(r.id)&&!retagOf(r.id))
     .sort((a,b)=>String((b.verdict||{}).read_at||"").localeCompare(String((a.verdict||{}).read_at||"")));
-  const by={open:free("open"),unsure:free("unsure"),cut:free("cut")}, take=[];
-  for(const l in by) take.push(...by[l].splice(0,REVIEW_SEATS[l]));
-  // a lane that ran short gives its seats to the others
-  for(const l of ["cut","unsure","open"]) take.push(...by[l].splice(0,REVIEW_N-take.length));
-  RR.review_batch=take.slice(0,REVIEW_N).map(r=>r.id);
+  const take=[];
+  for(const l in REVIEW_SEATS) take.push(...free(l).slice(0,REVIEW_SEATS[l]));
+  RR.review_batch=take.map(r=>r.id);RR.review_mix=REVIEW_MIX;
   if(RR.review_batch.length) writeRR();
   return RR.review_batch;
 }
@@ -584,7 +582,7 @@ function render(){
     const all=reviewBatch().map(roleById).filter(Boolean), moved=all.filter(r=>retagOf(r.id)).length;
     const h=document.createElement("div");h.className="acts";h.style.cssText="margin:0 0 10px;align-items:center";
     h.innerHTML=(all.length?'<button id="rv-next" class="on" style="cursor:pointer">Done with these '+all.length+' → next batch</button>':'')
-      +'<span style="color:var(--dim);font-size:12px">'+(all.length?'this batch: '+all.length+' roles across Open, Unsure and Cut · move only the wrong ones · '
+      +'<span style="color:var(--dim);font-size:12px">'+(all.length?'this batch: '+all.length+' roles across Open, Portugal, Unsure and Cut · move only the wrong ones · '
       +moved+' moved':'nothing left to review')+'</span>';
     $("list").appendChild(h);
     if(all.length) $("rv-next").onclick=reviewDone;
@@ -624,7 +622,7 @@ function render(){
             +(W[wkey(r)]?"✓ wrong":"Wrong")+'</button></div>'
          : inReview?'<div class="acts" title="retag only the ones the filter got wrong">'
           +'<button class="star'+(fav(r.id)?" on":"")+'" data-f="1" title="favorite: come back to it later">'+(fav(r.id)?"★":"☆")+'</button>'
-          +RETAG.map(t=>{const cur=(labelOf(r)==="portugal"?"open":labelOf(r))===t, on=(retagOf(r.id)||{}).to===t;
+          +RETAG.map(t=>{const cur=labelOf(r)===t, on=(retagOf(r.id)||{}).to===t;
               return cur&&!retagOf(r.id)?'<button disabled style="opacity:.35;cursor:default">'+LANE_NAME[t]+'</button>'
                 :cur?'<button data-t="'+retagOf(r.id).to+'" title="put it back">'+LANE_NAME[t]+'</button>'
                 :'<button data-t="'+t+'" class="'+(on?"on":"")+'" style="cursor:pointer">'+(on?"✓ ":"→ ")+LANE_NAME[t]+'</button>';}).join("")+'</div>'
@@ -943,8 +941,8 @@ function setReview(on){
   const b=$("review");
   b.className="route"+(on?" on":"");
   b.textContent=on?"Review · on":"Review";
-  // Three lanes in review. Portugal sits inside Open; Closed is a fact about
-  // the page, not a judgement to re-lane; the rest are for applying.
+  // Four lanes in review. Closed is a fact about the page, not a judgement
+  // to re-lane; the rest are for applying.
   document.querySelectorAll(".tab:not(.bt)").forEach(t=>{
     const keep=REVIEW_TABS.includes(t.dataset.lane)||t.dataset.lane==="favorites";
     t.hidden=on?!keep:(t.classList.contains("rr")&&!RR);});
