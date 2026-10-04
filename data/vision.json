@@ -270037,5 +270037,6378 @@
   "stage": "vision",
   "reader_place": "no",
   "lane": "cut"
+ },
+ "18b1a2985d0340ca": {
+  "id": "18b1a2985d0340ca",
+  "at": "2026-10-03T23:11:05",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000137538294",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000137538294",
+   "status": 200,
+   "shot": "data/shots/18b1a2985d0340ca.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000137538294",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Pennsylvania; Primary Location: US - Conshohocken, PA - 625 West Rid",
+  "place_signals": [
+   {
+    "quote": "State/Province: Pennsylvania",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Conshohocken, PA - 625 West Rid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "AECOM is seeking an ASSOCIATE HIGHWAY ENGINEERING DESIGN TASK LEAD to be based in Eastern Pennsylvania.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM has offices in Mechanicsburg, Philadelphia and Conshohocken, PA. This is a HYBRID position and additional office locations may be considered.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Valid US Driver's License required to visit project sites, clients, and other AECOM offices",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation assistance is not available for this position.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Sponsorship for US employment authorization is not available now or in the future for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is seeking an ASSOCIATE HIGHWAY ENGINEERING DESIGN TASK LEAD to be based in Eastern Pennsylvania.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/highway engineering role (not design in the UX/UI sense) and it is a hybrid position based onsite in Conshohocken, Pennsylvania, USA.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Highway Engineer - Associate Design Task Lead",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 95,000 - USD 130,000 - yearly",
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "ddf75111346a4814": {
+  "id": "ddf75111346a4814",
+  "at": "2026-10-03T23:11:06",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/crb/744000137537049",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/crb/744000137537049",
+   "status": 200,
+   "shot": "data/shots/ddf75111346a4814.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/crb/744000137537049",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "San Diego, CA, USA",
+  "place_signals": [
+   {
+    "quote": "San Diego, CA, USA",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "San Diego, CA, USA",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Mechanical Designer role is mechanical engineering/drafting, not product/UX design, and the job is onsite in San Diego, CA.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Mechanical Designer II",
+   "company": "CRB",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 70,000 - USD 92,000 yearly",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "f89c65d4cf064294": {
+  "id": "f89c65d4cf064294",
+  "at": "2026-10-03T23:10:56",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://click.appcast.io/t/EG1dlBLiknMpsAYVZrXxgMWiUVg9qddxvE1FvO55at-Wd74Bv92xclKg5LtyjAqc",
+  "board": {
+   "url": "https://www.clearancejobs.com/jobs/8808354/uiux-frontend-developer?utm_source=haystack-cpc_usd&utm_medium=jobfeed&utm_campaign=email-topmarkets&ccuid=75956895764&_ccid=1791062776876wvzfvdiis",
+   "status": 200,
+   "shot": "data/shots/f89c65d4cf064294.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.clearancejobs.com/jobs/8808354/uiux-frontend-developer?utm_source=haystack-cpc_usd&utm_medium=jobfeed&utm_campaign=email-topmarkets&ccuid=75956895764&_ccid=1791062776876wvzfvdiis",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Reston, VA",
+  "place_signals": [
+   {
+    "quote": "Reston, VA",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Reston, VA (Hybrid)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote: ~90% remote – SCIF access required ~1x/month",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "limited on-site requirements in a Reston-area SCIF (approximately once per month)",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Active TS/SCI clearance with Polygraph",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Ability to support monthly SCIF visits in Reston, VA",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Cleared candidates only.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Location: Reston, VA (Hybrid) ... SCIF access required ~1x/month",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Requires active US TS/SCI clearance and monthly on-site SCIF visits in Reston, VA, which rules out someone living in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Frontend Developer",
+   "company": "Titan Technologies",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English",
+   "posted": "over 6 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "c90bb79dac904475": {
+  "id": "c90bb79dac904475",
+  "at": "2026-10-03T23:11:07",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/jiKTHg32qjo2JkzSmbxDB4/product-owner-%2F-service-designer-(mid-level)---4.5-months---remote---octopus-in-india-at-robusta",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/jiKTHg32qjo2JkzSmbxDB4/product-owner-%2F-service-designer-(mid-level)---4.5-months---remote---octopus-in-india-at-robusta",
+   "status": 200,
+   "shot": "data/shots/c90bb79dac904475.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/jiKTHg32qjo2JkzSmbxDB4/product-owner-%2F-service-designer-(mid-level)---4.5-months---remote---octopus-in-india-at-robusta",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote | India | Octopus Talents '25",
+  "place_signals": [
+   {
+    "quote": "RemoteIndiaOctopus Talents '25",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Ability to work independently and effectively in a remote environment.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "connecting exceptional tech talent with top-tier organizations across the MENA, GCC, Europe, the US, and Canada",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "robusta maintains an impactful footprint across EMEA and engages with its clients through its two key operations hubs in Egypt and Germany.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteIndia",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Location is explicitly tagged Remote - India, not Europe or Portugal, so the role is out of scope for someone based in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Owner / Service Designer (Mid level)",
+   "company": "robusta",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "a8de217dc56f4dcf": {
+  "id": "a8de217dc56f4dcf",
+  "at": "2026-10-03T23:11:17",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/crb/744000137211919",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/crb/744000137211919",
+   "status": 200,
+   "shot": "data/shots/a8de217dc56f4dcf.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/crb/744000137211919",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Mississauga, ON, Canada",
+  "place_signals": [
+   {
+    "quote": "Mississauga, ON, Canada",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Compensation: CAD 100,000 - CAD 135,000 - yearly",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "All personal information collected will be kept strictly confidential in accordance with applicable Canadian privacy legislation.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Mississauga, ON, Canada",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Engineering title (I&C Design Engineer) is not a design/UX/UI role, and the job is onsite in Mississauga, Canada.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Instrumentation & Controls Design Engineer III",
+   "company": "CRB",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "CAD 100,000 - CAD 135,000 yearly",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "108d1d684a3641b6": {
+  "id": "108d1d684a3641b6",
+  "at": "2026-10-03T23:11:17",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/alten/744000137174919",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/alten/744000137174919",
+   "status": 200,
+   "shot": "data/shots/108d1d684a3641b6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/alten/744000137174919",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Derby, United Kingdom",
+  "place_signals": [
+   {
+    "quote": "Region: Midlands",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "ALTEN UK is seeking a motivated Control & Instrumentation (C&I) - Design Engineer to join our growing team in Derby | Manchester | Warrington",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Derby, United Kingdom",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible way of working (role dependent)",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "ALTEN UK is seeking a motivated Control & Instrumentation (C&I) - Design Engineer to join our growing team in Derby | Manchester | Warrington",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a Control & Instrumentation (electrical/controls) engineering role, not a product/UX/UI design job, and it is onsite in the UK (Derby/Manchester/Warrington), not Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Control & Instrumentation (C&I) - Design Engineer",
+   "company": "ALTEN",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "b4c90f23bdea419c": {
+  "id": "b4c90f23bdea419c",
+  "at": "2026-10-03T23:11:17",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000137131629",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000137131629",
+   "status": 200,
+   "shot": "data/shots/b4c90f23bdea419c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000137131629",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "State/Province: Gujarāt; Primary Location: IN - Ahmedabad Metro - 3rd Floor, Ka; Work Location Model: On-Site",
+  "place_signals": [
+   {
+    "quote": "Work Location Model: On-Site",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: IN - Ahmedabad Metro - 3rd Floor, Ka",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Khavda, Gujarat 370510, India",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We will give you the flexibility you need to do your best work with hybrid work options. Whether you're working from an AECOM office, remote location or at a client site",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Willingness to work at remote project sites",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: IN - Ahmedabad Metro - 3rd Floor, Ka; Work Location Model: On-Site",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is an engineering/construction design-coordination role for a solar PV project, onsite in Ahmedabad/Khavda, India - not a product/UX design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Coordinator – Solar PMC",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "7b6fbf0ff0b84cac": {
+  "id": "7b6fbf0ff0b84cac",
+  "at": "2026-10-03T23:11:22",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/33VoJbgyEv6cgTTRTDMEEf/remote-senior-creative-designer%2Fdesign-strategist-in-london-at-digital",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/33VoJbgyEv6cgTTRTDMEEf/remote-senior-creative-designer%2Fdesign-strategist-in-london-at-digital",
+   "status": 200,
+   "shot": "data/shots/7b6fbf0ff0b84cac.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/33VoJbgyEv6cgTTRTDMEEf/remote-senior-creative-designer%2Fdesign-strategist-in-london-at-digital",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "RemoteLondon, England, United Kingdom",
+  "place_signals": [
+   {
+    "quote": "RemoteLondon, England, United Kingdom",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Digital is a global agency that delivers high-impact marketing solutions through experts sourced from the best enterprises in the world.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteLondon, England, United Kingdom",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is brand/creative/campaign design work (mood boards, storyboards, client pitches), not product/UX design, and location is Remote-London, not widened to Europe.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Creative Designer/Design Strategist",
+   "company": "Digital",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "138315d473f846e1": {
+  "id": "138315d473f846e1",
+  "at": "2026-10-03T23:11:26",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/nivoda/6c73088a-359f-49f6-bb11-b50211e02de0",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/nivoda/6c73088a-359f-49f6-bb11-b50211e02de0",
+   "status": 200,
+   "shot": "data/shots/138315d473f846e1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/nivoda/6c73088a-359f-49f6-bb11-b50211e02de0",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "NYC",
+  "place_signals": [
+   {
+    "quote": "NYC",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Based in or willing to commute to Boston regularly for in-person collaboration.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Based in or willing to commute to Boston regularly for in-person collaboration.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is onsite/hybrid in the US (NYC listed, Boston commute required), nowhere near Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Nivoda",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "NYC",
+    "Boston"
+   ],
+   "portugal_ok": "no",
+   "salary": "$130,000 – $150,000 USD",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "78ac17b098ba425a": {
+  "id": "78ac17b098ba425a",
+  "at": "2026-10-03T23:11:09",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/easyllama.com/1e82e622-eee7-486f-a54f-18ce80df94a9",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/easyllama.com/1e82e622-eee7-486f-a54f-18ce80df94a9",
+   "status": 200,
+   "shot": "data/shots/78ac17b098ba425a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/easyllama.com/1e82e622-eee7-486f-a54f-18ce80df94a9",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Location: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "The EasyLlama herd is fully remote, with employees distributed across the US. We are currently hiring in the following approved states:",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AR - Arkansas, CA - California, CO - Colorado, CT - Connecticut, FL - Florida, IL - Illinois, LA - Louisiana, MA - Massachusetts, MI-Michigan, MN - Minnesota, NJ - New Jersey, NY - New York, NC - North Carolina, OH - Ohio, OR- Oregon, PA - Pennsylvania, TN - Tennessee, TX - Texas, VA - Virginia, WA - Washington, WI - Wisconsin",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "The EasyLlama herd is fully remote, with employees distributed across the US. We are currently hiring in the following approved states",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Remote is US-only, restricted to a specific list of approved US states, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer",
+   "company": "EasyLlama",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$180K – $200K",
+   "years_xp": 7,
+   "reports_to": "VP of Product",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "f5fbcdd6ceab4246": {
+  "id": "f5fbcdd6ceab4246",
+  "at": "2026-10-04T01:01:43",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/1ThyMC19Ng6TbkfqFkQMcR/remote-senior-creative-designer%2Fdesign-strategist-in-mumbai-at-digital",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/1ThyMC19Ng6TbkfqFkQMcR/remote-senior-creative-designer%2Fdesign-strategist-in-mumbai-at-digital",
+   "status": 200,
+   "shot": "data/shots/f5fbcdd6ceab4246.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/1ThyMC19Ng6TbkfqFkQMcR/remote-senior-creative-designer%2Fdesign-strategist-in-mumbai-at-digital",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Mumbai, Maharashtra, India",
+  "place_signals": [
+   {
+    "quote": "RemoteMumbai, Maharashtra, India",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Digital is a global agency that delivers high-impact marketing solutions through experts sourced from the best enterprises in the world.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteMumbai, Maharashtra, India",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Title is a brand/creative-campaign design role (not UX/UI/product), and the location is tied to Mumbai, India with no widening elsewhere.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Creative Designer/Design Strategist",
+   "company": "Digital",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "540ae5adff58451e": {
+  "id": "540ae5adff58451e",
+  "at": "2026-10-04T01:01:43",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/cDs84h4yy3pYijR3PuPt5A/remote-senior-consultant%2C-communications-strategy-%26-design-in-united-states-at-bme-strategies",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/cDs84h4yy3pYijR3PuPt5A/remote-senior-consultant%2C-communications-strategy-%26-design-in-united-states-at-bme-strategies",
+   "status": 200,
+   "shot": "data/shots/540ae5adff58451e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/cDs84h4yy3pYijR3PuPt5A/remote-senior-consultant%2C-communications-strategy-%26-design-in-united-states-at-bme-strategies",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote United States",
+  "place_signals": [
+   {
+    "quote": "RemoteUnited States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Remote",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This is a full-time position based in a home office environment within the U.S.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "BME Strategies is unable to sponsor work-related visas.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "This is a full-time position based in a home office environment within the U.S.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is communications/creative design strategy rather than product/UX/UI design, and the posting restricts work to a home office within the U.S.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Consultant, Communications Strategy & Design",
+   "company": "BME Strategies",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$87,360 - $120,640 annually",
+   "years_xp": 6,
+   "reports_to": "Managing Consultant, Strategic Communications",
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "32054608e4274f3f": {
+  "id": "32054608e4274f3f",
+  "at": "2026-10-04T01:01:46",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000136845559",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000136845559",
+   "status": 200,
+   "shot": "data/shots/32054608e4274f3f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000136845559",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Ontario; Primary Location: CA - Mississauga, ON - 5090 Explorer; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "State/Province: Ontario",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: CA - Mississauga, ON - 5090 Explorer",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "AECOM’s Transportation business line is actively seeking a creative and highly talented Railway Signals Designer to be based in its Mississauga office.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship for Canadian employment authorization is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "to be based in its Mississauga office",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Railway signals engineering design role (not UX/UI/product design) and hybrid onsite in Mississauga, Canada.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Railway Signals Designer",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "CAD 65,000 - CAD 75,000 - yearly",
+   "years_xp": null,
+   "reports_to": "S&C Manager",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "face8c3c09d34bf1": {
+  "id": "face8c3c09d34bf1",
+  "at": "2026-10-04T01:01:47",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000136578669",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000136578669",
+   "status": 200,
+   "shot": "data/shots/face8c3c09d34bf1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000136578669",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Washington; Primary Location: US - Seattle, WA - 1111 3rd Avenue; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "State/Province: Washington",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Seattle, WA - 1111 3rd Avenue",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM is actively seeking a highly motivated Senior Bridge Manager for employment in the Seattle, WA. office.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "WA State PE",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not offered for this position now or in the future.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: US - Seattle, WA - 1111 3rd Avenue",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Bridge structural engineering role (not design/UX) that is hybrid onsite in Seattle, WA, US only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Bridge Design Project Engineer V",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 150,000 - USD 240,000 - yearly",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "6bb4e4eadc8f4194": {
+  "id": "6bb4e4eadc8f4194",
+  "at": "2026-10-04T01:01:49",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/sxBrk9r9opronnmzQRb7qK/remote-digital-content-designer-in-london-at-ltf-design-%26-marketing-ltd",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/sxBrk9r9opronnmzQRb7qK/remote-digital-content-designer-in-london-at-ltf-design-%26-marketing-ltd",
+   "status": 200,
+   "shot": "data/shots/6bb4e4eadc8f4194.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/sxBrk9r9opronnmzQRb7qK/remote-digital-content-designer-in-london-at-ltf-design-%26-marketing-ltd",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote London, England, United Kingdom",
+  "place_signals": [
+   {
+    "quote": "RemoteLondon, England, United Kingdom",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We work with ambitious clinics across the UK, Europe and North America to help them attract more patients",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "collaborative, dynamic, and remote-friendly work environment",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "capable of working independently within a remote team",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteLondon, England, United Kingdom",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is marketing/graphic/video content design, not product/UX/UI design, and location is tied to London, UK with no wider geography stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital Content Designer",
+   "company": "LTF DESIGN & MARKETING LTD",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£30K-£37,500K PA",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "6b3d1fa19ee04826": {
+  "id": "6b3d1fa19ee04826",
+  "at": "2026-10-04T01:01:53",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/7zBNjJpeYgM5Rt4TMAAszC/remote-digital-content-designer-in-united-kingdom-at-ltf-design-%26-marketing-ltd",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/7zBNjJpeYgM5Rt4TMAAszC/remote-digital-content-designer-in-united-kingdom-at-ltf-design-%26-marketing-ltd",
+   "status": 200,
+   "shot": "data/shots/6b3d1fa19ee04826.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/7zBNjJpeYgM5Rt4TMAAszC/remote-digital-content-designer-in-united-kingdom-at-ltf-design-%26-marketing-ltd",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "RemoteUnited Kingdom",
+  "place_signals": [
+   {
+    "quote": "RemoteUnited KingdomDesign and DevelopmentFull-time",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We work with ambitious clinics across the UK, Europe and North America",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "self-motivated and capable of working independently within a remote team",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteUnited Kingdom",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is graphic/video/motion design for marketing, not product/UX/UI, and the posting is Remote-UK with no wider location mentioned.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital Content Designer",
+   "company": "LTF DESIGN & MARKETING LTD",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£30K -£37,500K PA",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "6f122e8b330e4f3b": {
+  "id": "6f122e8b330e4f3b",
+  "at": "2026-10-04T01:01:56",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/nkVHue9fSxHKBeokz9JJUd/remote-digital-fashion-designer-(all-levels%2C-speculative)-in-united-kingdom-at-lockwood-publishing",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/nkVHue9fSxHKBeokz9JJUd/remote-digital-fashion-designer-(all-levels%2C-speculative)-in-united-kingdom-at-lockwood-publishing",
+   "status": 200,
+   "shot": "data/shots/6f122e8b330e4f3b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/nkVHue9fSxHKBeokz9JJUd/remote-digital-fashion-designer-(all-levels%2C-speculative)-in-united-kingdom-at-lockwood-publishing",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote United Kingdom Full-time",
+  "place_signals": [
+   {
+    "quote": "Remote United Kingdom Full-time",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Lockwood Publishing is one of the leading independent UK mobile games companies.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote United Kingdom Full-time",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a fashion/costume design role, not product/UX/UI design, and the posting is remote tied to the United Kingdom only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital Fashion Designer (All Levels, Speculative)",
+   "company": "Lockwood Publishing",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "3dd36c5eda6c4fdc": {
+  "id": "3dd36c5eda6c4fdc",
+  "at": "2026-10-04T01:01:57",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/kjjeZWxpzhncmkkQ6XuEwN/remote-digital-content-designer-in-manchester-at-ltf-design-%26-marketing-ltd",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/kjjeZWxpzhncmkkQ6XuEwN/remote-digital-content-designer-in-manchester-at-ltf-design-%26-marketing-ltd",
+   "status": 200,
+   "shot": "data/shots/3dd36c5eda6c4fdc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/kjjeZWxpzhncmkkQ6XuEwN/remote-digital-content-designer-in-manchester-at-ltf-design-%26-marketing-ltd",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "RemoteManchester, England, United Kingdom",
+  "place_signals": [
+   {
+    "quote": "RemoteManchester, England, United Kingdom",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "remote-friendly work environment",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "capable of working independently within a remote team",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteManchester, England, United Kingdom",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a content/graphic/video design role (not product/UX/UI design), and the posting ties remote work to Manchester, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital Content Designer",
+   "company": "LTF DESIGN & MARKETING LTD",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£30K-£37,500K PA",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "e060361c095c4aa1": {
+  "id": "e060361c095c4aa1",
+  "at": "2026-10-04T01:01:59",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000136482189",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000136482189",
+   "status": 200,
+   "shot": "data/shots/e060361c095c4aa1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000136482189",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Florida; Primary Location: US - Tampa, FL - 7650 W Courtney Cam; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "State/Province: Florida",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This senior role offers the opportunity to work within an integrated design-build environment... with a focus in the southeastern United States",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "role is a civil/construction Project Manager (not product design) and job is hybrid onsite in Tampa, Florida, USA",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Water Design-Build Project Manager",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 130,000 - USD 190,000 - yearly",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "564a56aa78d04f14": {
+  "id": "564a56aa78d04f14",
+  "at": "2026-10-04T01:02:00",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/CB721A7F95",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/lockwood/j/CB721A7F95",
+   "status": 200,
+   "shot": "data/shots/564a56aa78d04f14.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/lockwood/j/CB721A7F95",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "United Kingdom",
+  "place_signals": [
+   {
+    "quote": "RemoteFull time",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "United Kingdom",
+    "where": "under the title",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "United Kingdom",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a fashion/apparel design role (not product/UX/UI design), and the posting is tagged Remote-United Kingdom, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital Fashion Designer (All Levels, Speculative)",
+   "company": "Lockwood Publishing",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "7304466800664594": {
+  "id": "7304466800664594",
+  "at": "2026-10-04T01:02:07",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000136150309",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000136150309",
+   "status": 200,
+   "shot": "data/shots/7304466800664594.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000136150309",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "State/Province: Western Australia; Primary Location: AU - Perth, WA - 58 Mounts Bay Road",
+  "place_signals": [
+   {
+    "quote": "Work Location Model: On-Site",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Primary Location: AU - Perth, WA - 58 Mounts Bay Road",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "State/Province: Western Australia",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible work arrangements, including alternative start/finish times, part-time, job-sharing and hybrid work options",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "You will have the flexibility you need to do your best work with hybrid work options. Whether you're working from an AECOM office, remote location or at a client site",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: AU - Perth, WA - 58 Mounts Bay Road",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/structural bridge engineering role on-site in Perth, Australia, not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal Bridge Design Engineer",
+   "company": "AECOM",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Australia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 15,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "39a7e85e761944e5": {
+  "id": "39a7e85e761944e5",
+  "at": "2026-10-04T01:02:06",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000136150409",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000136150409",
+   "status": 200,
+   "shot": "data/shots/39a7e85e761944e5.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000136150409",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Bucureşti; Primary Location: RO - Bucharest, 11-15 Tipografilor S",
+  "place_signals": [
+   {
+    "quote": "State/Province: Bucureşti",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: RO - Bucharest, 11-15 Tipografilor S",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "AECOM is seeking a Design Manager for Data Centre to be based in Romania's Enterprise Capabilities office in Bucharest.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "we ask all hybrid employees to work from an AECOM office at least three days per week",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is seeking a Design Manager for Data Centre to be based in Romania's Enterprise Capabilities office in Bucharest.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a construction/engineering Design & Project Manager role (not product/UX design) and it is hybrid onsite in Bucharest, Romania, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Data Center Senior Design Manager",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "Romania"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 19,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "52ffea97cd114e5e": {
+  "id": "52ffea97cd114e5e",
+  "at": "2026-10-04T01:02:08",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/5SUokeR1V1DNvNgrUt8bJe/remote-g2g-co-design-advisor-(consultant)-in-united-states-at-credence",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/5SUokeR1V1DNvNgrUt8bJe/remote-g2g-co-design-advisor-(consultant)-in-united-states-at-credence",
+   "status": 200,
+   "shot": "data/shots/52ffea97cd114e5e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/5SUokeR1V1DNvNgrUt8bJe/remote-g2g-co-design-advisor-(consultant)-in-united-states-at-credence",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "RemoteUnited StatesDOSContract",
+  "place_signals": [
+   {
+    "quote": "RemoteUnited StatesDOS Contract",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Assignments may be short-term or long-term and may be performed in-country, remotely, or through a hybrid work arrangement.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "U.S. citizens or U.S. permanent residents with the ability to obtain and maintain a Facility Access Clearance.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Consultants may be deployed to U.S. Embassies and Mission Health Offices, particularly across Sub-Saharan Africa",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work may be performed onsite, remotely, or through a hybrid arrangement.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "U.S. citizens or U.S. permanent residents with the ability to obtain and maintain a Facility Access Clearance.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a global health/foreign assistance advisory role requiring U.S. citizenship/permanent residency, not a design role and not open to Portugal residents.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "G2G Co-Design Advisor (Consultant)",
+   "company": "Credence",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$95–$125 per hour",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "2214d02672c64daa": {
+  "id": "2214d02672c64daa",
+  "at": "2026-10-04T01:02:05",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/highlightta/f987fda4-2aac-42e3-959c-d9dfa4faf56e",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/highlightta/f987fda4-2aac-42e3-959c-d9dfa4faf56e",
+   "status": 200,
+   "shot": "data/shots/2214d02672c64daa.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/highlightta/f987fda4-2aac-42e3-959c-d9dfa4faf56e",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "StickerYou",
+  "posting_open": "yes",
+  "open_quote": "This posting is for a current, open position within StickerYou.",
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Toronto, Ontario",
+  "place_signals": [
+   {
+    "quote": "Toronto, Ontario",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "dedicated to growing the most talented and engaging people in Toronto, Canada",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "help expand a global Canadian brand",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Toronto, Ontario",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid role based in Toronto, Ontario with no wider remote language, so Portugal is excluded.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX/UI Designer",
+   "company": "StickerYou",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "CA$110K – CA$130K",
+   "years_xp": 5,
+   "reports_to": "VP of Technology & Digital Products",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "8509c50759d546d6": {
+  "id": "8509c50759d546d6",
+  "at": "2026-10-04T01:02:12",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/TurnerTownsend/744000136092099",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/TurnerTownsend/744000136092099",
+   "status": 200,
+   "shot": "data/shots/8509c50759d546d6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/TurnerTownsend/744000136092099",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Herndon, Virginia, United States",
+  "place_signals": [
+   {
+    "quote": "Herndon, Virginia, United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "*On-site presence and requirements may change depending on our client's needs.*",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Turner & Townsend is a global professional services company with over 22,000 people in more than 60 countries.",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Herndon, Virginia, United States",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite construction design-management role in Herndon, Virginia; not product/UX design and not based in or near Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Design Manager - Data Center Construction",
+   "company": "Turner & Townsend",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "139b0e790d3e43f4": {
+  "id": "139b0e790d3e43f4",
+  "at": "2026-10-04T01:02:19",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/alten/744000135755830",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/alten/744000135755830",
+   "status": 200,
+   "shot": "data/shots/139b0e790d3e43f4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/alten/744000135755830",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Region: North West UK",
+  "place_signals": [
+   {
+    "quote": "Region: North West UK",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "join Derby/ Warrington/ Manchester team",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Derby/ Warrington/ Manchester",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "On Site: 2 days in one of the sites",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Clearance: BPSS",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Manchester, United Kingdom",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Location: Derby/ Warrington/ Manchester - On Site: 2 days in one of the sites",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a mechanical/plant equipment engineering role (not design/UX/UI) and it is onsite 2 days/week in UK locations, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Mechanical Design Engineer - Plant Equipment",
+   "company": "ALTEN",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "687329d075884566": {
+  "id": "687329d075884566",
+  "at": "2026-10-04T01:02:19",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/alten/744000135757578",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/alten/744000135757578",
+   "status": 200,
+   "shot": "data/shots/687329d075884566.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/alten/744000135757578",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Manchester, United Kingdom",
+  "place_signals": [
+   {
+    "quote": "Region: North West UK",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "ALTEN UK is seeking a motivated Control & Instrumentation (C&I) - Design Engineer to join our growing team in Derby | Manchester | Warrington",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Manchester, United Kingdom",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Derby | Manchester | Warrington",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a Control & Instrumentation engineering role (not product/UX/UI design) and it is onsite in the UK (Derby/Manchester/Warrington), not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Control & Instrumentation (C&I) - Design Engineer",
+   "company": "ALTEN",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "6a773c9e2b824087": {
+  "id": "6a773c9e2b824087",
+  "at": "2026-10-04T01:02:25",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/canals/4df5d8a8-6579-4418-9386-933601a50af0",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/canals/4df5d8a8-6579-4418-9386-933601a50af0",
+   "status": 200,
+   "shot": "data/shots/6a773c9e2b824087.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/canals/4df5d8a8-6579-4418-9386-933601a50af0",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "New York",
+  "place_signals": [
+   {
+    "quote": "Location: New York",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "a team of roughly 100 people distributed across North and South America",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We're remote-first, flexible, and distributed across North and South America",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "distributed across North and South America",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Company is explicitly remote but only across North and South America, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Canals",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "North America",
+    "South America"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "247452007c834eff": {
+  "id": "247452007c834eff",
+  "at": "2026-10-04T01:02:20",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000135691116",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000135691116",
+   "status": 200,
+   "shot": "data/shots/247452007c834eff.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000135691116",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Kodaira, Japan",
+  "place_signals": [
+   {
+    "quote": "Kodaira, Japan",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "当社では、ハイブリッド勤務モデルを採用しており、従業員は週に2日間リモートワークを行うことができます。",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Kodaira, Japan / Remote Work Available: No",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is a hardware/semiconductor validation engineering job onsite in Japan with remote work not available, not a design role and not reachable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Staff Validation Engineer",
+   "company": "Renesas Electronics",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Japan"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "580997ce88ff459e": {
+  "id": "580997ce88ff459e",
+  "at": "2026-10-04T01:02:24",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000135584214-transit-design-manager-bus-rapid-transit",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000135584214-transit-design-manager-bus-rapid-transit",
+   "status": 200,
+   "shot": "data/shots/580997ce88ff459e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000135584214-transit-design-manager-bus-rapid-transit",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Primary Location: US - Pittsburgh, PA - 436 7th Ave.",
+  "place_signals": [
+   {
+    "quote": "State/Province: Pennsylvania",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Pittsburgh, PA - 436 7th Ave.",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We are seeking candidates who live in the East Region who can work on a HYBRID basis (2 or 3 days/week in office) from one of our East Coast offices.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Due to the nature of the work, US Citizenship is required",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship for US employment authorization is not available now or in the future for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation assistance is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Due to the nature of the work, US Citizenship is required",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/transportation engineering management role requiring US citizenship and hybrid work in Pittsburgh, PA - not a design role and not available from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Transit Design Manager - Bus Rapid Transit",
+   "company": "AECOM",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 135,000 - USD 190,000 - yearly",
+   "years_xp": 8,
+   "reports_to": "US Mid-Atlantic Region Transportation Business Line",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "71cdb01c829447c3": {
+  "id": "71cdb01c829447c3",
+  "at": "2026-10-04T01:02:13",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/justplay-gmbh/75ebcf01-a1b8-4405-8ec5-70ade4991551",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/justplay-gmbh/75ebcf01-a1b8-4405-8ec5-70ade4991551",
+   "status": 200,
+   "shot": "data/shots/71cdb01c829447c3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/justplay-gmbh/75ebcf01-a1b8-4405-8ec5-70ade4991551",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Berlin (Hybrid)",
+  "place_signals": [
+   {
+    "quote": "Berlin (Hybrid)",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible working hours and options for digital nomads, occasional office visitors, or regular office-goers",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Germany-Based Benefits: 25 vacation days, free Wellhub gold subscription, free monthly Deutschland-Ticket, and a monthly €50 tax-free internet contribution",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Berlin Office Perks: Ergonomic setup, free daily lunch, and a dog-friendly environment.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "With a team across 20+ countries, we're shaping a major shift in mobile gaming",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Benefits may vary depending on location and contract type.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Berlin (Hybrid) / Location Type: Remote",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "cut on place, but not sure of it · Side panel directly contradicts itself - Location says 'Berlin (Hybrid)' while Location Type says 'Remote' - so the place cannot be determined with confidence.",
+  "confidence": "low",
+  "inferred": [
+   "workplace_as_posted"
+  ],
+  "fields": {
+   "role": "Lead Product/UX Designer (all genders)",
+   "company": "JustPlay GmbH",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "e150bf32f8d74e63": {
+  "id": "e150bf32f8d74e63",
+  "at": "2026-10-04T01:02:32",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000135485900",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000135485900",
+   "status": 200,
+   "shot": "data/shots/e150bf32f8d74e63.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000135485900",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Western Cape; Primary Location: ZA - Cape Town, Carl Cronje Drive, B; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "to be based in South Africa's Enterprise Capabilities office in Cape Town",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: ZA - Cape Town, Carl Cronje Drive, B",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "it offers a flexible hybrid work arrangement which accommodates both office and out-of-office work schedules",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "to be based in South Africa's Enterprise Capabilities office in Cape Town",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a construction/engineering design management role (not product/UX/UI design) and it is hybrid onsite in Cape Town, South Africa, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Design Manager - Multidisciplinary",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "South Africa"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "d47033262ff441a6": {
+  "id": "d47033262ff441a6",
+  "at": "2026-10-04T01:02:35",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/crb/744000135550470",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/crb/744000135550470",
+   "status": 200,
+   "shot": "data/shots/d47033262ff441a6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/crb/744000135550470",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Mississauga, ON, Canada",
+  "place_signals": [
+   {
+    "quote": "Mississauga, ON, Canada",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Compensation: CAD 60,000 - CAD 80,000 - yearly",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "All personal information collected will be kept strictly confidential in accordance with applicable Canadian privacy legislation.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Mississauga, ON, Canada",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Process Designer is a piping/CAD engineering role onsite in Mississauga, Canada - not a design role for Cesar and not available from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Process Designer",
+   "company": "CRB",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "CAD 60,000 - CAD 80,000 - yearly",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "9771946d78ca4aa5": {
+  "id": "9771946d78ca4aa5",
+  "at": "2026-10-04T01:02:31",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/profound/7ffc652b-6cdc-44c0-8143-4c89229b7438",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/profound/7ffc652b-6cdc-44c0-8143-4c89229b7438",
+   "status": 200,
+   "shot": "data/shots/9771946d78ca4aa5.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/profound/7ffc652b-6cdc-44c0-8143-4c89229b7438",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "New York, New York; Buenos Aires, Argentina",
+  "place_signals": [
+   {
+    "quote": "New York, New York; Buenos Aires, Argentina",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: On-site",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is an on-site role based in our Buenos Aires or NYC office, designed for builders who thrive on speed, iteration, and meaningful impact.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "NYC comp range for this role will be: $165 - $190k.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "This is an on-site role based in our Buenos Aires or NYC office",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "On-site role in New York or Buenos Aires, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Member of Technical Staff, Web Design",
+   "company": "Profound",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "Argentina"
+   ],
+   "portugal_ok": "no",
+   "salary": "$165 - $190k (NYC)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "526415b482ee49aa": {
+  "id": "526415b482ee49aa",
+  "at": "2026-10-04T01:02:44",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5287999008",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5287999008",
+   "status": 200,
+   "shot": "data/shots/526415b482ee49aa.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5287999008",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Seattle, WA",
+  "place_signals": [
+   {
+    "quote": "Seattle, WA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "this role requires in-office presence 3 days per week with periodic travel to K2's headquarters in Torrance, CA",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you legally authorized to work in the United States?",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "must be a \"U.S. person\" as defined by 22 C.F.R. § 120.15 or otherwise eligible for a federally issued export control license",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Seattle, WA",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "ASIC verification engineering role onsite/hybrid in Seattle/Torrance CA requiring US work authorization, not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal ASIC Design Verification Engineer",
+   "company": "K2 Space",
+   "seniority": "principal",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$190,000 – $285,000",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "1cba86397ed34cff": {
+  "id": "1cba86397ed34cff",
+  "at": "2026-10-04T01:02:37",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.eu.lever.co/pnlfin/10e200aa-7d70-48a3-8c7f-8d129b2c51db",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.eu.lever.co/pnlfin/10e200aa-7d70-48a3-8c7f-8d129b2c51db",
+   "status": 200,
+   "shot": "data/shots/1cba86397ed34cff.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.eu.lever.co/pnlfin/10e200aa-7d70-48a3-8c7f-8d129b2c51db",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Berlin",
+  "place_signals": [
+   {
+    "quote": "Berlin",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Full Time /Remote",
+    "where": "under the title",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Embark on this exciting journey with us and enjoy the flexibility of traveling and working remotely or in a hybrid model across Europe.",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "enjoy the flexibility of traveling and working remotely or in a hybrid model across Europe",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · Title line says Berlin, but the body widens remote/hybrid work to 'across Europe', creating a direct contradiction on location.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Principal Product Designer (German-speaking) — Core Experience, Europe (Remote)",
+   "company": "Finom",
+   "seniority": "principal",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Berlin",
+    "Europe"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "cut"
+ },
+ "38a0617f773b40d7": {
+  "id": "38a0617f773b40d7",
+  "at": "2026-10-04T01:02:46",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5288008008",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5288008008",
+   "status": 200,
+   "shot": "data/shots/38a0617f773b40d7.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5288008008",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Seattle, WA",
+  "place_signals": [
+   {
+    "quote": "Seattle, WA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "this role requires in-office presence 3 days per week with periodic travel to K2's headquarters in Torrance, CA",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "you must be a U.S. citizen, lawful permanent resident of the U.S., protected individual as defined by 8 U.S.C. 1324b(a)(3), or eligible to obtain the required authorizations from the U.S. Department of State",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The person hired for this role must therefore either be a \"U.S. person\" as defined by 22 C.F.R. § 120.15 or otherwise eligible for a federally issued export control license",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Seattle, WA",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Onsite/hybrid ASIC physical design engineering role in Seattle requiring U.S. person status under ITAR; not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal ASIC Physical Design Engineer",
+   "company": "K2 Space",
+   "seniority": "principal",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$190,000 – $280,000",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "8b0caac879414fd8": {
+  "id": "8b0caac879414fd8",
+  "at": "2026-10-04T01:02:38",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/audiohook/9ab13b9b-0dd2-424c-ae89-7206d884ad64",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/audiohook/9ab13b9b-0dd2-424c-ae89-7206d884ad64",
+   "status": 200,
+   "shot": "data/shots/8b0caac879414fd8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/audiohook/9ab13b9b-0dd2-424c-ae89-7206d884ad64",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "United States",
+  "place_signals": [
+   {
+    "quote": "United States",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Fully remote work environment",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Communicate clearly and proactively in a remote-first environment",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "United States",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Location is stated as United States under the title with no wider language elsewhere on the page.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Designer",
+   "company": "Audiohook",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut",
+  "second_place": "no"
+ },
+ "124d367bda4d4382": {
+  "id": "124d367bda4d4382",
+  "at": "2026-10-04T01:02:50",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5287990008",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5287990008",
+   "status": 200,
+   "shot": "data/shots/124d367bda4d4382.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5287990008",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Seattle, WA",
+  "place_signals": [
+   {
+    "quote": "Seattle, WA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "this role requires in-office presence 3 days per week with periodic travel to K2's headquarters in Torrance, CA",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "must therefore either be a \"U.S. person\" as defined by 22 C.F.R. § 120.15 or otherwise eligible for a federally issued export control license",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you legally authorized to work in the United States?",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Seattle, WA",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "ASIC verification engineering role based onsite/hybrid in Seattle/Torrance, CA, requiring US person status under ITAR - not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior ASIC Design Verification Engineer",
+   "company": "K2 Space",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$170,000 – $250,000",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "3469bf1e90f44da8": {
+  "id": "3469bf1e90f44da8",
+  "at": "2026-10-04T01:02:53",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5288010008",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5288010008",
+   "status": 200,
+   "shot": "data/shots/3469bf1e90f44da8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5288010008",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Seattle, WA",
+  "place_signals": [
+   {
+    "quote": "Seattle, WA",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "this role requires in-office presence 3 days per week with periodic travel to K2's headquarters in Torrance, CA",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "must therefore either be a \"U.S. person\" as defined by 22 C.F.R. § 120.15 or otherwise eligible for a federally issued export control license",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you legally authorized to work in the United States?",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "this role requires in-office presence 3 days per week ... headquarters in Torrance, CA",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is an ASIC hardware physical-design engineering role (not product/UX/UI design), hybrid onsite in Seattle/Torrance CA with US-person ITAR requirement.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior ASIC Physical Design Engineer",
+   "company": "K2 Space",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$170,000 – $250,000",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "3444083dffc04032": {
+  "id": "3444083dffc04032",
+  "at": "2026-10-04T01:02:40",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/prompt/4f1f21ce-589e-4c46-a303-03aaee8f54b5",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/prompt/4f1f21ce-589e-4c46-a303-03aaee8f54b5",
+   "status": 200,
+   "shot": "data/shots/3444083dffc04032.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/prompt/4f1f21ce-589e-4c46-a303-03aaee8f54b5",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Location: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote/hybrid environment",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Prompt Therapy Solutions, Inc is an E-Verify Employer.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "FSA/DCA and commuter benefits / 401k",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "Prompt Therapy Solutions, Inc is an E-Verify Employer.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "cut on place, but not sure of it · Role is genuine senior product design; location says only 'Remote' with no country, but E-Verify and US-style benefits (401k, FSA/DCA) suggest a US-only hire without stating it outright, so place is unclear.",
+  "confidence": "medium",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Prompt (Prompt Therapy Solutions, Inc)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "$140K – $180K",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "587da1c22c004ec4": {
+  "id": "587da1c22c004ec4",
+  "at": "2026-10-04T01:02:57",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000135310770",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000135310770",
+   "status": 200,
+   "shot": "data/shots/587da1c22c004ec4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000135310770",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Denver, CO, United States / Primary Location: US - Denver, CO - 7595 East Technolo / State/Province: Colorado",
+  "place_signals": [
+   {
+    "quote": "Denver, CO, United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Denver, CO - 7595 East Technolo",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Denver, CO. office.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM does not offer U.S. work sponsorship or sponsorship transfer with this opportunity.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation not offered with this opportunity",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Denver, CO. office.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid civil/structural bridge engineering role onsite in Denver, CO, USA - not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Bridge Design Project Engineer IV",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 110,000 - USD 150,000 - yearly",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "3b2e852e15fd4d56": {
+  "id": "3b2e852e15fd4d56",
+  "at": "2026-10-04T01:02:58",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000135283506",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000135283506",
+   "status": 200,
+   "shot": "data/shots/3b2e852e15fd4d56.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000135283506",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Dublin; Primary Location: IE - Dublin, 1 Burlington Plaza; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "State/Province: Dublin",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: IE - Dublin, 1 Burlington Plaza",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "AECOM is seeking a Contractor Market Design Lead to drive growth across our Building Engineering portfolio in Ireland.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Strong network within the Irish contractor market",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Dublin, Ireland",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: IE - Dublin, 1 Burlington Plaza",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a business development/contractor-relations leadership role (not product/UX design) hybrid-based in Dublin, Ireland.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Contractor Market Design Lead",
+   "company": "AECOM",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Ireland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "513e0082be8142b5": {
+  "id": "513e0082be8142b5",
+  "at": "2026-10-04T01:02:59",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000135264065",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000135264065",
+   "status": 200,
+   "shot": "data/shots/513e0082be8142b5.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000135264065",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Taipei, Taiwan",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Renesas employs roughly 21,000 people in more than 30 countries worldwide.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Taipei, Taiwan",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a hands-on power electronics hardware engineering role (not design/UX) and the posting is onsite in Taipei, Taiwan.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal Power Module Design Engineer",
+   "company": "Renesas Electronics",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Taiwan"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "d5b839e9149f4de4": {
+  "id": "d5b839e9149f4de4",
+  "at": "2026-10-04T01:03:01",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/taxwire/5c6c8d28-474d-41d0-8081-ba6abb6afa88",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/taxwire/5c6c8d28-474d-41d0-8081-ba6abb6afa88",
+   "status": 200,
+   "shot": "data/shots/d5b839e9149f4de4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/taxwire/5c6c8d28-474d-41d0-8081-ba6abb6afa88",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Taxwire (Remote)",
+  "place_signals": [
+   {
+    "quote": "Taxwire (Remote)",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "depending on experience and location",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Taxwire (Remote)",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Founding Product Designer is a clear design role, and the posting states Remote with no country restriction named anywhere on the page.",
+  "confidence": "medium",
+  "inferred": [
+   "portugal_ok"
+  ],
+  "fields": {
+   "role": "Founding Designer",
+   "company": "Taxwire",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": "$150K – $200K",
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "open"
+ },
+ "a0089e1bda804665": {
+  "id": "a0089e1bda804665",
+  "at": "2026-10-04T01:03:05",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/alten/744000135004459",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/alten/744000135004459",
+   "status": 200,
+   "shot": "data/shots/a0089e1bda804665.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/alten/744000135004459",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Region: Midlands",
+  "place_signals": [
+   {
+    "quote": "Region: Midlands",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "As an FPGA Design Engineer, you will join our Birmingham team",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Birmingham",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "On Site: 3 days per week on-site",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Birmingham, United Kingdom",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Location: Birmingham, On Site: 3 days per week on-site",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "FPGA/VHDL engineering role with no design/UX title, and it is onsite 3 days/week in Birmingham, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "FPGA Design Engineer",
+   "company": "ALTEN",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "35d5e501157948c7": {
+  "id": "35d5e501157948c7",
+  "at": "2026-10-04T01:03:07",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/TimmonsGroup1/744000135016029",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/TimmonsGroup1/744000135016029",
+   "status": 200,
+   "shot": "data/shots/35d5e501157948c7.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/TimmonsGroup1/744000135016029",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "7053 Celebration Pk Ave, Richmond, VA 23225, USA",
+  "place_signals": [
+   {
+    "quote": "7053 Celebration Pk Ave, Richmond, VA 23225, USA",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "With more than a dozen offices throughout the Mid-Atlantic and Southeast",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "we may not have an immediate need at your level in your location of choice",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "7053 Celebration Pk Ave, Richmond, VA 23225, USA",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Civil engineering/CAD design role (not product/UX/UI design) and onsite in Richmond, VA, USA.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Senior Civil Designer",
+   "company": "Timmons Group",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": "$75,000-$115,000",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "ae4f6a6c4eec4291": {
+  "id": "ae4f6a6c4eec4291",
+  "at": "2026-10-04T01:03:09",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/livefront/jobs/4215612009",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/livefront/jobs/4215612009",
+   "status": 200,
+   "shot": "data/shots/ae4f6a6c4eec4291.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/livefront/jobs/4215612009",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (USA)",
+  "place_signals": [
+   {
+    "quote": "Remote (USA)",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "To be considered for this role, you must be legally authorized to work in the United States without the need for employer sponsorship.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Comfort with occasional travel to our HQ in MN.",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote (USA)",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is remote but restricted to the USA, requiring US work authorization; Portugal is excluded.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Livefront",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "$90,000 - $135,000 a year",
+   "years_xp": 3,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "65d5c9c7234f4666": {
+  "id": "65d5c9c7234f4666",
+  "at": "2026-10-04T01:03:10",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000134863587",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000134863587",
+   "status": 200,
+   "shot": "data/shots/65d5c9c7234f4666.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000134863587",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "CA - Halifax, NS - 1701 Hollis St",
+  "place_signals": [
+   {
+    "quote": "Primary Location: CA - Halifax, NS - 1701 Hollis St",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "AECOM is actively seeking a Civil CAD Designer for immediate employment in Halifax, NS, Moncton, NB or Sydney, NS.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship for Canadian employment authorization is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is actively seeking a Civil CAD Designer for immediate employment in Halifax, NS, Moncton, NB or Sydney, NS.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Hybrid civil CAD design role onsite in Canada, and the role itself is engineering/CAD, not design/UX.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Civil CAD Designer",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "CAD 60,000 - CAD 85,000 - yearly",
+   "years_xp": 2,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "2e89c3adbdcb48af": {
+  "id": "2e89c3adbdcb48af",
+  "at": "2026-10-04T01:03:09",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/bSx6CnMoegQucroZdYcnVR/remote-design-%26-cad-instructor-in-ohio-at-tutor-me-education",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/bSx6CnMoegQucroZdYcnVR/remote-design-%26-cad-instructor-in-ohio-at-tutor-me-education",
+   "status": 200,
+   "shot": "data/shots/2e89c3adbdcb48af.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/bSx6CnMoegQucroZdYcnVR/remote-design-%26-cad-instructor-in-ohio-at-tutor-me-education",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "RemoteOhio, United States",
+  "place_signals": [
+   {
+    "quote": "RemoteOhio, United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Fully remote — tutor from home on your own computer",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "to provide 1:1 and small group virtual instruction to students across the country",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Many of our assignments operate in Pacific Time, so availability during PT hours is a plus.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "100% remote",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteOhio, United States",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a tutoring/teaching role for US students (Ohio, United States), not a product design/UX job, and it is US-only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design & CAD Instructor",
+   "company": "Tutor Me Education",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "5c8b9392298e41da": {
+  "id": "5c8b9392298e41da",
+  "at": "2026-10-04T01:03:12",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000134532562",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000134532562",
+   "status": 200,
+   "shot": "data/shots/5c8b9392298e41da.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000134532562",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Kentucky; Primary Location: US - Louisville, KY - 500 West Jeffe",
+  "place_signals": [
+   {
+    "quote": "State/Province: Kentucky",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Louisville, KY - 500 West Jeffe",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Lexington, KY office.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "PE (Professional Engineer) licensure in Kentucky or ability to obtain",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not offered for this position now or in the future.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation not offered with this opportunity.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Lexington, KY, United States",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Lexington, KY office.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/structural bridge engineering role based onsite/hybrid in Kentucky, USA - not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Bridge Design Project Engineer IV",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 110,000 - USD 175,000 - yearly",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "c9fe417d2848414c": {
+  "id": "c9fe417d2848414c",
+  "at": "2026-10-04T01:03:15",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000134529815",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000134529815",
+   "status": 200,
+   "shot": "data/shots/c9fe417d2848414c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000134529815",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Kentucky; Primary Location: US - Louisville, KY - 500 West Jeffe",
+  "place_signals": [
+   {
+    "quote": "Primary Location: US - Louisville, KY - 500 West Jeffe",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Louisville, KY office.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "performing transportation structure design analysis, including plan preparation of structures in Kentucky and exposure and contributing to project work throughout the Western U.S.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not offered for this position now or in the future.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation not offered with this opportunity.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Louisville, KY office.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/structural bridge engineering role, hybrid onsite in Louisville, Kentucky, USA - not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Bridge Design Project Engineer IV",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 110,000 - USD 175,000 - yearly",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "19c7ed744d7e46f2": {
+  "id": "19c7ed744d7e46f2",
+  "at": "2026-10-04T01:03:22",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133511174",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133511174",
+   "status": 200,
+   "shot": "data/shots/19c7ed744d7e46f2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133511174",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Bengaluru, Karnataka, India",
+  "place_signals": [
+   {
+    "quote": "Bengaluru, Karnataka, India",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Bengaluru, Karnataka, India",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is an Analog Design (electrical/semiconductor) Engineering role, not a design/UX job, and it is onsite in Bengaluru, India with no remote option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Analog Design Engineer",
+   "company": "Renesas Electronics",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "a4c3e54b24944ce8": {
+  "id": "a4c3e54b24944ce8",
+  "at": "2026-10-04T01:03:21",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000134014169",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000134014169",
+   "status": 200,
+   "shot": "data/shots/a4c3e54b24944ce8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000134014169",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: New Mexico; Primary Location: US - Albuquerque, NM - One Park Squa; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "Primary Location: US - Albuquerque, NM - One Park Squa",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM is seeking a Bridge Design Project Engineer III to be based in AECOM's Albuquerque, NM, office.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "No relocation offered with this opportunity.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not offered for this position now or in the future.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is seeking a Bridge Design Project Engineer III to be based in AECOM's Albuquerque, NM, office.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a structural/civil bridge engineering role (not product/UX design) hybrid-based onsite in Albuquerque, NM with no sponsorship or relocation.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Bridge Design Project Engineer III",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 85,000 - USD 135,000 - yearly",
+   "years_xp": 4,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "676fb46e50fa4495": {
+  "id": "676fb46e50fa4495",
+  "at": "2026-10-04T01:03:19",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/standardmetrics/jobs/4130794005",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/standardmetrics/jobs/4130794005",
+   "status": 200,
+   "shot": "data/shots/676fb46e50fa4495.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/standardmetrics/jobs/4130794005",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "US (Remote)",
+  "place_signals": [
+   {
+    "quote": "US (Remote)",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "For our employees located in the USA, we aim to pay at or above the market rate of US-based tech hubs like San Francisco or NYC. For international roles, we aim to pay top of market for your country.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We cover you and your dependents' medical/dental/vision insurance 100% in the USA. Internationally we match local health coverage for you and your family.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "12 weeks of paid leave for all new parents in the USA. Internationally we match parental leave standards in your area.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "we are a remote-first company and build our communication, processes, and structures with a dispersed workforce in mind",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Are you legally authorized to work in the country where this job is located?",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "US (Remote) ... For international roles, we aim to pay top of market for your country.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "Title line says US (Remote), but the body repeatedly references 'international roles' and matching benefits 'internationally', widening but not confirming scope beyond the US.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Standard Metrics",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "$170,000-$205,000",
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "cut"
+ },
+ "d86cde69df014576": {
+  "id": "d86cde69df014576",
+  "at": "2026-10-04T01:03:18",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/xoF9eq345vdJqvu3Hmph8m/remote-senior-product-designer-in-united-kingdom-at-c-the-signs",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/xoF9eq345vdJqvu3Hmph8m/remote-senior-product-designer-in-united-kingdom-at-c-the-signs",
+   "status": 200,
+   "shot": "data/shots/d86cde69df014576.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/xoF9eq345vdJqvu3Hmph8m/remote-senior-product-designer-in-united-kingdom-at-c-the-signs",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote United Kingdom",
+  "place_signals": [
+   {
+    "quote": "RemoteUnited Kingdom",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible working arrangements - We are a fully remote company",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We require this person to be located in the UK or Europe",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "We require this person to be located in the UK or Europe",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · Title line says United Kingdom, but benefits section widens eligibility to UK or Europe, creating a contradiction the posting never resolves.",
+  "confidence": "medium",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "UX/UI Designer (Senior Product Designer)",
+   "company": "C the Signs",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom",
+    "Europe"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": "Director of Product",
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "cut"
+ },
+ "c4af1225ed114cd1": {
+  "id": "c4af1225ed114cd1",
+  "at": "2026-10-04T01:03:28",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/pod-network/5fcff1d5-c33c-4d9e-b2ce-658240c4e0e2",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/pod-network/5fcff1d5-c33c-4d9e-b2ce-658240c4e0e2",
+   "status": 200,
+   "shot": "data/shots/c4af1225ed114cd1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/pod-network/5fcff1d5-c33c-4d9e-b2ce-658240c4e0e2",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Mid-East, EU, UK or North America UTC +5 - UTC -5 (remote)",
+  "place_signals": [
+   {
+    "quote": "Mid-East, EU, UK or North America UTC +5 - UTC -5 (remote)",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Mid-East, EU, UK or North America UTC +5 - UTC -5 (remote)",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Title says Product Designer and location list explicitly includes EU, remote.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Pod Network",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Mid-East",
+    "EU",
+    "UK",
+    "North America"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "open"
+ },
+ "dc5c2645ba3949f1": {
+  "id": "dc5c2645ba3949f1",
+  "at": "2026-10-04T01:03:33",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000133466110",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000133466110",
+   "status": 200,
+   "shot": "data/shots/dc5c2645ba3949f1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000133466110",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Ontario; Primary Location: CA - Markham, ON - 105 Commerce Vall",
+  "place_signals": [
+   {
+    "quote": "AECOM is seeking a Senior Highway Design Project Manager to be based in Markham, Ontario.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: CA - Markham, ON - 105 Commerce Vall",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Sponsorship for Canadian employment authorization is not available for this position",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is seeking a Senior Highway Design Project Manager to be based in Markham, Ontario.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/highway engineering project manager role, not a product/UX design role, and it is hybrid onsite in Markham, Ontario, Canada.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Highway Design Project Manager, PEng",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "CAD 140,000 - CAD 180,000 - yearly",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "7e7e7c48bfa248cd": {
+  "id": "7e7e7c48bfa248cd",
+  "at": "2026-10-04T01:03:34",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000133423144",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000133423144",
+   "status": 200,
+   "shot": "data/shots/7e7e7c48bfa248cd.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000133423144",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Texas / Primary Location: US - Dallas, TX - 13355 Noel Road",
+  "place_signals": [
+   {
+    "quote": "State/Province: Texas",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Dallas, TX - 13355 Noel Road",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Dallas, Texas office.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "PE (Professional Engineer) licensure in Texas",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not offered for this position now or in the future.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation not offered with this opportunity.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: US - Dallas, TX - 13355 Noel Road",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/structural bridge engineering role (not product/UX/UI design) and it is hybrid onsite in Dallas, Texas, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Bridge Design Project Engineer IV",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 120,000 - USD 170,000 - yearly",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "ba938660c3794c2e": {
+  "id": "ba938660c3794c2e",
+  "at": "2026-10-04T01:03:24",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/searchapi/597a1f05-d9bd-4827-82f1-794c0d861fff",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/searchapi/597a1f05-d9bd-4827-82f1-794c0d861fff",
+   "status": 200,
+   "shot": "data/shots/ba938660c3794c2e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/searchapi/597a1f05-d9bd-4827-82f1-794c0d861fff",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote - Lithuania; Remote; Remote - Albania; Remote - Argentina; Remote - Australia; Remote - Austria; Remote - Belgium; Remote - Brazil; Remote - Bulgaria; Remote - Canada; Remote - Chile; Remote - Colombia; Remote - Costa Rica; Remote - Croatia; Remote - Cyprus; Remote - Czech Republic; Remote - Denmark; Remote - Egypt; Remote - Estonia; Remote - Finland; Remote - France; Remote - Georgia; Remote - Germany; Remote - Greece; Remote - Hong Kong; Remote - Hungary; Remote - Iceland; Remote - Ireland; Remote - Israel; Remote - Italy; Remote - Japan; Remote - Kazakhstan; Remote - Latvia; Remote - Luxembourg; Remote - Malaysia; Remote - Malta; Remote - Mexico; Remote - Moldova; Remote - Netherlands; Remote - New Zealand; Remote - North Macedonia; Remote - Norway; Remote - Philippines; Remote - Poland; Remote - Portugal; Remote - Romania; Remote - Serbia; Remote - Singapore; Remote - Slovakia; Remote - Slovenia; Remote - South Africa; Remote - South Korea; Remote - Spain; Remote - Sweden; Remote - Taiwan; Remote - Turkey; Remote - United Kingdom; Remote - Uruguay; Remote - Vietnam",
+  "place_signals": [
+   {
+    "quote": "Remote - Lithuania; Remote; Remote - Albania; ... Remote - Portugal; ... Remote - United Kingdom; Remote - Uruguay; Remote - Vietnam",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "🏡 Fully Remote. Work from anywhere.",
+    "where": "body",
+    "says": "portugal_in"
+   }
+  ],
+  "can_he_do_it_from_portugal": "yes",
+  "place_quote": "Remote - Portugal",
+  "role_verdict": "yes",
+  "place_verdict": "remote",
+  "cut": false,
+  "reason": "Title includes 'UI Designer' and the location list explicitly includes Remote - Portugal, with the company stating it is fully remote.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Frontend Engineer & UI Designer (Developer Tooling)",
+   "company": "SearchApi",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Lithuania",
+    "Albania",
+    "Argentina",
+    "Australia",
+    "Austria",
+    "Belgium",
+    "Brazil",
+    "Bulgaria",
+    "Canada",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Croatia",
+    "Cyprus",
+    "Czech Republic",
+    "Denmark",
+    "Egypt",
+    "Estonia",
+    "Finland",
+    "France",
+    "Georgia",
+    "Germany",
+    "Greece",
+    "Hong Kong",
+    "Hungary",
+    "Iceland",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Japan",
+    "Kazakhstan",
+    "Latvia",
+    "Luxembourg",
+    "Malaysia",
+    "Malta",
+    "Mexico",
+    "Moldova",
+    "Netherlands",
+    "New Zealand",
+    "North Macedonia",
+    "Norway",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Romania",
+    "Serbia",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "South Africa",
+    "South Korea",
+    "Spain",
+    "Sweden",
+    "Taiwan",
+    "Turkey",
+    "United Kingdom",
+    "Uruguay",
+    "Vietnam"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "remote",
+  "lane": "open"
+ },
+ "8c59774a7f414206": {
+  "id": "8c59774a7f414206",
+  "at": "2026-10-04T01:03:37",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000133423859",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000133423859",
+   "status": 200,
+   "shot": "data/shots/8c59774a7f414206.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000133423859",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Texas; Primary Location: US - Houston, TX - 800 Gessner Rd; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "Primary Location: US - Houston, TX - 800 Gessner Rd",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Houston, Texas office.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not offered for this position now or in the future.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Relocation not offered with this opportunity.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Texas PE licensure.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "AECOM is actively seeking a highly motivated Bridge Design Project Engineer IV for employment in the Houston, Texas office.",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/structural bridge engineering role, not a product/UX/UI design job, and it is hybrid onsite in Houston, Texas with no remote or Portugal eligibility.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Bridge Design Project Engineer IV",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 120,000 - USD 170,000 - yearly",
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "8f7522ce670b4aed": {
+  "id": "8f7522ce670b4aed",
+  "at": "2026-10-04T01:03:39",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133432990",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133432990",
+   "status": 200,
+   "shot": "data/shots/8f7522ce670b4aed.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133432990",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Willingness to travel as required for onsite customer training, including travel outside of the India.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Office Based",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Bangalore, India",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Office Based; travel outside of the India; Bangalore, India",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "The role is a PCB design software trainer/content creator (not product/UX/UI design) and is office-based in Bangalore, India with no remote option.",
+  "confidence": "high",
+  "inferred": [
+   "countries"
+  ],
+  "fields": {
+   "role": "Altium Designer Trainer and Content Creator",
+   "company": "Renesas Electronics",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "154698a0a01c462b": {
+  "id": "154698a0a01c462b",
+  "at": "2026-10-04T01:03:31",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/mWhxPa9ExnkQvZEgmPZbXW/remote-senior-ui-%2F-ux-designer-in-united-kingdom-at-astrid-entertainment",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/mWhxPa9ExnkQvZEgmPZbXW/remote-senior-ui-%2F-ux-designer-in-united-kingdom-at-astrid-entertainment",
+   "status": 200,
+   "shot": "data/shots/154698a0a01c462b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/mWhxPa9ExnkQvZEgmPZbXW/remote-senior-ui-%2F-ux-designer-in-united-kingdom-at-astrid-entertainment",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote United Kingdom",
+  "place_signals": [
+   {
+    "quote": "RemoteUnited Kingdom",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team spans the US, the UK and beyond. We are taking a fully remote approach, but have regular in-person meetups to synchronize, huddle and build our culture.",
+    "where": "opening paragraph",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our team spans the US, the UK, and beyond. We are taking a fully remote approach, but have regular in-person meetups to synchronize, huddle and build our culture.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "RemoteUnited Kingdom",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Location tag specifies Remote United Kingdom with no clear widening to Europe or Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UI / UX Designer",
+   "company": "Astrid Entertainment",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 5,
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 months ago"
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "8962259c28c94b11": {
+  "id": "8962259c28c94b11",
+  "at": "2026-10-04T01:03:44",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133301272",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133301272",
+   "status": 200,
+   "shot": "data/shots/8962259c28c94b11.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133301272",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Kodaira, Japan",
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Kodaira, Japan",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "当社では、ハイブリッド勤務モデルを採用しており、従業員は週に2日間リモートワークを行うことができます...出社指定日は火曜日から木曜日で",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "we're co-working with Vietnam, India design site (language:English)",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Kodaira, Japan / Remote Work Available: No",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a semiconductor SoC timing design hardware engineering role based onsite/hybrid in Kodaira, Japan - not a design/UX role and not available from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "HPC SoC Timing Design Engineer/Leader",
+   "company": "Renesas Electronics",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "Japan"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "147d1d6ccf5541e5": {
+  "id": "147d1d6ccf5541e5",
+  "at": "2026-10-04T01:03:50",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133017545",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133017545",
+   "status": 200,
+   "shot": "data/shots/147d1d6ccf5541e5.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133017545",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Hyderabad, India",
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hyderabad, India",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote Work Available: No",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a semiconductor physical design (chip layout/EDA) engineering role, not product/UX/UI design, and it is onsite in Hyderabad, India with no remote work available.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Engineer, Design Enablement",
+   "company": "Renesas Electronics",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 6,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "cce23f99c7a746d6": {
+  "id": "cce23f99c7a746d6",
+  "at": "2026-10-04T01:03:49",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000133027164",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000133027164",
+   "status": 200,
+   "shot": "data/shots/cce23f99c7a746d6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000133027164",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Milano; Primary Location: IT - Milan, Milano, Via Gustavo Fara; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "Primary Location: IT - Milan, Milano, Via Gustavo Fara",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "As part of this role, you will be based in Milan with occasional travels across our UK&I + European offices for project related purposes.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Office in the Heart of Milan: Central location, with easy access to all the city's conveniences.",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "you will be based in Milan with occasional travels across our UK&I + European offices for project related purposes",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is a technical/engineering design management job in construction (not product/UX design), and it is hybrid, based onsite in Milan, Italy.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Technical Design Manager Data Center",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Italy"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 7,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "5758d900021e4ff7": {
+  "id": "5758d900021e4ff7",
+  "at": "2026-10-04T01:03:47",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133266449",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133266449",
+   "status": 200,
+   "shot": "data/shots/5758d900021e4ff7.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000133266449",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Kodaira, Japan",
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Kodaira, Japan",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "当社では、ハイブリッド勤務モデルを採用しており、従業員は週に2日間リモートワークを行うことができます。",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote Work Available: No",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Title is a Software Engineer role (not design/UX/UI), and the job is onsite in Kodaira, Japan with no remote option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal Software Engineer- Embedded Software Design",
+   "company": "Renesas Electronics",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Japan"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 15,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "da3c8d3c8de44460": {
+  "id": "da3c8d3c8de44460",
+  "at": "2026-10-04T01:03:51",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/hims-and-hers/ff10b821-8469-4eb4-ae20-3e739113dfe6",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/hims-and-hers/ff10b821-8469-4eb4-ae20-3e739113dfe6",
+   "status": 200,
+   "shot": "data/shots/da3c8d3c8de44460.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/hims-and-hers/ff10b821-8469-4eb4-ae20-3e739113dfe6",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "US Remote",
+  "place_signals": [
+   {
+    "quote": "US Remote",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Outlined above is a reasonable estimate of H&H's compensation range for this role for US-based candidates. If you're based outside of the US, your recruiter will be able to provide you with an estimated salary range for your location.",
+    "where": "side panel",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "unclear",
+  "place_quote": "If you're based outside of the US, your recruiter will be able to provide you with an estimated salary range for your location.",
+  "role_verdict": "yes",
+  "place_verdict": "no",
+  "cut": false,
+  "reason": "cut on place, but not sure of it · Location is stated as US Remote but a line about non-US candidates slightly widens eligibility, so place is unclear rather than a flat no",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, Core Treatments",
+   "company": "Hims & Hers",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "$165K – $210K",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "unclear",
+  "lane": "unsure"
+ },
+ "e62381b11ca744a3": {
+  "id": "e62381b11ca744a3",
+  "at": "2026-10-04T01:03:53",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/TurnerTownsend/744000132934619",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/TurnerTownsend/744000132934619",
+   "status": 200,
+   "shot": "data/shots/e62381b11ca744a3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/TurnerTownsend/744000132934619",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Los Angeles, California, United States",
+  "place_signals": [
+   {
+    "quote": "Los Angeles, California, United States",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "a large, complex healthcare capital program in Southern California",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Working knowledge of California Public Contract Code and public-sector procurement processes",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Qualified candidates with arrest or conviction records will be considered for employment in accordance with LA County ordinance and CA law.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Los Angeles, California, United States",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is an onsite construction/project management role in Los Angeles, not a design role, and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "remote"
+  ],
+  "fields": {
+   "role": "Associate Director- Construction Management- Progressive Design Build projects (Anticipated Opening)",
+   "company": "Turner & Townsend",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$170k-$220k per year",
+   "years_xp": 15,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "31dc07cd99be42bc": {
+  "id": "31dc07cd99be42bc",
+  "at": "2026-10-04T01:03:57",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000132830146",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000132830146",
+   "status": 200,
+   "shot": "data/shots/31dc07cd99be42bc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000132830146",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Hyderabad, India",
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hyderabad, India",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Remote Work Available: No",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Title is an AI/ML engineering director role (not design) and it is onsite in Hyderabad, India with no remote option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Director of AI/ML Engineering (EDA & Semiconductor Design)",
+   "company": "Renesas Electronics",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 20,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "d0c64f3fd74d40b8": {
+  "id": "d0c64f3fd74d40b8",
+  "at": "2026-10-04T01:04:00",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132683385",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132683385",
+   "status": 200,
+   "shot": "data/shots/d0c64f3fd74d40b8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132683385",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Gauteng; Primary Location: ZA - Pretoria, 263A West Avenue, Cen; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "Primary Location: ZA - Pretoria, 263A West Avenue, Cen",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "to be based in South Africa's Enterprise Capabilities office in Centurion",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "we ask all hybrid employees to work from an AECOM office at least three days per week",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "to be based in South Africa's Enterprise Capabilities office in Centurion",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Mechanical engineering/design role for underground mining infrastructure, hybrid onsite in Centurion, South Africa - not a design role for Cesar and not in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Designer - Mechanical (Underground Hard Rock Mining)",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "South Africa"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "af20c469f72d4431": {
+  "id": "af20c469f72d4431",
+  "at": "2026-10-04T01:04:01",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132412899",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132412899",
+   "status": 200,
+   "shot": "data/shots/af20c469f72d4431.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132412899",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Florida; Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "place_signals": [
+   {
+    "quote": "State/Province: Florida",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "with a focus in the southeastern United States",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "North Charleston, SC, United States",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a construction/engineering Project Manager role for water infrastructure (not a design role for Cesar) and it is a hybrid US position in Florida/South Carolina requiring work authorization with no sponsorship.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Water Design-Build Project Manager",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 130,000 - USD 190,000 - yearly",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "56cde7b32329464b": {
+  "id": "56cde7b32329464b",
+  "at": "2026-10-04T01:04:01",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132434804",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132434804",
+   "status": 200,
+   "shot": "data/shots/56cde7b32329464b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132434804",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Glasgow City; Primary Location: UK - Glasgow - 177 Bothwell Street",
+  "place_signals": [
+   {
+    "quote": "State/Province: Glasgow City",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: UK - Glasgow - 177 Bothwell Street",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Lead Design Management projects across the UK and Internationally.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You will have the flexibility you need to do your best work with hybrid work options. Whether you're working from an AECOM office, remote location or at a client site...",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Senior Design Manager - Glasgow, United Kingdom",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: UK - Glasgow - 177 Bothwell Street",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Construction/infrastructure design management role (not product/UX design) hybrid in Glasgow, UK - fails both role and place criteria.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Design Manager",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "a0e905c02b854aef": {
+  "id": "a0e905c02b854aef",
+  "at": "2026-10-04T01:04:00",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132520519",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132520519",
+   "status": 200,
+   "shot": "data/shots/a0e905c02b854aef.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132520519",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Hunan; Primary Location: CN - Changsha-20/F Parklane Plaza; Work Location Model: Hybrid",
+  "place_signals": [
+   {
+    "quote": "State/Province: Hunan",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primary Location: CN - Changsha-20/F Parklane Plaza",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "AECOM's Enterprise Capabilities team is looking for a Landscape Designer to join our team in China.",
+    "where": "opening paragraph",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Participate in a variety of landscape project types and scales with HONG KONG office and ensure effective commutation and cooperation.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment.",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: CN - Changsha-20/F Parklane Plaza, Work Location Model: Hybrid",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Landscape design is not product/UX/UI design, and the job is hybrid onsite in Changsha, China.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Landscape Designer",
+   "company": "AECOM",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "China"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "7c8a479086e94a99": {
+  "id": "7c8a479086e94a99",
+  "at": "2026-10-04T01:04:04",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132412699",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132412699",
+   "status": 200,
+   "shot": "data/shots/7c8a479086e94a99.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132412699",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "State/Province: Florida ... Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "place_signals": [
+   {
+    "quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "with a focus in the southeastern United States",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Role is a construction/engineering Project Manager position (not design), and it is hybrid onsite in Tampa, FL with no sponsorship available.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Water Design-Build Project Manager",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 130,000 - USD 190,000 - yearly",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "14f948da7ef5479c": {
+  "id": "14f948da7ef5479c",
+  "at": "2026-10-04T01:04:08",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132410786",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132410786",
+   "status": 200,
+   "shot": "data/shots/14f948da7ef5479c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132410786",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam; State/Province: Florida",
+  "place_signals": [
+   {
+    "quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "State/Province: Florida",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Orlando, FL, United States",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "focus in the southeastern United States",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a construction/engineering project manager role (not product design) and it is a hybrid position onsite in Tampa/Orlando, Florida, USA.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Water Design-Build Project Manager",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 130,000 - USD 190,000 - yearly",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "1e2bb677f9b84f23": {
+  "id": "1e2bb677f9b84f23",
+  "at": "2026-10-04T01:04:14",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/alten/744000132437045",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/alten/744000132437045",
+   "status": 200,
+   "shot": "data/shots/1e2bb677f9b84f23.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/alten/744000132437045",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Region: South West UK",
+  "place_signals": [
+   {
+    "quote": "Region: South West UK",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Bristol, United Kingdom",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Provide on-site support during construction, resolving structural issues.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible way of working (role dependent)",
+    "where": "body",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Region: South West UK",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a civil/structural nuclear engineering role based onsite in the UK, not a design (UX/UI/product) role and not available from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Civil Structural Design Engineer - Nuclear",
+   "company": "ALTEN",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "d63a12550c1243b5": {
+  "id": "d63a12550c1243b5",
+  "at": "2026-10-04T01:04:12",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132412159",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132412159",
+   "status": 200,
+   "shot": "data/shots/d63a12550c1243b5.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132412159",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "place_signals": [
+   {
+    "quote": "State/Province: Florida",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "with a focus in the southeastern United States",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sponsorship is not available for this position.",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location as a condition of employment",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Tampa, FL, United States",
+    "where": "footer or small print",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: US - Tampa, FL - 7650 W Courtney Cam",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "This is a construction/project management role (not product/UX/UI design) and it is hybrid onsite in Tampa, Florida, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Water Design-Build Project Manager",
+   "company": "AECOM",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "USD 130,000 - USD 190,000 - yearly",
+   "years_xp": 8,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "88f160b97014480b": {
+  "id": "88f160b97014480b",
+  "at": "2026-10-04T01:04:13",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/AECOM2/744000132330775",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/AECOM2/744000132330775",
+   "status": 200,
+   "shot": "data/shots/88f160b97014480b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/AECOM2/744000132330775",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Primary Location: AU - Brisbane, QLD",
+  "place_signals": [
+   {
+    "quote": "State/Province: Queensland",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Legal Entity: AECOM Australia Pty Ltd",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location Model: Hybrid",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Primary Location: AU - Brisbane, QLD",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "strengthening our design leadership capability across the Brisbane region",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "major transport projects across Brisbane and South East Queensland",
+    "where": "body",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all newly hired employees are required to attend an in-person Day 1 onboarding at an AECOM office location",
+    "where": "body",
+    "says": "portugal_out"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Primary Location: AU - Brisbane, QLD",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "Civil/highways infrastructure design leadership role based onsite/hybrid in Brisbane, Australia - not a product/UX design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Highways Design Manager - Technical Director",
+   "company": "AECOM",
+   "seniority": "director",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Australia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 20,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
+ },
+ "6a7e1f8ff2544b05": {
+  "id": "6a7e1f8ff2544b05",
+  "at": "2026-10-04T01:04:14",
+  "criteria": "2026-10-03.2",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000132328919",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000132328919",
+   "status": 200,
+   "shot": "data/shots/6a7e1f8ff2544b05.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000132328919",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Zhubei, Taiwan",
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "side panel",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Zhubei, Taiwan",
+    "where": "under the title",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work with TW Design (Zhubei) along with global support teams on New Products",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "the remote work option",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
+  "can_he_do_it_from_portugal": "no",
+  "place_quote": "Zhubei, Taiwan / Remote Work Available: No",
+  "role_verdict": "no",
+  "place_verdict": "no",
+  "cut": true,
+  "reason": "FPGA/Verilog applications engineering role onsite in Taiwan with no remote option - fails both role (engineering, not design) and place (not Portugal).",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Application Engineer (experience in FPGA design/ Verilog)",
+   "company": "Renesas Electronics",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Taiwan"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": 7,
+   "reports_to": "Applications Engineering Supervisor or Team Lead",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "reader_place": "no",
+  "lane": "cut"
  }
 }
