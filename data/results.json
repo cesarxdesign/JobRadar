@@ -1,8 +1,8 @@
 {
  "jd": {},
- "generated_at": "2026-10-04T01:41:02+00:00",
- "built_at": "2026-10-04T08:01+01:00",
- "run_id": "2026-10-04T01:41:02+00:00",
+ "generated_at": "2026-10-04T11:18:45+00:00",
+ "built_at": "2026-10-04T12:18+01:00",
+ "run_id": "2026-10-04T11:18:45+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -12,16 +12,16 @@
   "ghosts": 0,
   "cut": 3,
   "closed": 464,
-  "vision_cut": 5166,
+  "vision_cut": 5195,
   "agency": 37,
-  "not_read": 148,
-  "folded": 56,
+  "not_read": 150,
+  "folded": 60,
   "vision_read": 6947,
   "title_cuts": 66094,
-  "design": 6237,
+  "design": 6272,
   "waiting": 0,
-  "unjudged": 81065,
-  "active": 153399,
+  "unjudged": 81089,
+  "active": 153458,
   "total": 217497
  },
  "lanes": {
@@ -68,9 +68,7 @@
    "09a1f78891ff4f2a",
    "ee58f0af87a5457f",
    "7bb7a1402091437c",
-   "7d807a9968914f89",
    "05118973cf5d4d76",
-   "64c3b638e11c44f4",
    "74894b5ca8784446",
    "a79be1645a19402b",
    "62eb0c0336044a34",
@@ -214,6 +212,8 @@
    "3d386819a84b41d4",
    "d6ba7d09610542f1",
    "ee1d06ce3471432c",
+   "8d149ef3b27d4100",
+   "e1e279f85a71402e",
    "42d75262de2a4795",
    "f16a069d1cf5454c",
    "ba938660c3794c2e",
@@ -249,7 +249,7 @@
    "55c4850d0c9d43e9",
    "188f254a99494078",
    "0e2faa7c7a1c4101",
-   "6b0ac7ec9ae14c9e",
+   "40dd6d4810a54881",
    "f927d6e600a04c3e"
   ],
   "unsure": [
@@ -346,7 +346,6 @@
    "da539a2db4474f9c",
    "3d488763805e43a5",
    "443f62c683974f6e",
-   "fa2bcd2c11234990",
    "e4f875ab483146f8",
    "2d4794388fb34cd8",
    "00f062bd52794107",
@@ -379,6 +378,7 @@
    "c112cd3f6c2e4d2d",
    "236a598d10be490f",
    "f94d4a71f8e1498a",
+   "56a6d02f73524476",
    "ac02a180bb35485a",
    "41029e5572bb4307",
    "efa02d781a414702",
@@ -4570,6 +4570,35 @@
   "5ae1a804f5e94235",
   "90290c7e19014833",
   "f0f05f46b21c4935",
+  "80332604324042b0",
+  "701d09fcdd374331",
+  "723458f873234278",
+  "36e449eabc8144aa",
+  "9cfc35e2032946c1",
+  "da4fee72c1914217",
+  "1e2c16f07f024d4a",
+  "1fe25b0e46a449f9",
+  "1ea01d1c7f24421d",
+  "4be8eb8fb89f4805",
+  "82a36f7be8b04902",
+  "0dbe413c27aa4165",
+  "2b397d3a99344f32",
+  "776ff29ea4854c19",
+  "8f7647e269e44591",
+  "333b54dc8a654f6a",
+  "4137da7493294794",
+  "575bad8cdbf441c7",
+  "ba6ce29f9a204a25",
+  "428c07c1cbdd4e4f",
+  "48d26d63b78e4de7",
+  "a8db2665da69405a",
+  "4f570a4582fe4637",
+  "7af7766cf06f4e99",
+  "87a0614ad594448d",
+  "ac0e46b3cdd74fd4",
+  "d6233acbc84842df",
+  "cf2c231c9fb64496",
+  "bd7606330a724d4d",
   "0d82c6c7af8c4c09",
   "a52d1bc978214541",
   "2bc0b6faee954865",
@@ -6204,11 +6233,13 @@
   "c1b17fee522348a2",
   "2855fe3acd064893",
   "fe1b2e50726b4a68",
+  "fbb2c7de499342b7",
   "c630170e36ca4612",
   "0b27c7e2f8d04ef7",
   "7d2259c5b3004f46",
   "a3728f9d91f44610",
   "bfb291dbc20a4942",
+  "1a4dc7ff24774aca",
   "dbffe93066794dca",
   "d32cf30986fe450b",
   "bdf15e3ddaf24832",
@@ -6227,29 +6258,8 @@
   "8f356e000ba4416f"
  ],
  "sources": {
-  "ok": 165687,
-  "failed": {
-   "ashby/mach": "HTTPError: HTTP Error 404: Not Found",
-   "ashby/kraken": "HTTPError: HTTP Error 404: Not Found",
-   "ashby/intangible": "HTTPError: HTTP Error 404: Not Found",
-   "ashby/jimdo": "HTTPError: HTTP Error 404: Not Found",
-   "ashby/taxfix": "HTTPError: HTTP Error 404: Not Found",
-   "ashby/happyrobot": "HTTPError: HTTP Error 404: Not Found",
-   "greenhouse/amplitude": "HTTPError: HTTP Error 404: Not Found",
-   "greenhouse/clickhouse": "HTTPError: HTTP Error 404: Not Found",
-   "greenhouse/hightouch": "HTTPError: HTTP Error 404: Not Found",
-   "greenhouse/linkedin": "HTTPError: HTTP Error 404: Not Found",
-   "greenhouse/deepmind": "HTTPError: HTTP Error 404: Not Found",
-   "greenhouse/atomicwork": "HTTPError: HTTP Error 404: Not Found",
-   "lever/pnlfin": "HTTPError: HTTP Error 404: Not Found",
-   "lever/quadcode": "HTTPError: HTTP Error 404: Not Found",
-   "lever/usmobile": "HTTPError: HTTP Error 404: Not Found",
-   "lever/eneba": "HTTPError: HTTP Error 404: Not Found",
-   "personio/digital-growth-studio": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-   "personio/peratera": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
-   "teamtailor/careers.joinvoy.com": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/houseful": "HTTPError: HTTP Error 404: Not Found"
-  }
+  "ok": 85,
+  "failed": {}
  },
  "roles": [
   {
@@ -353671,12 +353681,89 @@
   },
   {
    "active": true,
+   "company": "SRS Acquiom",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "80332604324042b0",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES PRODUCT DESIGN UX UI FIGMA PROTOTYPING DESIGN $80,000 - $90,000 / year 3h",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Associate Product Designer",
+   "url": "https://remote.io/remote-jobs/design/associate-product-designer-at-srs-acquiom-1729836",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote/hybrid but restricted to the Continental United States, requiring US work authorization, which excludes Portugal.",
+     "Portugal OUT · under the title: \"Denver, Colorado, United States; Remote - United States\"",
+     "Portugal OUT · body: \"This position is either hybrid out of our Denver, CO office (strong preference) or a fully remote position from within the Continental United States.\"",
+     "Portugal OUT · body: \"Candidates must be legally authorized to work in the United States without the need for current or future visa sponsorship to move forward in the hiring process.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Associate Product Designer",
+     "company": "SRS Acquiom",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": 1,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$80k to $90k",
+     "years_xp": 0,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/srsacquiom/jobs/5244378007",
+    "reason": "Role is remote/hybrid but restricted to the Continental United States, requiring US work authorization, which excludes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "fully remote position from within the Continental United States",
+    "signals": [
+     {
+      "quote": "Denver, Colorado, United States; Remote - United States",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position is either hybrid out of our Denver, CO office (strong preference) or a fully remote position from within the Continental United States.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Candidates must be legally authorized to work in the United States without the need for current or future visa sponsorship to move forward in the hiring process.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/80332604324042b0.employer.jpg",
+    "read_at": "2026-10-03T22:23:58"
+   }
+  },
+  {
+   "active": true,
    "company": "MetaMask",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "2855fe3acd064893",
-   "last_seen": "2026-10-04T01:01:13+00:00",
-   "location": "UNITED STATES EUROPE +4 PRODUCT DESIGN UX TECHNICAL LEADERSHIP WEB3 DESIGN $125,000 - $195,000 / year 2h",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES EUROPE +4 PRODUCT DESIGN UX TECHNICAL LEADERSHIP WEB3 DESIGN $125,000 - $195,000 / year 3h",
    "remote": true,
    "source": "remoteio",
    "sources": [
@@ -353714,12 +353801,243 @@
   },
   {
    "active": true,
+   "company": "Moniepoint",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "8d149ef3b27d4100",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED KINGDOM INDIA NIGERIA +3 PRODUCT DESIGN UX UI FIGMA FINTECH DESIGN $250 / year 4h",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Product Designer (UX)",
+   "url": "https://remote.io/remote-jobs/design/senior-product-designer-ux-at-moniepoint-1995057",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Senior UX design role explicitly listed as Remote, Portugal in the location line.",
+     "Portugal in · under the title: \"London, United Kingdom; Remote, India; Remote, Nigeria; Remote, Poland; Remote, Portugal; Remote, Spain\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer (UX)",
+     "company": "Moniepoint",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom",
+      "India",
+      "Nigeria",
+      "Poland",
+      "Portugal",
+      "Spain"
+     ],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4612209101",
+    "reason": "Senior UX design role explicitly listed as Remote, Portugal in the location line.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote, Portugal",
+    "signals": [
+     {
+      "quote": "London, United Kingdom; Remote, India; Remote, Nigeria; Remote, Poland; Remote, Portugal; Remote, Spain",
+      "where": "under the title",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/8d149ef3b27d4100.employer.jpg",
+    "read_at": "2026-10-03T22:23:58",
+    "copies": [
+     {
+      "id": "7d807a9968914f89",
+      "url": "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4612209101",
+      "read_url": "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4612209101",
+      "source": "greenhouse/moniepoint",
+      "posted": "2026-09-14",
+      "location": "London, United Kingdom; Remote, India; Remote, Nigeria; Remote, Poland; Remote, Portugal; Remote, Spain; Moniepoint Headquaters; Lagos, Nigeria",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
+   }
+  },
+  {
+   "active": true,
+   "company": "Babylist",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "701d09fcdd374331",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES ARTIFICIAL INTELLIGENCE PRODUCT DESIGN UX DESIGN DESIGN $207,666 - $249,166 / year 5h",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Staff Product Designer(AI Builder)",
+   "url": "https://remote.io/remote-jobs/design/staff-product-designerai-builder-at-babylist-1991570",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is posted for Canada and the company states it hires remotely only within the U.S. and Canada, excluding Portugal.",
+     "Portugal OUT · under the title: \"Canada\"",
+     "Portugal OUT · body: \"Babylist is remote-first with team members across the U.S. and Canada\"",
+     "Portugal OUT · body: \"Are you currently authorized to work for any employer in the country listed for this role, without needing sponsorship\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer (AI Builder)",
+     "company": "Babylist",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada",
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/babylist/jobs/6104998004",
+    "reason": "Role is posted for Canada and the company states it hires remotely only within the U.S. and Canada, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Babylist is remote-first with team members across the U.S. and Canada",
+    "signals": [
+     {
+      "quote": "Canada",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Babylist is remote-first with team members across the U.S. and Canada",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you currently authorized to work for any employer in the country listed for this role, without needing sponsorship",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/701d09fcdd374331.employer.jpg",
+    "read_at": "2026-10-03T22:23:57"
+   }
+  },
+  {
+   "active": true,
+   "company": "CannonDesign",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "723458f873234278",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES INTERIOR DESIGN REVIT ADOBE CREATIVE SUITE DESIGN $68,265 - $85,285 / year 23h",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Interior Designer III",
+   "url": "https://remote.io/remote-jobs/design/interior-designer-iii-at-cannondesign-1535486",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is an Interior Designer role restricted to remote work within the United States.",
+     "Portugal OUT · under the title: \"United States - Remote\"",
+     "Portugal OUT · opening paragraph: \"This position may be filled anywhere in the United States.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Interior Designer III",
+     "company": "CannonDesign",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$68,265 to $85,285 annually",
+     "years_xp": 6,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.cannondesign.com/careers/interior-designer-iii?gh_jid=8815179002",
+    "reason": "This is an Interior Designer role restricted to remote work within the United States.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "United States - Remote",
+    "signals": [
+     {
+      "quote": "United States - Remote",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position may be filled anywhere in the United States.",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/723458f873234278.employer.jpg",
+    "read_at": "2026-10-03T22:23:57"
+   }
+  },
+  {
+   "active": true,
    "company": "Toast",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "fe1b2e50726b4a68",
-   "last_seen": "2026-10-04T01:01:13+00:00",
-   "location": "UNITED STATES PRODUCT DESIGN UX PROTOTYPING AI DESIGN $125,000 - $254,000 / year 21h",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES PRODUCT DESIGN UX PROTOTYPING AI DESIGN $125,000 - $254,000 / year 22h",
    "remote": true,
    "source": "remoteio",
    "sources": [
@@ -353757,11 +354075,701 @@
   },
   {
    "active": true,
+   "company": "Mejuri",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "36e449eabc8144aa",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "NEW YORK HYBRID DESIGN ADOBE CREATIVE SUITE FIGMA MIRO DESIGN 1d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Designer (Freelance) 3 months",
+   "url": "https://remote.io/remote-jobs/design/senior-designer-freelance-3-months-at-mejuri-1965623",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a brand/creative design role (campaigns, print, digital branding) hybrid onsite in New York, not product/UX design and not in Portugal.",
+     "Portugal OUT · under the title: \"New York\"",
+     "Portugal OUT · body: \"At Mejuri we embrace a hybrid working environment... Corporate employees are in office 3 days a week.\"",
+     "Portugal OUT · opening paragraph: \"The Freelance Senior Designer will join our in-house creative team located in NYC.\"",
+     "Portugal OUT · body: \"Are you located in the State of New York (Or within a commutable distance of our head office at 205 Hudson Street, NY).\"",
+     "Portugal OUT · body: \"If not, are you willing and able to relocate to New York prior to your start date\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Designer (Freelance) 3 months",
+     "company": "Mejuri",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": 3,
+     "countries": [
+      "New York (USA)"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/mejuri/jobs/4718472006",
+    "reason": "This is a brand/creative design role (campaigns, print, digital branding) hybrid onsite in New York, not product/UX design and not in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Corporate employees are in office 3 days a week.",
+    "signals": [
+     {
+      "quote": "New York",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At Mejuri we embrace a hybrid working environment... Corporate employees are in office 3 days a week.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "The Freelance Senior Designer will join our in-house creative team located in NYC.",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you located in the State of New York (Or within a commutable distance of our head office at 205 Hudson Street, NY).",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "If not, are you willing and able to relocate to New York prior to your start date",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/36e449eabc8144aa.employer.jpg",
+    "read_at": "2026-10-03T22:24:10"
+   }
+  },
+  {
+   "active": true,
+   "company": "Medium",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "9cfc35e2032946c1",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES PRODUCT DESIGN UX DESIGN PROTOTYPING DESIGN $145,000 - $200,000 / year 1d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Staff Product Designer",
+   "url": "https://remote.io/remote-jobs/design/staff-product-designer-at-medium-1716425",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but restricted to US-based candidates only.",
+     "Portugal OUT · under the title: \"Remote - US\"",
+     "Portugal OUT · footer or small print: \"You are based in the US and understand that only US-based candidates are eligible for this role.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer",
+     "company": "Medium",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "US"
+     ],
+     "portugal_ok": "no",
+     "salary": "$145,000 - $200,000 USD",
+     "years_xp": 7,
+     "reports_to": "Director of Product Design",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/medium/jobs/4415431009",
+    "reason": "Role is remote but restricted to US-based candidates only.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "You are based in the US and understand that only US-based candidates are eligible for this role.",
+    "signals": [
+     {
+      "quote": "Remote - US",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "You are based in the US and understand that only US-based candidates are eligible for this role.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/9cfc35e2032946c1.employer.jpg",
+    "read_at": "2026-10-03T22:24:16"
+   }
+  },
+  {
+   "active": true,
+   "company": "Toast",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "da4fee72c1914217",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES PRODUCT DESIGN UX VOICE UX AI DESIGN DESIGN $125,000 - $254,000 / year 1d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Product Designer, Toast Support Experiences",
+   "url": "https://remote.io/remote-jobs/design/senior-product-designer-toast-support-experiences-1965315",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but explicitly scoped to the United States, excluding Portugal.",
+     "Portugal OUT · under the title: \"Remote, United States\"",
+     "Portugal OUT · body: \"Are you legally authorized to work in the country where this job is located?\"",
+     "Portugal OUT · footer or small print: \"For roles in the United States, it is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer, Toast Support Experiences",
+     "company": "Toast",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "Zone A $159,000-$254,000 USD; Zone B $138,000-$221,000 USD; Zone C $125,000-$200,000 USD",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.toasttab.com/jobs/senior-product-designer-toast-support-experiences-remote-united-states?gh_jid=8242950",
+    "reason": "Role is remote but explicitly scoped to the United States, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote, United States",
+    "signals": [
+     {
+      "quote": "Remote, United States",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you legally authorized to work in the country where this job is located?",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "For roles in the United States, it is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/da4fee72c1914217.employer.jpg",
+    "read_at": "2026-10-03T22:24:21"
+   }
+  },
+  {
+   "active": true,
+   "company": "Unrivaled Basketball",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "fbb2c7de499342b7",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES SOCIAL MEDIA PHOTOSHOP MOTION GRAPHICS DESIGN $65,000 - $115,000 / year 4d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "SEASONAL - Social Media Graphics Designer",
+   "url": "https://remote.io/remote-jobs/design/seasonal-social-media-graphics-designer-at-unrivaled-basketball-1795631",
+   "verdict": {
+    "role": "unclear",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "Page shows only site navigation and footer with no actual job description content - an empty shell."
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "SEASONAL - Social Media Graphics Designer",
+     "company": "Unrivaled Basketball",
+     "seniority": "unstated",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "unstated",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.unrivaled.basketball/careers/seasonal-social-media-graphics-designer-4396794009",
+    "reason": "Page shows only site navigation and footer with no actual job description content - an empty shell.",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "unstated",
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/fbb2c7de499342b7.employer.jpg",
+    "read_at": "2026-10-03T22:24:21"
+   }
+  },
+  {
+   "active": true,
+   "company": "Vertical Compute",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "1e2c16f07f024d4a",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "ANYWHERE RTL DESIGN SOC INTEGRATION AI HARDWARE DESIGN 2d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "FE RTL Designer / SoC integration",
+   "url": "https://remote.io/remote-jobs/design/fe-rtl-designer-soc-integration-at-vertical-compute-1492033",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a front-end RTL/SoC hardware design engineering role (not product/UX/UI design), and it is hybrid based in Leuven, Belgium.",
+     "Portugal OUT · under the title: \"Remote, Hybrid Leuven, Vlaams-Brabant, Belgium +1 more\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "FE RTL Designer / SoC integration",
+     "company": "Vertical Compute",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Belgium"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": "HW Manager",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://verticalcompute.recruitee.com/o/fe-rtl-designer-soc-integration",
+    "reason": "This is a front-end RTL/SoC hardware design engineering role (not product/UX/UI design), and it is hybrid based in Leuven, Belgium.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote, Hybrid Leuven, Vlaams-Brabant, Belgium +1 more",
+    "signals": [
+     {
+      "quote": "Remote, Hybrid Leuven, Vlaams-Brabant, Belgium +1 more",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/1e2c16f07f024d4a.employer.jpg",
+    "read_at": "2026-10-03T22:24:20"
+   }
+  },
+  {
+   "active": true,
+   "company": "Armada",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "1fe25b0e46a449f9",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES BIM REVIT AUTOCAD DATA CENTER DESIGN DESIGN $98,260 - $148,500 / year 7d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Data Center BIM Designer",
+   "url": "https://remote.io/remote-jobs/design/senior-data-center-bim-designer-at-armada-1342038",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "BIM/CAD drafting role (not product design/UX) restricted to remote within the continental US, excluding Portugal.",
+     "Portugal OUT · under the title: \"United States (Remote)\"",
+     "Portugal OUT · body: \"This role is remote-based on the continental US (approximately 10–20% travel to project sites, fabrication facilities, and vendor/GC locations).\"",
+     "Portugal OUT · body: \"For U.S. Based candidates: To ensure fairness and transparency, the starting base salary range for this role for candidates in the U.S. are listed\"",
+     "Portugal OUT · footer or small print: \"Are you currently authorized to work in the United States for any employer without restriction?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Data Center BIM Designer",
+     "company": "Armada",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$103,280 - $129,100 USD",
+     "years_xp": 7,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/armada/jobs/5421120008",
+    "reason": "BIM/CAD drafting role (not product design/UX) restricted to remote within the continental US, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This role is remote-based on the continental US",
+    "signals": [
+     {
+      "quote": "United States (Remote)",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This role is remote-based on the continental US (approximately 10–20% travel to project sites, fabrication facilities, and vendor/GC locations).",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "For U.S. Based candidates: To ensure fairness and transparency, the starting base salary range for this role for candidates in the U.S. are listed",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you currently authorized to work in the United States for any employer without restriction?",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/1fe25b0e46a449f9.employer.jpg",
+    "read_at": "2026-10-03T22:24:20"
+   }
+  },
+  {
+   "active": true,
+   "company": "Longdue Games",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "1ea01d1c7f24421d",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "SOUTH AFRICA NARRATIVE DESIGN RPG STORYTELLING DESIGN 3d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Narrative Designer",
+   "url": "https://remote.io/remote-jobs/design/narrative-designer-at-longdue-games-1896174",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Narrative Designer is a writing/game-design role, not product/UX/UI design, and the posting is tied to South Africa, not Portugal.",
+     "Portugal OUT · under the title: \"South Africa\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Narrative Designer (Lead Narrative Designer)",
+     "company": "Longdue Games",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "South Africa"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/longdue-games/j/579DEF8A0C",
+    "reason": "Narrative Designer is a writing/game-design role, not product/UX/UI design, and the posting is tied to South Africa, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote / South Africa",
+    "signals": [
+     {
+      "quote": "South Africa",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/1ea01d1c7f24421d.employer.jpg",
+    "read_at": "2026-10-03T22:24:32"
+   }
+  },
+  {
+   "active": true,
+   "company": "Synthesia",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "56a6d02f73524476",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED KINGDOM PRODUCT DESIGN UX GENERATIVE MEDIA DESIGN 5d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Product Designer, Generative Media (Staff-Level / L6)",
+   "url": "https://remote.io/remote-jobs/design/product-designer-generative-media-staff-level-l6-at-synthesia-1751211",
+   "verdict": {
+    "role": "yes",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "the page says both: Portugal in, and Portugal out · Staff Product Designer role, explicitly offered as Europe remote or London hybrid, so Portugal-based remote work is covered.",
+     "Portugal OUT · side panel: \"LOCATION London\"",
+     "Portugal OUT · side panel: \"LOCATION TYPE Hybrid\"",
+     "Portugal in · opening paragraph: \"Location: Europe remote or London hybrid\"",
+     "Portugal in · body: \"A flexible, remote friendly role based out of Europe or one of our hubs in London, Copenhagen, Munich, or Zurich.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer, Generative Media (Staff-Level / L6)",
+     "company": "Synthesia",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Europe",
+      "London",
+      "Copenhagen",
+      "Munich",
+      "Zurich"
+     ],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/synthesia/ba6d0833-902b-4f80-95e4-3b08b9e86cbb",
+    "reason": "the page says both: Portugal in, and Portugal out · Staff Product Designer role, explicitly offered as Europe remote or London hybrid, so Portugal-based remote work is covered.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "A flexible, remote friendly role based out of Europe or one of our hubs in London, Copenhagen, Munich, or Zurich.",
+    "signals": [
+     {
+      "quote": "LOCATION London",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "LOCATION TYPE Hybrid",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: Europe remote or London hybrid",
+      "where": "opening paragraph",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "A flexible, remote friendly role based out of Europe or one of our hubs in London, Copenhagen, Munich, or Zurich.",
+      "where": "body",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/56a6d02f73524476.employer.jpg",
+    "read_at": "2026-10-03T22:24:37",
+    "copies": [
+     {
+      "id": "fa2bcd2c11234990",
+      "url": "https://jobs.ashbyhq.com/synthesia/ba6d0833-902b-4f80-95e4-3b08b9e86cbb",
+      "read_url": "https://jobs.ashbyhq.com/synthesia/ba6d0833-902b-4f80-95e4-3b08b9e86cbb",
+      "source": "ashby/synthesia",
+      "posted": "2026-09-24",
+      "location": "London",
+      "lane": "unsure",
+      "read": "employer"
+     }
+    ]
+   }
+  },
+  {
+   "active": true,
+   "company": "Aleph",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "4be8eb8fb89f4805",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES CANADA PRODUCT DESIGN UX AI PROTOTYPING DESIGN $110,000 - $280,000 / year 10d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Staff Product Designer",
+   "url": "https://remote.io/remote-jobs/design/staff-product-designer-at-aleph-1676720",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is explicitly remote but restricted to candidates within the Americas, excluding Portugal.",
+     "Portugal OUT · side panel: \"Americas\"",
+     "Portugal OUT · side panel: \"Fully remote in the US, CAN, and LATAM\"",
+     "Portugal OUT · body: \"We are hiring remotely across the Americas (United States, Canada, LATAM).\"",
+     "Portugal OUT · body: \"While this is a remote-first opportunity, we're focusing on candidates within the Americas to better align with our working hours as a team.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer",
+     "company": "Aleph",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States",
+      "Canada",
+      "LATAM"
+     ],
+     "portugal_ok": "no",
+     "salary": "US $170K–$280K, Canada $140K–$225K, LATAM $110K–$175K",
+     "years_xp": 7,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/aleph/ddb9c26e-60ef-4159-bc0a-bc1f5a6dca0c",
+    "reason": "Role is explicitly remote but restricted to candidates within the Americas, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "we're focusing on candidates within the Americas to better align with our working hours as a team",
+    "signals": [
+     {
+      "quote": "Americas",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Fully remote in the US, CAN, and LATAM",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We are hiring remotely across the Americas (United States, Canada, LATAM).",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "While this is a remote-first opportunity, we're focusing on candidates within the Americas to better align with our working hours as a team.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/4be8eb8fb89f4805.employer.jpg",
+    "read_at": "2026-10-03T22:24:39"
+   }
+  },
+  {
+   "active": true,
    "company": "Withcherry",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "c630170e36ca4612",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "UNITED STATES HYBRID DESIGN 12d",
    "remote": true,
    "source": "remoteio",
@@ -353800,11 +354808,95 @@
   },
   {
    "active": true,
+   "company": "Webflow",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "82a36f7be8b04902",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $168,300 - $251,000 / year 12d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Staff Product Designer, Agentic CMS",
+   "url": "https://remote.io/remote-jobs/design/staff-product-designer-agentic-cms-at-webflow-1578213",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is explicitly remote-restricted to US and BC/ON Canada only, excluding Portugal.",
+     "Portugal OUT · under the title: \"CA Remote (BC & ON only); U.S. Remote\"",
+     "Portugal OUT · side panel: \"Location: Remote-first (United States; BC & ON, Canada)\"",
+     "Portugal OUT · body: \"United States  (all figures cited below are in USD and pertain to workers in the United States)\"",
+     "Portugal OUT · body: \"Canada (figures cited below are in CAD and pertain to workers in ON & BC, Canada)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer, Agentic CMS",
+     "company": "Webflow",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States",
+      "Canada (BC & ON)"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 168,300-230,000 (US zones); CAD 209,000-251,000 (Canada)",
+     "years_xp": 7,
+     "reports_to": "Senior Director of Product Design",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/webflow/jobs/8213629",
+    "reason": "Role is explicitly remote-restricted to US and BC/ON Canada only, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "CA Remote (BC & ON only); U.S. Remote",
+    "signals": [
+     {
+      "quote": "CA Remote (BC & ON only); U.S. Remote",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: Remote-first (United States; BC & ON, Canada)",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "United States  (all figures cited below are in USD and pertain to workers in the United States)",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Canada (figures cited below are in CAD and pertain to workers in ON & BC, Canada)",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/82a36f7be8b04902.employer.jpg",
+    "read_at": "2026-10-03T22:24:43"
+   }
+  },
+  {
+   "active": true,
    "company": "Kin",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "0b27c7e2f8d04ef7",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "UNITED STATES DESIGN $186,000 - $201,000 / year 12d",
    "remote": true,
    "source": "remoteio",
@@ -353843,11 +354935,237 @@
   },
   {
    "active": true,
+   "company": "Vanta",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "0dbe413c27aa4165",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $197,000 - $232,000 / year 13d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Product Designer, Agent Experience",
+   "url": "https://remote.io/remote-jobs/design/senior-product-designer-agent-experience-at-vanta-1578831",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Location is Remote U.S. with US-based pay ranges, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote U.S.\"",
+     "Portugal OUT · body: \"To provide greater transparency to candidates, we share base pay ranges for all US-based job postings regardless of state.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer, Agent Experience",
+     "company": "Vanta",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 197K - 232K",
+     "years_xp": 7,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/vanta/0e154a57-fc33-4cf7-95cc-0aa30e0bde90",
+    "reason": "Location is Remote U.S. with US-based pay ranges, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote U.S.",
+    "signals": [
+     {
+      "quote": "Remote U.S.",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "To provide greater transparency to candidates, we share base pay ranges for all US-based job postings regardless of state.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/0dbe413c27aa4165.employer.jpg",
+    "read_at": "2026-10-03T22:24:53"
+   }
+  },
+  {
+   "active": true,
+   "company": "Descope",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "2b397d3a99344f32",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "TEL AVIV HYBRID DESIGN 14d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Product Designer (Parental Leave Replacement)",
+   "url": "https://remote.io/remote-jobs/design/product-designer-parental-leave-replacement-at-descope-1293869",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is hybrid onsite in Tel Aviv, not Portugal.",
+     "Portugal OUT · under the title: \"Tel Aviv\"",
+     "Portugal OUT · body: \"Where You'll Be: Tel Aviv 🏙️ | Full-time, hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer (Parental Leave Replacement)",
+     "company": "Descope",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Israel"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/descope/jobs/4381673009",
+    "reason": "Role is hybrid onsite in Tel Aviv, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Where You'll Be: Tel Aviv 🏙️ | Full-time, hybrid",
+    "signals": [
+     {
+      "quote": "Tel Aviv",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Where You'll Be: Tel Aviv 🏙️ | Full-time, hybrid",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/2b397d3a99344f32.employer.jpg",
+    "read_at": "2026-10-03T22:24:55"
+   }
+  },
+  {
+   "active": true,
+   "company": "Wrapbook",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "776ff29ea4854c19",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES +1 DESIGN $149,000 - $241,500 / year 13d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Product Designer II",
+   "url": "https://remote.io/remote-jobs/design/senior-product-designer-ii-at-wrapbook-1465514",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but restricted to US and Canada, excluding Portugal.",
+     "Portugal OUT · side panel: \"Remote - US & Canada\"",
+     "Portugal OUT · opening paragraph: \"The Opportunity - Senior Product Designer II (Remote - USA / CANADA)\"",
+     "Portugal OUT · side panel: \"Wrapbook employs individuals across the United States and Canada, and the salary range spans multiple geographic zones based on market benchmark data.\"",
+     "Portugal OUT · body: \"Work from anywhere in Canada and USA\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer II",
+     "company": "Wrapbook",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States",
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "US1: $175.5K–$241.5K; US2: $167K–$229.5K; US3: $149K–$205K; Canada: CA$149K–CA$205K",
+     "years_xp": 8,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/wrapbook/c199c9b0-27fe-4b7a-a041-faa7148bfb8c",
+    "reason": "Role is remote but restricted to US and Canada, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote - US & Canada",
+    "signals": [
+     {
+      "quote": "Remote - US & Canada",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "The Opportunity - Senior Product Designer II (Remote - USA / CANADA)",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Wrapbook employs individuals across the United States and Canada, and the salary range spans multiple geographic zones based on market benchmark data.",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Work from anywhere in Canada and USA",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/776ff29ea4854c19.employer.jpg",
+    "read_at": "2026-10-03T22:24:57"
+   }
+  },
+  {
+   "active": true,
    "company": "Stash",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "7d2259c5b3004f46",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "NEW YORK HYBRID DESIGN $170,000 - $195,000 / year 14d",
    "remote": true,
    "source": "remoteio",
@@ -353886,11 +355204,160 @@
   },
   {
    "active": true,
+   "company": "Bounce",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "40dd6d4810a54881",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "PORTUGAL DESIGN 15d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Product Designer",
+   "url": "https://remote.io/remote-jobs/design/product-designer-at-bounce-1487556",
+   "verdict": {
+    "role": "yes",
+    "place": "pt_onsite",
+    "lane": "portugal",
+    "cut": false,
+    "why": [
+     "Product Designer role is hybrid in Portugal, which he can do.",
+     "Portugal in · side panel: \"Portugal\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "Bounce",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Portugal"
+     ],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/bounce/c6b97346-9072-4311-94a3-e68ef740394e",
+    "reason": "Product Designer role is hybrid in Portugal, which he can do.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Portugal",
+    "signals": [
+     {
+      "quote": "Portugal",
+      "where": "side panel",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/40dd6d4810a54881.employer.jpg",
+    "read_at": "2026-10-03T22:25:03",
+    "copies": [
+     {
+      "id": "6b0ac7ec9ae14c9e",
+      "url": "https://jobs.ashbyhq.com/bounce/c6b97346-9072-4311-94a3-e68ef740394e",
+      "read_url": "https://jobs.ashbyhq.com/bounce/c6b97346-9072-4311-94a3-e68ef740394e",
+      "source": "ashby/bounce",
+      "posted": "2026-09-15",
+      "location": "Portugal",
+      "lane": "portugal",
+      "read": "employer"
+     }
+    ]
+   }
+  },
+  {
+   "active": true,
+   "company": "Constant Contact",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "8f7647e269e44591",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "CANADA DESIGN $135,256 - $169,070 / year 16d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Principal Product Designer",
+   "url": "https://remote.io/remote-jobs/design/principal-product-designer-at-constant-contact-1468002",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is restricted to remote US or remote Ontario, Canada; Portugal is not included.",
+     "Portugal OUT · under the title: \"Remote, US or Remote, Ontario, Canada\"",
+     "Portugal OUT · body: \"$135,256 - $169,070 USD\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Principal Product Designer",
+     "company": "Constant Contact",
+     "seniority": "principal",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "US",
+      "Canada (Ontario)"
+     ],
+     "portugal_ok": "no",
+     "salary": "$135,256 - $169,070 USD",
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/constantcontact/jobs/8174104",
+    "reason": "Role is restricted to remote US or remote Ontario, Canada; Portugal is not included.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote, US or Remote, Ontario, Canada",
+    "signals": [
+     {
+      "quote": "Remote, US or Remote, Ontario, Canada",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "$135,256 - $169,070 USD",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/8f7647e269e44591.employer.jpg",
+    "read_at": "2026-10-03T22:25:10"
+   }
+  },
+  {
+   "active": true,
    "company": "Modern AI",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "a3728f9d91f44610",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "UNITED STATES DESIGN 15d",
    "remote": true,
    "source": "remoteio",
@@ -353929,11 +355396,453 @@
   },
   {
    "active": true,
+   "company": "Shakepay",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "333b54dc8a654f6a",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "CANADA DESIGN $1,000 - $190,000 / year 18d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Staff Product Designer - future opportunities",
+   "url": "https://remote.io/remote-jobs/design/staff-product-designer-future-opportunities-at-shakepay-1297069",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but restricted to Canada, excluding Portugal.",
+     "Portugal OUT · under the title: \"Remote, Canada\"",
+     "Portugal OUT · body: \"Work from anywhere in Canada, with optional access to our office spaces in Montreal and Toronto.\"",
+     "Portugal OUT · body: \"Fluency in English is required due to the percentage of English-speaking customers and the nature of our platform, which is available to all Canadians.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer - future opportunities",
+     "company": "Shakepay",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "$190,000+ CAD",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/shakepay/jobs/4713583005",
+    "reason": "Role is remote but restricted to Canada, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote, Canada",
+    "signals": [
+     {
+      "quote": "Remote, Canada",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Work from anywhere in Canada, with optional access to our office spaces in Montreal and Toronto.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Fluency in English is required due to the percentage of English-speaking customers and the nature of our platform, which is available to all Canadians.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/333b54dc8a654f6a.employer.jpg",
+    "read_at": "2026-10-03T22:25:14"
+   }
+  },
+  {
+   "active": true,
+   "company": "Virtual Staff 365",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "4137da7493294794",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "PHILIPPINES DESIGN 20d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Digital Designer",
+   "url": "https://remote.io/remote-jobs/design/digital-designer-at-virtual-staff-365-1237041",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "role is graphic/digital asset design, not product/UX design, and the posting is for the Philippines only.",
+     "Portugal OUT · under the title: \"Philippines\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Digital Designer",
+     "company": "an Australian retail brand (name withheld, recruited via Virtual Staff 365)",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Philippines"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/virtual-staff-365/j/CD8AC2F0E2",
+    "reason": "role is graphic/digital asset design, not product/UX design, and the posting is for the Philippines only.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Philippines",
+    "signals": [
+     {
+      "quote": "Philippines",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/4137da7493294794.employer.jpg",
+    "read_at": "2026-10-03T22:25:19"
+   }
+  },
+  {
+   "active": true,
+   "company": "Pavago",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "575bad8cdbf441c7",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "COLOMBIA +2 DESIGN 19d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Website Designer",
+   "url": "https://remote.io/remote-jobs/design/website-designer-at-pavago-1438672",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Location is stated as United States under the title with no wider geography mentioned, so Portugal is excluded.",
+     "Portugal OUT · under the title: \"United States\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Website Designer",
+     "company": "Pavago's client",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 2,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "remote"
+    ],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/pavago/j/4485A99728",
+    "reason": "Location is stated as United States under the title with no wider geography mentioned, so Portugal is excluded.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "United States",
+    "signals": [
+     {
+      "quote": "United States",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/575bad8cdbf441c7.employer.jpg",
+    "read_at": "2026-10-03T22:25:22"
+   }
+  },
+  {
+   "active": true,
+   "company": "Moniepoint",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "ba6ce29f9a204a25",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "POLAND DESIGN 19d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Staff Product Designer",
+   "url": "https://remote.io/remote-jobs/design/staff-product-designer-at-moniepoint-1339472",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Posting is explicitly Remote, Poland with no wider geography stated.",
+     "Portugal OUT · under the title: \"Remote, Poland\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Product Designer",
+     "company": "Moniepoint",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Poland"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4710853101",
+    "reason": "Posting is explicitly Remote, Poland with no wider geography stated.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote, Poland",
+    "signals": [
+     {
+      "quote": "Remote, Poland",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/ba6ce29f9a204a25.employer.jpg",
+    "read_at": "2026-10-03T22:25:23"
+   }
+  },
+  {
+   "active": true,
+   "company": "Monzo",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "428c07c1cbdd4e4f",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED KINGDOM DESIGN £90,000 - £110,000 / year 22d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Lead Product Designer, Growth",
+   "url": "https://remote.io/remote-jobs/design/lead-product-designer-growth-at-monzo-1301526",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is explicitly UK-only remote/hybrid with UK relocation and visa sponsorship, excluding Portugal.",
+     "Portugal OUT · under the title: \"Cardiff, London or Remote (UK)\"",
+     "Portugal OUT · body: \"📍London (Hybrid) / UK Remote\"",
+     "Portugal OUT · body: \"This role can be based in our London office, but we're open to distributed working within the UK (with ad hoc meetings in London).\"",
+     "Portugal OUT · body: \"We'll help you relocate to the UK.\"",
+     "Portugal OUT · body: \"We can sponsor your visa.\"",
+     "Portugal OUT · footer or small print: \"Please confirm your Right to Work status in the location where this job is advertised.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Lead Product Designer, Growth",
+     "company": "Monzo",
+     "seniority": "lead",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "UK"
+     ],
+     "portugal_ok": "no",
+     "salary": "£90,000 - £120,000",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/monzo/jobs/8185694",
+    "reason": "Role is explicitly UK-only remote/hybrid with UK relocation and visa sponsorship, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Cardiff, London or Remote (UK)",
+    "signals": [
+     {
+      "quote": "Cardiff, London or Remote (UK)",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "📍London (Hybrid) / UK Remote",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This role can be based in our London office, but we're open to distributed working within the UK (with ad hoc meetings in London).",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We'll help you relocate to the UK.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We can sponsor your visa.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Please confirm your Right to Work status in the location where this job is advertised.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/428c07c1cbdd4e4f.employer.jpg",
+    "read_at": "2026-10-03T22:25:24"
+   }
+  },
+  {
+   "active": true,
+   "company": "CannonDesign",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "48d26d63b78e4de7",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $98,328 - $122,933 / year 21d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Project Interior Designer V",
+   "url": "https://remote.io/remote-jobs/design/project-interior-designer-v-at-cannondesign-1329356",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is an Interior Designer leadership role (interior design discipline, not product/UX/UI) based onsite in St. Louis, Missouri.",
+     "Portugal OUT · under the title: \"St. Louis, Missouri, United States\"",
+     "Portugal OUT · body: \"Site visits frequently require a physical walk-through of site.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Project Interior Designer V",
+     "company": "CannonDesign",
+     "seniority": "senior",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "workplace_as_posted"
+    ],
+    "read": "employer",
+    "read_url": "https://www.cannondesign.com/careers/project-interior-designer-v-2?gh_jid=8815345002",
+    "reason": "This is an Interior Designer leadership role (interior design discipline, not product/UX/UI) based onsite in St. Louis, Missouri.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "St. Louis, Missouri, United States",
+    "signals": [
+     {
+      "quote": "St. Louis, Missouri, United States",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Site visits frequently require a physical walk-through of site.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/48d26d63b78e4de7.employer.jpg",
+    "read_at": "2026-10-03T22:25:30"
+   }
+  },
+  {
+   "active": true,
    "company": "UserWise Services",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "bfb291dbc20a4942",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "SERBIA +5 DESIGN 23d",
    "remote": true,
    "source": "remoteio",
@@ -353972,11 +355881,296 @@
   },
   {
    "active": true,
+   "company": "Bestow",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "a8db2665da69405a",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $108,000 - $125,000 / year 22d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Product Designer II, Agent Experience",
+   "url": "https://remote.io/remote-jobs/design/product-designer-ii-agent-experience-at-bestow-1306692",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but explicitly restricted to US; Portugal is excluded.",
+     "Portugal OUT · side panel: \"Remote, US\"",
+     "Portugal OUT · body: \"This role is open to Remote (US). #LIRemote\"",
+     "Portugal OUT · body: \"Bestow uses E-Verify to confirm the employment eligibility of all newly hired employees.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer II, Agent Experience",
+     "company": "Bestow",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "US"
+     ],
+     "portugal_ok": "no",
+     "salary": "$108K – $125K",
+     "years_xp": 3,
+     "reports_to": "Senior Design Manager, New Business",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/bestow/e041b982-ad20-41e3-acec-223a3bb189f4",
+    "reason": "Role is remote but explicitly restricted to US; Portugal is excluded.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This role is open to Remote (US).",
+    "signals": [
+     {
+      "quote": "Remote, US",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This role is open to Remote (US). #LIRemote",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Bestow uses E-Verify to confirm the employment eligibility of all newly hired employees.",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/a8db2665da69405a.employer.jpg",
+    "read_at": "2026-10-03T22:25:41"
+   }
+  },
+  {
+   "active": true,
+   "company": "Monks",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "4f570a4582fe4637",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "COLOMBIA DESIGN 24d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Product Designer",
+   "url": "https://remote.io/remote-jobs/design/product-designer-at-monks-1257746",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but explicitly scoped to Colombia only.",
+     "Portugal OUT · opening paragraph: \"Location: Fully remote from Colombia\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "Monks",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Colombia"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.monks.com/careers/6135833004/job?gh_jid=6135833004",
+    "reason": "Role is remote but explicitly scoped to Colombia only.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Fully remote from Colombia",
+    "signals": [
+     {
+      "quote": "Location: Fully remote from Colombia",
+      "where": "opening paragraph",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/4f570a4582fe4637.employer.jpg",
+    "read_at": "2026-10-03T22:25:49"
+   }
+  },
+  {
+   "active": true,
+   "company": "Apollo GraphQL",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "7af7766cf06f4e99",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $242,250 - $306,375 / year 23d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Staff Product Designer",
+   "url": "https://remote.io/remote-jobs/design/senior-staff-product-designer-at-apollo-graphql-1306531",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "role is remote but restricted to US/Canada, excluding Portugal.",
+     "Portugal OUT · side panel: \"United States (remote)\"",
+     "Portugal OUT · body: \"Location: This is a remote position that can be done from anywhere in the US or Canada, working PST or CST hours.\"",
+     "Portugal OUT · body: \"Location: This is a remote position that can be done from anywhere in the US\"",
+     "Portugal OUT · footer or small print: \"Apollo is an E-Verify employer and will provide the federal government with your Form I-9 information to confirm that you are authorized to work in the U.S.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Staff Product Designer",
+     "company": "Apollo GraphQL",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States",
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "$200K – $240K",
+     "years_xp": 12,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/apollo-graphql/f061c434-3b6d-474f-a4d6-01f6a5bddbe1",
+    "reason": "role is remote but restricted to US/Canada, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This is a remote position that can be done from anywhere in the US or Canada",
+    "signals": [
+     {
+      "quote": "United States (remote)",
+      "where": "side panel",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: This is a remote position that can be done from anywhere in the US or Canada, working PST or CST hours.",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: This is a remote position that can be done from anywhere in the US",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Apollo is an E-Verify employer and will provide the federal government with your Form I-9 information to confirm that you are authorized to work in the U.S.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/7af7766cf06f4e99.employer.jpg",
+    "read_at": "2026-10-03T22:25:47"
+   }
+  },
+  {
+   "active": true,
+   "company": "Instacart",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "1a4dc7ff24774aca",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "CANADA DESIGN C$198,000 - C$209,000 / year 24d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Staff Experience Designer",
+   "url": "https://remote.io/remote-jobs/design/staff-experience-designer-at-instacart-1259080",
+   "verdict": {
+    "role": "yes",
+    "place": "unclear",
+    "lane": "unsure",
+    "cut": false,
+    "why": [
+     "page is an empty shell with no actual job description - only the title and generic site boilerplate are visible",
+     "the page says: \"Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Experience Designer",
+     "company": "Instacart",
+     "seniority": "staff",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "remote"
+    ],
+    "read": "employer",
+    "read_url": "https://www.instacart.careers/job?gh_jid=8084090",
+    "reason": "page is an empty shell with no actual job description - only the title and generic site boilerplate are visible",
+    "open": "unreadable",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.",
+    "signals": [],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/1a4dc7ff24774aca.employer.jpg",
+    "read_at": "2026-10-03T22:25:48"
+   }
+  },
+  {
+   "active": true,
    "company": "Omada Health",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "5fa7056fcdec4513",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "UNITED STATES DESIGN $152,000 - $218,500 / year 24d",
    "remote": true,
    "source": "remoteio",
@@ -354020,7 +356214,7 @@
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "dbffe93066794dca",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "UNITED STATES +3 DESIGN $50 - $50 / hour 25d",
    "remote": true,
    "source": "remoteio",
@@ -354059,11 +356253,224 @@
   },
   {
    "active": true,
+   "company": "Assured",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "e1e279f85a71402e",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "ANYWHERE DESIGN $220,000 - $280,000 / year 26d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Design Lead, Foundations",
+   "url": "https://remote.io/remote-jobs/design/design-lead-foundations-at-assured-1156040",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Design leadership role for design systems/foundations, posted as remote with no country restriction stated anywhere on the page.",
+     "the page says: \"Location Type: Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Design Lead, Foundations",
+     "company": "Assured",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "yes",
+     "salary": "$220K – $280K",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "portugal_ok"
+    ],
+    "read": "employer",
+    "read_url": "https://jobs.ashbyhq.com/assured/81394770-20c8-4ebc-91d4-838ad783b301",
+    "reason": "Design leadership role for design systems/foundations, posted as remote with no country restriction stated anywhere on the page.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location Type: Remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/e1e279f85a71402e.employer.jpg",
+    "read_at": "2026-10-03T22:26:02",
+    "copies": [
+     {
+      "id": "64c3b638e11c44f4",
+      "url": "https://jobs.ashbyhq.com/assured/81394770-20c8-4ebc-91d4-838ad783b301",
+      "read_url": "https://jobs.ashbyhq.com/assured/81394770-20c8-4ebc-91d4-838ad783b301",
+      "source": "ashby/assured",
+      "posted": "2026-09-04",
+      "location": "Remote",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
+   }
+  },
+  {
+   "active": true,
+   "company": "AlphaSense",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "87a0614ad594448d",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED KINGDOM DESIGN 25d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior/Staff Product Designer",
+   "url": "https://remote.io/remote-jobs/design/seniorstaff-product-designer-at-alphasense-1258997",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is US-based (onsite or remote within the United States only); Portugal is not included.",
+     "Portugal OUT · under the title: \"New York, New York, United States; Remote - United States\"",
+     "Portugal OUT · body: \"Are you currently eligible to work in the United States of America?\"",
+     "Portugal OUT · body: \"Do you now or in the future require Visa sponsorship to continue working in the United States?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior/Staff Product Designer",
+     "company": "AlphaSense",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$160,000 - $260,000 USD",
+     "years_xp": 10,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/alphasense/jobs/8530664002",
+    "reason": "Role is US-based (onsite or remote within the United States only); Portugal is not included.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "New York, New York, United States; Remote - United States",
+    "signals": [
+     {
+      "quote": "New York, New York, United States; Remote - United States",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you currently eligible to work in the United States of America?",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Do you now or in the future require Visa sponsorship to continue working in the United States?",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/87a0614ad594448d.employer.jpg",
+    "read_at": "2026-10-03T22:26:02"
+   }
+  },
+  {
+   "active": true,
+   "company": "Flatgigs",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "ac0e46b3cdd74fd4",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "EGYPT DESIGN 25d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Product Designer - Egypt",
+   "url": "https://remote.io/remote-jobs/design/product-designer-egypt-at-flatgigs-1243771",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Posting is explicitly for Egypt with nothing widening it to include Portugal.",
+     "Portugal OUT · under the title: \"Egypt\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "Flatgigs",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Egypt"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": 3,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/flatgigs/j/B306DDC816",
+    "reason": "Posting is explicitly for Egypt with nothing widening it to include Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Egypt",
+    "signals": [
+     {
+      "quote": "Egypt",
+      "where": "under the title",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/ac0e46b3cdd74fd4.employer.jpg",
+    "read_at": "2026-10-03T22:26:09"
+   }
+  },
+  {
+   "active": true,
    "company": "HubSpot",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "d32cf30986fe450b",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "UNITED STATES DESIGN $136,100 - $204,200 / year 27d",
    "remote": true,
    "source": "remoteio",
@@ -354102,11 +356509,177 @@
   },
   {
    "active": true,
+   "company": "DEPT",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "d6233acbc84842df",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $122,000 - $170,000 / year 26d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Associate Director, Visual Design",
+   "url": "https://remote.io/remote-jobs/design/associate-director-visual-design-at-dept-1136853",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but explicitly US-only, with US work authorization and E-Verify requirements excluding Portugal.",
+     "Portugal OUT · under the title: \"NY, US, US, IL, US - Remote\"",
+     "Portugal OUT · footer or small print: \"DEPT® participates in E-Verify, meaning your Form I-9 information will be sent to the federal government to confirm you are authorized to work in the U.S.\"",
+     "Portugal OUT · body: \"US Remote Range $122,000 - $170,000 USD\"",
+     "Portugal OUT · footer or small print: \"Are you authorized to work for any employer in the United States?\"",
+     "Portugal OUT · footer or small print: \"Do you now, or will you in the future, require sponsorship (OPTs included)?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Associate Director, Visual Design",
+     "company": "DEPT®",
+     "seniority": "director",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "US"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 122,000 - 170,000",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/dept/jobs/7984810",
+    "reason": "Role is remote but explicitly US-only, with US work authorization and E-Verify requirements excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "NY, US, US, IL, US - Remote",
+    "signals": [
+     {
+      "quote": "NY, US, US, IL, US - Remote",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "DEPT® participates in E-Verify, meaning your Form I-9 information will be sent to the federal government to confirm you are authorized to work in the U.S.",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "US Remote Range $122,000 - $170,000 USD",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you authorized to work for any employer in the United States?",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Do you now, or will you in the future, require sponsorship (OPTs included)?",
+      "where": "footer or small print",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/d6233acbc84842df.employer.jpg",
+    "read_at": "2026-10-03T22:26:13"
+   }
+  },
+  {
+   "active": true,
+   "company": "HopSkipDrive",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "cf2c231c9fb64496",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $135,000 - $163,000 / year 28d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Sr. Product Designer",
+   "url": "https://remote.io/remote-jobs/design/sr-product-designer-at-hopskipdrive-1140408",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but restricted to a specific list of US states, excluding Portugal.",
+     "Portugal OUT · body: \"This role will be fully remote in one of the following states AZ, CA, CO, CT, DC, FL, GA, IL, IN, KS, MA, MD, MI, MN, MO, NC, NJ, NM, NV, NY, OH, OK, OR, SC, TN, TX, UT, VA, WA, WI\"",
+     "Portugal OUT · body: \"Are you currently authorized to work in the U.S.?\"",
+     "Portugal OUT · body: \"Which state do you live in?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Sr. Product Designer",
+     "company": "HopSkipDrive",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States (specific states: AZ, CA, CO, CT, DC, FL, GA, IL, IN, KS, MA, MD, MI, MN, MO, NC, NJ, NM, NV, NY, OH, OK, OR, SC, TN, TX, UT, VA, WA, WI)"
+     ],
+     "portugal_ok": "no",
+     "salary": "USD 135,000 - 163,000",
+     "years_xp": 5,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/hopskipdrive/jobs/6178390004",
+    "reason": "Role is remote but restricted to a specific list of US states, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This role will be fully remote in one of the following states AZ, CA, CO, CT, DC, FL, GA, IL, IN, KS, MA, MD, MI, MN, MO, NC, NJ, NM, NV, NY, OH, OK, OR, SC, TN, TX, UT, VA, WA, WI",
+    "signals": [
+     {
+      "quote": "This role will be fully remote in one of the following states AZ, CA, CO, CT, DC, FL, GA, IL, IN, KS, MA, MD, MI, MN, MO, NC, NJ, NM, NV, NY, OH, OK, OR, SC, TN, TX, UT, VA, WA, WI",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you currently authorized to work in the U.S.?",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Which state do you live in?",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/cf2c231c9fb64496.employer.jpg",
+    "read_at": "2026-10-03T22:26:15"
+   }
+  },
+  {
+   "active": true,
    "company": "N26",
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "693dfa3090054e5e",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "GERMANY DESIGN 27d",
    "remote": true,
    "source": "remoteio",
@@ -354150,7 +356723,7 @@
    "first_run": "2026-10-03T21:05:24+00:00",
    "first_seen": "2026-10-03T21:05:24+00:00",
    "id": "bdf15e3ddaf24832",
-   "last_seen": "2026-10-04T01:01:13+00:00",
+   "last_seen": "2026-10-04T11:18:45+00:00",
    "location": "UNITED STATES DESIGN 28d",
    "remote": true,
    "source": "remoteio",
@@ -354185,6 +356758,95 @@
     "found_by": null,
     "shot": "data/shots/bdf15e3ddaf24832.jpg",
     "read_at": "2026-10-03T22:26:18"
+   }
+  },
+  {
+   "active": true,
+   "company": "Discord",
+   "first_run": "2026-10-03T21:05:24+00:00",
+   "first_seen": "2026-10-03T21:05:24+00:00",
+   "id": "bd7606330a724d4d",
+   "last_seen": "2026-10-04T11:18:45+00:00",
+   "location": "UNITED STATES DESIGN $272,000 - $306,000 / year 28d",
+   "remote": true,
+   "source": "remoteio",
+   "sources": [
+    "remoteio"
+   ],
+   "title": "Senior Product Design Manager, Growth",
+   "url": "https://remote.io/remote-jobs/design/senior-product-design-manager-growth-at-discord-1131008",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is onsite/relocation-required in the San Francisco Bay Area, not available from Portugal.",
+     "Portugal OUT · under the title: \"San Francisco Bay Area\"",
+     "Portugal OUT · body: \"The US base salary range for this full-time position is $272,000 to $306,000\"",
+     "Portugal OUT · body: \"Are you currently based in or willing to relocate to the Bay Area for this position?\"",
+     "Portugal OUT · body: \"Are you currently located in the US?\"",
+     "Portugal OUT · body: \"Are you legally authorized to work in the United States for our Company?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Design Manager, Growth",
+     "company": "Discord",
+     "seniority": "senior",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$272,000 to $306,000",
+     "years_xp": 10,
+     "reports_to": "Director of Product Design",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.greenhouse.io/discord/jobs/8780263002",
+    "reason": "Role is onsite/relocation-required in the San Francisco Bay Area, not available from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "San Francisco Bay Area",
+    "signals": [
+     {
+      "quote": "San Francisco Bay Area",
+      "where": "under the title",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "The US base salary range for this full-time position is $272,000 to $306,000",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you currently based in or willing to relocate to the Bay Area for this position?",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you currently located in the US?",
+      "where": "body",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you legally authorized to work in the United States for our Company?",
+      "where": "body",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "pool",
+    "shot": "data/shots/bd7606330a724d4d.employer.jpg",
+    "read_at": "2026-10-03T22:26:27"
    }
   },
   {
