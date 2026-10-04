@@ -1768,6 +1768,46 @@ def merge_jd(jobs, previous_jd):
     return jd, carried, lost
 
 
+# What is kept of a posting the title cut drops. 150,000 of them were stored
+# whole, description and all, and none will ever reach vision: the pool was
+# 88MB and jd.json 580MB. One slim line each is enough to audit the title cut
+# - the one filter he never sees - and to know a posting when it comes back.
+SLIM = ("id", "title", "company", "source", "sources", "url",
+        "first_seen", "first_run", "last_seen", "active")
+
+
+def keep_whole():
+    """Ids that stay whole whatever their title: anything vision has read and
+    anything he has decided on."""
+    ids = set()
+    v = ROOT / "data" / "vision.json"
+    if v.exists():
+        ids |= set(json.loads(v.read_text()))
+    for rr in (type(ROOT).home() / "Desktop" / "RadarRouting.json",
+               ROOT / "data" / "backup.RadarRouting.json"):
+        if rr.exists():
+            doc = json.loads(rr.read_text())
+            ids |= {d.get("id") for d in doc.get("decisions", [])}
+            ids |= set(doc.get("favorites") or [])
+    return ids
+
+
+def slim(jobs):
+    """Title-cut postings: gone once inactive, one slim line while active.
+    Returns (jobs, ids slimmed, rows dropped)."""
+    import judge
+    whole, out, slimmed, dropped = keep_whole(), [], set(), 0
+    for j in jobs:
+        if j["id"] in whole or judge.l1(j.get("title")) is None:
+            out.append(j)
+        elif not j.get("active"):
+            dropped += 1
+        else:
+            out.append({k: j[k] for k in SLIM if j.get(k) is not None})
+            slimmed.add(j["id"])
+    return out, slimmed, dropped
+
+
 def main():
     if "--skip" in sys.argv:
         SKIP.update(sys.argv[sys.argv.index("--skip") + 1].split(","))
@@ -1809,8 +1849,10 @@ def main():
         ckpt.write_text(json.dumps({"generated_at": stamp, "run_id": run_id,
                                     "found": len(rows)}, indent=1))
 
-    found, errors = scrape(sources, on_batch=save)
-    jobs, minted = update(previous, found, run_id, stamp)
+    found, errors = ([], {}) if "--slim" in sys.argv else scrape(sources, on_batch=save)
+    # --slim: no scrape, the pool on disk rewritten slim. update() would read
+    # an empty scrape as every posting having gone.
+    jobs, minted = (previous, 0) if "--slim" in sys.argv else update(previous, found, run_id, stamp)
     active = sum(1 for j in jobs if j["active"])
     print(f"found {len(found)} postings -> {len(jobs)} roles "
           f"({active} active, {minted} newly minted ids)", flush=True)
@@ -1826,6 +1868,11 @@ def main():
     # originals during a 40-minute scrape writes jd.json too, and a snapshot
     # taken at start would overwrite its work.
     previous_jd = json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {}
+    jobs, slimmed, dropped = slim(jobs)
+    kept = {j["id"] for j in jobs} - slimmed
+    previous_jd = {k: v for k, v in previous_jd.items() if k in kept}
+    print(f"  title cut: {len(slimmed)} active postings kept as one slim line, "
+          f"{dropped} dead ones dropped", flush=True)
     jd, carried, lost = merge_jd(jobs, previous_jd)
     if lost:
         print(f"ABORT - {len(lost)} active roles would lose their description; "

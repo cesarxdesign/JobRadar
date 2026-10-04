@@ -1,8 +1,8 @@
 {
  "jd": {},
- "generated_at": "2026-10-04T11:18:45+00:00",
- "built_at": "2026-10-04T12:18+01:00",
- "run_id": "2026-10-04T11:18:45+00:00",
+ "generated_at": "2026-10-04T11:31:52+00:00",
+ "built_at": "2026-10-04T12:32+01:00",
+ "run_id": "2026-10-04T11:31:52+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -22,7 +22,7 @@
   "waiting": 0,
   "unjudged": 81089,
   "active": 153458,
-  "total": 217497
+  "total": 157221
  },
  "lanes": {
   "open": [
@@ -6258,7 +6258,7 @@
   "8f356e000ba4416f"
  ],
  "sources": {
-  "ok": 85,
+  "ok": 0,
   "failed": {}
  },
  "roles": [
@@ -94356,16 +94356,10 @@
   {
    "active": true,
    "company": "cfgi",
-   "department": "VCP and PMO Services",
-   "employment_type": "Full Time",
    "first_run": "2026-09-01T15:44:47+00:00",
    "first_seen": "2026-09-01T15:44:47+00:00",
    "id": "0748e10c1f8b47d6",
-   "jdhash": "2372",
    "last_seen": "2026-10-04T01:41:02+00:00",
-   "location": "United States",
-   "posted": "2026-07-09",
-   "remote": false,
    "source": "lever/cfgi",
    "sources": [
     "designjobsworld",
@@ -94373,8 +94367,6 @@
    ],
    "title": "Value Creation: Operating Model - Managing Director",
    "url": "https://jobs.lever.co/cfgi/f073a60a-36ca-4852-94d3-ac488aead268",
-   "workplace": "hybrid",
-   "years_xp": 15,
    "verdict": {
     "role": "no",
     "place": "no",
@@ -96120,16 +96112,10 @@
   {
    "active": true,
    "company": "Qover",
-   "department": "Product",
-   "employment_type": "Permanent Contract",
    "first_run": "2026-09-01T15:44:47+00:00",
    "first_seen": "2026-09-01T15:44:47+00:00",
    "id": "65b4e4cb5e9d405c",
-   "jdhash": "10668",
    "last_seen": "2026-10-04T01:41:02+00:00",
-   "location": "Brussels",
-   "posted": "2026-07-24",
-   "remote": false,
    "source": "lever/Qover",
    "sources": [
     "designjobsworld",
@@ -96137,8 +96123,6 @@
    ],
    "title": "Product Manager",
    "url": "https://jobs.lever.co/Qover/7ee71175-734f-4185-b744-9a3bdf38c520",
-   "workplace": "hybrid",
-   "years_xp": 5,
    "verdict": {
     "role": "no",
     "place": "no",
@@ -276527,18 +276511,13 @@
    "first_run": "2026-09-25T01:10:18+00:00",
    "first_seen": "2026-09-25T01:10:18+00:00",
    "id": "eb52bf268fe142e9",
-   "jdhash": "358",
    "last_seen": "2026-10-04T01:01:13+00:00",
-   "location": "United States",
-   "posted": "2026-09-24",
-   "remote": true,
    "source": "builtin",
    "sources": [
     "builtin"
    ],
    "title": "Marketing Web Designer (UX/UI)",
    "url": "https://builtin.com/job/ux-designer/11144076",
-   "workplace": "Remote",
    "verdict": {
     "role": "yes",
     "place": "no",
