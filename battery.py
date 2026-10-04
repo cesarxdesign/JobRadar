@@ -137,7 +137,12 @@ def main():
     # failure he has confirmed, the first to fix.
     calls = rr.get("battery_calls") or {}
     # "Dead link": the posting is gone, so there is nothing left to judge.
-    settled = [f for f in fails if (calls.get(f["id"]) or {}).get("call") in ("correct", "dead")]
+    # A posting that is no longer up cannot be opened, so it cannot be judged
+    # (his call, 2026-10-04): it leaves the battery, whether the pool saw it
+    # go or he found the link dead.
+    gone = [f for f in fails if (calls.get(f["id"]) or {}).get("call") == "dead" or not (jobs.get(f["id"]) or {}).get("active")]
+    fails = [f for f in fails if f not in gone]
+    settled = [f for f in fails if (calls.get(f["id"]) or {}).get("call") == "correct"]
     fails = [f for f in fails if f not in settled]
     for f in fails:
         if (calls.get(f["id"]) or {}).get("call") == "incorrect":
@@ -180,7 +185,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     stamp = time.strftime("%Y-%m-%d %H:%M")
     report = {"at": stamp, "criteria": criteria.VERSION, "cases": cases, "untested": untested,
-              "failing": len(hard), "closed_since": len(fails) - len(hard), "settled": len(settled),
+              "failing": len(hard), "closed_since": len(fails) - len(hard), "settled": len(settled), "dead": len(gone),
               "confirmed": sum(1 for f in hard if f.get("confirmed")), "fails": fails}
     json.dump(report, open(f"{OUT}/report.json", "w"), indent=1, ensure_ascii=False)
     public(report)
@@ -196,7 +201,7 @@ def main():
     print(f"battery {stamp} · criteria {criteria.VERSION}")
     print(f"  {cases} known answers checked, {untested} not checkable (the role has not been read)")
     print(f"  {len(hard)} where the filter disagrees with him; {len(fails) - len(hard)} he applied to that have since closed")
-    print(f"  {report['confirmed']} of those he has confirmed as incorrectly cut; {len(settled)} he called correctly cut and are settled")
+    print(f"  {report['confirmed']} of those he has confirmed as incorrectly cut; {len(settled)} he called correctly cut and are settled; {len(gone)} dropped, the posting is gone")
     kinds = {}
     for f in hard:
         kinds.setdefault(f["kind"], []).append(f)
