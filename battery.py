@@ -63,13 +63,17 @@ def collect():
     """His verdicts from the TestBattery page (Incorrectly cut / Correctly
     cut). The page keeps them in his browser; they are read from the tab he
     has open and kept in the routing file, which is where they count."""
-    try:
-        import tabs
-        raw = tabs.js(tabs.find("cesarxdesign.github.io/TestBattery"), "localStorage.getItem('tb-calls')||'{}'", timeout=15)
-        got = json.loads(raw or "{}")
-    except Exception as e:
-        print(f"  verdicts: the TestBattery tab could not be read ({str(e)[:70]}); using the ones on file")
-        return
+    saved = f"{ROOT}/data/battery_calls.json"       # written by serve.py when the page saves to this Mac
+    if os.path.exists(saved):
+        got = json.load(open(saved))
+    else:
+        try:
+            import tabs
+            raw = tabs.js(tabs.find("cesarxdesign.github.io/TestBattery"), "localStorage.getItem('tb-calls')||'{}'", timeout=15)
+            got = json.loads(raw or "{}")
+        except Exception as e:
+            print(f"  verdicts: none saved to this Mac and no TestBattery tab in Chrome ({str(e)[:50]}); using the ones on file")
+            return
     rr = json.load(open(RR))
     have = rr.setdefault("battery_calls", {})
     new = {i: c for i, c in got.items() if have.get(i) != c}

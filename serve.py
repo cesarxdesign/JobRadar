@@ -11,6 +11,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 MARKS = ROOT / "data" / "marks.json"
+# His verdicts and notes on the TestBattery page. That page is public and has
+# nowhere private to save them, so it posts them here, to this Mac. Never
+# committed: data/battery_calls.json is ignored.
+CALLS = ROOT / "data" / "battery_calls.json"
+TEST = ROOT.parent / "TestBattery"
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8123
 
 
 class H(http.server.SimpleHTTPRequestHandler):
@@ -20,6 +26,30 @@ class H(http.server.SimpleHTTPRequestHandler):
     _jd, _jd_mtime = {}, 0
 
     def do_GET(self):
+        path = self.path.split("?")[0]
+        if path == "/api/battery-calls":
+            body = CALLS.read_bytes() if CALLS.exists() else b"{}"
+            self.send_response(200)
+            self._cors()
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if path == "/tb" or path.startswith("/tb/"):
+            # the TestBattery page, served from this Mac so it can save here
+            name = path[4:] or "index.html"
+            f = (TEST / name).resolve()
+            if TEST.resolve() not in f.parents or not f.is_file():
+                return self.send_error(404)
+            body = f.read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json" if name.endswith(".json") else "text/html; charset=utf-8")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
         if not self.path.startswith("/api/jd/"):
             return super().do_GET()
         f = ROOT / "data" / "jd.json"
@@ -39,7 +69,7 @@ class H(http.server.SimpleHTTPRequestHandler):
         # loopback http address: Chrome preflights that (Private Network
         # Access) and hangs the request unless these headers come back.
         self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "content-type")
         self.send_header("Access-Control-Allow-Private-Network", "true")
 
@@ -51,6 +81,19 @@ class H(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
         n = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(n).decode("utf-8", "replace")
+        if self.path == "/api/battery-calls":
+            try:
+                json.loads(body)
+            except Exception:
+                return self.send_error(400)
+            tmp = CALLS.with_suffix(".tmp")
+            tmp.write_text(body)
+            tmp.replace(CALLS)
+            self.send_response(200)
+            self._cors()
+            self.end_headers()
+            self.wfile.write(b'{"ok":true}')
+            return
         if self.path == "/api/inbox":
             # A page of Gmail search results, posted by a script run in the
             # Gmail tab. Appended, local only, never committed (gitignored).
@@ -106,7 +149,7 @@ class H(http.server.SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    print("serving %s on http://localhost:8123" % ROOT, flush=True)
+    print("serving %s on http://localhost:%d" % (ROOT, PORT), flush=True)
     # Threaded: a single-threaded server let one stuck keep-alive connection
     # from a quit Chrome hold every other request until it timed out.
-    http.server.ThreadingHTTPServer(("127.0.0.1", 8123), H).serve_forever()
+    http.server.ThreadingHTTPServer(("127.0.0.1", PORT), H).serve_forever()
