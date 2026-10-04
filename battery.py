@@ -136,7 +136,8 @@ def main():
     # was right and he applied anyway - not a failure. "Incorrectly cut": a
     # failure he has confirmed, the first to fix.
     calls = rr.get("battery_calls") or {}
-    settled = [f for f in fails if (calls.get(f["id"]) or {}).get("call") == "correct"]
+    # "Dead link": the posting is gone, so there is nothing left to judge.
+    settled = [f for f in fails if (calls.get(f["id"]) or {}).get("call") in ("correct", "dead")]
     fails = [f for f in fails if f not in settled]
     for f in fails:
         if (calls.get(f["id"]) or {}).get("call") == "incorrect":
