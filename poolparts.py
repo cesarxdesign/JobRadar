@@ -1,20 +1,21 @@
 """poolparts: data/pool.json <-> data/pool1.json, data/pool2.json, ...
 
-GitHub refuses any single file over 100 MB and the pool is one file close to
-that. The pool the scripts read stays whole on this Mac (data/pool.json, not
-pushed). What is pushed is the same file cut into POOL_PARTS pieces, so the
-pool and every first-seen date in it are backed up.
+The pool the scripts read stays on this Mac (data/pool.json, not pushed). It
+holds every design-titled posting whole, and one slim line for each posting
+the title cut dropped (pool.slim). Those slim lines are reference for this Mac
+only: 147,000 of them, 45MB, and a scrape brings them back.
 
-The pool has one posting per line, so the pieces are cut between lines and
-gluing them back in order gives the same file, byte for byte.
+What is pushed is the rest - the postings vision reads, with every first-seen
+date - cut into POOL_PARTS pieces so no file nears GitHub's 100MB wall. One
+posting per line, cut between lines: gluing the pieces back gives one file.
 
     python3 poolparts.py split     # pool.json -> pool1.json ... (before a push)
     python3 poolparts.py join      # pool1.json ... -> pool.json (after a loss)
 """
-import pathlib, sys
+import json, pathlib, sys
 
 # How many pieces the pool is pushed in. Raise it when split warns.
-POOL_PARTS = 2
+POOL_PARTS = 1
 
 DATA = pathlib.Path(__file__).parent / "data"
 POOL = DATA / "pool.json"
@@ -26,7 +27,11 @@ def part(i):
 
 
 def split():
-    lines = POOL.read_bytes().splitlines(keepends=True)
+    import contracts, pool
+    doc = contracts.load_pool(POOL)
+    jobs = doc.pop("jobs")
+    whole = [j for j in jobs if not set(j) <= set(pool.SLIM)]
+    lines = contracts.pool_text(doc, whole).encode().splitlines(keepends=True)
     total = sum(map(len, lines))
     out, size, i = [[] for _ in range(POOL_PARTS)], 0, 0
     for ln in lines:
@@ -44,8 +49,10 @@ def split():
         if mb > WARN_MB:
             print(f"WARNING - pool{i}.json is {mb:.0f}MB and GitHub refuses 100MB. "
                   f"Raise POOL_PARTS in poolparts.py.", file=sys.stderr)
-    if b"".join(part(i).read_bytes() for i in range(1, POOL_PARTS + 1)) != POOL.read_bytes():
+    back = json.loads(b"".join(part(i).read_bytes() for i in range(1, POOL_PARTS + 1)))
+    if len(back["rows"]) != len(whole):
         raise SystemExit("the pieces do not add up to the pool; nothing should be pushed")
+    print(f"{len(whole)} postings pushed whole, {len(jobs) - len(whole)} slim lines stay on this Mac")
 
 
 def join():
