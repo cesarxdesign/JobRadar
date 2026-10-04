@@ -47,3 +47,6 @@ data/nightly.launchd.log
 # Every page as vision read it. Large, and rebuilt by reading.
 data/pages/
 data/remoteio_rows.json
+
+# 88 MB and growing; GitHub refuses 100 MB. The board only needs results.json.
+data/pool.json
