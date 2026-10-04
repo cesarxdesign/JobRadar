@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-03.2"
+VERSION = "2026-10-04.1"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -67,6 +67,19 @@ AXIS 1 - ROLE. Is this a role for him?
        campaigns, or user research as its own discipline.
        EXCEPT at Head of / Director of Design level, where he oversees those
        disciplines rather than doing them.
+       BRAND, EXACTLY (his words, 2026-10-04):
+         "Brand" in the TITLE - Brand Designer, Brand & Marketing Designer -
+         leans too far: NO.
+         A product, UX or UI design role whose description piles brand work
+         on top (landing pages, campaigns, marketing assets as well as the
+         product) is still a design role for him: YES.
+         A brand or marketing role that does a little product design on the
+         side is NO. Ask which one the job is mostly, not whether brand is
+         mentioned.
+  NO   the role is UNPAID, or it is an INTERNSHIP. Either one, whatever the
+       title says and however senior it sounds ("unpaid", "volunteer",
+       "no compensation", "intern", "internship"). His words: those two are
+       cut reasons.
   NO   pure front-end engineering, even when the description talks about UI
        and UX. That job leans on code.
 
@@ -125,12 +138,16 @@ AXIS 2 - PLACE. Can he do this job while living in Portugal?
   Worldwide, Anywhere, Remote with no country, or a list that contains
   Portugal - can the answer be yes.
 
-  SPAIN IS THE ONE EXCEPTION, because Spain borders Portugal.
-    Remote-Spain and the company is Spanish        -> NO. They mean Spain.
-    Remote-Spain and the company is based elsewhere -> UNCLEAR, never NO.
-    You cannot tell where the company is based      -> UNCLEAR.
-    Work it out from the posting - headquarters, offices, the entity named.
-    Spain only. France, Germany and Italy stay NO.
+  THE WHOLE RULE, IN HIS WORDS (2026-10-04). The place passes only when the
+  posting names Portugal, or casts a blanket that includes Portugal by
+  definition - EMEA, Europe, EU, Worldwide, Anywhere, "all countries that
+  start with P". Anything else is NO. SPAIN IS NO, like Germany and France:
+  there is no exception for it any more.
+  A SPECIFIC REQUEST FOR CANDIDATES BASED IN A PLACE - "based in Spain",
+  "must be located in the UK", "candidates in Germany" - beats the generic
+  paragraph pasted at the bottom of every posting ("we hire globally", "we
+  are a remote-first company", "eligible European locations"). List both
+  statements. The specific one decides; the generic one never makes it yes.
 
   WORKING HOURS ARE NOT A PLACE. "Must overlap with US Eastern hours",
   "within CET to ET timezones", "available 9am-3pm Pacific" say when he

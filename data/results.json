@@ -1,21 +1,21 @@
 {
  "jd": {},
  "generated_at": "2026-10-04T11:31:52+00:00",
- "built_at": "2026-10-04T13:52+01:00",
+ "built_at": "2026-10-04T13:59+01:00",
  "run_id": "2026-10-04T11:31:52+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 204,
+  "open": 202,
   "portugal": 19,
-  "unsure": 146,
+  "unsure": 90,
   "ghosts": 0,
   "cut": 3,
   "closed": 520,
-  "vision_cut": 5212,
-  "agency": 37,
+  "vision_cut": 5299,
+  "agency": 20,
   "not_read": 72,
-  "folded": 62,
+  "folded": 50,
   "vision_read": 6947,
   "title_cuts": 66094,
   "design": 6272,
@@ -130,7 +130,6 @@
    "62f0f424224f45c3",
    "ef28cda1e99845ae",
    "96e0d155fb4f4801",
-   "ced620fb962e499b",
    "1f34bc81dfcc42ae",
    "21e1ceb43d834600",
    "930c928baab3400c",
@@ -140,7 +139,6 @@
    "8db9c2f49d36419a",
    "d3dc4edb05d4436f",
    "2cf8f494ca4b4f5d",
-   "908488b799da4a4a",
    "36254ccdc8214b3b",
    "0ba8fbf86a2b46e9",
    "8e4086ef53154c2a",
@@ -253,9 +251,6 @@
    "f927d6e600a04c3e"
   ],
   "unsure": [
-   "7d7302a2e1ec466c",
-   "43e19cdb63e44504",
-   "7245b61e6dc14193",
    "af39a1ba726c4c0a",
    "4ac4991819c145d9",
    "2ac346949b9f4b52",
@@ -267,7 +262,6 @@
    "7f972fa879ce42e7",
    "d92a7a2f79d14d77",
    "83ec1cd01d4945c7",
-   "6e928278d38b4acd",
    "f66ae0410d0a4a96",
    "1cdec415aed64c58",
    "b809a89e34134fff",
@@ -277,21 +271,15 @@
    "cbcc1884d32b452c",
    "a1812244975f4ccf",
    "71a1733dd366400c",
-   "e7aacabf9916409a",
    "c4c18032b97d4158",
    "b527c0fc223f443e",
    "ed0e66134a6e4c75",
    "984c19f1478c40ef",
    "c535c6267fbb4f86",
    "9f5227cf0a654fc5",
-   "8f737289fdf445e1",
    "ddf294f4f02c4576",
    "d4d36f669be54e27",
-   "419953758f444057",
-   "d6ca30dc6bdc479d",
-   "673a02431ed94489",
-   "44c3da6800b14a74",
-   "2c9df7a0f6c44e84",
+   "2a470f6587904142",
    "e0ceb999b82941b5",
    "459e81eb604c415a",
    "9ecc48f5253342f3",
@@ -299,7 +287,6 @@
    "6bb0ea51f00e4a6d",
    "d9aaef2a26b943cc",
    "026d0a790a964861",
-   "2f710b8cfb3c43d1",
    "f152019c00f04558",
    "089e851d6bc942f8",
    "0dfbe88158124739",
@@ -311,20 +298,11 @@
    "b5ae084458e64fca",
    "c30b36c90e6e44a8",
    "39588ef0520e479e",
-   "706aa58585f64e60",
-   "fd3b57f7c2a344cb",
-   "f77a2c6dc5e94c19",
-   "8843c558b15141b4",
-   "2677dc9bad484eba",
-   "eb19541d37874d42",
    "c9a342e083204b63",
    "fb2e933cbdcd4391",
-   "07c8557f439f4cc1",
    "11a43d3099d34592",
-   "0b9d2e44ccfc45f0",
    "0f5b2900f64b4b04",
    "aec592e69a924ab3",
-   "4abd04037a454af4",
    "6e1e39a99c9543dc",
    "74dc8a7ec3f44a3d",
    "5a832a508ec942c3",
@@ -340,65 +318,29 @@
    "8a209765d7244801",
    "c4d9d707c6f04f00",
    "7cda754dcded4d9b",
-   "4b9a419a073448fc",
-   "3af68cada18948c3",
-   "0cab4f89a85f40be",
    "452f046578524de0",
-   "da539a2db4474f9c",
-   "3d488763805e43a5",
-   "443f62c683974f6e",
    "e4f875ab483146f8",
-   "2d4794388fb34cd8",
-   "00f062bd52794107",
-   "728f0a1911b44bae",
-   "a67c72a54de8410d",
    "d1623afc6bc94654",
-   "5e606fb02ab0405d",
-   "20d50c84e12f4935",
-   "4c4c274987de46a8",
    "a4a49cc200cc4590",
-   "b0c6963322d34bb5",
    "a13b18c4338146c2",
-   "3afc4ceebd0d47cb",
    "ca8a0e7c2b054a07",
    "ac5d2e6aa5644b8b",
-   "94846806360e4676",
    "a5619393a9df4003",
-   "98e1b1176e4a4fe9",
-   "f06859748f464fae",
-   "d2e195f7dce047b5",
    "480f6cde7ec84648",
    "70fe6f0d6e3942a3",
-   "f85635c5262b40c4",
-   "a27095bab41144af",
    "7055ba3812bc4057",
-   "436a6053a59142c6",
    "26e10d0c4992453e",
-   "6772251c6e0a4898",
-   "81bcfbfca61a480a",
-   "e8fd434bf91c4863",
    "c112cd3f6c2e4d2d",
    "236a598d10be490f",
    "f94d4a71f8e1498a",
    "56a6d02f73524476",
    "ac02a180bb35485a",
    "41029e5572bb4307",
-   "efa02d781a414702",
-   "9b7c517c26634016",
    "c460e7eeee0e4c5c",
-   "0340bdc4f75f45ed",
-   "da3c8d3c8de44460",
-   "3444083dffc04032",
-   "8996949a33bb4d24",
-   "71cdb01c829447c3",
-   "c79a2badbef44aab",
-   "7c9d09fd913a4a49",
    "154ee791cc594f63",
-   "751043e0f3bb45cd",
    "a5d771590fa247e6",
    "8f356e000ba4416f",
-   "f88b2a171ebf4974",
-   "df856edc7a3c4138"
+   "f88b2a171ebf4974"
   ]
  },
  "cut": [
@@ -941,12 +883,15 @@
   "c1b13cead15d45f0",
   "177615ab17a84b92",
   "c43a7ad01cbe45f0",
+  "7d7302a2e1ec466c",
   "a84e3a09125346e2",
   "b3782de9ad7b4b03",
   "46de66982d584a4c",
   "1ed8f22919614276",
+  "43e19cdb63e44504",
   "9ef06adde18d48a7",
   "456b8d6f19094070",
+  "7245b61e6dc14193",
   "3cf400a7e09347c3",
   "2f0668417ac7471b",
   "70bdd5be924b4702",
@@ -1720,6 +1665,7 @@
   "de5fb213ec9a443a",
   "139d4c3648ef40e1",
   "cfbb621673c34335",
+  "6e928278d38b4acd",
   "ad177561ecc342ea",
   "5aac3031694e46dd",
   "7f42dd47dde044ee",
@@ -1873,6 +1819,7 @@
   "e785888a3f5b48e8",
   "cb170fe868f14881",
   "ee3c236201194010",
+  "e7aacabf9916409a",
   "19cd73011a9c412e",
   "7625b328132c4657",
   "3115503ce4924f39",
@@ -1924,6 +1871,7 @@
   "5eb73cadddc8423f",
   "a61d382474d84e37",
   "c83c227c9fa6409d",
+  "9598f364fed24584",
   "d9360e2306864ece",
   "e3c7d83c05394b01",
   "3e9ca12c01d8446e",
@@ -2300,6 +2248,7 @@
   "e9f7dd9efb9f4051",
   "05b9c12a234941b2",
   "e160ecdff7204bbf",
+  "7e51a85ae15d4716",
   "c2545729b07c4684",
   "cbb169b7abb64a70",
   "059c6549efa84321",
@@ -2314,6 +2263,7 @@
   "214a8bf0c09044fc",
   "628eb2efb4c44cef",
   "41b6fceae72545b8",
+  "8f737289fdf445e1",
   "522c1886d50c4a13",
   "d0beaef8233f4f96",
   "d54926d48f674081",
@@ -2572,6 +2522,7 @@
   "fd9be78ab7fd44c1",
   "f320330b645e42e4",
   "a307e44748e649b1",
+  "419953758f444057",
   "c06ac308792049c3",
   "89c8351ac84247ac",
   "2fe1347171fa4146",
@@ -2628,6 +2579,7 @@
   "a0d806caa8af4d6f",
   "68add44059dd48d4",
   "3461b3de7d0f466d",
+  "d6ca30dc6bdc479d",
   "09108c7bb4774d1d",
   "a48406b601e4490f",
   "1fa8666be35f4dac",
@@ -2786,6 +2738,7 @@
   "0afc593bdf214fac",
   "c237b9b8917841d1",
   "eb572754537a4b88",
+  "673a02431ed94489",
   "9d97dfd82b2f4fc1",
   "6c7edcc2542246f4",
   "e27e1480f1224463",
@@ -2802,6 +2755,7 @@
   "9cc195e4fc6f4ff8",
   "c19eff25759042a8",
   "9445d48a597a4db1",
+  "44c3da6800b14a74",
   "8711bdfcd6cc456b",
   "770fd7fb5b5147e8",
   "744ffd4e92cc458a",
@@ -2851,11 +2805,13 @@
   "a3c6a81f360e487e",
   "49435d751a924291",
   "77805be39a6e4d3d",
+  "2c9df7a0f6c44e84",
   "89b5cb8af2e04932",
   "c2f86a49d83a49d2",
   "18e6306710d74169",
   "9e60841f1ceb4598",
   "98aacadacb9f4f2d",
+  "cdf83d536b7447f5",
   "01ecade3486742a2",
   "5949a788dfcb435f",
   "6672fbc6e16c4e3b",
@@ -2877,6 +2833,8 @@
   "77b5e2635c6b409e",
   "ff1fb4d4adc24a95",
   "2451d2b96c92428d",
+  "b4e595ae12034f76",
+  "bc9a234974bb4414",
   "9bef6bd41b774992",
   "c02c4105f29c454b",
   "efb2613481074dcd",
@@ -2930,6 +2888,7 @@
   "d0d36c9169b947e9",
   "f57547b9572d4341",
   "9bdf96bf8cc94bb6",
+  "2f710b8cfb3c43d1",
   "9226ce0069d248c2",
   "658e122e44ab4e4e",
   "ec2a0c98a2b447f7",
@@ -3003,11 +2962,13 @@
   "485a00e475ef4274",
   "2b9298ff090842d1",
   "c1ff54fdad6147c7",
+  "ced620fb962e499b",
   "2aabe8aadff84547",
   "9dfc723a0dd14a79",
   "0c4cd644b95a4a8b",
   "491bd1cd95574b2a",
   "3d5d5a60de384053",
+  "908488b799da4a4a",
   "00f77f5bcc634880",
   "abca9e0580d542ae",
   "d6daaf84b828445a",
@@ -3064,15 +3025,26 @@
   "8fa391b5d4da4e5b",
   "5a022f2114774b27",
   "20f72d87c20a4c67",
+  "706aa58585f64e60",
+  "fd3b57f7c2a344cb",
+  "b70cfdafe50042fd",
+  "8556829fc436446f",
   "742458cec1684790",
   "6ad1cd394c4442d8",
   "d5ef6684857c4b22",
+  "e49db1c4544a4096",
+  "24533fcc5fb64147",
+  "f014b7d1de454cc4",
   "f24ea38c40f343e8",
   "ded7c467e56f4cf4",
   "1e82d6c588a142bd",
   "84f738b0166b4bc8",
   "79c281c3553d4b44",
+  "8a4661300f824d77",
+  "4f2bda0a99d6417a",
   "f33df4115f6840a6",
+  "b99841682eca45fa",
+  "ee8e3d113b414686",
   "80a4fe267d674198",
   "c9faf37bdfdd40f7",
   "18ecb848455340fb",
@@ -3080,10 +3052,12 @@
   "0f44de58d0ad4bc8",
   "384ad8dd1c074438",
   "820d3b63018b4fea",
+  "b84b23906dc948f8",
   "df787fde752b4c1a",
   "43478fd90b3a4e3d",
   "9517c065765243e3",
   "c4fc1d6c85834c45",
+  "f77a2c6dc5e94c19",
   "54e5f63d34ea4a61",
   "ecba1856b94740cd",
   "aa89911977b44c47",
@@ -3097,6 +3071,8 @@
   "cd6250e8479d4686",
   "14eac8a35108421e",
   "d9cdb13a47af4039",
+  "8843c558b15141b4",
+  "2677dc9bad484eba",
   "cf673c2a8a994662",
   "0e1fdc331b5c4eca",
   "06bd985640ed4dd2",
@@ -3118,6 +3094,7 @@
   "2a44fb0a82b34166",
   "f881455b72d8484c",
   "4dc8ec6d53334905",
+  "eb19541d37874d42",
   "3ec288bb62d949ec",
   "ce497699d68a408b",
   "204a51ff306645b1",
@@ -3129,6 +3106,7 @@
   "76942eb1033b48ef",
   "857b6c1826b94c27",
   "75737c1279534356",
+  "07c8557f439f4cc1",
   "779c187c47984e4a",
   "a6aea787b25846d7",
   "c962f2cef0d24701",
@@ -3198,6 +3176,7 @@
   "4e19e3db831f44c0",
   "c4c3d68e257446cf",
   "ca8e0a6b304c429c",
+  "0b9d2e44ccfc45f0",
   "7b5f2cc142cb4452",
   "891a72f762474f7a",
   "b9b58293372f4b64",
@@ -3238,6 +3217,7 @@
   "051c665ead614037",
   "438ac62626304d9f",
   "ba2048ce04b442af",
+  "4abd04037a454af4",
   "f3761172495a4de1",
   "bbd94105fb934968",
   "8c44eb5f8dae45e9",
@@ -3573,10 +3553,12 @@
   "328d0ff271724e70",
   "b1606521e8fa4bd3",
   "b77085cdc2e247ed",
+  "4b9a419a073448fc",
   "64463b57d5fb4844",
   "23600e0c19e147e1",
   "b7c485ef04ac42ec",
   "913952054abb4f4b",
+  "3af68cada18948c3",
   "de9d2bc54e6540d8",
   "eaa833d7133a4ad3",
   "b3c9beac5bf04dd1",
@@ -3591,6 +3573,7 @@
   "7668045dd73d4e2d",
   "87a6254c4fbe457a",
   "7034b609eaf440b6",
+  "0cab4f89a85f40be",
   "99ab82b190a44188",
   "394916598dbf430f",
   "f3dfc254b7ed4fe0",
@@ -3613,10 +3596,13 @@
   "17fd800aed6c4dce",
   "05de86e4577944bb",
   "4dd336da7d9d4fde",
+  "da539a2db4474f9c",
   "fa5ab39ef99a433b",
   "a925dd84b3d04646",
+  "3d488763805e43a5",
   "30faccb921d64cbc",
   "ab48d22542b64a7b",
+  "443f62c683974f6e",
   "63dca2daf0f84c50",
   "35985544cc364002",
   "6a7dbeccadad4d96",
@@ -3627,6 +3613,7 @@
   "b7c49fb9e4034646",
   "71f1884812ee4d20",
   "86cfa475a0b843c0",
+  "2d4794388fb34cd8",
   "71b42a7784e64688",
   "9dc8b3fa33cc4873",
   "8d03d7aa87e44748",
@@ -3645,6 +3632,8 @@
   "8620d5f4c3a2427d",
   "0532d7e7385349ba",
   "db4dff51ac614b67",
+  "00f062bd52794107",
+  "728f0a1911b44bae",
   "f0dafe0e465b4960",
   "f8252150e90f498b",
   "9c314469da9e46c5",
@@ -3713,6 +3702,7 @@
   "d29fe4c5dc744aab",
   "730e6231b11042e2",
   "52a2525ca58a453d",
+  "a67c72a54de8410d",
   "083f354c7e4a4eec",
   "dfbdd94a9f524bb2",
   "416008e3592c4d44",
@@ -3734,6 +3724,7 @@
   "60927e7ed2b249b1",
   "6a8db3a4dc674d6f",
   "110db2d3ee5f451c",
+  "5e606fb02ab0405d",
   "b347210573a848ff",
   "5a0efc7ed0cd4a60",
   "81e764a8abc844e8",
@@ -3745,6 +3736,7 @@
   "c505ac6a20a14162",
   "22ddba111f764755",
   "29fdc38862614126",
+  "20d50c84e12f4935",
   "74e8b205e3e44340",
   "26073b1a848b405d",
   "088754f31b4d4eaf",
@@ -3811,6 +3803,7 @@
   "73294e87e8a24331",
   "24f296a30bf64c0a",
   "36af9b13dbda4bb1",
+  "4c4c274987de46a8",
   "90cbeff4d1f6465e",
   "5301ed7adb03420a",
   "a5a2346a97914215",
@@ -3868,11 +3861,13 @@
   "c20d8e43486945de",
   "08cf8d0eba5b4e3b",
   "9a65fbeb06e9402f",
+  "25226ce8dc964901",
   "88075489a881463c",
   "ee97637a22254a99",
   "c5a301b49a344182",
   "cf5e4e5265ca4c4e",
   "ceefba20b7b54f58",
+  "8d57f803c1464596",
   "4137cbe3ce844c32",
   "5e3bc5ded76e4e31",
   "22fbaaf1e27c4304",
@@ -3900,6 +3895,7 @@
   "4110648e23b74102",
   "bbdec51dd9994a97",
   "9a63c0c033ed4d9b",
+  "3aa99cbda053491d",
   "5f318a029fd2414c",
   "c9e94469649a4ee8",
   "35fe13e8697c444f",
@@ -4031,6 +4027,7 @@
   "8620a728469544b6",
   "6566cd123e434b1b",
   "c0db4ebd1d18430e",
+  "b0c6963322d34bb5",
   "c60f070f50c44760",
   "5aef7e197d7e45b3",
   "62e7fd9b6f4b4604",
@@ -4046,6 +4043,7 @@
   "71f754e8dd0b4d27",
   "6a86cefdd5ca429d",
   "3a8c115124384df8",
+  "3afc4ceebd0d47cb",
   "9fd30dd0b7d84754",
   "2c25043cde594410",
   "a8e75bc75b614ede",
@@ -4096,6 +4094,7 @@
   "487a1cdb10df4981",
   "fc366845d73b4599",
   "1c4891cdcb684360",
+  "94846806360e4676",
   "7a55166e1af64063",
   "0b2104395f8a4445",
   "c420df03ceb043f8",
@@ -4174,6 +4173,7 @@
   "734b83dd9dd7411f",
   "85ee1de65a374dfe",
   "7ace6e4babd64543",
+  "98e1b1176e4a4fe9",
   "ffc9364946734169",
   "6fc86f2fb4a44e2d",
   "9b8d17dc804c4736",
@@ -4201,6 +4201,7 @@
   "9aff1c590ea048fe",
   "7c773e4316fc41a6",
   "94e9709f3f2d42cf",
+  "f06859748f464fae",
   "f57caaea2d5f4a22",
   "3ae6d0348bed4b91",
   "6a153d75d6784a27",
@@ -4285,12 +4286,15 @@
   "9a154aa4bf3645c7",
   "2d3bceeb31624f99",
   "5b9ec04600df4925",
+  "d2e195f7dce047b5",
   "5882bc9f65524f6b",
   "292516c753c74fc3",
   "a399400259ab4468",
   "328fad410545455e",
   "a231c07591414ea7",
   "5bd53180cd924e05",
+  "f85635c5262b40c4",
+  "3e2b792c24b34260",
   "c92fc14a6cb5413a",
   "c2b963db52664048",
   "5fa6e7262859457b",
@@ -4303,6 +4307,7 @@
   "98bd251a38614870",
   "b88726501e9e404d",
   "bc872fed75d54b8c",
+  "a27095bab41144af",
   "85c94ca5b2c74576",
   "f9dca82d25614a39",
   "ab8c7f59ebd7491b",
@@ -4367,6 +4372,7 @@
   "46ee187b7f974bc9",
   "1967a8bde2f14237",
   "67dbbd811bd64fb0",
+  "740e1604387447f8",
   "6a4cc8393ac740c4",
   "164835197a2c4ecf",
   "ad8622167a8c4d36",
@@ -4423,6 +4429,7 @@
   "28b55ec5ecab40fa",
   "12e100690ba14911",
   "66350461b3884a90",
+  "511b6719b8d247e4",
   "9922affec15a4a87",
   "b0ccf46239824e83",
   "c88586e8bbde4b6c",
@@ -4479,6 +4486,9 @@
   "80e2cc7ca89641a6",
   "04c38326bbc04d71",
   "d1d99e5fc34a4a9e",
+  "c8387cd7d3be47cf",
+  "422690829c8b48a4",
+  "b62e5539e11949c4",
   "a385a187f84940d8",
   "048f6009244146bb",
   "18bd84b6972349db",
@@ -4487,6 +4497,7 @@
   "91a4b91fed0247d7",
   "4afb0fb929734a27",
   "623d71be5f1e4d44",
+  "436a6053a59142c6",
   "04e445eb35d749b0",
   "371754cdb2fe4779",
   "6efa05159b4c4698",
@@ -4508,7 +4519,10 @@
   "a6d1f69697834b41",
   "c33d60c721c14885",
   "d741c14f819d4b96",
+  "6772251c6e0a4898",
+  "81bcfbfca61a480a",
   "6cc37e137ee947ef",
+  "e8fd434bf91c4863",
   "e3390931e56e4665",
   "1331ddeb3f4946c8",
   "35373c4d51a74be2",
@@ -4618,6 +4632,7 @@
   "6d47aeeeb7d74ff3",
   "1a7e97a5e9eb4ef5",
   "d40ffe7919ff486a",
+  "871ac8d478f34318",
   "0b5324f8451143e9",
   "2f32cfb757214af7",
   "20297d6decc84efd",
@@ -4628,6 +4643,8 @@
   "c9d9ae320ea14b7c",
   "ff66470617db44d0",
   "154813b2fcb34f37",
+  "f99a42ed17964c5d",
+  "bb35ad9a19154bf8",
   "da75c60cbced47eb",
   "3a2a7fe00e024cf2",
   "ab27638dbfab43a5",
@@ -4636,6 +4653,7 @@
   "e27bebdf5f8c41d5",
   "d818eb4ae2884e38",
   "e727668bdbcd4331",
+  "e432bd2717234c8c",
   "feafcf7c5e344190",
   "193715f688ba45c7",
   "91796313692e41ed",
@@ -4693,6 +4711,7 @@
   "28b887a100fd445c",
   "edcf3127d72448a9",
   "fa47aaf7947e4b2d",
+  "efa02d781a414702",
   "a8a2930c79a54105",
   "50aae5922c194144",
   "73df059075e34430",
@@ -4734,6 +4753,7 @@
   "75ff6da30f5540f4",
   "8db9cc9846d54a1b",
   "b5d598c969a54abf",
+  "9b7c517c26634016",
   "bb8abb2ffbae4003",
   "7757e8f38e9e4f0c",
   "8fc8b4fc6e144ab4",
@@ -4748,8 +4768,11 @@
   "add9737809c241ce",
   "676fb46e50fa4495",
   "85bbe2eb41f045b0",
+  "0340bdc4f75f45ed",
   "1cf22dac5cba442f",
   "d4f0a1cc650744a8",
+  "da3c8d3c8de44460",
+  "3444083dffc04032",
   "dc00304302bc47ba",
   "927140a8be8a4e62",
   "ae4f6a6c4eec4291",
@@ -4759,6 +4782,9 @@
   "26d1e92f0499461e",
   "475c30d4f4224c46",
   "bacc4f1409604357",
+  "8996949a33bb4d24",
+  "71cdb01c829447c3",
+  "c79a2badbef44aab",
   "9024beca7d1e410c",
   "485b9567e2084684",
   "9524a8045c9b4492",
@@ -4774,6 +4800,7 @@
   "2c014b55518d44ea",
   "f0c32b36a2394756",
   "cfb8229012bf418a",
+  "7c9d09fd913a4a49",
   "d8fc50393f5b4430",
   "d261d5fda7ca4bfb",
   "08159a057c164bb7",
@@ -4924,6 +4951,7 @@
   "9a1305601aa849f6",
   "2c1ea9d407964537",
   "1f4873f45aee4515",
+  "751043e0f3bb45cd",
   "55dad922d1c3470f",
   "663e1aab751f4fc0",
   "80ce1a102b91482f",
@@ -6106,6 +6134,7 @@
   "0b018f0775704399",
   "57cdd2cd09624b0c",
   "603d7403f5dd47e4",
+  "df856edc7a3c4138",
   "9766bbd1dd2a4e22",
   "dcd16d141e3b4ddd",
   "88c2cfdfe8894f2e",
@@ -6148,35 +6177,18 @@
   "85ca01db5e0c4735",
   "437b734a31454bf1",
   "3f134cd4799547a0",
-  "9598f364fed24584",
-  "cdf83d536b7447f5",
-  "b4e595ae12034f76",
-  "bc9a234974bb4414",
   "ced79d8aa56f46f6",
   "ed06d4e1b8dd460b",
   "cbaec4f8aced4de6",
   "d1dccab24c094d72",
   "939adc6de11248a0",
   "0717f3cceabf4590",
-  "b84b23906dc948f8",
   "962446d093fd46f6",
   "b2714c135ccc4fe1",
   "2a35e2b165d149b9",
-  "25226ce8dc964901",
-  "8d57f803c1464596",
-  "3aa99cbda053491d",
-  "740e1604387447f8",
   "a4293becb5c645a1",
-  "511b6719b8d247e4",
   "faa20c84675145be",
-  "c8387cd7d3be47cf",
-  "422690829c8b48a4",
-  "b62e5539e11949c4",
   "58edd8e185ed4cb7",
-  "871ac8d478f34318",
-  "f99a42ed17964c5d",
-  "bb35ad9a19154bf8",
-  "e432bd2717234c8c",
   "3ad302aabd4446f2",
   "c220fa874dbd4763",
   "d860a8283fe547fd"
@@ -7346,8 +7358,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Panel says Remote in United States, but a line about non-US applicants requesting a salary range leaves the actual eligible locations ambiguous.",
      "Portugal OUT · side panel: \"Remote location: Remote in United States\"",
@@ -7378,7 +7390,7 @@
     ],
     "read": "employer",
     "read_url": "https://stripe.com/careers/listing/designer-web-presence-platform/7977745?gh_jid=7977745",
-    "reason": "cut on place, but not sure of it · Panel says Remote in United States, but a line about non-US applicants requesting a salary range leaves the actual eligible locations ambiguous.",
+    "reason": "Panel says Remote in United States, but a line about non-US applicants requesting a salary range leaves the actual eligible locations ambiguous.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -7753,8 +7765,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is design (fits) but office locations are London/Dublin with hybrid in-office expectations and GBP salary, not Portugal.",
      "Portugal OUT · side panel: \"Office locations London, Dublin HQ\"",
@@ -7787,7 +7799,7 @@
     ],
     "read": "employer",
     "read_url": "https://stripe.com/careers/listing/product-designer-risk/7954118?gh_jid=7954118",
-    "reason": "cut on place, but not sure of it · Role is design (fits) but office locations are London/Dublin with hybrid in-office expectations and GBP salary, not Portugal.",
+    "reason": "Role is design (fits) but office locations are London/Dublin with hybrid in-office expectations and GBP salary, not Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -8013,8 +8025,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Office location is London with in-office expectations and no mention of Portugal or remote eligibility there.",
      "Portugal OUT · side panel: \"Office location: London\"",
@@ -8045,7 +8057,7 @@
     ],
     "read": "employer",
     "read_url": "https://stripe.com/careers/listing/product-design-manager-global-payments/8096726?gh_jid=8096726",
-    "reason": "cut on place, but not sure of it · Office location is London with in-office expectations and no mention of Portugal or remote eligibility there.",
+    "reason": "Office location is London with in-office expectations and no mention of Portugal or remote eligibility there.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -77530,8 +77542,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is onsite in South Jordan, UT, USA with no remote mention, so it cannot be done from Portugal.",
      "Portugal OUT · footer or small print: \"South Jordan, UT, USA\"",
@@ -77562,7 +77574,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/Cricut/744000136562519",
-    "reason": "cut on place, but not sure of it · Role is onsite in South Jordan, UT, USA with no remote mention, so it cannot be done from Portugal.",
+    "reason": "Role is onsite in South Jordan, UT, USA with no remote mention, so it cannot be done from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -92152,8 +92164,8 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page read is a different job · Page title is a completely different job (Forward Deployed Engineer, an engineering role tied to UK) than the pooled 'AI Business Transformation & Design Strategist' title, and it is UK-located, not a design role, and not Portugal-eligible.",
-     "Portugal OUT · under the title: \"United Kingdom\""
+     "the page read is a different job · The page is a Forward Deployed Engineer posting tied to the United Kingdom, not the Design Strategist role the pool lists, and it is an engineering role, not design.",
+     "Portugal OUT · under the title: \"United Kingdom...Services – Professional Services /Mid-Senior Level /Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -92178,14 +92190,14 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/coupa/dc6c7743-bcb5-4891-918a-6e3fe55e34e5",
-    "reason": "the page read is a different job · Page title is a completely different job (Forward Deployed Engineer, an engineering role tied to UK) than the pooled 'AI Business Transformation & Design Strategist' title, and it is UK-located, not a design role, and not Portugal-eligible.",
+    "reason": "the page read is a different job · The page is a Forward Deployed Engineer posting tied to the United Kingdom, not the Design Strategist role the pool lists, and it is an engineering role, not design.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "United Kingdom Services – Professional Services /Mid-Senior Level /Remote",
+    "quote": "United Kingdom – Services – Professional Services /Mid-Senior Level /Remote",
     "signals": [
      {
-      "quote": "United Kingdom",
+      "quote": "United Kingdom...Services – Professional Services /Mid-Senior Level /Remote",
       "where": "under the title",
       "says": "portugal_out"
      }
@@ -92193,7 +92205,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/cbcc1884d32b452c.jpg",
-    "read_at": "2026-10-04T03:56:22",
+    "read_at": "2026-10-04T13:58:05",
     "evidence": {
      "board_posted": "2026-05-05"
     }
@@ -96305,8 +96317,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is senior design leadership (fits), but the posting lists specific hiring countries (Spain, Czechia, UK, US, Ireland) for salary purposes and Portugal is not among them.",
      "Portugal OUT · body: \"Spain €79.000—€121.000 EUR / Czechia 1 491 000 Kč—2 005 000 Kč CZK / UK £81,000—£106,000 GBP / United States $157,000—$202,000 USD / Ireland €91.000—€117.000 EUR\"",
@@ -96341,7 +96353,7 @@
     ],
     "read": "board",
     "read_url": "https://www.mews.com/en/careers/jobs/4902395101?gh_jid=4902395101",
-    "reason": "cut on place, but not sure of it · Role is senior design leadership (fits), but the posting lists specific hiring countries (Spain, Czechia, UK, US, Ireland) for salary purposes and Portugal is not among them.",
+    "reason": "Role is senior design leadership (fits), but the posting lists specific hiring countries (Spain, Czechia, UK, US, Ireland) for salary purposes and Portugal is not among them.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -100973,8 +100985,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Compensation in SAR and the repeated job card show the role is based in Riyadh, Saudi Arabia with no remote mention.",
      "Portugal OUT · side panel: \"Compensation: SAR 0 - SAR 13,000 - monthly\"",
@@ -101005,7 +101017,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/jobsforhumanity/744000141241308",
-    "reason": "cut on place, but not sure of it · Compensation in SAR and the repeated job card show the role is based in Riyadh, Saudi Arabia with no remote mention.",
+    "reason": "Compensation in SAR and the repeated job card show the role is based in Riyadh, Saudi Arabia with no remote mention.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -101028,9 +101040,7 @@
     "read_at": "2026-10-04T06:31:12",
     "evidence": {
      "employer_posted": "2026-08-03"
-    },
-    "agency": true,
-    "hiring_for": "eze"
+    }
    }
   },
   {
@@ -134781,8 +134791,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting is tagged to Bengaluru, Karnataka, India with no remote or wider location mention.",
      "Portugal OUT · footer or small print: \"Senior Director - Product Design\nBengaluru, Karnataka, India\nFull-time\""
@@ -134812,7 +134822,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/Freshworks/744000131396199-senior-director-product-design",
-    "reason": "cut on place, but not sure of it · Posting is tagged to Bengaluru, Karnataka, India with no remote or wider location mention.",
+    "reason": "Posting is tagged to Bengaluru, Karnataka, India with no remote or wider location mention.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -136040,8 +136050,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting location is Bengaluru, India, onsite with no remote mention, excluding Portugal.",
      "Portugal OUT · footer or small print: \"Bengaluru, Karnataka, India\""
@@ -136071,7 +136081,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/Freshworks/744000135906749-senior-director-product-design",
-    "reason": "cut on place, but not sure of it · Posting location is Bengaluru, India, onsite with no remote mention, excluding Portugal.",
+    "reason": "Posting location is Bengaluru, India, onsite with no remote mention, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -136089,19 +136099,7 @@
     "read_at": "2026-10-04T03:49:58",
     "evidence": {
      "board_posted": "2026-07-06"
-    },
-    "copies": [
-     {
-      "id": "7e51a85ae15d4716",
-      "url": "https://jobs.smartrecruiters.com/Freshworks/744000131396199-senior-director-product-design",
-      "read_url": "https://jobs.smartrecruiters.com/Freshworks/744000131396199-senior-director-product-design",
-      "source": "designjobsworld",
-      "posted": "2026-06-10",
-      "location": "Hyderabad, India",
-      "lane": "unsure",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -152894,13 +152892,14 @@
     "lane": "cut",
     "cut": true,
     "why": [
-     "Role is brand/marketing/performance design for an agency (paid ads, email/SMS, landing pages, Amazon creative), not product design, and reports to Director of Creative, not a design leadership role.",
-     "the page says: \"Location: Portugal; Brazil; Spain / Location Type: Remote\""
+     "The role is primarily brand, performance marketing, and campaign design (paid ads, email/SMS, social, landing pages) for an agency, not a product/UX design role.",
+     "Portugal in · side panel: \"Portugal; Brazil; Spain\"",
+     "Portugal in · footer or small print: \"Employees based in or near our New York or Lisbon HQs are expected to work hybrid with weekly in-office time.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "Senior Designer",
      "company": "Darkroom",
@@ -152919,19 +152918,32 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "seniority"
+    ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/darkroom/6ee92497-4630-4687-a166-d49ec1602755",
-    "reason": "Role is brand/marketing/performance design for an agency (paid ads, email/SMS, landing pages, Amazon creative), not product design, and reports to Director of Creative, not a design leadership role.",
+    "reason": "The role is primarily brand, performance marketing, and campaign design (paid ads, email/SMS, social, landing pages) for an agency, not a product/UX design role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: Portugal; Brazil; Spain / Location Type: Remote",
-    "signals": [],
+    "quote": "Portugal; Brazil; Spain",
+    "signals": [
+     {
+      "quote": "Portugal; Brazil; Spain",
+      "where": "side panel",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Employees based in or near our New York or Lisbon HQs are expected to work hybrid with weekly in-office time.",
+      "where": "footer or small print",
+      "says": "portugal_in"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/db50199e9c67473e.jpg",
-    "read_at": "2026-10-02T17:18:26",
+    "read_at": "2026-10-04T13:58:45",
     "evidence": {
      "employer_posted": "2026-09-09"
     }
@@ -158642,8 +158654,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Hybrid role explicitly based in Vilnius, Lithuania, with no clear remote-from-Portugal option stated.",
      "Portugal OUT · side panel: \"Location\n\nVilnius\"",
@@ -158674,7 +158686,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/nord-security/f9ef0692-bd3e-4c4a-b13f-f1f3d5bcb731",
-    "reason": "cut on place, but not sure of it · Hybrid role explicitly based in Vilnius, Lithuania, with no clear remote-from-Portugal option stated.",
+    "reason": "Hybrid role explicitly based in Vilnius, Lithuania, with no clear remote-from-Portugal option stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -158707,19 +158719,7 @@
     "read_at": "2026-10-04T05:32:48",
     "evidence": {
      "employer_posted": "2026-09-08"
-    },
-    "copies": [
-     {
-      "id": "2a470f6587904142",
-      "url": "https://jobs.ashbyhq.com/nord-security/d9da600d-43b4-43f3-af47-d854c5eb508c",
-      "read_url": "https://jobs.ashbyhq.com/nord-security/d9da600d-43b4-43f3-af47-d854c5eb508c",
-      "source": "ashby/nord-security",
-      "posted": "2026-09-08",
-      "location": "Poland",
-      "lane": "unsure",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -163807,8 +163807,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is Paris with remote tied to that city; not widened to Europe or Portugal anywhere on the page.",
      "Portugal OUT · side panel: \"Location: Paris\""
@@ -163836,7 +163836,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/voodoo/2ad73b79-d854-400c-9f33-6f08bf5b30d0",
-    "reason": "cut on place, but not sure of it · Location is Paris with remote tied to that city; not widened to Europe or Portugal anywhere on the page.",
+    "reason": "Location is Paris with remote tied to that city; not widened to Europe or Portugal anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -177117,8 +177117,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting names Costa Rica as the location with no remote mention, which excludes someone living in Portugal.",
      "Portugal OUT · footer or small print: \"San José Province, San José, Costa Rica\""
@@ -177148,7 +177148,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/ApplaudoStudios/744000147609728",
-    "reason": "cut on place, but not sure of it · Posting names Costa Rica as the location with no remote mention, which excludes someone living in Portugal.",
+    "reason": "Posting names Costa Rica as the location with no remote mention, which excludes someone living in Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -178490,8 +178490,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Title says UX/UI so role passes, but location is pinned to Warsaw (Remote/Hybrid) with only a generic company-wide remote claim elsewhere, leaving place unclear.",
      "Portugal OUT · side panel: \"Location: PL, Warsaw (Remote/Hybrid)\"",
@@ -178522,7 +178522,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/PeopleCanFly/744000144045544",
-    "reason": "cut on place, but not sure of it · Title says UX/UI so role passes, but location is pinned to Warsaw (Remote/Hybrid) with only a generic company-wide remote claim elsewhere, leaving place unclear.",
+    "reason": "Title says UX/UI so role passes, but location is pinned to Warsaw (Remote/Hybrid) with only a generic company-wide remote claim elsewhere, leaving place unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -184928,8 +184928,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location panel lists a US city/country alongside an unqualified 'Remote', with no clause widening or restricting it to a region including Portugal, so geography is genuinely ambiguous.",
      "Portugal OUT · side panel: \"New York, New York, United States; Remote\""
@@ -184959,7 +184959,7 @@
     ],
     "read": "employer",
     "read_url": "https://www.codeandtheory.com/careers/8759578002?gh_jid=8759578002",
-    "reason": "cut on place, but not sure of it · Location panel lists a US city/country alongside an unqualified 'Remote', with no clause widening or restricting it to a region including Portugal, so geography is genuinely ambiguous.",
+    "reason": "Location panel lists a US city/country alongside an unqualified 'Remote', with no clause widening or restricting it to a region including Portugal, so geography is genuinely ambiguous.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -185775,8 +185775,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Side panel restricts to Germany while the body just says 'Location: Remote' with no country, a contradiction the posting doesn't resolve.",
      "Portugal OUT · side panel: \"Remote · open to: Germany\""
@@ -185804,7 +185804,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/product-design-expert-ux-specialist",
-    "reason": "cut on place, but not sure of it · Side panel restricts to Germany while the body just says 'Location: Remote' with no country, a contradiction the posting doesn't resolve.",
+    "reason": "Side panel restricts to Germany while the body just says 'Location: Remote' with no country, a contradiction the posting doesn't resolve.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -185832,9 +185832,7 @@
        "Senior Product Designer"
       ]
      }
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -188290,8 +188288,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · side panel restricts the role to Germany while the body just says Remote, creating a genuine contradiction over location",
      "Portugal OUT · side panel: \"Remote · open to: Germany\""
@@ -188319,7 +188317,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/product-design-expert-vibecoding",
-    "reason": "cut on place, but not sure of it · side panel restricts the role to Germany while the body just says Remote, creating a genuine contradiction over location",
+    "reason": "side panel restricts the role to Germany while the body just says Remote, creating a genuine contradiction over location",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -188347,9 +188345,7 @@
        "Senior Product Designer"
       ]
      }
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -188372,8 +188368,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Side panel restricts this remote contractor role to Germany only, excluding Portugal.",
      "Portugal OUT · side panel: \"Remote · open to: Germany\""
@@ -188401,7 +188397,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://himalayas.app/companies/mercor/jobs/senior-design-expert-ux-focus",
-    "reason": "cut on place, but not sure of it · Side panel restricts this remote contractor role to Germany only, excluding Portugal.",
+    "reason": "Side panel restricts this remote contractor role to Germany only, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -188429,9 +188425,7 @@
        "Senior Product Designer"
       ]
      }
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -198273,8 +198267,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · A specific target-locations list is given and it does not include Portugal.",
      "Portugal OUT · body: \"Target Locations: Beijing, China; London, United Kingdom; Barcelona, Spain; Toronto, Canada; Vancouver, Canada; New York City, NY; Austin, TX; Denver, CO; Portland, OR; Seattle, WA; Atlanta, GA\""
@@ -198306,7 +198300,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobspresso.co/job/ui-designer/",
-    "reason": "cut on place, but not sure of it · A specific target-locations list is given and it does not include Portugal.",
+    "reason": "A specific target-locations list is given and it does not include Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -210971,24 +210965,25 @@
    "title": "UX Designer",
    "url": "https://wellfound.com/jobs/4571300-ux-designer",
    "verdict": {
-    "role": "yes",
+    "role": "no",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "only the job board's copy could be read · Title is UX Designer and the posting states remote work from Everywhere, including Europe, which covers Portugal.",
+     "Posting explicitly states this is an unpaid internship-style opportunity with no equity and no experience required.",
      "Portugal in · under the title: \"Remote (Everywhere)\"",
      "Portugal in · side panel: \"Hires remotely in Everywhere\"",
-     "Portugal in · side panel: \"Australia • Europe • North America • South America • Africa • Asia • Antarctica\""
+     "Portugal in · side panel: \"Company Location Australia • Europe • North America • South America • Africa • Asia • Antarctica\"",
+     "Portugal in · body: \"Expand your global network, primarily in Europe, North America, and Asia-Pacific.\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "UX Designer",
      "company": "PeakTew",
-     "seniority": "junior",
+     "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
      "countries": [
@@ -211001,18 +210996,16 @@
       "Antarctica"
      ],
      "portugal_ok": "yes",
-     "salary": "Unpaid",
+     "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "Reposted: 1 week ago"
+     "posted": "Reposted: 2 weeks ago"
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4571300-ux-designer",
-    "reason": "Title is UX Designer and the posting states remote work from Everywhere, including Europe, which covers Portugal.",
+    "reason": "Posting explicitly states this is an unpaid internship-style opportunity with no equity and no experience required.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -211029,15 +211022,20 @@
       "says": "portugal_in"
      },
      {
-      "quote": "Australia • Europe • North America • South America • Africa • Asia • Antarctica",
+      "quote": "Company Location Australia • Europe • North America • South America • Africa • Asia • Antarctica",
       "where": "side panel",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Expand your global network, primarily in Europe, North America, and Asia-Pacific.",
+      "where": "body",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ced620fb962e499b.jpg",
-    "read_at": "2026-10-03T12:06:33",
+    "read_at": "2026-10-04T13:58:04",
     "evidence": {
      "board_posted": "2026-09-19"
     }
@@ -212319,15 +212317,16 @@
    "title": "UI Designer",
    "url": "https://wellfound.com/jobs/4481288-ui-designer",
    "verdict": {
-    "role": "yes",
+    "role": "no",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "only the job board's copy could be read · Title is a genuine UI/design role and the posting is remote everywhere, which includes Portugal.",
+     "This is currently an unpaid opportunity / internship-style role, which is a cut regardless of location or title.",
      "Portugal in · under the title: \"Remote (Everywhere)\"",
-     "Portugal in · under the title: \"Hires remotely in Everywhere\"",
-     "Portugal in · side panel: \"Company Location\n\nAustralia • Europe • North America • South America • Africa • Asia • Antarctica\""
+     "Portugal in · side panel: \"Hires remotely in Everywhere\"",
+     "Portugal in · side panel: \"Company Location Australia • Europe • North America • South America • Africa • Asia • Antarctica\"",
+     "Portugal in · opening paragraph: \"This is an online role, meaning that you would be working remotely.\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -212349,16 +212348,16 @@
       "Antarctica"
      ],
      "portugal_ok": "yes",
-     "salary": "unpaid",
+     "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "2 weeks ago"
+     "posted": "Reposted: 2 weeks ago"
     },
     "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4481288-ui-designer",
-    "reason": "Title is a genuine UI/design role and the posting is remote everywhere, which includes Portugal.",
+    "reason": "This is currently an unpaid opportunity / internship-style role, which is a cut regardless of location or title.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -212371,19 +212370,24 @@
      },
      {
       "quote": "Hires remotely in Everywhere",
-      "where": "under the title",
+      "where": "side panel",
       "says": "portugal_in"
      },
      {
-      "quote": "Company Location\n\nAustralia • Europe • North America • South America • Africa • Asia • Antarctica",
+      "quote": "Company Location Australia • Europe • North America • South America • Africa • Asia • Antarctica",
       "where": "side panel",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "This is an online role, meaning that you would be working remotely.",
+      "where": "opening paragraph",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/908488b799da4a4a.jpg",
-    "read_at": "2026-10-03T12:06:34",
+    "read_at": "2026-10-04T13:58:05",
     "evidence": {
      "board_posted": "2026-09-19"
     }
@@ -217510,8 +217514,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Requires obtaining a US Public Trust clearance for a federal agency, restricting the role to US-authorized workers.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -217540,7 +217544,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578966",
-    "reason": "cut on place, but not sure of it · Requires obtaining a US Public Trust clearance for a federal agency, restricting the role to US-authorized workers.",
+    "reason": "Requires obtaining a US Public Trust clearance for a federal agency, restricting the role to US-authorized workers.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -217561,59 +217565,7 @@
     "found_by": null,
     "shot": "data/shots/706aa58585f64e60.jpg",
     "read_at": "2026-10-03T12:20:52",
-    "evidence": {},
-    "copies": [
-     {
-      "id": "b70cfdafe50042fd",
-      "url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     },
-     {
-      "id": "8556829fc436446f",
-      "url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     },
-     {
-      "id": "24533fcc5fb64147",
-      "url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     },
-     {
-      "id": "b99841682eca45fa",
-      "url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     },
-     {
-      "id": "ee8e3d113b414686",
-      "url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     }
-    ]
+    "evidence": {}
    }
   },
   {
@@ -217636,8 +217588,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · US federal contractor role requiring a Public Trust security clearance, which requires US work eligibility, ruling out someone based in Portugal.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -217666,7 +217618,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578895",
-    "reason": "cut on place, but not sure of it · US federal contractor role requiring a Public Trust security clearance, which requires US work eligibility, ruling out someone based in Portugal.",
+    "reason": "US federal contractor role requiring a Public Trust security clearance, which requires US work eligibility, ruling out someone based in Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -217687,49 +217639,7 @@
     "found_by": null,
     "shot": "data/shots/fd3b57f7c2a344cb.jpg",
     "read_at": "2026-10-03T12:21:05",
-    "evidence": {},
-    "copies": [
-     {
-      "id": "e49db1c4544a4096",
-      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     },
-     {
-      "id": "f014b7d1de454cc4",
-      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     },
-     {
-      "id": "8a4661300f824d77",
-      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     },
-     {
-      "id": "4f2bda0a99d6417a",
-      "url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
-      "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
-      "source": "builtin",
-      "posted": null,
-      "location": "2 Locations",
-      "lane": "unsure",
-      "read": "board"
-     }
-    ]
+    "evidence": {}
    }
   },
   {
@@ -217752,8 +217662,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role requires US federal Public Trust clearance supporting a US federal agency, effectively restricting it to US-authorized workers only.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -217783,7 +217693,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578985",
-    "reason": "cut on place, but not sure of it · Role requires US federal Public Trust clearance supporting a US federal agency, effectively restricting it to US-authorized workers only.",
+    "reason": "Role requires US federal Public Trust clearance supporting a US federal agency, effectively restricting it to US-authorized workers only.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -217832,8 +217742,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · US federal government Public Trust clearance requirement restricts the role to US-based/eligible candidates.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\""
@@ -217861,7 +217771,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578990",
-    "reason": "cut on place, but not sure of it · US federal government Public Trust clearance requirement restricts the role to US-based/eligible candidates.",
+    "reason": "US federal government Public Trust clearance requirement restricts the role to US-based/eligible candidates.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -218128,8 +218038,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Federal contractor role requiring US Public Trust clearance and USWDS/508 compliance ties the job to the United States, not remote-eligible from Portugal.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -218158,7 +218068,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578327",
-    "reason": "cut on place, but not sure of it · Federal contractor role requiring US Public Trust clearance and USWDS/508 compliance ties the job to the United States, not remote-eligible from Portugal.",
+    "reason": "Federal contractor role requiring US Public Trust clearance and USWDS/508 compliance ties the job to the United States, not remote-eligible from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -218202,8 +218112,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role requires US federal Public Trust clearance and compliance with US Web Design System standards, restricting it to US-based/eligible candidates.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -218232,7 +218142,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578865",
-    "reason": "cut on place, but not sure of it · Role requires US federal Public Trust clearance and compliance with US Web Design System standards, restricting it to US-based/eligible candidates.",
+    "reason": "Role requires US federal Public Trust clearance and compliance with US Web Design System standards, restricting it to US-based/eligible candidates.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -218276,8 +218186,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · US federal contractor role requiring Public Trust security clearance means US residency/citizenship, excluding Portugal.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -218306,7 +218216,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578317",
-    "reason": "cut on place, but not sure of it · US federal contractor role requiring Public Trust security clearance means US residency/citizenship, excluding Portugal.",
+    "reason": "US federal contractor role requiring Public Trust security clearance means US residency/citizenship, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -218738,8 +218648,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role requires US Public Trust clearance and USWDS federal compliance, making it US-only despite 'Remote or Hybrid' label.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -218768,7 +218678,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578968",
-    "reason": "cut on place, but not sure of it · Role requires US Public Trust clearance and USWDS federal compliance, making it US-only despite 'Remote or Hybrid' label.",
+    "reason": "Role requires US Public Trust clearance and USWDS federal compliance, making it US-only despite 'Remote or Hybrid' label.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -218812,8 +218722,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role requires a US federal Public Trust clearance and supports a US federal agency, so it cannot be done from Portugal.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -218842,7 +218752,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer-ii/9578971",
-    "reason": "cut on place, but not sure of it · Role requires a US federal Public Trust clearance and supports a US federal agency, so it cannot be done from Portugal.",
+    "reason": "Role requires a US federal Public Trust clearance and supports a US federal agency, so it cannot be done from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -218961,8 +218871,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role requires US Public Trust clearance for a federal agency contract, which demands US work authorization/residency, ruling out Portugal.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -218991,7 +218901,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578324",
-    "reason": "cut on place, but not sure of it · Role requires US Public Trust clearance for a federal agency contract, which demands US work authorization/residency, ruling out Portugal.",
+    "reason": "Role requires US Public Trust clearance for a federal agency contract, which demands US work authorization/residency, ruling out Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -219035,8 +218945,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · US federal contractor role requiring Public Trust clearance (US work authorization/citizenship), making it unavailable to someone based in Portugal.",
      "Portugal OUT · body: \"Must be able to obtain a Public Trust.\"",
@@ -219065,7 +218975,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ui-ux-designer/9578982",
-    "reason": "cut on place, but not sure of it · US federal contractor role requiring Public Trust clearance (US work authorization/citizenship), making it unavailable to someone based in Portugal.",
+    "reason": "US federal contractor role requiring Public Trust clearance (US work authorization/citizenship), making it unavailable to someone based in Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -219730,8 +219640,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Panel restricts hiring to USA but the description itself just says 'Fully Remote' with no country stated, creating a contradiction that can't be resolved from the page.",
      "Portugal OUT · side panel: \"Hiring Remotely in USA\""
@@ -219761,7 +219671,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-product-designer-ux-ui-specialist/9684977",
-    "reason": "cut on place, but not sure of it · Panel restricts hiring to USA but the description itself just says 'Fully Remote' with no country stated, creating a contradiction that can't be resolved from the page.",
+    "reason": "Panel restricts hiring to USA but the description itself just says 'Fully Remote' with no country stated, creating a contradiction that can't be resolved from the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -219779,9 +219689,7 @@
     "read_at": "2026-10-03T18:40:02",
     "evidence": {
      "board_posted": "2026-08-05"
-    },
-    "agency": true,
-    "hiring_for": "Delineate"
+    }
    }
   },
   {
@@ -220071,8 +219979,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is clearly UI/UX design, but posting says remote with no country while also stating LATAM talent is preferred, leaving the Portugal fit unclear.",
      "Portugal OUT · body: \"Talent from the LATAM region preferred (Colombia, Mexico, Panama, Brazil, etc.)\""
@@ -220103,7 +220011,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://dribbble.com/jobs/310043-SaaS-Product-UI-UX-designer",
-    "reason": "cut on place, but not sure of it · Role is clearly UI/UX design, but posting says remote with no country while also stating LATAM talent is preferred, leaving the Portugal fit unclear.",
+    "reason": "Role is clearly UI/UX design, but posting says remote with no country while also stating LATAM talent is preferred, leaving the Portugal fit unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -221135,8 +221043,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · City (NYC) is listed but tagged 'Remote Friendly' and the team describes itself as fully remote, so the actual hiring geography is unclear.",
      "Portugal OUT · side panel: \"New York City, NY\""
@@ -221164,7 +221072,7 @@
     ],
     "read": "board",
     "read_url": "https://dribbble.com/jobs/240018-Product-Design-Lead",
-    "reason": "cut on place, but not sure of it · City (NYC) is listed but tagged 'Remote Friendly' and the team describes itself as fully remote, so the actual hiring geography is unclear.",
+    "reason": "City (NYC) is listed but tagged 'Remote Friendly' and the team describes itself as fully remote, so the actual hiring geography is unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -221204,8 +221112,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Panel states United States with pay tiers tied to US locations, but a line allows non-US applicants to request their own range, making location unclear.",
      "Portugal OUT · side panel: \"United States\"",
@@ -221237,7 +221145,7 @@
     ],
     "read": "board",
     "read_url": "https://nodesk.co/remote-jobs/apollo-senior-product-designer-2/",
-    "reason": "cut on place, but not sure of it · Panel states United States with pay tiers tied to US locations, but a line allows non-US applicants to request their own range, making location unclear.",
+    "reason": "Panel states United States with pay tiers tied to US locations, but a line allows non-US applicants to request their own range, making location unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -223129,8 +223037,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Job is located in the United States with no remote or wider location mentioned.",
      "Portugal OUT · side panel: \"United States of America\"",
@@ -223161,7 +223069,7 @@
     ],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/perplexity-ai/jobs/lead-product-designer-enterprise_us_ccb3uauy",
-    "reason": "cut on place, but not sure of it · Job is located in the United States with no remote or wider location mentioned.",
+    "reason": "Job is located in the United States with no remote or wider location mentioned.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -224360,8 +224268,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is senior/staff product design (clear yes), but location is stated as United States with only a vague 'geographic flexibility' note that doesn't clearly include Portugal.",
      "Portugal OUT · side panel: \"United States of America\"",
@@ -224390,7 +224298,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/valon-mortgage/jobs/staff-product-designer_fr_hw22umm7",
-    "reason": "cut on place, but not sure of it · Role is senior/staff product design (clear yes), but location is stated as United States with only a vague 'geographic flexibility' note that doesn't clearly include Portugal.",
+    "reason": "Role is senior/staff product design (clear yes), but location is stated as United States with only a vague 'geographic flexibility' note that doesn't clearly include Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -230462,8 +230370,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is clearly senior product design (yes), but location is listed as New York while the benefits section vaguely mentions geographic flexibility without naming eligible countries, making place unclear.",
      "Portugal OUT · side panel: \"New York\"",
@@ -230490,7 +230398,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/valon-mortgage/jobs/senior-product-designer-servicing_new-york_es24mbyj",
-    "reason": "cut on place, but not sure of it · Role is clearly senior product design (yes), but location is listed as New York while the benefits section vaguely mentions geographic flexibility without naming eligible countries, making place unclear.",
+    "reason": "Role is clearly senior product design (yes), but location is listed as New York while the benefits section vaguely mentions geographic flexibility without naming eligible countries, making place unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -234228,8 +234136,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · The posting names Berlin as the location and nothing on the page widens this to Europe or a country list including Portugal.",
      "Portugal OUT · side panel: \"Berlin\"",
@@ -234260,7 +234168,7 @@
     ],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/fella-health/jobs/product-designer_berlin_v5birnfh",
-    "reason": "cut on place, but not sure of it · The posting names Berlin as the location and nothing on the page widens this to Europe or a country list including Portugal.",
+    "reason": "The posting names Berlin as the location and nothing on the page widens this to Europe or a country list including Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -273444,8 +273352,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting names Barcelona, Spain with a 'Remote Friendly' tag and relocation support, but company base is unclear (Barcelona and Istanbul both mentioned), so under the Spain exception this stays unclear rather than a cut.",
      "Portugal OUT · side panel: \"Location: Barcelona, Spain\"",
@@ -273477,7 +273385,7 @@
     ],
     "read": "board",
     "read_url": "https://dribbble.com/jobs/310307-Product-Designer-Mobile-Apps",
-    "reason": "cut on place, but not sure of it · Posting names Barcelona, Spain with a 'Remote Friendly' tag and relocation support, but company base is unclear (Barcelona and Istanbul both mentioned), so under the Spain exception this stays unclear rather than a cut.",
+    "reason": "Posting names Barcelona, Spain with a 'Remote Friendly' tag and relocation support, but company base is unclear (Barcelona and Istanbul both mentioned), so under the Spain exception this stays unclear rather than a cut.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -273924,8 +273832,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is stated as United States with remote type, but no wider geography is given, so it is US-only remote.",
      "Portugal OUT · side panel: \"United States\""
@@ -273953,7 +273861,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/magiceden/32fff02e-df64-43c2-a087-01292aa4cf5d",
-    "reason": "cut on place, but not sure of it · Location is stated as United States with remote type, but no wider geography is given, so it is US-only remote.",
+    "reason": "Location is stated as United States with remote type, but no wider geography is given, so it is US-only remote.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -275206,8 +275114,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is stated as New York with no remote mention, so it is onsite there, not reachable from Portugal.",
      "Portugal OUT · side panel: \"Location\n\nNew York\""
@@ -275237,7 +275145,7 @@
     ],
     "read": "employer",
     "read_url": "https://current.com/careers/open-positions/?id=8196494&gh_jid=8196494",
-    "reason": "cut on place, but not sure of it · Location is stated as New York with no remote mention, so it is onsite there, not reachable from Portugal.",
+    "reason": "Location is stated as New York with no remote mention, so it is onsite there, not reachable from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -277233,8 +277141,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is Tokyo, Japan with remote tied to that city, excluding Portugal.",
      "Portugal OUT · side panel: \"Location: Tokyo, Japan\"",
@@ -277263,7 +277171,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/bjakcareer/87da6e95-b5bc-49b5-99ec-aea44264bcd3",
-    "reason": "cut on place, but not sure of it · Location is Tokyo, Japan with remote tied to that city, excluding Portugal.",
+    "reason": "Location is Tokyo, Japan with remote tied to that city, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -277475,8 +277383,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is Switzerland/Zurich with no wider geography stated, so place is out despite 'Remote' location type.",
      "Portugal OUT · side panel: \"Location\n\nSwitzerland\"",
@@ -277507,7 +277415,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/bjakcareer/f02d0053-0ae9-4992-bc96-b58979b2bfc7",
-    "reason": "cut on place, but not sure of it · Location is Switzerland/Zurich with no wider geography stated, so place is out despite 'Remote' location type.",
+    "reason": "Location is Switzerland/Zurich with no wider geography stated, so place is out despite 'Remote' location type.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -277720,8 +277628,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is remote but restricted to Spain, and the hiring company (ActAI/bjak) does not appear to be based in Spain, so per the Spain exception this is unclear rather than a clear no.",
      "Portugal OUT · side panel: \"Location\n\nSpain\"",
@@ -277752,7 +277660,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/bjakcareer/340337a9-d986-4d41-b0ed-f6f2de5f2d24",
-    "reason": "cut on place, but not sure of it · Role is remote but restricted to Spain, and the hiring company (ActAI/bjak) does not appear to be based in Spain, so per the Spain exception this is unclear rather than a clear no.",
+    "reason": "Role is remote but restricted to Spain, and the hiring company (ActAI/bjak) does not appear to be based in Spain, so per the Spain exception this is unclear rather than a clear no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -278815,8 +278723,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is listed as Paris, a remote-tied-to-city posting that is not widened to Europe or Portugal anywhere on the page.",
      "Portugal OUT · side panel: \"Paris\""
@@ -278844,7 +278752,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/voodoo/71108a9f-ab96-4190-8d9d-e4e055ddd8c8",
-    "reason": "cut on place, but not sure of it · Location is listed as Paris, a remote-tied-to-city posting that is not widened to Europe or Portugal anywhere on the page.",
+    "reason": "Location is listed as Paris, a remote-tied-to-city posting that is not widened to Europe or Portugal anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -280432,8 +280340,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Title says Design Engineer (passes role), but location is stated as Remote in United States with a vague line about non-US applicants, leaving place unclear.",
      "Portugal OUT · side panel: \"Remote location: Remote in United States\"",
@@ -280464,7 +280372,7 @@
     ],
     "read": "employer",
     "read_url": "https://stripe.com/careers/listing/design-engineer-expansion/8212314?gh_jid=8212314",
-    "reason": "cut on place, but not sure of it · Title says Design Engineer (passes role), but location is stated as Remote in United States with a vague line about non-US applicants, leaving place unclear.",
+    "reason": "Title says Design Engineer (passes role), but location is stated as Remote in United States with a vague line about non-US applicants, leaving place unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -280512,8 +280420,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Office is Barcelona (hybrid, 50% in-office) and Stripe is a US-based company, so under the Spain exception this is unclear rather than a clear no.",
      "Portugal OUT · side panel: \"Office location: Barcelona\""
@@ -280543,7 +280451,7 @@
     ],
     "read": "employer",
     "read_url": "https://stripe.com/careers/listing/product-designer-design-systems/7983076?gh_jid=7983076",
-    "reason": "cut on place, but not sure of it · Office is Barcelona (hybrid, 50% in-office) and Stripe is a US-based company, so under the Spain exception this is unclear rather than a clear no.",
+    "reason": "Office is Barcelona (hybrid, 50% in-office) and Stripe is a US-based company, so under the Spain exception this is unclear rather than a clear no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -286031,8 +285939,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is London, UK with remote working tied to the UK office, not Portugal.",
      "Portugal OUT · side panel: \"London, England, United Kingdom\"",
@@ -286063,7 +285971,7 @@
     ],
     "read": "employer",
     "read_url": "https://apply.workable.com/our-future-health/j/30FBB903C2/",
-    "reason": "cut on place, but not sure of it · Location is London, UK with remote working tied to the UK office, not Portugal.",
+    "reason": "Location is London, UK with remote working tied to the UK office, not Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -288716,8 +288624,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Salary tied to US state-specific hiring laws and USD compensation indicate this is a US-only role with no mention of Portugal or Europe.",
      "Portugal OUT · body: \"Prudential is required by state specific laws to include the salary range for this role when hiring a resident in applicable locations.\""
@@ -288745,7 +288653,7 @@
     ],
     "read": "board",
     "read_url": "https://builtin.com/job/senior-ux-experience-designer/11318454",
-    "reason": "cut on place, but not sure of it · Salary tied to US state-specific hiring laws and USD compensation indicate this is a US-only role with no mention of Portugal or Europe.",
+    "reason": "Salary tied to US state-specific hiring laws and USD compensation indicate this is a US-only role with no mention of Portugal or Europe.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -289823,8 +289731,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Listing shows 'US, Remote' for this role, restricting it to the United States and excluding Portugal.",
      "Portugal OUT · footer or small print: \"Senior Product Designer, AI Platform\nUS, Remote\""
@@ -289854,7 +289762,7 @@
     ],
     "read": "employer",
     "read_url": "https://www.gladly.ai/careers/?utm_source=greenhouse-recruiting&utm_medium=referral&utm_campaign=careers&gh_jid=8208190",
-    "reason": "cut on place, but not sure of it · Listing shows 'US, Remote' for this role, restricting it to the United States and excluding Portugal.",
+    "reason": "Listing shows 'US, Remote' for this role, restricting it to the United States and excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -294901,8 +294809,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Remote-Spain posting from an African fintech not based in Spain, so the Spain exception makes location unclear rather than a hard no.",
      "Portugal OUT · under the title: \"Remote, Spain\""
@@ -294932,7 +294840,7 @@
     ],
     "read": "employer",
     "read_url": "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4987960101",
-    "reason": "cut on place, but not sure of it · Remote-Spain posting from an African fintech not based in Spain, so the Spain exception makes location unclear rather than a hard no.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Remote-Spain posting from an African fintech not based in Spain, so the Spain exception makes location unclear rather than a hard no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -298926,9 +298834,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
      "Portugal OUT · under the title: \"Spain\"",
@@ -298961,7 +298869,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/ce267460-c258-4c82-a45d-fa787b92116c",
-    "reason": "the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Posting names Spain under the title but later widens to 'eligible European locations' and the hiring company's base is unknown, so place is unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -298989,9 +298897,7 @@
     "read_at": "2026-10-02T18:41:51",
     "evidence": {
      "employer_posted": "2026-09-28"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -299393,8 +299299,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is clearly senior product design (yes); location is Spain specifically, and since Spain borders Portugal the rule requires knowing the hiring company's base, which is not stated on the page, so place stays unclear rather than no.",
      "Portugal OUT · under the title: \"Spain\"",
@@ -299425,7 +299331,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/a01f4168-f5b6-4a07-9c41-9aae6def7b7a",
-    "reason": "cut on place, but not sure of it · Role is clearly senior product design (yes); location is Spain specifically, and since Spain borders Portugal the rule requires knowing the hiring company's base, which is not stated on the page, so place stays unclear rather than no.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Role is clearly senior product design (yes); location is Spain specifically, and since Spain borders Portugal the rule requires knowing the hiring company's base, which is not stated on the page, so place stays unclear rather than no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -299448,9 +299354,7 @@
     "read_at": "2026-10-02T18:42:18",
     "evidence": {
      "employer_posted": "2026-10-01"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -301353,9 +301257,9 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
      "Portugal OUT · under the title: \"Spain\"",
@@ -301386,7 +301290,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/874af8eb-94c8-4743-ad9d-52d4aaf54b99",
-    "reason": "the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -301414,9 +301318,7 @@
     "read_at": "2026-10-02T18:42:40",
     "evidence": {
      "employer_posted": "2026-09-28"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -311330,8 +311232,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Title explicitly says UX, but the hiring list names specific countries including Spain (company HQ in New York, not Spain) without Portugal, leaving the Spain exception unresolved.",
      "Portugal OUT · under the title: \"Remote (Argentina • Brazil +3)\"",
@@ -311366,7 +311268,7 @@
     ],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4657101-ux-writer",
-    "reason": "cut on place, but not sure of it · Title explicitly says UX, but the hiring list names specific countries including Spain (company HQ in New York, not Spain) without Portugal, leaving the Spain exception unresolved.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Title explicitly says UX, but the hiring list names specific countries including Spain (company HQ in New York, not Spain) without Portugal, leaving the Spain exception unresolved.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -313020,8 +312922,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is Paris, France with only a vague 'Remote Friendly' tag tied to that city, not widened to Portugal or Europe.",
      "Portugal OUT · side panel: \"Location Paris, France\""
@@ -313051,7 +312953,7 @@
     ],
     "read": "board",
     "read_url": "https://dribbble.com/jobs/310538-Senior-Product-Designer-UX-UI",
-    "reason": "cut on place, but not sure of it · Location is Paris, France with only a vague 'Remote Friendly' tag tied to that city, not widened to Portugal or Europe.",
+    "reason": "Location is Paris, France with only a vague 'Remote Friendly' tag tied to that city, not widened to Portugal or Europe.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -317945,8 +317847,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Title is on-site San Francisco, but body widens to remote with timezone overlap and names no excluded countries, leaving location genuinely unclear.",
      "Portugal OUT · side panel: \"San Francisco\""
@@ -317972,7 +317874,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/clera/75a37502-4e2f-4f02-8b8a-97d6e9d6568e",
-    "reason": "cut on place, but not sure of it · Title is on-site San Francisco, but body widens to remote with timezone overlap and names no excluded countries, leaving location genuinely unclear.",
+    "reason": "Title is on-site San Francisco, but body widens to remote with timezone overlap and names no excluded countries, leaving location genuinely unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -325423,8 +325325,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Side panel names US - California but the posting also calls itself remote-first and tags #LI-Remote, creating a contradiction the location alone can't resolve.",
      "Portugal OUT · side panel: \"US - California\""
@@ -325454,7 +325356,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/93226790-dcd0-4630-98ca-1c079e437a36/ba2bcdcf-8554-4f0f-9f1f-391c17f875d7",
-    "reason": "cut on place, but not sure of it · Side panel names US - California but the posting also calls itself remote-first and tags #LI-Remote, creating a contradiction the location alone can't resolve.",
+    "reason": "Side panel names US - California but the posting also calls itself remote-first and tags #LI-Remote, creating a contradiction the location alone can't resolve.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -327858,8 +327760,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is a design-leaning Design Engineer (yes), but location is San Francisco onsite with only a vague exception for 'exceptional candidates' remote - not clearly including Portugal.",
      "Portugal OUT · side panel: \"Location: San Francisco\"",
@@ -327886,7 +327788,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/verahealth/145a3683-5acc-4a22-9a62-99968359c61a",
-    "reason": "cut on place, but not sure of it · Role is a design-leaning Design Engineer (yes), but location is San Francisco onsite with only a vague exception for 'exceptional candidates' remote - not clearly including Portugal.",
+    "reason": "Role is a design-leaning Design Engineer (yes), but location is San Francisco onsite with only a vague exception for 'exceptional candidates' remote - not clearly including Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -335584,8 +335486,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Remote role is tied to New York/Eastern Time with no widening to Europe or Portugal.",
      "Portugal OUT · side panel: \"New York, NY (Remote); Talkspace; Remote\""
@@ -335615,7 +335517,7 @@
     ],
     "read": "employer",
     "read_url": "https://www.talkspace.com/careers/job?gh_jid=6182572004",
-    "reason": "cut on place, but not sure of it · Remote role is tied to New York/Eastern Time with no widening to Europe or Portugal.",
+    "reason": "Remote role is tied to New York/Eastern Time with no widening to Europe or Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -336542,8 +336444,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · The application itself asks about US visa sponsorship and US state of residence, indicating the role requires work authorization in the United States, which excludes Portugal.",
      "Portugal OUT · body: \"Do you now, or will you in the future, require sponsorship for employment visa status (e.g., H-1B visa status, etc.) to work legally for Zocdoc, Inc. in the United States?\"",
@@ -336574,7 +336476,7 @@
     ],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/zocdoc/jobs/7612536",
-    "reason": "cut on place, but not sure of it · The application itself asks about US visa sponsorship and US state of residence, indicating the role requires work authorization in the United States, which excludes Portugal.",
+    "reason": "The application itself asks about US visa sponsorship and US state of residence, indicating the role requires work authorization in the United States, which excludes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -336602,19 +336504,7 @@
     "read_at": "2026-10-04T13:04:29",
     "evidence": {
      "employer_posted": "2026-09-11"
-    },
-    "copies": [
-     {
-      "id": "3e2b792c24b34260",
-      "url": "https://job-boards.greenhouse.io/zocdoc/jobs/7716614",
-      "read_url": "https://job-boards.greenhouse.io/zocdoc/jobs/7716614",
-      "source": "greenhouse/zocdoc",
-      "posted": "2026-09-11",
-      "location": "Silicon Valley, CA; California",
-      "lane": "unsure",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -336639,8 +336529,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Application form asks about US work visa sponsorship and US state of residence, indicating the role is based in and requires authorization for the United States.",
      "Portugal OUT · body: \"Do you now, or will you in the future, require sponsorship for employment visa status (e.g., H-1B visa status, etc.) to work legally for Zocdoc, Inc. in the United States?\"",
@@ -336672,7 +336562,7 @@
     ],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/zocdoc/jobs/7716614",
-    "reason": "cut on place, but not sure of it · Application form asks about US work visa sponsorship and US state of residence, indicating the role is based in and requires authorization for the United States.",
+    "reason": "Application form asks about US work visa sponsorship and US state of residence, indicating the role is based in and requires authorization for the United States.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -337736,8 +337626,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Title says Remote but the company lists employee geography as US, Australia, Canada, South America only, with a required US-work-authorization question, creating a genuine contradiction about whether Portugal is included.",
      "Portugal OUT · body: \"Our HQ is located in New York City, but we have employees located throughout the US, Australia, Canada and South America.\"",
@@ -337771,7 +337661,7 @@
     ],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/flex/jobs/4722531005",
-    "reason": "cut on place, but not sure of it · Title says Remote but the company lists employee geography as US, Australia, Canada, South America only, with a required US-work-authorization question, creating a genuine contradiction about whether Portugal is included.",
+    "reason": "Title says Remote but the company lists employee geography as US, Australia, Canada, South America only, with a required US-work-authorization question, creating a genuine contradiction about whether Portugal is included.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -343526,8 +343416,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is clearly senior product design (yes); location is Spain-remote via an unnamed partner company whose base is not stated, so under the Spain exception the place stays unclear rather than no.",
      "Portugal OUT · under the title: \"SpainResearch & Development – Design /Full-Time /Remote\"",
@@ -343558,7 +343448,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/3d652016-c0cf-4569-877a-fb6f291c8558",
-    "reason": "cut on place, but not sure of it · Role is clearly senior product design (yes); location is Spain-remote via an unnamed partner company whose base is not stated, so under the Spain exception the place stays unclear rather than no.",
+    "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · cut on place, but not sure of it · Role is clearly senior product design (yes); location is Spain-remote via an unnamed partner company whose base is not stated, so under the Spain exception the place stays unclear rather than no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -343581,9 +343471,7 @@
     "read_at": "2026-10-03T11:13:42",
     "evidence": {
      "employer_posted": "2026-10-02"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -348606,8 +348494,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Salary stated in Saudi Riyals and page footer repeats the posting as Riyadh, Saudi Arabia with no remote mention.",
      "Portugal OUT · side panel: \"Compensation: SAR 0 - SAR 15,000 - monthly\"",
@@ -348637,7 +348525,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/jobsforhumanity/744000144548827",
-    "reason": "cut on place, but not sure of it · Salary stated in Saudi Riyals and page footer repeats the posting as Riyadh, Saudi Arabia with no remote mention.",
+    "reason": "Salary stated in Saudi Riyals and page footer repeats the posting as Riyadh, Saudi Arabia with no remote mention.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -348665,9 +348553,7 @@
     "read_at": "2026-10-03T11:39:53",
     "evidence": {
      "employer_posted": "2026-08-20"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -353084,8 +352970,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting location is Beirut, Lebanon, with no remote or wider location mentioned.",
      "Portugal OUT · footer or small print: \"UX/UI Designer\nBeirut, Lebanon\nContract\""
@@ -353117,7 +353003,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/jobsforhumanity/743999971916863",
-    "reason": "cut on place, but not sure of it · Posting location is Beirut, Lebanon, with no remote or wider location mentioned.",
+    "reason": "Posting location is Beirut, Lebanon, with no remote or wider location mentioned.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -353135,9 +353021,7 @@
     "read_at": "2026-10-03T11:51:26",
     "evidence": {
      "employer_posted": "2024-03-06"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -353247,8 +353131,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting location is Los Angeles, CA with no remote or wider location statement.",
      "Portugal OUT · footer or small print: \"Los Angeles, CA\""
@@ -353278,7 +353162,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/jobsforhumanity/743999970524063",
-    "reason": "cut on place, but not sure of it · Posting location is Los Angeles, CA with no remote or wider location statement.",
+    "reason": "Posting location is Los Angeles, CA with no remote or wider location statement.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -353296,9 +353180,7 @@
     "read_at": "2026-10-03T11:51:39",
     "evidence": {
      "employer_posted": "2024-02-28"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -353320,8 +353202,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting is located in Beirut, Lebanon with no remote widening stated.",
      "Portugal OUT · footer or small print: \"UX/UI Freelance Designer Beirut, Lebanon Contract\""
@@ -353351,7 +353233,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/jobsforhumanity/743999956052114",
-    "reason": "cut on place, but not sure of it · Posting is located in Beirut, Lebanon with no remote widening stated.",
+    "reason": "Posting is located in Beirut, Lebanon with no remote widening stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -353369,9 +353251,7 @@
     "read_at": "2026-10-03T11:51:43",
     "evidence": {
      "employer_posted": "2024-01-02"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -354010,8 +353890,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Posting is remote but tied to Oregon, US, not Portugal.",
      "Portugal OUT · footer or small print: \"Remote, OR\""
@@ -354041,7 +353921,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/dribbble/111946530",
-    "reason": "cut on place, but not sure of it · Posting is remote but tied to Oregon, US, not Portugal.",
+    "reason": "Posting is remote but tied to Oregon, US, not Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -355870,8 +355750,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is specifically Sweden, remote is tied to that country, not to Portugal or a wider region.",
      "Portugal OUT · side panel: \"Location\n\nSweden\"",
@@ -355902,7 +355782,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/bjakcareer/7451bd8d-56cd-4ac3-9240-eb774486d576",
-    "reason": "cut on place, but not sure of it · Location is specifically Sweden, remote is tied to that country, not to Portugal or a wider region.",
+    "reason": "Location is specifically Sweden, remote is tied to that country, not to Portugal or a wider region.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -355949,8 +355829,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is remote but restricted to Spain, and the company's home base cannot be determined, so the Spain exception leaves it unclear rather than a hard no.",
      "Portugal OUT · side panel: \"Location\n\nSpain\"",
@@ -355981,7 +355861,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/bjakcareer/340337a9-d986-4d41-b0ed-f6f2de5f2d24",
-    "reason": "cut on place, but not sure of it · Role is remote but restricted to Spain, and the company's home base cannot be determined, so the Spain exception leaves it unclear rather than a hard no.",
+    "reason": "Role is remote but restricted to Spain, and the company's home base cannot be determined, so the Spain exception leaves it unclear rather than a hard no.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -356106,8 +355986,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is specifically Switzerland/Zurich, and remote is tied to that country, not widened to Europe.",
      "Portugal OUT · side panel: \"Switzerland\"",
@@ -356136,7 +356016,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/bjakcareer/f02d0053-0ae9-4992-bc96-b58979b2bfc7",
-    "reason": "cut on place, but not sure of it · Location is specifically Switzerland/Zurich, and remote is tied to that country, not widened to Europe.",
+    "reason": "Location is specifically Switzerland/Zurich, and remote is tied to that country, not widened to Europe.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -366505,8 +366385,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location tag names Pakistan and nothing on the page widens it beyond that country.",
      "Portugal OUT · side panel: \"Pakistan\""
@@ -366536,7 +366416,7 @@
     ],
     "read": "employer",
     "read_url": "https://apply.workable.com/pavago/j/78D8A2ED63",
-    "reason": "cut on place, but not sure of it · Location tag names Pakistan and nothing on the page widens it beyond that country.",
+    "reason": "Location tag names Pakistan and nothing on the page widens it beyond that country.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -366554,9 +366434,7 @@
     "read_at": "2026-10-03T13:02:45",
     "evidence": {
      "employer_posted": "2026-09-07"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -367362,8 +367240,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · The side panel names Pakistan as the specific location for this role, and nothing on the page widens it to include Portugal.",
      "Portugal OUT · side panel: \"Pakistan\""
@@ -367393,7 +367271,7 @@
     ],
     "read": "employer",
     "read_url": "https://apply.workable.com/pavago/j/FBE914AB2A",
-    "reason": "cut on place, but not sure of it · The side panel names Pakistan as the specific location for this role, and nothing on the page widens it to include Portugal.",
+    "reason": "The side panel names Pakistan as the specific location for this role, and nothing on the page widens it to include Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -367411,9 +367289,7 @@
     "read_at": "2026-10-03T13:01:12",
     "evidence": {
      "employer_posted": "2026-09-09"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -367437,8 +367313,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · location is specifically Remote-Italy, with no wider geography stated anywhere on the page.",
      "Portugal OUT · side panel: \"Italy\""
@@ -367468,7 +367344,7 @@
     ],
     "read": "employer",
     "read_url": "https://apply.workable.com/pavago/j/0F18DF5030",
-    "reason": "cut on place, but not sure of it · location is specifically Remote-Italy, with no wider geography stated anywhere on the page.",
+    "reason": "location is specifically Remote-Italy, with no wider geography stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -367486,9 +367362,7 @@
     "read_at": "2026-10-03T13:01:00",
     "evidence": {
      "employer_posted": "2026-09-10"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -368104,8 +367978,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · The posting's location tags list Colombia, Brazil and Mexico, not Portugal, and nothing widens this to include Portugal.",
      "Portugal OUT · side panel: \"Colombia Brazil Mexico\""
@@ -368137,7 +368011,7 @@
     ],
     "read": "employer",
     "read_url": "https://apply.workable.com/pavago/j/058BBF03AB",
-    "reason": "cut on place, but not sure of it · The posting's location tags list Colombia, Brazil and Mexico, not Portugal, and nothing widens this to include Portugal.",
+    "reason": "The posting's location tags list Colombia, Brazil and Mexico, not Portugal, and nothing widens this to include Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -368155,9 +368029,7 @@
     "read_at": "2026-10-03T13:01:15",
     "evidence": {
      "employer_posted": "2026-09-09"
-    },
-    "agency": true,
-    "hiring_for": "a client of Pavago"
+    }
    }
   },
   {
@@ -374326,8 +374198,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is listed as New York City with Remote tied to that city, not widened to anywhere else.",
      "Portugal OUT · side panel: \"New York City\""
@@ -374355,7 +374227,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/preql/889f09fb-8562-436b-9b15-30d7d56caae7",
-    "reason": "cut on place, but not sure of it · Location is listed as New York City with Remote tied to that city, not widened to anywhere else.",
+    "reason": "Location is listed as New York City with Remote tied to that city, not widened to anywhere else.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -378232,8 +378104,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Panel directly contradicts itself - 'Berlin (Hybrid)' location vs 'Remote' location type - with benefits text implying a Germany/Berlin base, so place cannot be determined cleanly.",
      "Portugal OUT · side panel: \"Berlin (Hybrid)\"",
@@ -378264,7 +378136,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/justplay-gmbh/94b4bb34-96da-4561-8c05-3afabaf63773",
-    "reason": "cut on place, but not sure of it · Panel directly contradicts itself - 'Berlin (Hybrid)' location vs 'Remote' location type - with benefits text implying a Germany/Berlin base, so place cannot be determined cleanly.",
+    "reason": "Panel directly contradicts itself - 'Berlin (Hybrid)' location vs 'Remote' location type - with benefits text implying a Germany/Berlin base, so place cannot be determined cleanly.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -379582,8 +379454,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is specifically New York and London, not a wider region, and remote here is tied to those cities only.",
      "Portugal OUT · side panel: \"New York; London; New York\""
@@ -379614,7 +379486,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/taptapsend/cddd38a9-41b2-4984-adbe-02977c65192a",
-    "reason": "cut on place, but not sure of it · Location is specifically New York and London, not a wider region, and remote here is tied to those cities only.",
+    "reason": "Location is specifically New York and London, not a wider region, and remote here is tied to those cities only.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -379899,8 +379771,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is stated as US Remote but a line about non-US candidates slightly widens eligibility, so place is unclear rather than a flat no",
      "Portugal OUT · side panel: \"US Remote\""
@@ -379928,7 +379800,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/hims-and-hers/ff10b821-8469-4eb4-ae20-3e739113dfe6",
-    "reason": "cut on place, but not sure of it · Location is stated as US Remote but a line about non-US candidates slightly widens eligibility, so place is unclear rather than a flat no",
+    "reason": "Location is stated as US Remote but a line about non-US candidates slightly widens eligibility, so place is unclear rather than a flat no",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -379974,8 +379846,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Role is genuine senior product design; location says only 'Remote' with no country, but E-Verify and US-style benefits (401k, FSA/DCA) suggest a US-only hire without stating it outright, so place is unclear.",
      "Portugal OUT · footer or small print: \"Prompt Therapy Solutions, Inc is an E-Verify Employer.\""
@@ -380003,7 +379875,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/prompt/4f1f21ce-589e-4c46-a303-03aaee8f54b5",
-    "reason": "cut on place, but not sure of it · Role is genuine senior product design; location says only 'Remote' with no country, but E-Verify and US-style benefits (401k, FSA/DCA) suggest a US-only hire without stating it outright, so place is unclear.",
+    "reason": "Role is genuine senior product design; location says only 'Remote' with no country, but E-Verify and US-style benefits (401k, FSA/DCA) suggest a US-only hire without stating it outright, so place is unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -380849,8 +380721,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location panel says USA (Remote) with US-specific salary, but a later company-wide statement claims they hire across the world, creating a contradiction.",
      "Portugal OUT · side panel: \"USA (Remote)\"",
@@ -380879,7 +380751,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/mystenlabs/b83dab9a-e925-4628-aaca-4caa122d4d73",
-    "reason": "cut on place, but not sure of it · Location panel says USA (Remote) with US-specific salary, but a later company-wide statement claims they hire across the world, creating a contradiction.",
+    "reason": "Location panel says USA (Remote) with US-specific salary, but a later company-wide statement claims they hire across the world, creating a contradiction.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -380930,8 +380802,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Side panel directly contradicts itself - Location says 'Berlin (Hybrid)' while Location Type says 'Remote' - so the place cannot be determined with confidence.",
      "Portugal OUT · side panel: \"Berlin (Hybrid)\"",
@@ -380961,7 +380833,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/justplay-gmbh/75ebcf01-a1b8-4405-8ec5-70ade4991551",
-    "reason": "cut on place, but not sure of it · Side panel directly contradicts itself - Location says 'Berlin (Hybrid)' while Location Type says 'Remote' - so the place cannot be determined with confidence.",
+    "reason": "Side panel directly contradicts itself - Location says 'Berlin (Hybrid)' while Location Type says 'Remote' - so the place cannot be determined with confidence.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -381017,8 +380889,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Named cities (San Francisco/Mexico City) with a vague 'flexible for the right candidate' caveat that neither confirms nor excludes Portugal.",
      "Portugal OUT · side panel: \"Location: San Francisco ; Mexico City Headquarters\""
@@ -381049,7 +380921,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/leona/3af3517b-deca-4eac-a6b8-48d6aa82f4a7",
-    "reason": "cut on place, but not sure of it · Named cities (San Francisco/Mexico City) with a vague 'flexible for the right candidate' caveat that neither confirms nor excludes Portugal.",
+    "reason": "Named cities (San Francisco/Mexico City) with a vague 'flexible for the right candidate' caveat that neither confirms nor excludes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -382528,8 +382400,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Location is restricted to specific US cities, with no mention of Europe or Portugal.",
      "Portugal OUT · side panel: \"New York City; Los Angeles; San Francisco\""
@@ -382559,7 +382431,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/nen-creative/592976fd-2bc4-48a2-92d7-64c9cc7be866",
-    "reason": "cut on place, but not sure of it · Location is restricted to specific US cities, with no mention of Europe or Portugal.",
+    "reason": "Location is restricted to specific US cities, with no mention of Europe or Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -395703,10 +395575,10 @@
    "verdict": {
     "role": "no",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page read is a different job · This is a CAD drafting technician role in Phoenix, Arizona, not a design/UX role and not remote - and the pool title (Design Technician - Site Design at olsson) does not match this posting (actual title matches but company/role is a civil engineering CAD job, not product design).",
+     "CAD drafting/civil site-design technician role, onsite in Phoenix, AZ - not a design role for Cesar and not doable from Portugal.",
      "Portugal OUT · under the title: \"Phoenix, AZ\"",
      "Portugal OUT · opening paragraph: \"Olsson is seeking a talented and experienced Design Technician to join our team in Phoenix, Arizona.\"",
      "Portugal OUT · body: \"Are you legally authorized to work in the United States?\"",
@@ -395717,12 +395589,14 @@
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Design Technician",
+     "role": "Design Technician - Site Design",
      "company": "Olsson",
      "seniority": "unstated",
      "remote": "onsite",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "United States"
+     ],
      "portugal_ok": "no",
      "salary": null,
      "years_xp": 3,
@@ -395730,10 +395604,12 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "remote"
+    ],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/olsson/jobs/4939103008",
-    "reason": "the page read is a different job · This is a CAD drafting technician role in Phoenix, Arizona, not a design/UX role and not remote - and the pool title (Design Technician - Site Design at olsson) does not match this posting (actual title matches but company/role is a civil engineering CAD job, not product design).",
+    "reason": "CAD drafting/civil site-design technician role, onsite in Phoenix, AZ - not a design role for Cesar and not doable from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -395763,7 +395639,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/751043e0f3bb45cd.jpg",
-    "read_at": "2026-10-03T22:54:16",
+    "read_at": "2026-10-04T13:58:05",
     "evidence": {
      "employer_posted": "2026-09-05"
     }
@@ -495557,8 +495433,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "cut on place, but not sure of it · Title contains 'UI' so role qualifies, but the posting is located in Pune, India with no remote option stated.",
      "Portugal OUT · footer or small print: \"Pune, India\""
@@ -495588,7 +495464,7 @@
     ],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/syngentagroup/744000137662999",
-    "reason": "cut on place, but not sure of it · Title contains 'UI' so role qualifies, but the posting is located in Pune, India with no remote option stated.",
+    "reason": "Title contains 'UI' so role qualifies, but the posting is located in Pune, India with no remote option stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",

@@ -4677,8 +4677,8 @@
  },
  "db50199e9c67473e": {
   "id": "db50199e9c67473e",
-  "at": "2026-10-02T17:18:26",
-  "criteria": "2026-10-02.1",
+  "at": "2026-10-04T13:58:45",
+  "criteria": "2026-10-04.1",
   "model": "sonnet",
   "pool_url": "https://jobs.ashbyhq.com/darkroom/6ee92497-4630-4687-a166-d49ec1602755",
   "board": null,
@@ -4686,24 +4686,58 @@
    "url": "https://jobs.ashbyhq.com/darkroom/6ee92497-4630-4687-a166-d49ec1602755",
    "status": 200,
    "shot": "data/shots/db50199e9c67473e.jpg",
-   "error": null,
-   "via": null
+   "error": null
   },
+  "found_by": null,
+  "looked": [],
   "read": "employer",
   "read_url": "https://jobs.ashbyhq.com/darkroom/6ee92497-4630-4687-a166-d49ec1602755",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
   "posting_open": "yes",
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
   "workplace_as_posted": "remote",
+  "location_under_the_title": "Portugal; Brazil; Spain",
+  "place_signals": [
+   {
+    "quote": "Portugal; Brazil; Spain",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This is a fully remote role supporting a team in the EST time zone.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Employees based in or near our New York or Lisbon HQs are expected to work hybrid with weekly in-office time.",
+    "where": "footer or small print",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hub locations include the Brazil and Spain.",
+    "where": "footer or small print",
+    "says": "says_nothing"
+   }
+  ],
   "can_he_do_it_from_portugal": "yes",
-  "place_quote": "Location: Portugal; Brazil; Spain / Location Type: Remote",
+  "place_quote": "Portugal; Brazil; Spain",
   "role_verdict": "no",
   "place_verdict": "remote",
   "cut": true,
-  "reason": "Role is brand/marketing/performance design for an agency (paid ads, email/SMS, landing pages, Amazon creative), not product design, and reports to Director of Creative, not a design leadership role.",
-  "confidence": "high",
-  "inferred": [],
+  "reason": "The role is primarily brand, performance marketing, and campaign design (paid ads, email/SMS, social, landing pages) for an agency, not a product/UX design role.",
+  "confidence": "medium",
+  "inferred": [
+   "seniority"
+  ],
   "fields": {
    "role": "Senior Designer",
    "company": "Darkroom",
@@ -4723,6 +4757,7 @@
    "posted": null
   },
   "stage": "vision",
+  "reader_place": "remote",
   "lane": "cut"
  },
  "a79be1645a19402b": {
@@ -98037,8 +98072,8 @@
  },
  "ced620fb962e499b": {
   "id": "ced620fb962e499b",
-  "at": "2026-10-03T12:06:33",
-  "criteria": "2026-10-02.7",
+  "at": "2026-10-04T13:58:04",
+  "criteria": "2026-10-04.1",
   "model": "sonnet",
   "pool_url": "https://wellfound.com/jobs/4571300-ux-designer",
   "board": {
@@ -98053,6 +98088,8 @@
   "read": "board",
   "read_url": "https://wellfound.com/jobs/4571300-ux-designer",
   "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
   "posting_open": "yes",
   "open_quote": null,
   "language_of_the_posting": "English",
@@ -98076,35 +98113,28 @@
     "says": "says_nothing"
    },
    {
-    "quote": "Australia • Europe • North America • South America • Africa • Asia • Antarctica",
+    "quote": "Company Location Australia • Europe • North America • South America • Africa • Asia • Antarctica",
     "where": "side panel",
     "says": "portugal_in"
    },
    {
-    "quote": "Visa Sponsorship: Not Available",
-    "where": "side panel",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "Relocation: Allowed",
-    "where": "side panel",
-    "says": "says_nothing"
+    "quote": "Expand your global network, primarily in Europe, North America, and Asia-Pacific.",
+    "where": "body",
+    "says": "portugal_in"
    }
   ],
   "can_he_do_it_from_portugal": "yes",
   "place_quote": "Remote (Everywhere)",
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "remote",
-  "cut": false,
-  "reason": "only the job board's copy could be read · Title is UX Designer and the posting states remote work from Everywhere, including Europe, which covers Portugal.",
-  "confidence": "medium",
-  "inferred": [
-   "seniority"
-  ],
+  "cut": true,
+  "reason": "Posting explicitly states this is an unpaid internship-style opportunity with no equity and no experience required.",
+  "confidence": "high",
+  "inferred": [],
   "fields": {
    "role": "UX Designer",
    "company": "PeakTew",
-   "seniority": "junior",
+   "seniority": "unstated",
    "remote": "remote",
    "onsite_days": null,
    "countries": [
@@ -98117,17 +98147,15 @@
     "Antarctica"
    ],
    "portugal_ok": "yes",
-   "salary": "Unpaid",
+   "salary": null,
    "years_xp": null,
    "reports_to": null,
    "language": "English",
-   "posted": "Reposted: 1 week ago"
+   "posted": "Reposted: 2 weeks ago"
   },
   "stage": "vision",
   "reader_place": "remote",
-  "lane": "unsure",
-  "lane_if_employer": "open",
-  "looked_at": "2026-10-03T22:01:27"
+  "lane": "cut"
  },
  "b7c485ef04ac42ec": {
   "id": "b7c485ef04ac42ec",
@@ -98206,8 +98234,8 @@
  },
  "908488b799da4a4a": {
   "id": "908488b799da4a4a",
-  "at": "2026-10-03T12:06:34",
-  "criteria": "2026-10-02.7",
+  "at": "2026-10-04T13:58:05",
+  "criteria": "2026-10-04.1",
   "model": "sonnet",
   "pool_url": "https://wellfound.com/jobs/4481288-ui-designer",
   "board": {
@@ -98222,6 +98250,8 @@
   "read": "board",
   "read_url": "https://wellfound.com/jobs/4481288-ui-designer",
   "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
   "posting_open": "yes",
   "open_quote": null,
   "language_of_the_posting": "English",
@@ -98236,36 +98266,36 @@
    },
    {
     "quote": "Hires remotely in Everywhere",
-    "where": "under the title",
-    "says": "portugal_in"
-   },
-   {
-    "quote": "Remote Work Policy\n\nRemote only",
-    "where": "side panel",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "Company Location\n\nAustralia • Europe • North America • South America • Africa • Asia • Antarctica",
     "where": "side panel",
     "says": "portugal_in"
    },
    {
-    "quote": "Visa Sponsorship\n\nNot Available",
+    "quote": "Remote only",
     "where": "side panel",
     "says": "says_nothing"
    },
    {
-    "quote": "Hiring contact ... United Kingdom",
+    "quote": "Company Location Australia • Europe • North America • South America • Africa • Asia • Antarctica",
+    "where": "side panel",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Visa Sponsorship Not Available",
     "where": "side panel",
     "says": "says_nothing"
+   },
+   {
+    "quote": "This is an online role, meaning that you would be working remotely.",
+    "where": "opening paragraph",
+    "says": "portugal_in"
    }
   ],
   "can_he_do_it_from_portugal": "yes",
   "place_quote": "Remote (Everywhere)",
-  "role_verdict": "yes",
+  "role_verdict": "no",
   "place_verdict": "remote",
-  "cut": false,
-  "reason": "only the job board's copy could be read · Title is a genuine UI/design role and the posting is remote everywhere, which includes Portugal.",
+  "cut": true,
+  "reason": "This is currently an unpaid opportunity / internship-style role, which is a cut regardless of location or title.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -98284,17 +98314,15 @@
     "Antarctica"
    ],
    "portugal_ok": "yes",
-   "salary": "unpaid",
+   "salary": null,
    "years_xp": null,
    "reports_to": null,
    "language": "English",
-   "posted": "2 weeks ago"
+   "posted": "Reposted: 2 weeks ago"
   },
   "stage": "vision",
   "reader_place": "remote",
-  "lane": "unsure",
-  "lane_if_employer": "open",
-  "looked_at": "2026-10-03T22:01:31"
+  "lane": "cut"
  },
  "d0d36c9169b947e9": {
   "id": "d0d36c9169b947e9",
@@ -234803,8 +234831,8 @@
  },
  "751043e0f3bb45cd": {
   "id": "751043e0f3bb45cd",
-  "at": "2026-10-03T22:54:16",
-  "criteria": "2026-10-03.2",
+  "at": "2026-10-04T13:58:05",
+  "criteria": "2026-10-04.1",
   "model": "sonnet",
   "pool_url": "https://job-boards.greenhouse.io/olsson/jobs/4939103008",
   "board": null,
@@ -234818,7 +234846,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://job-boards.greenhouse.io/olsson/jobs/4939103008",
-  "same_job": "no",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "yes",
@@ -234847,6 +234875,11 @@
     "quote": "Are you open to relocation?",
     "where": "body",
     "says": "portugal_out"
+   },
+   {
+    "quote": "Have the possibility for flexible work arrangements",
+    "where": "body",
+    "says": "says_nothing"
    }
   ],
   "can_he_do_it_from_portugal": "no",
@@ -234854,16 +234887,20 @@
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "the page read is a different job · This is a CAD drafting technician role in Phoenix, Arizona, not a design/UX role and not remote - and the pool title (Design Technician - Site Design at olsson) does not match this posting (actual title matches but company/role is a civil engineering CAD job, not product design).",
+  "reason": "CAD drafting/civil site-design technician role, onsite in Phoenix, AZ - not a design role for Cesar and not doable from Portugal.",
   "confidence": "high",
-  "inferred": [],
+  "inferred": [
+   "remote"
+  ],
   "fields": {
-   "role": "Design Technician",
+   "role": "Design Technician - Site Design",
    "company": "Olsson",
    "seniority": "unstated",
    "remote": "onsite",
    "onsite_days": null,
-   "countries": [],
+   "countries": [
+    "United States"
+   ],
    "portugal_ok": "no",
    "salary": null,
    "years_xp": 3,
@@ -234872,7 +234909,8 @@
    "posted": null
   },
   "stage": "vision",
-  "lane": "unsure"
+  "reader_place": "no",
+  "lane": "cut"
  },
  "663e1aab751f4fc0": {
   "id": "663e1aab751f4fc0",
@@ -324424,8 +324462,8 @@
  },
  "cbcc1884d32b452c": {
   "id": "cbcc1884d32b452c",
-  "at": "2026-10-04T03:56:22",
-  "criteria": "2026-10-03.2",
+  "at": "2026-10-04T13:58:05",
+  "criteria": "2026-10-04.1",
   "model": "sonnet",
   "pool_url": "https://jobs.lever.co/coupa/dc6c7743-bcb5-4891-918a-6e3fe55e34e5",
   "board": null,
@@ -324447,25 +324485,30 @@
   "language_of_the_posting": "English",
   "language_ok": true,
   "workplace_as_posted": "remote",
-  "location_under_the_title": "United Kingdom Services – Professional Services /Mid-Senior Level /Remote",
+  "location_under_the_title": "United Kingdom – Services – Professional Services / Mid-Senior Level / Remote",
   "place_signals": [
    {
-    "quote": "United Kingdom",
+    "quote": "United Kingdom...Services – Professional Services /Mid-Senior Level /Remote",
     "where": "under the title",
     "says": "portugal_out"
    },
    {
-    "quote": "Remote",
-    "where": "under the title",
+    "quote": "The successful candidate's starting salary will be determined based on permissible, non-discriminatory factors such as skills, experience, and geographic location.",
+    "where": "body",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Coupa offers highly competitive, location-specific benefits packages...tailored to your primary work location",
+    "where": "body",
     "says": "says_nothing"
    }
   ],
   "can_he_do_it_from_portugal": "no",
-  "place_quote": "United Kingdom Services – Professional Services /Mid-Senior Level /Remote",
+  "place_quote": "United Kingdom – Services – Professional Services /Mid-Senior Level /Remote",
   "role_verdict": "no",
   "place_verdict": "no",
   "cut": true,
-  "reason": "the page read is a different job · Page title is a completely different job (Forward Deployed Engineer, an engineering role tied to UK) than the pooled 'AI Business Transformation & Design Strategist' title, and it is UK-located, not a design role, and not Portugal-eligible.",
+  "reason": "the page read is a different job · The page is a Forward Deployed Engineer posting tied to the United Kingdom, not the Design Strategist role the pool lists, and it is an engineering role, not design.",
   "confidence": "high",
   "inferred": [],
   "fields": {

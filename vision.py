@@ -560,8 +560,11 @@ def see(finder, rec):
         # wanted, and place is where two readings of one page disagree. So
         # that cut has to be confident, and has to survive a second reading.
         if v["lane"] == "cut" and a.get("role_verdict") != "no" and a.get("language_ok") is not False:
+            says = [s.get("says") for s in a.get("place_signals") or [] if isinstance(s, dict)]
             if criteria.top_line_out(a.get("place_signals")):
                 pass                        # the posting's own top line said so: nothing to doubt
+            elif "portugal_out" in says and "portugal_in" not in says:
+                pass                        # every statement on the page rules Portugal out, none lets it in: "anything else, cut it"
             elif a.get("confidence") != "high":
                 v["lane"], v["reason"] = "unsure", "cut on place, but not sure of it · " + str(a.get("reason") or "")
             else:
