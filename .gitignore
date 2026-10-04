@@ -48,5 +48,5 @@ data/nightly.launchd.log
 data/pages/
 data/remoteio_rows.json
 
-# 88 MB and growing; GitHub refuses 100 MB. The board only needs results.json.
+# Too big for GitHub in one file: pushed as pool1.json, pool2.json (poolparts.py).
 data/pool.json

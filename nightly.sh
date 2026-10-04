@@ -23,7 +23,8 @@ if pgrep -f "vision.py" >/dev/null; then echo "a run is already going; leaving i
 
 publish() {
   python3 results.py | head -1 | cut -c1-240
-  git add data/sources.json data/discovered.json data/results.json data/vision.json \
+  python3 poolparts.py split >/dev/null
+  git add data/pool1.json data/pool2.json data/sources.json data/discovered.json data/results.json data/vision.json \
           data/shipped.json data/vision_runs.jsonl 2>/dev/null
   git diff --cached --quiet || { git commit -q -m "nightly $(date '+%F %H:%M')
 
