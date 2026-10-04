@@ -200,7 +200,57 @@ def fold(lanes, by_id):
     return folded
 
 
+def _co(s):
+    return re.sub(r"[^a-z0-9]", "", CO_JUNK.sub(" ", (s or "").lower()))
+
+
+def _title(t):
+    return " ".join(re.findall(r"[a-z0-9]+", re.sub(r"\([^)]*\)", " ", (t or "").lower())))
+
+
+def employers(pool_doc):
+    """Company -> its active postings on its own hiring board, from the pool."""
+    out = {}
+    for j in pool_doc["jobs"]:
+        if j.get("active") and "/" in (j.get("source") or "") and len(_co(j.get("company"))) > 2:
+            out.setdefault(_co(j["company"]), []).append(j)
+    return out
+
+
+def evidence(rec, vis, emp, by_id):
+    """Facts to weigh a call with, none of which decide anything: the date
+    the board gives and the date the employer gives, what the employer's own
+    board lists when only a board's copy was read, and the real company's
+    page when an agency names who it is hiring for."""
+    ev = {}
+    own = by_id.get(vis.get("found") and vis["found"].get("pool_id") or vis.get("pool_id") or "")
+    if "/" in (rec.get("source") or ""):
+        ev["employer_posted"] = rec.get("posted")
+    else:
+        ev["board_posted"] = rec.get("posted")
+        if own:
+            ev["employer_posted"] = own.get("posted")
+    if vis.get("employer_posted"):
+        ev["employer_posted"] = vis["employer_posted"]
+    if vis.get("read") == "board":
+        theirs = emp.get(_co(rec.get("company")))
+        if theirs:
+            same = [j for j in theirs if _title(j["title"]) == _title(rec.get("title"))]
+            ev["employer_board"] = {"source": theirs[0]["source"], "jobs": len(theirs),
+                                    "listed": bool(same), "url": same[0]["url"] if same else None,
+                                    "design": [j["title"] for j in theirs if judge.l1(j.get("title")) is None][:6]}
+    who = vis.get("hiring_for")
+    if who and isinstance(who, str) and _co(who) != _co(rec.get("company")):
+        theirs = emp.get(_co(who))
+        if theirs:
+            same = [j for j in theirs if _title(j["title"]) == _title(rec.get("title"))]
+            ev["hiring_for"] = {"company": who, "listed": bool(same), "url": same[0]["url"] if same else None,
+                                "jobs": len(theirs), "source": theirs[0]["source"]}
+    return {k: v for k, v in ev.items() if v}
+
+
 def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=None):
+    emp, by_id = employers(pool_doc), {j["id"]: j for j in pool_doc["jobs"]}
     hints = hints or {}
     vision = vision or {}
     closed, vcut, agency, unread = [], [], [], []
@@ -225,6 +275,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             # and a cut each get a list the board can open.
             role = dict(rec)
             role["verdict"] = from_vision(vis)
+            role["verdict"]["evidence"] = evidence(rec, vis, emp, by_id)
             roles.append(role)
             lane = vis.get("lane")
             # A rule that changes how the evidence is weighed should not need

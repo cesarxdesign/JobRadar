@@ -240,6 +240,132 @@ def greenhouse_feed(rec):
     return None
 
 
+def _get(url, timeout=20):
+    """(status, parsed json or None). 0 when the network failed: that is not an answer."""
+    import urllib.request, urllib.error
+    try:
+        raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout).read()
+        return 200, json.loads(raw)
+    except urllib.error.HTTPError as e:
+        if e.code == 429 and timeout != -1:              # asked too fast: wait, ask once more
+            time.sleep(20)
+            code, d = _get(url, 30)
+            return (0, None) if code == 429 else (code, d)
+        return e.code, None
+    except Exception:
+        return 0, None
+
+
+def _gh_boards(_c={}):
+    """Greenhouse board names the pool already scrapes."""
+    if "b" not in _c:
+        try:
+            _c["b"] = list(json.load(open(f"{ROOT}/data/sources.json"))["watchlist"].get("greenhouse") or [])
+        except Exception:
+            _c["b"] = []
+    return _c["b"]
+
+
+GONE_AT_SOURCE = "the employer's hiring system no longer has this posting"
+
+
+def ats_feed(rec):
+    """The hiring system itself, asked about this one posting.
+
+    148 roles sat in "Not read". Most were on a hiring system whose page the
+    browser was shown wrong: the posting's own address drew the company's list
+    of jobs, or only the application form, or an empty frame on the company's
+    site. The systems all answer a plain question - is this posting up, and
+    what does it say - and a posting that is gone answers 404. Asked, Lever
+    and Workable said postings were live whose pages had drawn as a list, so
+    a list on screen is not proof a job is closed; this is.
+
+    Returns ("open", page) with the employer's own words, ("gone", sentence),
+    or None when the system could not be asked or did not answer plainly."""
+    import pool as P
+    url, title = rec.get("url") or "", rec.get("title")
+    src = rec.get("source") or ""
+    page = lambda u, t, where, body: ("open", {"url": u or url, "title": t,
+            "text": f"{t}\n{rec.get('company')}\n\nLocation\n{where}\n\n{body}"})
+    named = lambda t: employer.has_title(title, {"title": t, "text": ""})
+
+    m = re.search(r"greenhouse\.io/([^/?#]+)/jobs/(\d+)", url)
+    jid = m.group(2) if m else (re.search(r"gh_jid=(\d+)", url) or [None, None])[1]
+    if jid:
+        sure = [m.group(1)] if m and m.group(1) != "embed" else []
+        if src.startswith("greenhouse/"):
+            sure.append(src.split("/", 1)[1])
+        name = re.findall(r"[a-z0-9]+", (rec.get("company") or "").lower())
+        guess = ["".join(name), "-".join(name), name[0] if name else ""]
+        guess += [g for g in _gh_boards() if name and g.startswith(name[0]) and len(name[0]) > 3][:6]   # digitalocean98
+        for slug in dict.fromkeys(sure + guess):
+            if len(slug) < 2:
+                continue
+            code, d = _get(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs/{jid}")
+            if code == 200 and d and named(d.get("title")):
+                offices = "; ".join(o.get("name") or "" for o in d.get("offices") or [])
+                where = ((d.get("location") or {}).get("name") or "") + (f"\n\nOffices\n{offices}" if offices else "")
+                body = P.strip_html(d.get("content") or "")
+                if len(body) > 400:
+                    return page(d.get("absolute_url"), d.get("title"), where, body)
+            if code == 404 and slug in sure:
+                return "gone", GONE_AT_SOURCE
+        return None
+
+    m = re.search(r"jobs\.(eu\.)?lever\.co/([^/?#]+)/([0-9a-f-]{36})", url)
+    if m:
+        # Lever's answer for one posting includes unlisted ones whose page is
+        # a 404 (aircall, fresha): nobody can apply to those. The company's
+        # published list is what is open.
+        code, rows = _get(f"https://api.{m.group(1) or ''}lever.co/v0/postings/{m.group(2)}?mode=json", timeout=40)
+        if code == 404:
+            return "gone", GONE_AT_SOURCE
+        if code != 200 or not isinstance(rows, list):
+            return None
+        d = next((x for x in rows if x.get("id") == m.group(3)), None)
+        if d is None:
+            return "gone", GONE_AT_SOURCE
+        if named(d.get("text")):
+            c = d.get("categories") or {}
+            where = "; ".join(c.get("allLocations") or [c.get("location") or ""]) \
+                + (f"\n\nLocation Type\n{d.get('workplaceType')}" if d.get("workplaceType") else "") \
+                + (f"\n\nEmployment Type\n{c.get('commitment')}" if c.get("commitment") else "")
+            body = "\n\n".join([d.get("descriptionPlain") or ""]
+                               + [f"{l.get('text')}\n{P.strip_html(l.get('content') or '')}" for l in d.get("lists") or []]
+                               + [d.get("additionalPlain") or ""])
+            return page(d.get("hostedUrl"), d.get("text"), where, body)
+        return None
+
+    m = re.search(r"apply\.workable\.com/([^/?#]+)/j/([0-9A-F]+)", url)
+    if m:
+        code, d = _get(f"https://apply.workable.com/api/v2/accounts/{m.group(1)}/jobs/{m.group(2)}")
+        if code == 404:
+            return "gone", GONE_AT_SOURCE
+        if code == 200 and d and named(d.get("title")):
+            l = d.get("location") or {}
+            where = ", ".join(x for x in (l.get("city"), l.get("region"), l.get("country")) if x) \
+                + f"\n\nLocation Type\n{d.get('workplace') or ('remote' if d.get('remote') else 'not stated')}"
+            body = "\n\n".join(P.strip_html(d.get(k) or "") for k in ("description", "requirements", "benefits"))
+            return page(url, d.get("title"), where, body)
+        return None
+
+    m = re.search(r"jobs\.ashbyhq\.com/([^/?#]+)/([0-9a-f-]{36})", url)
+    if m:
+        code, d = _get(f"https://api.ashbyhq.com/posting-api/job-board/{m.group(1)}", timeout=40)
+        if code != 200 or not d or not d.get("jobs"):
+            return None
+        j = next((x for x in d["jobs"] if x.get("id") == m.group(2)), None)
+        if not j:
+            return "gone", GONE_AT_SOURCE
+        if named(j.get("title")):
+            more = "; ".join(x.get("location") or "" for x in j.get("secondaryLocations") or [])
+            where = (j.get("location") or "") + (f"; {more}" if more else "") \
+                + f"\n\nLocation Type\n{j.get('workplaceType') or ('Remote' if j.get('isRemote') else 'not stated')}" \
+                + (f"\n\nEmployment Type\n{j.get('employmentType')}" if j.get("employmentType") else "")
+            return page(j.get("jobUrl"), j.get("title"), where, j.get("descriptionPlain") or P.strip_html(j.get("descriptionHtml") or ""))
+    return None
+
+
 def himalayas_feed(rec):
     """A himalayas posting, from himalayas' own feed. Its pages show a script
     a security screen, but its search feed answers with the full description,
@@ -248,16 +374,24 @@ def himalayas_feed(rec):
     import urllib.request, urllib.parse
     if "himalayas.app" not in (rec.get("url") or ""):
         return None
-    try:
-        q = urllib.parse.quote(f"{rec.get('title')} {rec.get('company')}")
-        req = urllib.request.Request(f"https://himalayas.app/jobs/api/search?q={q}&limit=10", headers={"User-Agent": "Mozilla/5.0"})
-        rows = json.loads(urllib.request.urlopen(req, timeout=25).read()).get("jobs") or []
-    except Exception:
-        return None
-    base = rec["url"].rstrip("/")
+    # Asked by title and company the feed missed most postings. Asked by the
+    # company's name alone it lists what that company has up on himalayas.
+    m = re.search(r"himalayas\.app/companies/([^/]+)/jobs/", rec["url"])
+    slug = m.group(1) if m else ""
+    base, rows, listed = rec["url"].rstrip("/"), [], False
+    for q in (slug.replace("-", " "), rec.get("company") or "", f"{rec.get('title')} {rec.get('company')}"):
+        code, d = _get(f"https://himalayas.app/jobs/api/search?q={urllib.parse.quote(q)}&limit=50", 25)
+        got = (d or {}).get("jobs") or []
+        rows += got
+        mine = [x for x in got if f"/companies/{slug}/jobs/" in (x.get("guid") or "")]
+        listed = listed or (bool(mine) and (d.get("totalCount") or 0) <= len(got))      # the whole answer, and the company is in it
+        if any((x.get("guid") or "").rstrip("/").startswith(base) for x in got):
+            break
     j = next((x for x in rows if (x.get("guid") or "").rstrip("/") == base), None) \
         or next((x for x in rows if (x.get("guid") or "").startswith(base)), None)
     if not j:
+        if listed:
+            return {"gone": "himalayas lists this company's jobs and this posting is no longer among them"}
         return None
     import pool as P
     where = ", ".join(j.get("locationRestrictions") or []) or "no country restriction listed"
@@ -297,15 +431,30 @@ def see(finder, rec):
     br = finder.br
     is_board = "/" not in (rec.get("source") or "") and not employer.ATS.search(rec.get("url") or "")
     first = br.page(rec["url"], shot=render.shot_path(rec["id"]))
-    listed_gone = None
+    listed_gone = feed_gone = None
+    fed_by_system = False
     if not is_board:
         first, listed_gone = employer_page(br, rec, first)
+        # The page is the posting when it drew as one. When it did not - a
+        # list of jobs, a bare form, an empty frame - the hiring system is
+        # asked, and its answer stands over whatever the browser was shown.
+        text0 = (first or {}).get("text") or ""
+        # A page that itself answers "gone" is believed: Lever's feed still
+        # lists postings whose page is a 404, and nobody can apply to those.
+        if not gone(first) and (listed_gone or unread(first) or not employer.has_title(rec.get("title"), first or {}) or len(text0) < 1500):
+            said = ats_feed(rec)
+            if said and said[0] == "gone":
+                listed_gone = said[1]
+            elif said and len(said[1]["text"]) > 600:
+                first, listed_gone, fed_by_system = {**(first or {}), **said[1]}, None, True
     board, emp, found, tried = (first, None, None, []) if is_board else (None, first, None, [])
     feed = None
     if is_board:
         # a board whose page is behind a security screen still has a feed, and
         # the feed names the link it sends applicants to: the way to the employer
         feed = himalayas_feed(rec) if unread(board) else None
+        feed_gone = (feed or {}).pop("gone", None) if feed else None
+        feed = feed or None
         found, tried = finder.find(rec, board, hint=(feed or {}).get("apply"))
         emp = found and found["page"]
     if is_board and not found and rec["id"] in PREV:
@@ -316,6 +465,8 @@ def see(finder, rec):
          "board": board and {k: board.get(k) for k in keep},
          "employer": emp and {k: emp.get(k) for k in keep},
          "found_by": found and found["how"], "looked": tried}
+    if fed_by_system:
+        v["fed"] = "hiring system"
 
     # The employer's page is the posting; the board's is a copy of it. So the
     # employer decides whether the job is open - a board calling it closed is
@@ -329,7 +480,7 @@ def see(finder, rec):
                 "read_url": emp.get("url"), "open_quote": listed_gone or gone(emp), "stage": "render",
                 "reason": "the employer says it is closed"}
     if is_board and not found:
-        dead = gone(board) or (off_the_posting(rec, board) and "the board sent the link somewhere else: " + str(board.get("url")))
+        dead = feed_gone or gone(board) or (off_the_posting(rec, board) and "the board sent the link somewhere else: " + str(board.get("url")))
         if dead:
             return {**v, "lane": "closed", "posting_open": "no", "closed_by": "board", "read": "board",
                     "read_url": board.get("url"), "open_quote": dead, "stage": "render",

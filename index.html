@@ -153,6 +153,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
   <button class="tab rr" data-lane="challenged" hidden title="every role where you called the reasoning wrong, moved it to another lane, or left a note">Challenged<span class="n" id="c-challenged"></span></button>
+  <button class="tab rr" data-lane="battery" hidden title="every role where the filter disagrees with what you did: applied and it cuts it, flagged and it has not changed, moved and it still says otherwise">Battery<span class="n" id="c-battery"></span></button>
   <button class="tab rr" data-lane="stats" hidden>Stats</button>
   <button class="tab bt" data-lane="pass" hidden>Passed<span class="n" id="c-pass"></span></button>
   <button class="tab bt" data-lane="cut" hidden>Cut<span class="n" id="c-cut"></span></button>
@@ -271,8 +272,45 @@ async function completeBatch(){
 function ghost(id){
   if(!RR) return null;
   const d=RR.decisions.find(x=>x.id===id);
-  return d?{id:d.id,company:d.company||"",title:d.title||"",active:true,gone:true,
-            posted:d.at,first_seen:d.at,verdict:{why:[],fields:{}}}:null;
+  if(d) return {id:d.id,company:d.company||"",title:d.title||"",url:d.url,active:true,gone:true,
+            posted:d.at,first_seen:d.at,verdict:{why:[],fields:{}}};
+  const b=batOf(id);
+  return b?{id:b.id,company:b.company||"",title:b.title||"",url:b.url,active:true,gone:true,posted:b.posted,first_seen:b.posted,
+            location:b.location,source:b.source,verdict:{why:[b.why].filter(Boolean),fields:{}}}:null;
+}
+// ---------- Battery ----------
+// battery.py holds what he did against what the filter says and writes every
+// disagreement into the routing file. One card each; the pane says why.
+const batFails=()=>(RR&&RR.battery&&RR.battery.fails)||[];
+const batOf=id=>batFails().find(x=>x.id===id);
+function batRows(){
+  return batFails().slice().sort((a,b)=>(a.soft?1:0)-(b.soft?1:0)).map(b=>{
+    const r=DATA.roles.find(x=>x.id===b.id);
+    if(r) return r;
+    const g=ghost(b.id)||{id:b.id,active:true,gone:true};
+    return {...g,company:g.company||b.company||"",title:g.title||b.title||"",url:g.url||b.url,location:b.location,source:b.source,
+      verdict:{why:[b.why].filter(Boolean),reason:b.why,role:b.role,place:b.place,signals:b.signals||[],quote:b.quote,
+               read:b.read,read_url:b.read_url,lane:b.lane,stage:b.by==="vision"?"vision":"judge",fields:{}}};
+  });
+}
+function batteryBox(r){
+  const b=batOf(r.id); if(!b) return "";
+  const B=RR.battery, row=(k,h)=>h?'<div style="display:grid;grid-template-columns:84px 1fr;gap:10px;padding:5px 0;border-top:1px solid var(--line)"><span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding-top:2px">'+k+'</span><span>'+h+'</span></div>':"";
+  const sig=(b.signals||[]).map(x=>'<li><span class="'+(x.says==="portugal_in"?"in":"out")+'">'+(x.says==="portugal_in"?"Portugal in":"Portugal OUT")
+      +'</span> · '+esc(x.where||"")+': “'+esc(x.quote||"")+'”</li>').join("");
+  return '<div class="why" style="border-color:var(--acc)"><div style="font-weight:600;padding-bottom:6px">Battery · '+esc(b.kind)+'</div>'
+    + row("you", esc(b.his||""))
+    + row("filter", esc((b.lane||"").toUpperCase())+" · by "+esc(b.by||"")+(b.read?" · read on "+(b.read==="employer"?"the employer’s page":"a job board’s copy"):"")
+        +(b.read_at?" · "+esc(String(b.read_at).slice(0,10)):"")+(b.read_criteria?" · rules "+esc(b.read_criteria):""))
+    + row("failed on", esc(b.failed_on||""))
+    + row("its reason", esc(b.why||""))
+    + row("top line", esc(b.top_line||""))
+    + (sig?row("statements",'<ul style="margin:0;padding-left:16px">'+sig+'</ul>'):"")
+    + row("closed?", b.open_quote?"“"+esc(b.open_quote)+"”":"")
+    + row("posting", (b.still_up?"still up":"no longer up: cannot be read again")+(b.location?" · pool location: "+esc(b.location):""))
+    + (b.page?'<details style="padding:5px 0;border-top:1px solid var(--line)"><summary>the page as the reader saw it</summary><pre style="white-space:pre-wrap;font:12px/1.45 inherit;max-height:420px;overflow:auto">'+esc(b.page)+'</pre></details>'
+             :row("page","No saved copy: it was read before pages were kept, or by the old judge."))
+    + row("run", esc(B.at)+' · rules '+esc(B.criteria)+' · '+B.failing+' of '+B.cases+' disagree')+'</div>';
 }
 function decided(lane){
   if(!RR) return [];
@@ -508,6 +546,7 @@ function pool(){
   if(INBATCH) return BATCH.roles.filter(r=>r.bucket===BUCKET).filter(matches)
     .sort((a,b)=>a.n-b.n);
   let rows;
+  if(LANE==="battery") return batRows().filter(matches);
   if(LANE==="challenged")
     return sortRows(DATA.roles.filter(r=>challenged(r)&&matches(r))
       .concat((RR?(RR.flags||[]).concat(RR.retags||[],(RR.notes||[]).filter(n=>!n.reviewed)):[])
@@ -562,6 +601,7 @@ function counts(){
         .concat(decided(l)).filter(matches)).length||"";
     $("c-before").textContent=PASS.flatMap(laneIds).map(roleById).filter(r=>r&&!routing(r.id)&&!isMulti(r)&&beenBefore(r)&&matches(r)).length||"";
     $("c-challenged").textContent=new Set((RR.flags||[]).concat(RR.retags||[],(RR.notes||[]).filter(n=>!n.reviewed)).map(x=>x.id)).size||"";
+    $("c-battery").textContent=batFails().filter(x=>!x.soft).length||"";
     $("c-favorites").textContent=DATA.roles.filter(r=>r.active&&fav(r.id)&&matches(r)).length||"";
   }
 }
@@ -936,9 +976,11 @@ function renderPane(){
       +(RR?' <button id="multi" class="flag'+(isMulti(r)?" on":"")+'" style="margin-left:8px" title="'
           +(isMulti(r)?"take this company back out of Multihire":"move every role of this company to the Multihire lane, now and in later runs")+'">'
           +(isMulti(r)?"✓ multihire":"label as multihire")+'</button>':'')+'</div>'
+    + (LANE==="battery"?batteryBox(r):"")
     + whyBox(r)
     + copiesBox(r)
     + historyBox(r)
+    + evidenceBox(r)
     + notesBox(r)
     + (r.gone?'<div class="why">This posting is no longer on the board - the company took it '
         +'down, or the judge has not re-read it yet. Your decision is kept.</div>':'')
@@ -968,6 +1010,28 @@ function renderPane(){
     // Cmd+Enter saves, so a note never needs the mouse
     $("note").onkeydown=e=>{if((e.metaKey||e.ctrlKey)&&e.key==="Enter") saveNote(r,$("note").value);};
   }
+}
+
+// ---------- Evidence ----------
+// Facts to weigh a call with; none of them decides a lane. The date the board
+// gives against the date the employer gives, what the employer's own board
+// lists when only a board's copy was read, and the real company's posting
+// when an agency names who it is hiring for.
+function evidenceBox(r){
+  const e=(r.verdict&&r.verdict.evidence)||{}, L=[];
+  const link=(u,t)=>'<a href="'+esc(outbound(u))+'" target="_blank" rel="noopener" style="color:var(--acc)">'+esc(t)+' ↗</a>';
+  if(e.board_posted||e.employer_posted)
+    L.push("Posted · "+[e.employer_posted&&("employer "+esc(e.employer_posted)), e.board_posted&&("board "+esc(e.board_posted)),
+      r.first_seen&&("first seen "+esc(String(r.first_seen).slice(0,10)))].filter(Boolean).join(" · "));
+  const b=e.employer_board;
+  if(b) L.push(b.listed
+    ? "The employer lists this role on its own board ("+esc(b.source)+"): "+link(b.url,"its posting")
+    : "The employer's own board ("+esc(b.source)+", "+b.jobs+" jobs) does not list this title."
+      +(b.design&&b.design.length?" Design roles it does list: "+b.design.map(esc).join("; ")+".":" It lists no design roles."));
+  const h=e.hiring_for;
+  if(h) L.push("Hiring for "+esc(h.company)+". "+(h.listed?link(h.url,esc(h.company)+"'s own posting")
+    : esc(h.company)+"'s own board ("+esc(h.source)+", "+h.jobs+" jobs) does not list this title."));
+  return L.length?'<div class="why"><b>Evidence</b><br>'+L.join("<br>")+'</div>':"";
 }
 
 // ---------- Stats ----------
@@ -1132,7 +1196,7 @@ async function pullNotes(){
   // and the roles the sweep is certain he applied to: add the ones the board has not got
   for(const d of ext.decisions||[])
     if(d.by&&!RR.decisions.some(x=>x.id===d.id)){RR.decisions.push(d);changed=true;}
-  for(const k of ["applications","inbound","inbox"])
+  for(const k of ["applications","inbound","inbox","battery"])
     if(ext[k]&&JSON.stringify(ext[k])!==JSON.stringify(RR[k])){RR[k]=ext[k];changed=true;}
   return changed;
 }

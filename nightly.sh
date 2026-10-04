@@ -37,9 +37,9 @@ ATS="ashby,greenhouse,lever,workable,recruitee,teamtailor,smartrecruiters,bamboo
 # in place of his: with one alive, the script reads the wrong browser's tabs.
 pkill -f "radar-chrome-" 2>/dev/null; sleep 2
 echo "-- his tabs";          python3 tabs.py remoteio
-echo "-- scrape";            caffeinate -i python3 pool.py | tail -6
+echo "-- scrape";            caffeinate -i python3 pool.py | grep -v "^  \[\|^   *…" | tail -8
 echo "-- discover";          caffeinate -i python3 discover.py | tail -3
-echo "-- scrape new boards"; caffeinate -i python3 pool.py --only "$ATS" | tail -4
+echo "-- scrape new boards"; caffeinate -i python3 pool.py --only "$ATS" | grep -v "^  \[\|^   *…" | tail -6
 [ -f inbox.py ] && { echo "-- inbox"; caffeinate -i python3 inbox.py | tail -3; }
 publish
 ( while sleep 1200; do publish; done ) &
@@ -47,4 +47,5 @@ TICK=$!
 echo "-- read"; caffeinate -i python3 vision.py --new | grep -v "^  \[" | tail -12
 kill $TICK 2>/dev/null
 publish
+echo "-- battery"; python3 battery.py | head -4      # free: reads nothing; updates the TestBattery page
 echo "=== done $(date '+%F %H:%M') ==="

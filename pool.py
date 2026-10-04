@@ -1617,6 +1617,9 @@ AGGREGATORS.update({"uiuxjobsboard": agg_uiuxjobsboard,
 SKIP = set()          # sources deliberately not scraped this run
 
 
+SOURCE_LIMIT = 25 * 60        # seconds one source may take
+
+
 def scrape(sources, on_batch=None):
     """Every source, failing soft, reporting as it goes.
 
@@ -1640,6 +1643,10 @@ def scrape(sources, on_batch=None):
         for r in gen:
             rows.append(normalise(r, label))
             now = time.monotonic()
+            if now - t0 > SOURCE_LIMIT:
+                # One slow board held a whole night's scrape. It fails soft:
+                # its roles stay as they were and the rest of the night runs.
+                raise TimeoutError(f"{label} took over {SOURCE_LIMIT // 60} minutes; {len(rows)} read, none kept")
             if now - last >= 5:
                 print(f"          \u2026 {label}: {len(rows)} so far, {now - t0:.0f}s elapsed",
                       flush=True)
@@ -1683,7 +1690,7 @@ def scrape(sources, on_batch=None):
     return out, errors
 
 
-def update(previous, found, run_id, stamp):
+def update(previous, found, run_id, stamp, failed=()):
     """Fold this run's findings into the pool, minting ids only for new
     postings. One row per posting, matched by posting_key; company+title only
     identifies a row that has no url."""
@@ -1744,8 +1751,10 @@ def update(previous, found, run_id, stamp):
         if rid in seen:
             continue
         src = (rec.get("source") or "").split("/")[0]
-        if src in SKIP:
-            continue      # not scraped this run - absence is not evidence it is gone
+        if src in SKIP or src in failed or rec.get("source") in failed:
+            continue      # not scraped this run, or its source did not answer -
+                          # absence is not evidence it is gone. A board that timed
+                          # out one night used to take all its roles off the board.
         rec["active"] = False                  # gone from source. NOT a judgement.
     return list(by_id.values()), minted
 
@@ -1852,14 +1861,15 @@ def main():
     found, errors = ([], {}) if "--slim" in sys.argv else scrape(sources, on_batch=save)
     # --slim: no scrape, the pool on disk rewritten slim. update() would read
     # an empty scrape as every posting having gone.
-    jobs, minted = (previous, 0) if "--slim" in sys.argv else update(previous, found, run_id, stamp)
+    jobs, minted = (previous, 0) if "--slim" in sys.argv else update(previous, found, run_id, stamp, failed=set(errors))
     active = sum(1 for j in jobs if j["active"])
     print(f"found {len(found)} postings -> {len(jobs)} roles "
           f"({active} active, {minted} newly minted ids)", flush=True)
 
     thin = [k for k, v in errors.items()]
     if thin:
-        print(f"  {len(thin)} sources failed soft")
+        print(f"  {len(thin)} sources failed soft, their roles kept as they were: "
+              + ", ".join(f"{k} ({v[:40]})" for k, v in sorted(errors.items())), flush=True)
     if "--dry" in sys.argv:
         print("  --dry: nothing written")
         return 0

@@ -109,12 +109,54 @@ def main():
             fails.append({"kind": f"he moved it from {t['from']} to {t['to']}; the filter still says {lane}", "company": t.get("company"),
                           "title": t.get("title"), "lane": lane, "by": who, "why": why, "url": t.get("url"), "id": t["id"]})
 
+    # What he did, and everything the filter had in front of it, for the
+    # Battery tab on the board: one card per disagreement, and in the pane the
+    # words that decided it.
+    his = {}
+    for d in rr["decisions"]:
+        if d["decision"] == "applied":
+            his[d["id"]] = "applied " + str(d.get("at") or "")[:10] + (" · found by the inbox sweep" if d.get("by") else " · clicked on the board")
+    for a in rr.get("applications") or []:
+        for i in a.get("role_ids") or []:
+            his[i] = f"applied {a.get('applied') or ''} · your email to {a.get('company')}, {a.get('role')}"
+    for f in fails:
+        v, j = vision.get(f["id"]) or {}, jobs.get(f["id"]) or {}
+        o = old.get(f["id"]) or {}
+        if f["kind"].startswith("applied"):
+            f["his"] = his.get(f["id"], "applied")
+        flag = next((x for x in rr.get("flags") or [] if x["id"] == f["id"]), None)
+        if "reasoning wrong" in f["kind"] and flag:
+            f["his"] = "flagged the " + " and ".join(flag.get("wrong") or []) + " reasoning as wrong " + str(flag.get("at") or "")[:10] \
+                       + f" · it was in {flag.get('label')}"
+        tag = next((x for x in rr.get("retags") or [] if x["id"] == f["id"]), None)
+        if f["kind"].startswith("he moved") and tag:
+            f["his"] = f"moved it from {tag.get('from')} to {tag.get('to')} " + str(tag.get("at") or "")[:10]
+        role, place = (v.get("role_verdict"), v.get("place_verdict")) if v else (o.get("role"), o.get("place"))
+        f.update({"role": role, "place": place,
+                  "failed_on": "closed" if f["lane"] == "closed" else "title" if f["by"] == "parser"
+                               else " and ".join(k for k, x in (("role", role), ("location", place)) if x == "no") or f["lane"],
+                  "signals": [x for x in v.get("place_signals") or [] if isinstance(x, dict) and x.get("says") != "says_nothing"],
+                  "quote": v.get("place_quote"), "open_quote": v.get("open_quote"), "top_line": v.get("location_under_the_title"),
+                  "read": v.get("read"), "read_url": v.get("read_url"), "read_at": v.get("at"), "read_criteria": v.get("criteria"),
+                  "location": j.get("location"), "posted": j.get("posted"), "source": j.get("source"),
+                  "still_up": bool(j.get("active"))})
+        page = f"{PAGES}/{f['id']}.txt"
+        if os.path.exists(page):
+            f["page"] = open(page).read()[:6000]
     hard = [f for f in fails if not f.get("soft")]
     os.makedirs(OUT, exist_ok=True)
     stamp = time.strftime("%Y-%m-%d %H:%M")
     report = {"at": stamp, "criteria": criteria.VERSION, "cases": cases, "untested": untested,
               "failing": len(hard), "closed_since": len(fails) - len(hard), "fails": fails}
     json.dump(report, open(f"{OUT}/report.json", "w"), indent=1, ensure_ascii=False)
+    public(report)
+    # The board's Battery tab reads it from the routing file: his applications
+    # never go into anything that is published.
+    now = json.load(open(RR))
+    now["battery"] = report
+    tmp = RR + ".tmp"
+    json.dump(now, open(tmp, "w"), indent=1, ensure_ascii=False)
+    os.replace(tmp, RR)
     with open(f"{OUT}/history.jsonl", "a") as h:
         h.write(json.dumps({k: report[k] for k in ("at", "criteria", "cases", "untested", "failing", "closed_since")}) + "\n")
     print(f"battery {stamp} · criteria {criteria.VERSION}")
@@ -128,6 +170,36 @@ def main():
         for f in v[:40]:
             print(f"    {str(f['company'])[:22]:22} | {str(f['title'])[:44]:44} | {f['by']:9} | {str(f['why'])[:90]}")
     return 1 if hard else 0
+
+
+TEST = os.path.expanduser("~/Claude/TestBattery")
+
+
+def public(report):
+    """The same disagreements for the TestBattery page, which is public: what
+    the filter got wrong against his intent, and nothing that says he applied
+    anywhere. No dates of his, no emails, and none of the roles that only
+    closed after he applied - those are not disagreements."""
+    if not os.path.isdir(TEST):
+        return
+    said = lambda k: ("a role I would take; the filter cuts it" if k.startswith("applied")
+                      else k.replace("he called", "I called").replace("he moved", "I moved"))
+    keep = ("id", "company", "title", "url", "lane", "by", "why", "role", "place", "failed_on", "signals", "quote",
+            "open_quote", "top_line", "read", "read_url", "read_at", "read_criteria", "location", "posted", "source",
+            "still_up", "page")
+    fails = [{**{k: f.get(k) for k in keep}, "kind": said(f["kind"])} for f in report["fails"] if not f.get("soft")]
+    out = {"at": report["at"], "criteria": report["criteria"], "cases": report["cases"], "failing": len(fails), "fails": fails}
+    json.dump(out, open(f"{TEST}/battery.json", "w"), indent=1, ensure_ascii=False)
+    hist = f"{TEST}/history.json"
+    h = json.load(open(hist)) if os.path.exists(hist) else []
+    h.append({"at": out["at"], "criteria": out["criteria"], "cases": out["cases"], "failing": out["failing"]})
+    json.dump(h, open(hist, "w"), indent=1)
+    import subprocess
+    git = lambda *a: subprocess.run(["git", "-C", TEST, *a], capture_output=True, text=True)
+    git("add", "battery.json", "history.json")
+    if git("diff", "--cached", "--quiet").returncode:
+        git("commit", "-q", "-m", f"battery {out['at']}: {out['failing']} of {out['cases']} disagree")
+        print("  TestBattery " + ("pushed" if git("push", "-q").returncode == 0 else "NOT pushed"))
 
 
 def replay(rr, vision, jobs):
