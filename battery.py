@@ -59,8 +59,31 @@ def board_lanes():
             BOARD[x["id"]] = x["verdict"].get("lane")       # folded copies and Multihire keep their own lane
 
 
+def collect():
+    """His verdicts from the TestBattery page (Incorrectly cut / Correctly
+    cut). The page keeps them in his browser; they are read from the tab he
+    has open and kept in the routing file, which is where they count."""
+    try:
+        import tabs
+        raw = tabs.js(tabs.find("cesarxdesign.github.io/TestBattery"), "localStorage.getItem('tb-calls')||'{}'", timeout=15)
+        got = json.loads(raw or "{}")
+    except Exception as e:
+        print(f"  verdicts: the TestBattery tab could not be read ({str(e)[:70]}); using the ones on file")
+        return
+    rr = json.load(open(RR))
+    have = rr.setdefault("battery_calls", {})
+    new = {i: c for i, c in got.items() if have.get(i) != c}
+    if new:
+        have.update(new)
+        tmp = RR + ".tmp"
+        json.dump(rr, open(tmp, "w"), indent=1, ensure_ascii=False)
+        os.replace(tmp, RR)
+    print(f"  verdicts: {len(got)} on the page, {len(new)} new")
+
+
 def main():
     board_lanes()
+    collect()
     rr = json.load(open(RR))
     vision = json.load(open(f"{ROOT}/data/vision.json"))
     old = json.load(open(f"{ROOT}/data/verdicts.json"))["jobs"] if os.path.exists(f"{ROOT}/data/verdicts.json") else {}
@@ -109,6 +132,15 @@ def main():
             fails.append({"kind": f"he moved it from {t['from']} to {t['to']}; the filter still says {lane}", "company": t.get("company"),
                           "title": t.get("title"), "lane": lane, "by": who, "why": why, "url": t.get("url"), "id": t["id"]})
 
+    # His verdict on a disagreement settles it. "Correctly cut": the filter
+    # was right and he applied anyway - not a failure. "Incorrectly cut": a
+    # failure he has confirmed, the first to fix.
+    calls = rr.get("battery_calls") or {}
+    settled = [f for f in fails if (calls.get(f["id"]) or {}).get("call") == "correct"]
+    fails = [f for f in fails if f not in settled]
+    for f in fails:
+        if (calls.get(f["id"]) or {}).get("call") == "incorrect":
+            f["confirmed"] = True
     # What he did, and everything the filter had in front of it, for the
     # Battery tab on the board: one card per disagreement, and in the pane the
     # words that decided it.
@@ -147,7 +179,8 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     stamp = time.strftime("%Y-%m-%d %H:%M")
     report = {"at": stamp, "criteria": criteria.VERSION, "cases": cases, "untested": untested,
-              "failing": len(hard), "closed_since": len(fails) - len(hard), "fails": fails}
+              "failing": len(hard), "closed_since": len(fails) - len(hard), "settled": len(settled),
+              "confirmed": sum(1 for f in hard if f.get("confirmed")), "fails": fails}
     json.dump(report, open(f"{OUT}/report.json", "w"), indent=1, ensure_ascii=False)
     public(report)
     # The board's Battery tab reads it from the routing file: his applications
@@ -162,6 +195,7 @@ def main():
     print(f"battery {stamp} · criteria {criteria.VERSION}")
     print(f"  {cases} known answers checked, {untested} not checkable (the role has not been read)")
     print(f"  {len(hard)} where the filter disagrees with him; {len(fails) - len(hard)} he applied to that have since closed")
+    print(f"  {report['confirmed']} of those he has confirmed as incorrectly cut; {len(settled)} he called correctly cut and are settled")
     kinds = {}
     for f in hard:
         kinds.setdefault(f["kind"], []).append(f)
@@ -186,9 +220,10 @@ def public(report):
                       else k.replace("he called", "I called").replace("he moved", "I moved"))
     keep = ("id", "company", "title", "url", "lane", "by", "why", "role", "place", "failed_on", "signals", "quote",
             "open_quote", "top_line", "read", "read_url", "read_at", "read_criteria", "location", "posted", "source",
-            "still_up", "page")
+            "still_up", "page", "confirmed")
     fails = [{**{k: f.get(k) for k in keep}, "kind": said(f["kind"])} for f in report["fails"] if not f.get("soft")]
-    out = {"at": report["at"], "criteria": report["criteria"], "cases": report["cases"], "failing": len(fails), "fails": fails}
+    out = {"at": report["at"], "criteria": report["criteria"], "cases": report["cases"], "failing": len(fails),
+           "settled": report.get("settled", 0), "confirmed": report.get("confirmed", 0), "fails": fails}
     json.dump(out, open(f"{TEST}/battery.json", "w"), indent=1, ensure_ascii=False)
     hist = f"{TEST}/history.json"
     h = json.load(open(hist)) if os.path.exists(hist) else []
