@@ -232,7 +232,13 @@ def match(apps, jobs):
         # already taken down. A dead copy must not stop the live one matching -
         # that is how "Senior Product Designer (UX)" at Moniepoint, applied to
         # and rejected, sat in Open. So when several fit, the live ones decide.
-        if len(up) > 1 and len([j for j in up if j.get("active")]) == 1:
+        # But two postings on the SAME hiring board are two jobs, not copies:
+        # Clera had "Product Designer" remote and "Product Designer" in Berlin
+        # on its own board the day he applied. He applied to the remote one,
+        # it came down, and the Berlin one was marked applied in its place.
+        # Copies come from different sources; only then does the live one decide.
+        if len(up) > 1 and len([j for j in up if j.get("active")]) == 1 \
+                and len({j.get("source") for j in up}) == len(up):
             up = [j for j in up if j.get("active")]
         if len(up) == 1 and not a.get("approx"):
             a["role_ids"] = [up[0]["id"]]
