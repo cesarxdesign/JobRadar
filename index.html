@@ -1073,7 +1073,10 @@ function evidenceBox(r){
 }
 
 // ---------- Stats ----------
-// What came back from what he sent. An application is proven by an email
+// The numbers moved to cxd-stats (stats_export.py writes them there). What
+// stays is what needs the private file: the milestones he sets, every
+// application by name, and his actions against the filter's labels.
+// An application is proven by an email
 // (RR.applications, written by sweep.py) or by an "applied" click on the board
 // that no email covers. A callback is a person asking to talk or asking a
 // question; a test sent to every applicant (auto) is not one.
@@ -1084,39 +1087,6 @@ function applications(){
   for(const d of RR.decisions) if(d.decision==="applied"&&!ids.has(d.id))
     A.push({company:d.company,role:d.title,applied:String(d.at||"").slice(0,10),rejected:null,callbacks:[],src:"board"});
   return A.sort((a,b)=>String(b.applied||b.rejected||"").localeCompare(String(a.applied||a.rejected||"")));
-}
-const pct=(n,d)=>d?Math.round(100*n/d)+"%":"—";
-function tally(A){
-  const n=A.length, cb=A.filter(a=>realCB(a).length).length, rj=A.filter(a=>a.rejected).length;
-  return {n,cb,rj,quiet:A.filter(a=>!a.rejected&&!realCB(a).length).length};
-}
-// A period starts at a milestone and runs to the next one. An application
-// belongs to the period it was SENT in, whenever the answer arrived - that is
-// what says whether the CV or folio he sent it with did better.
-function periods(A){
-  const ms=[...(RR.milestones||[])].sort((a,b)=>a.date.localeCompare(b.date));
-  const P=[{label:"Before the first milestone",from:""}].concat(ms.map(m=>({label:m.label,kind:m.kind,from:m.date})));
-  P.forEach((p,i)=>{p.to=P[i+1]?P[i+1].from:"9999";p.apps=A.filter(a=>a.applied&&a.applied>=p.from&&a.applied<p.to);});
-  return P.filter((p,i)=>i||p.apps.length);
-}
-function weekChart(A){
-  const dated=A.filter(a=>a.applied); if(!dated.length) return "";
-  const mon=s=>{const d=new Date(s+"T12:00:00Z");d.setUTCDate(d.getUTCDate()-((d.getUTCDay()+6)%7));return d.toISOString().slice(0,10);};
-  const first=mon(dated.map(a=>a.applied).sort()[0]), W=[];
-  for(let d=new Date(first+"T12:00:00Z");d<=new Date();d.setUTCDate(d.getUTCDate()+7)) W.push(d.toISOString().slice(0,10));
-  const by=w=>dated.filter(a=>mon(a.applied)===w);
-  const max=Math.max(1,...W.map(w=>by(w).length)), bw=1000/W.length, T=16, H=120+T;
-  const x=s=>{const i=W.indexOf(mon(s));return i<0?null:i*bw+bw*((new Date(s+"T12:00:00Z")-new Date(W[i]+"T12:00:00Z"))/6048e5);};
-  return '<svg viewBox="0 0 1000 '+(H+34)+'">'+W.map((w,i)=>{
-      const a=by(w), n=a.length, c=a.filter(z=>realCB(z).length).length, h=n/max*(H-T), hc=c/max*(H-T);
-      return '<rect x="'+(i*bw+2)+'" y="'+(H-h)+'" width="'+(bw-4)+'" height="'+h+'" fill="var(--line)"><title>week of '+w+': '+n+' applied, '+c+' called back</title></rect>'
-        +'<rect x="'+(i*bw+2)+'" y="'+(H-hc)+'" width="'+(bw-4)+'" height="'+hc+'" fill="var(--good)"/>'
-        +(n?'<text x="'+(i*bw+bw/2)+'" y="'+(H-h-4)+'" font-size="10" text-anchor="middle" fill="var(--dim)">'+n+'</text>':'')
-        +(w.slice(8)<="07"?'<text x="'+(i*bw+2)+'" y="'+(H+13)+'" font-size="10" fill="var(--dimmer)">'+new Date(w+"T12:00:00Z").toLocaleString("en",{month:"short",timeZone:"UTC"})+'</text>':'');
-    }).join("")
-    +(RR.milestones||[]).map(m=>{const p=x(m.date);return p===null?"":'<line x1="'+p+'" x2="'+p+'" y1="0" y2="'+(H+18)+'" stroke="var(--acc)" stroke-dasharray="3 3"/>'
-        +'<text x="'+(p+4)+'" y="'+(H+30)+'" font-size="10" fill="var(--acc)">'+esc(m.label)+'</text>';}).join("")
-    +'</svg>';
 }
 // The filter's labels against what he did. Applied from Unsure or Cut is the
 // filter being too cautious; Incorrect is him saying so outright.
@@ -1129,27 +1099,11 @@ function stampTable(){
       +acts.map(a=>'<td class="num">'+(n(l,a)||'<span class="dim">·</span>')+'</td>').join("")+'</tr>').join("")+'</table>';
 }
 function renderStats(){
-  const A=applications(), T=tally(A), el=$("stats");
-  const inbound=(RR.inbound||[]).length;
-  const row=(l,t,sub)=>'<tr><td>'+l+(sub?'<br><small>'+sub+'</small>':'')+'</td><td class="num">'+t.n+'</td>'
-    +'<td class="num st-callback">'+t.cb+' <small>'+pct(t.cb,t.n)+'</small></td>'
-    +'<td class="num st-rejected">'+t.rj+' <small>'+pct(t.rj,t.n)+'</small></td>'
-    +'<td class="num st-none">'+t.quiet+' <small>'+pct(t.quiet,t.n)+'</small></td></tr>';
-  const P=periods(A);
+  const A=applications(), el=$("stats");
   const status=a=>realCB(a).length?'<span class="st-callback">callback '+esc(realCB(a)[0].date)+(a.rejected?' · then rejected '+esc(a.rejected):'')+'</span>'
     :a.rejected?'<span class="st-rejected">rejected '+esc(a.rejected)+'</span>':'<span class="st-none">no reply</span>';
   const left=a=>a.withdrawn?' <span class="dim">· you withdrew '+esc(a.withdrawn)+'</span>':'';
-  el.innerHTML='<div class="facts">'
-    +'<div class="fact"><div class="fk">Applied</div><div class="fv">'+T.n+'</div></div>'
-    +'<div class="fact"><div class="fk">Callbacks</div><div class="fv st-callback">'+T.cb+'<small>'+pct(T.cb,T.n)+'</small></div></div>'
-    +'<div class="fact"><div class="fk">Rejected</div><div class="fv st-rejected">'+T.rj+'<small>'+pct(T.rj,T.n)+'</small></div></div>'
-    +'<div class="fact"><div class="fk">No reply</div><div class="fv st-none">'+T.quiet+'<small>'+pct(T.quiet,T.n)+'</small></div></div>'
-    +'<div class="fact"><div class="fk">Recruiters reaching out</div><div class="fv">'+inbound+'</div></div></div>'
-    +'<h3>Applications per week · green is called back</h3>'+weekChart(A)
-    +'<h3>By milestone · counted by the date the application was sent</h3>'
-    +'<table><tr><th>Period</th><th class="num">Applied</th><th class="num">Callbacks</th><th class="num">Rejected</th><th class="num">No reply</th></tr>'
-    +P.map(p=>row(esc(p.label),tally(p.apps),(p.from||"start")+" → "+(p.to==="9999"?"today":p.to))).join("")
-    +'</table>'
+  el.innerHTML='<p class="dim">The counts, the weekly chart and the by-milestone table are on <a href="https://cesar-stats.vercel.app" target="_blank" rel="noopener" style="color:var(--acc)">cxd-stats ↗</a>, beside the site visits. They follow this file each time <code>stats_export.py</code> runs.</p>'
     +'<h3>What you acted on, by what the filter had called it</h3>'+stampTable()
     +'<h3>Milestones</h3><div class="ms"><input type="date" id="ms-d"><select id="ms-k"><option>CV</option><option>Folio</option><option>Other</option></select>'
     +'<input id="ms-l" placeholder="what changed" size="34"><button class="route" id="ms-add">Add milestone</button></div>'
@@ -1239,6 +1193,9 @@ async function pullNotes(){
     const d=new Set(ext.flags_done.map(x=>x.id)), left=(RR.flags||[]).filter(x=>!d.has(x.id));
     if(left.length!==(RR.flags||[]).length||!RR.flags_done||RR.flags_done.length!==ext.flags_done.length){RR.flags=left;RR.flags_done=ext.flags_done;changed=true;}
   }
+  // a milestone added from outside (a Claude session) is kept; removing one is done here
+  for(const m of ext.milestones||[])
+    if(!(RR.milestones||[]).some(x=>x.date===m.date&&x.label===m.label)){RR.milestones=[...(RR.milestones||[]),m];changed=true;}
   for(const k of ["applications","inbound","inbox","battery"])
     if(ext[k]&&JSON.stringify(ext[k])!==JSON.stringify(RR[k])){RR[k]=ext[k];changed=true;}
   return changed;

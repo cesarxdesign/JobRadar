@@ -50,6 +50,8 @@ echo "-- scrape new boards"; caffeinate -i python3 pool.py --only "$ATS" | grep 
 # cesarxdesign@gmail.com only (his call, 2026-10-05). inbox_all.py reads the
 # other accounts and is run by hand, when he asks.
 [ -f inbox.py ] && { echo "-- inbox"; caffeinate -i python3 inbox.py | tail -3; }
+# the applying numbers, dates and outcomes only, onto the cxd-stats page
+echo "-- stats"; python3 stats_export.py | tail -1
 publish
 ( while sleep 1200; do publish; done ) &
 TICK=$!

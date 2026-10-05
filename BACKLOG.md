@@ -15,8 +15,7 @@ What is next, in the order to do it. An empty backlog means finished, and that i
       - `.github/workflows/nightly.yml` is the old pool, judge, results run and commits files
         that are no longer in git. Delete it.
       - Confirm launchd fires at 02:00 with the lid open; its last exit was the kill by hand.
-- [ ] PRIORITY 2. Move Stats into cxd-stats, so applications sent can be read against folio traffic.
-- [ ] PRIORITY 3. Make a LinkedIn agent.
+- [ ] PRIORITY 2. Make a LinkedIn agent.
 - [ ] Scan them all, what is left. Done 2026-10-05: `harvest.py` lists every board from Common
       Crawl's index files and, for Lever, the Internet Archive: 50,364 boards known across 16
       systems, Workable, SmartRecruiters, Rippling, Join and Dover included. Left: 6,643 boards
