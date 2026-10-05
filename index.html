@@ -707,9 +707,9 @@ function render(){
             +(W[wkey(r)]?"✓ wrong":"Wrong")+'</button></div>'
          : RR?'<div class="acts">'
           +'<button class="star'+(fav(r.id)?" on":"")+'" data-f="1" title="favorite">'+(fav(r.id)?"★":"☆")+'</button>'
-          +'<button data-d="applied" class="'+(rt==="applied"?"on":"")+'">applied</button>'
+          +(rt?'<button data-d="">clear</button>':'')
           +'<button data-d="discarded" class="'+(rt==="discarded"?"on":"")+'">discard</button>'
-          +(rt?'<button data-d="">clear</button>':'')+'</div>':'')
+          +'<button data-d="applied" class="'+(rt==="applied"?"on":"")+'">applied</button>'+'</div>':'')
       +'</div>';
     el.onclick=()=>{SEL=r.id;render();};
     // Opening the posting selects its row too: he opens it, applies, comes
