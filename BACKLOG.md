@@ -17,10 +17,14 @@ What is next, in the order to do it. An empty backlog means finished, and that i
       - Confirm launchd fires at 02:00 with the lid open; its last exit was the kill by hand.
 - [ ] PRIORITY 2. Move Stats into cxd-stats, so applications sent can be read against folio traffic.
 - [ ] PRIORITY 3. Make a LinkedIn agent.
+- [ ] Add Hacker News "Who is hiring" as a source. A monthly thread, read through HN's public
+      feed; small, free, heavy on remote startup roles. Each comment is one company's posting,
+      so it needs a reader that pulls company, role and place out of free text.
 - [ ] Scan them all, what is left. Done 2026-10-05: `harvest.py` lists every board from Common
-      Crawl (7,943 known, 2,136 with a design role scraped every night), and Dover is read.
-      Left: the index returned 0 boards for Workable, SmartRecruiters, Rippling and Join, so
-      their address patterns need another look; Gem, Polymer, Homerun, iCIMS and Jobvite are
-      not read at all.
+      Crawl's index files and, for Lever, the Internet Archive: 50,364 boards known across 16
+      systems, Workable, SmartRecruiters, Rippling, Join and Dover included. Left: 6,643 boards
+      not yet checked (mostly the systems that throttle), about 1,825 design-titled roles waiting
+      for VISION when work stopped, and Gem, Polymer, Homerun, iCIMS and Jobvite not read at all.
+      The night run is paused by `data/PAUSED`; delete that file to resume it.
 - [ ] Employer page finder. Vision runs `employer.py` on every board role, and it finds the
       company's own page for 688 of 1,932 (36%). The other 1,244 are read on the board's copy.
