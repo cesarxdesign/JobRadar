@@ -21056,8 +21056,8 @@
  },
  "ab83f1a192954d71": {
   "id": "ab83f1a192954d71",
-  "at": "2026-10-02T17:33:10",
-  "criteria": "2026-10-02.1",
+  "at": "2026-10-05T12:20:51",
+  "criteria": "2026-10-05.2",
   "model": "sonnet",
   "pool_url": "https://uiuxjobsboard.com/job/1611326-remote-europe-ux-product-lead",
   "board": {
@@ -21070,43 +21070,86 @@
    "url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
    "status": 200,
    "shot": "data/shots/ab83f1a192954d71.employer.jpg",
-   "error": null,
-   "via": "https://join.com/companies/baesh/16700452-ux-designer-product-lead-core-team-equity-based-remote-eu-wide"
+   "error": null
   },
+  "found_by": "link",
+  "looked": [
+   "link: https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-"
+  ],
   "read": "employer",
   "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
   "posting_open": "yes",
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
+  "role_verdict": "no",
   "workplace_as_posted": "remote",
-  "can_he_do_it_from_portugal": "yes",
-  "place_quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
-  "role_verdict": "yes",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible hours + fully remote",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "German required (our first market is Berlin)",
+    "where": "opening paragraph",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "German knowledge required (you'll research and validate with German-speaking users).",
+    "where": "body",
+    "kind": "says_nothing",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Fully remote",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
   "place_verdict": "remote",
-  "cut": false,
-  "reason": "UX/Product design leadership role, fully remote across EU which includes Portugal.",
+  "place_quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
+  "reason": "The posting explicitly states this is an unpaid core team role for now, which rules out the role despite Portugal being covered by the EU-wide remote eligibility.",
   "confidence": "high",
   "inferred": [],
   "fields": {
-   "role": "UX Designer/Product Lead",
+   "role": "UX Designer/Product Lead (Core Team, Equity-Based, Remote EU-wide)",
    "company": "baesh social UG",
    "seniority": "lead",
    "remote": "remote",
    "onsite_days": null,
    "countries": [
-    "EU",
-    "Eastern Partnership countries"
+    "EU + Eastern Partnership countries"
    ],
    "portugal_ok": "yes",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
    "language": "English",
-   "posted": "1 month ago"
+   "posted": "Updated: 1 month ago"
   },
   "stage": "vision",
-  "lane": "open"
+  "lane": "cut",
+  "reader_place": "remote"
  },
  "03f6522c12334dca": {
   "id": "03f6522c12334dca",
@@ -92733,7 +92776,7 @@
  },
  "b5ae084458e64fca": {
   "id": "b5ae084458e64fca",
-  "at": "2026-10-05T11:30:01",
+  "at": "2026-10-05T12:20:42",
   "criteria": "2026-10-05.2",
   "model": "sonnet",
   "pool_url": "https://builtin.com/job/product-designer-ui-ux/9907174",
@@ -92743,11 +92786,14 @@
    "shot": "data/shots/b5ae084458e64fca.jpg",
    "error": null
   },
-  "employer": null,
-  "found_by": null,
+  "employer": {
+   "url": "https://app.dover.com/apply/MindFi/806528b7-15a5-46d1-8cba-1701ef68a624/?rs=76643084",
+   "status": 200
+  },
+  "found_by": "his note",
   "looked": [],
-  "read": "board",
-  "read_url": "https://builtin.com/job/product-designer-ui-ux/9907174",
+  "read": "employer",
+  "read_url": "https://app.dover.com/apply/MindFi/806528b7-15a5-46d1-8cba-1701ef68a624/?rs=76643084",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -92756,55 +92802,47 @@
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "yes",
-  "workplace_as_posted": "remote",
-  "location_under_the_title": "10 Locations Remote or Hybrid",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Hybrid (Singapore; Philippines; New Zealand; Malaysia; Korea, Republic of; Japan; Indonesia; India; Australia; Singapore, Singapore)",
   "place_signals": [
    {
-    "quote": "10 Locations",
+    "quote": "Hybrid (Singapore; Philippines; New Zealand; Malaysia; Korea, Republic of; Japan; Indonesia; India; Australia; Singapore, Singapore)",
     "where": "under the title",
-    "kind": "tag",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "Remote or Hybrid",
-    "where": "under the title",
-    "kind": "tag",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "The chance to drive impact within the mental healthcare landscape in Asia, Pacific and European regions.",
-    "where": "body",
-    "kind": "generic",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "This position offers the opportunity to work in a diverse and inclusive environment across multiple countries.",
-    "where": "body",
-    "kind": "generic",
-    "says": "says_nothing"
+    "kind": "explicit",
+    "says": "portugal_out"
    }
   ],
-  "place_verdict": "remote",
-  "place_quote": "10 Locations Remote or Hybrid",
-  "reason": "Page shows 'Remote or Hybrid' with '10 Locations' but never names which countries, so Portugal eligibility cannot be confirmed.",
-  "confidence": "medium",
+  "place_verdict": "no",
+  "place_quote": "Hybrid (Singapore; Philippines; New Zealand; Malaysia; Korea, Republic of; Japan; Indonesia; India; Australia; Singapore, Singapore)",
+  "reason": "The role is hybrid, restricted to a listed set of APAC/Asia-Pacific countries, none of which is Portugal.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Product Designer (UI/UX)",
    "company": "MindFi",
-   "seniority": "mid",
-   "remote": "remote",
+   "seniority": "unstated",
+   "remote": "hybrid",
    "onsite_days": null,
-   "countries": [],
-   "portugal_ok": "unclear",
+   "countries": [
+    "Singapore",
+    "Philippines",
+    "New Zealand",
+    "Malaysia",
+    "Korea, Republic of",
+    "Japan",
+    "Indonesia",
+    "India",
+    "Australia"
+   ],
+   "portugal_ok": "no",
    "salary": null,
-   "years_xp": "3-5 years",
+   "years_xp": null,
    "reports_to": null,
    "language": "English",
-   "posted": "6 Days Ago"
+   "posted": null
   },
   "stage": "vision",
-  "lane": "open",
+  "lane": "cut",
   "reader_place": "unclear"
  },
  "17fd800aed6c4dce": {

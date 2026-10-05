@@ -1,18 +1,18 @@
 {
  "jd": {},
  "generated_at": "2026-10-05T09:58:36+00:00",
- "built_at": "2026-10-05T12:01+01:00",
+ "built_at": "2026-10-05T12:22+01:00",
  "run_id": "2026-10-05T09:58:36+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 227,
+  "open": 225,
   "portugal": 15,
   "unsure": 34,
   "ghosts": 0,
   "cut": 3,
   "closed": 524,
-  "vision_cut": 4848,
+  "vision_cut": 4850,
   "agency": 0,
   "not_read": 0,
   "folded": 36,
@@ -154,7 +154,6 @@
    "1d9103c452a94126",
    "36254ccdc8214b3b",
    "8e4086ef53154c2a",
-   "b5ae084458e64fca",
    "c30b36c90e6e44a8",
    "39588ef0520e479e",
    "0717f3cceabf4590",
@@ -191,7 +190,6 @@
    "d1623afc6bc94654",
    "a97b3f0f5c3449cb",
    "763ccf510a214597",
-   "ab83f1a192954d71",
    "3c0e949cdc4d4a62",
    "a8d03956a4614ca8",
    "c822ef1f2bda42e0",
@@ -2869,6 +2867,7 @@
   "0ba8fbf86a2b46e9",
   "82918c2a241b4cd0",
   "b86908aff9cf486c",
+  "b5ae084458e64fca",
   "be41122d69244c0b",
   "7b026bfd1ba14824",
   "5e50f9ce23394e09",
@@ -3609,6 +3608,7 @@
   "a44f550cda6f40c5",
   "4163fe2bde0a4300",
   "85827f0469d7423f",
+  "ab83f1a192954d71",
   "075b290db1434fd6",
   "39734f2bbfa6432a",
   "79f2fc2a1b4a483a",
@@ -201820,44 +201820,61 @@
    "workplace": "Remote or Hybrid",
    "verdict": {
     "role": "yes",
-    "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "Page shows 'Remote or Hybrid' with '10 Locations' but never names which countries, so Portugal eligibility cannot be confirmed.",
-     "the page says: \"10 Locations Remote or Hybrid\""
+     "The role is hybrid, restricted to a listed set of APAC/Asia-Pacific countries, none of which is Portugal.",
+     "Portugal OUT · under the title: \"Hybrid (Singapore; Philippines; New Zealand; Malaysia; Korea, Republic of; Japan; Indonesia; India; Australia; Singapore, Singapore)\""
     ],
     "judged": true,
-    "text": "job board's copy",
+    "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Product Designer (UI/UX)",
      "company": "MindFi",
-     "seniority": "mid",
-     "remote": "remote",
+     "seniority": "unstated",
+     "remote": "hybrid",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "Singapore",
+      "Philippines",
+      "New Zealand",
+      "Malaysia",
+      "Korea, Republic of",
+      "Japan",
+      "Indonesia",
+      "India",
+      "Australia"
+     ],
+     "portugal_ok": "no",
      "salary": null,
-     "years_xp": "3-5 years",
+     "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "6 Days Ago"
+     "posted": null
     },
     "inferred": [],
-    "read": "board",
-    "read_url": "https://builtin.com/job/product-designer-ui-ux/9907174",
-    "reason": "Page shows 'Remote or Hybrid' with '10 Locations' but never names which countries, so Portugal eligibility cannot be confirmed.",
+    "read": "employer",
+    "read_url": "https://app.dover.com/apply/MindFi/806528b7-15a5-46d1-8cba-1701ef68a624/?rs=76643084",
+    "reason": "The role is hybrid, restricted to a listed set of APAC/Asia-Pacific countries, none of which is Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "10 Locations Remote or Hybrid",
-    "signals": [],
+    "quote": "Hybrid (Singapore; Philippines; New Zealand; Malaysia; Korea, Republic of; Japan; Indonesia; India; Australia; Singapore, Singapore)",
+    "signals": [
+     {
+      "quote": "Hybrid (Singapore; Philippines; New Zealand; Malaysia; Korea, Republic of; Japan; Indonesia; India; Australia; Singapore, Singapore)",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
-    "found_by": null,
+    "found_by": "his note",
     "shot": "data/shots/b5ae084458e64fca.jpg",
-    "read_at": "2026-10-05T11:30:01",
+    "read_at": "2026-10-05T12:20:42",
     "evidence": {
      "board_posted": "2026-09-29"
     }
@@ -274383,48 +274400,54 @@
    "url": "https://uiuxjobsboard.com/job/1611326-remote-europe-ux-product-lead",
    "workplace": "Remote",
    "verdict": {
-    "role": "yes",
+    "role": "no",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "UX/Product design leadership role, fully remote across EU which includes Portugal.",
-     "the page says: \"Europe-based only (EU + Eastern Partnership countries), fully remote.\""
+     "The posting explicitly states this is an unpaid core team role for now, which rules out the role despite Portugal being covered by the EU-wide remote eligibility.",
+     "Portugal in · body: \"Europe-based only (EU + Eastern Partnership countries), fully remote.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "UX Designer/Product Lead",
+     "role": "UX Designer/Product Lead (Core Team, Equity-Based, Remote EU-wide)",
      "company": "baesh social UG",
      "seniority": "lead",
      "remote": "remote",
      "onsite_days": null,
      "countries": [
-      "EU",
-      "Eastern Partnership countries"
+      "EU + Eastern Partnership countries"
      ],
      "portugal_ok": "yes",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "1 month ago"
+     "posted": "Updated: 1 month ago"
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
-    "reason": "UX/Product design leadership role, fully remote across EU which includes Portugal.",
+    "reason": "The posting explicitly states this is an unpaid core team role for now, which rules out the role despite Portugal being covered by the EU-wide remote eligibility.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
-    "signals": [],
+    "signals": [
+     {
+      "quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_in"
+     }
+    ],
     "if_employer": null,
-    "found_by": null,
+    "found_by": "link",
     "shot": "data/shots/ab83f1a192954d71.employer.jpg",
-    "read_at": "2026-10-02T17:33:10",
+    "read_at": "2026-10-05T12:20:51",
     "evidence": {
      "board_posted": "2026-09-21"
     }
