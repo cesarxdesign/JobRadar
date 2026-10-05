@@ -33,6 +33,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .filters .clear{background:none;border:0;color:var(--dim);font-size:12.5px;cursor:pointer;text-decoration:underline}
 .filters .n{color:var(--dim);font-size:12.5px;margin-left:auto}
 .tabs{display:flex;gap:2px;padding:10px 20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs select{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12.5px;align-self:center;margin-right:8px}
 .tab{background:none;border:0;border-bottom:2px solid transparent;color:var(--dim);padding:8px 12px;font-size:13px;cursor:pointer}
 .tab.on{color:var(--fg);border-bottom-color:var(--acc)}
 .tab .n{color:var(--dimmer);margin-left:6px;font-size:11.5px}
@@ -140,6 +141,13 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 </header>
 
 <div class="tabs" id="tabs">
+  <select id="f-last" title="how far back to look, on every tab">
+    <option value="1">last 1 day</option>
+    <option value="7">last 1 week</option>
+    <option value="30">last 1 month</option>
+    <option value="90">last 3 months</option>
+    <option value="" selected>all time</option>
+  </select>
   <button class="tab on" data-lane="open">Open<span class="n" id="c-open"></span></button>
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
@@ -457,6 +465,9 @@ function haystack(r){
 // no new data, no server. A filter narrows what a lane shows; it never moves
 // a role between lanes, because the lane is the judge's verdict, not a view.
 const F={date:"",place:"",sen:"",src:"",sal:""};
+// The window in front of the tabs: the last N days, on every tab. Remembered per browser.
+let LAST="";
+try { LAST = localStorage.getItem("radar-last") || ""; } catch (e) {}
 // Anything over 69 days leaves the three lanes and collects in its own. A
 // role that has been open ten weeks is a different kind of thing from a fresh
 // one - mostly it is an aggregator keeping a dead posting alive to pad its
@@ -500,6 +511,7 @@ function outbound(u){
 
 function matches(r){
   if(Q && !Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w))) return false;
+  if(LAST){ const d=days(r); if(d===null || d > +LAST) return false; }
   if(F.date){
     // "≤ 6 months" was read as "six months old and older", which is a fair
     // reading of a bad label. Both directions now, spelled out: -N is the last
@@ -546,6 +558,8 @@ function wireFilters(){
   const map={"f-date":"date","f-place":"place","f-sen":"sen","f-src":"src","f-sal":"sal"};
   const so=$("f-sort");
   if(so) so.onchange=()=>{SORT=so.value;render();};
+  const la=$("f-last");
+  if(la){ la.value=LAST; la.onchange=()=>{LAST=la.value;try{localStorage.setItem("radar-last",LAST);}catch(e){}render();}; }
   // The preview pane, hidden when he would rather scan the list at full width
   // and read postings in their own tab. Remembered per browser.
   const pn=$("f-pane"), sp=$("split");
