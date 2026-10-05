@@ -70,6 +70,7 @@ KEY_RES = [
     ("workable", re.compile(r"workable\.com/[^/]+/j/([A-Za-z0-9]+)")),
     ("teamtailor", re.compile(r"teamtailor\.com/jobs/(\d+)")),
     ("recruitee", re.compile(r"([a-z0-9-]+)\.recruitee\.com/o/([a-z0-9-]+)")),
+    ("dover", re.compile(r"app\.dover\.com/apply/[^/]+/([0-9a-f]{8}-[0-9a-f-]{27})")),
 ]
 
 
@@ -901,6 +902,35 @@ def agg_designjobsworld():
                    "posted": ld.get("datePosted"), "jd_text": strip_html(ld.get("description"))}
 
 
+def from_dover(slug, cfg=None):
+    """Dover (app.dover.com/jobs/<company>): a hiring system small startups
+    use. He found MindFi on it by hand, 2026-10-05 - the job board's copy said
+    "Remote", Dover's own page said hybrid in nine Asia-Pacific countries. The
+    list gives titles and locations; the description is one call per job, and
+    is fetched only for titles the parser would keep (a 40-job board is one
+    call, not forty-one)."""
+    import judge
+    co = get_json(f"https://app.dover.com/api/v1/careers-page-slug/{slug}")
+    d = get_json(f"https://app.dover.com/api/v1/careers-page/{co['id']}/jobs?limit=300")
+    for j in d.get("results") or []:
+        locs = j.get("locations") or []
+        kinds = {(l.get("location_type") or "").lower() for l in locs}
+        where = "; ".join(dict.fromkeys(l.get("name") or "" for l in locs if l.get("name")))
+        kind = "hybrid" if "hybrid" in kinds else "remote" if kinds == {"remote"} else "onsite" if "in_office" in kinds or "onsite" in kinds else None
+        text = None
+        if judge.l1(j.get("title")) is None:
+            try:
+                one = get_json(f"https://app.dover.com/api/v1/inbound/application-portal-job/{j['id']}")
+                text = strip_html(one.get("user_provided_description") or "")
+            except Exception:
+                pass
+        yield {"title": j.get("title"), "company": co.get("name") or slug,
+               "url": f"https://app.dover.com/apply/{slug}/{j['id']}",
+               "location": (f"{kind.capitalize()} ({where})" if kind and where else where or kind),
+               "workplace": kind, "remote": kind == "remote" or None, "jd_text": text}
+
+
+ADAPTERS.update({"dover": from_dover})
 ADAPTERS.update({"bamboohr": from_bamboohr, "breezy": from_breezy,
                  "smartrecruiters": from_smartrecruiters, "rippling": from_rippling,
                  "jazzhr": from_jazzhr, "manatal": from_manatal, "join": from_join,

@@ -24,7 +24,7 @@ if pgrep -f "vision.py" >/dev/null; then echo "a run is already going; leaving i
 publish() {
   python3 results.py | head -1 | cut -c1-240
   python3 poolparts.py split >/dev/null
-  git add data/pool[0-9]*.json data/sources.json data/discovered.json data/results.json data/vision.json \
+  git add data/boards.json data/pool[0-9]*.json data/sources.json data/discovered.json data/results.json data/vision.json \
           data/shipped.json data/vision_runs.jsonl 2>/dev/null
   git diff --cached --quiet || { git commit -q -m "nightly $(date '+%F %H:%M')
 
@@ -37,6 +37,12 @@ ATS="ashby,greenhouse,lever,workable,recruitee,teamtailor,smartrecruiters,bamboo
 # in place of his: with one alive, the script reads the wrong browser's tabs.
 pkill -f "radar-chrome-" 2>/dev/null; sleep 2
 echo "-- his tabs";          python3 tabs.py remoteio
+# every company board on every hiring system: the list is refreshed weekly,
+# and each night the boards that are due get checked for a design role
+if [ ! -f data/boards.json ] || [ -n "$(find data/boards.json -mtime +7 2>/dev/null)" ]; then
+  echo "-- harvest: list";   caffeinate -i python3 harvest.py enumerate | tail -24
+fi
+echo "-- harvest: check";    caffeinate -i python3 harvest.py check --minutes 40 | tail -8
 echo "-- scrape";            caffeinate -i python3 pool.py | grep -v "^  \[\|^   *…" | tail -8
 echo "-- discover";          caffeinate -i python3 discover.py | tail -3
 echo "-- scrape new boards"; caffeinate -i python3 pool.py --only "$ATS" | grep -v "^  \[\|^   *…" | tail -6
