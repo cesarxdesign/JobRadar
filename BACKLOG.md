@@ -4,6 +4,12 @@ What is next, in the order to do it. An empty backlog means finished, and that i
 
 ## Next
 
+- [ ] Scan them all: list every company board on every hiring system (Ashby, Greenhouse, Lever,
+      Workable, Dover and the rest) from a public web index, instead of finding companies one
+      by one through job boards. A first probe of Common Crawl listed 272 Ashby boards on one
+      page of one snapshot; we scrape 549 today. Add the hiring systems not yet read (Dover, Gem,
+      Polymer, Homerun, iCIMS, Jobvite...). Title cut is free, so the scrape can be wide; the
+      reading cost is what to measure first.
 - [ ] Make a LinkedIn agent.
 - [ ] Add Principal Designer as a role.
 - [ ] Move Stats into cxd-stats, so applications sent can be read against folio traffic.
