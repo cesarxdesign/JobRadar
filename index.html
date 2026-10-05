@@ -147,6 +147,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
     <option value="30">last 1 month</option>
     <option value="90">last 3 months</option>
     <option value="" selected>all time</option>
+    <option value="?">?</option>
   </select>
   <button class="tab on" data-lane="open">Open<span class="n" id="c-open"></span></button>
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
@@ -511,7 +512,10 @@ function outbound(u){
 
 function matches(r){
   if(Q && !Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w))) return false;
-  if(LAST){ const d=days(r); if(d===null || d > +LAST) return false; }
+  // A role whose posting carries no date has no place in a window of days:
+  // it sits under "?" (and under "all time"), never under "last 1 day".
+  if(LAST==="?"){ if(dated(r)) return false; }
+  else if(LAST){ const d=days(r); if(!dated(r) || d===null || d > +LAST) return false; }
   if(F.date){
     // "≤ 6 months" was read as "six months old and older", which is a fair
     // reading of a bad label. Both directions now, spelled out: -N is the last
