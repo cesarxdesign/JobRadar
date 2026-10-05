@@ -1520,6 +1520,179 @@ AGGREGATORS.update({"remoteio": agg_remoteio, "woodyjobs": agg_woodyjobs, "hayst
 AGGREGATORS.update({"hackernews": agg_hackernews})
 
 
+# ---- job boards found from a search for one role (2026-10-05): jobalert.world,
+# kazialert.co.ke, theohub.global. All three print far more than design, so
+# each is asked only for what CUT would keep, and a dated page is read once.
+AGG_CACHE = Path(__file__).parent / "data" / "agg_cache.json"
+AGG_WINDOW = 69            # days: older than this is the 69+ tab, not worth a page fetch
+
+
+def _agg_cache():
+    try:
+        return json.loads(AGG_CACHE.read_text())
+    except Exception:
+        return {}
+
+
+def ld_posting(url, timeout=30):
+    """The JobPosting a board prints in its page head: title, company, place,
+    date and text as the board states them."""
+    safe = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=~-._%")
+    req = urllib.request.Request(safe, headers=UA)
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        html = r.read().decode("utf-8", "replace")
+    for raw in re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', html, re.S):
+        try:
+            d = json.loads(raw)
+        except Exception:
+            continue
+        for x in (d if isinstance(d, list) else [d]):
+            if isinstance(x, dict) and x.get("@type") == "JobPosting":
+                loc = x.get("jobLocation") or {}
+                loc = loc[0] if isinstance(loc, list) and loc else loc
+                adr = (loc.get("address") or {}) if isinstance(loc, dict) else {}
+                place = ", ".join(str(adr[k]) for k in ("addressLocality", "addressRegion", "addressCountry")
+                                  if isinstance(adr, dict) and adr.get(k))
+                org = x.get("hiringOrganization") or {}
+                return {"title": unescape(x.get("title") or "").strip() or None,
+                        "company": unescape(org.get("name") or "").strip() if isinstance(org, dict) else None,
+                        "location": place, "posted": str(x.get("datePosted") or "")[:10] or None,
+                        "remote": True if x.get("jobLocationType") == "TELECOMMUTE" or re.search(r"remote", place, re.I) else None,
+                        "employment_type": x.get("employmentType") if isinstance(x.get("employmentType"), str) else None,
+                        "jd_text": strip_html(x.get("description") or "") or None}
+    return None
+
+
+def _ld_many(urls, cache):
+    """Read each page once, six at a time; what was read is remembered
+    (without the text) so the next run asks only for what is new."""
+    from concurrent.futures import ThreadPoolExecutor
+    def one(u):
+        if u in cache:
+            return u, cache[u]
+        try:
+            return u, ld_posting(u)
+        except Exception:
+            return u, None
+    with ThreadPoolExecutor(6) as ex:
+        got = dict(ex.map(one, urls))
+    for u, rec in got.items():
+        if rec and u not in cache:
+            cache[u] = {k: v for k, v in rec.items() if k != "jd_text"}
+    return got
+
+
+def _too_old(posted):
+    try:
+        return (datetime.now() - datetime.strptime(posted[:10], "%Y-%m-%d")).days > AGG_WINDOW
+    except Exception:
+        return False
+
+
+def agg_jobalert():
+    """jobalert.world: /all-jobs is one page with every posting it has ever
+    carried (37,000 on 2026-10-05), newest first, as "<role> at <company> -
+    <place>". The apply link is behind its paywall, so the row keeps the
+    board's page and the employer's own posting is found the usual way.
+    Only titles CUT keeps are opened; the walk stops at the first run of 40
+    postings older than AGG_WINDOW days."""
+    import judge
+    req = urllib.request.Request("https://jobalert.world/all-jobs", headers=UA)
+    with urllib.request.urlopen(req, timeout=180) as r:
+        html = r.read().decode("utf-8", "replace")
+    keep = []
+    for href, text in re.findall(r'<a href="(/jobs/[^"]+)"[^>]*>(.*?)</a>', html, re.S):
+        role = unescape(re.sub(r"<[^>]+>", "", text)).rpartition(" at ")[0]
+        if role and judge.l1(role) is None:
+            keep.append("https://jobalert.world" + href)
+    cache = _agg_cache()
+    try:
+        for i in range(0, len(keep), 40):
+            chunk = keep[i:i + 40]
+            got = _ld_many(chunk, cache)
+            fresh = 0
+            for u in chunk:
+                rec = got.get(u)
+                if not rec or not rec.get("title") or _too_old(rec.get("posted") or ""):
+                    continue
+                fresh += 1
+                yield {**rec, "url": u}
+            if not fresh and any(got.get(u) for u in chunk):
+                break
+    finally:
+        AGG_CACHE.write_text(json.dumps(cache))
+
+
+def agg_kazialert():
+    """kazialert.co.ke: remote roles from European and US employers, sold to
+    readers in Kenya. Its Design & UX category is 20 cards a page; the card
+    has title and company, the job page has the date."""
+    cache, seen = _agg_cache(), set()
+    try:
+        for page in range(1, 60):
+            html = get_text("https://www.kazialert.co.ke/jobs?category=design-ux" + (f"&page={page}" if page > 1 else ""))
+            cards = [(h, t, c) for h, t, c in re.findall(
+                r'href="(/jobs/design-ux/[^"]+)">(.*?)</a>.*?<p class="text-sm text-gray-500[^"]*">(.*?)</p>', html, re.S)
+                if h not in seen]
+            if not cards:
+                break
+            seen.update(h for h, _, _ in cards)
+            got = _ld_many(["https://www.kazialert.co.ke" + h for h, _, _ in cards], cache)
+            for h, t, c in cards:
+                u = "https://www.kazialert.co.ke" + h
+                rec = got.get(u) or {}
+                yield {**rec, "company": strip_html(c, 120).strip() or rec.get("company"),
+                       "title": strip_html(t, 200).strip() or rec.get("title"),
+                       "url": u, "location": "Remote", "remote": True}
+    finally:
+        AGG_CACHE.write_text(json.dumps(cache))
+
+
+OHUB_HAVE = ("ARBEITNOW", "HIMALAYAS", "WE_WORK_REMOTELY")     # scraped here at the source already
+
+
+def ohub_get(url):
+    """The API refuses (429, no Retry-After) after about twenty quick calls.
+    Three seconds between pages stays under it; a refusal is waited out."""
+    for wait in (0, 60, 120, 240):
+        time.sleep(wait or 3)
+        try:
+            return get_json(url)
+        except urllib.error.HTTPError as e:
+            if e.code != 429:
+                raise
+    raise RuntimeError("theohub: still refusing after 7 minutes")
+
+
+def agg_theohub():
+    """theohub.global: a UK board that also relays other boards and employers'
+    own postings ("DIRECT", with the employer's link - the best kind of row).
+    Its search API is asked for remote design roles, 50 a page; the boards
+    this pool already reads at the source are left out."""
+    seen = set()
+    skip = "".join("&excludeSource=" + s for s in OHUB_HAVE)
+    for q in ("designer", "ux", "product design"):
+        for page in range(1, 40):
+            d = ohub_get("https://www.theohub.global/api/jobs/external?limit=50&isRemote=true"
+                         f"&q={urllib.parse.quote(q)}{skip}&page={page}")
+            for j in d.get("jobs") or []:
+                if j.get("id") in seen or not j.get("sourceUrl"):
+                    continue
+                seen.add(j["id"])
+                lo, hi, cur = j.get("salaryMin"), j.get("salaryMax"), j.get("currency") or ""
+                yield {"company": j.get("company"), "title": j.get("title"), "url": j["sourceUrl"],
+                       "location": ", ".join(dict.fromkeys(x for x in (j.get("location"), j.get("country")) if x)),
+                       "remote": True, "posted": str(j.get("postedAt") or "")[:10] or None,
+                       "employment_type": j.get("jobType"), "department": j.get("category"),
+                       "salary": f"{cur} {lo:,} - {hi:,}".strip() if lo and hi and not j.get("salaryPredicted") else None,
+                       "jd_text": strip_html(j.get("description") or "") or None}
+            if page >= ((d.get("pagination") or {}).get("pages") or 0):
+                break
+
+
+AGGREGATORS.update({"jobalert": agg_jobalert, "kazialert": agg_kazialert, "theohub": agg_theohub})
+
+
 def get_text_charset(url):
     """get_text() assumes UTF-8. net-empregos is ISO-8859-1, and decoding it as
     UTF-8 with errors='replace' turns Espacos Unicos into a row of question
