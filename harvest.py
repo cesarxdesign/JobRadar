@@ -372,7 +372,7 @@ def check(boards, minutes=None):
     print(f"{total} boards known in all; {sum(len(v) for v in watch.values())} scraped every night")
 
 
-def batch(minutes=10):
+def batch(minutes=5):
     """How much POOL to hand to VISION at a time.
 
     POOL fills far faster than VISION reads (16,000 postings in 90 seconds
