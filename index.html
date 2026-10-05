@@ -1234,6 +1234,11 @@ async function pullNotes(){
   // and the roles the sweep is certain he applied to: add the ones the board has not got
   for(const d of ext.decisions||[])
     if(d.by&&!RR.decisions.some(x=>x.id===d.id)){RR.decisions.push(d);changed=true;}
+  // flags he has ruled on are filed away from outside (the review page); they leave For Reviewing here too
+  if(ext.flags_done){
+    const d=new Set(ext.flags_done.map(x=>x.id)), left=(RR.flags||[]).filter(x=>!d.has(x.id));
+    if(left.length!==(RR.flags||[]).length||!RR.flags_done||RR.flags_done.length!==ext.flags_done.length){RR.flags=left;RR.flags_done=ext.flags_done;changed=true;}
+  }
   for(const k of ["applications","inbound","inbox","battery"])
     if(ext[k]&&JSON.stringify(ext[k])!==JSON.stringify(RR[k])){RR[k]=ext[k];changed=true;}
   return changed;
