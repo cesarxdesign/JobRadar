@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-05.1"
+VERSION = "2026-10-05.2"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -523,7 +523,9 @@ your answers, so each answer must be true on its own.
         role with brand work piled on top is yes; a brand or marketing role
         with a little product design on the side is no - ask what the job
         mostly is;
-        unpaid, volunteer, or an internship, whatever the title.
+        unpaid, volunteer, or an internship, whatever the title - but only
+        when the page SAYS unpaid, volunteer or no salary. "Equity-based" or
+        "equity" on its own is not unpaid.
    unclear  you cannot tell what kind of job it is. Never answer no on a guess.
    With no description, judge the role from the title alone.
 
@@ -552,12 +554,17 @@ your answers, so each answer must be true on its own.
                London office", "fully onsite at our Lisbon office", "work
                remotely from any European country", "must be authorised to
                work in the US". A place with remote, hybrid or onsite
-               attached is explicit. So is a LIST of several countries or
-               regions the role is open to: whatever is not on the list is
+               attached is explicit. So is a list of countries or regions
+               the posting says the role is OPEN TO ("open to candidates in
+               the UK, Germany and Spain"): whatever is not on the list is
                out, even if the page also says "we hire globally".
-     tag       a bare place name in a location field and nothing more:
-               "Location: France", "Berlin", "New York". It does not say
-               office or remote. It may only be where the company sits.
+     tag       bare place names in a location field and nothing more, one
+               or several: "Location: France", "Berlin", "United Kingdom /
+               Stockholm, Sweden". They do not say office or remote, and may
+               only be where the company has offices. When the word that
+               sits with "remote" is something else - "Europe / Remote"
+               under "United Kingdom" and "Stockholm" - the places are tags
+               and "Europe / Remote" is the explicit statement.
      generic   company-wide text that is not about this role: "we hire
                globally", "we are a remote-first company", a benefits or
                equal-opportunity paragraph pasted onto every posting.
@@ -577,6 +584,10 @@ your answers, so each answer must be true on its own.
                    hybrid or onsite at an office outside Portugal, when it is
                    required of EVERYONE in the role: office days at an office
                    that is not in Portugal are explicit and out.
+     portugal_maybe  the answer depends on a list or policy the page does
+                   not show: "fully remote from eligible countries" with a
+                   link, "remote in select countries", "depending on
+                   location". Do not guess whether Portugal is on it.
      says_nothing  office days that apply only to people who live near the
                    office, when the posting also offers a remote option
                    ("London hybrid or Europe remote", "Berlin or Remote" with
@@ -619,7 +630,7 @@ Return ONE JSON object and nothing else. No prose, no code fence.
     {"quote": "the exact words, copied from the page",
      "where": "under the title" | "opening paragraph" | "body" | "side panel" | "footer or small print",
      "kind": "tag" | "explicit" | "generic",
-     "says": "portugal_in" | "portugal_out" | "says_nothing"}
+     "says": "portugal_in" | "portugal_out" | "portugal_maybe" | "says_nothing"}
   ],
   "place_verdict": "remote" | "pt_onsite" | "no" | "unclear",
   "place_quote": "the words on the page that matter most for place, copied, under 30 words",
@@ -665,13 +676,19 @@ def place_from_statements(signals, workplace, model_place):
         a tag, and only generic text      unclear "Location: France", then "we hire globally":
                                                   muddled, he sorts it
         a tag and nothing else            no      a place named and nothing widens it
+        remote from "eligible countries"  unclear the list is not on the page; he checks it
         office days required of everyone, no      "if it requires office days and it is not in
         and the office is not in Portugal         Lisbon, it is a clear cut" - unless the office
                                                   is only for people near it and the role is
                                                   remote elsewhere: then the remote option is
                                                   what is judged (London hybrid OR Europe remote)
     """
+    maybe = any(isinstance(x, dict) and x.get("says") == "portugal_maybe" for x in signals or [])
     sig = [x for x in signals or [] if isinstance(x, dict) and x.get("says") in ("portugal_in", "portugal_out")]
+    if maybe and not any(x["says"] == "portugal_in" and x.get("kind") != "generic" for x in sig):
+        # "fully remote from eligible countries", and the list is behind a link:
+        # he checks it himself. "This is the easy unsure" (Bending Spoons).
+        return "unclear", "remote from a list of countries the page does not show"
     kind = lambda x: x.get("kind") if x.get("kind") in ("tag", "explicit", "generic") else "explicit"
     has = lambda says, k: any(x["says"] == says and kind(x) == k for x in sig)
     out = any(x["says"] == "portugal_out" and kind(x) != "generic" for x in sig)
