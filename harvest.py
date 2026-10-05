@@ -359,8 +359,19 @@ def check(boards, minutes=None):
             if minutes and time.time() - t0 > minutes * 60:
                 stop[0] = True
 
-    with ThreadPoolExecutor(WORKERS) as ex:
-        list(ex.map(one, due))
+    # The systems that refuse a crowd get two askers each, on their own. In
+    # one queue, ten of the twelve askers stood waiting behind Workable while
+    # 20,000 boards on the quick systems went unasked.
+    quick = [d for d in due if d[0] not in SLOW]
+    lanes = [quick] + [[d for d in due if d[0] == k] for k in SLOW]
+    def run(items, workers):
+        with ThreadPoolExecutor(workers) as ex:
+            list(ex.map(one, items))
+    threads = [threading.Thread(target=run, args=(items, WORKERS if i == 0 else 2)) for i, items in enumerate(lanes) if items]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
     save(boards)
     tmp = SOURCES + ".tmp"
     json.dump(src, open(tmp, "w"), indent=1, ensure_ascii=False)
@@ -372,7 +383,10 @@ def check(boards, minutes=None):
     print(f"{total} boards known in all; {sum(len(v) for v in watch.values())} scraped every night")
 
 
-def batch(minutes=5):
+BATCH = 5000                  # POOL roles per handover to CUT and VISION
+
+
+def batch(minutes=10):
     """How much POOL to hand to VISION at a time.
 
     POOL fills far faster than VISION reads (16,000 postings in 90 seconds
@@ -391,11 +405,14 @@ def batch(minutes=5):
     new = [j for j in contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"] if (j.get("first_seen") or "") >= since and "/" in (j.get("source") or "")]
     survive = (sum(1 for j in new if judge.l1(j.get("title")) is None) / len(new)) if len(new) > 500 else 0.042
     per_board = len(new) / max(1, len({j["source"] for j in new})) if len(new) > 500 else 43
-    reads = max(60, round(speed * minutes))
-    x = round(reads / max(survive, 0.005))
+    # His call, 2026-10-05: "overhead is a bitch, send to cut then vision, at
+    # every 5k that reach pool." X is fixed; what it means in boards and in
+    # reads is still worked out from the measurements.
+    x = BATCH
+    reads = max(60, round(x * max(survive, 0.005)))
     boards = max(10, round(x / per_board))
-    print(f"batch: VISION reads {speed:.1f} roles a minute; {survive * 100:.1f}% of POOL survives CUT; {per_board:.0f} roles a board "
-          f"-> X = {x} POOL roles = {boards} boards, {reads} reads, a handover every {minutes} minutes")
+    print(f"batch: X = {x} POOL roles = {boards} boards; {survive * 100:.1f}% survive CUT = {reads} for VISION, "
+          f"which reads {speed:.1f} a minute: about {reads / max(speed, 1):.0f} minutes a round")
     print(f"BOARDS={boards} READS={reads}")
 
 
