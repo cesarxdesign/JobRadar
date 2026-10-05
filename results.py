@@ -249,6 +249,11 @@ def evidence(rec, vis, emp, by_id):
     return {k: v for k, v in ev.items() if v}
 
 
+def old_text_of(vis):
+    """Read before the rules were rewritten on 2026-10-05: the statements carry no kind."""
+    return str(vis.get("criteria") or "") < "2026-10-05"
+
+
 def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=None):
     emp, by_id = employers(pool_doc), {j["id"]: j for j in pool_doc["jobs"]}
     hints = hints or {}
@@ -278,6 +283,16 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             role["verdict"]["evidence"] = evidence(rec, vis, emp, by_id)
             roles.append(role)
             lane = vis.get("lane")
+            # Readings made under the rewritten rules keep everything the
+            # reader reported, so the lane is worked out again here, by the
+            # one function that decides it. A change to how statements are
+            # weighed reaches every such role without reading a page again.
+            if not old_text_of(vis) and vis.get("stage") == "vision" and lane != "closed" and isinstance(vis.get("place_signals"), list):
+                again, place, why = criteria.lane_from_reading({**vis, "place_verdict": vis.get("reader_place") or vis.get("place_verdict")})
+                if again != lane and again in ("open", "portugal", "unsure", "cut"):
+                    lane = again
+                    role["verdict"].update({"lane": lane, "cut": lane == "cut", "place": place,
+                                            "reason": ((why + " · ") if why else "") + str(vis.get("reason") or "").split(" · ")[-1]})
             # A rule that changes how the evidence is weighed should not need
             # every page read again: the statements the reader listed are on
             # file, so the newest rule is applied to them here.

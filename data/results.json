@@ -1,18 +1,18 @@
 {
  "jd": {},
  "generated_at": "2026-10-05T09:58:36+00:00",
- "built_at": "2026-10-05T12:22+01:00",
+ "built_at": "2026-10-05T12:50+01:00",
  "run_id": "2026-10-05T09:58:36+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
   "open": 225,
   "portugal": 15,
-  "unsure": 34,
+  "unsure": 33,
   "ghosts": 0,
   "cut": 3,
   "closed": 524,
-  "vision_cut": 4850,
+  "vision_cut": 4851,
   "agency": 0,
   "not_read": 0,
   "folded": 36,
@@ -302,8 +302,7 @@
    "ca8a0e7c2b054a07",
    "c112cd3f6c2e4d2d",
    "f94d4a71f8e1498a",
-   "c3c3d0a6289440f2",
-   "43ff5889c561464a"
+   "c3c3d0a6289440f2"
   ]
  },
  "cut": [
@@ -5668,6 +5667,7 @@
   "6ab60380b3ab47d7",
   "c9bfb4d892fe4629",
   "687277a011c64418",
+  "43ff5889c561464a",
   "20aa9c84043944a6",
   "8df6d1a2b5d04615",
   "1c8abce9292c4719",
@@ -448841,9 +448841,9 @@
    "years_xp": 5,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · The posting explicitly restricts the role to NZ, UK, or US offices, excluding Portugal.",
      "Portugal OUT · under the title: \"Remote (New Zealand) • Auckland\"",
@@ -448877,7 +448877,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/3797860-senior-product-designer",
-    "reason": "remote from a list of countries the page does not show · The posting explicitly restricts the role to NZ, UK, or US offices, excluding Portugal.",
+    "reason": "The posting explicitly restricts the role to NZ, UK, or US offices, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",

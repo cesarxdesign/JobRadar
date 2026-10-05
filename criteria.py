@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-05.2"
+VERSION = "2026-10-05.3"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -691,7 +691,10 @@ def place_from_statements(signals, workplace, model_place):
                                                   remote elsewhere: then the remote option is
                                                   what is judged (London hybrid OR Europe remote)
     """
-    maybe = any(isinstance(x, dict) and x.get("says") == "portugal_maybe" for x in signals or [])
+    # Only a statement about THIS role counts ("or fully remote from eligible
+    # countries"). "We're a global team spanning Europe and Australasia" is
+    # company talk: it held Partly - Auckland, remote in New Zealand - in Unsure.
+    maybe = any(isinstance(x, dict) and x.get("says") == "portugal_maybe" and x.get("kind") != "generic" for x in signals or [])
     sig = [x for x in signals or [] if isinstance(x, dict) and x.get("says") in ("portugal_in", "portugal_out")]
     if maybe and not any(x["says"] == "portugal_in" and x.get("kind") != "generic" for x in sig):
         # "fully remote from eligible countries", and the list is behind a link:
