@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-05.4"
+VERSION = "2026-10-05.5"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -334,10 +334,13 @@ company the job is at: a recruiter, a staffing or consulting firm placing
 people with clients, a talent marketplace, or a site that lists roles "on
 behalf of a partner company" or "for our client". "employer" otherwise.
 
-same_job: you are told which role the pool lists. "no" only when the page
-is plainly a posting for a DIFFERENT job (another title, another company) or
-an advert for something else. A longer or shorter wording of the same title
-is the same job.
+same_job: you are told which role the pool lists. Compare ONLY the page's
+job title and company with the title and company the pool lists. "no" only
+when the page is plainly a posting for a DIFFERENT job (another title,
+another company) or an advert for something else. A longer or shorter wording
+of the same title is the same job. This is not a question about whether the
+job is a design job or suits anyone: a page for the listed "Power Amplifier
+Designer" is the same job, and what kind of job it is goes in role_verdict.
 
 fields.posted is the date the page itself prints for this posting, as written
 ("January 26", "3 weeks ago"), or null.
@@ -655,9 +658,10 @@ Return ONE JSON object and nothing else. No prose, no code fence.
   }
 }
 
-same_job is "no" only when the page is plainly a posting for a DIFFERENT job
-or an advert for something else; a longer or shorter wording of the title is
-the same job. posted_by is "agency" when someone other than the company the
+same_job compares ONLY the page's title and company with the ones the pool
+lists: "no" only when the page is plainly a posting for a DIFFERENT job or an
+advert for something else; a longer or shorter wording of the title is the
+same job. Whether it is a design job is role_verdict's question, not this one. posted_by is "agency" when someone other than the company the
 job is at put it up: a recruiter, a staffing firm, a talent marketplace, a
 site listing roles "for our client". fields.posted is the date the page
 prints for this posting, as written. When the posting is not open, fill what
@@ -723,6 +727,29 @@ def place_from_statements(signals, workplace, model_place):
     return place_from_signals([x for x in sig if x["says"] == "portugal_in"], workplace, model_place) if not out else ("no", None)
 
 
+def same_listing(a):
+    """The reader said "not the same job" - but did it read the job the pool
+    lists? It has answered "no" meaning "not a design job" (Power Amplifier
+    Designer at syntronic, 2026-10-05: the right page, role no, place no, and
+    still in Unsure because this check runs first). When the title it read
+    off the page is the listed title, or a longer or shorter wording of it,
+    at the same company, the page IS the job and the other answers decide.
+    a["listed"] is what the pool lists; without it nothing is overruled."""
+    import re
+    words = lambda s: set(re.findall(r"[a-z0-9]+", str(s or "").lower())) - {"the", "a", "an", "and", "of", "for"}
+    squash = lambda s: re.sub(r"[^a-z0-9]", "", str(s or "").lower())
+    listed, read = a.get("listed") or {}, a.get("fields") if isinstance(a.get("fields"), dict) else {}
+    lt, rt = words(listed.get("title")), words(read.get("role"))
+    if len(lt & rt) < 2 or not (lt <= rt or rt <= lt):
+        return False
+    # The pool's own link was the page read: there is no other job it could
+    # be, however the board's slug spells the company ("cogentanalytics").
+    if listed.get("own_page"):
+        return True
+    lc, rc = squash(listed.get("company")), squash(read.get("company"))
+    return not lc or not rc or lc in rc or rc in lc
+
+
 def lane_from_reading(a):
     """The lane, from what the reader reported. Every rule about weighing is
     here and in place_from_statements(), and nowhere else. Returns
@@ -736,7 +763,7 @@ def lane_from_reading(a):
         role yes, place yes               open, or portugal for an office in Portugal
         anything unclear                  unsure
     """
-    if a.get("same_job") == "no":
+    if a.get("same_job") == "no" and not same_listing(a):
         return "unsure", None, "the page read is a different job"
     if a.get("posting_open") == "no":
         return "closed", None, None

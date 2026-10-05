@@ -549,7 +549,8 @@ def see(finder, rec):
     v["stage"] = "vision"
     # The reader reports; criteria.lane_from_reading() decides. Every rule
     # about weighing what the page says is in that one function.
-    lane, place, why = criteria.lane_from_reading(a)
+    lane, place, why = criteria.lane_from_reading({**a, "listed": {"title": rec.get("title"), "company": rec.get("company"),
+                                                                    "own_page": v.get("read_url") == v.get("pool_url")}})
     v["lane"] = lane
     if place is not None:
         v["reader_place"], v["place_verdict"] = a.get("place_verdict"), place
@@ -600,7 +601,8 @@ def audit(out, jobs, since=None, share=AUDIT_SHARE):
         rec = jobs[i]
         page = {"url": out[i].get("read_url") or rec["url"], "title": rec.get("title"), "text": open(f"{ROOT}/data/pages/{i}.txt").read()}
         a = reader(rec, page)
-        lane, place, why = criteria.lane_from_reading(a)
+        lane, place, why = criteria.lane_from_reading({**a, "listed": {"title": rec.get("title"), "company": rec.get("company"),
+                                                                        "own_page": out[i].get("read_url") == out[i].get("pool_url")}})
         with _lock:
             out[i]["audit"] = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "criteria": criteria.VERSION, "lane": lane,
                                "agrees": lane in ("cut", "closed"), "role": a.get("role_verdict"), "place": place,

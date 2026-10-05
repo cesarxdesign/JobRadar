@@ -288,8 +288,11 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             # one function that decides it. A change to how statements are
             # weighed reaches every such role without reading a page again.
             if not old_text_of(vis) and vis.get("stage") == "vision" and lane != "closed" and isinstance(vis.get("place_signals"), list):
-                again, place, why = criteria.lane_from_reading({**vis, "place_verdict": vis.get("reader_place") or vis.get("place_verdict")})
-                if again != lane and again in ("open", "portugal", "unsure", "cut"):
+                again, place, why = criteria.lane_from_reading({**vis, "place_verdict": vis.get("reader_place") or vis.get("place_verdict"),
+                                                                    "listed": {"title": rec.get("title"), "company": rec.get("company"),
+                                                                               "own_page": vis.get("read_url") == vis.get("pool_url")}})
+                # "closed" only where the reader had called it another job and was overruled: the page says it is closed
+                if again != lane and again in ("open", "portugal", "unsure", "cut") + (("closed",) if vis.get("same_job") == "no" else ()):
                     lane = again
                     role["verdict"].update({"lane": lane, "cut": lane == "cut", "place": place,
                                             "reason": ((why + " · ") if why else "") + str(vis.get("reason") or "").split(" · ")[-1]})
