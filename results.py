@@ -253,7 +253,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
     emp, by_id = employers(pool_doc), {j["id"]: j for j in pool_doc["jobs"]}
     hints = hints or {}
     vision = vision or {}
-    closed, vcut, agency, unread = [], [], [], []
+    closed, vcut, agency, unread, review = [], [], [], [], []
     verdicts = verdicts_doc.get("jobs", {})
     roles, lanes, cut, title_cuts, unjudged = [], {k: [] for k in LANES}, [], 0, 0
     ghosts = 0
@@ -313,17 +313,28 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             # list, so Unsure holds only roles worth his judgement.
             if lane == "unsure" and (vis.get("posting_open") == "unreadable"
                                      or "could not be read" in str(vis.get("reason"))):
-                unread.append(rec["id"])
+                # Tried on two runs and the page still will not open: cut,
+                # with that as the reason (his call, 2026-10-05). Until then
+                # it waits in Not read and goes into the next run.
+                if (vis.get("unread_tries") or 1) >= 2:
+                    role["verdict"].update({"lane": "cut", "cut": True,
+                                            "reason": "the page would not open on two runs · " + str(vis.get("reason") or "")})
+                    vcut.append(rec["id"])
+                else:
+                    unread.append(rec["id"])
                 continue
-            # A role an agency posts would otherwise sit in Open beside the
-            # employer's own postings, several times over. It gets its own lane.
-            if lane in lanes and criteria.is_agency((vis.get("fields") or {}).get("company") or rec.get("company"),
-                                                    (rec.get("source") or "").split("/", 1)[1] if "/" in (rec.get("source") or "") else "",
-                                                    vis.get("posted_by")):
-                role["verdict"]["agency"] = True
+            # Nothing is sent to a lane of its own for being an agency any
+            # more (2026-10-05): every role sits in the lane its reading gave
+            # it, and he moves a company to Bundlers himself, from the pane.
+            # Who an agency is hiring for is still shown.
+            if vis.get("posted_by") == "agency":
                 role["verdict"]["hiring_for"] = vis.get("hiring_for")
-                agency.append(rec["id"])
-                continue
+            # One cut in ten is read a second time (vision.audit). A cut the
+            # second reading would not have made is brought to him.
+            aud = vis.get("audit") or {}
+            if lane == "cut" and aud and not aud.get("agrees"):
+                role["verdict"]["audit"] = aud
+                review.append(rec["id"])
             (lanes[lane] if lane in lanes else closed if lane == "closed" else vcut).append(rec["id"])
             continue
         v = dict(DEFAULT_VERDICT)
@@ -375,6 +386,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "closed": closed,
         "vcut": vcut,
         "agency": agency,
+        "review": review,
         "unread": unread,
         "sources": pool_doc.get("sources", {}),
         "roles": roles,

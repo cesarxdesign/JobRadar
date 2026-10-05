@@ -569,6 +569,55 @@ def save(out):
     os.replace(tmp, OUT)
 
 
+UNREAD_TRIES = 2   # runs a page gets to open before the role is cut as unreadable
+AUDIT_SHARE = 0.10 # of each run's cuts, read a second time
+
+
+def audit(out, jobs, since=None, share=AUDIT_SHARE):
+    """A second look at one cut in ten, to keep the cutting honest.
+
+    Cuts are the error he cannot see, so after every run a tenth of them are
+    read again, from the page as it was saved, by a reader that is not told
+    what the first one said. A cut that survives is left alone. One that does
+    not is his to look at: results.py lists it under "review" and the board
+    shows it in For Reviewing. (His instruction, 2026-10-05.)"""
+    import random
+    cuts = [i for i, d in out.items() if d.get("lane") == "cut" and d.get("stage") == "vision" and not d.get("audit")
+            and (since is None or str(d.get("at") or "") >= since) and i in jobs
+            and os.path.exists(f"{ROOT}/data/pages/{i}.txt")]
+    random.seed(time.strftime("%Y-%m-%d"))
+    take = random.sample(sorted(cuts), min(len(cuts), max(1, round(len(cuts) * share)))) if cuts else []
+    print(f"audit: {len(take)} of {len(cuts)} cuts read a second time", flush=True)
+    wrong = [0]
+    def one(i):
+        rec = jobs[i]
+        page = {"url": out[i].get("read_url") or rec["url"], "title": rec.get("title"), "text": open(f"{ROOT}/data/pages/{i}.txt").read()}
+        a = reader(rec, page)
+        lane, place, why = criteria.lane_from_reading(a)
+        with _lock:
+            out[i]["audit"] = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "criteria": criteria.VERSION, "lane": lane,
+                               "agrees": lane in ("cut", "closed"), "role": a.get("role_verdict"), "place": place,
+                               "reason": ((why + " · ") if why else "") + str(a.get("reason") or ""),
+                               "signals": [x for x in a.get("place_signals") or [] if isinstance(x, dict) and x.get("says") != "says_nothing"]}
+            if lane not in ("cut", "closed"):
+                wrong[0] += 1
+                print(f"  ≠ {rec['company'][:22]} | {rec['title'][:40]} | second reading: {lane} | {str(a.get('reason'))[:90]}", flush=True)
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(WORKERS) as ex:
+        for n, _ in enumerate(ex.map(lambda i: _try(one, i), take), 1):
+            if n % 25 == 0:
+                save(out)
+    save(out)
+    print(f"audit done: {len(take) - wrong[0]} cuts confirmed, {wrong[0]} for him to review", flush=True)
+
+
+def _try(fn, i):
+    try:
+        fn(i)
+    except ReaderDown as e:
+        print(f"  audit could not read {i}: {str(e)[:80]}", flush=True)
+
+
 PREV = {}          # --employer: the verdicts already made on a board's copy, kept unless the employer's page turns up
 
 
@@ -606,7 +655,11 @@ def pick(jobs, done):
         if "--fresh" in args:              # everything except what the old judge cut on the employer's own text
             rows = [j for j in rows if rank(j) < 2]
     if "--again" not in args:
-        rows = [j for j in rows if j["id"] not in done]
+        # Not read is not an answer. A page that would not open goes into the
+        # next run once more ("add those to next batch run. if they dont open
+        # again, cut them" - 2026-10-05); results.py cuts it after that.
+        again = lambda d: d.get("posting_open") == "unreadable" and (d.get("unread_tries") or 1) < UNREAD_TRIES
+        rows = [j for j in rows if j["id"] not in done or again(done[j["id"]])]
     if "--limit" in args:
         rows = rows[:int(args[args.index("--limit") + 1])]
     return rows
@@ -615,6 +668,17 @@ def pick(jobs, done):
 def main():
     jobs = contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]
     out = json.load(open(OUT)) if os.path.exists(OUT) else {}
+    if "--audit" in sys.argv:          # --audit: a tenth of the last day's cuts; --audit --all: of every cut not yet checked
+        since = None if "--all" in sys.argv else time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time() - 86400))
+        audit(out, {j["id"]: j for j in jobs}, since)
+        u = _usage
+        if u["calls"]:
+            print(f"{u['calls']} pages read by {MODEL}: {(u['in'] + u['out']) // u['calls']:,} tokens per page, ${u['usd']:.2f} at API prices")
+            with open(RUNS_LOG, "a") as f:
+                f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "audit": True, "pages_read": u["calls"],
+                                    "tokens_per_page": (u["in"] + u["out"]) // u["calls"], "model": MODEL,
+                                    "criteria": criteria.VERSION}) + "\n")
+        return
     rows = pick(jobs, out)
     print(f"vision: {len(rows)} roles to read, model {MODEL}, {WORKERS} at a time", flush=True)
     if not rows:
@@ -646,6 +710,9 @@ def main():
             return
         with _lock:
             _usage["streak"] = 0
+            if v.get("posting_open") == "unreadable":
+                was = out.get(rec["id"]) or {}
+                v["unread_tries"] = (was.get("unread_tries") or (1 if was.get("posting_open") == "unreadable" else 0)) + 1
             out[rec["id"]] = v
             n[0] += 1
             print(f"  [{n[0]}/{len(rows)}] {v['lane']:8} {v.get('read', '-'):8} {str(v.get('found_by') or ''):7} {rec['company'][:22]:22} | "

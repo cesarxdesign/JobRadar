@@ -2,6 +2,16 @@
 
 What is next, in the order to do it. An empty backlog means finished, and that is information.
 
+## Next
+
+- [ ] Make a LinkedIn agent.
+- [ ] Add Principal Designer as a role.
+- [ ] Move Stats into cxd-stats, so applications sent can be read against folio traffic.
+- [ ] Night run reads the Gmail and remote.io tabs from the scheduler reliably (worked on 2026-10-05; failed on 2026-10-04).
+- [ ] Employer page finder: most board-only roles still do not get their company's own page.
+
+## Done, kept for the record
+
 ## 1. RadarRouting: rebuild the lost file
 
 - [x] Email sweep: `sweep.py` rebuilds the routing file from the inbox, one application to one posting.

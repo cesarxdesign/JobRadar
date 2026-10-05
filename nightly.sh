@@ -46,6 +46,8 @@ publish
 TICK=$!
 echo "-- read"; caffeinate -i python3 vision.py --new | grep -v "^  \[" | tail -12
 kill $TICK 2>/dev/null
+# one cut in ten from this run, read a second time; disagreements go to For Reviewing
+echo "-- audit"; caffeinate -i python3 vision.py --audit | grep -v "^  \[" | tail -8
 publish
 echo "-- battery"; python3 battery.py | head -4      # free: reads nothing; updates the TestBattery page
 echo "=== done $(date '+%F %H:%M') ==="

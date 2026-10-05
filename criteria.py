@@ -15,8 +15,16 @@ VERSION = "2026-10-05.2"
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
 PARSE_MUST_HAVE = r"\b(design|designer|ux)\b|(?:^| )ui(?: |$)|ui/ux|ux/ui"
-PARSE_EXCLUDE = (r"\b(brand|marketing|graphic|motion|research|researcher|"
-              r"web ?designer|visual ?designer)\b")
+PARSE_EXCLUDE = (r"\b(brand|marketing|graphics?|motion|research|researcher|"
+              r"web ?designer|visual ?designer|"
+              # 2026-10-05, his call on the Not read lane: "whatever roles can
+              # be cut on title, cut". Titles that are plainly another trade.
+              # "Front-End Design Engineer" is NOT here: it leans design.
+              r"social media|animator|animation|draftsman|drafter|storyboard|"
+              r"presentation designer|interior|fashion|packaging|"
+              r"compensation design|email ?/ ?sms|"
+              r"(?:security|hardware|rf|mechanical|electrical|pcb|asic|fpga|circuit|structural|civil|"
+              r"physical|analog|silicon|chip|verification) (?:[a-z/&-]+ ){0,3}(?:design )?engineer)\b")
 # ...unless the role is design leadership. A Head of Design or Design Director
 # oversees brand, graphic and research rather than doing them, so those words
 # stop being a reason to cut. "Lead" does NOT qualify - a Design Lead is still
