@@ -372,8 +372,38 @@ def check(boards, minutes=None):
     print(f"{total} boards known in all; {sum(len(v) for v in watch.values())} scraped every night")
 
 
+def batch(minutes=10):
+    """How much POOL to hand to VISION at a time.
+
+    POOL fills far faster than VISION reads (16,000 postings in 90 seconds
+    against about 17 roles a minute), so the batch is sized from VISION's
+    end: enough new roles that what survives CUT keeps VISION busy until the
+    next handover, and no more - anything beyond that only sits in a queue.
+
+        X = VISION's roles per minute x minutes between handovers / share that survives CUT
+
+    All three are measured, from the last runs and the last day's pool."""
+    runs = [json.loads(l) for l in open(f"{ROOT}/data/vision_runs.jsonl") if l.strip()] if os.path.exists(f"{ROOT}/data/vision_runs.jsonl") else []
+    timed = [r for r in runs if r.get("seconds") and r.get("roles", 0) >= 30 and not r.get("audit")][-4:]
+    speed = sum(r["roles"] for r in timed) / max(1, sum(r["seconds"] - r.get("waited", 0) for r in timed)) * 60 if timed else 17.0
+    import contracts
+    since = time.strftime("%Y-%m-%dT%H:%M", time.gmtime(time.time() - 86400))
+    new = [j for j in contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"] if (j.get("first_seen") or "") >= since and "/" in (j.get("source") or "")]
+    survive = (sum(1 for j in new if judge.l1(j.get("title")) is None) / len(new)) if len(new) > 500 else 0.042
+    per_board = len(new) / max(1, len({j["source"] for j in new})) if len(new) > 500 else 43
+    reads = max(60, round(speed * minutes))
+    x = round(reads / max(survive, 0.005))
+    boards = max(10, round(x / per_board))
+    print(f"batch: VISION reads {speed:.1f} roles a minute; {survive * 100:.1f}% of POOL survives CUT; {per_board:.0f} roles a board "
+          f"-> X = {x} POOL roles = {boards} boards, {reads} reads, a handover every {minutes} minutes")
+    print(f"BOARDS={boards} READS={reads}")
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
+    if "batch" in args:
+        batch()
+        raise SystemExit(0)
     b = load()
     if not args or "enumerate" in args:
         named = {a for a in args if a in {p[0] for p in PATTERNS}}

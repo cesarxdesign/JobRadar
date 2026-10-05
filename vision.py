@@ -76,6 +76,7 @@ def wait_for_reset(msg):
             return                         # another reader has just seen it come back
         m = re.search(r"\|(\d{10})\b", msg or "")
         until = int(m.group(1)) if m else None
+        _paused_at = time.time()
         print(f"PAUSED {time.strftime('%H:%M')}: usage limit ({str(msg)[:90]}). "
               + (f"Resets about {time.strftime('%H:%M', time.localtime(until))}. " if until else "")
               + "Waiting; the run picks up by itself.", flush=True)
@@ -90,6 +91,7 @@ def wait_for_reset(msg):
                     break
             except Exception:
                 pass
+        _usage["waited"] = _usage.get("waited", 0) + (time.time() - _paused_at)
         _limit["cleared"] = time.time()
         print(f"RESUMED {time.strftime('%H:%M')}", flush=True)
 
@@ -564,11 +566,16 @@ def see(finder, rec):
 
 def save(out):
     """Whole file or nothing: results.py reads this while a run is still going."""
-    tmp = OUT + ".tmp"
-    json.dump(out, open(tmp, "w"), indent=1, ensure_ascii=False)
-    os.replace(tmp, OUT)
+    # One writer at a time, each with a file of its own: two threads sharing
+    # "vision.json.tmp" stopped a run on 2026-10-05 - one renamed the file
+    # away while the other was still about to.
+    with _save_lock:
+        tmp = f"{OUT}.{os.getpid()}.{threading.get_ident()}.tmp"
+        json.dump(dict(out), open(tmp, "w"), indent=1, ensure_ascii=False)
+        os.replace(tmp, OUT)
 
 
+_save_lock = threading.Lock()
 UNREAD_TRIES = 2   # runs a page gets to open before the role is cut as unreadable
 AUDIT_SHARE = 0.10 # of each run's cuts, read a second time
 
@@ -735,6 +742,7 @@ def main():
               f"{(u['in'] + u['out']) // u['calls']:,} per page, ${u['usd']:.2f} at API prices")
         with open(RUNS_LOG, "a") as f:
             f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "roles": len(rows), "pages_read": u["calls"],
+                                "seconds": round(time.time() - t0), "waited": round(u.get("waited", 0)),
                                 "tokens_per_page": (u["in"] + u["out"]) // u["calls"], "model": MODEL,
                                 "criteria": criteria.VERSION, "lanes": dict(c)}) + "\n")
     if u.get("over"):

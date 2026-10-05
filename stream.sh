@@ -19,10 +19,13 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "p
 ROUND=0
 while :; do
   ROUND=$((ROUND + 1))
-  echo "-- round $ROUND $(date +%H:%M): scrape the boards just added"
-  S=$(python3 pool.py --new-boards 2>&1 | grep -v "^  \[\|^   *…" | tail -5); echo "$S"
-  echo "-- round $ROUND: read"
-  V=$(python3 vision.py --new --limit 300 2>&1 | grep -v "^  \[" | tail -4); echo "$V"
+  # the batch: X POOL roles, sized so what survives CUT keeps VISION busy until the next handover
+  B=$(python3 harvest.py batch); echo "$B" | head -1
+  eval "$(echo "$B" | tail -1)"
+  echo "-- round $ROUND $(date +%H:%M): POOL, $BOARDS boards"
+  S=$(python3 pool.py --new-boards --boards "$BOARDS" 2>&1 | grep -v "^  \[\|^   *…" | tail -5); echo "$S"
+  echo "-- round $ROUND: CUT, then VISION on $READS"
+  V=$(python3 vision.py --new --limit "$READS" 2>&1 | grep -v "^  \[" | tail -4); echo "$V"
   publish
   # done when the check has finished, no board is left unread and nothing is left to read
   if ! pgrep -f "harvest.py" >/dev/null && echo "$S" | grep -q "new boards: 0 never read" && echo "$V" | grep -q "vision: 0 roles to read"; then break; fi

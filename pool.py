@@ -1942,7 +1942,10 @@ def main():
         have = {j.get("source") for j in previous} | {s for j in previous for s in (j.get("sources") or [])}
         tried = set(json.loads(TRIED_FILE.read_text())) if TRIED_FILE.exists() else set()
         NEW_BOARDS = {f"{p}/{k}" for p, sl in sources["watchlist"].items() for k in sl} - have - tried
-        print(f"new boards: {len(NEW_BOARDS)} never read", flush=True)
+        waiting = len(NEW_BOARDS)
+        if "--boards" in sys.argv:          # a batch: this many boards now, the rest next round
+            NEW_BOARDS = set(sorted(NEW_BOARDS)[:int(sys.argv[sys.argv.index("--boards") + 1])])
+        print(f"new boards: {waiting} never read" + (f", {len(NEW_BOARDS)} in this batch" if len(NEW_BOARDS) < waiting else ""), flush=True)
         if not NEW_BOARDS:
             return 0
         TRIED_FILE.write_text(json.dumps(sorted(tried | NEW_BOARDS)))
