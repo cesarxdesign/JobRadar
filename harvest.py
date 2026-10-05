@@ -302,6 +302,18 @@ def wayback(only=None, since="2025"):
     return boards
 
 
+def save_watch(watch):
+    """Write the watchlist back into sources.json as it is on disk NOW. The
+    check runs for hours with its own copy in memory; writing that copy back
+    whole undid anything added meanwhile (three job boards, 2026-10-05)."""
+    src = json.load(open(SOURCES))
+    for sys_, d in watch.items():
+        src["watchlist"].setdefault(sys_, {}).update(d)
+    tmp = SOURCES + ".tmp"
+    json.dump(src, open(tmp, "w"), indent=1, ensure_ascii=False)
+    os.replace(tmp, SOURCES)
+
+
 def check(boards, minutes=None):
     """Open each board that is due. Never-checked first, then the oldest."""
     src = json.load(open(SOURCES))
@@ -352,9 +364,7 @@ def check(boards, minutes=None):
             n[0] += 1
             if n[0] % 500 == 0:
                 save(boards)
-                tmp = SOURCES + ".tmp"
-                json.dump(src, open(tmp, "w"), indent=1, ensure_ascii=False)
-                os.replace(tmp, SOURCES)
+                save_watch(watch)
                 print(f"  {n[0]}/{len(due)} checked, {len(added)} boards with a design role so far, {time.time() - t0:.0f}s", flush=True)
             if minutes and time.time() - t0 > minutes * 60:
                 stop[0] = True
@@ -373,9 +383,7 @@ def check(boards, minutes=None):
     for t in threads:
         t.join()
     save(boards)
-    tmp = SOURCES + ".tmp"
-    json.dump(src, open(tmp, "w"), indent=1, ensure_ascii=False)
-    os.replace(tmp, SOURCES)
+    save_watch(watch)
     print(f"checked {n[0]} boards in {time.time() - t0:.0f}s: {len(added)} have a design role and were added to the nightly scrape")
     for sys_, k, d, t in added[:25]:
         print(f"  + {sys_}/{k}: {d} design · {t}")
