@@ -1,5 +1,5 @@
 {
- "note": "Radar1 registry (data/companies.json) merged with every source Radar1 actually pulled from. 2026-09-11: 233 boards harvested from superjobs.design's company list, Fetch (greenhouse), Qorelo, Andercore, Prior Labs (ashby), TYTAN (recruitee) from the LinkedIn sweep, plus eleven aggregators from the same sweep (see pool.py). 2026-09-12: five sources added after the hand sweep (SOURCE_SWEEP.md) - remoteio, woodyjobs, uiuxjobsboard, uxremotetalent, netempregos. netempregos is the Portuguese one: direct employer and agency ads from companies that never appear on a US-style ATS. 2026-09-24: merged with the old Radar repo (v1) before it was archived. Radar listed three boards this file had elsewhere: greenhouse/wise (here on smartrecruiters), ashby/happyrobot (here as happyrobot.ai), lever/eneba (here on ashby). Both kept; a dead one fails soft. 2026-10-05: three job boards added from a search for one role (elearnio) - jobalert, kazialert, theohub. BeBee was looked at and left out: it rewrites titles, so CUT and one-posting-one-application cannot work on it, and its robots.txt forbids search.",
+ "note": "Radar1 registry (data/companies.json) merged with every source Radar1 actually pulled from. 2026-09-11: 233 boards harvested from superjobs.design's company list, Fetch (greenhouse), Qorelo, Andercore, Prior Labs (ashby), TYTAN (recruitee) from the LinkedIn sweep, plus eleven aggregators from the same sweep (see pool.py). 2026-09-12: five sources added after the hand sweep (SOURCE_SWEEP.md) - remoteio, woodyjobs, uiuxjobsboard, uxremotetalent, netempregos. netempregos is the Portuguese one: direct employer and agency ads from companies that never appear on a US-style ATS. 2026-09-24: merged with the old Radar repo (v1) before it was archived. Radar listed three boards this file had elsewhere: greenhouse/wise (here on smartrecruiters), ashby/happyrobot (here as happyrobot.ai), lever/eneba (here on ashby). Both kept; a dead one fails soft.",
  "watchlist": {
   "ashby": {
    "1password": "1Password",
@@ -3969,7 +3969,8 @@
    "infosys-consulting-europe": "Infosys Consulting - Europe",
    "lokal-app": "Lokal App",
    "alumil": "ALUMIL",
-   "cadillacf1team": "Cadillac Formula 1® Team"
+   "cadillacf1team": "Cadillac Formula 1® Team",
+   "bjak-1": "Bjak"
   },
   "workday": {
    "iqvia": "IQVIA",
@@ -4168,9 +4169,6 @@
   "uxremotetalent",
   "netempregos",
   "haystack",
-  "hackernews",
-  "jobalert",
-  "kazialert",
-  "theohub"
+  "hackernews"
  ]
 }
