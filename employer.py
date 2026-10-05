@@ -27,7 +27,7 @@ import re, urllib.parse
 import render
 
 # Hiring systems. A posting here belongs to the employer.
-ATS = re.compile(r"greenhouse\.io|lever\.co|ashbyhq\.com|workable\.com|recruitee\.com|teamtailor\.com|"
+ATS = re.compile(r"app\.dover\.com|greenhouse\.io|lever\.co|ashbyhq\.com|workable\.com|recruitee\.com|teamtailor\.com|"
                  r"smartrecruiters\.com|bamboohr\.com|personio\.(com|de)|join\.com|breezy\.hr|applytojob\.com|"
                  r"pinpointhq\.com|rippling\.com|myworkdayjobs\.com|jobs\.gem\.com|jobvite\.com|icims\.com|"
                  r"homerun\.co|factorialhr\.com|zohorecruit\.com|freshteam\.com|comeet\.com|dover\.com|"

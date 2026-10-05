@@ -377,6 +377,9 @@ function toggleFlag(r,k){
 // ones least to be trusted, and the board says which is which.
 const reader=r=>{const v=r.verdict||{};return v.stage==="vision"||v.read_at?"vision":"judge";};
 const challenged=r=>!!(flagOf(r.id)||retagOf(r.id)||openNote(r.id));
+// Tagged wrong: it stays where it is while he is on it - he may tag more than
+// one reason - and leaves the lane for For Reviewing when he selects another.
+const parked=r=>!!flagOf(r.id)&&r.id!==SEL;
 // A retag is him overruling the filter on one role: "you called this Unsure,
 // it is Open". It is kept with what the filter said and why, it moves the
 // role to the lane he gave it, and it is what gets discussed afterwards.
@@ -593,8 +596,8 @@ function pool(){
     rows=laneIds(LANE==="vcut"?"cut":"closed").map(roleById).filter(r=>r && !routing(r.id));
   else if(LANE==="old69")
     rows=["open","portugal","unsure"].flatMap(laneIds)
-      .map(roleById).filter(r=>r && !routing(r.id) && isOld(r) && !isMulti(r) && !appliedSame(r));
-  else rows=laneIds(LANE).map(roleById).filter(r=>r && !routing(r.id) && !(RR&&isOld(r)) && !isMulti(r) && !appliedSame(r));
+      .map(roleById).filter(r=>r && !routing(r.id) && isOld(r) && !isMulti(r) && !appliedSame(r) && !parked(r));
+  else rows=laneIds(LANE).map(roleById).filter(r=>r && !routing(r.id) && !(RR&&isOld(r)) && !isMulti(r) && !appliedSame(r) && !parked(r));
   rows=rows.filter(matches);
   if(LANE!=="favorites") return sortRows(rows);
   const order=["open","portugal","unsure","applied","discarded","cut"];
@@ -609,12 +612,12 @@ function counts(){
   }
   for(const l of ["open","portugal","unsure"]){
     const n=laneIds(l).map(roleById)
-      .filter(r=>r&&!routing(r.id)&&!(RR&&isOld(r))&&!isMulti(r)&&matches(r)&&!appliedSame(r)).length;
+      .filter(r=>r&&!routing(r.id)&&!(RR&&isOld(r))&&!isMulti(r)&&matches(r)&&!appliedSame(r)&&!parked(r)).length;
     $("c-"+l).textContent=n||"";
   }
   $("c-agency").textContent=multiIds().map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
   $("c-old69").textContent=["open","portugal","unsure"].flatMap(laneIds)
-    .map(roleById).filter(r=>r&&!routing(r.id)&&isOld(r)&&!isMulti(r)&&!appliedSame(r)&&matches(r)).length||"";
+    .map(roleById).filter(r=>r&&!routing(r.id)&&isOld(r)&&!isMulti(r)&&!appliedSame(r)&&!parked(r)&&matches(r)).length||"";
   if(RR){
     for(const l of ["applied","discarded"])
       $("c-"+l).textContent=(DATA.roles.filter(r=>r.active&&routing(r.id)===l)
@@ -880,6 +883,21 @@ function historyBox(r){
 // when there is one) and stays as history; the box opens again for the next.
 const DRAFT={};       // what he has typed and not saved yet, so a re-render does not eat it
 const openNote=id=>RR&&(RR.notes||[]).find(n=>n.id===id&&!n.reviewed);
+// Notes save themselves, a moment after he stops typing. Nothing is redrawn:
+// redrawing would take the cursor out of the box mid-sentence.
+function autoNote(r,text){
+  DRAFT[r.id]=text;
+  clearTimeout(autoNote.t);
+  autoNote.t=setTimeout(()=>{
+    const v=r.verdict||{}, cur=openNote(r.id), t=text.trim(), now=new Date().toISOString();
+    RR.notes=(RR.notes||[]).filter(n=>n!==cur);
+    if(t) RR.notes.push({id:r.id,at:cur?cur.at:now,edited:now,text:t,
+      company:r.company,title:r.title,url:r.url,read_url:v.read_url,label:labelOf(r),tab:cur?cur.tab:LANE,by:reader(r),
+      role:v.role,place:v.place,reason:v.reason,reviewed:null});
+    writeRR();
+    const s=$("note-state"); if(s&&SEL===r.id) s.textContent=t?"saved "+new Date().toTimeString().slice(0,5)+" · not reviewed yet":"note removed";
+  },700);
+}
 function saveNote(r,text){
   const v=r.verdict||{}, cur=openNote(r.id);
   text=text.trim();
@@ -898,8 +916,8 @@ function notesBox(r){
     +past.map(n=>'<div class="past"><div>'+esc(n.text)+'</div>'+(n.answer?'<div class="ans">↳ '+esc(n.answer)+'</div>':'')
         +'<div class="when">'+esc(n.at.slice(0,10))+' · reviewed '+esc(String(n.reviewed).slice(0,10))+'</div></div>').join("")
     +'<textarea id="note" placeholder="anything about this role to look at later">'+esc(DRAFT[r.id]!=null?DRAFT[r.id]:cur?cur.text:"")+'</textarea>'
-    +'<div class="acts" style="margin-top:6px"><button id="note-save">'+(cur?"Update note":"Save note")+'</button>'
-    +(cur?'<span style="color:var(--dim);font-size:12px;align-self:center">saved '+esc(cur.edited.slice(0,16).replace("T"," "))+' · not reviewed yet</span>':'')+'</div></div>';
+    +'<div id="note-state" style="color:var(--dim);font-size:12px;margin-top:4px">'
+    +(cur?'saved '+esc(cur.edited.slice(0,16).replace("T"," "))+' · not reviewed yet':'saves as you type')+'</div></div>';
 }
 // The same answer as the box, as tags on the card: which question kept this
 // role out of Open, readable down the list without opening each one.
@@ -1029,12 +1047,7 @@ function renderPane(){
   $("pane").querySelectorAll(".flag[data-t]").forEach(b=>b.onclick=()=>retag(r,b.dataset.t));
   if($("multi")) $("multi").onclick=()=>toggleMulti(r);
   if($("aud-wrong")){$("aud-wrong").onclick=()=>auditCall(r,"wrong");$("aud-right").onclick=()=>auditCall(r,"right");}
-  if($("note-save")){
-    $("note-save").onclick=()=>saveNote(r,$("note").value);
-    $("note").oninput=e=>{DRAFT[r.id]=e.target.value;};
-    // Cmd+Enter saves, so a note never needs the mouse
-    $("note").onkeydown=e=>{if((e.metaKey||e.ctrlKey)&&e.key==="Enter") saveNote(r,$("note").value);};
-  }
+  if($("note")) $("note").oninput=e=>autoNote(r,e.target.value);
 }
 
 // ---------- Evidence ----------
