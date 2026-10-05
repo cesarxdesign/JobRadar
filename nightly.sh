@@ -19,6 +19,7 @@ export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 LOG="data/nightly.log"
 exec >>"$LOG" 2>&1
 echo; echo "=== nightly $(date '+%F %H:%M') ==="
+if [ -f data/PAUSED ]; then echo "paused (data/PAUSED is there): $(cat data/PAUSED)"; exit 0; fi
 if pgrep -f "vision.py" >/dev/null || pgrep -f "stream.sh" >/dev/null; then echo "a run is already going; leaving it alone"; exit 0; fi
 
 publish() {

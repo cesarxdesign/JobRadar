@@ -1,28 +1,28 @@
 {
  "jd": {},
- "generated_at": "2026-10-05T15:29:56+00:00",
- "built_at": "2026-10-05T16:39+01:00",
- "run_id": "2026-10-05T15:29:56+00:00",
+ "generated_at": "2026-10-05T15:39:13+00:00",
+ "built_at": "2026-10-05T16:41+01:00",
+ "run_id": "2026-10-05T15:39:13+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 255,
+  "open": 257,
   "portugal": 17,
   "unsure": 57,
   "ghosts": 0,
   "cut": 148,
   "closed": 526,
-  "vision_cut": 6866,
+  "vision_cut": 6894,
   "agency": 0,
   "not_read": 3,
   "folded": 38,
-  "vision_read": 9126,
+  "vision_read": 9156,
   "title_cuts": 65910,
-  "design": 9425,
-  "waiting": 1663,
-  "unjudged": 166739,
-  "active": 240559,
-  "total": 244179
+  "design": 9617,
+  "waiting": 1825,
+  "unjudged": 170094,
+  "active": 243944,
+  "total": 247564
  },
  "lanes": {
   "open": [
@@ -280,7 +280,9 @@
    "ae1590ca80544287",
    "e6e8a0801e254a04",
    "0994fa117064484d",
-   "c09f5469ceeb4465"
+   "c09f5469ceeb4465",
+   "9e9fe86e02fc4179",
+   "a47c5433b26549cd"
   ],
   "portugal": [
    "4b0d368bc9284d5e",
@@ -7905,7 +7907,35 @@
   "b609106a92e44942",
   "bfc0592525704d1c",
   "28f42eace166417e",
-  "4bbc01944c01412b"
+  "4bbc01944c01412b",
+  "7acb3925215140c0",
+  "2673f2dd27764eb6",
+  "3d1466b3e78b4664",
+  "e7fd853f6a714b61",
+  "e4ec9e9f797d4a6d",
+  "1c9335dbf5634849",
+  "32677b1872664ba7",
+  "96053f98839241f4",
+  "35605686684e422e",
+  "57b38fb792814486",
+  "2d0ed71016e64b5a",
+  "d7611c7bd734496d",
+  "387cb73e094d4b33",
+  "b3ecbb7b12c74a3b",
+  "e1e8149827504a99",
+  "0b8881bd7e49480a",
+  "07e46afe66df4d61",
+  "74566ed4f1e54fce",
+  "4e3977f6e0d34fdd",
+  "8ef4b67f90f74093",
+  "bc9c1ef211314ad6",
+  "6d9022ef384c44f0",
+  "fc047e8f2f0f4cd4",
+  "febd4bdd6a1c4ae6",
+  "1690b7c4af1a4e53",
+  "6fa72b069c834fe6",
+  "f6d0f973a7c34635",
+  "a79f23e1e4754820"
  ],
  "agency": [],
  "review": [
@@ -7917,8 +7947,17 @@
   "b1c5e7725bf948cd"
  ],
  "sources": {
-  "ok": 3604,
-  "failed": {}
+  "ok": 3415,
+  "failed": {
+   "recruitee/techbizglobal": "HTTPError: HTTP Error 429: Too Many Requests",
+   "recruitee/ecolecentraledelyon": "HTTPError: HTTP Error 429: Too Many Requests",
+   "recruitee/lg2": "HTTPError: HTTP Error 429: Too Many Requests",
+   "recruitee/transperfect": "HTTPError: HTTP Error 429: Too Many Requests",
+   "recruitee/littledutch": "HTTPError: HTTP Error 429: Too Many Requests",
+   "recruitee/eluscious": "HTTPError: HTTP Error 429: Too Many Requests",
+   "recruitee/kantega": "HTTPError: HTTP Error 429: Too Many Requests",
+   "recruitee/beinguser": "HTTPError: HTTP Error 429: Too Many Requests"
+  }
  },
  "roles": [
   {
@@ -632470,6 +632509,2274 @@
     "found_by": null,
     "shot": "data/shots/4bbc01944c01412b.jpg",
     "read_at": "2026-10-05T16:36:27",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Saypien GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "7acb3925215140c0",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Berlin, Germany",
+   "source": "personio/work-at-saypien.jobs.personio.com",
+   "sources": [
+    "personio/work-at-saypien.jobs.personio.com"
+   ],
+   "title": "Design Engineer (m/w/d)",
+   "url": "https://work-at-saypien.jobs.personio.com/job/2826769",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Company calls itself remote-first and only prefers (not requires) Berlin, but the location field names Berlin with no remote tag, leaving the geography unsettled.",
+     "Portugal OUT · under the title: \"Berlin, Germany\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "low",
+    "fields": {
+     "role": "Design Engineer (m/w/d)",
+     "company": "Primefold",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": "60.000 bis 80.000 € brutto pro Jahr, inklusive einer verhandelbaren VSOP-Beteiligung",
+     "years_xp": null,
+     "reports_to": "Lead Design Engineer",
+     "language": "German",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://work-at-saypien.jobs.personio.com/job/2826769",
+    "reason": "Company calls itself remote-first and only prefers (not requires) Berlin, but the location field names Berlin with no remote tag, leaving the geography unsettled.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "German",
+    "quote": "Berlin, Germany / Remote-first: Idealerweise lebst du in Berlin.",
+    "signals": [
+     {
+      "quote": "Berlin, Germany",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/7acb3925215140c0.jpg",
+    "read_at": "2026-10-05T16:39:28",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "2673f2dd27764eb6",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com"
+   ],
+   "title": "CAD & Configuration Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2534754",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "CAD/mechanical engineering role is onsite in Bremen, Germany with no home office, and the title is a CAD/engineering role, not design, UX or UI.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "CAD & Configuration Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "EUR 60,000 to EUR 100,000 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2534754",
+    "reason": "CAD/mechanical engineering role is onsite in Bremen, Germany with no home office, and the title is a CAD/engineering role, not design, UX or UI.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/2673f2dd27764eb6.jpg",
+    "read_at": "2026-10-05T16:39:28",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "3d1466b3e78b4664",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com"
+   ],
+   "title": "Thermal Analysis and TPS Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2727026",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is an aerospace thermal/TPS engineering position (not design/UX/UI), and it is onsite in Bremen, Germany with no home office offered.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Thermal Analysis and TPS Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "no",
+     "salary": "EUR 60,000.00 to EUR 100,000.00 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2727026",
+    "reason": "The role is an aerospace thermal/TPS engineering position (not design/UX/UI), and it is onsite in Bremen, Germany with no home office offered.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3d1466b3e78b4664.jpg",
+    "read_at": "2026-10-05T16:39:28",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "e7fd853f6a714b61",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com"
+   ],
+   "title": "Avionics System Integration and Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2795138",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is an avionics/electrical engineering role, not design/UX, and it is onsite in Bremen, Germany with no remote option.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Avionics System Integration and Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "EUR 60.000,00 to EUR 100.000,00 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2795138",
+    "reason": "This is an avionics/electrical engineering role, not design/UX, and it is onsite in Bremen, Germany with no remote option.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/e7fd853f6a714b61.jpg",
+    "read_at": "2026-10-05T16:39:28",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "e4ec9e9f797d4a6d",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.com"
+   ],
+   "title": "Fluid System Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2805265",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a mechanical/aerospace fluid-systems engineering job, not product/UX/UI design, and it requires on-site work in Bremen, Germany with no remote option.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Fluid System Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "EUR 60.000,00 to EUR 100.000,00 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.com/job/2805265",
+    "reason": "Role is a mechanical/aerospace fluid-systems engineering job, not product/UX/UI design, and it requires on-site work in Bremen, Germany with no remote option.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/e4ec9e9f797d4a6d.jpg",
+    "read_at": "2026-10-05T16:39:28",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Saypien GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "1c9335dbf5634849",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Berlin, Germany",
+   "source": "personio/saypien.jobs.personio.com",
+   "sources": [
+    "personio/saypien.jobs.personio.com"
+   ],
+   "title": "Design Engineer (m/w/d)",
+   "url": "https://saypien.jobs.personio.com/job/2826769",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Page calls the role remote-first with only a preference (not a requirement) to live in Berlin, but also tags Berlin, Germany and a UK/Ireland contract note under the title, so the location requirement is contradictory and unclear; the posting is in German, which fails the language rule anyway.",
+     "Portugal OUT · under the title: \"Berlin, Germany\"",
+     "Portugal OUT · under the title: \"Befristet (Vereinigtes Königreich und Irland)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "low",
+    "fields": {
+     "role": "Design Engineer (m/w/d)",
+     "company": "Primefold",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": "60.000 bis 80.000 € brutto pro Jahr, inklusive einer verhandelbaren VSOP-Beteiligung",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "German",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://saypien.jobs.personio.com/job/2826769",
+    "reason": "Page calls the role remote-first with only a preference (not a requirement) to live in Berlin, but also tags Berlin, Germany and a UK/Ireland contract note under the title, so the location requirement is contradictory and unclear; the posting is in German, which fails the language rule anyway.",
+    "open": "yes",
+    "language_ok": false,
+    "language": "German",
+    "quote": "Remote-first: Idealerweise lebst du in Berlin.",
+    "signals": [
+     {
+      "quote": "Berlin, Germany",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Befristet (Vereinigtes Königreich und Irland)",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/1c9335dbf5634849.jpg",
+    "read_at": "2026-10-05T16:39:29",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Bike Hub GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "9e9fe86e02fc4179",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Cologne / Germany / Remote (EU)",
+   "remote": true,
+   "source": "personio/velio.jobs.personio.com",
+   "sources": [
+    "personio/velio.jobs.personio.com"
+   ],
+   "title": "Senior Product Designer (m/w/d)",
+   "url": "https://velio.jobs.personio.com/job/546978",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "The posting offers Remote (EU) as an alternative to the Cologne/Germany office, and Portugal is within the EU with no exclusion.",
+     "Portugal in · under the title: \"Cologne / Germany / Remote (EU)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer (m/w/d)",
+     "company": "velio",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "EU"
+     ],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": "+5 years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://velio.jobs.personio.com/job/546978",
+    "reason": "The posting offers Remote (EU) as an alternative to the Cologne/Germany office, and Portugal is within the EU with no exclusion.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Cologne / Germany / Remote (EU)",
+    "signals": [
+     {
+      "quote": "Cologne / Germany / Remote (EU)",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/9e9fe86e02fc4179.jpg",
+    "read_at": "2026-10-05T16:39:37",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "The Platform Group GmbH & Co. KG",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "32677b1872664ba7",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Berlin Cocoli",
+   "source": "personio/tpg-gmbh.jobs.personio.com",
+   "sources": [
+    "personio/tpg-gmbh.jobs.personio.com"
+   ],
+   "title": "Sales Specialist – Premium & Design Furniture (m/w/d) COCOLI & MöbelFirst",
+   "url": "https://tpg-gmbh.jobs.personio.com/job/2776948",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a sales/customer-account role (phone sales of furniture), not product design, UX or UI work, and the location is Berlin with only an occasional home-office benefit, not remote from Portugal.",
+     "Portugal OUT · under the title: \"Berlin Cocoli\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Sales Specialist – Premium & Design Furniture (m/w/d) COCOLI & MöbelFirst",
+     "company": "MöbelFirst / COCOLI (The Platform Group GmbH & Co. KG)",
+     "seniority": "unstated",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "German",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://tpg-gmbh.jobs.personio.com/job/2776948",
+    "reason": "This is a sales/customer-account role (phone sales of furniture), not product design, UX or UI work, and the location is Berlin with only an occasional home-office benefit, not remote from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "German",
+    "quote": "Berlin Cocoli",
+    "signals": [
+     {
+      "quote": "Berlin Cocoli",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/32677b1872664ba7.jpg",
+    "read_at": "2026-10-05T16:39:41",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "The Platform Group GmbH & Co. KG",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "96053f98839241f4",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Hamburg, Hybrid",
+   "remote": false,
+   "source": "personio/tpg-gmbh.jobs.personio.com",
+   "sources": [
+    "personio/tpg-gmbh.jobs.personio.com"
+   ],
+   "title": "(Senior) UX/UI Manager:in (m, w, d) für den Verbund Avocado Store GmbH & Hood Media GmbH",
+   "url": "https://tpg-gmbh.jobs.personio.com/job/2789979",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The posting is written in German and requires hybrid work in Hamburg, excluding remote work from Portugal.",
+     "Portugal OUT · under the title: \"Hamburg, Hybrid\"",
+     "Portugal OUT · body: \"Ein Arbeitsplatz zwischen Rödingsmarkt und Hafencity mit der Möglichkeit, hybrid zu arbeiten\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "(Senior) UX/UI Manager:in (m, w, d) für den Verbund Avocado Store GmbH & Hood Media GmbH",
+     "company": "Avocado Store GmbH & Hood Media GmbH (The Platform Group GmbH & Co. KG)",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "mehrjährige Berufserfahrung / mindestens 3 Jahre",
+     "reports_to": null,
+     "language": "German",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://tpg-gmbh.jobs.personio.com/job/2789979",
+    "reason": "The posting is written in German and requires hybrid work in Hamburg, excluding remote work from Portugal.",
+    "open": "yes",
+    "language_ok": false,
+    "language": "German",
+    "quote": "Hamburg, Hybrid",
+    "signals": [
+     {
+      "quote": "Hamburg, Hybrid",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Ein Arbeitsplatz zwischen Rödingsmarkt und Hafencity mit der Möglichkeit, hybrid zu arbeiten",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/96053f98839241f4.jpg",
+    "read_at": "2026-10-05T16:39:43",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "35605686684e422e",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de"
+   ],
+   "title": "CAD & Configuration Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2534754",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is a mechanical/aerospace CAD engineering position (not product/UX/UI design) and requires onsite work in Bremen, Germany with no home office.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "CAD & Configuration Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "EUR 60.000,00 to EUR 100.000,00 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2534754",
+    "reason": "The role is a mechanical/aerospace CAD engineering position (not product/UX/UI design) and requires onsite work in Bremen, Germany with no home office.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/35605686684e422e.jpg",
+    "read_at": "2026-10-05T16:39:43",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "57b38fb792814486",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de"
+   ],
+   "title": "Thermal Analysis and TPS Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2727026",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a thermal/TPS engineering role (not design in the product/UX/UI sense) and it requires on-site work in Bremen with no home office option.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Thermal Analysis and TPS Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "EUR 60,000 to EUR 100,000 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2727026",
+    "reason": "This is a thermal/TPS engineering role (not design in the product/UX/UI sense) and it requires on-site work in Bremen with no home office option.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/57b38fb792814486.jpg",
+    "read_at": "2026-10-05T16:39:52",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "2d0ed71016e64b5a",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de"
+   ],
+   "title": "Avionics System Integration and Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2795138",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Onsite avionics/electrical engineering role in Bremen, Germany, with no remote option and a title that is engineering, not design/UX/UI.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Avionics System Integration and Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "EUR 60,000.00 to EUR 100,000.00 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2795138",
+    "reason": "Onsite avionics/electrical engineering role in Bremen, Germany, with no remote option and a title that is engineering, not design/UX/UI.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/2d0ed71016e64b5a.jpg",
+    "read_at": "2026-10-05T16:39:52",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "POLARIS Raumflugzeuge GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "d7611c7bd734496d",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Bremen",
+   "source": "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de",
+   "sources": [
+    "personio/polaris-raumflugzeuge-gmbh.jobs.personio.de"
+   ],
+   "title": "Fluid System Design Engineer (m/f/d)",
+   "url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2805265",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a mechanical/aerospace fluid systems engineering role, not product/UX/UI design, and it requires onsite work in Bremen, Germany with no home office option.",
+     "Portugal OUT · under the title: \"Bremen\"",
+     "Portugal OUT · body: \"At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Fluid System Design Engineer (m/f/d)",
+     "company": "POLARIS Raumflugzeuge GmbH",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": "EUR 60.000,00 to EUR 100.000,00 gross annual",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polaris-raumflugzeuge-gmbh.jobs.personio.de/job/2805265",
+    "reason": "This is a mechanical/aerospace fluid systems engineering role, not product/UX/UI design, and it requires onsite work in Bremen, Germany with no home office option.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office.",
+    "signals": [
+     {
+      "quote": "Bremen",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "At POLARIS we value on-site collaboration, so we generally do not offer home office. Please apply only if you feel comfortable with this working model",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/d7611c7bd734496d.jpg",
+    "read_at": "2026-10-05T16:39:56",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Var Industries GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "387cb73e094d4b33",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Friedberg, Moers, Filderstadt, Großheirath",
+   "source": "personio/varindustries.jobs.personio.de",
+   "sources": [
+    "personio/varindustries.jobs.personio.de"
+   ],
+   "title": "Consultant für Rule Designer PDM/PLM (m/w/d)",
+   "url": "https://varindustries.jobs.personio.de/job/2433996",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a technical PDM/PLM implementation consultant (databases, programming, Windows Server), not a product/UX/UI design job, so it is not a match regardless of location.",
+     "Portugal OUT · under the title: \"Friedberg, Filderstadt, Großheirath, Moers\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Consultant für Rule Designer PDM/PLM (m/w/d)",
+     "company": "Var Industries GmbH",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Friedberg, Germany",
+      "Filderstadt, Germany",
+      "Großheirath, Germany",
+      "Moers, Germany"
+     ],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "German",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://varindustries.jobs.personio.de/job/2433996",
+    "reason": "Role is a technical PDM/PLM implementation consultant (databases, programming, Windows Server), not a product/UX/UI design job, so it is not a match regardless of location.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "German",
+    "quote": "Der Arbeitsort ist flexibel. Du kannst hybrid von einem unserer Standorte oder aus dem Homeoffice arbeiten.",
+    "signals": [
+     {
+      "quote": "Friedberg, Filderstadt, Großheirath, Moers",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/387cb73e094d4b33.jpg",
+    "read_at": "2026-10-05T16:39:57",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Saypien GmbH",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "b3ecbb7b12c74a3b",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Berlin, Germany",
+   "source": "personio/work-at-saypien.jobs.personio.de",
+   "sources": [
+    "personio/work-at-saypien.jobs.personio.de"
+   ],
+   "title": "Design Engineer (m/w/d)",
+   "url": "https://work-at-saypien.jobs.personio.de/job/2826769",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The posting is in German, and every concrete location cue (Berlin office tag, a UK/Ireland fixed-term note) points away from Portugal, with only a non-binding 'ideally live in Berlin' remote preference offered.",
+     "Portugal OUT · under the title: \"Berlin, Germany\"",
+     "Portugal OUT · under the title: \"Befristet (Vereinigtes Königreich und Irland)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Design Engineer (m/w/d)",
+     "company": "Saypien GmbH",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Germany",
+      "United Kingdom",
+      "Ireland"
+     ],
+     "portugal_ok": "no",
+     "salary": "60.000 bis 80.000 € brutto pro Jahr, inklusive einer verhandelbaren VSOP-Beteiligung",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "German",
+     "posted": null
+    },
+    "inferred": [
+     "countries"
+    ],
+    "read": "employer",
+    "read_url": "https://work-at-saypien.jobs.personio.de/job/2826769",
+    "reason": "The posting is in German, and every concrete location cue (Berlin office tag, a UK/Ireland fixed-term note) points away from Portugal, with only a non-binding 'ideally live in Berlin' remote preference offered.",
+    "open": "yes",
+    "language_ok": false,
+    "language": "German",
+    "quote": "Berlin, Germany / Befristet (Vereinigtes Königreich und Irland) / Remote-first: Idealerweise lebst du in Berlin.",
+    "signals": [
+     {
+      "quote": "Berlin, Germany",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Befristet (Vereinigtes Königreich und Irland)",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/b3ecbb7b12c74a3b.jpg",
+    "read_at": "2026-10-05T16:40:03",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "tinkerlist.jobs.personio.de",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "e1e8149827504a99",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "HQ Belgium",
+   "source": "personio/tinkerlist.jobs.personio.de",
+   "sources": [
+    "personio/tinkerlist.jobs.personio.de"
+   ],
+   "title": "UX/UI Designer",
+   "url": "https://tinkerlist.jobs.personio.de/job/2673928",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Only location cue is a Belgium HQ tag plus a generic remote/hybrid company description, with no explicit statement on where this role may be based.",
+     "Portugal OUT · under the title: \"HQ Belgium\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "low",
+    "fields": {
+     "role": "UX/UI Designer",
+     "company": "Cuez",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": "3+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://tinkerlist.jobs.personio.de/job/2673928",
+    "reason": "Only location cue is a Belgium HQ tag plus a generic remote/hybrid company description, with no explicit statement on where this role may be based.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "HQ Belgium ... With a global team working both remotely and from our office in Leuven",
+    "signals": [
+     {
+      "quote": "HQ Belgium",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/e1e8149827504a99.jpg",
+    "read_at": "2026-10-05T16:40:04",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "voiceline.jobs.personio.de",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "0b8881bd7e49480a",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "München",
+   "source": "personio/voiceline.jobs.personio.de",
+   "sources": [
+    "personio/voiceline.jobs.personio.de"
+   ],
+   "title": "Product Designer (f/m/d)",
+   "url": "https://voiceline.jobs.personio.de/job/2526368",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is based in Munich with a hybrid office setup, with no remote-from-anywhere or Portugal option mentioned.",
+     "Portugal OUT · under the title: \"München\"",
+     "Portugal OUT · body: \"Modern office in the heart of Munich and a hybrid working environment (depending on the role)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer (f/m/d)",
+     "company": "VoiceLine",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://voiceline.jobs.personio.de/job/2526368",
+    "reason": "The role is based in Munich with a hybrid office setup, with no remote-from-anywhere or Portugal option mentioned.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Modern office in the heart of Munich and a hybrid working environment (depending on the role)",
+    "signals": [
+     {
+      "quote": "München",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Modern office in the heart of Munich and a hybrid working environment (depending on the role)",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/0b8881bd7e49480a.jpg",
+    "read_at": "2026-10-05T16:40:07",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "voiceline.jobs.personio.de",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "07e46afe66df4d61",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "München",
+   "source": "personio/voiceline.jobs.personio.de",
+   "sources": [
+    "personio/voiceline.jobs.personio.de"
+   ],
+   "title": "Senior Product Designer (f/m/d)",
+   "url": "https://voiceline.jobs.personio.de/job/2747347",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is based in a Munich office with partial WFH, not remote from Portugal.",
+     "Portugal OUT · under the title: \"München\"",
+     "Portugal OUT · body: \"Modern office in the heart of Munich and the flexibility to partially work from home\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer (f/m/d)",
+     "company": "VoiceLine",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Germany"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "5+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://voiceline.jobs.personio.de/job/2747347",
+    "reason": "The role is based in a Munich office with partial WFH, not remote from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Modern office in the heart of Munich and the flexibility to partially work from home",
+    "signals": [
+     {
+      "quote": "München",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Modern office in the heart of Munich and the flexibility to partially work from home",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/07e46afe66df4d61.jpg",
+    "read_at": "2026-10-05T16:40:09",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "spektrix",
+   "department": "Marketing",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "74566ed4f1e54fce",
+   "jdhash": "7575",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "London or Manchester, UK",
+   "salary": "£50,000 - £55,000 / year",
+   "source": "pinpoint/spektrix",
+   "sources": [
+    "pinpoint/spektrix"
+   ],
+   "title": "Senior Designer",
+   "url": "https://spektrix.pinpointhq.com/en/postings/ae7df5da-5700-4a6b-874f-efa1354b8eaa",
+   "workplace": "Hybrid",
+   "years_xp": 5,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is brand/visual/campaign design (not product, UX or UI) and requires hybrid onsite presence at a London or Manchester office, not Portugal.",
+     "Portugal OUT · under the title: \"Location: London or Manchester office - 10-20% onsite/hybrid\"",
+     "Portugal OUT · body: \"For team members who are 'local' to London or Manchester, a stipend is offered for each day you work on-site.\"",
+     "Portugal OUT · side panel: \"Location: London or Manchester, UK\"",
+     "Portugal OUT · side panel: \"Workplace type: Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Designer",
+     "company": "Spektrix",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£50,000 - £55,000 annually, based on location and experience.",
+     "years_xp": null,
+     "reports_to": "VP, Marketing & Communications",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://spektrix.pinpointhq.com/en/postings/ae7df5da-5700-4a6b-874f-efa1354b8eaa",
+    "reason": "Role is brand/visual/campaign design (not product, UX or UI) and requires hybrid onsite presence at a London or Manchester office, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: London or Manchester office - 10-20% onsite/hybrid",
+    "signals": [
+     {
+      "quote": "Location: London or Manchester office - 10-20% onsite/hybrid",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "For team members who are 'local' to London or Manchester, a stipend is offered for each day you work on-site.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: London or Manchester, UK",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type: Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/74566ed4f1e54fce.jpg",
+    "read_at": "2026-10-05T16:40:21",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "togethergroup",
+   "department": "Software Development ",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "4e3977f6e0d34fdd",
+   "jdhash": "5855",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Imerza",
+   "source": "pinpoint/togethergroup",
+   "sources": [
+    "pinpoint/togethergroup"
+   ],
+   "title": "Product Designer (UX/UI)",
+   "url": "https://togethergroup.pinpointhq.com/en/postings/50400496-d4a0-482c-967e-ef544a4420f1",
+   "workplace": "Hybrid",
+   "years_xp": 5,
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The posting explicitly limits the remote/hybrid option to London, UK or Miami, US, with no mention of Portugal.",
+     "Portugal OUT · body: \"Remote or Hybrid (London, UK or Miami, US); occasional travel for stakeholder workshops and client presentations\"",
+     "Portugal OUT · side panel: \"Address: 1527 2nd St, Sarasota, Florida, 34236\"",
+     "Portugal OUT · side panel: \"Workplace type: Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer (UX/UI)",
+     "company": "Imerza",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "London, UK",
+      "Miami, US"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "5+",
+     "reports_to": "Head of Design",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://togethergroup.pinpointhq.com/en/postings/50400496-d4a0-482c-967e-ef544a4420f1",
+    "reason": "The posting explicitly limits the remote/hybrid option to London, UK or Miami, US, with no mention of Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote or Hybrid (London, UK or Miami, US); occasional travel for stakeholder workshops and client presentations",
+    "signals": [
+     {
+      "quote": "Remote or Hybrid (London, UK or Miami, US); occasional travel for stakeholder workshops and client presentations",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Address: 1527 2nd St, Sarasota, Florida, 34236",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type: Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/4e3977f6e0d34fdd.jpg",
+    "read_at": "2026-10-05T16:40:21",
+    "evidence": {},
+    "hiring_for": "Imerza (Pilotis)"
+   }
+  },
+  {
+   "active": true,
+   "company": "togethergroup",
+   "department": "Creative",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "8ef4b67f90f74093",
+   "jdhash": "2523",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Construct Bath",
+   "source": "pinpoint/togethergroup",
+   "sources": [
+    "pinpoint/togethergroup"
+   ],
+   "title": "Senior Designer",
+   "url": "https://togethergroup.pinpointhq.com/en/postings/50a7798a-a55c-4b30-8184-fecc34714de0",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is brand identity/graphic design (not product/UX/UI), and it's a hybrid position tied to the Bath, UK office.",
+     "Portugal OUT · side panel: \"Location: Construct Bath\"",
+     "Portugal OUT · side panel: \"Address: 26 Queen Square, Bath, Bath, BA1 2HX\"",
+     "Portugal OUT · side panel: \"Workplace type: Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Designer",
+     "company": "Construct (Together Group)",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": "Design Directors and Creative Director",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://togethergroup.pinpointhq.com/en/postings/50a7798a-a55c-4b30-8184-fecc34714de0",
+    "reason": "Role is brand identity/graphic design (not product/UX/UI), and it's a hybrid position tied to the Bath, UK office.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Construct Bath; Workplace type: Hybrid",
+    "signals": [
+     {
+      "quote": "Location: Construct Bath",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Address: 26 Queen Square, Bath, Bath, BA1 2HX",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type: Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/8ef4b67f90f74093.jpg",
+    "read_at": "2026-10-05T16:40:24",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "nxcus",
+   "department": "Plumbing",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "bc9c1ef211314ad6",
+   "jdhash": "2526",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Rochester, NY",
+   "salary": "$35.00 - $50.00 / hour",
+   "source": "pinpoint/nxcus",
+   "sources": [
+    "pinpoint/nxcus"
+   ],
+   "title": "Plumbing Designer",
+   "url": "https://nxcus.pinpointhq.com/en/postings/aee963f5-834f-44da-baaa-f29cfe400de9",
+   "workplace": "Onsite",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is an onsite plumbing/engineering design role in Rochester, NY - not a product/UX/UI design role, and not available in Portugal.",
+     "Portugal OUT · side panel: \"Rochester, NY\"",
+     "Portugal OUT · side panel: \"Onsite\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Plumbing Designer",
+     "company": "Kennedy Mechanical",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$35.00 - $50.00 / hour",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://nxcus.pinpointhq.com/en/postings/aee963f5-834f-44da-baaa-f29cfe400de9",
+    "reason": "This is an onsite plumbing/engineering design role in Rochester, NY - not a product/UX/UI design role, and not available in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Rochester, NY; Workplace type: Onsite",
+    "signals": [
+     {
+      "quote": "Rochester, NY",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Onsite",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/bc9c1ef211314ad6.jpg",
+    "read_at": "2026-10-05T16:40:27",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "indrive",
+   "department": "Customer Service Operational Excellence",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "6d9022ef384c44f0",
+   "jdhash": "1926",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Egypt",
+   "source": "pinpoint/indrive",
+   "sources": [
+    "pinpoint/indrive"
+   ],
+   "title": "CS Content Designer",
+   "url": "https://indrive.pinpointhq.com/en/postings/4d91353c-2f4d-4bf1-929f-48a67c373570",
+   "workplace": "Hybrid",
+   "years_xp": 1,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a Content Design (UX writing) position, not product/UX/UI design, and it is hybrid onsite in Egypt, not Portugal.",
+     "Portugal OUT · side panel: \"Location Egypt\"",
+     "Portugal OUT · side panel: \"Workplace type Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "CS Content Designer",
+     "company": "inDrive",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Egypt"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "1+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://indrive.pinpointhq.com/en/postings/4d91353c-2f4d-4bf1-929f-48a67c373570",
+    "reason": "Role is a Content Design (UX writing) position, not product/UX/UI design, and it is hybrid onsite in Egypt, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Egypt / Workplace type: Hybrid",
+    "signals": [
+     {
+      "quote": "Location Egypt",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6d9022ef384c44f0.jpg",
+    "read_at": "2026-10-05T16:40:37",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "indrive",
+   "department": "Customer Service Operational Excellence",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "fc047e8f2f0f4cd4",
+   "jdhash": "1941",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Morocco",
+   "source": "pinpoint/indrive",
+   "sources": [
+    "pinpoint/indrive"
+   ],
+   "title": "CS Content Designer",
+   "url": "https://indrive.pinpointhq.com/en/postings/054b01b7-0836-4e69-8070-7c575edd39ce",
+   "workplace": "Hybrid",
+   "years_xp": 1,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is a Content Designer (UX writing) position, not product/UI/UX design, and is hybrid in Morocco, not Portugal.",
+     "Portugal OUT · side panel: \"Location Morocco\"",
+     "Portugal OUT · side panel: \"Workplace type Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "CS Content Designer",
+     "company": "inDrive",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Morocco"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "1+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://indrive.pinpointhq.com/en/postings/054b01b7-0836-4e69-8070-7c575edd39ce",
+    "reason": "The role is a Content Designer (UX writing) position, not product/UI/UX design, and is hybrid in Morocco, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location Morocco / Workplace type Hybrid",
+    "signals": [
+     {
+      "quote": "Location Morocco",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/fc047e8f2f0f4cd4.jpg",
+    "read_at": "2026-10-05T16:40:37",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "c10labs",
+   "department": "Buckstop",
+   "employment_type": "Contract",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "a47c5433b26549cd",
+   "jdhash": "5268",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Washington, DC",
+   "remote": true,
+   "salary": "$40.00 - $50.00 / hour",
+   "source": "pinpoint/c10labs",
+   "sources": [
+    "pinpoint/c10labs"
+   ],
+   "title": "Founding Product Designer",
+   "url": "https://c10labs.pinpointhq.com/en/postings/8d7da2bf-fa0d-4cb6-8244-773de58e6398",
+   "workplace": "Fully remote",
+   "years_xp": 4,
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Role is explicitly 'Fully remote' with no country restriction stated; Washington, DC appears only as a bare location tag.",
+     "the page says: \"Workplace type: Fully remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Founding Product Designer",
+     "company": "Buckstop",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "yes",
+     "salary": "$40.00 - $50.00 / hour",
+     "years_xp": "4+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://c10labs.pinpointhq.com/en/postings/8d7da2bf-fa0d-4cb6-8244-773de58e6398",
+    "reason": "Role is explicitly 'Fully remote' with no country restriction stated; Washington, DC appears only as a bare location tag.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Workplace type: Fully remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a47c5433b26549cd.jpg",
+    "read_at": "2026-10-05T16:40:40",
+    "evidence": {},
+    "hiring_for": "Buckstop Industries"
+   }
+  },
+  {
+   "active": true,
+   "company": "heapy",
+   "department": "ICT",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "febd4bdd6a1c4ae6",
+   "jdhash": "4187",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Indianapolis, IN",
+   "source": "pinpoint/heapy",
+   "sources": [
+    "pinpoint/heapy"
+   ],
+   "title": "Technology Designer",
+   "url": "https://careers.heapy.com/en/postings/b07bcf1c-af36-4562-87b0-0f0840e15c3a",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is ICT/building technology systems design (cabling, networking, AV, security), not product/UX/UI design, and it's a hybrid role based in Indianapolis, IN.",
+     "Portugal OUT · side panel: \"Location: Indianapolis, IN\"",
+     "Portugal OUT · side panel: \"Workplace type: Hybrid\"",
+     "Portugal OUT · body: \"#LI-Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Technology Designer",
+     "company": "HEAPY",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": "Jeff Schloffel",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.heapy.com/en/postings/b07bcf1c-af36-4562-87b0-0f0840e15c3a",
+    "reason": "Role is ICT/building technology systems design (cabling, networking, AV, security), not product/UX/UI design, and it's a hybrid role based in Indianapolis, IN.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Indianapolis, IN / Workplace type: Hybrid",
+    "signals": [
+     {
+      "quote": "Location: Indianapolis, IN",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type: Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "#LI-Hybrid",
+      "where": "body",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/febd4bdd6a1c4ae6.jpg",
+    "read_at": "2026-10-05T16:40:44",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "heapy",
+   "department": "ICT",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "1690b7c4af1a4e53",
+   "jdhash": "4187",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Dayton, OH",
+   "source": "pinpoint/heapy",
+   "sources": [
+    "pinpoint/heapy"
+   ],
+   "title": "Technology Designer",
+   "url": "https://careers.heapy.com/en/postings/fd54d539-755b-4404-b85f-3beac4cd9232",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a building ICT/technology systems design engineering role (structured cabling, networking, AV, security) based hybrid in Dayton, Ohio, not a product/UX/UI design job and not available in Portugal.",
+     "Portugal OUT · side panel: \"Location\nDayton, OH\"",
+     "Portugal OUT · side panel: \"Workplace type\nHybrid\"",
+     "Portugal OUT · body: \"#LI-Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Technology Designer",
+     "company": "HEAPY",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "US"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": "Jeff Schloffel",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.heapy.com/en/postings/fd54d539-755b-4404-b85f-3beac4cd9232",
+    "reason": "This is a building ICT/technology systems design engineering role (structured cabling, networking, AV, security) based hybrid in Dayton, Ohio, not a product/UX/UI design job and not available in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location Dayton, OH / Workplace type Hybrid",
+    "signals": [
+     {
+      "quote": "Location\nDayton, OH",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type\nHybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "#LI-Hybrid",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/1690b7c4af1a4e53.jpg",
+    "read_at": "2026-10-05T16:40:45",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "heapy",
+   "department": "ICT",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "6fa72b069c834fe6",
+   "jdhash": "4187",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Cleveland, OH",
+   "source": "pinpoint/heapy",
+   "sources": [
+    "pinpoint/heapy"
+   ],
+   "title": "Technology Designer",
+   "url": "https://careers.heapy.com/en/postings/3a1937bd-701b-4270-8959-926f349d46db",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is ICT/building-technology systems design (structured cabling, networking, AV, security), not product/UX/UI design, and it is hybrid onsite in Cleveland, OH.",
+     "Portugal OUT · side panel: \"Location: Cleveland, OH\"",
+     "Portugal OUT · side panel: \"Workplace type: Hybrid\"",
+     "Portugal OUT · body: \"#LI-Hybrid\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Technology Designer",
+     "company": "HEAPY",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": "Jeff Schloffel",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.heapy.com/en/postings/3a1937bd-701b-4270-8959-926f349d46db",
+    "reason": "The role is ICT/building-technology systems design (structured cabling, networking, AV, security), not product/UX/UI design, and it is hybrid onsite in Cleveland, OH.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Cleveland, OH / Workplace type: Hybrid",
+    "signals": [
+     {
+      "quote": "Location: Cleveland, OH",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type: Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "#LI-Hybrid",
+      "where": "body",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6fa72b069c834fe6.jpg",
+    "read_at": "2026-10-05T16:40:48",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "impulsespace",
+   "department": "Avionics ",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "f6d0f973a7c34635",
+   "jdhash": "5612",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Redondo Beach",
+   "salary": "$110,000 - $155,000 / year",
+   "source": "pinpoint/impulsespace",
+   "sources": [
+    "pinpoint/impulsespace"
+   ],
+   "title": "Harnessing Design Engineer",
+   "url": "https://impulsespace.pinpointhq.com/en/postings/7f4a57bb-8d33-41f5-bfcd-2c4d328a1f0e",
+   "workplace": "Onsite",
+   "years_xp": 3,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is an electrical/mechanical harness engineering role (not design, UX or UI by title), onsite in Redondo Beach, CA, and requires U.S. person/export-license eligibility.",
+     "Portugal OUT · side panel: \"Location: Redondo Beach\"",
+     "Portugal OUT · side panel: \"Workplace type: Onsite\"",
+     "Portugal OUT · body: \"This position requires applicants to be either U.S. Persons ... or persons eligible to obtain an export license from the U.S. Departments of State, Commerce, or other applicable U.S. government agencies.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Harnessing Design Engineer",
+     "company": "Impulse Space",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$110,000 - $155,000 / year",
+     "years_xp": "3",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://impulsespace.pinpointhq.com/en/postings/7f4a57bb-8d33-41f5-bfcd-2c4d328a1f0e",
+    "reason": "This is an electrical/mechanical harness engineering role (not design, UX or UI by title), onsite in Redondo Beach, CA, and requires U.S. person/export-license eligibility.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Workplace type: Onsite; Location: Redondo Beach; applicants must be U.S. Persons or ITAR-eligible",
+    "signals": [
+     {
+      "quote": "Location: Redondo Beach",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type: Onsite",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position requires applicants to be either U.S. Persons ... or persons eligible to obtain an export license from the U.S. Departments of State, Commerce, or other applicable U.S. government agencies.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/f6d0f973a7c34635.jpg",
+    "read_at": "2026-10-05T16:40:53",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "impulsespace",
+   "department": "Propulsion",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-05T15:39:13+00:00",
+   "first_seen": "2026-10-05T15:39:13+00:00",
+   "id": "a79f23e1e4754820",
+   "jdhash": "3413",
+   "last_seen": "2026-10-05T15:39:13+00:00",
+   "location": "Redondo Beach",
+   "reports_to": "Julia Vyborny, Director of Propulsion",
+   "salary": "$140,000 - $195,000 / year",
+   "source": "pinpoint/impulsespace",
+   "sources": [
+    "pinpoint/impulsespace"
+   ],
+   "title": "Senior Propulsion Design Engineer (Engine)",
+   "url": "https://impulsespace.pinpointhq.com/en/postings/cd986e83-3517-4ac0-be3b-8c64001eb9b7",
+   "workplace": "Onsite",
+   "years_xp": 4,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a propulsion/mechanical engineering title with no design-field scope, and it is onsite in Redondo Beach, CA requiring U.S. person/ITAR eligibility.",
+     "Portugal OUT · side panel: \"Location: Redondo Beach\"",
+     "Portugal OUT · side panel: \"Workplace type: Onsite\"",
+     "Portugal OUT · body: \"This position requires applicants to be either U.S. Persons ... or persons eligible to obtain an export license from the U.S. Departments of State, Commerce, or other applicable U.S. government agencies.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Propulsion Design Engineer (Engine)",
+     "company": "Impulse Space",
+     "seniority": "senior",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$140,000 - $195,000 / year",
+     "years_xp": "4+",
+     "reports_to": "Julia Vyborny, Director of Propulsion",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://impulsespace.pinpointhq.com/en/postings/cd986e83-3517-4ac0-be3b-8c64001eb9b7",
+    "reason": "Role is a propulsion/mechanical engineering title with no design-field scope, and it is onsite in Redondo Beach, CA requiring U.S. person/ITAR eligibility.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Redondo Beach; Workplace type: Onsite; requires U.S. Persons or ITAR export license eligibility",
+    "signals": [
+     {
+      "quote": "Location: Redondo Beach",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Workplace type: Onsite",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position requires applicants to be either U.S. Persons ... or persons eligible to obtain an export license from the U.S. Departments of State, Commerce, or other applicable U.S. government agencies.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a79f23e1e4754820.jpg",
+    "read_at": "2026-10-05T16:40:59",
     "evidence": {}
    }
   }
