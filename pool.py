@@ -1618,6 +1618,7 @@ SKIP = set()          # sources deliberately not scraped this run
 
 
 SOURCE_LIMIT = 25 * 60        # seconds one source may take
+LEFT_BEHIND = []              # sources still running when their time was up
 
 
 def scrape(sources, on_batch=None):
@@ -1653,6 +1654,30 @@ def scrape(sources, on_batch=None):
                 last = now
         return rows, time.monotonic() - t0
 
+    def bounded(label, gen):
+        """drain(), but never longer than SOURCE_LIMIT. The check inside
+        drain only runs when a row arrives, so a reader that waits between
+        rows - uiuxjobsboard, refused and sleeping 30 seconds a page - never
+        reached it: on 2026-10-05 one source held the scrape for eight hours
+        and nothing was read that night. The reader runs in a thread; when its
+        time is up the scrape moves on and the source fails soft."""
+        import threading
+        box = {}
+        def run():
+            try:
+                box["r"] = drain(label, gen)
+            except Exception as e:
+                box["e"] = e
+        t = threading.Thread(target=run, daemon=True)
+        t.start()
+        t.join(SOURCE_LIMIT + 30)
+        if t.is_alive():
+            LEFT_BEHIND.append(label)
+            raise TimeoutError(f"{label} took over {SOURCE_LIMIT // 60} minutes; left behind")
+        if "e" in box:
+            raise box["e"]
+        return box["r"]
+
     for platform, slug, cfg in jobs:
         done += 1
         label = f"{platform}/{slug}"
@@ -1661,7 +1686,7 @@ def scrape(sources, on_batch=None):
             errors[platform] = "no adapter"
             continue
         try:
-            rows, dt = drain(label, fn(slug, cfg))
+            rows, dt = bounded(label, fn(slug, cfg))
             out += rows
             print(f"  [{done}/{total}] {label}: {len(rows)}  ({dt:.1f}s)  "
                   f"total {len(out)}  run {time.monotonic()-t_run:.0f}s", flush=True)
@@ -1678,7 +1703,7 @@ def scrape(sources, on_batch=None):
             errors[agg] = "no adapter"
             continue
         try:
-            rows, dt = drain(agg, fn())
+            rows, dt = bounded(agg, fn())
             out += rows
             print(f"  [{done}/{total}] {agg}: {len(rows)}  ({dt:.1f}s)  "
                   f"total {len(out)}  run {time.monotonic()-t_run:.0f}s", flush=True)
@@ -1914,4 +1939,10 @@ def main():
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    rc = main()
+    sys.stdout.flush()
+    sys.stderr.flush()
+    if LEFT_BEHIND:               # a reader left running would keep the process from ending
+        import os
+        os._exit(rc or 0)
+    raise SystemExit(rc)

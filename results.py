@@ -281,7 +281,8 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             # A rule that changes how the evidence is weighed should not need
             # every page read again: the statements the reader listed are on
             # file, so the newest rule is applied to them here.
-            if lane == "unsure" and vis.get("stage") == "vision" and vis.get("role_verdict") != "no" \
+            old_text = str(vis.get("criteria") or "") < "2026-10-05"     # read before the rules were rewritten
+            if old_text and lane == "unsure" and vis.get("stage") == "vision" and vis.get("role_verdict") != "no" \
                     and vis.get("posting_open") == "yes" and criteria.top_line_out(vis.get("place_signals")):
                 # Spain was the one exception, held in Unsure. No longer (his
                 # call, 2026-10-04): Spain is cut like anywhere else.
@@ -295,7 +296,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             # Portugal out and none lets it in, that is a cut. With no
             # statement at all there is nothing to cut on, and it stays.
             says = [s.get("says") for s in vis.get("place_signals") or [] if isinstance(s, dict)]
-            if lane == "unsure" and str(vis.get("reason") or "").startswith("cut on place, but not sure of it") \
+            if old_text and lane == "unsure" and str(vis.get("reason") or "").startswith("cut on place, but not sure of it") \
                     and "portugal_out" in says and "portugal_in" not in says:
                 lane = "cut"
                 role["verdict"].update({"lane": "cut", "cut": True, "place": "no",

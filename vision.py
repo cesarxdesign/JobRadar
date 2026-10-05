@@ -97,7 +97,10 @@ def wait_for_reset(msg):
 _limit_lock, _limit = threading.Lock(), {"cleared": 0}
 
 
-def ask(prompt):
+SYSTEM = "You read one job posting and answer with one JSON object."
+
+
+def ask(prompt, system=None):
     """One page, one answer. The CLI's own system prompt and tools are 30,000
     tokens a call and none of it is needed to read a page, so they are off."""
     last = None
@@ -105,7 +108,7 @@ def ask(prompt):
         try:
             r = subprocess.run(
                 ["claude", "-p", prompt, "--output-format", "json", "--model", MODEL,
-                 "--system-prompt", "You read one job posting and answer with one JSON object.",
+                 "--system-prompt", system or SYSTEM,
                  "--tools", "", "--strict-mcp-config", "--setting-sources", ""],
                 capture_output=True, text=True, timeout=240, env=read.cli_env(), cwd="/tmp")
             env = json.loads(r.stdout)
@@ -113,7 +116,7 @@ def ask(prompt):
                 last = "api: " + str(env.get("result"))[:160]
                 if LIMIT.search(str(env.get("result"))):
                     wait_for_reset(str(env.get("result")))
-                    return ask(prompt)
+                    return ask(prompt, system)
                 time.sleep(4 * 2 ** attempt)
                 continue
             u = env.get("usage") or {}
@@ -419,11 +422,14 @@ _jd_lock = threading.Lock()
 
 
 def reader(rec, page):
-    prompt = (criteria.VISION_HEAD + criteria.JUDGE_CRITERIA + criteria.JUDGE_FIELDS + criteria.VISION_OUTPUT
-              + f"\n\nThe pool lists this role as: {rec.get('title')} at {rec.get('company')}."
+    """One page, read under criteria.VISION_RULES. The rules go in the system
+    slot, which is the same for every call, so the model keeps them between
+    calls and only the page is new each time: the rules are loaded once, and
+    the roles run through them."""
+    prompt = (f"The pool lists this role as: {rec.get('title')} at {rec.get('company')}."
               + f"\nPage address: {page.get('url')}\nPage title: {page.get('title')}"
               + "\n\n--- EVERY WORD VISIBLE ON THE PAGE ---\n" + (page.get("text") or "")[:MAX_CHARS])
-    return ask(prompt)
+    return ask(prompt, system=criteria.VISION_RULES)
 
 
 def see(finder, rec):
@@ -539,47 +545,20 @@ def see(finder, rec):
     a = reader(rec, page)              # ReaderDown goes up: the role stays unread, for the next run
     v.update(a)
     v["stage"] = "vision"
-    if a.get("same_job") == "no":
-        v["lane"] = "unsure"
-        v["reason"] = "the page read is a different job · " + str(a.get("reason") or "")
-    elif a.get("posting_open") == "no":
-        v["lane"], v["closed_by"] = "closed", v["read"]
-    elif a.get("posting_open") == "unreadable":
-        v["lane"] = "unsure"
-    else:
-        # The reader lists what the page says; the place is worked out from the list.
-        place, why = criteria.place_from_signals(a.get("place_signals"), a.get("workplace_as_posted"), a.get("place_verdict"))
+    # The reader reports; criteria.lane_from_reading() decides. Every rule
+    # about weighing what the page says is in that one function.
+    lane, place, why = criteria.lane_from_reading(a)
+    v["lane"] = lane
+    if place is not None:
         v["reader_place"], v["place_verdict"] = a.get("place_verdict"), place
-        if why:
-            v["reason"] = why + " · " + str(a.get("reason") or "")
-        lane = criteria.lane_for(a.get("role_verdict"), place)
-        v["lane"] = lane or "cut"
-        if a.get("language_ok") is False:
-            v["lane"] = "cut"
-        # A real design role cut on place is the cut that hides a job he
-        # wanted, and place is where two readings of one page disagree. So
-        # that cut has to be confident, and has to survive a second reading.
-        if v["lane"] == "cut" and a.get("role_verdict") != "no" and a.get("language_ok") is not False:
-            says = [s.get("says") for s in a.get("place_signals") or [] if isinstance(s, dict)]
-            if criteria.top_line_out(a.get("place_signals")):
-                pass                        # the posting's own top line said so: nothing to doubt
-            elif "portugal_out" in says and "portugal_in" not in says:
-                pass                        # every statement on the page rules Portugal out, none lets it in: "anything else, cut it"
-            elif a.get("confidence") != "high":
-                v["lane"], v["reason"] = "unsure", "cut on place, but not sure of it · " + str(a.get("reason") or "")
-            else:
-                try:
-                    b = reader(rec, page)
-                    v["second_place"] = criteria.place_from_signals(b.get("place_signals"), b.get("workplace_as_posted"), b.get("place_verdict"))[0]
-                    if v["second_place"] != "no":
-                        v["lane"] = "unsure"
-                        v["reason"] = "two readings disagree on place · " + str(a.get("reason") or "")
-                except Exception:
-                    pass
-        # A role is judged on what there is. Plenty of companies have no
-        # careers page, and a posting that reads as a role for him, doable from
-        # Portugal, is Open even when the only copy is a job board's (his call,
-        # 2026-10-03). The board says which it was: the SOURCE tag is grey.
+    if why:
+        v["reason"] = why + " · " + str(a.get("reason") or "")
+    if lane == "closed":
+        v["closed_by"] = v["read"]
+    # A role is judged on what there is. Plenty of companies have no careers
+    # page, and a posting that reads as a role for him, doable from Portugal,
+    # is Open even when the only copy is a job board's (his call, 2026-10-03).
+    # The board says which it was: the SOURCE tag is grey.
     return v
 
 
@@ -612,7 +591,7 @@ def pick(jobs, done):
         rows = [j for j in jobs if j["id"] in want]
     elif "--lanes" in args:
         res = json.load(open(f"{ROOT}/data/results.json"))
-        want = {i for v in res["lanes"].values() for i in v}
+        want = {i for v in res["lanes"].values() for i in v} | set(res.get("agency") or [])
         rows = [j for j in jobs if j["id"] in want]
     else:   # --new: the freshest first, they are the ones worth applying to
         rows = [j for j in jobs if j.get("active") and judge.l1(j.get("title")) is None]

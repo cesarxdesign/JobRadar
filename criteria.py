@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-04.1"
+VERSION = "2026-10-05.1"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -399,6 +399,7 @@ TOP = ("under the title", "opening paragraph")
 
 def top_line_out(signals):
     """Portugal is ruled out at the top of the page, and nothing at the top lets it back in."""
+    signals = [s for s in signals or [] if isinstance(s, dict)]
     at = lambda says: any(s.get("says") == says and str(s.get("where") or "").lower() in TOP
                           for s in signals or [] if isinstance(s, dict))
     return at("portugal_out") and not at("portugal_in")
@@ -470,3 +471,257 @@ def is_agency(company, source="", posted_by=None):
     if posted_by == "agency":
         return True
     return bool(re.search(AGENCIES, f"{company or ''} {source or ''}", re.I))
+
+
+# ---------------------------------------------------------------- one page of rules
+# The reader's whole brief, rewritten 2026-10-04 so that every rule is said
+# once. The text above (JUDGE_CRITERIA, JUDGE_FIELDS, VISION_OUTPUT) grew by
+# accretion: the place rule was stated in five blocks that did not all agree
+# ("-> UNCLEAR" in one, "the specific one decides" in another), and the reader
+# was asked both to list what the page says and to decide the place, twice.
+# It is kept because the old judge (read.py) still imports it.
+#
+# The split, and the reason there is one:
+#     the reader REPORTS  - is it open, what language, what kind of job, and
+#                           every statement the page makes about place
+#     the code DECIDES    - lane_from_reading(), below. One function.
+# A rule about how statements are weighed goes in the code and nowhere else.
+VISION_RULES = """
+You are reading ONE web page: a job posting, loaded in a real browser. Below
+is every word visible on it, top to bottom - menus, banners, cookie notices,
+the posting, the footer, often a list of OTHER jobs. Read all of it.
+
+The posting is the main content. Menus and "related jobs" are not the posting.
+But a line about THIS job - "this role is no longer available", "US only" -
+is the posting speaking, wherever it sits on the page.
+
+It is for Cesar: a senior product designer who lives in Portugal, works from
+home, and has the right to work in Portugal and the EU. You report what the
+page says. You do not decide whether he sees the job; that is worked out from
+your answers, so each answer must be true on its own.
+
+1. IS THE POSTING OPEN?
+   no          the page says so: no longer available, closed, filled, expired,
+               job not found, no longer accepting applications.
+   unreadable  the page is not a single job posting: an error, a login wall,
+               a "checking your browser" page, an empty shell, a list of jobs.
+   yes         otherwise. An old date is not closed.
+
+2. LANGUAGE the description is written in. English and Portuguese are fine.
+   Any other language: language_ok is false.
+
+3. ROLE. Is the job itself one he does?
+   yes  product design, UX, UI, design systems;
+        design leadership (head, director, manager of design), including one
+        that oversees brand or research;
+        engineering that leans design, when the TITLE says design, UX or UI
+        (Design Engineer, UI/UX Engineer, Design Technologist).
+   no   engineering by title (Frontend Engineer, Creative Developer, Product
+        Engineer), however much design the description mentions;
+        brand, marketing, graphic, motion or campaign design, or user research
+        as a job of its own. "Brand" in the title is no. A product, UX or UI
+        role with brand work piled on top is yes; a brand or marketing role
+        with a little product design on the side is no - ask what the job
+        mostly is;
+        unpaid, volunteer, or an internship, whatever the title.
+   unclear  you cannot tell what kind of job it is. Never answer no on a guess.
+   With no description, judge the role from the title alone.
+
+4. PLACE. List what the page says; do not weigh it.
+   workplace_as_posted: remote, hybrid, onsite, or not stated.
+     A company saying how it works counts as remote: "fully remote company",
+     "remote-first", "distributed team", "we hire from 30+ countries".
+     Where a company has offices or was founded does not.
+     A city or country named with no mention of remote is onsite there.
+     When the posting offers a choice - an office for people nearby OR remote
+     for everyone else - answer remote: he would take the remote option.
+
+   place_signals: EVERY statement about where the person must live, be based,
+   be eligible, be authorised to work, or come to an office. The line under
+   the title, the opening paragraph, the body, the requirements, the benefits,
+   the side panel, the small print: each statement separately, and above all
+   when two contradict each other. Do not stop at the first, and do not pick
+   the one you believe. A list printed together ("US; UK; Portugal") is ONE
+   statement. For each, copy the exact words, say where it is, what kind of
+   statement it is, and what it means ON ITS OWN for someone living in
+   Portugal.
+   kind - how much the statement commits to:
+     explicit  REALLY explicit - it says where the person may or must be for
+               THIS role: "candidates based in Germany", "Remote - France",
+               "Remote (USA)", "remote from Spain", "hybrid, 3 days in our
+               London office", "fully onsite at our Lisbon office", "work
+               remotely from any European country", "must be authorised to
+               work in the US". A place with remote, hybrid or onsite
+               attached is explicit. So is a LIST of several countries or
+               regions the role is open to: whatever is not on the list is
+               out, even if the page also says "we hire globally".
+     tag       a bare place name in a location field and nothing more:
+               "Location: France", "Berlin", "New York". It does not say
+               office or remote. It may only be where the company sits.
+     generic   company-wide text that is not about this role: "we hire
+               globally", "we are a remote-first company", a benefits or
+               equal-opportunity paragraph pasted onto every posting.
+   says:
+     portugal_in   Portugal, or a place in Portugal;
+                   a list of countries that contains Portugal;
+                   a blanket that contains Portugal by definition: Europe, EU,
+                   EMEA, Worldwide, Global, Anywhere - with no exclusion.
+     portugal_out  one country, state or city that is not in Portugal ("US",
+                   "Spain", "based in Germany", "London"), with or without
+                   "remote" beside it;
+                   a list or a region that does not contain Portugal (North
+                   America, LATAM, APAC, UK, DACH, Nordics);
+                   a blanket with Portugal excluded ("Europe except Portugal");
+                   the right to work in a country outside the EU, or in one
+                   named country that is not Portugal;
+                   hybrid or onsite at an office outside Portugal, when it is
+                   required of EVERYONE in the role: office days at an office
+                   that is not in Portugal are explicit and out.
+     says_nothing  office days that apply only to people who live near the
+                   office, when the posting also offers a remote option
+                   ("London hybrid or Europe remote", "Berlin or Remote" with
+                   office days for the Berlin team): the office is one option,
+                   not a requirement. List the remote option on its own, by
+                   the geography it gives;
+                   "remote" with no geography; working hours and time zones
+                   (he works any hours); where the company has offices;
+                   a preference, not a requirement ("NYC preferred", "ideally
+                   based in EST"); a conditional ("if you are based in France
+                   you get a French contract"); pay, contract or benefit
+                   details for one country.
+
+   place_verdict: your own reading in one word, used only when the list does
+   not settle it.
+     remote     the job is remote and nothing on the page restricts where
+     pt_onsite  hybrid or onsite at an office in Portugal
+     no         it cannot be done from Portugal
+     unclear    you cannot tell. With no description, always unclear.
+
+5. FIELDS, as the page states them. null when the page does not say - most
+   postings give no salary, years or reporting line, and null is correct.
+   Never invent a value. List in "inferred" any field you worked out rather
+   than read.
+
+Return ONE JSON object and nothing else. No prose, no code fence.
+
+{
+  "same_job": "yes" | "no",
+  "posted_by": "employer" | "agency",
+  "hiring_for": "the company the job is actually at, when an agency names it; else null",
+  "posting_open": "yes" | "no" | "unreadable",
+  "open_quote": "the exact words that say it is closed or unreadable, else null",
+  "language_of_the_posting": "...",
+  "language_ok": true | false,
+  "role_verdict": "yes" | "no" | "unclear",
+  "workplace_as_posted": "remote" | "hybrid" | "onsite" | "not stated",
+  "location_under_the_title": "the location printed beside or under the job title, and any 'based in ...' line, copied exactly; else null",
+  "place_signals": [
+    {"quote": "the exact words, copied from the page",
+     "where": "under the title" | "opening paragraph" | "body" | "side panel" | "footer or small print",
+     "kind": "tag" | "explicit" | "generic",
+     "says": "portugal_in" | "portugal_out" | "says_nothing"}
+  ],
+  "place_verdict": "remote" | "pt_onsite" | "no" | "unclear",
+  "place_quote": "the words on the page that matter most for place, copied, under 30 words",
+  "reason": "one short sentence - what decides it",
+  "confidence": "high" | "medium" | "low",
+  "inferred": [],
+  "fields": {
+    "role": "the title as stated", "company": "the hiring company, not the agency or hiring system",
+    "seniority": "junior | mid | senior | staff | principal | lead | head | director | vp | unstated",
+    "remote": "remote | hybrid | onsite | unstated", "onsite_days": null,
+    "countries": [], "portugal_ok": "yes | no | unclear", "salary": null,
+    "years_xp": null, "reports_to": null, "language": "...", "posted": null
+  }
+}
+
+same_job is "no" only when the page is plainly a posting for a DIFFERENT job
+or an advert for something else; a longer or shorter wording of the title is
+the same job. posted_by is "agency" when someone other than the company the
+job is at put it up: a recruiter, a staffing firm, a talent marketplace, a
+site listing roles "for our client". fields.posted is the date the page
+prints for this posting, as written. When the posting is not open, fill what
+you can and answer the verdicts "unclear".
+"""
+
+
+def place_from_statements(signals, workplace, model_place):
+    """The place, from the statements the reader listed. His rules, in order
+    (2026-10-04). A statement is a tag (a bare place name: maybe only where
+    the company sits), explicit (says where the person may or must be for
+    this role), or generic (company-wide text pasted on every posting).
+
+        A role is explicitly in, or explicitly out; those two are easy.
+        explicit in, no explicit out      yes     Open (Portugal lane for an office in Portugal)
+        explicit out, no explicit in      no      "based in Germany", "Remote - France", a list of
+                                                  countries without Portugal - whatever generic
+                                                  "we hire globally" text sits beside it
+        explicit out AND explicit in      unclear the page contradicts itself; never Open
+        Not explicit:
+        just "remote", no geography       yes     nothing ties it anywhere: Open
+        a tag, and explicit in            yes     "France" on top, "work remotely from any European
+                                                  country" in the body: the tag is where the
+                                                  company sits (pennylane)
+        a tag, and only generic text      unclear "Location: France", then "we hire globally":
+                                                  muddled, he sorts it
+        a tag and nothing else            no      a place named and nothing widens it
+        office days required of everyone, no      "if it requires office days and it is not in
+        and the office is not in Portugal         Lisbon, it is a clear cut" - unless the office
+                                                  is only for people near it and the role is
+                                                  remote elsewhere: then the remote option is
+                                                  what is judged (London hybrid OR Europe remote)
+    """
+    sig = [x for x in signals or [] if isinstance(x, dict) and x.get("says") in ("portugal_in", "portugal_out")]
+    kind = lambda x: x.get("kind") if x.get("kind") in ("tag", "explicit", "generic") else "explicit"
+    has = lambda says, k: any(x["says"] == says and kind(x) == k for x in sig)
+    out = any(x["says"] == "portugal_out" and kind(x) != "generic" for x in sig)
+    if has("portugal_out", "explicit"):
+        if has("portugal_in", "explicit"):
+            return "unclear", "the page says both, explicitly: Portugal in, and Portugal out"
+        return "no", None
+    if has("portugal_out", "tag"):
+        if has("portugal_in", "explicit"):
+            place = model_place if model_place in ("remote", "pt_onsite") \
+                else "pt_onsite" if (workplace or "").lower() in ("hybrid", "onsite") else "remote"
+            return place, "the place named at the top is only a tag; the posting itself says Portugal is in"
+        if has("portugal_in", "generic"):
+            return "unclear", "a place is named, and only company-wide text suggests anywhere wider"
+        return "no", None
+    if not sig and (workplace or "").lower() == "remote":
+        return "remote", None            # just "remote", no country or geography to tie it to: Open
+    if (workplace or "").lower() in ("hybrid", "onsite") and not any(x["says"] == "portugal_in" for x in sig):
+        return "no", "office days are required, and nothing on the page puts the office in Portugal"
+    return place_from_signals([x for x in sig if x["says"] == "portugal_in"], workplace, model_place) if not out else ("no", None)
+
+
+def lane_from_reading(a):
+    """The lane, from what the reader reported. Every rule about weighing is
+    here and in place_from_statements(), and nowhere else. Returns
+    (lane, place, why): why is None unless the decision needs a sentence the
+    reader did not write.
+
+        not the same job, or unreadable   unsure  (results.py files these as Not read)
+        the page says it is closed        closed
+        not English or Portuguese         cut
+        role no, or place no              cut
+        role yes, place yes               open, or portugal for an office in Portugal
+        anything unclear                  unsure
+    """
+    if a.get("same_job") == "no":
+        return "unsure", None, "the page read is a different job"
+    if a.get("posting_open") == "no":
+        return "closed", None, None
+    if a.get("posting_open") == "unreadable":
+        return "unsure", None, None
+    place, why = place_from_statements(a.get("place_signals"), a.get("workplace_as_posted"), a.get("place_verdict"))
+    # An agency's posting opens with its client's requirement - "our partner
+    # is looking for a Senior Product Designer based in Germany" - and the
+    # rest is the agency's own text, the same on every posting ("remote
+    # across EMEA"). The opening line decides. Without this 6 of 11 Jobgether
+    # roles sat in Unsure; he has called them cuts twice.
+    if a.get("posted_by") == "agency" and place != "no" and top_line_out(
+            [x for x in a.get("place_signals") or [] if isinstance(x, dict) and x.get("kind") != "generic"]):
+        place, why = "no", "an agency posting: the place its opening line names is the client's requirement"
+    if a.get("language_ok") is False:
+        return "cut", place, None
+    return lane_for(a.get("role_verdict"), place) or "cut", place, why
