@@ -57,18 +57,20 @@ def main():
         old.pop("generated_at", None)
     except Exception:
         old = None
-    if old == new:
+    if old != new:
+        new = {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), **new}
+        json.dump(new, open(OUT, "w"), indent=1, ensure_ascii=False)
+    if "--no-push" in sys.argv:
+        print("written, not committed" if old != new else "applying stats unchanged")
+        return
+    git("add", "public/data/radar.json")         # also picks up a file an earlier --no-push run left
+    if git("diff", "--cached", "--quiet").returncode == 0:
         print("applying stats unchanged, nothing to export")
         return
-    new = {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), **new}
-    json.dump(new, open(OUT, "w"), indent=1, ensure_ascii=False)
-    msg = "radar: %d applications, %d milestones" % (len(new["applications"]), len(new["milestones"]))
-    if "--no-push" in sys.argv:
-        print("written, not committed: " + msg)
-        return
-    git("add", "public/data/radar.json")
-    git("commit", "-m", msg)
-    git("pull", "--rebase", "-q")               # the daily snapshot Action commits to the same branch
+    n = json.load(open(OUT))
+    msg = "radar: %d applications, %d milestones" % (len(n["applications"]), len(n["milestones"]))
+    git("commit", "-m", msg, "--", "public/data/radar.json")
+    git("pull", "--rebase", "--autostash", "-q")  # the daily snapshot Action commits to the same branch
     p = git("push")
     print("exported: " + msg if p.returncode == 0 else "committed locally, PUSH FAILED: " + p.stderr.strip())
 
