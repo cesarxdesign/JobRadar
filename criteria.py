@@ -10,7 +10,7 @@ A verdict is frozen when it is made and stamped with VERSION, so changing
 criteria affects roles judged afterwards, not roles already judged.
 """
 
-VERSION = "2026-10-05.3"
+VERSION = "2026-10-05.4"
 
 # ---------------------------------------------------------------- the parser
 # Title only. Every cut is logged with the rule that fired.
@@ -530,7 +530,8 @@ your answers, so each answer must be true on its own.
         as a job of its own. "Brand" in the title is no. A product, UX or UI
         role with brand work piled on top is yes; a brand or marketing role
         with a little product design on the side is no - ask what the job
-        mostly is;
+        mostly is. A "Digital Designer" is a graphics and brand title: no,
+        unless the description is plainly product, UX or UI work;
         unpaid, volunteer, or an internship, whatever the title - but only
         when the page SAYS unpaid, volunteer or no salary. "Equity-based" or
         "equity" on its own is not unpaid.
