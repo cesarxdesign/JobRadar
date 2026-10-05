@@ -1,21 +1,21 @@
 {
  "jd": {},
  "generated_at": "2026-10-05T09:58:36+00:00",
- "built_at": "2026-10-05T11:34+01:00",
+ "built_at": "2026-10-05T11:38+01:00",
  "run_id": "2026-10-05T09:58:36+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 213,
+  "open": 214,
   "portugal": 15,
-  "unsure": 46,
+  "unsure": 32,
   "ghosts": 0,
   "cut": 3,
-  "closed": 533,
-  "vision_cut": 5301,
+  "closed": 534,
+  "vision_cut": 5315,
   "agency": 16,
-  "not_read": 79,
-  "folded": 39,
+  "not_read": 81,
+  "folded": 35,
   "vision_read": 7023,
   "title_cuts": 65607,
   "design": 6242,
@@ -133,6 +133,7 @@
    "a968358da03e4998",
    "3b8d66560b634bd3",
    "c0ca9e9ec121405e",
+   "3748915db49f44f4",
    "3e5898f02dd442a4",
    "2f4c95fc3ec0481d",
    "cf89c91493284a6e",
@@ -156,8 +157,10 @@
    "9a29426a79c647a6",
    "6e1e39a99c9543dc",
    "9563510d07c041a8",
+   "1e4388744e72443a",
    "1568c92687564068",
    "e20cb05583eb47dd",
+   "a609749721384c31",
    "59703a9cd9b44f33",
    "bdb158e95ce2469e",
    "4391a5ec672a4aac",
@@ -181,20 +184,18 @@
    "d1623afc6bc94654",
    "a97b3f0f5c3449cb",
    "763ccf510a214597",
+   "ab83f1a192954d71",
    "3c0e949cdc4d4a62",
    "a8d03956a4614ca8",
    "c822ef1f2bda42e0",
    "e27e7967c927496d",
    "9a2c73e7d60d4c3c",
-   "63704e3c489f46a8",
    "71c48b633504418e",
    "bdfa871b9d3843c3",
    "15695e07ef4e4dc1",
    "a7bc32b25a364950",
    "463cda044ca74455",
    "e184c6026a4c4aa1",
-   "7784c9786ccf4699",
-   "ef2252c355ac4592",
    "593458ac73494abf",
    "b841a60085d74f51",
    "75e49164cb8a4645",
@@ -207,16 +208,15 @@
    "fec63ce387ee4e7e",
    "86ddbe75db49447e",
    "2a695862bda248ad",
-   "cdead5c75e024a62",
    "d711863e00f84b83",
    "3e0178b1c5504ff7",
-   "7cc754d4043747a0",
    "48dbdb825e434293",
    "6a06ea3201fe4e5b",
    "6aea0a03192346fb",
    "be771ac071fa4cd8",
-   "b3e35c118dd0495e",
+   "26e10d0c4992453e",
    "b4c98fa0dba945fe",
+   "236a598d10be490f",
    "ed773c1cb4a84aa8",
    "3d386819a84b41d4",
    "d6ba7d09610542f1",
@@ -228,6 +228,7 @@
    "b6a16f1a40ee4b64",
    "c57cb5b9e12e4929",
    "9bfc27e2004c496d",
+   "c460e7eeee0e4c5c",
    "cb15aa931dec4318",
    "3b563f223bf44eef",
    "d5b839e9149f4de4",
@@ -236,7 +237,7 @@
    "b1e3706d409a4390",
    "7e71a6eaafa74a51",
    "e585d9ae432b49ef",
-   "9b79164740dd4deb",
+   "5b659abbef824f75",
    "1bdc19760fb34cfb",
    "47f80b1c5c614b28"
   ],
@@ -284,25 +285,11 @@
    "317ef83b96514e53",
    "6778451a78a84952",
    "873f24c58dc040c4",
-   "a4a49cc200cc4590",
    "a13b18c4338146c2",
    "ca8a0e7c2b054a07",
-   "ac5d2e6aa5644b8b",
-   "480f6cde7ec84648",
-   "70fe6f0d6e3942a3",
-   "7055ba3812bc4057",
-   "26e10d0c4992453e",
    "c112cd3f6c2e4d2d",
-   "236a598d10be490f",
    "f94d4a71f8e1498a",
-   "ac02a180bb35485a",
-   "41029e5572bb4307",
-   "c460e7eeee0e4c5c",
-   "154ee791cc594f63",
-   "a5d771590fa247e6",
-   "8f356e000ba4416f",
-   "f88b2a171ebf4974",
-   "5b659abbef824f75",
+   "c3c3d0a6289440f2",
    "43ff5889c561464a"
   ]
  },
@@ -834,6 +821,7 @@
   "e63b909fa9504961",
   "15126f3e6ac04b56",
   "d9c04de81a894f12",
+  "a5d771590fa247e6",
   "be5750e00d494f4c",
   "ab950d70ecaa4a26",
   "caca740f76474299",
@@ -3968,6 +3956,7 @@
   "d2ef720b6ece4a3e",
   "a8546bcf7e3d468d",
   "b765e8e2b86f41bc",
+  "63704e3c489f46a8",
   "7462eafe253746a8",
   "c7f69a1ec006480d",
   "60fbd35d4cb24686",
@@ -3978,6 +3967,7 @@
   "24071a8753424b76",
   "155fb1fdb1a54464",
   "4795b059423d4e17",
+  "a4a49cc200cc4590",
   "44242d0660e4405d",
   "3ea5f8984edb409a",
   "22ea33111ed14039",
@@ -4039,8 +4029,10 @@
   "36a7c31782814570",
   "3a14bf4e09c9403c",
   "ccb7f910e8324e01",
+  "7784c9786ccf4699",
   "d15e66c1161a4aa4",
   "faa4b94b914c45be",
+  "ef2252c355ac4592",
   "dc166907fe4f480b",
   "aeaac450359c4718",
   "76211877d3db46f9",
@@ -4054,6 +4046,7 @@
   "9c5fdc3932174fd6",
   "044dea1a4e6d485a",
   "50fbebd0f92a4de1",
+  "ac5d2e6aa5644b8b",
   "a7fc1ce538dc4920",
   "d72123d5e8ee49fd",
   "630977a1113b4bf5",
@@ -4254,6 +4247,7 @@
   "d2e195f7dce047b5",
   "5882bc9f65524f6b",
   "292516c753c74fc3",
+  "480f6cde7ec84648",
   "a399400259ab4468",
   "328fad410545455e",
   "a231c07591414ea7",
@@ -4327,6 +4321,7 @@
   "195e5ee4ac9044d4",
   "3127fc63c84c4cad",
   "3e699d370ec34cb9",
+  "7055ba3812bc4057",
   "da58fba8d6a44b54",
   "83a55b9da0e74fcc",
   "545968a37b7f4384",
@@ -4490,6 +4485,7 @@
   "6cc37e137ee947ef",
   "e8fd434bf91c4863",
   "e3390931e56e4665",
+  "b3e35c118dd0495e",
   "1331ddeb3f4946c8",
   "35373c4d51a74be2",
   "aa4e579635104835",
@@ -4630,12 +4626,14 @@
   "f0f05f46b21c4935",
   "0d82c6c7af8c4c09",
   "a52d1bc978214541",
+  "ac02a180bb35485a",
   "2bc0b6faee954865",
   "5a906e9aff5f4465",
   "10e007db26dc4fc7",
   "939ceb97a1c249dc",
   "6a4fdb477bf84c4b",
   "880e8142c09641a3",
+  "41029e5572bb4307",
   "754f88e22fd74aa5",
   "6a773c9e2b824087",
   "c3534678aa5c4b5c",
@@ -4822,6 +4820,7 @@
   "90bc5f3f022d4e86",
   "ca09f052b64145d0",
   "5a9eb88768a6442d",
+  "154ee791cc594f63",
   "1e25fceec1d042fd",
   "0ec726052b5247af",
   "bda4614486d346c5",
@@ -4860,6 +4859,7 @@
   "25f652946eb54d18",
   "4cf8876121804017",
   "8b38584a44b14ecc",
+  "c220fa874dbd4763",
   "e323284ce4564e8b",
   "4f1b6cec380f4468",
   "690c43ee5eff42ed",
@@ -5194,6 +5194,7 @@
   "7bcadf2f170c4410",
   "c873a9a4aeed48bb",
   "5741dd4000964a2c",
+  "d860a8283fe547fd",
   "19e857eabf554167",
   "ff619a54a7aa4f98",
   "3c9313932c49481c",
@@ -5981,6 +5982,7 @@
   "a87bd9a64bab4845",
   "31b0e9d29ae744c9",
   "a4c5eead4abb4dc6",
+  "f88b2a171ebf4974",
   "002ac1c04efa4989",
   "f2c40a6adebf441b",
   "2f8822ed8a3c4996",
@@ -6160,12 +6162,12 @@
   "962446d093fd46f6",
   "b2714c135ccc4fe1",
   "2a35e2b165d149b9",
+  "cdead5c75e024a62",
+  "7cc754d4043747a0",
   "a4293becb5c645a1",
   "faa20c84675145be",
   "58edd8e185ed4cb7",
-  "3ad302aabd4446f2",
-  "c220fa874dbd4763",
-  "d860a8283fe547fd"
+  "3ad302aabd4446f2"
  ],
  "unread": [
   "f79e037c99b24299",
@@ -6226,6 +6228,7 @@
   "c27cf73a476a4a50",
   "0f5cbdc6cb01456d",
   "f89acad6546d4fbe",
+  "70fe6f0d6e3942a3",
   "b0a039130a6b4c84",
   "c1b17fee522348a2",
   "2855fe3acd064893",
@@ -6246,7 +6249,8 @@
   "9723a8d029f648a6",
   "d411f40ae1e249bf",
   "43018ab66b8c4d18",
-  "1969771d365840dc"
+  "1969771d365840dc",
+  "8f356e000ba4416f"
  ],
  "sources": {
   "ok": 166493,
@@ -304705,16 +304709,17 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "only the job board's copy could be read · Title contains 'Design Engineer' and the role is stated as fully remote with Europe (which includes Portugal) explicitly listed as an eligible base.",
+     "Title explicitly says 100% remote and the requirements state candidates based in Europe (which includes Portugal) are eligible.",
+     "Portugal in · under the title: \"Location\nEurope\"",
      "Portugal in · body: \"You are based in Europe or the Americas (or open to relocate/remote arrangements).\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Agentic AI Design Engineer (100 % remote) (m/f/d)",
-     "company": "EWOR GmbH",
+     "company": "EWOR",
      "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
@@ -304727,29 +304732,34 @@
      "years_xp": null,
      "reports_to": "department founder",
      "language": "English",
-     "posted": "4 days ago"
+     "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://weworkremotely.com/remote-jobs/ewor-agentic-ai-design-engineer-100-remote-m-f-d",
-    "reason": "Title contains 'Design Engineer' and the role is stated as fully remote with Europe (which includes Portugal) explicitly listed as an eligible base.",
+    "reason": "Title explicitly says 100% remote and the requirements state candidates based in Europe (which includes Portugal) are eligible.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "You are based in Europe or the Americas (or open to relocate/remote arrangements).",
     "signals": [
      {
+      "quote": "Location\nEurope",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_in"
+     },
+     {
       "quote": "You are based in Europe or the Americas (or open to relocate/remote arrangements).",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9a2c73e7d60d4c3c.jpg",
-    "read_at": "2026-10-03T20:42:42",
+    "read_at": "2026-10-05T11:34:12",
     "evidence": {
      "board_posted": "2026-09-29"
     }
@@ -304931,15 +304941,14 @@
    "url": "https://weworkremotely.com/remote-jobs/ixdf-interaction-design-foundation-education-designer-ux-ui-and-ai-1",
    "years_xp": 5,
    "verdict": {
-    "role": "yes",
+    "role": "no",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "only the job board's copy could be read · Fully remote, 'Anywhere in the World', and role is a design/education position (UX, UI, AI) fitting a design title.",
-     "Portugal in · side panel: \"Location\nAnywhere in the World\"",
-     "Portugal in · body: \"A full-time position within a fully remote organization.\"",
-     "Portugal in · body: \"Work remotely alongside passionate professionals from all over the world\""
+     "The job is instructional/curriculum design for online courses (writing lessons, exercises, assessments), not product, UX or UI design work itself, so the role itself is not one Cesar does, even though it is fully remote and open to Portugal.",
+     "Portugal in · under the title: \"Location: Anywhere in the World\"",
+     "Portugal in · body: \"You're located in a time zone between UTC-6 (Austin, Chicago) and UTC+8 (Singapore, Perth), which includes all of Europe.\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -304948,12 +304957,10 @@
     "fields": {
      "role": "Education Designer: UX, UI, and AI",
      "company": "IxDF - Interaction Design Foundation",
-     "seniority": "senior",
+     "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
-     "countries": [
-      "Anywhere in the World"
-     ],
+     "countries": [],
      "portugal_ok": "yes",
      "salary": null,
      "years_xp": 5,
@@ -304964,47 +304971,32 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://weworkremotely.com/remote-jobs/ixdf-interaction-design-foundation-education-designer-ux-ui-and-ai-1",
-    "reason": "Fully remote, 'Anywhere in the World', and role is a design/education position (UX, UI, AI) fitting a design title.",
+    "reason": "The job is instructional/curriculum design for online courses (writing lessons, exercises, assessments), not product, UX or UI design work itself, so the role itself is not one Cesar does, even though it is fully remote and open to Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location\nAnywhere in the World",
+    "quote": "Location: Anywhere in the World ... time zone between UTC-6 and UTC+8, which includes all of Europe.",
     "signals": [
      {
-      "quote": "Location\nAnywhere in the World",
-      "where": "side panel",
+      "quote": "Location: Anywhere in the World",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
-      "quote": "A full-time position within a fully remote organization.",
+      "quote": "You're located in a time zone between UTC-6 (Austin, Chicago) and UTC+8 (Singapore, Perth), which includes all of Europe.",
       "where": "body",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Work remotely alongside passionate professionals from all over the world",
-      "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/63704e3c489f46a8.jpg",
-    "read_at": "2026-10-03T20:42:39",
+    "read_at": "2026-10-05T11:34:13",
     "evidence": {
      "board_posted": "2026-09-28"
-    },
-    "copies": [
-     {
-      "id": "3748915db49f44f4",
-      "url": "https://wellfound.com/jobs/4634225-course-writer-and-editor-ux-ui-and-ai-clone",
-      "read_url": "https://wellfound.com/jobs/4634225-course-writer-and-editor-ux-ui-and-ai-clone",
-      "source": "wellfound",
-      "posted": "2026-08-26",
-      "location": "Texas; Remote: Canada, Europe, United States, South Africa, Middle East, Asia",
-      "lane": "open",
-      "read": "board"
-     }
-    ]
+    }
    }
   },
   {
@@ -306166,13 +306158,12 @@
    "years_xp": 10,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Tagged Remote with no country, but the application requires US work authorization, creating a contradiction on place.",
-     "Portugal in · under the title: \"Remote\"",
-     "Portugal OUT · footer or small print: \"Are you authorized to work in the United States?*\""
+     "The posting header just says 'Remote' with no geography, but the mandatory application question about US work authorization indicates the role requires authorization to work specifically in the United States, excluding someone based only in Portugal/EU.",
+     "Portugal OUT · body: \"Are you authorized to work in the United States?\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -306185,39 +306176,35 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "unclear",
+     "portugal_ok": "no",
      "salary": "$145,000-$170,000",
-     "years_xp": 10,
+     "years_xp": "10+",
      "reports_to": "Director of Product",
      "language": "English",
      "posted": null
     },
     "inferred": [
-     "seniority"
+     "place_verdict based on application question rather than an explicit line in the job description body"
     ],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/carrotfertility/jobs/6204994004",
-    "reason": "the page says both: Portugal in, and Portugal out · Tagged Remote with no country, but the application requires US work authorization, creating a contradiction on place.",
+    "reason": "The posting header just says 'Remote' with no geography, but the mandatory application question about US work authorization indicates the role requires authorization to work specifically in the United States, excluding someone based only in Portugal/EU.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote / Are you authorized to work in the United States?",
+    "quote": "Are you authorized to work in the United States?",
     "signals": [
      {
-      "quote": "Remote",
-      "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Are you authorized to work in the United States?*",
-      "where": "footer or small print",
+      "quote": "Are you authorized to work in the United States?",
+      "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a4a49cc200cc4590.jpg",
-    "read_at": "2026-10-04T13:04:18",
+    "read_at": "2026-10-05T11:34:08",
     "evidence": {
      "employer_posted": "2026-09-23"
     }
@@ -308038,7 +308025,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "only the job board's copy could be read · Senior UI Designer role is remote and explicitly open to Europe, which includes Portugal.",
+     "The posting explicitly lists Europe as an eligible remote region, and Portugal is in Europe with no exclusion stated.",
      "Portugal in · under the title: \"Remote (Europe • South America)\"",
      "Portugal in · side panel: \"Hires remotely in Europe - South America\""
     ],
@@ -308058,15 +308045,15 @@
      ],
      "portugal_ok": "yes",
      "salary": "$36k – $48k",
-     "years_xp": 4,
-     "reports_to": null,
+     "years_xp": "4 years",
+     "reports_to": "Lead Product Designer",
      "language": "English",
-     "posted": "4 days ago"
+     "posted": "6 days ago"
     },
     "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4779072-senior-ui-designer",
-    "reason": "Senior UI Designer role is remote and explicitly open to Europe, which includes Portugal.",
+    "reason": "The posting explicitly lists Europe as an eligible remote region, and Portugal is in Europe with no exclusion stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -308075,18 +308062,20 @@
      {
       "quote": "Remote (Europe • South America)",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Hires remotely in Europe - South America",
       "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/71c48b633504418e.jpg",
-    "read_at": "2026-10-03T11:24:11",
+    "read_at": "2026-10-05T11:34:10",
     "evidence": {
      "board_posted": "2026-09-28"
     }
@@ -308117,7 +308106,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "only the job board's copy could be read · Design-leaning UI/UX role, hires remotely 'Everywhere' which includes Portugal.",
+     "The posting explicitly offers remote work hiring from Everywhere, which includes Portugal, and the role title is UI/UX Designer, a design role.",
      "Portugal in · under the title: \"Remote (Everywhere) • Houston\"",
      "Portugal in · side panel: \"Hires remotely in Everywhere\""
     ],
@@ -308131,42 +308120,40 @@
      "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
-     "countries": [
-      "Everywhere"
-     ],
+     "countries": [],
      "portugal_ok": "yes",
-     "salary": "$70k-$120k • 0.5%-2.0% equity",
+     "salary": "$70k – $120k • 0.5% – 2.0%",
      "years_xp": 3,
      "reports_to": null,
      "language": "English",
-     "posted": "7 days ago"
+     "posted": "1 week ago"
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4769265-ui-ux-designer-gaming-collectibles",
-    "reason": "Design-leaning UI/UX role, hires remotely 'Everywhere' which includes Portugal.",
+    "reason": "The posting explicitly offers remote work hiring from Everywhere, which includes Portugal, and the role title is UI/UX Designer, a design role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Hires remotely in Everywhere",
+    "quote": "Remote (Everywhere) • Houston ... Hires remotely in Everywhere",
     "signals": [
      {
       "quote": "Remote (Everywhere) • Houston",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Hires remotely in Everywhere",
       "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/bdfa871b9d3843c3.jpg",
-    "read_at": "2026-10-03T11:27:18",
+    "read_at": "2026-10-05T11:34:13",
     "evidence": {
      "board_posted": "2026-09-26"
     }
@@ -308300,9 +308287,10 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "only the job board's copy could be read · Design-titled role, remote hires everywhere, includes Portugal.",
-     "Portugal in · under the title: \"Remote (Everywhere)\"",
-     "Portugal in · side panel: \"Hires remotely in Everywhere\""
+     "Posting is explicitly remote/everywhere with no country restriction, and the role is product/UI design work, paid.",
+     "Portugal in · under the title: \"Remote ( Everywhere )\"",
+     "Portugal in · side panel: \"Hires remotely in Everywhere\"",
+     "Portugal in · side panel: \"Remote only\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -308314,42 +308302,46 @@
      "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
-     "countries": [
-      "Everywhere"
-     ],
+     "countries": [],
      "portugal_ok": "yes",
      "salary": "$20k – $30k",
      "years_xp": 3,
      "reports_to": null,
      "language": "English",
-     "posted": "2 days ago"
+     "posted": "Reposted: 4 days ago"
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4772697-founding-designer-part-time",
-    "reason": "Design-titled role, remote hires everywhere, includes Portugal.",
+    "reason": "Posting is explicitly remote/everywhere with no country restriction, and the role is product/UI design work, paid.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote (Everywhere)",
+    "quote": "Remote ( Everywhere ) | Hires remotely in Everywhere | Remote only",
     "signals": [
      {
-      "quote": "Remote (Everywhere)",
+      "quote": "Remote ( Everywhere )",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Hires remotely in Everywhere",
       "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Remote only",
+      "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/15695e07ef4e4dc1.jpg",
-    "read_at": "2026-10-03T11:17:56",
+    "read_at": "2026-10-05T11:34:22",
     "evidence": {
      "board_posted": "2026-09-30"
     }
@@ -308381,8 +308373,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "only the job board's copy could be read · Design role explicitly remote and Europe-wide, which includes Portugal.",
-     "Portugal in · under the title: \"Remote (Europe)\"",
+     "The role explicitly hires remotely across Europe (and offers onsite-or-remote across European offices), and Portugal is part of that region with no exclusion.",
+     "Portugal in · under the title: \"Remote (Europe) • London +2\"",
      "Portugal in · side panel: \"Hires remotely in Europe\"",
      "Portugal in · body: \"Based in Europe. This role is Europe-only, and we are not able to consider applicants outside the region\""
     ],
@@ -308400,41 +308392,44 @@
       "Europe"
      ],
      "portugal_ok": "yes",
-     "salary": "$30k – $70k",
-     "years_xp": 3,
+     "salary": "$30k – $70k • No equity",
+     "years_xp": "2 years of exp (listing), 3+ years (body requirement)",
      "reports_to": null,
      "language": "English",
-     "posted": "6 days ago"
+     "posted": "1 week ago"
     },
     "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4772670-ui-ux-designer",
-    "reason": "Design role explicitly remote and Europe-wide, which includes Portugal.",
+    "reason": "The role explicitly hires remotely across Europe (and offers onsite-or-remote across European offices), and Portugal is part of that region with no exclusion.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Based in Europe. This role is Europe-only, and we are not able to consider applicants outside the region",
     "signals": [
      {
-      "quote": "Remote (Europe)",
+      "quote": "Remote (Europe) • London +2",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Hires remotely in Europe",
       "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Based in Europe. This role is Europe-only, and we are not able to consider applicants outside the region",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a7bc32b25a364950.jpg",
-    "read_at": "2026-10-03T11:27:29",
+    "read_at": "2026-10-05T11:34:26",
     "evidence": {
      "board_posted": "2026-09-26"
     }
@@ -308465,66 +308460,77 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Role requires occasional in-person catchups in Coimbatore, India, making it hybrid-onsite outside Portugal.",
-     "Portugal in · under the title: \"Remote (Everywhere)\"",
+     "the page says both, explicitly: Portugal in, and Portugal out · The posting's own structured fields claim remote/everywhere, but the actual job description requires periodic in-person catchups in Coimbatore, India, which cannot be done from Portugal.",
+     "Portugal in · under the title: \"Remote ( Everywhere )\"",
      "Portugal in · side panel: \"Hires remotely in Everywhere\"",
+     "Portugal in · side panel: \"Remote Work Policy / Remote only\"",
      "Portugal OUT · body: \"Hiring: Freelance UI/UX & Framer Designer (Coimbatore / Hybrid)\"",
      "Portugal OUT · body: \"Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "UI/UX Designer (Clone)",
      "company": "Apex Studio Labs",
      "seniority": "unstated",
      "remote": "hybrid",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "India"
+     ],
      "portugal_ok": "no",
      "salary": "₹20,000 – ₹25,000",
-     "years_xp": 0,
+     "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "2 days ago"
+     "posted": "4 days ago"
     },
-    "inferred": [
-     "years_xp"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://wellfound.com/jobs/4787162-ui-ux-designer-clone",
-    "reason": "the page says both: Portugal in, and Portugal out · Role requires occasional in-person catchups in Coimbatore, India, making it hybrid-onsite outside Portugal.",
+    "reason": "the page says both, explicitly: Portugal in, and Portugal out · The posting's own structured fields claim remote/everywhere, but the actual job description requires periodic in-person catchups in Coimbatore, India, which cannot be done from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)",
     "signals": [
      {
-      "quote": "Remote (Everywhere)",
+      "quote": "Remote ( Everywhere )",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Hires remotely in Everywhere",
       "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Remote Work Policy / Remote only",
+      "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Hiring: Freelance UI/UX & Framer Designer (Coimbatore / Hybrid)",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      },
      {
       "quote": "Hybrid / Primarily Remote (mostly work from home, with occasional in-person catchups in Coimbatore for milestone planning)",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a13b18c4338146c2.jpg",
-    "read_at": "2026-10-03T11:18:05",
+    "read_at": "2026-10-05T11:34:29",
     "evidence": {
      "board_posted": "2026-09-30"
     }
@@ -310755,9 +310761,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Role is clearly Product Design and the posting states Remote with no country restriction, only a salary note tied to U.S. candidates which does not limit eligibility.",
-     "Portugal in · side panel: \"Location\n\nRemote\"",
-     "Portugal in · side panel: \"Location Type\n\nRemote\""
+     "The job is posted as fully remote with no country restriction stated; only a note that salary may differ outside the U.S.",
+     "the page says: \"Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -310770,39 +310775,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": "$220K – $290K",
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/runway-ml/b283e7c0-944a-4d4e-be69-49875008c738",
-    "reason": "Role is clearly Product Design and the posting states Remote with no country restriction, only a salary note tied to U.S. candidates which does not limit eligibility.",
+    "reason": "The job is posted as fully remote with no country restriction stated; only a note that salary may differ outside the U.S.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: Remote / Location Type: Remote",
-    "signals": [
-     {
-      "quote": "Location\n\nRemote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Location Type\n\nRemote",
-      "where": "side panel",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Location Type: Remote",
+    "signals": [],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/463cda044ca74455.employer.jpg",
-    "read_at": "2026-10-03T11:24:35",
+    "read_at": "2026-10-05T11:34:33",
     "evidence": {
      "board_posted": "2026-09-28"
     },
@@ -311987,8 +311979,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design-focused product role, remote, and the long location list explicitly includes Portugal.",
-     "Portugal in · side panel: \"London; Abidjan; ... Portugal; ... Washington\""
+     "Role is explicitly remote and Portugal is named in the list of eligible countries, with the title and body clearly a UX/UI product design role.",
+     "Portugal in · under the title: \"London; Abidjan; Albania; Algiers; ... Portugal; Qatar; ... Washington\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -312107,7 +312099,7 @@
       "Saudi Arabia",
       "Seattle",
       "Serbia",
-      "Singapore",
+      "singapoor",
       "Slovakia",
       "Slovenia",
       "South Africa",
@@ -312124,7 +312116,7 @@
       "Ukraine",
       "United Arab Emirates",
       "Uruguay",
-      "Vietnam",
+      "vietnam",
       "Washington"
      ],
      "portugal_ok": "yes",
@@ -312137,22 +312129,23 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/the-flex/6a0c4b4e-7090-4dcc-a4eb-28fed5d76e62",
-    "reason": "Design-focused product role, remote, and the long location list explicitly includes Portugal.",
+    "reason": "Role is explicitly remote and Portugal is named in the list of eligible countries, with the title and body clearly a UX/UI product design role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Portugal; ... Location Type: Remote",
+    "quote": "Location Type: Remote; Location list includes Portugal among countries the role is open to",
     "signals": [
      {
-      "quote": "London; Abidjan; ... Portugal; ... Washington",
-      "where": "side panel",
+      "quote": "London; Abidjan; Albania; Algiers; ... Portugal; Qatar; ... Washington",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/e184c6026a4c4aa1.employer.jpg",
-    "read_at": "2026-10-03T10:28:14",
+    "read_at": "2026-10-05T11:34:37",
     "evidence": {
      "board_posted": "2026-10-02"
     },
@@ -312188,12 +312181,12 @@
    "title": "UX / Product Lead",
    "url": "https://www.uxremotetalent.com/ux-job/product",
    "verdict": {
-    "role": "yes",
+    "role": "no",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "Design/product UX lead role, fully remote and Europe-based (EU) which includes Portugal.",
+     "The role is explicitly unpaid ('this is an unpaid core team role for now'), which makes it a no regardless of its EU-wide remote eligibility.",
      "Portugal in · body: \"Europe-based only (EU + Eastern Partnership countries), fully remote.\""
     ],
     "judged": true,
@@ -312217,12 +312210,10 @@
      "language": "English",
      "posted": "1 month ago"
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
-    "reason": "Design/product UX lead role, fully remote and Europe-based (EU) which includes Portugal.",
+    "reason": "The role is explicitly unpaid ('this is an unpaid core team role for now'), which makes it a no regardless of its EU-wide remote eligibility.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -312231,28 +312222,17 @@
      {
       "quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/7784c9786ccf4699.employer.jpg",
-    "read_at": "2026-10-03T10:28:28",
+    "read_at": "2026-10-05T11:34:45",
     "evidence": {
      "board_posted": "2026-10-02"
-    },
-    "copies": [
-     {
-      "id": "ab83f1a192954d71",
-      "url": "https://uiuxjobsboard.com/job/1611326-remote-europe-ux-product-lead",
-      "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
-      "source": "uiuxjobsboard",
-      "posted": "2026-09-21",
-      "location": "Remote, Europe",
-      "lane": "open",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -312541,14 +312521,13 @@
    "title": "Interactive Designer",
    "url": "https://www.uxremotetalent.com/ux-job/interactive-designer-pvwi2",
    "verdict": {
-    "role": "yes",
+    "role": "no",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "Title says Remote with no country restriction, and the role is a genuine interactive/digital design position.",
-     "Portugal in · under the title: \"Remote\"",
-     "Portugal in · body: \"Remote positions available.\""
+     "The role is an agency designer producing marketing/print/interactive creative (not a product/UX/UI title or focus), and while it's remote, no country restriction is stated.",
+     "the page says: \"Remote positions available.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -312561,54 +312540,29 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
-     "years_xp": 1,
+     "years_xp": "1-3 years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "countries"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://neboagency.applytojob.com/apply/lBP649tGjR/Interactive-Designer",
-    "reason": "Title says Remote with no country restriction, and the role is a genuine interactive/digital design position.",
+    "reason": "The role is an agency designer producing marketing/print/interactive creative (not a product/UX/UI title or focus), and while it's remote, no country restriction is stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote",
-    "signals": [
-     {
-      "quote": "Remote",
-      "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Remote positions available.",
-      "where": "body",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Remote positions available.",
+    "signals": [],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/ef2252c355ac4592.employer.jpg",
-    "read_at": "2026-10-03T11:25:25",
+    "read_at": "2026-10-05T11:34:48",
     "evidence": {
      "board_posted": "2026-09-28"
-    },
-    "copies": [
-     {
-      "id": "a609749721384c31",
-      "url": "https://www.uxremotetalent.com/ux-job/interactive-designer-816mw",
-      "read_url": "https://neboagency.applytojob.com/apply/lBP649tGjR/Interactive-Designer",
-      "source": "uxremotetalent",
-      "posted": "2026-08-26",
-      "location": "USA Only",
-      "lane": "open",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -313566,11 +313520,10 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Posting is pinned to Germany with visa sponsorship only for Germany, but the company describes itself as Europe remote-first and duplicates postings per country, so Portugal eligibility can't be confirmed from this page alone.",
-     "Portugal OUT · side panel: \"Germany\"",
-     "Portugal OUT · footer or small print: \"We can sponsor visas to Germany; for any other country, you need to have existing right to work.\"",
-     "Portugal in · body: \"You'll join a fast-growing, Europe remote-first company where autonomy, experimentation, and craft matter\"",
-     "Portugal in · body: \"Remote-first 🌏 – Our team works remotely across Europe, with regular off-sites for team bonding.\""
+     "remote from a list of countries the page does not show · This specific posting ties the remote role explicitly to Germany, not Portugal.",
+     "Portugal OUT · under the title: \"Location: Germany / Location Type: Remote\"",
+     "Portugal OUT · body: \"We can sponsor visas to Germany; for any other country, you need to have existing right to work.\"",
+     "Portugal OUT · footer or small print: \"Remote-first 🌏 – Our team works remotely across Europe, with regular off-sites for team bonding.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -313579,7 +313532,7 @@
     "fields": {
      "role": "Product Design Manager",
      "company": "n8n",
-     "seniority": "head",
+     "seniority": "lead",
      "remote": "remote",
      "onsite_days": null,
      "countries": [
@@ -313587,7 +313540,7 @@
      ],
      "portugal_ok": "unclear",
      "salary": null,
-     "years_xp": 3,
+     "years_xp": "3+",
      "reports_to": "VP of Product",
      "language": "English",
      "posted": null
@@ -313595,37 +313548,35 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/n8n/10ad6075-8917-4812-af67-d83e25ac1031",
-    "reason": "the page says both: Portugal in, and Portugal out · Posting is pinned to Germany with visa sponsorship only for Germany, but the company describes itself as Europe remote-first and duplicates postings per country, so Portugal eligibility can't be confirmed from this page alone.",
+    "reason": "remote from a list of countries the page does not show · This specific posting ties the remote role explicitly to Germany, not Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Germany / Location Type: Remote, but 'our team works remotely across Europe' and postings are duplicated per country",
+    "quote": "Location: Germany / Location Type: Remote",
     "signals": [
      {
-      "quote": "Germany",
-      "where": "side panel",
+      "quote": "Location: Germany / Location Type: Remote",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_out"
      },
      {
       "quote": "We can sponsor visas to Germany; for any other country, you need to have existing right to work.",
-      "where": "footer or small print",
-      "says": "portugal_out"
-     },
-     {
-      "quote": "You'll join a fast-growing, Europe remote-first company where autonomy, experimentation, and craft matter",
       "where": "body",
-      "says": "portugal_in"
+      "kind": "explicit",
+      "says": "portugal_maybe"
      },
      {
       "quote": "Remote-first 🌏 – Our team works remotely across Europe, with regular off-sites for team bonding.",
-      "where": "body",
-      "says": "portugal_in"
+      "where": "footer or small print",
+      "kind": "generic",
+      "says": "portugal_maybe"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ca8a0e7c2b054a07.jpg",
-    "read_at": "2026-10-03T11:11:51",
+    "read_at": "2026-10-05T11:34:46",
     "evidence": {
      "employer_posted": "2026-10-02"
     }
@@ -313737,22 +313688,21 @@
    "years_xp": 3,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Location panel states Hybrid in Vilnius/Kaunas, but a benefits line claims 'work from anywhere', creating a genuine contradiction.",
-     "Portugal OUT · side panel: \"Vilnius; Kaunas\"",
-     "Portugal OUT · side panel: \"Hybrid\"",
-     "Portugal in · body: \"Work from anywhere: work from wherever keeps you in the zone.\"",
+     "The role is hybrid and tied to Vilnius or Kaunas, Lithuania, with no remote option for other countries despite a generic 'work from anywhere' benefits line.",
+     "Portugal OUT · under the title: \"Vilnius; Kaunas\"",
+     "Portugal OUT · under the title: \"Location Type: Hybrid\"",
      "Portugal OUT · body: \"our Vilnius HQ is yours to enjoy\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
-     "role": "Product Designer",
+     "role": "Product Designer | NordVPN Web | Mid-Senior",
      "company": "Nord Security",
      "seniority": "mid",
      "remote": "hybrid",
@@ -313760,9 +313710,9 @@
      "countries": [
       "Lithuania"
      ],
-     "portugal_ok": "unclear",
-     "salary": "EUR 3.1K-6K per month",
-     "years_xp": 3,
+     "portugal_ok": "no",
+     "salary": "€3.1K – €6K per month (Gross)",
+     "years_xp": "3+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -313770,37 +313720,35 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/nord-security/2fdc1df5-fa4e-4214-a144-a866c906e6e7",
-    "reason": "the page says both: Portugal in, and Portugal out · Location panel states Hybrid in Vilnius/Kaunas, but a benefits line claims 'work from anywhere', creating a genuine contradiction.",
+    "reason": "The role is hybrid and tied to Vilnius or Kaunas, Lithuania, with no remote option for other countries despite a generic 'work from anywhere' benefits line.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Work from anywhere: work from wherever keeps you in the zone.",
+    "quote": "Location: Vilnius; Kaunas / Location Type: Hybrid",
     "signals": [
      {
       "quote": "Vilnius; Kaunas",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "tag",
       "says": "portugal_out"
      },
      {
-      "quote": "Hybrid",
-      "where": "side panel",
+      "quote": "Location Type: Hybrid",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_out"
-     },
-     {
-      "quote": "Work from anywhere: work from wherever keeps you in the zone.",
-      "where": "body",
-      "says": "portugal_in"
      },
      {
       "quote": "our Vilnius HQ is yours to enjoy",
       "where": "body",
+      "kind": "tag",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ac5d2e6aa5644b8b.jpg",
-    "read_at": "2026-10-03T11:12:01",
+    "read_at": "2026-10-05T11:34:45",
     "evidence": {
      "employer_posted": "2026-10-02"
     }
@@ -315983,9 +315931,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Designer role, remote across Europe including Portugal.",
-     "Portugal in · side panel: \"Remote - Europe\"",
-     "Portugal in · body: \"We are a remote team with a Lisbon office\"",
+     "Posting is explicitly remote across Europe, which includes Portugal, with no exclusion.",
+     "Portugal in · under the title: \"Remote - Europe\"",
      "Portugal in · body: \"Remote in Europe (preference: Western/continental Europe)\"",
      "Portugal in · body: \"Portugal/Lisbon relocation sponsorship possible\""
     ],
@@ -316012,37 +315959,35 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/simplestudy/9a461829-e704-4169-a4db-fe133a2a63c1",
-    "reason": "Senior Product Designer role, remote across Europe including Portugal.",
+    "reason": "Posting is explicitly remote across Europe, which includes Portugal, with no exclusion.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote - Europe",
+    "quote": "Remote - Europe; Remote in Europe (preference: Western/continental Europe)",
     "signals": [
      {
       "quote": "Remote - Europe",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "We are a remote team with a Lisbon office",
-      "where": "body",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Remote in Europe (preference: Western/continental Europe)",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Portugal/Lisbon relocation sponsorship possible",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/593458ac73494abf.jpg",
-    "read_at": "2026-10-03T11:43:36",
+    "read_at": "2026-10-05T11:34:55",
     "evidence": {
      "employer_posted": "2026-07-22"
     }
@@ -316459,7 +316404,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Remote role explicitly open to Europe, and title is a design-leaning engineering role (Product Design Engineer).",
+     "Role is remote and the posting's location list explicitly includes Europe, which covers Portugal.",
      "Portugal in · side panel: \"The Americas (North, Central, South); Europe\"",
      "Portugal in · footer or small print: \"Location: Remote (American or European time zones)\""
     ],
@@ -316468,7 +316413,7 @@
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Product Design Engineer",
+     "role": "Designer",
      "company": "Zed",
      "seniority": "unstated",
      "remote": "remote",
@@ -316487,27 +316432,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/zed/6871e6ed-0358-4d36-b666-d10e6b3c31cf",
-    "reason": "Remote role explicitly open to Europe, and title is a design-leaning engineering role (Product Design Engineer).",
+    "reason": "Role is remote and the posting's location list explicitly includes Europe, which covers Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "The Americas (North, Central, South); Europe",
+    "quote": "The Americas (North, Central, South); Europe ... Remote (American or European time zones)",
     "signals": [
      {
       "quote": "The Americas (North, Central, South); Europe",
       "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Location: Remote (American or European time zones)",
       "where": "footer or small print",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b841a60085d74f51.jpg",
-    "read_at": "2026-10-03T11:48:14",
+    "read_at": "2026-10-05T11:34:57",
     "evidence": {
      "employer_posted": "2025-10-17"
     }
@@ -317767,13 +317714,13 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Role is genuinely product design and the posting states Remote with no geographic restriction given anywhere on the page.",
-     "the page says: \"Location: Remote / Location Type: Remote\""
+     "Posting says remote with no geography, but company is US-only with USD salary and all-US offices, so eligibility for Portugal is not stated either way.",
+     "the page says: \"Location: Remote / Location Type: Remote / Chartis has offices in Boston, Chicago, New York, Washington D.C., and Nashville. Remote work is allowed.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "low",
     "fields": {
      "role": "Staff Product Designer",
      "company": "Chartis",
@@ -317781,28 +317728,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": "$155,000-$220,000",
-     "years_xp": 7,
+     "years_xp": "7+",
      "reports_to": "design manager",
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/chartis/0d6177d0-3661-421c-9fb1-e567b82e64e8",
-    "reason": "Role is genuinely product design and the posting states Remote with no geographic restriction given anywhere on the page.",
+    "reason": "Posting says remote with no geography, but company is US-only with USD salary and all-US offices, so eligibility for Portugal is not stated either way.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: Remote / Location Type: Remote",
+    "quote": "Location: Remote / Location Type: Remote / Chartis has offices in Boston, Chicago, New York, Washington D.C., and Nashville. Remote work is allowed.",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/75e49164cb8a4645.jpg",
-    "read_at": "2026-10-03T11:37:18",
+    "read_at": "2026-10-05T11:34:57",
     "evidence": {
      "employer_posted": "2026-09-01"
     }
@@ -319811,8 +319756,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Remote product design role with Europe explicitly listed as an eligible region, which includes Portugal.",
-     "Portugal in · side panel: \"United States; Europe; South America\"",
+     "Role is remote, open to Europe (which includes Portugal) per both the location field and the time-zone requirement.",
+     "Portugal in · under the title: \"United States; Europe; South America\"",
      "Portugal in · body: \"Based in North/South America or Europe time zones\""
     ],
     "judged": true,
@@ -319832,7 +319777,7 @@
      ],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 3,
+     "years_xp": "3+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -319840,27 +319785,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/injective-labs/d4a73650-0bcd-4bc4-92c0-45ce9f885540",
-    "reason": "Remote product design role with Europe explicitly listed as an eligible region, which includes Portugal.",
+    "reason": "Role is remote, open to Europe (which includes Portugal) per both the location field and the time-zone requirement.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "United States; Europe; South America",
+    "quote": "Location: United States; Europe; South America — Location Type: Remote; Based in North/South America or Europe time zones",
     "signals": [
      {
       "quote": "United States; Europe; South America",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "tag",
       "says": "portugal_in"
      },
      {
       "quote": "Based in North/South America or Europe time zones",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d3dc287c1d854520.jpg",
-    "read_at": "2026-10-03T11:42:39",
+    "read_at": "2026-10-05T11:35:03",
     "evidence": {
      "employer_posted": "2026-08-03"
     },
@@ -321458,8 +321405,9 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Location list includes Europe and Remote, which covers Portugal, and role is clearly senior product design.",
-     "Portugal in · side panel: \"Remote; Dublin; Europe; London\""
+     "Location field lists Remote with Europe among the locations, and Location Type is Remote, so Portugal (in Europe) is included.",
+     "Portugal in · under the title: \"Remote; Dublin; Europe; London\"",
+     "Portugal in · under the title: \"Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -321486,22 +321434,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/kota/17be8362-a6d0-49fa-a127-53d66ca8745e",
-    "reason": "Location list includes Europe and Remote, which covers Portugal, and role is clearly senior product design.",
+    "reason": "Location field lists Remote with Europe among the locations, and Location Type is Remote, so Portugal (in Europe) is included.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote; Dublin; Europe; London",
+    "quote": "Remote; Dublin; Europe; London — Location Type: Remote",
     "signals": [
      {
       "quote": "Remote; Dublin; Europe; London",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Location Type: Remote",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/75dc7e1947444d4e.jpg",
-    "read_at": "2026-10-03T11:42:29",
+    "read_at": "2026-10-05T11:35:08",
     "evidence": {
      "employer_posted": "2026-08-04"
     }
@@ -321534,8 +321489,9 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Designer role, remote across Europe which includes Portugal.",
-     "Portugal in · side panel: \"Remote; Europe\""
+     "Posting explicitly states Remote; Europe and remote within +/-4hrs GMT, which includes Portugal.",
+     "Portugal in · under the title: \"Location\nRemote; Europe\"",
+     "Portugal in · body: \"Location: Remote +/- 4hrs GMT\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -321560,22 +321516,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/kota/8c003490-b698-4280-9689-b4b702e2c813",
-    "reason": "Senior Product Designer role, remote across Europe which includes Portugal.",
+    "reason": "Posting explicitly states Remote; Europe and remote within +/-4hrs GMT, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote; Europe",
+    "quote": "Location: Remote +/- 4hrs GMT",
     "signals": [
      {
-      "quote": "Remote; Europe",
-      "where": "side panel",
+      "quote": "Location\nRemote; Europe",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Location: Remote +/- 4hrs GMT",
+      "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/838ed206694448d4.jpg",
-    "read_at": "2026-10-03T11:43:08",
+    "read_at": "2026-10-05T11:35:11",
     "evidence": {
      "employer_posted": "2026-07-27"
     }
@@ -321613,10 +321576,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design-leadership UX role listed simply as Remote with no country restriction, so Portugal is included.",
-     "Portugal in · side panel: \"Location\n\nRemote\"",
-     "Portugal in · side panel: \"Location Type\n\nRemote\"",
-     "Portugal in · body: \"Remote-friendly team #LI-Remote\""
+     "The role is stated as remote with no country or region restriction given anywhere on the page.",
+     "the page says: \"Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -321629,44 +321590,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
-     "salary": "USD 185,000-230,000",
-     "years_xp": 10,
+     "portugal_ok": "unclear",
+     "salary": "$185,000-$230,000",
+     "years_xp": "10+",
      "reports_to": "Design Director",
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/believer/b26e8a52-86c6-4086-b375-6ea7a7e2760f",
-    "reason": "Design-leadership UX role listed simply as Remote with no country restriction, so Portugal is included.",
+    "reason": "The role is stated as remote with no country or region restriction given anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: Remote / Location Type: Remote",
-    "signals": [
-     {
-      "quote": "Location\n\nRemote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Location Type\n\nRemote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Remote-friendly team #LI-Remote",
-      "where": "body",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Location Type: Remote",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9aa7795678a34bb5.jpg",
-    "read_at": "2026-10-03T11:42:44",
+    "read_at": "2026-10-05T11:35:12",
     "evidence": {
      "employer_posted": "2026-07-31"
     }
@@ -323296,10 +323239,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design-systems senior product designer role at a remote-first company with no country restriction stated.",
-     "Portugal in · side panel: \"Location: Remote\"",
-     "Portugal in · side panel: \"Location Type: Remote\"",
-     "Portugal in · opening paragraph: \"remote-first team of 300+ on a mission to raise the standard of trust online\""
+     "The role is explicitly remote with no country restriction stated anywhere on the page beyond an unrelated US-only health-benefits note.",
+     "the page says: \"Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -323313,8 +323254,8 @@
      "onsite_days": null,
      "countries": [],
      "portugal_ok": "yes",
-     "salary": "$178,500 USD annually and stock options",
-     "years_xp": 7,
+     "salary": "$178.5K • Offers Equity",
+     "years_xp": "7+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -323322,32 +323263,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/duck-duck-go/46757e0c-981c-4925-b007-b6f1829ae1be",
-    "reason": "Design-systems senior product designer role at a remote-first company with no country restriction stated.",
+    "reason": "The role is explicitly remote with no country restriction stated anywhere on the page beyond an unrelated US-only health-benefits note.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: Remote; Location Type: Remote; remote-first team of 300+",
-    "signals": [
-     {
-      "quote": "Location: Remote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Location Type: Remote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "remote-first team of 300+ on a mission to raise the standard of trust online",
-      "where": "opening paragraph",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Location Type: Remote",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/fb004cabb642499c.jpg",
-    "read_at": "2026-10-03T11:16:17",
+    "read_at": "2026-10-05T11:35:14",
     "evidence": {
      "employer_posted": "2026-10-01"
     }
@@ -323706,9 +323631,9 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Designer, remote role explicitly open to Europe, which includes Portugal.",
-     "Portugal in · side panel: \"Remote | North America or Europe\"",
-     "Portugal in · opening paragraph: \"Required Location: North America or Europe.\""
+     "Role is explicitly remote and open to Europe, which includes Portugal.",
+     "Portugal in · under the title: \"Remote | North America or Europe\"",
+     "Portugal in · body: \"Required Location: North America or Europe.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -323726,7 +323651,7 @@
      ],
      "portugal_ok": "yes",
      "salary": "US $143K - US$162K + equity",
-     "years_xp": 8,
+     "years_xp": "8+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -323734,7 +323659,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/chromatic/75693ed5-b8de-4cf0-a38a-ac259a6f05ef",
-    "reason": "Senior Product Designer, remote role explicitly open to Europe, which includes Portugal.",
+    "reason": "Role is explicitly remote and open to Europe, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -323742,19 +323667,21 @@
     "signals": [
      {
       "quote": "Remote | North America or Europe",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Required Location: North America or Europe.",
-      "where": "opening paragraph",
+      "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/71a61dbfc67e454a.jpg",
-    "read_at": "2026-10-03T11:28:26",
+    "read_at": "2026-10-05T11:35:14",
     "evidence": {
      "employer_posted": "2026-09-25"
     }
@@ -324377,8 +324304,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Designer role, remote with Portugal explicitly named in the location list.",
-     "Portugal in · side panel: \"Remote - Europe Time Zones; Portugal; Serbia; Spain\""
+     "The location field explicitly names Portugal as an eligible remote location for this role.",
+     "Portugal in · under the title: \"Remote - Europe Time Zones; Portugal; Serbia; Spain\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -324391,14 +324318,13 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [
-      "Europe Time Zones",
       "Portugal",
       "Serbia",
       "Spain"
      ],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 5,
+     "years_xp": "5+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -324406,7 +324332,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/splitmetrics/64fea555-d27c-4d58-9cbc-2bf19b33c6fb",
-    "reason": "Senior Product Designer role, remote with Portugal explicitly named in the location list.",
+    "reason": "The location field explicitly names Portugal as an eligible remote location for this role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -324414,14 +324340,15 @@
     "signals": [
      {
       "quote": "Remote - Europe Time Zones; Portugal; Serbia; Spain",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/fec63ce387ee4e7e.jpg",
-    "read_at": "2026-10-03T11:22:56",
+    "read_at": "2026-10-05T11:35:14",
     "evidence": {
      "employer_posted": "2026-09-29"
     }
@@ -324598,7 +324525,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Product Designer role is squarely design, and the posting states remote with 'Any Location', which includes Portugal.",
+     "The posting states the role is Remote (Any Location), a blanket with no exclusion, which includes Portugal.",
      "Portugal in · under the title: \"Ukraine - Remote (Any Location)\""
     ],
     "judged": true,
@@ -324616,7 +324543,7 @@
      ],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 4,
+     "years_xp": "4+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -324624,7 +324551,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://betterme.breezy.hr/p/f0af8f3023a2-product-designer",
-    "reason": "Product Designer role is squarely design, and the posting states remote with 'Any Location', which includes Portugal.",
+    "reason": "The posting states the role is Remote (Any Location), a blanket with no exclusion, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -324633,13 +324560,14 @@
      {
       "quote": "Ukraine - Remote (Any Location)",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/86ddbe75db49447e.jpg",
-    "read_at": "2026-10-03T11:38:03",
+    "read_at": "2026-10-05T11:35:21",
     "evidence": {
      "employer_posted": "2026-08-28"
     }
@@ -324831,9 +324759,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design leadership role (Head of UX/UI), posted as Worldwide Remote with only a timezone overlap requirement, not a location restriction.",
-     "Portugal in · under the title: \"Worldwide Remote\"",
-     "Portugal in · body: \"Location: Remote (Must accommodate US East Coast working hours)\""
+     "Role is remote worldwide, requiring only US East Coast working hours overlap, which Cesar can do from Portugal.",
+     "Portugal in · under the title: \"Worldwide / Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -324848,7 +324775,7 @@
      "countries": [],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 6,
+     "years_xp": "6+ years",
      "reports_to": "CTO",
      "language": "English",
      "posted": null
@@ -324856,27 +324783,23 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://euler.breezy.hr/p/5337b1c617ff-head-of-ux-ui",
-    "reason": "Design leadership role (Head of UX/UI), posted as Worldwide Remote with only a timezone overlap requirement, not a location restriction.",
+    "reason": "Role is remote worldwide, requiring only US East Coast working hours overlap, which Cesar can do from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Worldwide Remote",
+    "quote": "Location: Remote (Must accommodate US East Coast working hours)",
     "signals": [
      {
-      "quote": "Worldwide Remote",
+      "quote": "Worldwide / Remote",
       "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Location: Remote (Must accommodate US East Coast working hours)",
-      "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/2a695862bda248ad.jpg",
-    "read_at": "2026-10-03T11:34:08",
+    "read_at": "2026-10-05T11:35:23",
     "evidence": {
      "employer_posted": "2026-09-14"
     }
@@ -332046,12 +331969,11 @@
    "url": "https://job-boards.greenhouse.io/syllo/jobs/4118605009",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Despite the generic 'Remote' tag, the pay range and work-authorization questions specify United States only.",
-     "Portugal in · under the title: \"Remote\"",
+     "Despite the generic 'Remote' tag, the pay range and work-authorization questions specify the role is US-based remote, excluding Portugal.",
      "Portugal OUT · body: \"United States - Remote Pay Range\"",
      "Portugal OUT · body: \"Are you currently legally authorized to work in the United States?\"",
      "Portugal OUT · body: \"Will you now or in the future require Syllo to sponsor or support an employment visa or work authorization in order to work in the United States?\""
@@ -332071,7 +331993,7 @@
      ],
      "portugal_ok": "no",
      "salary": "$160,000 - $200,000 USD",
-     "years_xp": 8,
+     "years_xp": "8",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -332079,37 +332001,35 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/syllo/jobs/4118605009",
-    "reason": "the page says both: Portugal in, and Portugal out · Despite the generic 'Remote' tag, the pay range and work-authorization questions specify United States only.",
+    "reason": "Despite the generic 'Remote' tag, the pay range and work-authorization questions specify the role is US-based remote, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "United States - Remote Pay Range",
     "signals": [
      {
-      "quote": "Remote",
-      "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
       "quote": "United States - Remote Pay Range",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      },
      {
       "quote": "Are you currently legally authorized to work in the United States?",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      },
      {
       "quote": "Will you now or in the future require Syllo to sponsor or support an employment visa or work authorization in order to work in the United States?",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/480f6cde7ec84648.jpg",
-    "read_at": "2026-10-03T11:23:07",
+    "read_at": "2026-10-05T11:35:23",
     "evidence": {
      "employer_posted": "2026-09-29"
     }
@@ -332598,18 +332518,18 @@
    "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8010748",
    "years_xp": 20,
    "verdict": {
-    "role": "yes",
+    "role": "unclear",
     "place": "unclear",
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page does not say where · No job description is shown, only the application form; title indicates a design role so role passes, but place cannot be determined.",
-     "the page says: \"no job description is present on this page\""
+     "The page is only the application form (fields to fill out) with no job description, title display, or location statement visible.",
+     "the page says: \"What is your state of residence?*\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "low",
+    "confidence": "medium",
     "fields": {
      "role": "Lead Product Designer, Care Access Network",
      "company": "Zocdoc",
@@ -332624,21 +332544,19 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "role"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/zocdoc/jobs/8010748",
-    "reason": "the page does not say where · No job description is shown, only the application form; title indicates a design role so role passes, but place cannot be determined.",
-    "open": "yes",
+    "reason": "The page is only the application form (fields to fill out) with no job description, title display, or location statement visible.",
+    "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "no job description is present on this page",
+    "quote": "What is your state of residence?*",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/70fe6f0d6e3942a3.jpg",
-    "read_at": "2026-10-03T11:35:45",
+    "read_at": "2026-10-05T11:35:25",
     "evidence": {
      "employer_posted": "2026-09-11"
     }
@@ -338502,13 +338420,13 @@
    "url": "https://grandstudio.applytojob.com/apply/LxTLONK1cH/Senior-UI-Designer-Contract-Pool",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Despite being tagged remote, the posting requires eligibility to work in the United States, excluding Portugal.",
-     "Portugal in · under the title: \"Remote\"",
-     "Portugal OUT · body: \"In compliance with federal law, all persons hired will be required to verify identity and eligibility to work in the United States and to complete the required employment eligibility verification document form upon hire.\""
+     "Despite the 'Remote' tag, the posting explicitly requires eligibility to work in the United States, which excludes a candidate based in Portugal.",
+     "Portugal OUT · footer or small print: \"In compliance with federal law, all persons hired will be required to verify identity and eligibility to work in the United States and to complete the required employment eligibility verification document form upon hire.\"",
+     "Portugal OUT · body: \"What's your citizenship / employment eligibility?* ... I am a U.S. Citizen/Permanent Resident ... Non-citizen allowed to work for any employer ... I am a Canadian Citizen/Permanent Resident\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -338531,31 +338449,33 @@
      "posted": null
     },
     "inferred": [
-     "seniority"
+     "countries"
     ],
     "read": "employer",
     "read_url": "https://grandstudio.applytojob.com/apply/LxTLONK1cH/Senior-UI-Designer-Contract-Pool",
-    "reason": "the page says both: Portugal in, and Portugal out · Despite being tagged remote, the posting requires eligibility to work in the United States, excluding Portugal.",
+    "reason": "Despite the 'Remote' tag, the posting explicitly requires eligibility to work in the United States, which excludes a candidate based in Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "all persons hired will be required to verify identity and eligibility to work in the United States",
     "signals": [
      {
-      "quote": "Remote",
-      "where": "under the title",
-      "says": "portugal_in"
+      "quote": "In compliance with federal law, all persons hired will be required to verify identity and eligibility to work in the United States and to complete the required employment eligibility verification document form upon hire.",
+      "where": "footer or small print",
+      "kind": "explicit",
+      "says": "portugal_out"
      },
      {
-      "quote": "In compliance with federal law, all persons hired will be required to verify identity and eligibility to work in the United States and to complete the required employment eligibility verification document form upon hire.",
+      "quote": "What's your citizenship / employment eligibility?* ... I am a U.S. Citizen/Permanent Resident ... Non-citizen allowed to work for any employer ... I am a Canadian Citizen/Permanent Resident",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7055ba3812bc4057.jpg",
-    "read_at": "2026-10-03T11:07:23",
+    "read_at": "2026-10-05T11:35:29",
     "evidence": {}
    }
   },
@@ -338981,9 +338901,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "UI/UX design role posted as Remote with no country restriction, and the company describes enabling talent to work remotely from their home countries.",
-     "Portugal in · under the title: \"Remote\"",
-     "Portugal in · opening paragraph: \"We enable hard-working and ambitious talent to work remotely from their home countries, while gaining exposure into how the world's top companies operate.\""
+     "Tagged Remote with no country restriction; only a US-timezone work-hours requirement, which is not a location rule.",
+     "the page says: \"Remote / enable hard-working and ambitious talent to work remotely from their home countries\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -338992,44 +338911,33 @@
     "fields": {
      "role": "E-Commerce UI/UX Designer",
      "company": "Pomelo",
-     "seniority": "mid",
+     "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
-     "years_xp": 3,
-     "reports_to": null,
+     "years_xp": "3+",
+     "reports_to": "CEO",
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://pomelohq.applytojob.com/apply/9BJTlMC1JS/ECommerce-UIUX-Designer",
-    "reason": "UI/UX design role posted as Remote with no country restriction, and the company describes enabling talent to work remotely from their home countries.",
+    "reason": "Tagged Remote with no country restriction; only a US-timezone work-hours requirement, which is not a location rule.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote",
-    "signals": [
-     {
-      "quote": "Remote",
-      "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "We enable hard-working and ambitious talent to work remotely from their home countries, while gaining exposure into how the world's top companies operate.",
-      "where": "opening paragraph",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Remote / enable hard-working and ambitious talent to work remotely from their home countries",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/cdead5c75e024a62.jpg",
-    "read_at": "2026-10-03T11:07:55",
-    "evidence": {}
+    "read_at": "2026-10-05T11:35:33",
+    "evidence": {},
+    "agency": true,
+    "hiring_for": null
    }
   },
   {
@@ -339127,9 +339035,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Designer role is remote with no country restriction, and the application form includes EMEA as a region option, indicating global/European eligibility.",
-     "Portugal in · body: \"Codelitt's a small, tight-knit global team that moves quickly! We have fun together while building amazing products and partnering with clients and teammates from around the world!\"",
-     "Portugal in · footer or small print: \"What region are you currently located in? NA (North America) LATAM (Latin America) EMEA (Europe, Middle East, Africa) APAC (Asia-Pacific) ANZ (Australia, New Zealand)\""
+     "Posting is tagged Remote with no country or region restriction stated anywhere in the body.",
+     "the page says: \"Senior Product Designer - Remote - Contracted - Experienced\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -339142,39 +339049,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
-     "years_xp": 6,
+     "years_xp": "6+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://codelitt.applytojob.com/apply/cAwLhrcfv7/Senior-Product-Designer",
-    "reason": "Senior Product Designer role is remote with no country restriction, and the application form includes EMEA as a region option, indicating global/European eligibility.",
+    "reason": "Posting is tagged Remote with no country or region restriction stated anywhere in the body.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote",
-    "signals": [
-     {
-      "quote": "Codelitt's a small, tight-knit global team that moves quickly! We have fun together while building amazing products and partnering with clients and teammates from around the world!",
-      "where": "body",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "What region are you currently located in? NA (North America) LATAM (Latin America) EMEA (Europe, Middle East, Africa) APAC (Asia-Pacific) ANZ (Australia, New Zealand)",
-      "where": "footer or small print",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Senior Product Designer - Remote - Contracted - Experienced",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d711863e00f84b83.jpg",
-    "read_at": "2026-10-03T11:08:03",
+    "read_at": "2026-10-05T11:35:33",
     "evidence": {}
    }
   },
@@ -339265,13 +339159,13 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title says UX Developer and the posting states the role is Remote with no country restriction.",
-     "Portugal in · under the title: \"Remote\""
+     "Posting says only 'Remote' with no country named, and the only location-related detail is a US/Canada-oriented work-authorization dropdown on the application form, so Portugal eligibility cannot be confirmed.",
+     "the page says: \"Remote\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "low",
     "fields": {
      "role": "UX Developer",
      "company": "Portland Webworks",
@@ -339279,34 +339173,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://portlandwebworks.applytojob.com/apply/l0UeR30obQ/UX-Developer",
-    "reason": "Title says UX Developer and the posting states the role is Remote with no country restriction.",
+    "reason": "Posting says only 'Remote' with no country named, and the only location-related detail is a US/Canada-oriented work-authorization dropdown on the application form, so Portugal eligibility cannot be confirmed.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Remote",
-    "signals": [
-     {
-      "quote": "Remote",
-      "where": "under the title",
-      "says": "portugal_in"
-     }
-    ],
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3e0178b1c5504ff7.jpg",
-    "read_at": "2026-10-03T11:08:16",
+    "read_at": "2026-10-05T11:35:35",
     "evidence": {}
    }
   },
@@ -339552,52 +339438,45 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title says UI/UX Developer, satisfying the design-title rule, and the role is posted as Remote with no country restriction.",
-     "Portugal in · under the title: \"Remote\""
+     "Posting is marked Remote with no country restriction stated anywhere on the page.",
+     "the page says: \"Remote\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "medium",
     "fields": {
-     "role": "UI/UX Developer",
+     "role": "WE’RE HIRING UI/UX DEVELOPER AT STARTUP POWERED ORTHOTICS",
      "company": "innoWerft",
      "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": "vor 1 Monat"
     },
-    "inferred": [
-     "company",
-     "remote"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://join.com/companies/innowerft/16752727-we-re-hiring-ui-ux-developer-at-startup-powered-orthotics",
-    "reason": "Title says UI/UX Developer, satisfying the design-title rule, and the role is posted as Remote with no country restriction.",
+    "reason": "Posting is marked Remote with no country restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Remote",
-    "signals": [
-     {
-      "quote": "Remote",
-      "where": "under the title",
-      "says": "portugal_in"
-     }
-    ],
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7cc754d4043747a0.jpg",
-    "read_at": "2026-10-03T11:42:32",
+    "read_at": "2026-10-05T11:35:35",
     "evidence": {
      "employer_posted": "2026-08-04"
-    }
+    },
+    "agency": true,
+    "hiring_for": null
    }
   },
   {
@@ -339792,9 +339671,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Explicitly based in Portugal and fully remote, matching his location and design seniority.",
-     "Portugal in · under the title: \"Portugal\"",
-     "Portugal in · under the title: \"Research & Development – Design /Full-Time /Remote\"",
+     "Posting explicitly states the role is remote and based in Portugal, which fits Cesar directly.",
+     "Portugal in · under the title: \"PortugalResearch & Development – Design /Full-Time /Remote\"",
      "Portugal in · opening paragraph: \"Our partner is looking for a Senior Product Designer based in Portugal.\""
     ],
     "judged": true,
@@ -339803,7 +339681,7 @@
     "confidence": "high",
     "fields": {
      "role": "Senior Product Designer",
-     "company": "Jobgether's partner (unnamed)",
+     "company": null,
      "seniority": "senior",
      "remote": "remote",
      "onsite_days": null,
@@ -339812,7 +339690,7 @@
      ],
      "portugal_ok": "yes",
      "salary": "$70,000–$80,000 USD",
-     "years_xp": 7,
+     "years_xp": "7+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -339820,32 +339698,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/jobgether/4c63be0f-0b75-441b-8320-d5f9b78b39bb",
-    "reason": "Explicitly based in Portugal and fully remote, matching his location and design seniority.",
+    "reason": "Posting explicitly states the role is remote and based in Portugal, which fits Cesar directly.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Our partner is looking for a Senior Product Designer based in Portugal.",
     "signals": [
      {
-      "quote": "Portugal",
+      "quote": "PortugalResearch & Development – Design /Full-Time /Remote",
       "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Research & Development – Design /Full-Time /Remote",
-      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Our partner is looking for a Senior Product Designer based in Portugal.",
       "where": "opening paragraph",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a4293becb5c645a1.jpg",
-    "read_at": "2026-10-03T11:13:46",
+    "read_at": "2026-10-05T11:35:36",
     "evidence": {
      "employer_posted": "2026-10-02"
     },
@@ -343214,8 +343089,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Location line includes 'Global' alongside Remote, which includes Portugal.",
-     "Portugal in · under the title: \"Global / Dubai / Hong Kong / Singapore\""
+     "The location field lists 'Global' alongside specific cities and tags the role 'Remote', which includes Portugal with no exclusion.",
+     "Portugal in · under the title: \"Global / Dubai / Hong Kong / SingaporeCMC - Product /Full-Time /Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -343223,7 +343098,7 @@
     "confidence": "medium",
     "fields": {
      "role": "Senior Product Designer - CoinGlass",
-     "company": "Coinglass (Coin Market Cap Ltd)",
+     "company": "CoinGlass",
      "seniority": "senior",
      "remote": "remote",
      "onsite_days": null,
@@ -343235,7 +343110,7 @@
      ],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 5,
+     "years_xp": "5+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -343243,22 +343118,23 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/coinmarketcap/02318fa1-e707-41ee-a218-35a8cfd5797b",
-    "reason": "Location line includes 'Global' alongside Remote, which includes Portugal.",
+    "reason": "The location field lists 'Global' alongside specific cities and tags the role 'Remote', which includes Portugal with no exclusion.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Global / Dubai / Hong Kong / Singapore ... Remote",
+    "quote": "Global / Dubai / Hong Kong / Singapore ... /Remote",
     "signals": [
      {
-      "quote": "Global / Dubai / Hong Kong / Singapore",
+      "quote": "Global / Dubai / Hong Kong / SingaporeCMC - Product /Full-Time /Remote",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/48dbdb825e434293.jpg",
-    "read_at": "2026-10-03T11:20:23",
+    "read_at": "2026-10-05T11:35:49",
     "evidence": {
      "employer_posted": "2026-09-30"
     }
@@ -344014,11 +343890,10 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Genuine product design role, fully remote and open to applicants globally, which includes Portugal.",
+     "The posting explicitly states the company is 100% remote and open to applicants globally, which includes Portugal; only a US working-hours overlap is required, not location.",
      "Portugal in · opening paragraph: \"We are a team of 600+ fully remote people in 60+ countries working hard to serve the global chess community.\"",
      "Portugal in · body: \"We are 100% remote (work from anywhere!).\"",
-     "Portugal in · body: \"This position is open to applicants globally and requires at least 3 hours of overlap with U.S. working hours.\"",
-     "Portugal in · side panel: \"Remote\""
+     "Portugal in · body: \"This position is open to applicants globally and requires at least 3 hours of overlap with U.S. working hours.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -344033,47 +343908,43 @@
      "countries": [],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 2,
+     "years_xp": "2-3 years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://ats.rippling.com/chess/jobs/578f7e07-3ca1-4d3e-a670-2d5e5ec8bcf8",
-    "reason": "Genuine product design role, fully remote and open to applicants globally, which includes Portugal.",
+    "reason": "The posting explicitly states the company is 100% remote and open to applicants globally, which includes Portugal; only a US working-hours overlap is required, not location.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "We are 100% remote (work from anywhere!). This position is open to applicants globally",
+    "quote": "We are 100% remote (work from anywhere!). This position is open to applicants globally...",
     "signals": [
      {
       "quote": "We are a team of 600+ fully remote people in 60+ countries working hard to serve the global chess community.",
       "where": "opening paragraph",
+      "kind": "generic",
       "says": "portugal_in"
      },
      {
       "quote": "We are 100% remote (work from anywhere!).",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "This position is open to applicants globally and requires at least 3 hours of overlap with U.S. working hours.",
       "where": "body",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Remote",
-      "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6a06ea3201fe4e5b.jpg",
-    "read_at": "2026-10-03T11:08:42",
+    "read_at": "2026-10-05T11:35:51",
     "evidence": {}
    }
   },
@@ -344099,10 +343970,9 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title says 'Design Engineer' and company explicitly states 100% remote, work from anywhere, which includes Portugal.",
+     "Company states fully remote, work from anywhere, with only a timezone overlap requirement that does not exclude Portugal.",
      "Portugal in · opening paragraph: \"We are a team of 600+ fully remote people in 60+ countries working hard to serve the global chess community.\"",
-     "Portugal in · body: \"We are 100% remote (work from anywhere!)\"",
-     "Portugal in · under the title: \"Remote\""
+     "Portugal in · body: \"We are 100% remote (work from anywhere!)\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -344125,7 +343995,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://ats.rippling.com/chess/jobs/860a3c8f-3ada-4107-ad9d-53113cd24828",
-    "reason": "Title says 'Design Engineer' and company explicitly states 100% remote, work from anywhere, which includes Portugal.",
+    "reason": "Company states fully remote, work from anywhere, with only a timezone overlap requirement that does not exclude Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -344134,23 +344004,20 @@
      {
       "quote": "We are a team of 600+ fully remote people in 60+ countries working hard to serve the global chess community.",
       "where": "opening paragraph",
+      "kind": "generic",
       "says": "portugal_in"
      },
      {
       "quote": "We are 100% remote (work from anywhere!)",
       "where": "body",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Remote",
-      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6aea0a03192346fb.jpg",
-    "read_at": "2026-10-03T11:08:47",
+    "read_at": "2026-10-05T11:35:56",
     "evidence": {}
    }
   },
@@ -344175,8 +344042,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Design role, fully remote and open to applicants globally with only a US-hours overlap requirement, which includes Portugal.",
-     "Portugal in · opening paragraph: \"We are a team of 600+ fully remote people in 60+ countries working hard to serve the global chess community.\"",
+     "Posting explicitly states 100% remote, open to applicants globally, with only a US-overlap time requirement, so Portugal is included.",
      "Portugal in · body: \"We are 100% remote (work from anywhere!).\"",
      "Portugal in · body: \"This position is open to applicants globally and requires at least 3 hours of overlap with U.S. working hours.\""
     ],
@@ -344193,7 +344059,7 @@
      "countries": [],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 5,
+     "years_xp": "5+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -344201,32 +344067,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://ats.rippling.com/chess/jobs/02e2145b-d211-4b96-a8a8-82abefee0ae4",
-    "reason": "Senior Product Design role, fully remote and open to applicants globally with only a US-hours overlap requirement, which includes Portugal.",
+    "reason": "Posting explicitly states 100% remote, open to applicants globally, with only a US-overlap time requirement, so Portugal is included.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "We are 100% remote (work from anywhere!). This position is open to applicants globally",
+    "quote": "We are 100% remote (work from anywhere!). This position is open to applicants globally and requires at least 3 hours of overlap with U.S. working hours.",
     "signals": [
-     {
-      "quote": "We are a team of 600+ fully remote people in 60+ countries working hard to serve the global chess community.",
-      "where": "opening paragraph",
-      "says": "portugal_in"
-     },
      {
       "quote": "We are 100% remote (work from anywhere!).",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "This position is open to applicants globally and requires at least 3 hours of overlap with U.S. working hours.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/be771ac071fa4cd8.jpg",
-    "read_at": "2026-10-03T11:08:49",
+    "read_at": "2026-10-05T11:35:59",
     "evidence": {}
    }
   },
@@ -346549,63 +346412,49 @@
    "url": "https://jobs.smartrecruiters.com/jobsforhumanity/744000075430196",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
+    "place": "remote",
+    "lane": "open",
     "cut": false,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Job description states 'Remote' with no country restriction, but the page's own location tag at the bottom lists Beirut, Lebanon, creating a direct contradiction.",
-     "Portugal in · body: \"Remote\"",
-     "Portugal OUT · footer or small print: \"UI/UX Designer Beirut, Lebanon Contract\""
+     "Role is stated simply as 'Remote' with no country or region restriction anywhere on the page.",
+     "the page says: \"Remote\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "low",
+    "confidence": "medium",
     "fields": {
      "role": "UI/UX Designer",
      "company": "syd life AI",
-     "seniority": "junior",
+     "seniority": "unstated",
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "unclear",
+     "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 1,
-     "reports_to": null,
+     "years_xp": "1-4 years",
+     "reports_to": "Product Manager",
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/jobsforhumanity/744000075430196",
-    "reason": "the page says both: Portugal in, and Portugal out · Job description states 'Remote' with no country restriction, but the page's own location tag at the bottom lists Beirut, Lebanon, creating a direct contradiction.",
+    "reason": "Role is stated simply as 'Remote' with no country or region restriction anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote ... UI/UX Designer Beirut, Lebanon Contract",
-    "signals": [
-     {
-      "quote": "Remote",
-      "where": "body",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "UI/UX Designer Beirut, Lebanon Contract",
-      "where": "footer or small print",
-      "says": "portugal_out"
-     }
-    ],
+    "quote": "Remote",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/faa20c84675145be.jpg",
-    "read_at": "2026-10-03T11:48:47",
+    "read_at": "2026-10-05T11:36:02",
     "evidence": {
      "employer_posted": "2025-08-10"
     },
     "agency": true,
-    "hiring_for": null
+    "hiring_for": "syd life AI"
    }
   },
   {
@@ -351979,11 +351828,11 @@
    "url": "https://mamo.careers-page.com/jobs/d437b666-d846-473d-8b60-a988b938da13",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
+    "place": "remote",
+    "lane": "open",
     "cut": false,
     "why": [
-     "the page does not say where · Role is clearly senior product design; location says only 'Remote' with no country or region specified anywhere on the page.",
+     "Posting states Remote with no country or region restriction anywhere on the page.",
      "the page says: \"Remote\""
     ],
     "judged": true,
@@ -351999,7 +351848,7 @@
      "countries": [],
      "portugal_ok": "unclear",
      "salary": null,
-     "years_xp": 7,
+     "years_xp": "7+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -352007,7 +351856,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://mamo.careers-page.com/jobs/d437b666-d846-473d-8b60-a988b938da13",
-    "reason": "the page does not say where · Role is clearly senior product design; location says only 'Remote' with no country or region specified anywhere on the page.",
+    "reason": "Posting states Remote with no country or region restriction anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -352016,7 +351865,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/26e10d0c4992453e.jpg",
-    "read_at": "2026-10-03T12:29:03",
+    "read_at": "2026-10-05T11:36:09",
     "evidence": {}
    }
   },
@@ -352534,7 +352383,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Despite the generic 'Remote Anywhere' label, the posting restricts eligibility to a specific list of US states that excludes Portugal.",
+     "the page says both, explicitly: Portugal in, and Portugal out · Despite the 'Remote Anywhere' tag, the posting explicitly restricts remote work to a list of named US states, none of which is Portugal.",
      "Portugal in · under the title: \"LOCATION Remote Anywhere\"",
      "Portugal OUT · body: \"Remote From these States: California, Florida, Georgia, Idaho, Illinois, Massachusetts, Michigan, New Jersey, New York, North Carolina, Ohio, Oregon, Pennsylvania, Texas, Virginia, Washington, and Wisconsin.\""
     ],
@@ -352572,12 +352421,12 @@
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "16h ago"
+     "posted": "2d ago"
     },
     "inferred": [],
     "read": "board",
     "read_url": "https://uiuxjobsboard.com/job/1625926-remote-anywhere-manager-ai-conversational-design",
-    "reason": "the page says both: Portugal in, and Portugal out · Despite the generic 'Remote Anywhere' label, the posting restricts eligibility to a specific list of US states that excludes Portugal.",
+    "reason": "the page says both, explicitly: Portugal in, and Portugal out · Despite the 'Remote Anywhere' tag, the posting explicitly restricts remote work to a list of named US states, none of which is Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -352586,18 +352435,20 @@
      {
       "quote": "LOCATION Remote Anywhere",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Remote From these States: California, Florida, Georgia, Idaho, Illinois, Massachusetts, Michigan, New Jersey, New York, North Carolina, Ohio, Oregon, Pennsylvania, Texas, Virginia, Washington, and Wisconsin.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c112cd3f6c2e4d2d.jpg",
-    "read_at": "2026-10-03T12:29:09",
+    "read_at": "2026-10-05T11:36:14",
     "evidence": {
      "board_posted": "2026-10-03"
     }
@@ -352627,33 +352478,31 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "only the job board's copy could be read · Title contains 'Design' and the role is conversation/UX design work, posted as Remote Anywhere which includes Portugal.",
-     "Portugal in · side panel: \"LOCATION Remote Anywhere\""
+     "The posting explicitly lists the role as Remote Anywhere with no country exclusions, so Portugal is included.",
+     "Portugal in · under the title: \"LOCATION Remote Anywhere\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Associate AI Conversational Design - German",
      "company": "Pearl",
-     "seniority": "unstated",
+     "seniority": "junior",
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 0,
+     "years_xp": "0–2 years",
      "reports_to": null,
      "language": "English",
-     "posted": "16h ago"
+     "posted": "2d ago"
     },
-    "inferred": [
-     "company"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://uiuxjobsboard.com/job/1625826-remote-anywhere-associate-ai-conversational-design-german",
-    "reason": "Title contains 'Design' and the role is conversation/UX design work, posted as Remote Anywhere which includes Portugal.",
+    "reason": "The posting explicitly lists the role as Remote Anywhere with no country exclusions, so Portugal is included.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -352661,14 +352510,15 @@
     "signals": [
      {
       "quote": "LOCATION Remote Anywhere",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
-    "if_employer": "open",
+    "if_employer": null,
     "found_by": null,
     "shot": "data/shots/58edd8e185ed4cb7.jpg",
-    "read_at": "2026-10-03T12:29:10",
+    "read_at": "2026-10-05T11:36:18",
     "evidence": {
      "board_posted": "2026-10-03",
      "hiring_for": {
@@ -353042,12 +352892,12 @@
    "url": "https://uiuxjobsboard.com/job/1620326-remote-europe-ux-designer",
    "workplace": "Remote",
    "verdict": {
-    "role": "yes",
+    "role": "no",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "UX/Product Lead title qualifies as design role and posting states Europe-based, fully remote, which includes Portugal.",
+     "The role is explicitly unpaid ('this is an unpaid core team role for now'), which makes it a no regardless of design focus or location fit.",
      "Portugal in · body: \"Europe-based only (EU + Eastern Partnership countries), fully remote.\""
     ],
     "judged": true,
@@ -353061,20 +352911,19 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [
-      "EU",
-      "Eastern Partnership countries"
+      "EU + Eastern Partnership countries"
      ],
      "portugal_ok": "yes",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "Updated: 1 month ago"
+     "posted": "1 month ago"
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
-    "reason": "UX/Product Lead title qualifies as design role and posting states Europe-based, fully remote, which includes Portugal.",
+    "reason": "The role is explicitly unpaid ('this is an unpaid core team role for now'), which makes it a no regardless of design focus or location fit.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -353083,28 +352932,17 @@
      {
       "quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/b3e35c118dd0495e.employer.jpg",
-    "read_at": "2026-10-03T12:30:18",
+    "read_at": "2026-10-05T11:36:16",
     "evidence": {
      "board_posted": "2026-09-29"
-    },
-    "copies": [
-     {
-      "id": "1e4388744e72443a",
-      "url": "https://uiuxjobsboard.com/job/1595326-remote-europe-ux-designer",
-      "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
-      "source": "uiuxjobsboard",
-      "posted": "2026-09-07",
-      "location": "Remote, Europe",
-      "lane": "open",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -353129,7 +352967,7 @@
     "lane": "portugal",
     "cut": false,
     "why": [
-     "Senior Product Designer, hybrid role based in an office near Porto, Portugal.",
+     "The role is hybrid at the company's office near Porto, Portugal, which is exactly where Cesar lives.",
      "Portugal in · under the title: \"Porto Luxclusif – Product /Full-Time /Hybrid\"",
      "Portugal in · body: \"Our office is near Porto, in the north of Portugal, and is located in a vibrant business hub.\""
     ],
@@ -353148,15 +352986,17 @@
      ],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 5,
+     "years_xp": "5 to 8+ years",
      "reports_to": "Product Design Lead",
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "fields.countries"
+    ],
     "read": "employer",
     "read_url": "https://jobs.lever.co/farfetch/e75ebdfa-ea55-462a-9430-bfdd9365a938",
-    "reason": "Senior Product Designer, hybrid role based in an office near Porto, Portugal.",
+    "reason": "The role is hybrid at the company's office near Porto, Portugal, which is exactly where Cesar lives.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -353165,18 +353005,20 @@
      {
       "quote": "Porto Luxclusif – Product /Full-Time /Hybrid",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Our office is near Porto, in the north of Portugal, and is located in a vibrant business hub.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/0e2faa7c7a1c4101.employer.jpg",
-    "read_at": "2026-10-03T12:30:34",
+    "read_at": "2026-10-05T11:36:17",
     "evidence": {
      "board_posted": "2026-09-28"
     }
@@ -353394,8 +353236,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title is Senior Product Designer, explicitly framed as a design-first not engineering role, and location list includes European Union which covers Portugal, with Location Type stated as Remote.",
-     "Portugal in · side panel: \"Ukraine; European Union; Georgia; Serbia; Turkey\""
+     "Role is explicitly remote and open to a list of countries that includes the European Union, which covers Portugal; title and description are clearly a senior product design/UI-UX role.",
+     "Portugal in · under the title: \"Ukraine; European Union; Georgia; Serbia; Turkey\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -353421,27 +353263,26 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "reports_to"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/ruby-labs/1e548ada-6632-4ef8-ae90-476970b5a4b1",
-    "reason": "Title is Senior Product Designer, explicitly framed as a design-first not engineering role, and location list includes European Union which covers Portugal, with Location Type stated as Remote.",
+    "reason": "Role is explicitly remote and open to a list of countries that includes the European Union, which covers Portugal; title and description are clearly a senior product design/UI-UX role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Ukraine; European Union; Georgia; Serbia; Turkey",
+    "quote": "Location: Ukraine; European Union; Georgia; Serbia; Turkey — Location Type: Remote",
     "signals": [
      {
       "quote": "Ukraine; European Union; Georgia; Serbia; Turkey",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b4c98fa0dba945fe.jpg",
-    "read_at": "2026-10-03T12:55:27",
+    "read_at": "2026-10-05T11:36:17",
     "evidence": {
      "employer_posted": "2026-09-21"
     }
@@ -353557,13 +353398,12 @@
    "workplace": "remote",
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
+    "place": "remote",
+    "lane": "open",
     "cut": false,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Title says Design Engineer, Location Type is Remote with only a timezone constraint (CET to ET) that Portugal satisfies; UK presence is listed as a nice-to-have, not a requirement.",
-     "Portugal in · side panel: \"Location Type: Remote\"",
-     "Portugal OUT · body: \"If you're based in the UK and you are able to join the team in London\""
+     "Role is remote with a timezone band (GMT+1 to GMT-5) that includes Portugal's GMT+0, and no country exclusion overrides it.",
+     "Portugal in · body: \"If you are remote you must be within CET to ET timezones (GMT+1:00 to GMT-5:00). We will arrange in-person events throughout the year\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -353586,27 +353426,23 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/triggerdev/d1197ead-55d9-4a9c-b577-715ee20b732c",
-    "reason": "the page says both: Portugal in, and Portugal out · Title says Design Engineer, Location Type is Remote with only a timezone constraint (CET to ET) that Portugal satisfies; UK presence is listed as a nice-to-have, not a requirement.",
+    "reason": "Role is remote with a timezone band (GMT+1 to GMT-5) that includes Portugal's GMT+0, and no country exclusion overrides it.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location Type: Remote",
+    "quote": "If you are remote you must be within CET to ET timezones (GMT+1:00 to GMT-5:00).",
     "signals": [
      {
-      "quote": "Location Type: Remote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "If you're based in the UK and you are able to join the team in London",
+      "quote": "If you are remote you must be within CET to ET timezones (GMT+1:00 to GMT-5:00). We will arrange in-person events throughout the year",
       "where": "body",
-      "says": "portugal_out"
+      "kind": "explicit",
+      "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/236a598d10be490f.jpg",
-    "read_at": "2026-10-03T12:58:20",
+    "read_at": "2026-10-05T11:36:20",
     "evidence": {
      "employer_posted": "2026-09-16"
     }
@@ -354082,8 +353918,8 @@
     "lane": "portugal",
     "cut": false,
     "why": [
-     "Product Designer role, hybrid onsite explicitly in Portugal.",
-     "Portugal in · side panel: \"Location\n\nPortugal\""
+     "Posting states Location: Portugal and Location Type: Hybrid, meaning the role is based in Portugal with hybrid office attendance there.",
+     "Portugal in · under the title: \"Portugal\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -354092,7 +353928,7 @@
     "fields": {
      "role": "Product Designer",
      "company": "Bounce",
-     "seniority": "mid",
+     "seniority": "unstated",
      "remote": "hybrid",
      "onsite_days": null,
      "countries": [
@@ -354100,32 +353936,31 @@
      ],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 3,
+     "years_xp": "3+",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/bounce/c6b97346-9072-4311-94a3-e68ef740394e",
-    "reason": "Product Designer role, hybrid onsite explicitly in Portugal.",
+    "reason": "Posting states Location: Portugal and Location Type: Hybrid, meaning the role is based in Portugal with hybrid office attendance there.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location Portugal / Location Type Hybrid",
+    "quote": "Location: Portugal / Location Type: Hybrid",
     "signals": [
      {
-      "quote": "Location\n\nPortugal",
-      "where": "side panel",
+      "quote": "Portugal",
+      "where": "under the title",
+      "kind": "tag",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6b0ac7ec9ae14c9e.jpg",
-    "read_at": "2026-10-03T12:58:36",
+    "read_at": "2026-10-05T11:36:27",
     "evidence": {
      "employer_posted": "2026-09-15"
     }
@@ -354157,8 +353992,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Product Designer role, remote in Europe, which includes Portugal.",
-     "Portugal in · side panel: \"Remote Europe\"",
+     "Posting explicitly states remote Europe, which includes Portugal.",
+     "Portugal in · under the title: \"Remote Europe\"",
      "Portugal in · body: \"Location: remote in Europe preferred; US remote for exceptional candidates\""
     ],
     "judged": true,
@@ -354185,27 +354020,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/restate/f587a541-5b1f-4de5-ba0f-46f1e5a818c9",
-    "reason": "Product Designer role, remote in Europe, which includes Portugal.",
+    "reason": "Posting explicitly states remote Europe, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote Europe",
+    "quote": "Location: remote in Europe preferred; US remote for exceptional candidates",
     "signals": [
      {
       "quote": "Remote Europe",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Location: remote in Europe preferred; US remote for exceptional candidates",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ed773c1cb4a84aa8.jpg",
-    "read_at": "2026-10-03T12:57:42",
+    "read_at": "2026-10-05T11:36:33",
     "evidence": {
      "employer_posted": "2026-09-17"
     }
@@ -354237,8 +354074,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design Engineer role blends design and code (explicitly allowed by rules) and location is Remote Europe, which includes Portugal.",
-     "Portugal in · side panel: \"Remote Europe\"",
+     "Role is titled Design Engineer with design+code scope, and location is explicitly Remote Europe, which includes Portugal.",
+     "Portugal in · under the title: \"Remote Europe\"",
      "Portugal in · body: \"Location: remote in Europe preferred; US remote for exceptional candidates\""
     ],
     "judged": true,
@@ -354253,7 +354090,7 @@
      "onsite_days": null,
      "countries": [
       "Europe",
-      "US (for exceptional candidates)"
+      "US"
      ],
      "portugal_ok": "yes",
      "salary": null,
@@ -354262,32 +354099,32 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/restate/9a198557-1e8c-453b-9ede-6ef6159539ff",
-    "reason": "Design Engineer role blends design and code (explicitly allowed by rules) and location is Remote Europe, which includes Portugal.",
+    "reason": "Role is titled Design Engineer with design+code scope, and location is explicitly Remote Europe, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote Europe",
+    "quote": "Location: remote in Europe preferred; US remote for exceptional candidates",
     "signals": [
      {
       "quote": "Remote Europe",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Location: remote in Europe preferred; US remote for exceptional candidates",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3d386819a84b41d4.jpg",
-    "read_at": "2026-10-03T12:57:53",
+    "read_at": "2026-10-05T11:36:33",
     "evidence": {
      "employer_posted": "2026-09-17"
     }
@@ -354762,7 +354599,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design role explicitly open to remote candidates in Europe, which includes Portugal.",
+     "Role is explicitly remote and open to candidates in Europe, which includes Portugal.",
      "Portugal in · under the title: \"Remote, Americas & Europe\"",
      "Portugal in · body: \"This role is open to candidates in the Americas or Europe.\""
     ],
@@ -354781,8 +354618,8 @@
       "Europe"
      ],
      "portugal_ok": "yes",
-     "salary": "US-Based Positions: $143K - 152K",
-     "years_xp": 3,
+     "salary": null,
+     "years_xp": "3+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -354790,27 +354627,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/strike/jobs/6166903004",
-    "reason": "Design role explicitly open to remote candidates in Europe, which includes Portugal.",
+    "reason": "Role is explicitly remote and open to candidates in Europe, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote, Americas & Europe",
+    "quote": "Remote, Americas & Europe. This role is open to candidates in the Americas or Europe.",
     "signals": [
      {
       "quote": "Remote, Americas & Europe",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "This role is open to candidates in the Americas or Europe.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d6ba7d09610542f1.jpg",
-    "read_at": "2026-10-03T13:03:08",
+    "read_at": "2026-10-05T11:36:34",
     "evidence": {
      "employer_posted": "2026-08-28"
     }
@@ -355567,8 +355406,9 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design-focused senior role at a remote-first company that explicitly welcomes applicants from across Europe/EEA, which includes Portugal.",
+     "Senior Product Designer role, explicitly remote-first and open to EEA/Europe including CET-aligned locations, which includes Portugal.",
      "Portugal in · opening paragraph: \"We are a remote-first technology company and welcome applications from candidates across Europe, including the EEA, the UK, Switzerland, and other non-EEA European countries such as Ukraine, Moldova, Georgia, Armenia, Montenegro, Turkey, and the Western Balkans.\"",
+     "Portugal in · opening paragraph: \"We also consider applicants from different locations who can work within Central European Time (CET).\"",
      "Portugal in · body: \"Fully remote work with flexible hours (within the CET time zone) from any location of your choice\""
     ],
     "judged": true,
@@ -355592,7 +355432,8 @@
       "Armenia",
       "Montenegro",
       "Turkey",
-      "Western Balkans"
+      "Western Balkans",
+      "CET timezone locations"
      ],
      "portugal_ok": "yes",
      "salary": null,
@@ -355604,27 +355445,35 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.eu.greenhouse.io/whitetech/jobs/4987197101",
-    "reason": "Design-focused senior role at a remote-first company that explicitly welcomes applicants from across Europe/EEA, which includes Portugal.",
+    "reason": "Senior Product Designer role, explicitly remote-first and open to EEA/Europe including CET-aligned locations, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "We are a remote-first technology company and welcome applications from candidates across Europe, including the EEA",
+    "quote": "welcome applications from candidates across Europe, including the EEA ... Fully remote work ... from any location of your choice",
     "signals": [
      {
       "quote": "We are a remote-first technology company and welcome applications from candidates across Europe, including the EEA, the UK, Switzerland, and other non-EEA European countries such as Ukraine, Moldova, Georgia, Armenia, Montenegro, Turkey, and the Western Balkans.",
       "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "We also consider applicants from different locations who can work within Central European Time (CET).",
+      "where": "opening paragraph",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Fully remote work with flexible hours (within the CET time zone) from any location of your choice",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ee1d06ce3471432c.jpg",
-    "read_at": "2026-10-03T12:46:58",
+    "read_at": "2026-10-05T11:36:38",
     "evidence": {
      "employer_posted": "2026-10-02"
     }
@@ -361455,7 +361304,7 @@
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Title line says Remote (Germany) but body repeatedly widens scope to anywhere within EU time zones, a direct contradiction he must weigh himself.",
+     "the page says both, explicitly: Portugal in, and Portugal out · Two explicit statements in the body and benefits say the role is remote from anywhere within EU time zones, which includes Portugal, outweighing the generic 'Remote (Germany)' location tag under the title.",
      "Portugal OUT · under the title: \"Remote (Germany)\"",
      "Portugal in · opening paragraph: \"We are looking for a Senior Product Designer (UX/UI) to work remotely from anywhere within EU time zones.\"",
      "Portugal in · body: \"We believe in the power of working remotely. It is your choice from where you work, anywhere within EU time zones\""
@@ -361466,50 +361315,50 @@
     "confidence": "medium",
     "fields": {
      "role": "Senior Product Designer (UX/UI)",
-     "company": "elearnio GmbH",
+     "company": "elearnio",
      "seniority": "senior",
      "remote": "remote",
      "onsite_days": null,
-     "countries": [
-      "Germany",
-      "EU time zones"
-     ],
-     "portugal_ok": "unclear",
+     "countries": [],
+     "portugal_ok": "yes",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
-     "posted": "1 month ago"
+     "posted": "Updated: 1 month ago"
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://join.com/companies/elearnio/16737407-senior-product-designer-ux-ui",
-    "reason": "the page says both: Portugal in, and Portugal out · Title line says Remote (Germany) but body repeatedly widens scope to anywhere within EU time zones, a direct contradiction he must weigh himself.",
+    "reason": "the page says both, explicitly: Portugal in, and Portugal out · Two explicit statements in the body and benefits say the role is remote from anywhere within EU time zones, which includes Portugal, outweighing the generic 'Remote (Germany)' location tag under the title.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "to work remotely from anywhere within EU time zones",
+    "quote": "work remotely from anywhere within EU time zones",
     "signals": [
      {
       "quote": "Remote (Germany)",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_out"
      },
      {
       "quote": "We are looking for a Senior Product Designer (UX/UI) to work remotely from anywhere within EU time zones.",
       "where": "opening paragraph",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "We believe in the power of working remotely. It is your choice from where you work, anywhere within EU time zones",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f94d4a71f8e1498a.jpg",
-    "read_at": "2026-10-03T12:55:05",
+    "read_at": "2026-10-05T11:36:40",
     "evidence": {
      "employer_posted": "2026-09-22"
     }
@@ -365641,14 +365490,12 @@
    "years_xp": 2,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Side panel says plain Remote, but body specifies a 'nationwide team' and a Dallas office, suggesting US-only remote rather than global/EU remote.",
-     "Portugal in · side panel: \"Location: Remote\"",
-     "Portugal OUT · body: \"Yendo is based in Dallas, Texas with a nationwide team.\"",
-     "Portugal OUT · body: \"This role is remote or in our office in the Deep Ellum area of Dallas.\""
+     "The posting specifies a 'nationwide team' (US) with remote or Dallas-office options, indicating the role is US-based only, not open to Portugal.",
+     "Portugal OUT · body: \"Yendo is based in Dallas, Texas with a nationwide team. This role is remote or in our office in the Deep Ellum area of Dallas.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -365660,45 +365507,36 @@
      "seniority": "senior",
      "remote": "remote",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "US"
+     ],
+     "portugal_ok": "no",
      "salary": "$160K – $215K",
-     "years_xp": 7,
+     "years_xp": "7+",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "remote"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/yendo/b45df5c8-a270-4809-8836-0bbd4d806017",
-    "reason": "the page says both: Portugal in, and Portugal out · Side panel says plain Remote, but body specifies a 'nationwide team' and a Dallas office, suggesting US-only remote rather than global/EU remote.",
+    "reason": "The posting specifies a 'nationwide team' (US) with remote or Dallas-office options, indicating the role is US-based only, not open to Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Yendo is based in Dallas, Texas with a nationwide team. This role is remote or in our office in the Deep Ellum area of Dallas.",
     "signals": [
      {
-      "quote": "Location: Remote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Yendo is based in Dallas, Texas with a nationwide team.",
+      "quote": "Yendo is based in Dallas, Texas with a nationwide team. This role is remote or in our office in the Deep Ellum area of Dallas.",
       "where": "body",
-      "says": "portugal_out"
-     },
-     {
-      "quote": "This role is remote or in our office in the Deep Ellum area of Dallas.",
-      "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ac02a180bb35485a.jpg",
-    "read_at": "2026-10-04T01:07:36",
+    "read_at": "2026-10-05T11:36:41",
     "evidence": {
      "employer_posted": "2026-04-16"
     }
@@ -366287,8 +366125,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title says Product Designer (design role) and location is simply 'Remote' with no country restriction stated, so Portugal is included.",
-     "the page says: \"Location: Remote; Location Type: Remote\""
+     "Role is fully remote with no stated country restriction, so a Portugal-based designer is not excluded.",
+     "the page says: \"Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -366308,21 +366146,19 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/runway-ml/28e151ac-cb29-4695-9041-a9e352624111",
-    "reason": "Title says Product Designer (design role) and location is simply 'Remote' with no country restriction stated, so Portugal is included.",
+    "reason": "Role is fully remote with no stated country restriction, so a Portugal-based designer is not excluded.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: Remote; Location Type: Remote",
+    "quote": "Location Type: Remote",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/42d75262de2a4795.jpg",
-    "read_at": "2026-10-03T23:06:55",
+    "read_at": "2026-10-05T11:36:41",
     "evidence": {
      "employer_posted": "2026-08-03"
     }
@@ -366355,7 +366191,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Remote role with no country restriction stated, so Portugal is included by default.",
+     "Role is fully remote with no explicit country restriction stated; only a pay-range note mentions the U.S. as a benefit/compensation detail, not an eligibility requirement.",
      "the page says: \"Location Type: Remote\""
     ],
     "judged": true,
@@ -366369,19 +366205,17 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": "$220K – $290K",
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/runway-ml/b283e7c0-944a-4d4e-be69-49875008c738",
-    "reason": "Remote role with no country restriction stated, so Portugal is included by default.",
+    "reason": "Role is fully remote with no explicit country restriction stated; only a pay-range note mentions the U.S. as a benefit/compensation detail, not an eligibility requirement.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -366390,7 +366224,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f16a069d1cf5454c.jpg",
-    "read_at": "2026-10-03T22:40:53",
+    "read_at": "2026-10-05T11:36:46",
     "evidence": {
      "employer_posted": "2026-09-24"
     }
@@ -366513,13 +366347,13 @@
    "years_xp": 5,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Despite 'Fully Remote' being listed as an option up top, the pay transparency notice clarifies this is a hybrid role requiring 2-3 days/week in the SF or NY office, which excludes Portugal.",
-     "Portugal in · under the title: \"San Francisco, NYC, or Fully Remote\"",
-     "Portugal OUT · footer or small print: \"This is a hybrid role, ideally in our SF or NY office, 2-3 times per week\""
+     "The posting contradicts itself (header lists 'Fully Remote' as an option, but the body states this is a hybrid role requiring 2-3 office days in SF or NY), and the more specific body statement requires on-site presence at a US office, which rules out Portugal.",
+     "Portugal OUT · under the title: \"San Francisco, NYC, or Fully Remote\"",
+     "Portugal OUT · body: \"This is a hybrid role, ideally in our SF or NY office, 2-3 times per week\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -366530,13 +366364,13 @@
      "company": "Office Hours",
      "seniority": "senior",
      "remote": "hybrid",
-     "onsite_days": 3,
+     "onsite_days": "2-3 times per week",
      "countries": [
       "United States"
      ],
      "portugal_ok": "no",
      "salary": "$180,000–$200,000",
-     "years_xp": 5,
+     "years_xp": "5+",
      "reports_to": "Head of Product",
      "language": "English",
      "posted": null
@@ -366544,7 +366378,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/office-hours/d4ad4cb1-8ccd-49a9-b97c-979b09ccde6b",
-    "reason": "the page says both: Portugal in, and Portugal out · Despite 'Fully Remote' being listed as an option up top, the pay transparency notice clarifies this is a hybrid role requiring 2-3 days/week in the SF or NY office, which excludes Portugal.",
+    "reason": "The posting contradicts itself (header lists 'Fully Remote' as an option, but the body states this is a hybrid role requiring 2-3 office days in SF or NY), and the more specific body statement requires on-site presence at a US office, which rules out Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -366553,18 +366387,20 @@
      {
       "quote": "San Francisco, NYC, or Fully Remote",
       "where": "under the title",
-      "says": "portugal_in"
+      "kind": "explicit",
+      "says": "portugal_out"
      },
      {
       "quote": "This is a hybrid role, ideally in our SF or NY office, 2-3 times per week",
-      "where": "footer or small print",
+      "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/41029e5572bb4307.jpg",
-    "read_at": "2026-10-04T01:09:49",
+    "read_at": "2026-10-05T11:36:50",
     "evidence": {
      "employer_posted": "2026-01-05"
     }
@@ -366849,9 +366685,9 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design-title role with location stated as Europe, Remote, which includes Portugal.",
-     "Portugal in · body: \"Location: Europe, Remote\"",
-     "Portugal in · body: \"Work from anywhere\""
+     "The posting explicitly states Location: Europe, Remote, which includes Portugal.",
+     "Portugal OUT · under the title: \"R&D (SOFTWARE DEVELOPERS) · MULTIPLE LOCATIONS · FULLY REMOTE\"",
+     "Portugal in · body: \"Location: Europe, Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -366859,7 +366695,7 @@
     "confidence": "high",
     "fields": {
      "role": "Product Designer",
-     "company": "fast-growing international AI company (unnamed client)",
+     "company": "a fast-growing international AI company (unnamed, via David Kennedy Recruitment)",
      "seniority": "senior",
      "remote": "remote",
      "onsite_days": null,
@@ -366867,43 +366703,43 @@
       "Europe"
      ],
      "portugal_ok": "yes",
-     "salary": null,
-     "years_xp": 5,
-     "reports_to": null,
+     "salary": "Competitive package / Competitive salary package aligned to senior Product Designer",
+     "years_xp": "5+ years",
+     "reports_to": "Design Lead",
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://davidkennedyrecruitment.teamtailor.com/jobs/8383291-product-designer",
-    "reason": "Design-title role with location stated as Europe, Remote, which includes Portugal.",
+    "reason": "The posting explicitly states Location: Europe, Remote, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Location: Europe, Remote",
     "signals": [
      {
-      "quote": "Location: Europe, Remote",
-      "where": "body",
-      "says": "portugal_in"
+      "quote": "R&D (SOFTWARE DEVELOPERS) · MULTIPLE LOCATIONS · FULLY REMOTE",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_maybe"
      },
      {
-      "quote": "Work from anywhere",
+      "quote": "Location: Europe, Remote",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3ad302aabd4446f2.jpg",
-    "read_at": "2026-10-03T22:48:25",
+    "read_at": "2026-10-05T11:36:56",
     "evidence": {
      "employer_posted": "2026-09-15"
     },
     "agency": true,
-    "hiring_for": "a fast-growing international AI company (not named)"
+    "hiring_for": "a fast-growing international AI company (unnamed)"
    }
   },
   {
@@ -367168,14 +367004,14 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title includes 'UI Designer' and the location list explicitly includes Remote - Portugal, with the company stating it is fully remote.",
-     "Portugal in · side panel: \"Remote - Lithuania; Remote; Remote - Albania; ... Remote - Portugal; ... Remote - United Kingdom; Remote - Uruguay; Remote - Vietnam\"",
+     "The role explicitly lists Remote - Portugal among allowed countries, confirming full remote eligibility from Portugal.",
+     "Portugal in · under the title: \"Remote - Lithuania; Remote; Remote - Albania; Remote - Argentina; ... Remote - Portugal; Remote - Romania; ...\"",
      "Portugal in · body: \"🏡 Fully Remote. Work from anywhere.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Frontend Engineer & UI Designer (Developer Tooling)",
      "company": "SearchApi",
@@ -367252,27 +367088,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/searchapi/597a1f05-d9bd-4827-82f1-794c0d861fff",
-    "reason": "Title includes 'UI Designer' and the location list explicitly includes Remote - Portugal, with the company stating it is fully remote.",
+    "reason": "The role explicitly lists Remote - Portugal among allowed countries, confirming full remote eligibility from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Remote - Portugal",
+    "quote": "Remote - Portugal; ... Remote - Spain; ... Location Type: Remote",
     "signals": [
      {
-      "quote": "Remote - Lithuania; Remote; Remote - Albania; ... Remote - Portugal; ... Remote - United Kingdom; Remote - Uruguay; Remote - Vietnam",
-      "where": "side panel",
+      "quote": "Remote - Lithuania; Remote; Remote - Albania; Remote - Argentina; ... Remote - Portugal; Remote - Romania; ...",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "🏡 Fully Remote. Work from anywhere.",
       "where": "body",
+      "kind": "generic",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ba938660c3794c2e.jpg",
-    "read_at": "2026-10-04T01:03:24",
+    "read_at": "2026-10-05T11:36:56",
     "evidence": {
      "employer_posted": "2026-06-22"
     }
@@ -368613,8 +368451,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title says Product Designer and location list explicitly includes EU, remote.",
-     "Portugal in · side panel: \"Mid-East, EU, UK or North America UTC +5 - UTC -5 (remote)\""
+     "The role is explicitly remote and open to EU-based candidates, which includes Portugal.",
+     "Portugal in · under the title: \"Mid-East, EU, UK or North America UTC +5 - UTC -5 (remote)\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -368642,7 +368480,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/pod-network/5fcff1d5-c33c-4d9e-b2ce-658240c4e0e2",
-    "reason": "Title says Product Designer and location list explicitly includes EU, remote.",
+    "reason": "The role is explicitly remote and open to EU-based candidates, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -368650,14 +368488,15 @@
     "signals": [
      {
       "quote": "Mid-East, EU, UK or North America UTC +5 - UTC -5 (remote)",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c4af1225ed114cd1.jpg",
-    "read_at": "2026-10-04T01:03:28",
+    "read_at": "2026-10-05T11:36:58",
     "evidence": {
      "employer_posted": "2026-06-22"
     }
@@ -368867,7 +368706,7 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Role is a Product Designer position (design-led) and location is stated simply as Remote with no country restriction, so Portugal is included.",
+     "Posting states Remote with no country restriction on eligibility; only salary note mentions U.S. range as a pay detail, not a location requirement.",
      "the page says: \"Location: Remote / Location Type: Remote\""
     ],
     "judged": true,
@@ -368888,12 +368727,10 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/runway-ml/e0fec99f-ae6e-4f92-ac1a-7d227179261f",
-    "reason": "Role is a Product Designer position (design-led) and location is stated simply as Remote with no country restriction, so Portugal is included.",
+    "reason": "Posting states Remote with no country restriction on eligibility; only salary note mentions U.S. range as a pay detail, not a location requirement.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -368902,7 +368739,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b6a16f1a40ee4b64.jpg",
-    "read_at": "2026-10-04T01:12:00",
+    "read_at": "2026-10-05T11:37:00",
     "evidence": {
      "employer_posted": "2023-08-31"
     }
@@ -371013,15 +370850,15 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title says UX/UI Product Designer and the location list (which includes Portugal) plus Remote location type make this remote-eligible from Portugal.",
-     "Portugal in · side panel: \"London; Abidjan; Albania; ... Portugal; Qatar; ... Washington\""
+     "Portugal is explicitly named in the list of eligible locations for this fully remote role.",
+     "Portugal in · under the title: \"Location: London; Abidjan; Albania; ... Portugal; ... Washington\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "UX/UI Product Designer",
+     "role": "Product Designer",
      "company": "Base360.ai",
      "seniority": "unstated",
      "remote": "remote",
@@ -371160,27 +370997,26 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/the-flex/6a0c4b4e-7090-4dcc-a4eb-28fed5d76e62",
-    "reason": "Title says UX/UI Product Designer and the location list (which includes Portugal) plus Remote location type make this remote-eligible from Portugal.",
+    "reason": "Portugal is explicitly named in the list of eligible locations for this fully remote role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location Type: Remote; location list includes 'Portugal'",
+    "quote": "Location: ... Portugal ...; Location Type: Remote",
     "signals": [
      {
-      "quote": "London; Abidjan; Albania; ... Portugal; Qatar; ... Washington",
-      "where": "side panel",
+      "quote": "Location: London; Abidjan; Albania; ... Portugal; ... Washington",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c57cb5b9e12e4929.jpg",
-    "read_at": "2026-10-03T22:39:07",
+    "read_at": "2026-10-05T11:37:01",
     "evidence": {
      "employer_posted": "2026-09-26"
     }
@@ -371312,10 +371148,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title names UI/UX design and company explicitly allows remote applications with no country restriction.",
-     "Portugal in · under the title: \"Berlin or Remote\"",
-     "Portugal in · body: \"While (re)location to Berlin is preferred, we will consider also remote applications.\"",
-     "Portugal in · footer or small print: \"If you are searching for remote opportunities, please add below from which country you would mainly work from\""
+     "The role is offered as Berlin office or remote with no country restriction named, so it fits the remote-option rule with no explicit geographic exclusion.",
+     "the page says: \"Berlin or Remote ... While (re)location to Berlin is preferred, we will consider also remote applications.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -371328,7 +371162,7 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
      "reports_to": "Creative Director of New Games",
@@ -371338,32 +371172,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/wooga/jobs/8213546",
-    "reason": "Title names UI/UX design and company explicitly allows remote applications with no country restriction.",
+    "reason": "The role is offered as Berlin office or remote with no country restriction named, so it fits the remote-option rule with no explicit geographic exclusion.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "While (re)location to Berlin is preferred, we will consider also remote applications.",
-    "signals": [
-     {
-      "quote": "Berlin or Remote",
-      "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "While (re)location to Berlin is preferred, we will consider also remote applications.",
-      "where": "body",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "If you are searching for remote opportunities, please add below from which country you would mainly work from",
-      "where": "footer or small print",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Berlin or Remote ... While (re)location to Berlin is preferred, we will consider also remote applications.",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9bfc27e2004c496d.jpg",
-    "read_at": "2026-10-03T22:44:16",
+    "read_at": "2026-10-05T11:37:05",
     "evidence": {
      "employer_posted": "2026-09-21"
     }
@@ -372214,12 +372032,12 @@
    "years_xp": 5,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
+    "place": "remote",
+    "lane": "open",
     "cut": false,
     "why": [
-     "the page does not say where · Role is senior product design and fits; posting says remote with no country/region specified, so geography is unclear but not excluded.",
-     "the page says: \"Location Type: Remote\""
+     "Posting states the role is Remote with no country or region restriction given anywhere on the page, so Portugal is not explicitly excluded or included.",
+     "the page says: \"Location: Remote / Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -372234,7 +372052,7 @@
      "countries": [],
      "portugal_ok": "unclear",
      "salary": "$120K – $150K",
-     "years_xp": 5,
+     "years_xp": "5",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -372242,16 +372060,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/playlab/6b03ad9f-204d-4f88-ad4b-e5e791e67e58",
-    "reason": "the page does not say where · Role is senior product design and fits; posting says remote with no country/region specified, so geography is unclear but not excluded.",
+    "reason": "Posting states the role is Remote with no country or region restriction given anywhere on the page, so Portugal is not explicitly excluded or included.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location Type: Remote",
+    "quote": "Location: Remote / Location Type: Remote",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c460e7eeee0e4c5c.jpg",
-    "read_at": "2026-10-03T23:07:18",
+    "read_at": "2026-10-05T11:37:10",
     "evidence": {
      "employer_posted": "2026-07-30"
     }
@@ -372503,8 +372321,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Product Designer role, remote with no country restriction stated.",
-     "the page says: \"Location Type: remote\""
+     "Role is fully remote with no country restriction stated anywhere on the page.",
+     "the page says: \"Location: Remote / Location Type: remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -372517,28 +372335,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/umbrel/0c4657db-0d05-42f0-ad3e-8fac6b3fd6f1",
-    "reason": "Product Designer role, remote with no country restriction stated.",
+    "reason": "Role is fully remote with no country restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location Type: remote",
+    "quote": "Location: Remote / Location Type: remote",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/cb15aa931dec4318.jpg",
-    "read_at": "2026-10-04T01:10:17",
+    "read_at": "2026-10-05T11:37:11",
     "evidence": {
      "employer_posted": "2025-11-14"
     }
@@ -373232,8 +373048,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Designer role, remote with no country restriction stated, so Portugal is included.",
-     "Portugal in · side panel: \"Location Type: Remote\""
+     "Role is fully remote with no country restriction stated anywhere on the page.",
+     "the page says: \"Location: Remote / Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -373246,9 +373062,9 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
-     "salary": "USD 140K - 165K • 0.3% - 0.5%",
-     "years_xp": 5,
+     "portugal_ok": "unclear",
+     "salary": "$140K – $165K • 0.3% – 0.5%",
+     "years_xp": "5+",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -373256,22 +373072,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/gridverify/7d37d967-f063-455e-9904-1383ed5c89b1",
-    "reason": "Senior Product Designer role, remote with no country restriction stated, so Portugal is included.",
+    "reason": "Role is fully remote with no country restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Location: Remote / Location Type: Remote",
-    "signals": [
-     {
-      "quote": "Location Type: Remote",
-      "where": "side panel",
-      "says": "portugal_in"
-     }
-    ],
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3b563f223bf44eef.jpg",
-    "read_at": "2026-10-04T01:11:14",
+    "read_at": "2026-10-05T11:37:11",
     "evidence": {
      "employer_posted": "2024-11-20"
     }
@@ -374701,8 +374511,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Founding Product Designer is a clear design role, and the posting states Remote with no country restriction named anywhere on the page.",
-     "the page says: \"Taxwire (Remote)\""
+     "Role is fully remote with no country or region restriction stated anywhere on the page.",
+     "the page says: \"Taxwire (Remote) / Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -374715,28 +374525,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
-     "salary": "$150K – $200K",
-     "years_xp": 5,
+     "portugal_ok": "unclear",
+     "salary": "$150K – $200K • Offers Equity • depending on experience and location",
+     "years_xp": "5–10 years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/taxwire/5c6c8d28-474d-41d0-8081-ba6abb6afa88",
-    "reason": "Founding Product Designer is a clear design role, and the posting states Remote with no country restriction named anywhere on the page.",
+    "reason": "Role is fully remote with no country or region restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Taxwire (Remote)",
+    "quote": "Taxwire (Remote) / Location Type: Remote",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d5b839e9149f4de4.jpg",
-    "read_at": "2026-10-04T01:03:01",
+    "read_at": "2026-10-05T11:37:20",
     "evidence": {
      "employer_posted": "2026-06-30"
     }
@@ -377289,9 +377097,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Title includes 'Design' and role is remote with no country restriction stated.",
-     "Portugal in · side panel: \"Location\n\nRemote\"",
-     "Portugal in · side panel: \"Location Type\n\nRemote\""
+     "Role is remote with no stated country restriction; only a salary note mentions the U.S. as one example, which is a pay detail, not a location requirement.",
+     "the page says: \"Location: Remote / Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -377304,39 +377111,26 @@
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": "$250K – $310K",
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "portugal_ok"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/runway-ml/92044f68-4957-4cf0-9590-98952732b219",
-    "reason": "Title includes 'Design' and role is remote with no country restriction stated.",
+    "reason": "Role is remote with no stated country restriction; only a salary note mentions the U.S. as one example, which is a pay detail, not a location requirement.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location Type: Remote",
-    "signals": [
-     {
-      "quote": "Location\n\nRemote",
-      "where": "side panel",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Location Type\n\nRemote",
-      "where": "side panel",
-      "says": "portugal_in"
-     }
-    ],
+    "quote": "Location: Remote / Location Type: Remote",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c6731f1f72914d7b.jpg",
-    "read_at": "2026-10-04T01:11:40",
+    "read_at": "2026-10-05T11:37:20",
     "evidence": {
      "employer_posted": "2024-02-16"
     }
@@ -379096,8 +378890,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design Engineer title qualifies as design-leaning role, and EU/UK remote scope includes Portugal.",
-     "Portugal in · side panel: \"EU/UK - Remote\""
+     "Role is explicitly remote for EU/UK, and Portugal is in the EU, so the stated geography includes Portugal.",
+     "Portugal in · under the title: \"EU/UK - Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -379123,7 +378917,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/duvo/d96bbff0-9ff3-46c2-a448-e755f53e8255",
-    "reason": "Design Engineer title qualifies as design-leaning role, and EU/UK remote scope includes Portugal.",
+    "reason": "Role is explicitly remote for EU/UK, and Portugal is in the EU, so the stated geography includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -379131,14 +378925,15 @@
     "signals": [
      {
       "quote": "EU/UK - Remote",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/683acf5764314484.jpg",
-    "read_at": "2026-10-04T01:09:53",
+    "read_at": "2026-10-05T11:37:21",
     "evidence": {
      "employer_posted": "2025-12-15"
     }
@@ -379265,8 +379060,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Design Engineer title qualifies as design-leaning per rules, and location list includes EMEA which covers Portugal.",
-     "Portugal in · side panel: \"Remote – USA; Remote – EMEA\""
+     "Title says 'Design Engineer' which counts as a design role, and the posting explicitly lists Remote – EMEA, which includes Portugal.",
+     "Portugal in · under the title: \"Remote – USA; Remote – EMEA\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -379284,7 +379079,7 @@
      ],
      "portugal_ok": "yes",
      "salary": "$80K – $85K",
-     "years_xp": 1,
+     "years_xp": "1–3 years",
      "reports_to": "Head of Design",
      "language": "English",
      "posted": null
@@ -379292,7 +379087,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/tradeify/e5571e41-3c4f-4493-9de7-60b80e3969d0",
-    "reason": "Design Engineer title qualifies as design-leaning per rules, and location list includes EMEA which covers Portugal.",
+    "reason": "Title says 'Design Engineer' which counts as a design role, and the posting explicitly lists Remote – EMEA, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -379300,14 +379095,15 @@
     "signals": [
      {
       "quote": "Remote – USA; Remote – EMEA",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b1e3706d409a4390.jpg",
-    "read_at": "2026-10-03T22:45:55",
+    "read_at": "2026-10-05T11:37:21",
     "evidence": {
      "employer_posted": "2026-09-18"
     }
@@ -382099,7 +381895,19 @@
     "read_at": "2026-10-04T01:12:00",
     "evidence": {
      "employer_posted": "2023-05-19"
-    }
+    },
+    "copies": [
+     {
+      "id": "9b79164740dd4deb",
+      "url": "https://jobs.smartrecruiters.com/Nagarro1/743999905564513",
+      "read_url": "https://jobs.smartrecruiters.com/Nagarro1/743999905564513",
+      "source": "smartrecruiters/Nagarro1",
+      "posted": "2023-05-07",
+      "location": "Remote, , United States",
+      "lane": "unsure",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -383428,14 +383236,12 @@
    "years_xp": 12,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Side panel names United States specifically, but the benefits section claims remote-first work from anywhere, creating a contradiction the posting does not resolve.",
-     "Portugal OUT · side panel: \"United States\"",
-     "Portugal OUT · side panel: \"USA $236K – $322K\"",
-     "Portugal in · body: \"Remote-First Flexibility: Work from anywhere in the world and choose the hours that suit you best.\""
+     "The explicit location field ties this remote role to the United States, which excludes Portugal.",
+     "Portugal OUT · under the title: \"Location: United States / Location Type: Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -383450,42 +383256,33 @@
      "countries": [
       "United States"
      ],
-     "portugal_ok": "unclear",
-     "salary": "USD 236K – 322K",
-     "years_xp": 12,
-     "reports_to": "CEO",
+     "portugal_ok": "no",
+     "salary": "$236K – $322K",
+     "years_xp": "12+",
+     "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/super.com/dd9ab8e4-6580-4986-af8a-ba4b1fabd537",
-    "reason": "the page says both: Portugal in, and Portugal out · Side panel names United States specifically, but the benefits section claims remote-first work from anywhere, creating a contradiction the posting does not resolve.",
+    "reason": "The explicit location field ties this remote role to the United States, which excludes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: United States ... Remote-First Flexibility: Work from anywhere in the world",
+    "quote": "Location: United States, Location Type: Remote",
     "signals": [
      {
-      "quote": "United States",
-      "where": "side panel",
+      "quote": "Location: United States / Location Type: Remote",
+      "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_out"
-     },
-     {
-      "quote": "USA $236K – $322K",
-      "where": "side panel",
-      "says": "portugal_out"
-     },
-     {
-      "quote": "Remote-First Flexibility: Work from anywhere in the world and choose the hours that suit you best.",
-      "where": "body",
-      "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/154ee791cc594f63.jpg",
-    "read_at": "2026-10-03T22:48:59",
+    "read_at": "2026-10-05T11:37:24",
     "evidence": {
      "employer_posted": "2026-09-15"
     }
@@ -385860,15 +385657,15 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Senior Product Designer role, remote across Europe, which includes Portugal.",
-     "Portugal in · side panel: \"Location: Europe\""
+     "Listed location is Europe with Remote location type, which includes Portugal.",
+     "Portugal in · under the title: \"Location: Europe\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Senior Product Designer",
+     "role": "Senior Product Designer (Full Remote - Europe)",
      "company": "EverAI",
      "seniority": "senior",
      "remote": "remote",
@@ -385886,22 +385683,23 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/everai/3068ad20-23ae-49c0-a611-a38c9809b98c",
-    "reason": "Senior Product Designer role, remote across Europe, which includes Portugal.",
+    "reason": "Listed location is Europe with Remote location type, which includes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: Europe",
+    "quote": "Location: Europe / Location Type: Remote",
     "signals": [
      {
       "quote": "Location: Europe",
-      "where": "side panel",
+      "where": "under the title",
+      "kind": "tag",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7e71a6eaafa74a51.jpg",
-    "read_at": "2026-10-03T22:59:57",
+    "read_at": "2026-10-05T11:37:25",
     "evidence": {
      "employer_posted": "2026-08-27"
     }
@@ -386782,15 +386580,15 @@
    "url": "https://jobs.ashbyhq.com/10xteam/7bfed69b-ad3c-45e2-85cb-611173c8451f",
    "workplace": "remote",
    "verdict": {
-    "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "remote",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Side panel names France specifically but body repeatedly widens eligibility to EU/UK, creating a direct contradiction.",
-     "Portugal OUT · side panel: \"France\"",
+     "the place named at the top is only a tag; the posting itself says Portugal is in · The description repeatedly states the role is remote and open to EU/UK-based designers, which covers Portugal, though the side panel's 'Location: France' field conflicts; more importantly the job itself is AI-output evaluation/training rather than product design practice.",
+     "Portugal OUT · side panel: \"Location: France\"",
      "Portugal in · opening paragraph: \"Freelance | 8–20 hrs/week | Remote (EU/UK)\"",
-     "Portugal in · body: \"We are looking for knowledgeable product designers based in the EU or UK\"",
+     "Portugal in · body: \"looking for knowledgeable product designers based in the EU or UK\"",
      "Portugal in · body: \"A senior-level product designer with significant professional experience within the EU or UK\""
     ],
     "judged": true,
@@ -386798,8 +386596,8 @@
     "stage": "vision",
     "confidence": "medium",
     "fields": {
-     "role": "Product Designer - AI Trainer",
-     "company": "10x.team",
+     "role": "Product Designer - AI Trainer - Freelance - 8-20hrs/week - Remote",
+     "company": "10x Team",
      "seniority": "senior",
      "remote": "remote",
      "onsite_days": null,
@@ -386818,42 +386616,44 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.ashbyhq.com/10xteam/7bfed69b-ad3c-45e2-85cb-611173c8451f",
-    "reason": "the page says both: Portugal in, and Portugal out · Side panel names France specifically but body repeatedly widens eligibility to EU/UK, creating a direct contradiction.",
+    "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · The description repeatedly states the role is remote and open to EU/UK-based designers, which covers Portugal, though the side panel's 'Location: France' field conflicts; more importantly the job itself is AI-output evaluation/training rather than product design practice.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Location: France ... Remote (EU/UK) ... based in the EU or UK",
+    "quote": "Remote (EU/UK) ... based in the EU or UK",
     "signals": [
      {
-      "quote": "France",
+      "quote": "Location: France",
       "where": "side panel",
+      "kind": "tag",
       "says": "portugal_out"
      },
      {
       "quote": "Freelance | 8–20 hrs/week | Remote (EU/UK)",
       "where": "opening paragraph",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
-      "quote": "We are looking for knowledgeable product designers based in the EU or UK",
+      "quote": "looking for knowledgeable product designers based in the EU or UK",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "A senior-level product designer with significant professional experience within the EU or UK",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c220fa874dbd4763.jpg",
-    "read_at": "2026-10-04T01:05:26",
+    "read_at": "2026-10-05T11:37:33",
     "evidence": {
      "employer_posted": "2026-05-28"
-    },
-    "agency": true,
-    "hiring_for": null
+    }
    }
   },
   {
@@ -386876,9 +386676,8 @@
     "lane": "open",
     "cut": false,
     "why": [
-     "Remote role with no geographic restriction stated, and the title is clearly a senior design role.",
-     "Portugal in · under the title: \"Product Design - Remote\"",
-     "Portugal in · side panel: \"Location: Remote\""
+     "Title explicitly marks the role 'global' and location is listed simply as 'Remote' with no country restriction stated anywhere on the page.",
+     "Portugal in · under the title: \"Senior Product Designer, Growth (global)\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -386893,37 +386692,31 @@
      "countries": [],
      "portugal_ok": "yes",
      "salary": "USD 150,000-170,000 DOE",
-     "years_xp": 5,
+     "years_xp": "5+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://beehiiv.bamboohr.com/careers/64",
-    "reason": "Remote role with no geographic restriction stated, and the title is clearly a senior design role.",
+    "reason": "Title explicitly marks the role 'global' and location is listed simply as 'Remote' with no country restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Product Design - Remote",
+    "quote": "Senior Product Designer, Growth (global) ... Product Design - Remote",
     "signals": [
      {
-      "quote": "Product Design - Remote",
+      "quote": "Senior Product Designer, Growth (global)",
       "where": "under the title",
-      "says": "portugal_in"
-     },
-     {
-      "quote": "Location: Remote",
-      "where": "side panel",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e585d9ae432b49ef.jpg",
-    "read_at": "2026-10-03T22:23:45",
+    "read_at": "2026-10-05T11:37:33",
     "evidence": {}
    }
   },
@@ -414666,12 +414459,12 @@
    "verdict": {
     "role": "no",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page read is a different job · This is an onsite UK special-needs school instructor role, not a product/UX design job and not located in Portugal.",
+     "This is an onsite teaching-assistant/SEN instructor role at a UK school, not a product/UX design job, and it requires physical presence at the school.",
+     "Portugal OUT · under the title: \"King's Bromley, United Kingdom\"",
      "Portugal OUT · body: \"Options Trent Acres School, Kings Bromley\"",
-     "Portugal OUT · side panel: \"King's Bromley, United Kingdom\"",
      "Portugal OUT · body: \"The School is within easy reach of Stoke, Derby, Telford, Stafford, Lichfield, Burntwood, Rugeley, Cannock, Burton-on-Trent, Tamworth, Uttoxeter and surrounding areas.\""
     ],
     "judged": true,
@@ -414680,7 +414473,7 @@
     "confidence": "high",
     "fields": {
      "role": "Design and Technology Instructor",
-     "company": "Options Autism (Outcomes First Group)",
+     "company": "Colten Care (Options Autism / Outcomes First Group)",
      "seniority": "unstated",
      "remote": "onsite",
      "onsite_days": null,
@@ -414697,37 +414490,38 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/Dev2/743999880067777",
-    "reason": "the page read is a different job · This is an onsite UK special-needs school instructor role, not a product/UX design job and not located in Portugal.",
+    "reason": "This is an onsite teaching-assistant/SEN instructor role at a UK school, not a product/UX design job, and it requires physical presence at the school.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "King's Bromley, United Kingdom",
+    "quote": "fantastic opportunity for a Design and Technology Instructor to join our close-knit team at Options Trent Acres School, Kings Bromley",
     "signals": [
      {
-      "quote": "Options Trent Acres School, Kings Bromley",
-      "where": "body",
+      "quote": "King's Bromley, United Kingdom",
+      "where": "under the title",
+      "kind": "tag",
       "says": "portugal_out"
      },
      {
-      "quote": "King's Bromley, United Kingdom",
-      "where": "side panel",
+      "quote": "Options Trent Acres School, Kings Bromley",
+      "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      },
      {
       "quote": "The School is within easy reach of Stoke, Derby, Telford, Stafford, Lichfield, Burntwood, Rugeley, Cannock, Burton-on-Trent, Tamworth, Uttoxeter and surrounding areas.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d860a8283fe547fd.jpg",
-    "read_at": "2026-10-04T01:12:17",
+    "read_at": "2026-10-05T11:37:35",
     "evidence": {
      "employer_posted": "2023-01-22"
-    },
-    "agency": true,
-    "hiring_for": "Options Autism (Outcomes First Group) / Colten Care"
+    }
    }
   },
   {
@@ -454745,13 +454539,13 @@
    "title": "Associate Principal Consultant, Hybrid Design",
    "url": "https://jobs.smartrecruiters.com/Nagarro1/743999905564513",
    "verdict": {
-    "role": "yes",
+    "role": "unclear",
     "place": "remote",
-    "lane": "open",
+    "lane": "unsure",
     "cut": false,
     "why": [
-     "Title contains 'Design' and job is listed as Remote with no country restriction stated anywhere on the page.",
-     "Portugal in · footer or small print: \"Remote\""
+     "No real job description is given - only generic company boilerplate and a bare 'Remote' tag with no country, so neither the role's actual duties nor eligible geography can be determined.",
+     "the page says: \"Remote\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -454760,53 +454554,33 @@
     "fields": {
      "role": "Associate Principal Consultant, Hybrid Design",
      "company": "Nagarro",
-     "seniority": "principal",
+     "seniority": "senior",
      "remote": "remote",
      "onsite_days": null,
      "countries": [],
-     "portugal_ok": "yes",
+     "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.smartrecruiters.com/Nagarro1/743999905564513",
-    "reason": "Title contains 'Design' and job is listed as Remote with no country restriction stated anywhere on the page.",
+    "reason": "No real job description is given - only generic company boilerplate and a bare 'Remote' tag with no country, so neither the role's actual duties nor eligible geography can be determined.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
     "quote": "Remote",
-    "signals": [
-     {
-      "quote": "Remote",
-      "where": "footer or small print",
-      "says": "portugal_in"
-     }
-    ],
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9b79164740dd4deb.jpg",
-    "read_at": "2026-10-04T01:12:13",
+    "read_at": "2026-10-05T11:37:36",
     "evidence": {
      "employer_posted": "2023-05-07"
-    },
-    "copies": [
-     {
-      "id": "c3c3d0a6289440f2",
-      "url": "https://jobs.smartrecruiters.com/Nagarro1/743999908314548",
-      "read_url": "https://jobs.smartrecruiters.com/Nagarro1/743999908314548",
-      "source": "smartrecruiters/Nagarro1",
-      "posted": "2023-05-19",
-      "location": "Remote, , United States",
-      "lane": "unsure",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -468510,7 +468284,7 @@
     "lane": "portugal",
     "cut": false,
     "why": [
-     "Senior Product Designer role, hybrid in Porto, Portugal - matches where he lives.",
+     "The role is hybrid at the company's Porto, Portugal office, which matches Cesar's location.",
      "Portugal in · under the title: \"Porto Luxclusif – Product /Full-Time /Hybrid\"",
      "Portugal in · body: \"Our office is near Porto, in the north of Portugal, and is located in a vibrant business hub.\""
     ],
@@ -468529,7 +468303,7 @@
      ],
      "portugal_ok": "yes",
      "salary": null,
-     "years_xp": 5,
+     "years_xp": "5 to 8+ years",
      "reports_to": "Product Design Lead",
      "language": "English",
      "posted": null
@@ -468537,27 +468311,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.lever.co/farfetch/e75ebdfa-ea55-462a-9430-bfdd9365a938",
-    "reason": "Senior Product Designer role, hybrid in Porto, Portugal - matches where he lives.",
+    "reason": "The role is hybrid at the company's Porto, Portugal office, which matches Cesar's location.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Porto Luxclusif – Product /Full-Time /Hybrid",
+    "quote": "Porto Luxclusif – Product /Full-Time /Hybrid; Our office is near Porto, in the north of Portugal",
     "signals": [
      {
       "quote": "Porto Luxclusif – Product /Full-Time /Hybrid",
       "where": "under the title",
+      "kind": "explicit",
       "says": "portugal_in"
      },
      {
       "quote": "Our office is near Porto, in the north of Portugal, and is located in a vibrant business hub.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f927d6e600a04c3e.jpg",
-    "read_at": "2026-10-04T03:13:07",
+    "read_at": "2026-10-05T11:37:40",
     "evidence": {
      "board_posted": "2026-09-16"
     }
@@ -468580,46 +468356,32 @@
    "title": "Designer",
    "url": "https://apply.workable.com/treatwell/j/7EC66C40C5/",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
+    "role": null,
+    "place": null,
+    "lane": "closed",
     "cut": false,
     "why": [
-     "the page read is a different job · The posting page states the job is no longer available, and this is a 404/not-found page listing unrelated openings, not the Designer posting.",
-     "the page says: \"This job is no longer available.\"",
-     "the page says: \"This job is no longer available.\""
+     "the employer says it is closed",
+     "the page says: \"the employer's hiring system no longer has this posting\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Designer",
-     "company": "Treatwell",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
     "read_url": "https://jobs.treatwell.com/?not_found=true",
-    "reason": "the page read is a different job · The posting page states the job is no longer available, and this is a 404/not-found page listing unrelated openings, not the Designer posting.",
+    "reason": "the employer says it is closed",
     "open": "no",
-    "language_ok": true,
-    "language": "English",
-    "quote": "This job is no longer available.",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a5d771590fa247e6.jpg",
-    "read_at": "2026-10-04T03:13:33",
+    "read_at": "2026-10-05T11:37:57",
     "evidence": {
      "board_posted": "2026-09-16"
     }
@@ -479759,17 +479521,17 @@
    "title": "Design Director (FTC on enterprise clients)",
    "url": "https://job-boards.greenhouse.io/designbridge/jobs/8104993",
    "verdict": {
-    "role": "yes",
+    "role": "unclear",
     "place": "unclear",
     "lane": "unsure",
     "cut": false,
     "why": [
-     "the page does not say where · This is only the application form page with no job description or location details, so place cannot be determined; role title (Design Director) is clearly design-related."
+     "The page is only the application form, not the job description or posting content."
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "low",
+    "confidence": "high",
     "fields": {
      "role": "Design Director (FTC on enterprise clients)",
      "company": "Design Bridge and Partners",
@@ -479784,21 +479546,19 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "role"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://job-boards.greenhouse.io/designbridge/jobs/8104993",
-    "reason": "the page does not say where · This is only the application form page with no job description or location details, so place cannot be determined; role title (Design Director) is clearly design-related.",
-    "open": "yes",
+    "reason": "The page is only the application form, not the job description or posting content.",
+    "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "",
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8f356e000ba4416f.jpg",
-    "read_at": "2026-10-04T13:06:13",
+    "read_at": "2026-10-05T11:37:51",
     "evidence": {
      "employer_posted": "2026-09-17"
     }
@@ -482067,18 +481827,18 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "two readings disagree on place · The posting states the role is based in the Porto Alegre studio in Brazil, overriding the generic 'Remote job' tag.",
+     "Despite the 'Remote job' tag, the posting states the role is based in the company's Porto Alegre (Brazil) studio under a hybrid model, which excludes Portugal.",
      "Portugal OUT · body: \"This role will be based in our Porto Alegre studio.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
-     "role": "UX/Product Designer (Full Stack Product Designer - Brasil)",
+     "role": "Full Stack Product Designer - Brasil",
      "company": "Nacar Design",
      "seniority": "unstated",
      "remote": "hybrid",
@@ -482093,12 +481853,10 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "workplace_as_posted"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://nacardesign.com/o/full-stack-product-designer-brasil",
-    "reason": "two readings disagree on place · The posting states the role is based in the Porto Alegre studio in Brazil, overriding the generic 'Remote job' tag.",
+    "reason": "Despite the 'Remote job' tag, the posting states the role is based in the company's Porto Alegre (Brazil) studio under a hybrid model, which excludes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -482107,13 +481865,14 @@
      {
       "quote": "This role will be based in our Porto Alegre studio.",
       "where": "body",
+      "kind": "explicit",
       "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f88b2a171ebf4974.jpg",
-    "read_at": "2026-10-04T03:24:30",
+    "read_at": "2026-10-05T11:38:03",
     "evidence": {
      "employer_posted": "2026-07-27"
     }
@@ -489147,18 +488906,18 @@
    "years_xp": 8,
    "verdict": {
     "role": "yes",
-    "place": "unclear",
-    "lane": "unsure",
+    "place": "remote",
+    "lane": "open",
     "cut": false,
     "why": [
-     "the page says both: Portugal in, and Portugal out · Title line names a single city/country (Strasbourg, France) but the body widens scope to 'remotely within EU', creating contradiction that cannot be resolved to a clear yes.",
+     "the place named at the top is only a tag; the posting itself says Portugal is in · The description explicitly states the role is performed remotely within the EU, which includes Portugal, overriding the France office tag.",
      "Portugal OUT · under the title: \"Strasbourg, Grand Est, France\"",
-     "Portugal in · opening paragraph: \"will perform their services remotely within EU\""
+     "Portugal in · opening paragraph: \"to offer his/her services as an expert who will perform their services remotely within EU\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "UX/UI Designer",
      "company": "EUROPEAN DYNAMICS",
@@ -489168,39 +488927,39 @@
      "countries": [
       "EU"
      ],
-     "portugal_ok": "unclear",
+     "portugal_ok": "yes",
      "salary": null,
      "years_xp": 8,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "workplace_as_posted"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/european-dynamics/j/E2798679E7",
-    "reason": "the page says both: Portugal in, and Portugal out · Title line names a single city/country (Strasbourg, France) but the body widens scope to 'remotely within EU', creating contradiction that cannot be resolved to a clear yes.",
+    "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · The description explicitly states the role is performed remotely within the EU, which includes Portugal, overriding the France office tag.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "Strasbourg, Grand Est, France ... will perform their services remotely within EU",
+    "quote": "perform their services remotely within EU",
     "signals": [
      {
       "quote": "Strasbourg, Grand Est, France",
       "where": "under the title",
+      "kind": "tag",
       "says": "portugal_out"
      },
      {
-      "quote": "will perform their services remotely within EU",
+      "quote": "to offer his/her services as an expert who will perform their services remotely within EU",
       "where": "opening paragraph",
+      "kind": "explicit",
       "says": "portugal_in"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5b659abbef824f75.jpg",
-    "read_at": "2026-10-04T03:07:49",
+    "read_at": "2026-10-05T11:37:55",
     "evidence": {
      "employer_posted": "2026-10-01"
     },
