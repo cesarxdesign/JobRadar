@@ -145,7 +145,6 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
   <button class="tab rr" data-lane="old69" hidden>69+<span class="n" id="c-old69"></span></button>
   <button class="tab rr" hidden data-lane="agency" title="companies you moved here from the preview: the ones that flood the boards with the same roles">Bundlers<span class="n" id="c-agency"></span></button>
-  <button class="tab rr" hidden data-lane="unread" title="roles whose page could not be loaded at all: nothing was judged">Not read<span class="n" id="c-unread"></span></button>
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
   <button class="tab rr" data-lane="discarded" hidden>Discarded<span class="n" id="c-discarded"></span></button>
@@ -614,7 +613,6 @@ function counts(){
     $("c-"+l).textContent=n||"";
   }
   $("c-agency").textContent=multiIds().map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
-  $("c-unread").textContent=(DATA.unread||[]).map(roleById).filter(r=>r&&!routing(r.id)&&matches(r)).length||"";
   $("c-old69").textContent=["open","portugal","unsure"].flatMap(laneIds)
     .map(roleById).filter(r=>r&&!routing(r.id)&&isOld(r)&&!isMulti(r)&&!appliedSame(r)&&matches(r)).length||"";
   if(RR){
