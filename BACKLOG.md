@@ -17,9 +17,6 @@ What is next, in the order to do it. An empty backlog means finished, and that i
       - Confirm launchd fires at 02:00 with the lid open; its last exit was the kill by hand.
 - [ ] PRIORITY 2. Move Stats into cxd-stats, so applications sent can be read against folio traffic.
 - [ ] PRIORITY 3. Make a LinkedIn agent.
-- [ ] Add Hacker News "Who is hiring" as a source. A monthly thread, read through HN's public
-      feed; small, free, heavy on remote startup roles. Each comment is one company's posting,
-      so it needs a reader that pulls company, role and place out of free text.
 - [ ] Scan them all, what is left. Done 2026-10-05: `harvest.py` lists every board from Common
       Crawl's index files and, for Lever, the Internet Archive: 50,364 boards known across 16
       systems, Workable, SmartRecruiters, Rippling, Join and Dover included. Left: 6,643 boards
