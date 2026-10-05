@@ -1648,6 +1648,7 @@ SKIP = set()          # sources deliberately not scraped this run
 
 
 SOURCE_LIMIT = 25 * 60        # seconds one source may take
+BOARDS_AT_ONCE = 10           # company boards read at the same time
 LEFT_BEHIND = []              # sources still running when their time was up
 
 
@@ -1708,23 +1709,49 @@ def scrape(sources, on_batch=None):
             raise box["e"]
         return box["r"]
 
-    for platform, slug, cfg in jobs:
-        done += 1
+    # Company boards are read several at a time. One at a time was fine for
+    # 1,500 of them; the harvest (2026-10-05) lists every board on every
+    # hiring system and the watchlist is several times that. A few systems
+    # refuse a crowd, so those are held to two askers with a pause between.
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
+    lock = threading.Lock()
+    slow = {k: threading.Semaphore(2) for k in ("dover", "workable", "join", "rippling", "smartrecruiters")}
+
+    def board(job):
+        nonlocal done
+        platform, slug, cfg = job
         label = f"{platform}/{slug}"
         fn = ADAPTERS.get(platform)
         if not fn:
-            errors[platform] = "no adapter"
-            continue
+            with lock:
+                done += 1
+                errors[platform] = "no adapter"
+            return
+        gate = slow.get(platform)
+        if gate:
+            gate.acquire()
         try:
             rows, dt = bounded(label, fn(slug, cfg))
-            out += rows
-            print(f"  [{done}/{total}] {label}: {len(rows)}  ({dt:.1f}s)  "
-                  f"total {len(out)}  run {time.monotonic()-t_run:.0f}s", flush=True)
-            if on_batch:
-                on_batch(out)
+            with lock:
+                done += 1
+                out.extend(rows)
+                print(f"  [{done}/{total}] {label}: {len(rows)}  ({dt:.1f}s)  "
+                      f"total {len(out)}  run {time.monotonic()-t_run:.0f}s", flush=True)
+                if on_batch and done % 25 == 0:
+                    on_batch(out)
         except Exception as e:
-            errors[label] = f"{type(e).__name__}: {e}"
-            print(f"  [{done}/{total}] {label}: FAILED {type(e).__name__}", flush=True)
+            with lock:
+                done += 1
+                errors[label] = f"{type(e).__name__}: {e}"
+                print(f"  [{done}/{total}] {label}: FAILED {type(e).__name__}", flush=True)
+        finally:
+            if gate:
+                time.sleep(0.3)
+                gate.release()
+
+    with ThreadPoolExecutor(BOARDS_AT_ONCE) as ex:
+        list(ex.map(board, jobs))
 
     for agg in [a for a in aggs if a not in SKIP]:
         done += 1
