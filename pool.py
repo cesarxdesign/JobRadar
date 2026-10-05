@@ -1364,6 +1364,63 @@ def haystack_key():
     raise RuntimeError("haystack: the feed key was not found in the page script")
 
 
+HN_ROLE = re.compile(
+    r"((?:(?:senior|sr\.?|staff|lead|principal|founding|head of|director of|vp of|product|ux|ui|ux/ui|ui/ux|visual|"
+    r"interaction|brand|design|experience)\s+){0,4}"
+    r"(?:designers?|design engineers?|design leads?|design managers?|design directors?|head of design|ux engineers?|ui engineers?))", re.I)
+
+
+def agg_hackernews(months=2):
+    """Hacker News, "Ask HN: Who is hiring?" - one thread a month, a few
+    hundred companies, each top-level comment one company's posting in its own
+    words: "Acme | Senior Product Designer | Remote (EU) | https://...". Read
+    through HN's public search feed. It is small and heavy on remote startup
+    roles, many of which are on no job board at all. (His call, 2026-10-05,
+    after seeing it in an application form's "where did you hear about us".)
+
+    A comment that names no design role is left out: there is no title to put
+    on it. One that names several gives one row each. The row's link is the
+    comment itself, which is the posting; any hiring-system link inside it is
+    what the employer finder follows."""
+    threads = get_json("https://hn.algolia.com/api/v1/search_by_date?tags=story,author_whoishiring&hitsPerPage=12")["hits"]
+    threads = [t for t in threads if "who is hiring" in (t.get("title") or "").lower()][:months]
+    for t in threads:
+        tree = get_json(f"https://hn.algolia.com/api/v1/items/{t['objectID']}")
+        for c in tree.get("children") or []:
+            html = c.get("text") or ""
+            if not html or not c.get("author"):
+                continue
+            text = strip_html(html.replace("<p>", "\n"))
+            head = text.split("\n")[0][:300]
+            parts = [p.strip() for p in re.split(r"\s*[|•·]\s*|\s+[-–—]\s+", head) if p.strip()]
+            company = re.sub(r"\s*\(.*?\)\s*$", "", parts[0])[:60] if parts else None
+            # Most open with the company's name. Some open with a sentence
+            # ("At Tether (https://...) we...", "We're hiring software
+            # engineers..."): then the name is taken from the sentence, or
+            # from the first address in the comment, or the comment is left.
+            if company and (len(company.split()) > 5 or re.match(r"(at|we|we're|we are|role|hi|hello|hiring)\b", company, re.I)):
+                m = re.match(r"At ([A-Z][\w.&' -]{1,40}?)[ ,(]", head) or re.search(r"\b([A-Z][\w.&'-]{1,30}(?: [A-Z][\w.&'-]{1,20})?) is (?:hiring|looking)", text)
+                site = re.search(r"https?://(?:www\.|jobs\.|careers\.)?([a-z0-9-]+)\.[a-z.]{2,8}(?:/|\b)", html)
+                company = (m.group(1).strip() if m else site.group(1).capitalize() if site and site.group(1) not in ("news", "docs", "github", "linkedin", "forms", "apply") else None)
+            if not company or len(company) < 2:
+                continue
+            titles = list(dict.fromkeys(re.sub(r"\s+", " ", m.group(1)).strip().title() for m in HN_ROLE.finditer(text)))
+            titles = [x for x in titles if len(x.split()) >= 2 or x.lower() in ("designer", "designers")]
+            if any(len(x.split()) >= 2 for x in titles):          # a bare "Designer" beside "Senior Product Designer" is the same job
+                titles = [x for x in titles if len(x.split()) >= 2]
+            titles = titles[:4]
+            if not titles:
+                continue
+            where = "; ".join(p for p in parts[1:] if re.search(
+                r"remote|onsite|on-site|hybrid|europe|\beu\b|emea|worldwide|global|anywhere|usa?\b|uk\b|[A-Z][a-z]+, ?[A-Z]{2}\b|"
+                r"london|berlin|paris|new york|nyc|sf\b|san francisco|lisbon|portugal|amsterdam|toronto", p, re.I))[:160]
+            for title in titles:
+                yield {"title": title[:-1] if title.lower().endswith("designers") or title.lower().endswith("engineers") else title,
+                       "company": company, "url": f"https://news.ycombinator.com/item?id={c['id']}",
+                       "location": where or None, "posted": (c.get("created_at") or "")[:10],
+                       "remote": bool(re.search(r"\bremote\b", head, re.I)) or None, "jd_text": text}
+
+
 def agg_haystack():
     """haystack.cv: half a million postings of every kind. Its feed is asked
     only for live roles with a design word in the title that are remote or in
@@ -1460,6 +1517,7 @@ def agg_woodyjobs():
 
 
 AGGREGATORS.update({"remoteio": agg_remoteio, "woodyjobs": agg_woodyjobs, "haystack": agg_haystack})
+AGGREGATORS.update({"hackernews": agg_hackernews})
 
 
 def get_text_charset(url):
