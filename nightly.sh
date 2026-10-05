@@ -46,7 +46,8 @@ echo "-- harvest: check";    caffeinate -i python3 harvest.py check --minutes 40
 echo "-- scrape";            caffeinate -i python3 pool.py | grep -v "^  \[\|^   *…" | tail -8
 echo "-- discover";          caffeinate -i python3 discover.py | tail -3
 echo "-- scrape new boards"; caffeinate -i python3 pool.py --only "$ATS" | grep -v "^  \[\|^   *…" | tail -6
-[ -f inbox.py ] && { echo "-- inbox"; caffeinate -i python3 inbox.py | tail -3; }
+# every Gmail tab he has open, application emails only (inbox_all.py is strict about the personal accounts)
+echo "-- inbox"; caffeinate -i python3 inbox_all.py | tail -12
 publish
 ( while sleep 1200; do publish; done ) &
 TICK=$!
