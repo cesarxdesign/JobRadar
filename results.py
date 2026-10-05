@@ -388,6 +388,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         "generated_at": pool_doc.get("generated_at"),
         "built_at": datetime.datetime.now().astimezone().isoformat(timespec="minutes"),
         "run_id": pool_doc.get("run_id"),
+        **{"last_" + k: v for k, v in _runs().items() if k in ("full", "partial")},
         "criteria": verdicts_doc.get("criteria"),
         "model": verdicts_doc.get("model"),
         "counts": {**{k: len(v) for k, v in lanes.items()}, "ghosts": ghosts,
@@ -421,6 +422,14 @@ def remember_shipped(built):
     tmp.write_text(json.dumps(sorted(now)))
     tmp.replace(SHIPPED_FILE)
     return len(now) - len(before)
+
+
+def _runs():
+    """data/runs.json, written by pool.py: the last full and the last partial scrape."""
+    try:
+        return json.loads((Path(__file__).parent / "data" / "runs.json").read_text())
+    except Exception:
+        return {}
 
 
 def main():

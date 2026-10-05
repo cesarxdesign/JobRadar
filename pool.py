@@ -2225,6 +2225,15 @@ def main():
     if carried:
         print(f"  {carried} descriptions carried forward for roles not fetched this run",
               flush=True)
+    # The board's top line: when every source was last read, and when only some were.
+    if "--slim" not in sys.argv:
+        runs_f = ROOT / "data" / "runs.json"
+        try:
+            runs = json.loads(runs_f.read_text())
+        except Exception:
+            runs = {}
+        runs["partial" if (SKIP or NEW_BOARDS is not None) else "full"] = stamp
+        runs_f.write_text(json.dumps(runs))
     tmp = POOL_FILE.with_suffix(".tmp")
     tmp.write_text(contracts.pool_text({"generated_at": stamp, "run_id": run_id,
                                         "adapter_version": ADAPTER_VERSION,
