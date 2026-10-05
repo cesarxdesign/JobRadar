@@ -16876,8 +16876,8 @@
  },
  "5a832a508ec942c3": {
   "id": "5a832a508ec942c3",
-  "at": "2026-10-02T18:38:49",
-  "criteria": "2026-10-02.6",
+  "at": "2026-10-05T10:45:24",
+  "criteria": "2026-10-05.2",
   "model": "sonnet",
   "pool_url": "https://www.uxremotetalent.com/ux-job/ux-ui-designer-2",
   "board": {
@@ -16899,65 +16899,62 @@
   "read": "employer",
   "read_url": "https://jobs.bendingspoons.com/positions/6686d0e2a65ca3994b3a415b",
   "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
   "posting_open": "yes",
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
-  "workplace_as_posted": "remote",
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
   "location_under_the_title": "Milan (Italy), London (UK), Madrid (Spain), Warsaw (Poland), or fully remote from eligible countries",
   "place_signals": [
    {
     "quote": "Milan (Italy), London (UK), Madrid (Spain), Warsaw (Poland), or fully remote from eligible countries",
     "where": "under the title",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "Typical annual salary offers range from £85,797 to £151,436 in London and from €66,065 to €107,837 elsewhere in Europe",
-    "where": "body",
-    "says": "portugal_in"
+    "kind": "explicit",
+    "says": "portugal_maybe"
    },
    {
     "quote": "we expect you to spend most days in our Milan office during your first few months with us, regardless of your long-term work location",
     "where": "body",
+    "kind": "explicit",
     "says": "portugal_out"
    },
    {
     "quote": "After that, you're welcome to work from one of our offices, or remotely from approved countries—depending on what we agree at the offer stage.",
     "where": "body",
-    "says": "says_nothing"
+    "kind": "explicit",
+    "says": "portugal_maybe"
    }
   ],
-  "can_he_do_it_from_portugal": "unclear",
-  "place_quote": "fully remote from eligible countries ... After that, you're welcome to work from one of our offices, or remotely from approved countries",
-  "role_verdict": "yes",
   "place_verdict": "unclear",
-  "cut": false,
-  "reason": "the page says both: Portugal in, and Portugal out · Role is clearly UX/UI design; location is 'fully remote from eligible countries' with salary bands for 'elsewhere in Europe', but a mandatory initial months-long Milan office stint and unspecified 'approved countries' make Portugal eligibility unclear.",
-  "confidence": "low",
+  "place_quote": "we expect you to spend most days in our Milan office during your first few months with us, regardless of your long-term work location",
+  "reason": "remote from a list of countries the page does not show · The posting requires everyone, even remote hires, to spend most days physically in the Milan office for the first few months, making full-time work from Portugal impossible at least initially, and long-term remote eligibility for Portugal is unstated.",
+  "confidence": "medium",
   "inferred": [],
   "fields": {
    "role": "UX/UI designer",
    "company": "Bending Spoons",
    "seniority": "unstated",
-   "remote": "remote",
+   "remote": "hybrid",
    "onsite_days": null,
    "countries": [
     "Italy",
     "UK",
     "Spain",
-    "Poland",
-    "eligible countries (unspecified)"
+    "Poland"
    ],
    "portugal_ok": "unclear",
-   "salary": "£85,797-£151,436 in London (up to £316,052); €66,065-€107,837 elsewhere in Europe (up to €240,330)",
+   "salary": "£85,797–£151,436 (London) / €66,065–€107,837 (elsewhere in Europe), up to £316,052 (London) / €240,330 (elsewhere) for exceptionally experienced candidates",
    "years_xp": null,
    "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
-  "reader_place": "unclear",
-  "lane": "unsure"
+  "lane": "unsure",
+  "reader_place": "no"
  },
  "2d8b8890183d47eb": {
   "id": "2d8b8890183d47eb",
@@ -28447,8 +28444,8 @@
  },
  "3aa99cbda053491d": {
   "id": "3aa99cbda053491d",
-  "at": "2026-10-02T18:42:40",
-  "criteria": "2026-10-02.6",
+  "at": "2026-10-05T10:08:44",
+  "criteria": "2026-10-05.1",
   "model": "sonnet",
   "pool_url": "https://jobs.lever.co/jobgether/874af8eb-94c8-4743-ad9d-52d4aaf54b99",
   "board": null,
@@ -28463,50 +28460,55 @@
   "read": "employer",
   "read_url": "https://jobs.lever.co/jobgether/874af8eb-94c8-4743-ad9d-52d4aaf54b99",
   "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
   "posting_open": "yes",
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
+  "role_verdict": "yes",
   "workplace_as_posted": "remote",
-  "location_under_the_title": "Spain",
+  "location_under_the_title": "Spain Research & Development – Design /Contract /Remote",
   "place_signals": [
    {
     "quote": "Spain",
     "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Research & Development – Design /Contract /Remote",
+    "where": "under the title",
+    "kind": "explicit",
     "says": "portugal_out"
    },
    {
     "quote": "Our partner is looking for a UX Designer based in Spain.",
     "where": "opening paragraph",
+    "kind": "explicit",
     "says": "portugal_out"
    },
    {
     "quote": "This is a remote-first opportunity within a creative, collaborative, and internationally distributed environment.",
     "where": "body",
+    "kind": "generic",
     "says": "says_nothing"
    },
    {
     "quote": "Fully remote position within the EMEA region, with Switzerland included among eligible locations.",
-    "where": "body",
+    "where": "side panel",
+    "kind": "explicit",
     "says": "portugal_in"
-   },
-   {
-    "quote": "Comfortable working independently within a remote, distributed, and collaborative team environment.",
-    "where": "body",
-    "says": "says_nothing"
    }
   ],
-  "can_he_do_it_from_portugal": "unclear",
-  "place_quote": "Fully remote position within the EMEA region, with Switzerland included among eligible locations.",
-  "role_verdict": "yes",
-  "place_verdict": "unclear",
-  "cut": false,
-  "reason": "the page says both: Portugal in, and Portugal out · Named location is Spain under the title, but a benefits line widens eligibility to the whole EMEA region, so place is unclear rather than a clean yes or no.",
-  "confidence": "medium",
+  "place_verdict": "no",
+  "place_quote": "Our partner is looking for a UX Designer based in Spain. ... Fully remote position within the EMEA region, with Switzerland included among eligible locations.",
+  "reason": "an agency posting: the place its opening line names is the client's requirement · The posting explicitly requires the candidate to be based in Spain, yet the benefits section separately states the role is remote within the EMEA region including Switzerland, creating a direct contradiction about eligible locations.",
+  "confidence": "low",
   "inferred": [],
   "fields": {
    "role": "UX Designer",
-   "company": "Unstated partner company (sourced via Jobgether)",
+   "company": "unnamed partner company (via Jobgether)",
    "seniority": "unstated",
    "remote": "remote",
    "onsite_days": null,
@@ -28516,14 +28518,14 @@
    ],
    "portugal_ok": "unclear",
    "salary": null,
-   "years_xp": null,
+   "years_xp": "A few years of professional experience",
    "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
-  "reader_place": "unclear",
-  "lane": "unsure"
+  "lane": "cut",
+  "reader_place": "unclear"
  },
  "5f318a029fd2414c": {
   "id": "5f318a029fd2414c",
@@ -85548,8 +85550,8 @@
  },
  "e3f333321a6c43bd": {
   "id": "e3f333321a6c43bd",
-  "at": "2026-10-03T11:47:22",
-  "criteria": "2026-10-02.7",
+  "at": "2026-10-05T10:45:09",
+  "criteria": "2026-10-05.2",
   "model": "sonnet",
   "pool_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
   "board": null,
@@ -85564,40 +85566,44 @@
   "read": "employer",
   "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
   "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
   "posting_open": "yes",
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
+  "role_verdict": "no",
   "workplace_as_posted": "remote",
   "location_under_the_title": "Remote",
   "place_signals": [
    {
-    "quote": "Flexible hours + fully remote",
-    "where": "opening paragraph",
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
     "says": "says_nothing"
    },
    {
-    "quote": "German required (our first market is Berlin)",
-    "where": "opening paragraph",
+    "quote": "Flexible hours + fully remote",
+    "where": "body",
+    "kind": "generic",
     "says": "says_nothing"
    },
    {
     "quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
     "where": "body",
+    "kind": "explicit",
     "says": "portugal_in"
    },
    {
     "quote": "Fully remote",
     "where": "body",
+    "kind": "generic",
     "says": "says_nothing"
    }
   ],
-  "can_he_do_it_from_portugal": "yes",
-  "place_quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
-  "role_verdict": "yes",
   "place_verdict": "remote",
-  "cut": false,
-  "reason": "Design-led product/UX role, fully remote and explicitly open to EU-based candidates, which includes Portugal.",
+  "place_quote": "Europe-based only (EU + Eastern Partnership countries), fully remote.",
+  "reason": "The page explicitly says this is an unpaid core team role, which makes the role itself a no even though the location (EU-wide remote) would include Portugal.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -85607,8 +85613,7 @@
    "remote": "remote",
    "onsite_days": null,
    "countries": [
-    "EU",
-    "Eastern Partnership countries"
+    "EU + Eastern Partnership countries"
    ],
    "portugal_ok": "yes",
    "salary": null,
@@ -85618,8 +85623,8 @@
    "posted": "1 month ago"
   },
   "stage": "vision",
-  "reader_place": "remote",
-  "lane": "open"
+  "lane": "cut",
+  "reader_place": "remote"
  },
  "f2ac333a09ac4108": {
   "id": "f2ac333a09ac4108",
@@ -422450,8 +422455,8 @@
  },
  "a5d10bf4ebb84ba8": {
   "id": "a5d10bf4ebb84ba8",
-  "at": "2026-10-04T06:37:21",
-  "criteria": "2026-10-03.2",
+  "at": "2026-10-05T10:45:09",
+  "criteria": "2026-10-05.2",
   "model": "sonnet",
   "pool_url": "https://apply.workable.com/j/4E093472E0",
   "board": null,
@@ -422472,42 +422477,39 @@
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
+  "role_verdict": "yes",
   "workplace_as_posted": "remote",
-  "location_under_the_title": "United Kingdom; Stockholm, Stockholm County, Sweden",
+  "location_under_the_title": "United Kingdom\nStockholm, Stockholm County, Sweden",
   "place_signals": [
    {
-    "quote": "United Kingdom",
+    "quote": "United Kingdom\nStockholm, Stockholm County, Sweden",
     "where": "under the title",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "Stockholm, Stockholm County, Sweden",
-    "where": "under the title",
-    "says": "portugal_out"
+    "kind": "tag",
+    "says": "says_nothing"
    },
    {
     "quote": "Europe / Remote",
     "where": "body",
+    "kind": "explicit",
     "says": "portugal_in"
    },
    {
     "quote": "Remote",
     "where": "under the title",
+    "kind": "tag",
     "says": "says_nothing"
    },
    {
     "quote": "Embrace hybrid work models and enjoy the freedom of unlimited paid time off",
-    "where": "body",
+    "where": "footer or small print",
+    "kind": "generic",
     "says": "says_nothing"
    }
   ],
-  "can_he_do_it_from_portugal": "unclear",
-  "place_quote": "Europe / Remote",
-  "role_verdict": "yes",
-  "place_verdict": "no",
-  "cut": false,
-  "reason": "the line at the top of the page says where; the wider words lower down are boilerplate · Side panel names UK and Sweden specifically, but the description itself states 'Europe / Remote', creating a contradiction that makes the place unclear.",
-  "confidence": "medium",
+  "place_verdict": "remote",
+  "place_quote": "Director Product Design \nEurope / Remote",
+  "reason": "The posting explicitly states 'Europe / Remote', which includes Portugal; the UK/Sweden lines are bare location tags, not a restriction.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Director, Product Design",
@@ -422515,21 +422517,17 @@
    "seniority": "director",
    "remote": "remote",
    "onsite_days": null,
-   "countries": [
-    "United Kingdom",
-    "Sweden",
-    "Europe"
-   ],
-   "portugal_ok": "unclear",
+   "countries": [],
+   "portugal_ok": "yes",
    "salary": null,
-   "years_xp": 7,
+   "years_xp": "7+",
    "reports_to": "Chief Strategy and Product Officer",
    "language": "English",
    "posted": null
   },
   "stage": "vision",
-  "reader_place": "unclear",
-  "lane": "cut"
+  "lane": "open",
+  "reader_place": "remote"
  },
  "c67e4ce3f4164210": {
   "id": "c67e4ce3f4164210",
@@ -431350,8 +431348,8 @@
  },
  "c7bb777ef0004bce": {
   "id": "c7bb777ef0004bce",
-  "at": "2026-10-04T06:52:51",
-  "criteria": "2026-10-03.2",
+  "at": "2026-10-05T10:08:44",
+  "criteria": "2026-10-05.1",
   "model": "sonnet",
   "pool_url": "https://jobs.ashbyhq.com/pennylane/a54d975d-5dba-495c-9638-81b338602373",
   "board": null,
@@ -431372,42 +431370,51 @@
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
+  "role_verdict": "yes",
   "workplace_as_posted": "remote",
   "location_under_the_title": "France",
   "place_signals": [
    {
-    "quote": "Location\n\nFrance",
-    "where": "side panel",
+    "quote": "Location: France",
+    "where": "under the title",
+    "kind": "tag",
     "says": "portugal_out"
    },
    {
-    "quote": "Location Type\n\nRemote",
-    "where": "side panel",
+    "quote": "Location Type: Remote",
+    "where": "under the title",
+    "kind": "explicit",
     "says": "says_nothing"
    },
    {
     "quote": "You'll be able to work remotely from your country of residence, as long as it is in Europe and within a maximum time difference of two hours from the CET time zone",
     "where": "body",
+    "kind": "explicit",
     "says": "portugal_in"
    },
    {
     "quote": "If you are based in France, you will have a French contract following French regulation on top of the additional perks",
     "where": "body",
+    "kind": "explicit",
     "says": "says_nothing"
    },
    {
     "quote": "We're working on providing those last advantages to our people based outside of France as well, but it can be quite more complex depending on different countries.",
     "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "30% of the employees are already working from all parts of Europe",
+    "where": "opening paragraph",
+    "kind": "generic",
     "says": "says_nothing"
    }
   ],
-  "can_he_do_it_from_portugal": "unclear",
-  "place_quote": "You'll be able to work remotely from your country of residence, as long as it is in Europe and within a maximum time difference of two hours from the CET time zone",
-  "role_verdict": "yes",
-  "place_verdict": "unclear",
-  "cut": false,
-  "reason": "the page says both: Portugal in, and Portugal out · Panel lists France as the location, but the body widens remote work to any Europe-based residence within 2 hours of CET, which Portugal satisfies - so the page contradicts itself.",
-  "confidence": "medium",
+  "place_verdict": "remote",
+  "place_quote": "work remotely from your country of residence, as long as it is in Europe and within a maximum time difference of two hours from the CET time zone",
+  "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · The role is explicitly remote from any European country within 2 hours of CET, and Portugal fits that window despite 'France' being listed as a location tag.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Design system manager",
@@ -431416,10 +431423,9 @@
    "remote": "remote",
    "onsite_days": null,
    "countries": [
-    "France",
-    "Europe (within 2hrs of CET)"
+    "Europe (within 2 hours of CET)"
    ],
-   "portugal_ok": "unclear",
+   "portugal_ok": "yes",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
@@ -431427,8 +431433,8 @@
    "posted": null
   },
   "stage": "vision",
-  "reader_place": "unclear",
-  "lane": "unsure"
+  "lane": "open",
+  "reader_place": "remote"
  },
  "85266353368e4f58": {
   "id": "85266353368e4f58",
@@ -431508,8 +431514,8 @@
  },
  "0f14286632c542cf": {
   "id": "0f14286632c542cf",
-  "at": "2026-10-04T06:52:52",
-  "criteria": "2026-10-03.2",
+  "at": "2026-10-05T10:08:44",
+  "criteria": "2026-10-05.1",
   "model": "sonnet",
   "pool_url": "https://jobs.ashbyhq.com/pennylane/6c3a7fb0-683c-4533-93e7-9417e270952c",
   "board": null,
@@ -431530,56 +431536,50 @@
   "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
-  "workplace_as_posted": "hybrid",
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
   "location_under_the_title": "All France (remote)",
   "place_signals": [
    {
     "quote": "All France (remote)",
-    "where": "side panel",
+    "where": "under the title",
+    "kind": "explicit",
     "says": "portugal_out"
    },
    {
     "quote": "Location Type: Hybrid",
     "where": "side panel",
-    "says": "portugal_out"
+    "kind": "explicit",
+    "says": "says_nothing"
    },
    {
     "quote": "You'll be able to work remotely from your country of residence, as long as it is in Europe and within a maximum time difference of two hours from the CET time zone",
     "where": "body",
+    "kind": "explicit",
     "says": "portugal_in"
    },
    {
-    "quote": "If you are based in France, you will have a French contract following French regulation on top of the additional perks",
+    "quote": "If you are based in France, you will have a French contract following French regulation on top of the additional perks... We're working on providing those last advantages to our people based outside of France as well, but it can be quite more complex depending on different countries.",
     "where": "body",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "We're working on providing those last advantages to our people based outside of France as well, but it can be quite more complex depending on different countries.",
-    "where": "body",
-    "says": "says_nothing"
+    "kind": "explicit",
+    "says": "portugal_in"
    }
   ],
-  "can_he_do_it_from_portugal": "unclear",
-  "place_quote": "All France (remote)",
-  "role_verdict": "yes",
   "place_verdict": "unclear",
-  "cut": false,
-  "reason": "the page says both: Portugal in, and Portugal out · Side panel names France (hybrid) specifically, while body text widens remote eligibility to any European country within 2h of CET - a direct contradiction that leaves the place genuinely unclear.",
+  "place_quote": "You'll be able to work remotely from your country of residence, as long as it is in Europe and within a maximum time difference of two hours from the CET time zone",
+  "reason": "the page says both, explicitly: Portugal in, and Portugal out · The body explicitly allows remote work from any European country within 2 hours of CET, and Portugal qualifies, despite a conflicting 'All France' tag at the top.",
   "confidence": "medium",
-  "inferred": [
-   "workplace_as_posted"
-  ],
+  "inferred": [],
   "fields": {
-   "role": "Design System Designer",
+   "role": "Design system designer",
    "company": "Pennylane",
    "seniority": "unstated",
-   "remote": "hybrid",
+   "remote": "remote",
    "onsite_days": null,
    "countries": [
-    "France",
-    "Europe (within 2h CET time difference)"
+    "Europe"
    ],
-   "portugal_ok": "unclear",
+   "portugal_ok": "yes",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
@@ -431587,8 +431587,8 @@
    "posted": null
   },
   "stage": "vision",
-  "reader_place": "unclear",
-  "lane": "unsure"
+  "lane": "unsure",
+  "reader_place": "remote"
  },
  "da9c0ccb1ee3481d": {
   "id": "da9c0ccb1ee3481d",
