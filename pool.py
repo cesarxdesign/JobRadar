@@ -35,6 +35,7 @@ ADAPTER_VERSION = 5
 
 ROOT = Path(__file__).resolve().parent
 POOL_FILE = ROOT / "data" / "pool.json"
+TRIED_FILE = ROOT / "data" / "boards_tried.json"      # boards --new-boards has already asked, so an empty one is not asked every cycle
 JD_FILE = ROOT / "data" / "jd.json"
 SOURCES_FILE = ROOT / "data" / "sources.json"
 
@@ -1647,6 +1648,7 @@ AGGREGATORS.update({"uiuxjobsboard": agg_uiuxjobsboard,
 SKIP = set()          # sources deliberately not scraped this run
 
 
+NEW_BOARDS = None             # set by --new-boards: the labels to scrape, everything else untouched
 SOURCE_LIMIT = 25 * 60        # seconds one source may take
 BOARDS_AT_ONCE = 10           # company boards read at the same time
 LEFT_BEHIND = []              # sources still running when their time was up
@@ -1666,6 +1668,9 @@ def scrape(sources, on_batch=None):
     jobs = [(p, s_, cfg) for p, sl in sources["watchlist"].items() if p not in SKIP
             for s_, cfg in sl.items()]
     aggs = list(sources.get("aggregators", []))
+    if NEW_BOARDS is not None:        # --new-boards: only the boards the pool has never read; no job boards
+        jobs = [j for j in jobs if f"{j[0]}/{j[1]}" in NEW_BOARDS]
+        aggs = []
     total = len(jobs) + len(aggs)
     t_run = time.monotonic()
 
@@ -1772,7 +1777,7 @@ def scrape(sources, on_batch=None):
     return out, errors
 
 
-def update(previous, found, run_id, stamp, failed=()):
+def update(previous, found, run_id, stamp, failed=(), keep_rest=False):
     """Fold this run's findings into the pool, minting ids only for new
     postings. One row per posting, matched by posting_key; company+title only
     identifies a row that has no url."""
@@ -1830,8 +1835,8 @@ def update(previous, found, run_id, stamp, failed=()):
     if merged:
         print(f"  {merged} postings seen at more than one source, one row each", flush=True)
     for rid, rec in by_id.items():
-        if rid in seen:
-            continue
+        if rid in seen or keep_rest:
+            continue          # keep_rest: only new boards were read, so nothing else can be called gone
         src = (rec.get("source") or "").split("/")[0]
         if src in SKIP or src in failed or rec.get("source") in failed:
             continue      # not scraped this run, or its source did not answer -
@@ -1928,6 +1933,19 @@ def main():
         return 2
 
     previous = contracts.load_pool(POOL_FILE)["jobs"] if POOL_FILE.exists() else []
+    if "--new-boards" in sys.argv:
+        # The harvest adds company boards by the hundred while it runs. This
+        # reads just those - a board with no row in the pool yet - and leaves
+        # every other role exactly as it is, so the reader can start on the
+        # new roles without waiting for a full scrape.
+        global NEW_BOARDS
+        have = {j.get("source") for j in previous} | {s for j in previous for s in (j.get("sources") or [])}
+        tried = set(json.loads(TRIED_FILE.read_text())) if TRIED_FILE.exists() else set()
+        NEW_BOARDS = {f"{p}/{k}" for p, sl in sources["watchlist"].items() for k in sl} - have - tried
+        print(f"new boards: {len(NEW_BOARDS)} never read", flush=True)
+        if not NEW_BOARDS:
+            return 0
+        TRIED_FILE.write_text(json.dumps(sorted(tried | NEW_BOARDS)))
     stamp = now()
     run_id = stamp
     print(f"pool run {run_id} - {len(previous)} roles carried in", flush=True)
@@ -1943,7 +1961,7 @@ def main():
     found, errors = ([], {}) if "--slim" in sys.argv else scrape(sources, on_batch=save)
     # --slim: no scrape, the pool on disk rewritten slim. update() would read
     # an empty scrape as every posting having gone.
-    jobs, minted = (previous, 0) if "--slim" in sys.argv else update(previous, found, run_id, stamp, failed=set(errors))
+    jobs, minted = (previous, 0) if "--slim" in sys.argv else update(previous, found, run_id, stamp, failed=set(errors), keep_rest=NEW_BOARDS is not None)
     active = sum(1 for j in jobs if j["active"])
     print(f"found {len(found)} postings -> {len(jobs)} roles "
           f"({active} active, {minted} newly minted ids)", flush=True)
