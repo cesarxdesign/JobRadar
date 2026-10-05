@@ -35,6 +35,8 @@ def lane_now(rid, vision, old, title):
     if title is not None and judge.l1(title) is not None:
         return "cut", "parser", judge.l1(title)
     v = vision.get(rid)
+    if v and v.get("posting_open") == "unreadable":
+        return None, None, None          # the page would not open: nothing was judged, so nothing to hold against him
     if v:
         # the lane the board actually shows: results.py applies the newest rules to what vision recorded
         return BOARD.get(rid, v.get("lane")), "vision", v.get("reason")
