@@ -1398,7 +1398,7 @@ def agg_hackernews(months=2):
             # ("At Tether (https://...) we...", "We're hiring software
             # engineers..."): then the name is taken from the sentence, or
             # from the first address in the comment, or the comment is left.
-            if company and (len(company.split()) > 5 or re.match(r"(at|we|we're|we are|role|hi|hello|hiring)\b", company, re.I)):
+            if company and (len(company.split()) > 5 or re.match(r"(at |we're |we are |role:|hi\b|hello\b|hiring\b)", company, re.I)):
                 m = re.match(r"At ([A-Z][\w.&' -]{1,40}?)[ ,(]", head) or re.search(r"\b([A-Z][\w.&'-]{1,30}(?: [A-Z][\w.&'-]{1,20})?) is (?:hiring|looking)", text)
                 site = re.search(r"https?://(?:www\.|jobs\.|careers\.)?([a-z0-9-]+)\.[a-z.]{2,8}(?:/|\b)", html)
                 company = (m.group(1).strip() if m else site.group(1).capitalize() if site and site.group(1) not in ("news", "docs", "github", "linkedin", "forms", "apply") else None)
