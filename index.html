@@ -402,7 +402,9 @@ function ageLabel(r,d){
   if(dated(r)) return d===0?"today":d+"d";
   return d===0?"?":"≥"+d+"d";
 }
-const byDays=(a,b)=>{const x=days(a),y=days(b);return (x===null)-(y===null)||x-y;};
+// A job with no date at all goes to the bottom, whichever way the list is
+// ordered: "?" means long ago, we do not know (his call, 2026-10-06).
+const byDays=(a,b)=>{const x=days(a),y=days(b);return (!dated(a))-(!dated(b))||(x===null)-(y===null)||x-y;};
 // The window in front of the tabs: the last N days, on every tab. Remembered per browser.
 let LAST="";
 try { LAST = localStorage.getItem("radar-last") || ""; } catch (e) {}
@@ -415,7 +417,7 @@ const OLD_DAYS=45;        // the same 45 days CUT uses (his call, 2026-10-06); i
 const isOld=r=>{const d=days(r);return d!==null&&d>OLD_DAYS;};
 let SORT="new";
 function sortRows(rows){
-  if(SORT==="old") return rows.sort((a,b)=>byDays(b,a));
+  if(SORT==="old") return rows.sort((a,b)=>(!dated(a))-(!dated(b))||byDays(b,a));
   return rows.sort(byDays);
 }
 
