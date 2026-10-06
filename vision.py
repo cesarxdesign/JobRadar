@@ -594,7 +594,7 @@ def see(finder, rec):
             return {**v, "lane": "cut", "stage": "cl",
                     "reason": f"age: the employer's own posting was posted or last updated {a} days ago; the job board's copy made it look newer"}
     # CL: the real page names none of his places. No tokens, and no reading.
-    cl = judge.cut_location(rec, v.get("read"), text)
+    cl = judge.cut_location(rec, v.get("read"), text, shows_job=employer.has_title(rec.get("title"), {"text": text, "title": (page or {}).get("title") or ""}))
     if cl:
         return {**v, "lane": "cut", "stage": "cl", "place_verdict": "no", "reason": cl}
     if FETCH:

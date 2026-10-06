@@ -104,7 +104,7 @@ def cut(job):
 PLACE = re.compile(r"remot|lisbo|portug|europ|\bemea\b", re.I)
 
 
-def cut_location(job, read, text):
+def cut_location(job, read, text, shows_job=True):
     """CL: the job's real page names none of remote, Lisbon, Portugal, Europe,
     EMEA - and neither does anything the pool holds about it. Then it is not
     for him and Claude does not need to read it (his rule, 2026-10-06; against
@@ -112,6 +112,11 @@ def cut_location(job, read, text):
     Only the employer's own page is judged: a job board's copy is a stub, and
     says "Poland" where the posting says six countries and "fully remote"."""
     if read != "employer" or len(text or "") < 400:
+        return None
+    # A page that does not show the job says nothing about where the job is.
+    # On the first evening 43 of 3,315 cuts were made on a cookie banner (ADP)
+    # or an empty frame (iCIMS): no place named, because no posting was there.
+    if not shows_job:
         return None
     if job.get("remote") is True:
         return None
