@@ -1,5 +1,5 @@
 #!/bin/sh
-# JobRadar, every night at 01:00 on this Mac (lid open), so the board has
+# JobRadar, every night at 00:00 on this Mac (lid open), so the board has
 # fresh postings by morning. Started by launchd:
 #   ~/Library/LaunchAgents/com.cesarxdesign.jobradar.plist
 #
@@ -124,7 +124,12 @@ fi
 [ -f inbox.py ] && [ -z "$NO_CHROME" ] && step "inbox" 10 "tail -3" caffeinate -i python3 inbox.py
 # the applying numbers, dates and outcomes only, onto the cxd-stats page
 step "stats" 5 "tail -1" python3 stats_export.py
-# the VISION lane
+# the VISION lane. The night starts at midnight with the work that costs no
+# tokens, so a full queue is waiting; VISION itself starts at 01:00, when his
+# own day with his tokens is over (his call, 2026-10-06). A run started by
+# hand at any other hour does not wait.
+[ "$(date +%H)" = "00" ] && echo "-- VISION holds until 01:00; SOURCE and POOL are filling the queue"
+while [ "$(date +%H)" = "00" ]; do sleep 30; done
 PULL=0; WAITED=0
 while :; do
   Q=$(python3 vision.py --new --count 2>/dev/null | tail -1); case "$Q" in ''|*[!0-9]*) Q=0 ;; esac
