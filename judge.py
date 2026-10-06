@@ -39,6 +39,34 @@ JR, LEAD, NOT = (re.compile(c.PARSE_JUNIOR, re.I), re.compile(c.PARSE_LEADERSHIP
 
 
 # ---------------------------------------------------------------- the parser
+CUT_DAYS = 45       # his call, 2026-10-06: "on CUT, lets cut jobs 45d and older"
+
+
+def age_days(job, today=None):
+    """Days since the posting last moved: the newest of the site's updated
+    date, the day the pool saw it change, and its posting date. None when the
+    posting carries no date at all - then nothing is known, and nothing is cut."""
+    import datetime
+    ds = [str(job[k])[:10] for k in ("updated", "changed", "posted") if job.get(k)]
+    try:
+        return ((today or datetime.date.today()) - datetime.date.fromisoformat(max(ds))).days if ds else None
+    except ValueError:
+        return None
+
+
+def cut(job):
+    """CUT, whole: the title, then the age. None when the job goes on to
+    VISION, else the reason. l1() stays title-only for the callers that have
+    nothing but a title (a link is worth keeping for one design title, however old)."""
+    r = l1(job.get("title"))
+    if r:
+        return r
+    a = age_days(job)
+    if a is not None and a >= CUT_DAYS:
+        return f"age: {a} days since it was posted or last updated"
+    return None
+
+
 def l1(title):
     """None when the title passes, else the reason it was cut. Title only."""
     t = title or ""

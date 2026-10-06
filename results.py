@@ -396,8 +396,11 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
                    "vision_read": len(vision), "title_cuts": title_cuts,
                    # what the board's top line says: design-titled roles, and how many vision has read
                    "design": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None),
-                   "waiting": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None
+                   "waiting": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.cut(r) is None
                                   and r["id"] not in vision), "unjudged": unjudged,
+                   # CUT by age: a design title, but neither posted nor updated in the last 45 days
+                   "age_cuts": sum(1 for r in pool_doc["jobs"] if r.get("active") and judge.l1(r.get("title")) is None
+                                   and judge.cut(r) is not None),
                    "active": sum(1 for r in pool_doc["jobs"] if r.get("active")),
                    "total": len(pool_doc["jobs"])},
         "lanes": lanes,

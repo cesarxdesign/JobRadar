@@ -656,7 +656,7 @@ def pick(jobs, done):
         want = {i for v in res["lanes"].values() for i in v} | set(res.get("agency") or [])
         rows = [j for j in jobs if j["id"] in want]
     else:   # --new: the freshest first, they are the ones worth applying to
-        rows = [j for j in jobs if j.get("active") and judge.l1(j.get("title")) is None]
+        rows = [j for j in jobs if j.get("active") and judge.cut(j) is None]      # CUT: the title, then 45 days
         # Where a job is most likely hiding, first: roles nothing has ever
         # judged; then roles the old judge cut on a job board's copy, which
         # it could not trust; last the ones it cut on the employer's own
