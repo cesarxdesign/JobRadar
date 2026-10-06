@@ -77,31 +77,45 @@ step "tabs" 5 cat python3 tabs.py remoteio
 if [ ! -f data/boards.json ] || [ -n "$(find data/boards.json -mtime +7 2>/dev/null)" ]; then
   step "SOURCE: list links" 60 "tail -24" caffeinate -i python3 harvest.py enumerate
 fi
-# every link in SOURCE, every night (his call, 2026-10-06: "I need to see
-# everything, every day"), so the 40-minute cap is gone; four hours is a stop
-# for a hang, not a budget
+# Staggered (his call, 2026-10-06): "vision needs to be fed at intervals,
+# because the problem is tokens. If the first 3h vision isn't engaged, that's
+# tokens that go unspent." So nothing waits for anything:
+#   SOURCE  every link opened, in the background, for as long as it takes
+#   VISION  starts at once on what is already waiting
+#   POOL    its full pass meanwhile; then rounds: the links SOURCE has just
+#           found go into POOL, and VISION reads 300 of what survives CUT
+# The rounds end when SOURCE has finished and VISION has nothing left.
+CHECK_T0=$(date +%s)
 if pgrep -f "source_loop.sh" >/dev/null; then
   echo "-- SOURCE: check links: left to source_loop.sh, which opens every link all day"
 else
-  step "SOURCE: check links" 250 "tail -8" caffeinate -i python3 harvest.py check --minutes 240
+  echo "-- SOURCE: check links, in the background"
+  ( python3 limit.py 21600 caffeinate -i python3 harvest.py check > data/night_check.log 2>&1
+    echo "   [clock] SOURCE: check links, background: $(( ($(date +%s) - CHECK_T0) / 60 )) min  $(grep -i "checked .* in " data/night_check.log | tail -1 | cut -c1-120)" ) &
 fi
+( python3 limit.py 0 caffeinate -i python3 vision.py --new --limit 300 2>&1 | grep -v "^  \[" | tail -6 > data/night_vision0.log ) &
+V0=$!
 step "POOL" 150 'grep -v "^  \[\|^   *…" | tail -8' caffeinate -i python3 pool.py
 step "SOURCE: discover links" 15 "tail -3" caffeinate -i python3 discover.py
-# only the boards discover just added: they have no row in the pool yet. The
-# old `--only <every system>` re-scraped all 4,087 boards for the sake of a few.
-step "POOL: new links" 30 'grep -v "^  \[\|^   *…" | tail -6' caffeinate -i python3 pool.py --new-boards
 # cesarxdesign@gmail.com only (his call, 2026-10-05). inbox_all.py reads the
 # other accounts and is run by hand, when he asks.
 [ -f inbox.py ] && step "inbox" 10 "tail -3" caffeinate -i python3 inbox.py
 # the applying numbers, dates and outcomes only, onto the cxd-stats page
 step "stats" 5 "tail -1" python3 stats_export.py
+wait $V0
+echo "-- VISION, on what was waiting when the night began"; cat data/night_vision0.log 2>/dev/null
 publish
-( while sleep 1200; do publish; done ) &
-TICK=$!
-# no time limit (see above); at most 3000 pages a night, the newest first, and
-# vision.py says how many it left for the next night
-step "VISION" 0 'grep -v "^  \[" | tail -12' caffeinate -i python3 vision.py --new --limit 3000
-kill $TICK 2>/dev/null
+ROUND=0
+while [ "$ROUND" -lt 40 ]; do
+  ROUND=$((ROUND + 1))
+  step "POOL: new links, round $ROUND" 30 'grep -v "^  \[\|^   *…" | tail -3' caffeinate -i python3 pool.py --new-boards
+  step "VISION, round $ROUND" 0 'grep -v "^  \[" | tail -6 | tee data/night_vision.last' caffeinate -i python3 vision.py --new --limit 300
+  publish
+  if grep -q "VISION: 0 roles to read" data/night_vision.last 2>/dev/null; then
+    pgrep -f "harvest.py check" >/dev/null || break       # SOURCE is done and nothing is left to read
+    sleep 300                                             # SOURCE is still opening links: look again in five minutes
+  fi
+done
 # one cut in ten from this run, read a second time; disagreements go to For Reviewing
 step "VISION: second read of rejections" 60 'grep -v "^  \[" | tail -8' caffeinate -i python3 vision.py --audit
 publish
