@@ -338,7 +338,13 @@ def from_pinpoint(slug, name=None):
 
 
 def from_freshteam(slug, name=None):
-    d = get_json(f"https://{slug}.freshteam.com/hire/widgets/jobs.json")
+    # A company with no Freshteam board is answered 200 with an HTML page, which
+    # was a JSONDecodeError that says nothing; it is said as a 404.
+    url = f"https://{slug}.freshteam.com/hire/widgets/jobs.json"
+    try:
+        d = json.loads(get_text(url))
+    except ValueError:
+        raise urllib.error.HTTPError(url, 404, "no Freshteam job board at this address", None, None)
     for j in d.get("jobs", []):
         if j.get("deleted") or str(j.get("status", "")).lower() in ("closed", "on_hold"):
             continue
@@ -756,7 +762,15 @@ def from_join(slug, cfg=None):
 def from_zoho(key, cfg=None):
     c = cfg if isinstance(cfg, dict) else {}
     sub, tld = c.get("sub", key), c.get("tld", "com")
-    html = get_text(f"https://{sub}.zohorecruit.{tld}/jobs/Careers")
+    # The plain key harvest makes carries its region: "acme.zohorecruit.eu".
+    if "." in sub and ".zohorecruit." in sub:
+        sub, _, tld = sub.partition(".zohorecruit.")
+    url = f"https://{sub}.zohorecruit.{tld}/jobs/Careers"
+    html = get_text(url)
+    # No such account, or no careers page switched on, is answered 200 with an
+    # error page titled "Page does not exist"; said as a 404.
+    if re.search(r"<title>\s*Page does not exist", html, re.I):
+        raise urllib.error.HTTPError(url, 404, "no Zoho Recruit careers page at this address", None, None)
     m = (re.search(r'value="([^"]*)"\s*id="jobs"', html)
          or re.search(r'id="jobs"[^>]*value="([^"]*)"', html))
     if not m:
@@ -833,7 +847,9 @@ def from_workday(key, cfg=None):
                 seen.add(ep)
                 loc = pst.get("locationsText") or ""
                 posted = jd = None
-                workplace = (pst.get("remoteType") or "").lower() or None
+                # the list says Remote, Flex, Hybrid or On-site; normalise() reads remote / hybrid / onsite
+                workplace = {"remote": "remote", "flex": "hybrid", "hybrid": "hybrid", "on-site": "onsite", "onsite": "onsite"}.get(
+                    (pst.get("remoteType") or "").lower())
                 m = re.match(r"Posted (Today|Yesterday|(\d+) Days? Ago)$", pst.get("postedOn") or "")
                 if m:
                     posted = age_to_date(m.group(2) or (0 if m.group(1) == "Today" else 1), "day")
@@ -884,6 +900,36 @@ def from_successfactors(key, cfg=None):
 
 
 def from_comeet(slug, cfg=None):
+    """The key harvest makes is "name/uid" from comeet.com/jobs/<name>/<uid>
+    (365scores/B3.006). The careers-api needs a token, which only the company's
+    own page carries, in COMPANY_DATA; the same page carries POSITIONS_DATA,
+    the full list, so the page is read. A bare name is the old API form, kept
+    for the one old entry (it answers 400, Token is missing)."""
+    if "/" in slug:
+        url = f"https://www.comeet.com/jobs/{slug}"
+        html = get_text(url)
+        m = re.search(r"POSITIONS_DATA\s*=\s*(\[.*?\]);\s*\n", html, re.S)
+        # An address that is no company is redirected away from the board.
+        if not m or "COMPANY_DATA" not in html:
+            raise urllib.error.HTTPError(url, 404, "no Comeet board at this address", None, None)
+        co = re.search(r'COMPANY_DATA = \{\s*"name": "((?:[^"\\]|\\.)*)"', html)
+        company = _name(cfg) or (json.loads('"%s"' % co.group(1)) if co else slug.split("/")[0])
+        for j in json.loads(m.group(1)):
+            loc = j.get("location") or {}
+            loc_s = ", ".join(filter(None, [loc.get("city") or loc.get("name"), loc.get("country")])) if isinstance(loc, dict) else str(loc or "")
+            body = (j.get("custom_fields") or {}).get("details") or j.get("details") or []
+            wt = (j.get("workplace_type") or "").lower()
+            yield {"company": company, "title": j.get("name"),
+                   "url": j.get("url_comeet_hosted_page") or j.get("url_active_page"),
+                   "location": loc_s, "department": j.get("department"),
+                   "employment_type": j.get("employment_type"),
+                   "workplace": wt or None,
+                   "remote": ("remote" in wt) or bool(re.search(r"remote", loc_s, re.I)) or None,
+                   # only the last edit is given; it is not passed off as the posting date
+                   "posted": j.get("time_created"),
+                   "updated": j.get("time_updated"),
+                   "jd_text": strip_html(" ".join(d.get("value") or "" for d in body))}
+        return
     for j in get_json(f"https://www.comeet.co/careers-api/2.0/company/{slug}/positions?details=true"):
         loc = j.get("location") or {}
         loc_s = ", ".join(filter(None, [loc.get("city"), loc.get("country")])) if isinstance(loc, dict) else str(loc or "")
@@ -891,6 +937,261 @@ def from_comeet(slug, cfg=None):
                "url": j.get("url_comeet_hosted_page") or j.get("url_active_page"),
                "location": loc_s, "remote": bool(re.search(r"remote", loc_s, re.I)) or None,
                "jd_text": strip_html(" ".join(d.get("value") or "" for d in (j.get("details") or [])))}
+
+
+# ------------------------------------------------ more hiring systems, 2026-10-06
+# Each was opened by hand on real companies before it was written. A company
+# that is not on the system is raised as a 404 HTTPError (several of them answer
+# 200 with a page that is not a board, so the page is what is checked), so that
+# harvest.check counts the board as gone instead of as an unknown error. Where
+# the list carries no description or date, the role's own page is read, but
+# only for design-titled roles, as bamboohr and workday do.
+
+def from_gem(slug, cfg=None):
+    """jobs.gem.com/<slug>. The board page is a script; Gem's public API has
+    the same list in Greenhouse's shape, and answers a missing slug with 404."""
+    for j in get_json(f"https://api.gem.com/job_board/v0/{slug}/job_posts/"):
+        locs = [(j.get("location") or {}).get("name")] + [o.get("name") for o in (j.get("offices") or []) if isinstance(o, dict)]
+        lt = (j.get("location_type") or "").lower()
+        yield {"company": _name(cfg) or slug, "title": j.get("title"), "url": j.get("absolute_url"),
+               "location": "; ".join(dict.fromkeys(x.strip() for x in locs if x and x.strip())),
+               "workplace": lt if lt in ("remote", "hybrid", "onsite") else ("onsite" if lt == "in_office" else None),
+               "employment_type": j.get("employment_type"),
+               "department": "; ".join(d.get("name") for d in (j.get("departments") or []) if d.get("name")) or None,
+               "posted": j.get("first_published_at") or j.get("created_at"), "updated": j.get("updated_at"),
+               "jd_text": strip_html(j.get("content") or j.get("content_plain"))}
+
+
+def from_polymer(slug, cfg=None):
+    """jobs.polymer.co/<slug> sits behind Cloudflare's browser check (403 to a
+    plain client), but the API the page itself calls does not. The list has no
+    description; the job's own endpoint has it."""
+    import judge
+    for page in range(1, 11):
+        url = f"https://api.polymer.co/v1/hire/organizations/{slug}/jobs?page={page}"
+        try:
+            d = get_json(url)
+        except urllib.error.HTTPError as e:
+            # no such organisation is 422, not 404
+            if e.code == 422:
+                raise urllib.error.HTTPError(url, 404, "no such Polymer organisation", None, None)
+            raise
+        items = d.get("items") or []
+        for j in items:
+            jd = None
+            if judge.l1(j.get("title")) is None:
+                try:
+                    jd = strip_html(get_json(f"https://api.polymer.co/v1/hire/organizations/{slug}/jobs/{j['id']}").get("description"))
+                except Exception:
+                    pass
+            rp = (j.get("remoteness_pretty") or "").lower()
+            yield {"company": j.get("organization_name") or _name(cfg) or slug, "title": unescape(j.get("title") or ""),
+                   "url": j.get("job_post_url"), "location": j.get("display_location") or "",
+                   "workplace": {"remote": "remote", "hybrid": "hybrid", "on-site": "onsite", "onsite": "onsite"}.get(rp),
+                   "employment_type": j.get("kind_pretty"), "department": j.get("job_category_name"),
+                   "salary": j.get("salary_pretty"), "posted": j.get("published_at") or j.get("created_at"),
+                   "jd_text": jd}
+        if not items or d.get("meta", {}).get("is_last"):
+            break
+        time.sleep(0.2)
+
+
+def from_homerun(slug, cfg=None):
+    """<slug>.homerun.co. Its page is a script; its Atom feed (feed.homerun.co/<slug>)
+    has every role with the whole description, and answers a missing company 404."""
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    root = ET.fromstring(get_text(f"https://feed.homerun.co/{slug}"))
+    company = (root.findtext("a:title", namespaces=ns) or "").strip() or slug
+    for e in root.findall("a:entry", ns):
+        link = e.find("a:link", ns)
+        yield {"company": _name(cfg) or company, "title": (e.findtext("a:title", namespaces=ns) or "").strip(),
+               "url": link.get("href") if link is not None else None,
+               "location": (e.findtext("a:location/a:name", namespaces=ns) or "").strip(),
+               "department": (e.findtext("a:department/a:name", namespaces=ns) or "").strip() or None,
+               "employment_type": (e.findtext("a:type/a:name", namespaces=ns) or "").strip() or None,
+               "updated": (e.findtext("a:updated", namespaces=ns) or "").strip() or None,
+               "jd_text": strip_html(e.findtext("a:description", namespaces=ns) or e.findtext("a:content", namespaces=ns))}
+
+
+def from_jobvite(slug, cfg=None):
+    """jobs.jobvite.com/<slug>/jobs: server-rendered tables, one per department.
+    A company that is not on Jobvite is sent to jobvite.com's support page."""
+    import judge
+    url = f"https://jobs.jobvite.com/{slug}/jobs"
+    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=TIMEOUT) as r:
+        if not urllib.parse.urlparse(r.geturl()).netloc.startswith("jobs.jobvite.com"):
+            raise urllib.error.HTTPError(url, 404, "no such Jobvite company (sent to jobvite.com)", None, None)
+        html = r.read().decode("utf-8", "replace")
+    title = re.search(r"<title>\s*(.*?)\s*(?:Careers|Jobs)?\s*</title>", html, re.S)
+    company = _name(cfg) or (strip_html(title.group(1)) if title else "") or slug
+    for part in re.split(r'<h3 class="h2">', html)[1:] if '<h3 class="h2">' in html else [html]:
+        dept = strip_html(part.split("</h3>")[0]) if '<h3 class="h2">' in html else None
+        for m in re.finditer(r'<a href="(/[^"/]+/job/([A-Za-z0-9]+))">(.*?)</a>\s*</td>\s*<td class="jv-job-list-location">(.*?)</td>', part, re.S):
+            href, jid, ttl, loc = m.groups()
+            ttl, loc = strip_html(ttl).strip(), re.sub(r"\s*\n\s*", " ", strip_html(loc)).strip()
+            posted = jd = None
+            if judge.l1(ttl) is None:
+                try:
+                    dh = get_text(f"https://jobs.jobvite.com{href}")
+                    ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', dh, re.S)
+                    if ld:
+                        j = json.loads(ld.group(1))
+                        posted, jd = j.get("datePosted"), strip_html(j.get("description"))
+                        pl = j.get("jobLocation")
+                        pl = [pl] if isinstance(pl, dict) else (pl or [])
+                        if re.search(r"\d+ Locations?", loc) and pl:
+                            loc = "; ".join(dict.fromkeys(
+                                ", ".join(filter(None, [a.get("addressLocality"), a.get("addressRegion"), a.get("addressCountry")]))
+                                for p in pl for a in [p.get("address") or {}] if isinstance(a, dict))) or loc
+                except Exception:
+                    pass
+            yield {"company": company, "title": ttl, "url": f"https://jobs.jobvite.com{href}", "location": loc,
+                   "department": dept, "posted": posted, "jd_text": jd}
+
+
+def icims_where(key):
+    """careers-<name> (or jobs-<name>), as the address spells it."""
+    return key if "." in key else f"{key}.icims.com"
+
+
+def from_icims(key, cfg=None):
+    """careers-<name>.icims.com. The search page, asked for its framed version
+    (in_iframe=1), is plain server-rendered cards; the search word keeps a large
+    company's list to the design roles. 'Page 1 of 7' says how far to go."""
+    import judge
+    host, seen = icims_where(key), set()
+    for kw in ("design", "ux"):
+        pages, pr = 1, 0
+        while pr < pages and pr < 8:
+            url = f"https://{host}/jobs/search?ss=1&searchKeyword={kw}&in_iframe=1&pr={pr}"
+            html = get_text(url)
+            if "iCIMS_JobsTable" not in html and "iCIMS" not in html:
+                raise urllib.error.HTTPError(url, 404, "no iCIMS career site at this address", None, None)
+            m = re.search(r"Page \d+ of (\d+)", html)
+            pages = int(m.group(1)) if m else 1
+            for card in re.findall(r'<li class="iCIMS_JobCardItem">(.*?)</li>', html, re.S):
+                am = re.search(r'<a href="([^"]+)" class="iCIMS_Anchor"[^>]*>\s*<span[^>]*>Title</span>\s*<h3[^>]*>(.*?)</h3>', card, re.S)
+                if not am or am.group(1) in seen:
+                    continue
+                seen.add(am.group(1))
+                href = am.group(1).replace("?in_iframe=1", "").replace("&in_iframe=1", "")
+                lm = re.search(r"Job Locations</span>\s*<span[^>]*>(.*?)</span>", card, re.S)
+                locs = []
+                for l in re.split(r"\s*\n\s*|\s{2,}", strip_html(lm.group(1)) if lm else ""):
+                    p = l.strip().split("-", 2)      # US-KY-Louisville -> Louisville, KY, US
+                    if l.strip():
+                        locs.append(", ".join(reversed(p)) if len(p) == 3 else l.strip())
+                ttl = strip_html(am.group(2)).strip()
+                dm = re.search(r"Category</dt>\s*<dd[^>]*><span[^>]*>(.*?)</span>", card, re.S)
+                posted, jd = None, strip_html((re.search(r'class="col-xs-12 description">(.*?)</div>', card, re.S) or [None, ""])[1])
+                if judge.l1(ttl) is None:
+                    try:
+                        dh = get_text(href + "?in_iframe=1")
+                        ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', dh, re.S)
+                        if ld:
+                            j = json.loads(ld.group(1), strict=False)
+                            posted, jd = j.get("datePosted"), strip_html(j.get("description")) or jd
+                    except Exception:
+                        pass
+                yield {"company": _name(cfg) or re.sub(r"^(careers|jobs)-", "", host.split(".")[0]), "title": ttl, "url": href,
+                       "location": "; ".join(locs), "department": strip_html(dm.group(1)).strip() if dm else None,
+                       "posted": posted, "jd_text": jd}
+            pr += 1
+            time.sleep(0.2)
+
+
+def from_trakstar(slug, cfg=None):
+    """<slug>.hire.trakstar.com, and <slug>.recruiterbox.com, which is the same
+    system under its old name (the old address redirects). Both publish an RSS
+    feed of every role; a company that is not there is a 404."""
+    ns = {"job": "https://recruiterbox.com/rss/job/"}
+    root = ET.fromstring(get_text(f"https://{slug}.hire.trakstar.com/jobfeeds/{slug}"))
+    ch = root.find("channel")
+    company = re.sub(r"^Jobs at ", "", (ch.findtext("title") or "").strip()) or slug
+    for it in ch.findall("item"):
+        loc = ", ".join(filter(None, [(it.findtext(f"job:{k}", namespaces=ns) or "").strip() for k in ("locationCity", "locationState", "locationCountry")]))
+        yield {"company": _name(cfg) or company, "title": (it.findtext("title") or "").strip(), "url": it.findtext("link"),
+               "location": loc, "department": (it.findtext("job:team", namespaces=ns) or "").strip() or None,
+               "employment_type": (it.findtext("job:positionType", namespaces=ns) or "").replace("_", " ") or None,
+               "posted": (it.findtext("pubDate") or "").strip() or None,
+               # every description opens with its own "Location: ..." line, already in `location`
+               "jd_text": re.sub(r"^Location:[^\n]*\n+", "", strip_html(it.findtext("description")))}
+
+
+def from_paylocity(guid, cfg=None):
+    """recruiting.paylocity.com/recruiting/jobs/All/<guid>: the page carries its
+    list as window.pageData. The list gives a teaser only; the role's own page,
+    for design-titled roles, the rest."""
+    import judge
+    url = f"https://recruiting.paylocity.com/recruiting/jobs/All/{guid}"
+    html = get_text(url)
+    i = html.find("window.pageData = ")
+    if i < 0:         # an unknown id is answered 200 on a "job not found" page
+        raise urllib.error.HTTPError(url, 404, "no such Paylocity job board", None, None)
+    d, _ = json.JSONDecoder().raw_decode(html[i + len("window.pageData = "):])
+    for j in d.get("Jobs") or []:
+        if j.get("IsInternal"):
+            continue
+        jl = j.get("JobLocation") or {}
+        loc = j.get("LocationName") or ", ".join(filter(None, [jl.get("City"), jl.get("State"), jl.get("Country")]))
+        jd = strip_html(j.get("Description"))
+        if judge.l1(j.get("JobTitle")) is None:
+            try:
+                dh = get_text(f"https://recruiting.paylocity.com/Recruiting/Jobs/Details/{j['JobId']}")
+                ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', dh, re.S)
+                if ld:
+                    jd = strip_html(json.loads(ld.group(1), strict=False).get("description")) or jd
+            except Exception:
+                pass
+        yield {"company": _name(cfg) or d.get("ModuleTitle") or guid, "title": j.get("JobTitle"),
+               "url": f"https://recruiting.paylocity.com/Recruiting/Jobs/Details/{j['JobId']}",
+               "location": loc, "department": j.get("HiringDepartment"),
+               "remote": True if j.get("IsRemote") else None, "posted": j.get("PublishedDate"), "jd_text": jd}
+
+
+def from_ultipro(key, cfg=None):
+    """recruiting.ultipro.com/<code>/JobBoard/<guid>, UKG's. Key "code/guid".
+    The board's own search call answers JSON; a role's page carries its
+    description in a script."""
+    import judge
+    code, guid = key.split("/", 1)
+    base = f"https://recruiting.ultipro.com/{code}/JobBoard/{guid}"
+    skip = 0
+    while skip < 1000:
+        body = {"opportunitySearch": {"Top": 50, "Skip": skip, "QueryString": "",
+                                      "OrderBy": [{"Value": "postedDateDesc", "PropertyName": "PostedDate", "Ascending": False}],
+                                      "Filters": [{"t": "TermsSearchFilterDto", "fieldName": f, "extra": None, "values": []} for f in (4, 5, 6)]},
+                "matchCriteria": {"PreferredJobs": [], "Educations": [], "LicenseAndCertifications": [], "Skills": [], "hasNoLicenses": False, "SkippedSkills": []}}
+        d = _post_json(base + "/JobBoardView/LoadSearchResults", body)
+        rows = d.get("opportunities") or []
+        for j in rows:
+            locs = []
+            for l in j.get("Locations") or []:
+                a = l.get("Address") or {}
+                locs.append(", ".join(filter(None, [a.get("City"), (a.get("State") or {}).get("Code"), (a.get("Country") or {}).get("Name")]))
+                            or l.get("LocalizedName"))
+            url = f"{base}/OpportunityDetail?opportunityId={j.get('Id')}"
+            jd = strip_html(j.get("BriefDescription"))
+            if judge.l1(j.get("Title")) is None:
+                try:
+                    dh = get_text(url)
+                    k = dh.find("CandidateOpportunityDetail(")
+                    det, _ = json.JSONDecoder().raw_decode(dh[k + len("CandidateOpportunityDetail("):])
+                    jd = strip_html(det.get("Description")) or jd
+                except Exception:
+                    pass
+            yield {"company": _name(cfg) or code, "title": j.get("Title"), "url": url,
+                   "location": "; ".join(dict.fromkeys(x for x in locs if x)),
+                   "department": j.get("JobCategoryName"),
+                   "employment_type": "Full-time" if j.get("FullTime") else ("Part-time" if j.get("FullTime") is False else None),
+                   "posted": j.get("PostedDate"), "jd_text": jd}
+        skip += 50
+        if len(rows) < 50 or skip >= (d.get("totalCount") or 0):
+            break
+
+
+ADAPTERS.update({"gem": from_gem, "polymer": from_polymer, "homerun": from_homerun, "jobvite": from_jobvite,
+                 "icims": from_icims, "trakstar": from_trakstar, "paylocity": from_paylocity, "ultipro": from_ultipro})
 
 
 def agg_himalayas():

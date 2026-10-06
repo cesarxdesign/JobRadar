@@ -75,6 +75,25 @@ PATTERNS = [
     # guessed) and the career site's name, past an optional language segment.
     ("workday",         "*.myworkdayjobs.com",           r"//([a-z0-9-]+\.wd\d+)\.myworkdayjobs\.com/(?:(?:[a-z]{2}-[A-Za-z]{2,4}|en|es|fr|de|it|pt|nl|ja|ko|zh|ar|ru|pl|sv|no|da|fi|tr|cs|hu|ro|th|id|vi|he|el|uk)/)?"
                                                         r"(?!(?:login|assets|userHome|introduceYourself|jobAlerts|wday|job|details|page|apply|jobs|search|resetPassword|cdn-cgi|[a-z]{2}-[A-Za-z]{2,4})(?:[/?#]|$))([A-Za-z0-9_-]+)(?=[/?#]|$)", "{0}/{1}"),
+    ("freshteam",       "*.freshteam.com",               r"//([a-z0-9-]+)\.freshteam\.com",               "{s}"),
+    # Zoho Recruit has one address per region; the key carries the region unless it is .com
+    ("zoho",            "*.zohorecruit.com",             r"//([a-z0-9-]+)\.zohorecruit\.com",             "{s}"),
+    ("zoho",            "*.zohorecruit.eu",              r"//([a-z0-9-]+)\.zohorecruit\.eu",              "{s}.zohorecruit.eu"),
+    ("zoho",            "*.zohorecruit.in",              r"//([a-z0-9-]+)\.zohorecruit\.in",              "{s}.zohorecruit.in"),
+    # Comeet's list needs a token that only the company's own page holds, so the key is that page: name/uid
+    ("comeet",          "www.comeet.com/jobs/*",         r"comeet\.com/jobs/([^/?#]+)/([0-9A-Za-z]{2}\.[0-9A-Za-z]{3})(?=[/?#]|$)", "{0}/{1}"),
+    ("gem",             "jobs.gem.com/*",                r"jobs\.gem\.com/([^/?#]+)",                     "{s}"),
+    ("polymer",         "jobs.polymer.co/*",             r"jobs\.polymer\.co/([^/?#]+)",                  "{s}"),
+    ("homerun",         "*.homerun.co",                  r"//([a-z0-9-]+)\.homerun\.co",                  "{s}"),
+    ("jobvite",         "jobs.jobvite.com/*",            r"jobs\.jobvite\.com/([^/?#]+)",                 "{s}"),
+    # iCIMS: the whole subdomain is the key (careers-<name> or jobs-<name>)
+    ("icims",           "*.icims.com",                   r"//((?:careers|jobs)-[a-z0-9-]+)\.icims\.com",  "{s}"),
+    # Trakstar Hire and Recruiterbox are one system (the old address redirects to the new): one key list
+    ("trakstar",        "*.hire.trakstar.com",           r"//([a-z0-9-]+)\.hire\.trakstar\.com",          "{s}"),
+    ("trakstar",        "*.recruiterbox.com",            r"//([a-z0-9-]+)\.recruiterbox\.com",            "{s}"),
+    ("paylocity",       "recruiting.paylocity.com/recruiting/jobs/All/*", r"recruiting\.paylocity\.com/recruiting/jobs/All/([0-9a-f-]{36})", "{s}"),
+    # UKG / UltiPro: the company code and the board's guid, both in the address
+    ("ultipro",         "recruiting.ultipro.com/*",      r"recruiting\.ultipro\.com/([A-Za-z0-9]+)/JobBoard/([0-9a-f-]{36})", "{0}/{1}"),
 ]
 NOT_A_BOARD = {"www", "app", "api", "embed", "jobs", "job", "careers", "career", "static", "assets", "cdn", "help", "support",
                "docs", "blog", "status", "login", "signup", "sitemap", "robots.txt", "favicon.ico", "search", "about",
@@ -287,7 +306,18 @@ ARCHIVE_PATH = {"bamboohr": r"(careers|jobs)"}
 # 1,001 pages of 150,000), but a board's own address is the front page, at most
 # one language segment and a site name; the second filter drops the pages that
 # sit at that depth but are not a site (login, assets, job, ...).
-ARCHIVE_FILTER = {"workday": [r"original:.*myworkdayjobs\.com/[^/?#]*(/[^/?#]*)?/?",
+ARCHIVE_FILTER = {
+    # Zoho: 99% of the Archive's addresses are job pages (/jobs/Careers/<id>); a board's own page is /jobs/Careers or /careers.
+    "zoho": [r"original:.*zohorecruit\.[a-z]+/(jobs/Careers|careers)/?([?#].*)?$"],
+    # Comeet: the board is /jobs/<name>/<uid>; everything deeper is one position.
+    "comeet": [r"original:.*comeet\.com/jobs/[^/?#]+/[0-9A-Za-z]{2}\.[0-9A-Za-z]{3}/?([?#].*)?$"],
+    # Homerun, Jobvite, iCIMS, Trakstar, UKG: a company's own list page, not each of its jobs (one address per job otherwise).
+    "homerun": [r"original:https?://[a-z0-9-]+\.homerun\.co/?([?#].*)?$"],
+    "jobvite": [r"original:https?://jobs\.jobvite\.com/[^/?#]+(/(jobs|search))?/?([?#].*)?$"],
+    "icims": [r"original:.*//(careers|jobs)-[a-z0-9-]+\.icims\.com/jobs/(search|intro)([?#].*)?$"],
+    "trakstar": [r"original:.*//[a-z0-9-]+\.(hire\.trakstar|recruiterbox)\.com/(jobs|jobfeeds/[^/?#]*)?/?([?#].*)?$"],
+    "ultipro": [r"original:.*recruiting\.ultipro\.com/[A-Za-z0-9]+/JobBoard/[0-9a-fA-F-]{36}/?([?#].*)?$"],
+    "workday": [r"original:.*myworkdayjobs\.com/[^/?#]*(/[^/?#]*)?/?",
                               r"!original:.*myworkdayjobs\.com/([a-zA-Z-]{2,5}/)?(login|assets|userHome|introduceYourself|jobAlerts|favicon\.ico|robots\.txt|wday|job|details|page|apply|jobs|search|resetPassword|sitemap\.xml)([/?#].*)?$"]}
 
 
@@ -335,10 +365,10 @@ def wayback(only=None, since="2025", dry=False):
                 base.update({"url": domain, "matchType": "domain"})
                 if system in ARCHIVE_PATH:
                     base["filter"] = "original:.*" + re.escape(domain) + "/" + ARCHIVE_PATH[system] + ".*"
-                if system in ARCHIVE_FILTER:
-                    base["filter"] = ARCHIVE_FILTER[system]
             else:
                 base["url"] = ask
+            if system in ARCHIVE_FILTER:
+                base["filter"] = ARCHIVE_FILTER[system]
             while n < 80:
                 q = dict(base)
                 if key:
