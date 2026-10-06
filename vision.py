@@ -496,6 +496,17 @@ def see(finder, rec):
         feed = feed or None
         found, tried = finder.find(rec, board, hint=(feed or {}).get("apply"))
         emp = found and found["page"]
+    # The date of the original. A job board's copy carries the board's date,
+    # and boards re-post: 5 in 220 were weeks newer than the employer's own
+    # posting. When the original found is one the pool reads from the
+    # employer's own link, that row's dates are the real ones.
+    orig = None
+    if is_board and found:
+        if not hasattr(finder, "by_id"):
+            finder.by_id = {j["id"]: j for js in finder.pool.values() for j in js}
+        bare = lambda u: (u or "").split("?")[0].rstrip("/")
+        orig = finder.by_id.get(found.get("pool_id")) or next(
+            (j for j in finder.pool.get(employer.squash(rec["company"]), []) if j.get("url") and bare(j["url"]) == bare((emp or {}).get("url"))), None)
     if is_board and not found and rec["id"] in PREV:
         return {**PREV[rec["id"]], "looked": tried, "looked_at": time.strftime("%Y-%m-%dT%H:%M:%S")}   # still only the board's copy: nothing new to read
     keep = ("url", "status", "shot", "error")
@@ -575,6 +586,13 @@ def see(finder, rec):
         open(f"{ROOT}/data/pages/{rec['id']}.txt", "w").write(text[:MAX_CHARS])
     except Exception:
         pass
+    # ...and the 45 days again, on the original's own dates (CLF, his name for it)
+    if orig is not None:
+        v["orig_id"], v["orig_posted"], v["orig_updated"] = orig.get("id"), orig.get("posted"), orig.get("updated") or orig.get("changed")
+        a = judge.age_days(orig)
+        if a is not None and a >= judge.CUT_DAYS:
+            return {**v, "lane": "cut", "stage": "cl",
+                    "reason": f"age: the employer's own posting was posted or last updated {a} days ago; the job board's copy made it look newer"}
     # CL: the real page names none of his places. No tokens, and no reading.
     cl = judge.cut_location(rec, v.get("read"), text)
     if cl:
@@ -707,8 +725,11 @@ def pick(jobs, done):
         rank = lambda j: 0 if not old.get(j["id"], {}).get("judged") else 1 if "/" not in j["source"] else 2
         # the freshest first, and fresh means last updated: the newest of the site's
         # updated date, the day the pool saw it change, and the posting date
-        rows.sort(key=lambda j: max([str(j[k])[:10] for k in ("updated", "changed", "posted") if j.get(k)]
-                                    or [str(j.get("first_seen") or "")[:10]]), reverse=True)
+        # A job with no date at all goes last: "?" means long ago, we do not know.
+        def fresh(j):
+            ds = [str(j[k])[:10] for k in ("updated", "changed", "posted") if j.get(k)]
+            return (1, max(ds)) if ds else (0, str(j.get("first_seen") or "")[:10])
+        rows.sort(key=fresh, reverse=True)
         rows.sort(key=rank)
         if "--fresh" in args:              # everything except what the old judge cut on the employer's own text
             rows = [j for j in rows if rank(j) < 2]
