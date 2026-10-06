@@ -663,7 +663,10 @@ def pick(jobs, done):
         # text. Newest first within each.
         old = json.load(open(f"{ROOT}/data/verdicts.json"))["jobs"] if os.path.exists(f"{ROOT}/data/verdicts.json") else {}
         rank = lambda j: 0 if not old.get(j["id"], {}).get("judged") else 1 if "/" not in j["source"] else 2
-        rows.sort(key=lambda j: j.get("posted") or j.get("first_seen") or "", reverse=True)
+        # the freshest first, and fresh means last updated: the newest of the site's
+        # updated date, the day the pool saw it change, and the posting date
+        rows.sort(key=lambda j: max([str(j[k])[:10] for k in ("updated", "changed", "posted") if j.get(k)]
+                                    or [str(j.get("first_seen") or "")[:10]]), reverse=True)
         rows.sort(key=rank)
         if "--fresh" in args:              # everything except what the old judge cut on the employer's own text
             rows = [j for j in rows if rank(j) < 2]

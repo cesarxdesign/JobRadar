@@ -71,11 +71,15 @@ $line$extra"
 # Radar's own hidden Chrome, left over from a stopped run, answers AppleScript
 # in place of his: with one alive, the script reads the wrong browser's tabs.
 pkill -f "radar-chrome-" 2>/dev/null; sleep 2
-step "tabs" 5 cat python3 tabs.py remoteio
+# NO_CHROME=1 leaves his Chrome alone (tabs, inbox): for a run by day, while he is working in it
+[ -n "$NO_CHROME" ] || step "tabs" 5 cat python3 tabs.py remoteio
 # every company board on every hiring system: the list is refreshed weekly,
 # and each night the boards that are due get checked for a design role
 if [ ! -f data/boards.json ] || [ -n "$(find data/boards.json -mtime +7 2>/dev/null)" ]; then
   step "SOURCE: list links" 60 "tail -24" caffeinate -i python3 harvest.py enumerate
+  # the Internet Archive knows about twice as many links as the web index does
+  # (62,000 more on 2026-10-06); asked in the background, it takes an hour or two
+  ( python3 limit.py 14400 caffeinate -i python3 harvest.py wayback > data/night_wayback.log 2>&1 ) &
 fi
 # Staggered (his call, 2026-10-06): "vision needs to be fed at intervals,
 # because the problem is tokens. If the first 3h vision isn't engaged, that's
@@ -99,7 +103,7 @@ step "POOL" 150 'grep -v "^  \[\|^   *…" | tail -8' caffeinate -i python3 pool
 step "SOURCE: discover links" 15 "tail -3" caffeinate -i python3 discover.py
 # cesarxdesign@gmail.com only (his call, 2026-10-05). inbox_all.py reads the
 # other accounts and is run by hand, when he asks.
-[ -f inbox.py ] && step "inbox" 10 "tail -3" caffeinate -i python3 inbox.py
+[ -f inbox.py ] && [ -z "$NO_CHROME" ] && step "inbox" 10 "tail -3" caffeinate -i python3 inbox.py
 # the applying numbers, dates and outcomes only, onto the cxd-stats page
 step "stats" 5 "tail -1" python3 stats_export.py
 wait $V0
