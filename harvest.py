@@ -92,6 +92,12 @@ PATTERNS = [
     ("trakstar",        "*.hire.trakstar.com",           r"//([a-z0-9-]+)\.hire\.trakstar\.com",          "{s}"),
     ("trakstar",        "*.recruiterbox.com",            r"//([a-z0-9-]+)\.recruiterbox\.com",            "{s}"),
     ("paylocity",       "recruiting.paylocity.com/recruiting/jobs/All/*", r"recruiting\.paylocity\.com/recruiting/jobs/All/([0-9a-f-]{36})", "{s}"),
+    ("hibob",           "*.careers.hibob.com",           r"//([a-z0-9-]+)\.careers\.hibob\.com",          "{s}"),
+    ("factorial",       "*.factorialhr.com",             r"//([a-z0-9-]+)\.factorialhr\.com",             "{s}"),
+    # Oracle Recruiting Cloud: host and site, one Archive question per data-centre region (a bare "oraclecloud.com" is too large to answer)
+    *[("oraclerc", f"*.fa.{reg}oraclecloud.com", r"//([a-z0-9]+\.fa\.(?:[a-z0-9-]+\.)?oraclecloud\.com)/hcmUI/CandidateExperience/[a-zA-Z-]+/sites/([A-Za-z0-9_]+)(?=[/?#]|$)", "{0}/{1}")
+      for reg in ("", "us2.", "us6.", "em2.", "em3.", "em4.", "ap1.", "ca2.", "uk1.")],
+    ("adp",             "workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html*", r"workforcenow\.adp\.com/mascsr/[^\s]*[?&]cid=([0-9a-f-]{36})", "{s}"),
     # UKG / UltiPro: the company code and the board's guid, both in the address
     ("ultipro",         "recruiting.ultipro.com/*",      r"recruiting\.ultipro\.com/([A-Za-z0-9]+)/JobBoard/([0-9a-f-]{36})", "{0}/{1}"),
 ]
@@ -317,6 +323,10 @@ ARCHIVE_FILTER = {
     "icims": [r"original:.*//(careers|jobs)-[a-z0-9-]+\.icims\.com/jobs/(search|intro)([?#].*)?$"],
     "trakstar": [r"original:.*//[a-z0-9-]+\.(hire\.trakstar|recruiterbox)\.com/(jobs|jobfeeds/[^/?#]*)?/?([?#].*)?$"],
     "ultipro": [r"original:.*recruiting\.ultipro\.com/[A-Za-z0-9]+/JobBoard/[0-9a-fA-F-]{36}/?([?#].*)?$"],
+    "hibob": [r"original:.*//[a-z0-9-]+\.careers\.hibob\.com/(jobs)?/?([?#].*)?$"],
+    "factorial": [r"original:https?://[a-z0-9-]+\.factorialhr\.com/?(job_posting.*)?([?#].*)?$"],
+    # Oracle: a site's own page; every job under it is another address
+    "oraclerc": [r"original:.*CandidateExperience/[a-zA-Z-]+/sites/[A-Za-z0-9_]+/?([?#].*)?$"],
     "workday": [r"original:.*myworkdayjobs\.com/[^/?#]*(/[^/?#]*)?/?",
                               r"!original:.*myworkdayjobs\.com/([a-zA-Z-]{2,5}/)?(login|assets|userHome|introduceYourself|jobAlerts|favicon\.ico|robots\.txt|wday|job|details|page|apply|jobs|search|resetPassword|sitemap\.xml)([/?#].*)?$"]}
 
@@ -373,7 +383,14 @@ def wayback(only=None, since="2025", dry=False):
                 q = dict(base)
                 if key:
                     q["resumeKey"] = key
-                t = get("http://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode(q, doseq=True), timeout=300, tries=6)
+                filtered = "filter" in q and n == 0
+                t = get("http://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode(q, doseq=True), timeout=300, tries=2 if filtered else 6)
+                if filtered and (not t or t.lstrip().startswith("<")):
+                    # The Archive scans for a filter on its side and can run out of time on a large domain
+                    # (zoho .com, jobvite). Asked again without it: more addresses come back, none are lost.
+                    print(f"  {system}: no answer with the filter; asking without it", flush=True)
+                    base.pop("filter", None)
+                    continue
                 if not t or t.lstrip().startswith("<"):
                     print(f"  {system}: the Archive did not answer after {n} requests; keeping what there is", flush=True)
                     break

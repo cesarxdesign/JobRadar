@@ -1190,6 +1190,137 @@ def from_ultipro(key, cfg=None):
             break
 
 
+def from_hibob(slug, cfg=None):
+    """<slug>.careers.hibob.com. The page's own call, /api/job-ad, answers 401
+    unless the company is named in a companyIdentifier header; a company that
+    is not on HiBob answers 401 just the same, so that is what a 404 means here."""
+    url = f"https://{slug}.careers.hibob.com/api/job-ad"
+    req = urllib.request.Request(url, headers={**UA, "Accept": "application/json", "companyIdentifier": slug})
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            d = json.loads(r.read().decode("utf-8", "replace"))
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403):
+            raise urllib.error.HTTPError(url, 404, "no such HiBob careers page", None, None)
+        raise
+    for j in d.get("jobAdDetails") or []:
+        wt = (j.get("workspaceType") or "").lower()
+        body = [j.get("description"), j.get("requirements"), j.get("responsibilities"), j.get("benefits")]
+        yield {"company": _name(cfg) or slug, "title": j.get("title"), "url": f"https://{slug}.careers.hibob.com/jobs/{j.get('id')}",
+               "location": ", ".join(filter(None, [j.get("site"), j.get("country")])),
+               "workplace": {"remote": "remote", "hybrid": "hybrid", "on-site": "onsite", "onsite": "onsite"}.get(wt),
+               "employment_type": j.get("employmentType"), "department": j.get("department"),
+               "posted": j.get("publishedAt"),
+               "jd_text": "\n\n".join(strip_html(b) for b in body if b)}
+
+
+def from_factorial(slug, cfg=None):
+    """<slug>.factorialhr.com: server-rendered, the roles grouped under the
+    office they are in (or "Remote"). The page has no date and loads the
+    description by script, so those are left empty. An unknown company is 404."""
+    html = get_text(f"https://{slug}.factorialhr.com/")
+    t = re.search(r"<title>\s*(.*?)\s+-\s+Job offers", html, re.S)
+    company = _name(cfg) or (strip_html(t.group(1)) if t else slug)
+    for part in re.split(r"<h3[^>]*>", html)[1:]:
+        head, _, rest = part.partition("</h3>")
+        place = strip_html(head).strip()
+        for m in re.finditer(r"<li class='job-offer-item[^>]*>(.*?)</li>", rest, re.S):
+            li = m.group(0)
+            url = re.search(r"data-job-postings-url='([^']+)'", li)
+            ttl = re.search(r'factorial__headingFontFamily">(.*?)</div>', li, re.S)
+            if not (url and ttl):
+                continue
+            remote = re.search(r"data-is-remote='(\w+)'", li)
+            ct = re.search(r"data-contract-type='([^']*)'", li)
+            yield {"company": company, "title": strip_html(ttl.group(1)).strip(), "url": url.group(1),
+                   "location": place, "remote": True if remote and remote.group(1) == "true" else None,
+                   "employment_type": {"indefinite": "Permanent"}.get(ct.group(1), ct.group(1).title()) if ct and ct.group(1) else None}
+
+
+def from_oraclerc(key, cfg=None):
+    """Oracle Recruiting Cloud (the successor of Taleo): <host>.fa.<region>.oraclecloud.com.
+    Key "host/site", the two words after the address's hcmUI/CandidateExperience/<lang>/sites/
+    (cbdt.fa.us2.oraclecloud.com/CX_3001). The career page is a script, but the REST
+    call it makes is open and takes the site's name as it is written in the address.
+    A search word keeps a large company's list to the design roles, as with Workday."""
+    import judge
+    host, site = key.split("/", 1)
+    seen = set()
+    for kw in ("design", "ux"):
+        offset = 0
+        for _ in range(12):
+            url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true"
+                   f"&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber={site},limit=25,offset={offset},"
+                   f"keyword={urllib.parse.quote(kw)},sortBy=POSTING_DATES_DESC")
+            d = get_json(url)
+            it = (d.get("items") or [{}])[0]
+            rows = it.get("requisitionList") or []
+            if not it.get("SiteNumber"):
+                raise urllib.error.HTTPError(url, 404, "no such Oracle Recruiting site", None, None)
+            for j in rows:
+                if j["Id"] in seen:
+                    continue
+                seen.add(j["Id"])
+                locs = [j.get("PrimaryLocation")] + [s.get("Name") for s in j.get("secondaryLocations") or [] if isinstance(s, dict)]
+                jd = strip_html(j.get("ShortDescriptionStr"))
+                if judge.l1(j.get("Title")) is None:
+                    try:
+                        det = get_json(f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true"
+                                       f"&finder=ById;Id=%22{j['Id']}%22,siteNumber={site}")
+                        r0 = (det.get("items") or [{}])[0]
+                        jd = strip_html(" ".join(filter(None, [r0.get("ExternalDescriptionStr"), r0.get("ExternalResponsibilitiesStr"),
+                                                               r0.get("ExternalQualificationsStr")]))) or jd
+                    except Exception:
+                        pass
+                wt = (j.get("WorkplaceType") or "").lower().replace(" ", "").replace("-", "")
+                yield {"company": _name(cfg) or host.split(".")[0], "title": j.get("Title"),
+                       "url": f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{j['Id']}",
+                       "location": "; ".join(dict.fromkeys(x for x in locs if x)),
+                       "workplace": {"remote": "remote", "hybrid": "hybrid", "onsite": "onsite"}.get(wt),
+                       "department": j.get("JobFamily") or j.get("Organization"), "posted": j.get("PostedDate"), "jd_text": jd}
+            offset += 25
+            if len(rows) < 25 or offset >= (it.get("TotalJobsCount") or 0):
+                break
+            time.sleep(0.2)
+
+
+def from_adp(cid, cfg=None):
+    """ADP Workforce Now recruitment pages (workforcenow.adp.com/.../recruitment.html?cid=<guid>).
+    The page is a script; the staffing call behind it is open JSON. The key is the
+    cid. The call says nothing of who the company is, so unless a name is given
+    the company is the cid."""
+    import judge
+    base = "https://workforcenow.adp.com/mascsr/default/careercenter/public/events/staffing/v1/job-requisitions"
+    skip = 0
+    while skip < 1000:
+        d = get_json(f"{base}?cid={cid}&lang=en_US&locale=en_US&$top=100&$skip={skip}")   # an unknown cid is a 404
+        rows = d.get("jobRequisitions") or []
+        for j in rows:
+            f = {s.get("nameCode", {}).get("codeValue"): s.get("stringValue") for s in (j.get("customFieldGroup") or {}).get("stringFields") or []}
+            loc = ""
+            for l in j.get("requisitionLocations") or []:
+                a = l.get("address") or {}
+                loc = ", ".join(filter(None, [a.get("cityName"), (a.get("countrySubdivisionLevel1") or {}).get("codeValue"), a.get("countryCode")]))
+                if loc:
+                    break
+            jd = None
+            if judge.l1(j.get("requisitionTitle")) is None:
+                try:
+                    det = get_json(f"{base}/{j['itemID']}?cid={cid}&lang=en_US&locale=en_US")
+                    jd = strip_html(det.get("requisitionDescription")) or None
+                except Exception:
+                    pass
+            yield {"company": _name(cfg) or cid, "title": j.get("requisitionTitle"),
+                   "url": f"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid={cid}&jobId={f.get('ExternalJobID') or ''}&lang=en_US",
+                   "location": loc, "department": f.get("JobClass") or None,
+                   "employment_type": (j.get("workLevelCode") or {}).get("shortName"),
+                   "posted": j.get("postDate"), "jd_text": jd}
+        skip += 100
+        if len(rows) < 100 or skip >= ((d.get("meta") or {}).get("totalNumber") or 0):
+            break
+
+
+ADAPTERS.update({"hibob": from_hibob, "factorial": from_factorial, "oraclerc": from_oraclerc, "adp": from_adp})
 ADAPTERS.update({"gem": from_gem, "polymer": from_polymer, "homerun": from_homerun, "jobvite": from_jobvite,
                  "icims": from_icims, "trakstar": from_trakstar, "paylocity": from_paylocity, "ultipro": from_ultipro})
 
