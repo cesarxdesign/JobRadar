@@ -20,6 +20,7 @@ has seen under each of them. That is the list.
     python3 harvest.py check                # check every board that is due
     python3 harvest.py check --minutes 40   # ...for at most 40 minutes (the night run)
     python3 harvest.py                      # both
+    python3 harvest.py wayback [--dry] [system ...]   # the Internet Archive's list, every system or those named
 
 His call, 2026-10-05: "the cost is not seeing roles that might hire me. add
 all of them." The title cut is free, so the scan is wide; only design-titled
@@ -262,43 +263,66 @@ def enumerate_boards(only=None):
     return boards
 
 
-def wayback(only=None, since="2025"):
+# Subdomain-style systems cannot be asked for as "x/*"; the Archive takes the
+# bare domain with matchType=domain instead. A path filter is used only where it
+# was seen to cut the answer without losing companies: BambooHR, where every
+# board's front page is /careers or /jobs, gave 12,460 names in one minute that
+# way. For the others nobody has checked what the boards' paths look like, so
+# they are asked unfiltered rather than risk dropping companies.
+ARCHIVE_PATH = {"bamboohr": r"(careers|jobs)"}
+
+
+def wayback(only=None, since="2025", dry=False):
     """A second list, from the Internet Archive. Lever tells crawlers to keep
     out, so Common Crawl holds 28 of its boards; the Archive holds thousands.
     Its index is walked from A to Z, 150,000 addresses a request, picking up
-    where the last request stopped."""
+    where the last request stopped. Every system is asked, one failing does
+    not stop the rest. dry: say what was found and write nothing."""
     boards, today = load(), time.strftime("%Y-%m-%d")
     for system, ask, rx, keyfmt in PATTERNS:
-        if (only and system not in only) or ask.startswith("*."):
+        if only and system not in only:
             continue
-        rxc, found, key, n = re.compile(rx, re.I), set(), None, 0
-        while n < 80:
-            q = {"url": ask, "fl": "original", "collapse": "urlkey", "from": since, "limit": "150000", "showResumeKey": "true"}
-            if key:
-                q["resumeKey"] = key
-            t = get("http://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode(q), timeout=300, tries=6)
-            if not t or t.lstrip().startswith("<"):
-                print(f"  {system}: the Archive did not answer after {n} requests; keeping what there is", flush=True)
-                break
-            lines = t.rstrip("\n").split("\n")
-            key = None
-            if len(lines) >= 2 and lines[-2] == "":
-                key, lines = lines[-1], lines[:-2]
-            found |= {m.group(1) for line in lines for m in [rxc.search(line)] if m}
-            n += 1
-            print(f"  {system} {ask}: request {n}, {len(found)} names so far", flush=True)
-            if not key:
-                break
-        keep = {s for s in found if 2 <= len(s) <= 60 and s.lower() not in NOT_A_BOARD and not s.startswith(("_", "."))
-                and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", s)}
-        mine, new = boards.setdefault(system, {}), 0
-        for s in keep:
-            k = keyfmt.format(s=s if system == "smartrecruiters" else s.lower())
-            if k not in mine:
-                mine[k] = {"seen": today}
-                new += 1
-        print(f"  {system:16} {ask:32} {len(keep):6} names, {new:6} new  ({len(mine)} known)", flush=True)
-        save(boards)
+        try:
+            rxc, found, key, n = re.compile(rx, re.I), set(), None, 0
+            base = {"fl": "original", "collapse": "urlkey", "from": since, "limit": "150000", "showResumeKey": "true"}
+            if ask.startswith("*."):
+                domain = ask[2:]
+                base.update({"url": domain, "matchType": "domain"})
+                if system in ARCHIVE_PATH:
+                    base["filter"] = "original:.*" + re.escape(domain) + "/" + ARCHIVE_PATH[system] + ".*"
+            else:
+                base["url"] = ask
+            while n < 80:
+                q = dict(base)
+                if key:
+                    q["resumeKey"] = key
+                t = get("http://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode(q), timeout=300, tries=6)
+                if not t or t.lstrip().startswith("<"):
+                    print(f"  {system}: the Archive did not answer after {n} requests; keeping what there is", flush=True)
+                    break
+                lines = t.rstrip("\n").split("\n")
+                key = None
+                if len(lines) >= 2 and lines[-2] == "":
+                    key, lines = lines[-1], lines[:-2]
+                found |= {m.group(1) for line in lines for m in [rxc.search(line)] if m}
+                n += 1
+                print(f"  {system} {ask}: request {n}, {len(found)} names so far", flush=True)
+                if not key:
+                    break
+            keep = {s for s in found if 2 <= len(s) <= 60 and s.lower() not in NOT_A_BOARD and not s.startswith(("_", "."))
+                    and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", s)}
+            mine, new = boards.setdefault(system, {}), 0
+            for s in keep:
+                k = keyfmt.format(s=s if system == "smartrecruiters" else s.lower())
+                if k not in mine:
+                    new += 1
+                    if not dry:
+                        mine[k] = {"seen": today, "from": "archive"}
+            print(f"  {system:16} {ask:32} {len(keep):6} names, {new:6} new  ({len(mine)} known)" + ("  [dry: nothing written]" if dry else ""), flush=True)
+            if not dry:
+                save(boards)
+        except Exception as e:
+            print(f"  {system} {ask}: failed ({type(e).__name__}: {e}); going on with the next", flush=True)
     return boards
 
 
@@ -438,6 +462,6 @@ if __name__ == "__main__":
         named = {a for a in args if a in {p[0] for p in PATTERNS}}
         b = enumerate_boards(named or None) if "--server" in args else enumerate_static(named or None)
     if "wayback" in args:
-        b = wayback({a for a in args if a in {p[0] for p in PATTERNS}} or None)
+        b = wayback({a for a in args if a in {p[0] for p in PATTERNS}} or None, dry="--dry" in args)
     if not args or "check" in args:
         check(b, int(args[args.index("--minutes") + 1]) if "--minutes" in args else None)
