@@ -560,13 +560,30 @@ if __name__ == "__main__":
         b = wayback({a for a in args if a in {p[0] for p in PATTERNS}} or None, dry="--dry" in args)
     if not args or "check" in args:
         # One check at a time: a second one would open the same links again.
-        # It waits its turn, then reads the list afresh for what is still due.
-        import subprocess
-        waited = False
-        while len([p for p in subprocess.run(["pgrep", "-f", "harvest.py check"], capture_output=True, text=True).stdout.split()
-                   if p != str(os.getpid())]) > 0:
+        # The first to write its number in data/check.lock goes; the others
+        # wait for that process to end, then read the list afresh. (Waiting
+        # for "any other check" made two waiters wait on each other for ever.)
+        lock, waited = f"{ROOT}/data/check.lock", False
+        while True:
+            try:
+                holder = int(open(lock).read().strip() or 0)
+            except Exception:
+                holder = 0
+            alive = False
+            if holder and holder != os.getpid():
+                try:
+                    os.kill(holder, 0)
+                    alive = True
+                except OSError:
+                    alive = False
+            if not alive:
+                open(lock, "w").write(str(os.getpid()))
+                time.sleep(1)
+                if open(lock).read().strip() == str(os.getpid()):
+                    break
+                continue
             waited = True
-            time.sleep(30)
+            time.sleep(20)
         if waited:
             b = load()
         check(b, int(args[args.index("--minutes") + 1]) if "--minutes" in args else None)
