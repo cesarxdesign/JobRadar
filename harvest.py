@@ -471,4 +471,14 @@ if __name__ == "__main__":
     if "wayback" in args:
         b = wayback({a for a in args if a in {p[0] for p in PATTERNS}} or None, dry="--dry" in args)
     if not args or "check" in args:
+        # One check at a time: a second one would open the same links again.
+        # It waits its turn, then reads the list afresh for what is still due.
+        import subprocess
+        waited = False
+        while len([p for p in subprocess.run(["pgrep", "-f", "harvest.py check"], capture_output=True, text=True).stdout.split()
+                   if p != str(os.getpid())]) > 0:
+            waited = True
+            time.sleep(30)
+        if waited:
+            b = load()
         check(b, int(args[args.index("--minutes") + 1]) if "--minutes" in args else None)
