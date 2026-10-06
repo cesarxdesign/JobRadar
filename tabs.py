@@ -96,6 +96,9 @@ if __name__ == "__main__":
             print(f"remote.io tab: {new} listings on the page, {total} kept")
         except NoTab as e:
             print(f"remote.io tab not read: {e}")
+        except subprocess.TimeoutExpired as e:
+            # Chrome did not answer AppleScript in time; the night goes on without the tab
+            print(f"remote.io tab: Chrome did not answer in {e.timeout:.0f} s, skipped")
     else:
         for name, part in (("inbox", "mail.google.com"), ("remote.io", "remote.io")):
             try:

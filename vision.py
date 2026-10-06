@@ -630,6 +630,9 @@ def _try(fn, i):
 PREV = {}          # --employer: the verdicts already made on a board's copy, kept unless the employer's page turns up
 
 
+LEFT = [0]            # roles pick() held back because of --limit
+
+
 def pick(jobs, done):
     args = sys.argv
     if "--employer" in args:           # roles judged on a board's copy: look for the company's own page again
@@ -670,7 +673,9 @@ def pick(jobs, done):
         again = lambda d: d.get("posting_open") == "unreadable" and (d.get("unread_tries") or 1) < UNREAD_TRIES
         rows = [j for j in rows if j["id"] not in done or again(done[j["id"]])]
     if "--limit" in args:
-        rows = rows[:int(args[args.index("--limit") + 1])]
+        cap = int(args[args.index("--limit") + 1])
+        LEFT[0] = max(0, len(rows) - cap)      # the night run caps the read (--limit 1000); the rest waits for tomorrow
+        rows = rows[:cap]
     return rows
 
 
@@ -690,6 +695,8 @@ def main():
         return
     rows = pick(jobs, out)
     print(f"vision: {len(rows)} roles to read, model {MODEL}, {WORKERS} at a time", flush=True)
+    if LEFT[0]:
+        print(f"vision: --limit leaves {LEFT[0]} roles unread for the next run", flush=True)
     if not rows:
         return
     br, t0, n = render.Browser(), time.time(), [0]

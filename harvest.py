@@ -38,7 +38,7 @@ SNAPSHOTS = 4                 # latest Common Crawl snapshots asked; each sees a
 MAX_PAGES = 400               # per address pattern per snapshot
 RECHECK_DAYS = 7
 # systems that refuse a crowd: this many askers at a time, with a pause between
-SLOW = {k: threading.Semaphore(2) for k in ("dover", "workable", "join", "rippling")}
+SLOW = {k: threading.Semaphore(2) for k in ("dover", "workable", "join", "rippling", "personio")}
 WORKERS = 12
 
 # system, what to ask the index for, how a board's name is read out of an
@@ -338,6 +338,7 @@ def check(boards, minutes=None):
             design = [r for r in rows if judge.l1(r.get("title")) is None]
             rec.update({"checked": today, "jobs": len(rows), "design": len(design)})
             rec.pop("dead", None)
+            rec.pop("error", None)
             if design:
                 name = next((r.get("company") for r in rows if r.get("company") and r["company"] != k), None) or k
                 with lock:
@@ -354,6 +355,9 @@ def check(boards, minutes=None):
                 rec["dead"] = rec.get("dead", 0) + 1     # three strikes and it is dropped
             else:
                 rec["asked"] = today
+                # the cause stays visible on the record: 1,147 BambooHR boards
+                # fail without an HTTP code (JSONDecodeError) and were never marked
+                rec["error"] = type(e).__name__
                 if getattr(e, "code", None) in (403, 429, 503):
                     time.sleep(8)
         finally:
