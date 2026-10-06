@@ -54,17 +54,71 @@ def age_days(job, today=None):
         return None
 
 
+def name_of(title):
+    """A title down to the name of the role: no level, no brackets, nothing
+    after the dash. "Senior Mechanical Designer (m/f/d) - Berlin" and
+    "Mechanical Designer II" are both "mechanical designer"."""
+    t = re.sub(r"\(.*?\)|\[.*?\]", " ", (title or "").lower())
+    t = re.split(r" - | – | — | \| |, | @ | / ", t)[0]
+    t = re.sub(r"\b(senior|sr\.?|staff|principal|lead|junior|jr\.?|mid|ii|iii|iv|i|1|2|3|associate|intern|m/f/d|m/w/d|f/m/d|w/m/d|h/f|f/h|remote)\b", " ", t)
+    return " ".join(re.findall(r"[a-z0-9&+]+", t))
+
+
+_names = {}
+
+
+def cut_names():
+    """Role names VISION has rejected for the role every time, three times or
+    more, and never once kept (names.py writes the file after each VISION
+    run). His idea, 2026-10-06: "whenever VISION deems cut on a role, add that
+    role to the list" - a few hundred names checked in a second, in place of
+    thousands of pages read to reach the same answer."""
+    import json, os
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "cut_names.json")
+    try:
+        m = os.path.getmtime(p)
+        if _names.get("at") != m:
+            _names.update({"at": m, "names": json.load(open(p))})
+    except Exception:
+        return {}
+    return _names.get("names") or {}
+
+
 def cut(job):
-    """CUT, whole: the title, then the age. None when the job goes on to
-    VISION, else the reason. l1() stays title-only for the callers that have
-    nothing but a title (a link is worth keeping for one design title, however old)."""
+    """CTF: the title, the names VISION has learned, then the 45 days. None
+    when the job goes on to FETCH, else the reason. l1() stays title-only for
+    the callers that have nothing but a title (a link is worth keeping for
+    one design title, however old)."""
     r = l1(job.get("title"))
     if r:
         return r
+    n = cut_names().get(name_of(job.get("title")))
+    if n:
+        return f"name: VISION has rejected '{name_of(job.get('title'))}' {n} times and never kept one"
     a = age_days(job)
     if a is not None and a >= CUT_DAYS:
         return f"age: {a} days since it was posted or last updated"
     return None
+
+
+PLACE = re.compile(r"remot|lisbo|portug|europ|\bemea\b", re.I)
+
+
+def cut_location(job, read, text):
+    """CL: the job's real page names none of remote, Lisbon, Portugal, Europe,
+    EMEA - and neither does anything the pool holds about it. Then it is not
+    for him and Claude does not need to read it (his rule, 2026-10-06; against
+    10,076 pages VISION had judged it cut 56% and hid nothing he would take).
+    Only the employer's own page is judged: a job board's copy is a stub, and
+    says "Poland" where the posting says six countries and "fully remote"."""
+    if read != "employer" or len(text or "") < 400:
+        return None
+    if job.get("remote") is True:
+        return None
+    held = " ".join(str(job.get(k) or "") for k in ("title", "location", "workplace", "country", "restrictions", "timezones"))
+    if PLACE.search(held) or PLACE.search(text):
+        return None
+    return "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
 
 
 def l1(title):

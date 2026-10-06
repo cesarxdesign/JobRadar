@@ -33,6 +33,15 @@ import contracts, criteria, employer, judge, read, render
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = f"{ROOT}/data/vision.json"
+# FETCH (his naming, 2026-10-06): getting a job's real page costs no tokens,
+# only Claude reading it does. `vision.py --fetch` does everything up to that
+# point - finds the employer's page, saves its text, says "closed" where the
+# page says so, and applies CL - and keeps it in its own file. VISION then
+# reads from there and opens no page a second time. Two files because the two
+# run at the same time and each writes its file whole.
+FETCH = "--fetch" in sys.argv
+FETCHED = f"{ROOT}/data/fetch.json"
+_fetched = {}
 MODEL = os.environ.get("RADAR_VISION_MODEL", "sonnet")
 # How many pages are read at once. One VISION at 6 spends about 7M tokens an
 # hour, 35M in a five-hour session. If a whole session goes by without the
@@ -441,6 +450,18 @@ def reader(rec, page):
 
 def see(finder, rec):
     """Everything vision knows about one role."""
+    # What FETCH already has is used as it is: a page saved in the last three
+    # days is read from the file, and a job FETCH found closed, or cut on
+    # location, is settled without a token.
+    f = None if FETCH else _fetched.get(rec["id"])
+    if f and str(f.get("at") or "") >= time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time() - 3 * 86400)):
+        now = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "criteria": criteria.VERSION, "model": MODEL, "fetched_at": f.get("at")}
+        if f.get("stage") == "cl" or (f.get("stage") == "render" and f.get("lane") == "closed"):
+            return {**f, **now}
+        p = f"{ROOT}/data/pages/{rec['id']}.txt"
+        if f.get("stage") == "fetched" and os.path.exists(p):
+            return judge_page(rec, {**{k: x for k, x in f.items() if k not in ("lane", "stage")}, **now},
+                              {"url": f.get("read_url") or rec["url"], "title": rec.get("title"), "text": open(p).read()})
     br = finder.br
     is_board = "/" not in (rec.get("source") or "") and not employer.ATS.search(rec.get("url") or "")
     first = br.page(rec["url"], shot=render.shot_path(rec["id"]))
@@ -549,6 +570,17 @@ def see(finder, rec):
         open(f"{ROOT}/data/pages/{rec['id']}.txt", "w").write(text[:MAX_CHARS])
     except Exception:
         pass
+    # CL: the real page names none of his places. No tokens, and no reading.
+    cl = judge.cut_location(rec, v.get("read"), text)
+    if cl:
+        return {**v, "lane": "cut", "stage": "cl", "place_verdict": "no", "reason": cl}
+    if FETCH:
+        return {**v, "lane": "fetched", "stage": "fetched"}
+    return judge_page(rec, v, page)
+
+
+def judge_page(rec, v, page):
+    """VISION proper: Claude reads the page that FETCH got, and the lane follows."""
     a = reader(rec, page)              # ReaderDown goes up: the role stays unread, for the next run
     v.update(a)
     v["stage"] = "vision"
@@ -595,7 +627,7 @@ def audit(out, jobs, since=None, share=AUDIT_SHARE):
     not is his to look at: results.py lists it under "review" and the board
     shows it in For Reviewing. (His instruction, 2026-10-05.)"""
     import random
-    cuts = [i for i, d in out.items() if d.get("lane") == "cut" and d.get("stage") == "vision" and not d.get("audit")
+    cuts = [i for i, d in out.items() if d.get("lane") == "cut" and d.get("stage") in ("vision", "cl") and not d.get("audit")
             and (since is None or str(d.get("at") or "") >= since) and i in jobs
             and os.path.exists(f"{ROOT}/data/pages/{i}.txt")]
     random.seed(time.strftime("%Y-%m-%d"))
@@ -688,9 +720,63 @@ def pick(jobs, done):
     return rows
 
 
+def fetch(jobs, read):
+    """FETCH: the real page for every job through CTF that has neither been
+    read by VISION nor fetched in the last three days. No tokens."""
+    global OUT
+    OUT = FETCHED
+    recent = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time() - 3 * 86400))
+    have = {i: x for i, x in _fetched.items() if str(x.get("at") or "") >= recent}
+    rows = pick(jobs, {**read, **have})
+    if "--count" in sys.argv:
+        print(len(rows))
+        return
+    print(f"FETCH: {len(rows)} pages to get, {WORKERS * 2} at a time", flush=True)
+    if not rows:
+        return
+    out = dict(have)                   # what is older than three days is let go
+    br, t0, n = render.Browser(), time.time(), [0]
+    finder = employer.Finder(br, jobs)
+
+    def one(rec):
+        try:
+            x = see(finder, rec)
+        except render.BrowserDown as e:
+            print(f"STOPPED: {e}", flush=True)
+            raise
+        except Exception as e:
+            with _lock:
+                n[0] += 1
+                print(f"  [{n[0]}/{len(rows)}] NOT FETCHED {rec['company'][:22]} | {rec['title'][:38]} | {type(e).__name__}: {str(e)[:80]}", flush=True)
+            return
+        with _lock:
+            if x.get("posting_open") != "unreadable":      # a page that would not open is VISION's to try again, not settled here
+                out[rec["id"]] = x
+            n[0] += 1
+            print(f"  [{n[0]}/{len(rows)}] {('CL cut' if x.get('stage') == 'cl' else x.get('lane')):8} {x.get('read', '-'):8} {rec['company'][:22]:22} | {rec['title'][:38]:38} | {str(x.get('reason') or '')[:60]}", flush=True)
+            if n[0] % 20 == 0:
+                save(out)
+
+    try:
+        with ThreadPoolExecutor(WORKERS * 2) as ex:
+            list(ex.map(one, rows))
+    finally:
+        br.close()
+        save(out)
+    import collections
+    c = collections.Counter(("CL cut" if out[r["id"]].get("stage") == "cl" else out[r["id"]].get("lane")) for r in rows if r["id"] in out)
+    print(f"FETCH done in {time.time() - t0:.0f}s: {dict(c)}; {len(rows) - sum(c.values())} could not be opened and are left to VISION")
+
+
 def main():
     jobs = contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]
     out = json.load(open(OUT)) if os.path.exists(OUT) else {}
+    try:
+        _fetched.update(json.load(open(FETCHED)))
+    except Exception:
+        pass
+    if FETCH:
+        return fetch(jobs, out)
     if "--audit" in sys.argv:          # --audit: a tenth of the last day's cuts; --audit --all: of every cut not yet checked
         since = None if "--all" in sys.argv else time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time() - 86400))
         audit(out, {j["id"]: j for j in jobs}, since)

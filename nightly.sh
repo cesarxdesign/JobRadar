@@ -23,10 +23,11 @@ if [ -f data/PAUSED ]; then echo "paused (data/PAUSED is there): $(cat data/PAUS
 if pgrep -f "vision.py" >/dev/null || pgrep -f "stream.sh" >/dev/null; then echo "a run is already going; leaving it alone"; exit 0; fi
 
 publish() {
+  python3 names.py | tail -1          # CTF's list of role names, relearned from what VISION has just decided
   python3 results.py | head -1 | cut -c1-240
   python3 poolparts.py split >/dev/null
   git add data/boards.json data/pool[0-9]*.json data/sources.json data/discovered.json data/results.json data/vision.json \
-          data/shipped.json data/vision_runs.jsonl 2>/dev/null
+          data/shipped.json data/vision_runs.jsonl data/cut_names.json 2>/dev/null
   git diff --cached --quiet || { git commit -q -m "nightly $(date '+%F %H:%M')
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "pushed $(date +%H:%M)"; }
@@ -86,6 +87,8 @@ fi
 #   SOURCE  every link opened, in the background
 #   POOL    in the background too: the full pass, then the links SOURCE keeps
 #           finding, round after round, until SOURCE is done
+#   FETCH   in the background as well: the real page of every job through CTF,
+#           and CL on it (none of his places on the page: cut)
 #   VISION  pulls. As soon as 10 jobs have come through CUT it reads them;
 #           when it is done it takes whatever has queued up meanwhile, and so
 #           on. The pulls grow until it never stops, and it ends when SOURCE
@@ -118,6 +121,24 @@ fi
     sleep 120
   done
   touch data/night_pool.done
+) &
+# the FETCH lane: the real page for every job through CTF, with CL applied,
+# from midnight on. No tokens. When VISION starts at 01:00 the pages are
+# already on file, and what it finds unfetched it fetches itself.
+rm -f data/night_fetch.log
+(
+  while :; do
+    N=$(python3 vision.py --fetch --new --count 2>/dev/null | tail -1); case "$N" in ''|*[!0-9]*) N=0 ;; esac
+    if [ "$N" -gt 0 ]; then
+      t0=$(date +%s)
+      python3 limit.py 7200 caffeinate -i python3 vision.py --fetch --new 2>&1 | grep -v "^  \[" | tail -1 | cut -c1-200 >> data/night_fetch.log
+      echo "FETCH: $N pages (background)             $(( ($(date +%s) - t0) / 60 )) min" >> data/night_pool.clock
+    elif [ -f data/night_pool.done ]; then
+      break
+    else
+      sleep 60
+    fi
+  done
 ) &
 # cesarxdesign@gmail.com only (his call, 2026-10-05). inbox_all.py reads the
 # other accounts and is run by hand, when he asks.
