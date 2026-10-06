@@ -91,6 +91,7 @@ def wait_for_reset(msg):
         m = re.search(r"\|(\d{10})\b", msg or "")
         until = int(m.group(1)) if m else None
         _paused_at = time.time()
+        open(f"{ROOT}/data/vision.paused", "w").write(time.strftime("%F %H:%M"))    # the night run's watchdog: waiting, not stuck
         print(f"PAUSED {time.strftime('%H:%M')}: usage limit ({str(msg)[:90]}). "
               + (f"Resets about {time.strftime('%H:%M', time.localtime(until))}. " if until else "")
               + "Waiting; the run picks up by itself.", flush=True)
@@ -107,6 +108,10 @@ def wait_for_reset(msg):
                 pass
         _usage["waited"] = _usage.get("waited", 0) + (time.time() - _paused_at)
         _limit["cleared"] = time.time()
+        try:
+            os.remove(f"{ROOT}/data/vision.paused")
+        except OSError:
+            pass
         print(f"RESUMED {time.strftime('%H:%M')}", flush=True)
 
 
@@ -799,6 +804,7 @@ def main():
         return
     br, t0, n = render.Browser(), time.time(), [0]
     finder = employer.Finder(br, jobs)
+    open(f"{ROOT}/data/vision.beat", "w").write(time.strftime("%F %H:%M:%S"))
 
     def one(rec):
         if _usage.get("stop"):
@@ -823,6 +829,7 @@ def main():
                     print("STOPPED: 25 roles in a row could not be read.", flush=True)
             return
         with _lock:
+            open(f"{ROOT}/data/vision.beat", "w").write(time.strftime("%F %H:%M:%S"))       # a verdict: VISION is alive
             _usage["streak"] = 0
             if v.get("posting_open") == "unreadable":
                 was = out.get(rec["id"]) or {}

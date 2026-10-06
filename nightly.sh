@@ -151,6 +151,20 @@ step "stats" 5 "tail -1" python3 stats_export.py
 # hand at any other hour does not wait.
 [ "$(date +%H)" = "00" ] && echo "-- VISION holds until 01:00; SOURCE and POOL are filling the queue"
 while [ "$(date +%H)" = "00" ]; do sleep 30; done
+# A VISION that stops moving is stopped, and the next pull carries on with the
+# rest. On 2026-10-06 one sat for fifty minutes on its last 7 pages, alive and
+# doing nothing; with no time limit on VISION that would have cost the night.
+# Waiting on the usage limit is not that: vision.py marks it (data/vision.paused).
+rm -f data/vision.paused
+( while sleep 300; do
+    pgrep -f "vision.py --new" >/dev/null || continue
+    [ -f data/vision.paused ] && continue
+    if [ -n "$(find data/vision.beat -mmin +20 2>/dev/null)" ]; then
+      echo "   VISION gave no verdict for 20 minutes and is not waiting on the limit: stopped; the next pull carries on"
+      pkill -f "vision.py --new"; sleep 5; pkill -f "radar-chrome-"
+    fi
+  done ) &
+WATCH=$!
 PULL=0; WAITED=0
 while :; do
   Q=$(python3 vision.py --new --count 2>/dev/null | tail -1); case "$Q" in ''|*[!0-9]*) Q=0 ;; esac
@@ -165,6 +179,7 @@ while :; do
   fi
   [ "$PULL" -ge 200 ] && break
 done
+kill $WATCH 2>/dev/null
 echo "   VISION waited $((WAITED / 60)) min in all for jobs to come through CUT"
 # jobs he asked to have read again, once: behind every new job
 if [ -s data/reread_once.ids ]; then
