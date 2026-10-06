@@ -1,5 +1,5 @@
 #!/bin/sh
-# JobRadar, every night at 02:00 on this Mac (lid open), so the board has
+# JobRadar, every night at 01:00 on this Mac (lid open), so the board has
 # fresh postings by morning. Started by launchd:
 #   ~/Library/LaunchAgents/com.cesarxdesign.jobradar.plist
 #
