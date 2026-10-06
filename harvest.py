@@ -71,6 +71,10 @@ PATTERNS = [
     ("jazzhr",          "*.applytojob.com",              r"//([a-z0-9-]+)\.applytojob\.com",              "{s}"),
     ("bamboohr",        "*.bamboohr.com",                r"//([a-z0-9-]+)\.bamboohr\.com",                "{s}"),
     ("manatal",         "*.careers-page.com",            r"//([a-z0-9-]+)\.careers-page\.com",            "{s}.careers-page.com"),
+    # Two groups, joined by the key format: tenant.wdN (the data centre cannot be
+    # guessed) and the career site's name, past an optional language segment.
+    ("workday",         "*.myworkdayjobs.com",           r"//([a-z0-9-]+\.wd\d+)\.myworkdayjobs\.com/(?:(?:[a-z]{2}-[A-Za-z]{2,4}|en|es|fr|de|it|pt|nl|ja|ko|zh|ar|ru|pl|sv|no|da|fi|tr|cs|hu|ro|th|id|vi|he|el|uk)/)?"
+                                                        r"(?!(?:login|assets|userHome|introduceYourself|jobAlerts|wday|job|details|page|apply|jobs|search|resetPassword|cdn-cgi|[a-z]{2}-[A-Za-z]{2,4})(?:[/?#]|$))([A-Za-z0-9_-]+)(?=[/?#]|$)", "{0}/{1}"),
 ]
 NOT_A_BOARD = {"www", "app", "api", "embed", "jobs", "job", "careers", "career", "static", "assets", "cdn", "help", "support",
                "docs", "blog", "status", "login", "signup", "sitemap", "robots.txt", "favicon.ico", "search", "about",
@@ -136,6 +140,10 @@ SURT = {  # the address pattern, as the index sorts it
     "*.breezy.hr": "hr,breezy,", "*.pinpointhq.com": "com,pinpointhq,", "*.applytojob.com": "com,applytojob,",
     "*.bamboohr.com": "com,bamboohr,", "*.careers-page.com": "com,careers-page,",
 }
+# Patterns with no entry above are asked of the Internet Archive only (the
+# `wayback` step): the two Common Crawl routes skip them. Workday boards would
+# be a scan of every job page of every company in the crawl, and the systems
+# added later were never tried there.
 
 
 def _raw(url, rng=None, tries=6, timeout=120):
@@ -180,7 +188,7 @@ def enumerate_static(only=None, snapshots=SNAPSHOTS):
             print(f"  {snap}: block list not fetched, skipped", flush=True)
             continue
         for i, (system, ask, rx, keyfmt) in enumerate(PATTERNS):
-            if only and system not in only:
+            if (only and system not in only) or ask not in SURT:
                 continue
             pre, rxc = SURT[ask], re.compile(rx, re.I)
             lo = max(bisect.bisect_left(keys, pre) - 1, 0)
@@ -204,7 +212,7 @@ def enumerate_static(only=None, snapshots=SNAPSHOTS):
                         found[i] |= got
             print(f"  {snap} {system:16} {ask:30} {hi - lo:5} blocks, {len(found[i]):6} names so far" + (f", {lost} blocks lost" if lost else ""), flush=True)
     for i, (system, ask, rx, keyfmt) in enumerate(PATTERNS):
-        if only and system not in only:
+        if (only and system not in only) or ask not in SURT:
             continue
         keep = {s for s in found[i] if 2 <= len(s) <= 60 and s.lower() not in NOT_A_BOARD and not s.startswith(("_", "."))
                 and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._%-]*", s)}
@@ -232,7 +240,7 @@ def enumerate_boards(only=None):
         return boards
     print(f"SOURCE: asking {len(apis)} snapshots of the public web index for {len(PATTERNS)} kinds of link", flush=True)
     for system, ask, rx, keyfmt in PATTERNS:
-        if only and system not in only:
+        if (only and system not in only) or ask not in SURT:
             continue
         rx, found, answered, lost = re.compile(rx, re.I), set(), 0, 0
         for api in apis:
@@ -274,6 +282,39 @@ def enumerate_boards(only=None):
 # way. For the others nobody has checked what the boards' paths look like, so
 # they are asked unfiltered rather than risk dropping companies.
 ARCHIVE_PATH = {"bamboohr": r"(careers|jobs)"}
+# Where one path filter cannot say it, whole CDX filters (all must hold). Workday:
+# every job page of every company is in the Archive (the unfiltered answer is
+# 1,001 pages of 150,000), but a board's own address is the front page, at most
+# one language segment and a site name; the second filter drops the pages that
+# sit at that depth but are not a site (login, assets, job, ...).
+ARCHIVE_FILTER = {"workday": [r"original:.*myworkdayjobs\.com/[^/?#]*(/[^/?#]*)?/?",
+                              r"!original:.*myworkdayjobs\.com/([a-zA-Z-]{2,5}/)?(login|assets|userHome|introduceYourself|jobAlerts|favicon\.ico|robots\.txt|wday|job|details|page|apply|jobs|search|resetPassword|sitemap\.xml)([/?#].*)?$"]}
+
+
+def parts_of(m):
+    """What a pattern captured, as a tuple: one group is a company's name,
+    several are the pieces of a key (Workday: tenant.wdN and the site)."""
+    return tuple(g for g in m.groups() if g is not None)
+
+
+def board_keys(system, keyfmt, found):
+    """(name count, keys) from what the patterns captured. One captured group
+    keeps the old rules. Several are kept whole, in lower case (Workday's
+    site names are not case-sensitive), when each is a plain word."""
+    keys = set()
+    for p in found:
+        if len(p) == 1:
+            s = p[0]
+            ok = (2 <= len(s) <= 60 and s.lower() not in NOT_A_BOARD and not s.startswith(("_", "."))
+                  and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", s))
+            if ok:
+                keys.add(keyfmt.format(s=s if system == "smartrecruiters" else s.lower()))
+        else:
+            ok = (p[0].split(".")[0].lower() not in NOT_A_BOARD
+                  and all(1 <= len(x) <= 60 and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", x) for x in p))
+            if ok:
+                keys.add(keyfmt.format(*[x.lower() for x in p], s=p[0].lower()))
+    return keys
 
 
 def wayback(only=None, since="2025", dry=False):
@@ -294,13 +335,15 @@ def wayback(only=None, since="2025", dry=False):
                 base.update({"url": domain, "matchType": "domain"})
                 if system in ARCHIVE_PATH:
                     base["filter"] = "original:.*" + re.escape(domain) + "/" + ARCHIVE_PATH[system] + ".*"
+                if system in ARCHIVE_FILTER:
+                    base["filter"] = ARCHIVE_FILTER[system]
             else:
                 base["url"] = ask
             while n < 80:
                 q = dict(base)
                 if key:
                     q["resumeKey"] = key
-                t = get("http://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode(q), timeout=300, tries=6)
+                t = get("http://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode(q, doseq=True), timeout=300, tries=6)
                 if not t or t.lstrip().startswith("<"):
                     print(f"  {system}: the Archive did not answer after {n} requests; keeping what there is", flush=True)
                     break
@@ -308,16 +351,14 @@ def wayback(only=None, since="2025", dry=False):
                 key = None
                 if len(lines) >= 2 and lines[-2] == "":
                     key, lines = lines[-1], lines[:-2]
-                found |= {m.group(1) for line in lines for m in [rxc.search(line)] if m}
+                found |= {parts_of(m) for line in lines for m in [rxc.search(line)] if m}
                 n += 1
                 print(f"  {system} {ask}: request {n}, {len(found)} names so far", flush=True)
                 if not key:
                     break
-            keep = {s for s in found if 2 <= len(s) <= 60 and s.lower() not in NOT_A_BOARD and not s.startswith(("_", "."))
-                    and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", s)}
+            keep = board_keys(system, keyfmt, found)
             mine, new = boards.setdefault(system, {}), 0
-            for s in keep:
-                k = keyfmt.format(s=s if system == "smartrecruiters" else s.lower())
+            for k in keep:
                 if k not in mine:
                     new += 1
                     if not dry:

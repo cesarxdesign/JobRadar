@@ -776,34 +776,90 @@ def from_zoho(key, cfg=None):
                "posted": j.get("Date_Opened")}
 
 
-def from_workday(key, cfg=None):
+WD_LOCALE = re.compile(r"(?:[a-z]{2}-[A-Za-z]{2,4}|en|es|fr|de|it|pt|nl|ja|ko|zh|ar|ru|pl|sv|no|da|fi|tr|cs|hu|ro|th|id|vi|he|el|uk)$")
+
+
+def workday_where(key, cfg=None):
+    """(host, tenant, site) from either form. The cfg form (host, site, tenant)
+    is what data/sources.json holds for 13 companies. The plain key is what
+    harvest enumerates from the Archive: "tenant.wd5/site", where wd5 is the
+    data centre the tenant lives on, so it cannot be guessed. A full host
+    ("tenant.wd5.myworkdayjobs.com/site") and a language segment before the
+    site ("tenant.wd5/en-US/site") are taken too, as pasted from an address."""
     c = cfg if isinstance(cfg, dict) else {}
-    tenant, host, site = c.get("tenant", key), c.get("host"), c.get("site")
+    if c.get("host") and c.get("site"):
+        return c["host"], c.get("tenant") or c["host"].split(".")[0], c["site"]
+    parts = [p for p in str(key).split("/") if p]
+    if len(parts) >= 3 and WD_LOCALE.match(parts[1]):
+        del parts[1]
+    if len(parts) < 2:
+        return None, None, None
+    host = parts[0] if "myworkdayjobs.com" in parts[0] else f"{parts[0]}.myworkdayjobs.com"
+    return host, host.split(".")[0], parts[1]
+
+
+def from_workday(key, cfg=None):
+    host, tenant, site = workday_where(key, cfg)
     if not (host and site):
-        return
+        return          # an old bare-name entry that never had an address: nothing to ask
+    import judge
     seen = set()
     for q in ("design", "ux"):
-        offset = 0
-        for _ in range(5):
+        offset = total = 0
+        # The search is by relevance, not by title, so "design" on a large
+        # company is mostly hardware and design-system engineers: 100 results
+        # missed the designers. Up to 300 per word, 20 a page (Workday's cap).
+        for _ in range(15):
             body = json.dumps({"appliedFacets": {}, "limit": 20,
                                "offset": offset, "searchText": q}).encode()
             req = urllib.request.Request(f"https://{host}/wday/cxs/{tenant}/{site}/jobs",
                                          data=body, headers={**UA,
                                          "Content-Type": "application/json",
                                          "Accept": "application/json"})
-            with urllib.request.urlopen(req, timeout=30) as r:
-                d = json.loads(r.read().decode("utf-8", "replace"))
-            for pst in d.get("jobPostings") or []:
+            try:
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    d = json.loads(r.read().decode("utf-8", "replace"))
+            except urllib.error.HTTPError as e:
+                # A tenant that does not exist is answered 422, not 404; say
+                # 404 so harvest counts the board as gone rather than as an error.
+                if e.code == 422:
+                    raise urllib.error.HTTPError(req.full_url, 404, "no such Workday tenant", None, None)
+                raise
+            posts = d.get("jobPostings") or []
+            for pst in posts:
                 ep = pst.get("externalPath")
                 if not ep or ep in seen:
                     continue
                 seen.add(ep)
                 loc = pst.get("locationsText") or ""
+                posted = jd = None
+                workplace = (pst.get("remoteType") or "").lower() or None
+                m = re.match(r"Posted (Today|Yesterday|(\d+) Days? Ago)$", pst.get("postedOn") or "")
+                if m:
+                    posted = age_to_date(m.group(2) or (0 if m.group(1) == "Today" else 1), "day")
+                # "Posted 30+ Days Ago" is all the list says of an old role, and
+                # the 45-day cut needs the date. The job's own page has it, and
+                # the description; asked only for design-titled roles.
+                if judge.l1(pst.get("title")) is None:
+                    try:
+                        info = get_json(f"https://{host}/wday/cxs/{tenant}/{site}{ep}").get("jobPostingInfo") or {}
+                        posted = info.get("startDate") or posted
+                        jd = strip_html(info.get("jobDescription")) or None
+                        if re.match(r"\d+ Locations?$", loc):
+                            loc = "; ".join(dict.fromkeys(filter(None, [info.get("location")] + [
+                                (x or {}).get("descriptor") if isinstance(x, dict) else x
+                                for x in info.get("additionalLocations") or []]))) or loc
+                    except Exception:
+                        pass
                 yield {"company": _name(cfg) or tenant, "title": pst.get("title"),
                        "url": f"https://{host}/{site}{ep}", "location": loc,
-                       "remote": bool(re.search(r"remote", loc, re.I)) or None}
+                       "remote": (True if workplace == "remote" else bool(re.search(r"remote", loc, re.I)) or None),
+                       "workplace": workplace, "posted": posted, "jd_text": jd}
+            # "total" is sent on the first page only; every later page says 0,
+            # which stopped the old loop after two pages.
+            total = total or d.get("total") or 0
             offset += 20
-            if offset >= (d.get("total") or 0):
+            if not posts or offset >= total:
                 break
 
 
