@@ -338,6 +338,57 @@ def save_watch(watch):
     os.replace(tmp, SOURCES)
 
 
+def rest():
+    """A link on the nightly list that has no design job any more goes dormant
+    for RECHECK_DAYS: off the nightly list, marked checked today, so check()
+    opens it again in a week and puts it back the day a design title is there.
+    His call, 2026-10-06: "if no design, dormant for 7 days". Before this a
+    link never left the list - 527 of 4,359 were read every night for nothing.
+
+    Only on evidence: the link answered in the last full POOL pass (it has
+    rows seen since then) and none of its active rows has a design title. A
+    link with no rows at all is left alone - silence is not proof. Links kept
+    with settings of their own (workday and the like) are never touched:
+    check() could not open them again."""
+    import contracts
+    src, boards, today = json.load(open(SOURCES)), load(), time.strftime("%Y-%m-%d")
+    try:
+        full = json.load(open(f"{ROOT}/data/runs.json")).get("full") or ""
+    except Exception:
+        full = ""
+    if not full:
+        print("SOURCE: rest: no full POOL pass on record; nothing rested")
+        return
+    seen, design = set(), set()
+    for j in contracts.load_pool(f"{ROOT}/data/pool.json")["jobs"]:
+        if not j.get("active"):
+            continue
+        for s in set([j.get("source")] + (j.get("sources") or [])):
+            if s and "/" in s:
+                if (j.get("last_seen") or "") >= full:
+                    seen.add(s)
+                if judge.l1(j.get("title")) is None:
+                    design.add(s)
+    rested = []
+    for sys_, d in src["watchlist"].items():
+        if sys_ not in P.ADAPTERS or sys_ not in {p[0] for p in PATTERNS}:
+            continue
+        for k in [k for k, v in d.items() if not isinstance(v, dict)]:
+            link = f"{sys_}/{k}"
+            if link in seen and link not in design:
+                del d[k]
+                rec = boards.setdefault(sys_, {}).setdefault(k, {"seen": today})
+                rec.update({"checked": today, "design": 0, "rested": today})
+                rested.append(link)
+    if rested:
+        save(boards)
+        tmp = SOURCES + ".tmp"
+        json.dump(src, open(tmp, "w"), indent=1, ensure_ascii=False)
+        os.replace(tmp, SOURCES)
+    print(f"SOURCE: rested {len(rested)} links with no design job; {sum(len(v) for v in src['watchlist'].values())} POOLed every night"
+          + (f"  ({', '.join(rested[:6])}...)" if rested else ""))
+
+
 def check(boards, minutes=None):
     """Open each board that is due. Never-checked first, then the oldest."""
     src = json.load(open(SOURCES))
@@ -345,7 +396,10 @@ def check(boards, minutes=None):
     today, t0 = time.strftime("%Y-%m-%d"), time.time()
     stale = time.strftime("%Y-%m-%d", time.localtime(time.time() - RECHECK_DAYS * 86400))
     due = [(sys_, k) for sys_, d in boards.items() if sys_ in P.ADAPTERS for k, v in d.items()
-           if k not in watch.get(sys_, {}) and (v.get("checked") or "") < stale and not v.get("dead", 0) >= 3]
+           if k not in watch.get(sys_, {}) and (v.get("checked") or "") < stale]
+    # No link is ever dropped (his call, 2026-10-06: "after 3 is dropped??? no no no").
+    # A page that is gone is asked again in a week like any other; "dead" only
+    # counts how many times in a row it was gone.
     due.sort(key=lambda x: boards[x[0]][x[1]].get("checked") or "")
     print(f"SOURCE: check: {len(due)} links due" + (f", {minutes} minutes allowed" if minutes else ""), flush=True)
     lock, n, added, stop = threading.Lock(), [0], [], [False]
@@ -376,7 +430,7 @@ def check(boards, minutes=None):
             # asked again.
             if getattr(e, "code", None) in (404, 410):
                 rec["checked"] = today
-                rec["dead"] = rec.get("dead", 0) + 1     # three strikes and it is dropped
+                rec["dead"] = rec.get("dead", 0) + 1     # times in a row it was gone; it is still asked again next week
             else:
                 rec["asked"] = today
                 # the cause stays visible on the record: 1,147 BambooHR boards
@@ -456,6 +510,9 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     if "batch" in args:
         batch()
+        raise SystemExit(0)
+    if "rest" in args:
+        rest()
         raise SystemExit(0)
     b = load()
     if not args or "enumerate" in args:

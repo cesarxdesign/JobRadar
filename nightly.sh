@@ -79,6 +79,9 @@ if [ ! -f data/boards.json ] || [ -n "$(find data/boards.json -mtime +7 2>/dev/n
 fi
 step "SOURCE: check links" 45 "tail -8" caffeinate -i python3 harvest.py check --minutes 40
 step "POOL" 150 'grep -v "^  \[\|^   *…" | tail -8' caffeinate -i python3 pool.py
+# a link whose design job is gone goes dormant for a week (his call, 2026-10-06);
+# it runs here because it needs the full POOL pass just made, and no check running
+step "SOURCE: rest links" 5 "tail -1" python3 harvest.py rest
 step "SOURCE: discover links" 15 "tail -3" caffeinate -i python3 discover.py
 # only the boards discover just added: they have no row in the pool yet. The
 # old `--only <every system>` re-scraped all 4,087 boards for the sake of a few.
