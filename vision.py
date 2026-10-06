@@ -34,7 +34,12 @@ import contracts, criteria, employer, judge, read, render
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = f"{ROOT}/data/vision.json"
 MODEL = os.environ.get("RADAR_VISION_MODEL", "sonnet")
-WORKERS = 6
+# How many pages are read at once. One VISION at 6 spends about 7M tokens an
+# hour, 35M in a five-hour session. If a whole session goes by without the
+# usage limit being reached, tokens were left unspent, and the night run
+# raises this for the next night (data/vision_workers); it never needs to be
+# several programs, the readers here are that already.
+WORKERS = int(os.environ.get("VISION_WORKERS") or 6)
 MAX_CHARS = 30000          # a long posting is ~10k; this is the page, menus and all
 # A page costs about 6,500 tokens to read. The old judge spent 30,000 on each
 # because it sent the CLI's whole system prompt and tool list along, and nobody
@@ -698,6 +703,9 @@ def main():
                                     "criteria": criteria.VERSION}) + "\n")
         return
     rows = pick(jobs, out)
+    if "--count" in sys.argv:          # how many are waiting, and nothing else: the night run asks before each pull
+        print(len(rows))
+        return
     print(f"VISION: {len(rows)} roles to read, model {MODEL}, {WORKERS} at a time", flush=True)
     if LEFT[0]:
         print(f"VISION: --limit leaves {LEFT[0]} roles unread for the next run", flush=True)

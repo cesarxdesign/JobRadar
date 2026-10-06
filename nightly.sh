@@ -81,45 +81,70 @@ if [ ! -f data/boards.json ] || [ -n "$(find data/boards.json -mtime +7 2>/dev/n
   # (62,000 more on 2026-10-06); asked in the background, it takes an hour or two
   ( python3 limit.py 14400 caffeinate -i python3 harvest.py wayback > data/night_wayback.log 2>&1 ) &
 fi
-# Staggered (his call, 2026-10-06): "vision needs to be fed at intervals,
-# because the problem is tokens. If the first 3h vision isn't engaged, that's
-# tokens that go unspent." So nothing waits for anything:
-#   SOURCE  every link opened, in the background, for as long as it takes
-#   VISION  starts at once on what is already waiting
-#   POOL    its full pass meanwhile; then rounds: the links SOURCE has just
-#           found go into POOL, and VISION reads 300 of what survives CUT
-# The rounds end when SOURCE has finished and VISION has nothing left.
+# How the night is fed (his description, 2026-10-06). Tokens are the scarce
+# thing, so VISION must be busy from the first minute to the last:
+#   SOURCE  every link opened, in the background
+#   POOL    in the background too: the full pass, then the links SOURCE keeps
+#           finding, round after round, until SOURCE is done
+#   VISION  pulls. As soon as 10 jobs have come through CUT it reads them;
+#           when it is done it takes whatever has queued up meanwhile, and so
+#           on. The pulls grow until it never stops, and it ends when SOURCE
+#           and POOL are finished and the queue is empty.
+# Nothing here waits for anything else to finish.
+VISION_WORKERS=$(cat data/vision_workers 2>/dev/null || echo 6); export VISION_WORKERS
+RUNS_AT_START=$(cat "$RUNS" 2>/dev/null | wc -l | tr -d ' ')
+rm -f data/night_pool.done data/night_pool.clock
 CHECK_T0=$(date +%s)
 if pgrep -f "source_loop.sh" >/dev/null; then
   echo "-- SOURCE: check links: left to source_loop.sh, which opens every link all day"
 else
   echo "-- SOURCE: check links, in the background"
   ( python3 limit.py 21600 caffeinate -i python3 harvest.py check > data/night_check.log 2>&1
-    echo "   [clock] SOURCE: check links, background: $(( ($(date +%s) - CHECK_T0) / 60 )) min  $(grep -i "checked .* in " data/night_check.log | tail -1 | cut -c1-120)" ) &
+    echo "SOURCE: check links (background)       $(( ($(date +%s) - CHECK_T0) / 60 )) min  $(grep -i "checked .* in " data/night_check.log | tail -1 | cut -c1-110)" >> data/night_pool.clock ) &
+  sleep 5
 fi
-( python3 limit.py 0 caffeinate -i python3 vision.py --new --limit 300 2>&1 | grep -v "^  \[" | tail -6 > data/night_vision0.log ) &
-V0=$!
-step "POOL" 150 'grep -v "^  \[\|^   *…" | tail -8' caffeinate -i python3 pool.py
-step "SOURCE: discover links" 15 "tail -3" caffeinate -i python3 discover.py
+# the POOL lane
+(
+  lane() { t0=$(date +%s); "$@" 2>&1 | grep -v "^  \[\|^   *…" | tail -3 | cut -c1-220
+           echo "$LANE_NAME   $(( ($(date +%s) - t0) / 60 )) min" >> data/night_pool.clock; }
+  LANE_NAME="POOL (background)                     "; lane python3 limit.py 9000 caffeinate -i python3 pool.py
+  LANE_NAME="SOURCE: discover links (background)   "; lane python3 limit.py 900 caffeinate -i python3 discover.py
+  R=0
+  while :; do
+    R=$((R + 1)); more=0
+    pgrep -f "harvest.py check" >/dev/null && more=1          # asked BEFORE the pass, so links found during it get one more
+    LANE_NAME="POOL: new links, pass $R (background)   "; lane python3 limit.py 1800 caffeinate -i python3 pool.py --new-boards
+    [ "$more" = 1 ] || break
+    sleep 120
+  done
+  touch data/night_pool.done
+) &
 # cesarxdesign@gmail.com only (his call, 2026-10-05). inbox_all.py reads the
 # other accounts and is run by hand, when he asks.
 [ -f inbox.py ] && [ -z "$NO_CHROME" ] && step "inbox" 10 "tail -3" caffeinate -i python3 inbox.py
 # the applying numbers, dates and outcomes only, onto the cxd-stats page
 step "stats" 5 "tail -1" python3 stats_export.py
-wait $V0
-echo "-- VISION, on what was waiting when the night began"; cat data/night_vision0.log 2>/dev/null
-publish
-ROUND=0
-while [ "$ROUND" -lt 40 ]; do
-  ROUND=$((ROUND + 1))
-  step "POOL: new links, round $ROUND" 30 'grep -v "^  \[\|^   *…" | tail -3' caffeinate -i python3 pool.py --new-boards
-  step "VISION, round $ROUND" 0 'grep -v "^  \[" | tail -6 | tee data/night_vision.last' caffeinate -i python3 vision.py --new --limit 300
-  publish
-  if grep -q "VISION: 0 roles to read" data/night_vision.last 2>/dev/null; then
-    pgrep -f "harvest.py check" >/dev/null || break       # SOURCE is done and nothing is left to read
-    sleep 300                                             # SOURCE is still opening links: look again in five minutes
+# the VISION lane
+PULL=0; WAITED=0
+while :; do
+  Q=$(python3 vision.py --new --count 2>/dev/null | tail -1); case "$Q" in ''|*[!0-9]*) Q=0 ;; esac
+  if [ "$Q" -ge 10 ] || { [ -f data/night_pool.done ] && [ "$Q" -gt 0 ]; }; then
+    PULL=$((PULL + 1))
+    step "VISION, pull $PULL: $Q jobs" 0 'grep -v "^  \[" | tail -6' caffeinate -i python3 vision.py --new
+    publish
+  elif [ -f data/night_pool.done ]; then
+    break                                   # SOURCE and POOL are done and nothing is waiting
+  else
+    sleep 30; WAITED=$((WAITED + 30))       # fewer than 10 through CUT so far: look again in half a minute
   fi
+  [ "$PULL" -ge 200 ] && break
 done
+echo "   VISION waited $((WAITED / 60)) min in all for jobs to come through CUT"
+# jobs he asked to have read again, once: behind every new job
+if [ -s data/reread_once.ids ]; then
+  step "VISION: read again, once" 0 'grep -v "^  \[" | tail -4' caffeinate -i python3 vision.py --ids "$(cat data/reread_once.ids)" --again
+  rm -f data/reread_once.ids; publish
+fi
 # one cut in ten from this run, read a second time; disagreements go to For Reviewing
 step "VISION: second read of rejections" 60 'grep -v "^  \[" | tail -8' caffeinate -i python3 vision.py --audit
 publish
@@ -128,5 +153,22 @@ rm -f "$STAT"
 NIGHT_END=$(date +%s)
 echo "--- night clock"
 echo "$SUMMARY" | sed '1d'
+cat data/night_pool.clock 2>/dev/null
+# Did VISION use the night's tokens? If it never reached the usage limit and
+# was reading the whole time, tokens went unspent: three more readers tomorrow.
+python3 - "$RUNS_AT_START" "$VISION_WORKERS" <<'PY'
+import json, sys
+runs = [json.loads(l) for l in open("data/vision_runs.jsonl") if l.strip()][int(sys.argv[1]):]
+w = int(sys.argv[2])
+pages = sum(r.get("pages_read") or 0 for r in runs)
+tokens = sum((r.get("pages_read") or 0) * (r.get("tokens_per_page") or 0) for r in runs)
+waited = sum(r.get("waited") or 0 for r in runs)
+print(f"VISION tonight: {pages} jobs, {tokens / 1e6:.1f}M tokens, {w} readers, {waited / 60:.0f} min waiting on the usage limit")
+if pages >= 2500 and waited == 0 and w < 18:
+    open("data/vision_workers", "w").write(str(w + 3))
+    print(f"  the limit was never reached with VISION busy all night: {w + 3} readers from tomorrow")
+elif waited:
+    print("  the limit was reached, so the session's tokens were used; readers stay as they are")
+PY
 awk -v d="$((NIGHT_END - NIGHT_START))" 'BEGIN { printf "total wall time    %.1f min\n", d / 60 }'
 echo "=== done $(date '+%F %H:%M') ==="
