@@ -15,7 +15,7 @@ State on 2026-10-06, 13:16. Every line checked against the code and the data.
       To check on the Mac and merge when it reports.
 - [ ] VISION, 14:13: the 517 old-rule rejections posted or updated in the last 30 days, read
       again under the current rules. A one-off; 45 days is the standing rule.
-- [ ] Night run, 00:00 (VISION from 01:00), the first one in its new shape: SOURCE and POOL in the background,
+- [ ] The run (`sh nightly.sh`) has not been run for real in its new shape. The scheduled start is switched off: he triggers it himself this week.
       VISION pulling from the queue from the first second (501 jobs waiting now). Read the log
       in the morning: the clock per step, tokens, and whether the usage limit was reached.
 
