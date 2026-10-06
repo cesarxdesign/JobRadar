@@ -14,14 +14,14 @@ publish() {
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "pushed $(date +%H:%M)"; }
 }
-echo "-- check the boards the second list added"; python3 harvest.py check | tail -6
-echo "-- scrape"; python3 pool.py | grep -v "^  \[\|^   *…" | tail -8
+echo "-- SOURCE: check the links the second list added"; python3 harvest.py check | tail -6
+echo "-- POOL"; python3 pool.py | grep -v "^  \[\|^   *…" | tail -8
 publish
 ( while sleep 1200; do publish; done ) &
 TICK=$!
-echo "-- read new"; python3 vision.py --new | grep -v "^  \[" | tail -8
+echo "-- VISION"; python3 vision.py --new | grep -v "^  \[" | tail -8
 kill $TICK 2>/dev/null
-echo "-- audit"; python3 vision.py --audit | grep -v "^  \[" | tail -8
+echo "-- VISION: second read of rejections"; python3 vision.py --audit | grep -v "^  \[" | tail -8
 publish
 python3 battery.py | head -5
 echo "=== done $(date '+%F %H:%M') ==="

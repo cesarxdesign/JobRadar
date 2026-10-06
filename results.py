@@ -441,8 +441,8 @@ def main():
                   json.loads(VISION_FILE.read_text()) if VISION_FILE.exists() else {})
     fresh = remember_shipped(built)
     RESULTS_FILE.write_text(json.dumps(built, indent=1, ensure_ascii=False))
-    print(f"wrote {RESULTS_FILE} - {built['counts']}")
-    print(f"  {fresh} lane roles he had never been shown before")
+    print(f"RESULTS: wrote {RESULTS_FILE} - {built['counts']}")
+    print(f"  RESULTS: {fresh} roles he had never been shown before")
     return 0
 
 

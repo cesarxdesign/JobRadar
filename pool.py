@@ -2147,7 +2147,7 @@ def slim(jobs):
 def main():
     if "--skip" in sys.argv:
         SKIP.update(sys.argv[sys.argv.index("--skip") + 1].split(","))
-        print(f"skipping (roles kept active): {', '.join(sorted(SKIP))}", flush=True)
+        print(f"POOL: skipping (roles kept active): {', '.join(sorted(SKIP))}", flush=True)
     sources = json.loads(SOURCES_FILE.read_text())
     if "--only" in sys.argv:
         only = set(sys.argv[sys.argv.index("--only") + 1].split(","))
@@ -2158,7 +2158,7 @@ def main():
                   file=sys.stderr)
             return 2
         SKIP.update(every - only)
-        print(f"scraping only {', '.join(sorted(only))}; every other source's roles "
+        print(f"POOL: only {', '.join(sorted(only))}; every other source's roles "
               f"and descriptions carried forward", flush=True)
 
     # A missing reader is not a soft failure. Radar1's readers were silently
@@ -2185,13 +2185,13 @@ def main():
         waiting = len(NEW_BOARDS)
         if "--boards" in sys.argv:          # a batch: this many boards now, the rest next round
             NEW_BOARDS = set(sorted(NEW_BOARDS)[:int(sys.argv[sys.argv.index("--boards") + 1])])
-        print(f"new boards: {waiting} never read" + (f", {len(NEW_BOARDS)} in this batch" if len(NEW_BOARDS) < waiting else ""), flush=True)
+        print(f"POOL: {waiting} new links never read" + (f", {len(NEW_BOARDS)} in this batch" if len(NEW_BOARDS) < waiting else ""), flush=True)
         if not NEW_BOARDS:
             return 0
         TRIED_FILE.write_text(json.dumps(sorted(tried | NEW_BOARDS)))
     stamp = now()
     run_id = stamp
-    print(f"pool run {run_id} - {len(previous)} roles carried in", flush=True)
+    print(f"POOL {run_id} - {len(previous)} roles carried in", flush=True)
 
     # Checkpoint after every source. A run that dies at source 590 keeps its
     # work, and the file on disk is never the half-written product of a crash.
@@ -2224,7 +2224,7 @@ def main():
     jobs, slimmed, dropped = slim(jobs)
     kept = {j["id"] for j in jobs} - slimmed
     previous_jd = {k: v for k, v in previous_jd.items() if k in kept}
-    print(f"  title cut: {len(slimmed)} active postings kept as one slim line, "
+    print(f"  CUT: {len(slimmed)} active postings kept as one slim line, "
           f"{dropped} dead ones dropped", flush=True)
     jd, carried, lost = merge_jd(jobs, previous_jd)
     if lost:

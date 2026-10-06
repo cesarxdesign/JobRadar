@@ -5,8 +5,8 @@ redeploys it. (It was also on Vercel until 2026-09-25; that project is deleted.)
 
 This is the only version. The first one (called Radar1 in comments here) was the `Radar`
 repo; on 2026-09-24 it was merged in with its full history, every commit kept, under
-`_archive/radar/`, and the `Radar` repo archived read-only. Every source it scraped is in
-`data/sources.json`.
+`_archive/radar/`, and the `Radar` repo archived read-only. Every link it POOLed is in
+SOURCE, `data/sources.json`.
 
 ## What it is for
 
@@ -22,12 +22,23 @@ jobs and three applications. So an application matches one posting or none: a si
 at the same company is not a match, and a role that is not certainly applied to stays live.
 A role shown twice costs a glance. A role wrongly hidden costs an application.
 
+Five words name the pipeline, and the logs and the board use no others for these:
+
+    SOURCE   the file of links (company hiring boards, job boards) that says where the jobs are
+    POOL     going through SOURCE and getting every job from every link
+    CUT      the quick pass on POOL that drops jobs by title alone
+    VISION   reads what survives CUT on its real page and passes a job or rejects it
+    RESULTS  only the jobs fit for him, with a level of confidence
+
 Four modules. Each writes one file. None reaches into another.
 
-    pool.py      the internet      -> data/pool.json      every role found, no opinions
-    judge.py     data/pool.json    -> data/verdicts.json  criteria. the only opinions
-    results.py   pool x verdicts   -> data/results.json   three lanes, cuts kept
+    pool.py      SOURCE            -> data/pool.json      POOL: every role found, no opinions
+    judge.py     data/pool.json    -> data/verdicts.json  criteria. the only opinions (CUT is its title pass)
+    results.py   pool x verdicts   -> data/results.json   RESULTS: three lanes, rejections kept
     index.html   data/results.json                        renders. decides nothing
+
+VISION (`vision.py`) reads what survives CUT and writes `data/vision.json`; its second read of
+a tenth of its rejections is the audit. SOURCE is kept up to date by `harvest.py` and `discover.py`.
 
     RadarRouting.json   on the Desktop, never in this repo. applied/discarded.
 
@@ -42,9 +53,10 @@ Two independent axes, and a lane is a function of both:
     Portugal  role yes + place pt_onsite   a role for him, in Portugal, not remote
     Unsure    neither axis says no, but at least one is not clear
     cut       either axis says no          kept, with a reason. never deleted
+              (the stored lane name; CUT is the title pass, VISION rejects)
 
 Unsure is deliberately generous: it means "we cannot say it isn't", not "we
-think probably not". Only explicit negative evidence cuts.
+think probably not". Only explicit negative evidence cuts or rejects.
 
 ## Rules Radar1 broke
 

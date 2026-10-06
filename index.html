@@ -129,7 +129,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <button class="tab rr" data-lane="old69" hidden>69+<span class="n" id="c-old69"></span></button>
   <span class="tab rr sep" hidden></span>
   <button class="tab rr" hidden data-lane="agency" title="companies you moved here from the preview: the ones that flood the boards with the same roles">Bundlers<span class="n" id="c-agency"></span></button>
-  <button class="tab rr" data-lane="review" hidden title="everything waiting on you: cuts a second reading disagreed with, roles where the filter disagrees with what you did, and your own flags, moves and open notes">For Reviewing<span class="n" id="c-review"></span></button>
+  <button class="tab rr" data-lane="review" hidden title="everything waiting on you: rejections VISION’s second read disagreed with, roles where the filter disagrees with what you did, and your own flags, moves and open notes">For Reviewing<span class="n" id="c-review"></span></button>
   <button class="tab rr" data-lane="favorites" hidden>Favorites<span class="n" id="c-favorites"></span></button>
   <span class="tab rr sep" hidden></span>
   <button class="tab rr" data-lane="applied" hidden>Applied<span class="n" id="c-applied"></span></button>
@@ -246,18 +246,18 @@ function reviewRows(){
 const auditSeen=id=>(RR&&RR.audit_calls||[]).some(x=>x.id===id);
 function auditCall(r,call){
   RR.audit_calls=(RR.audit_calls||[]).filter(x=>x.id!==r.id).concat([{id:r.id,call,company:r.company,title:r.title,url:r.url,at:new Date().toISOString()}]);
-  writeRR(); toast(call==="wrong"?"marked: wrongly cut":"marked: the cut was right"); render();
+  writeRR(); toast(call==="wrong"?"marked: wrongly rejected":"marked: the rejection was right"); render();
 }
 function auditBox(r){
   const a=(r.verdict||{}).audit; if(!a) return "";
   const row=(k,h)=>h?'<div style="display:grid;grid-template-columns:84px 1fr;gap:10px;padding:5px 0;border-top:1px solid var(--line)"><span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding-top:2px">'+k+'</span><span>'+h+'</span></div>':"";
   const sig=(a.signals||[]).map(x=>'<li><span class="'+(x.says==="portugal_in"?"in":"out")+'">'+esc(String(x.says||"").replace("portugal_","Portugal "))
       +'</span> · '+esc(x.kind||"")+': “'+esc(x.quote||"")+'”</li>').join("");
-  return '<div class="why" style="border-color:var(--warn)"><div style="font-weight:600;padding-bottom:6px">Second reading disagrees with this cut</div>'
-    + row("first", "CUT · "+esc((r.verdict||{}).reason||""))
+  return '<div class="why" style="border-color:var(--warn)"><div style="font-weight:600;padding-bottom:6px">VISION’s second read disagrees with this rejection</div>'
+    + row("first", "REJECTED · "+esc((r.verdict||{}).reason||""))
     + row("second", esc(String(a.lane||"").toUpperCase())+" · "+esc(a.reason||""))
     + (sig?row("statements",'<ul style="margin:0;padding-left:16px">'+sig+'</ul>'):"")
-    + '<div style="display:flex;gap:8px;padding-top:8px"><button class="flag" id="aud-wrong">Wrongly cut</button><button class="flag" id="aud-right">The cut was right</button></div></div>';
+    + '<div style="display:flex;gap:8px;padding-top:8px"><button class="flag" id="aud-wrong">Wrongly rejected</button><button class="flag" id="aud-right">The rejection was right</button></div></div>';
 }
 
 // ---------- Battery ----------
@@ -864,7 +864,7 @@ function whyBox(r){
       :t===from?'<button class="flag" data-t="'+cur.to+'" title="put it back where the filter had it">'+LANE_NAME[t]+'</button>'
       :'<button class="flag'+(cur&&cur.to===t?" on":"")+'" data-t="'+t+'">'+(cur&&cur.to===t?"✓ ":"")+LANE_NAME[t]+'</button>').join("")
     +(cur?'<span style="color:var(--dim);font-size:12px">you moved it from '+esc(LANE_NAME[cur.from]||cur.from)+'</span>':'')+'</div>';
-  const who='<div class="sum">'+(reader(r)==="vision"?'Read by <b>vision</b>, on its real page'+(v.read_at?' · '+esc(String(v.read_at).slice(0,10)):'')
+  const who='<div class="sum">'+(reader(r)==="vision"?'Read by <b>VISION</b>, on its real page'+(v.read_at?' · '+esc(String(v.read_at).slice(0,10)):'')
     :'Read by the <b>old judge</b>, from scraped text, never on its real page. Treat this call as unverified.')+'</div>';
   const wrap=(x,ok)=>'<div class="verdict'+(ok?" ok":"")+'">'+x+sum+who+move+'</div>';
   if(reader(r)==="judge"){

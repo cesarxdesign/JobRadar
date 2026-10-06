@@ -127,8 +127,8 @@ def main():
     linked = from_links(jobs, src)
     if linked and not dry:
         json.dump(src, open(SOURCES, "w"), indent=1, ensure_ascii=False)
-    print(f"discover: {linked} company boards read straight off posting links", flush=True)
-    print(f"discover: {len(todo)} companies seen only on job boards, {len(done)} already asked", flush=True)
+    print(f"SOURCE: {linked} company boards read straight off posting links", flush=True)
+    print(f"SOURCE: {len(todo)} companies seen only on job boards, {len(done)} already asked", flush=True)
     lock, n, t0 = threading.Lock(), [0], time.time()
 
     def one(item):
@@ -161,11 +161,11 @@ def main():
         elif r["key"] not in lst:
             lst[r["key"]] = c
             added += 1
-    print(f"{len(hits)} companies found at their own hiring board ({sum(len(r['design']) for r in hits.values())} design roles there), "
+    print(f"SOURCE: {len(hits)} companies found at their own hiring board ({sum(len(r['design']) for r in hits.values())} design roles there), "
           f"{unconf} with a board of that name but no matching title (not added), in {time.time() - t0:.0f}s")
     if not dry and added:
         json.dump(src, open(SOURCES, "w"), indent=1, ensure_ascii=False)
-        print(f"added {added} boards to data/sources.json; pool.py reads them from the next run")
+        print(f"SOURCE: added {added} links to data/sources.json; POOL reads them from the next run")
 
 
 if __name__ == "__main__":

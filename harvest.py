@@ -224,9 +224,9 @@ def enumerate_boards(only=None):
     info = json.loads(get("https://index.commoncrawl.org/collinfo.json") or "[]")
     apis = [c["cdx-api"] for c in info[:SNAPSHOTS]]
     if not apis:
-        print("the index did not answer; the list is left as it was")
+        print("SOURCE: the index did not answer; the list is left as it was")
         return boards
-    print(f"asking {len(apis)} snapshots of the public web index for {len(PATTERNS)} kinds of board address", flush=True)
+    print(f"SOURCE: asking {len(apis)} snapshots of the public web index for {len(PATTERNS)} kinds of link", flush=True)
     for system, ask, rx, keyfmt in PATTERNS:
         if only and system not in only:
             continue
@@ -347,7 +347,7 @@ def check(boards, minutes=None):
     due = [(sys_, k) for sys_, d in boards.items() if sys_ in P.ADAPTERS for k, v in d.items()
            if k not in watch.get(sys_, {}) and (v.get("checked") or "") < stale and not v.get("dead", 0) >= 3]
     due.sort(key=lambda x: boards[x[0]][x[1]].get("checked") or "")
-    print(f"check: {len(due)} boards due" + (f", {minutes} minutes allowed" if minutes else ""), flush=True)
+    print(f"SOURCE: check: {len(due)} links due" + (f", {minutes} minutes allowed" if minutes else ""), flush=True)
     lock, n, added, stop = threading.Lock(), [0], [], [False]
 
     def one(item):
@@ -393,7 +393,7 @@ def check(boards, minutes=None):
             if n[0] % 500 == 0:
                 save(boards)
                 save_watch(watch)
-                print(f"  {n[0]}/{len(due)} checked, {len(added)} boards with a design role so far, {time.time() - t0:.0f}s", flush=True)
+                print(f"  {n[0]}/{len(due)} links checked, {len(added)} with a design role so far, {time.time() - t0:.0f}s", flush=True)
             if minutes and time.time() - t0 > minutes * 60:
                 stop[0] = True
 
@@ -412,11 +412,11 @@ def check(boards, minutes=None):
         t.join()
     save(boards)
     save_watch(watch)
-    print(f"checked {n[0]} boards in {time.time() - t0:.0f}s: {len(added)} have a design role and were added to the nightly scrape")
+    print(f"SOURCE: checked {n[0]} links in {time.time() - t0:.0f}s: {len(added)} have a design role and were added to the nightly POOL")
     for sys_, k, d, t in added[:25]:
         print(f"  + {sys_}/{k}: {d} design · {t}")
     total = sum(len(v) for v in boards.values())
-    print(f"{total} boards known in all; {sum(len(v) for v in watch.values())} scraped every night")
+    print(f"SOURCE: {total} links in all; {sum(len(v) for v in watch.values())} POOLed every night")
 
 
 BATCH = 5000                  # POOL roles per handover to CUT and VISION
@@ -447,7 +447,7 @@ def batch(minutes=10):
     x = BATCH
     reads = max(60, round(x * max(survive, 0.005)))
     boards = max(10, round(x / per_board))
-    print(f"batch: X = {x} POOL roles = {boards} boards; {survive * 100:.1f}% survive CUT = {reads} for VISION, "
+    print(f"batch: X = {x} POOL roles = {boards} links; {survive * 100:.1f}% survive CUT = {reads} for VISION, "
           f"which reads {speed:.1f} a minute: about {reads / max(speed, 1):.0f} minutes a round")
     print(f"BOARDS={boards} READS={reads}")
 

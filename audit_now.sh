@@ -3,9 +3,9 @@
 cd "$(dirname "$0")" || exit 1
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 exec >>data/nightly.log 2>&1
-echo; echo "=== retry + audit $(date '+%F %H:%M') ==="
-echo "-- not read, second try"; python3 vision.py --new | grep -v "^  \[" | tail -5
-echo "-- audit of every cut not yet checked"; python3 vision.py --audit --all | grep -v "^  \[" | tail -40
+echo; echo "=== retry + second read $(date '+%F %H:%M') ==="
+echo "-- VISION: not read, second try"; python3 vision.py --new | grep -v "^  \[" | tail -5
+echo "-- VISION: second read of every rejection not yet checked"; python3 vision.py --audit --all | grep -v "^  \[" | tail -40
 python3 results.py | head -1 | cut -c1-260
 python3 poolparts.py split >/dev/null
 git add data/pool[0-9]*.json data/results.json data/vision.json data/shipped.json data/vision_runs.jsonl 2>/dev/null

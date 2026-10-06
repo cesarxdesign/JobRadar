@@ -62,7 +62,7 @@ step() {
     extra=$(tail -1 "$RUNS" | python3 -c 'import json,sys; r=json.loads(sys.stdin.read()); print("  pages %s, tokens %s" % (r.get("pages_read"), (r.get("pages_read") or 0) * (r.get("tokens_per_page") or 0)))' 2>/dev/null)
   fi
   line=$(awk -v n="$name" -v a="$(clock "$t0")" -v b="$(clock "$t1")" -v d="$((t1 - t0))" -v s="$st" \
-    'BEGIN { printf "%-22s %s - %s  %6.1f min  %s", n, a, b, d / 60, s }')
+    'BEGIN { printf "%-36s %s - %s  %6.1f min  %s", n, a, b, d / 60, s }')
   echo "   [clock] $line$extra"
   SUMMARY="$SUMMARY
 $line$extra"
@@ -75,14 +75,14 @@ step "tabs" 5 cat python3 tabs.py remoteio
 # every company board on every hiring system: the list is refreshed weekly,
 # and each night the boards that are due get checked for a design role
 if [ ! -f data/boards.json ] || [ -n "$(find data/boards.json -mtime +7 2>/dev/null)" ]; then
-  step "harvest: list" 60 "tail -24" caffeinate -i python3 harvest.py enumerate
+  step "SOURCE: list links" 60 "tail -24" caffeinate -i python3 harvest.py enumerate
 fi
-step "harvest: check" 45 "tail -8" caffeinate -i python3 harvest.py check --minutes 40
-step "scrape" 150 'grep -v "^  \[\|^   *…" | tail -8' caffeinate -i python3 pool.py
-step "discover" 15 "tail -3" caffeinate -i python3 discover.py
+step "SOURCE: check links" 45 "tail -8" caffeinate -i python3 harvest.py check --minutes 40
+step "POOL" 150 'grep -v "^  \[\|^   *…" | tail -8' caffeinate -i python3 pool.py
+step "SOURCE: discover links" 15 "tail -3" caffeinate -i python3 discover.py
 # only the boards discover just added: they have no row in the pool yet. The
 # old `--only <every system>` re-scraped all 4,087 boards for the sake of a few.
-step "scrape new boards" 30 'grep -v "^  \[\|^   *…" | tail -6' caffeinate -i python3 pool.py --new-boards
+step "POOL: new links" 30 'grep -v "^  \[\|^   *…" | tail -6' caffeinate -i python3 pool.py --new-boards
 # cesarxdesign@gmail.com only (his call, 2026-10-05). inbox_all.py reads the
 # other accounts and is run by hand, when he asks.
 [ -f inbox.py ] && step "inbox" 10 "tail -3" caffeinate -i python3 inbox.py
@@ -93,10 +93,10 @@ publish
 TICK=$!
 # no time limit (see above); at most 1000 pages a night, the newest first, and
 # vision.py says how many it left for the next night
-step "read" 0 'grep -v "^  \[" | tail -12' caffeinate -i python3 vision.py --new --limit 1000
+step "VISION" 0 'grep -v "^  \[" | tail -12' caffeinate -i python3 vision.py --new --limit 1000
 kill $TICK 2>/dev/null
 # one cut in ten from this run, read a second time; disagreements go to For Reviewing
-step "audit" 60 'grep -v "^  \[" | tail -8' caffeinate -i python3 vision.py --audit
+step "VISION: second read of rejections" 60 'grep -v "^  \[" | tail -8' caffeinate -i python3 vision.py --audit
 publish
 step "battery" 10 "head -4" python3 battery.py      # free: reads nothing; updates the TestBattery page
 rm -f "$STAT"

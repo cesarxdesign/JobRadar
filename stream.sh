@@ -28,10 +28,10 @@ while :; do
   V=$(python3 vision.py --new --limit "$READS" 2>&1 | grep -v "^  \[" | tail -4); echo "$V"
   publish
   # done when the check has finished, no board is left unread and nothing is left to read
-  if ! pgrep -f "harvest.py" >/dev/null && echo "$S" | grep -q "new boards: 0 never read" && echo "$V" | grep -q "vision: 0 roles to read"; then break; fi
-  echo "$S" | grep -q "new boards: 0 never read" && echo "$V" | grep -q "vision: 0 roles to read" && sleep 120
+  if ! pgrep -f "harvest.py" >/dev/null && echo "$S" | grep -q "POOL: 0 new links never read" && echo "$V" | grep -q "VISION: 0 roles to read"; then break; fi
+  echo "$S" | grep -q "POOL: 0 new links never read" && echo "$V" | grep -q "VISION: 0 roles to read" && sleep 120
 done
-echo "-- audit"; python3 vision.py --audit | grep -v "^  \[" | tail -8
+echo "-- VISION: second read of rejections"; python3 vision.py --audit | grep -v "^  \[" | tail -8
 publish
 python3 battery.py | head -5
 echo "=== stream done $(date '+%F %H:%M') ==="

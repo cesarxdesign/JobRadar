@@ -13,16 +13,16 @@ publish() {
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "pushed $(date +%H:%M)"; }
 }
 pkill -f "radar-chrome-" 2>/dev/null; sleep 2
-echo "-- scrape";   caffeinate -i python3 pool.py | grep -v "^  \[\|^   *…" | tail -8
-echo "-- discover"; caffeinate -i python3 discover.py | tail -3
+echo "-- POOL";     caffeinate -i python3 pool.py | grep -v "^  \[\|^   *…" | tail -8
+echo "-- SOURCE: discover links"; caffeinate -i python3 discover.py | tail -3
 ATS="ashby,greenhouse,lever,workable,recruitee,teamtailor,smartrecruiters,bamboohr,breezy,join,personio,rippling,pinpoint,jazzhr,manatal"
-echo "-- scrape new boards"; caffeinate -i python3 pool.py --only "$ATS" | grep -v "^  \[\|^   *…" | tail -6
+echo "-- POOL: new links"; caffeinate -i python3 pool.py --only "$ATS" | grep -v "^  \[\|^   *…" | tail -6
 echo "-- inbox"; caffeinate -i python3 inbox.py | tail -3
 publish
 ( while sleep 1200; do publish; done ) &
 TICK=$!
-echo "-- read new";  caffeinate -i python3 vision.py --new | grep -v "^  \[" | tail -8
-echo "-- re-read the live lanes under the new rules"; caffeinate -i python3 vision.py --lanes --again | grep -v "^  \[" | tail -8
+echo "-- VISION";    caffeinate -i python3 vision.py --new | grep -v "^  \[" | tail -8
+echo "-- VISION: read the RESULTS again under the new rules"; caffeinate -i python3 vision.py --lanes --again | grep -v "^  \[" | tail -8
 kill $TICK 2>/dev/null
 publish
 echo "-- battery"; python3 battery.py | head -6

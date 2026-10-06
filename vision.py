@@ -595,7 +595,7 @@ def audit(out, jobs, since=None, share=AUDIT_SHARE):
             and os.path.exists(f"{ROOT}/data/pages/{i}.txt")]
     random.seed(time.strftime("%Y-%m-%d"))
     take = random.sample(sorted(cuts), min(len(cuts), max(1, round(len(cuts) * share)))) if cuts else []
-    print(f"audit: {len(take)} of {len(cuts)} cuts read a second time", flush=True)
+    print(f"VISION: second read of {len(take)} of {len(cuts)} rejections", flush=True)
     wrong = [0]
     def one(i):
         rec = jobs[i]
@@ -610,23 +610,24 @@ def audit(out, jobs, since=None, share=AUDIT_SHARE):
                                "signals": [x for x in a.get("place_signals") or [] if isinstance(x, dict) and x.get("says") != "says_nothing"]}
             if lane not in ("cut", "closed"):
                 wrong[0] += 1
-                print(f"  ≠ {rec['company'][:22]} | {rec['title'][:40]} | second reading: {lane} | {str(a.get('reason'))[:90]}", flush=True)
+                print(f"  ≠ {rec['company'][:22]} | {rec['title'][:40]} | VISION second read: {lane} | {str(a.get('reason'))[:90]}", flush=True)
     from concurrent.futures import ThreadPoolExecutor
     with ThreadPoolExecutor(WORKERS) as ex:
         for n, _ in enumerate(ex.map(lambda i: _try(one, i), take), 1):
             if n % 25 == 0:
                 save(out)
     save(out)
-    print(f"audit done: {len(take) - wrong[0]} cuts confirmed, {wrong[0]} for him to review", flush=True)
+    print(f"VISION second read done: {len(take) - wrong[0]} rejections confirmed, {wrong[0]} for him to review", flush=True)
 
 
 def _try(fn, i):
     try:
         fn(i)
     except ReaderDown as e:
-        print(f"  audit could not read {i}: {str(e)[:80]}", flush=True)
+        print(f"  VISION could not read {i} a second time: {str(e)[:80]}", flush=True)
 
 
+SHOWN = {"cut": "rejected"}     # a lane value is stored as "cut"; the log says what VISION did
 PREV = {}          # --employer: the verdicts already made on a board's copy, kept unless the employer's page turns up
 
 
@@ -694,9 +695,9 @@ def main():
                                     "criteria": criteria.VERSION}) + "\n")
         return
     rows = pick(jobs, out)
-    print(f"vision: {len(rows)} roles to read, model {MODEL}, {WORKERS} at a time", flush=True)
+    print(f"VISION: {len(rows)} roles to read, model {MODEL}, {WORKERS} at a time", flush=True)
     if LEFT[0]:
-        print(f"vision: --limit leaves {LEFT[0]} roles unread for the next run", flush=True)
+        print(f"VISION: --limit leaves {LEFT[0]} roles unread for the next run", flush=True)
     if not rows:
         return
     br, t0, n = render.Browser(), time.time(), [0]
@@ -731,7 +732,7 @@ def main():
                 v["unread_tries"] = (was.get("unread_tries") or (1 if was.get("posting_open") == "unreadable" else 0)) + 1
             out[rec["id"]] = v
             n[0] += 1
-            print(f"  [{n[0]}/{len(rows)}] {v['lane']:8} {v.get('read', '-'):8} {str(v.get('found_by') or ''):7} {rec['company'][:22]:22} | "
+            print(f"  [{n[0]}/{len(rows)}] {SHOWN.get(v['lane'], v['lane']):8} {v.get('read', '-'):8} {str(v.get('found_by') or ''):7} {rec['company'][:22]:22} | "
                   f"{rec['title'][:38]:38} | {str(v.get('place_quote') or v.get('open_quote') or v.get('reason'))[:70]}", flush=True)
             if n[0] % 10 == 0:
                 save(out)
@@ -745,7 +746,8 @@ def main():
     import collections
     c = collections.Counter(out[r["id"]]["lane"] for r in rows if r["id"] in out)
     u = _usage
-    print(f"done in {time.time() - t0:.0f}s: {dict(c)}")
+    shown = {SHOWN.get(k, k): n for k, n in c.items()}
+    print(f"done in {time.time() - t0:.0f}s: {shown}")
     if u["calls"]:
         print(f"{u['calls']} pages read by {MODEL}: {u['in']:,} tokens in, {u['out']:,} out, "
               f"{(u['in'] + u['out']) // u['calls']:,} per page, ${u['usd']:.2f} at API prices")
