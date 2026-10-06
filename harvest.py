@@ -563,7 +563,12 @@ if __name__ == "__main__":
         # The first to write its number in data/check.lock goes; the others
         # wait for that process to end, then read the list afresh. (Waiting
         # for "any other check" made two waiters wait on each other for ever.)
-        lock, waited = f"{ROOT}/data/check.lock", False
+        # --systems a,b,c: only those systems, with a lock of their own, so a
+        # pass stuck in the slow tail of one system does not hold up the rest
+        only = set(args[args.index("--systems") + 1].split(",")) if "--systems" in args else None
+        if only:
+            b = {s: d for s, d in b.items() if s in only}
+        lock, waited = f"{ROOT}/data/check{'.' + '-'.join(sorted(only))[:60] if only else ''}.lock", False
         while True:
             try:
                 holder = int(open(lock).read().strip() or 0)
@@ -586,4 +591,6 @@ if __name__ == "__main__":
             time.sleep(20)
         if waited:
             b = load()
+            if only:
+                b = {s: d for s, d in b.items() if s in only}
         check(b, int(args[args.index("--minutes") + 1]) if "--minutes" in args else None)
