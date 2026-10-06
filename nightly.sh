@@ -49,6 +49,7 @@ step() {
   echo "-- $name"
   runs_before=$(cat "$RUNS" 2>/dev/null | wc -l | tr -d ' ')
   t0=$(date +%s)
+  : > "$STAT"                       # never report the previous step's status for this one
   python3 limit.py --status "$STAT" $((mins * 60)) "$@" | eval "$filt"
   t1=$(date +%s)
   st=$(cat "$STAT" 2>/dev/null); [ -n "$st" ] || st="exit ?"

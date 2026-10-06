@@ -587,7 +587,16 @@ def _name(cfg):
 
 
 def from_bamboohr(slug, cfg=None):
-    for j in get_json(f"https://{slug}.bamboohr.com/careers/list").get("result") or []:
+    # A company that has left BambooHR is not a 404: its address redirects to
+    # bamboohr.com's own front page, 200 and HTML. Read as JSON that was a
+    # JSONDecodeError, which says nothing, so 1,147 such boards were asked again
+    # on every check and never marked (2026-10-06). It is said as what it is.
+    url = f"https://{slug}.bamboohr.com/careers/list"
+    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=TIMEOUT) as r:
+        if urllib.parse.urlparse(r.geturl()).netloc in ("www.bamboohr.com", "bamboohr.com"):
+            raise urllib.error.HTTPError(url, 404, "no such BambooHR account (redirects to bamboohr.com)", None, None)
+        doc = json.loads(r.read().decode("utf-8", "replace"))
+    for j in doc.get("result") or []:
         loc = j.get("atsLocation") or j.get("location") or {}
         loc_s = ", ".join(filter(None, [loc.get("city"), loc.get("state"), loc.get("country")]))
         title = j.get("jobOpeningName")
