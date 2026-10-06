@@ -80,7 +80,11 @@ fi
 # every link in SOURCE, every night (his call, 2026-10-06: "I need to see
 # everything, every day"), so the 40-minute cap is gone; four hours is a stop
 # for a hang, not a budget
-step "SOURCE: check links" 250 "tail -8" caffeinate -i python3 harvest.py check --minutes 240
+if pgrep -f "source_loop.sh" >/dev/null; then
+  echo "-- SOURCE: check links: left to source_loop.sh, which opens every link all day"
+else
+  step "SOURCE: check links" 250 "tail -8" caffeinate -i python3 harvest.py check --minutes 240
+fi
 step "POOL" 150 'grep -v "^  \[\|^   *…" | tail -8' caffeinate -i python3 pool.py
 step "SOURCE: discover links" 15 "tail -3" caffeinate -i python3 discover.py
 # only the boards discover just added: they have no row in the pool yet. The
