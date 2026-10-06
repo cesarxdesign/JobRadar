@@ -10,37 +10,34 @@ SOURCE, `data/sources.json`.
 
 ## What it is for
 
-Getting a job. Everything else is judged against this chain:
+Read this before changing anything. It is the owner's own account (2026-10-06).
 
-    a job           needs interviews
-    interviews      need applications that get called back
-    applications    need roles, found and shown
-    roles           are only worth showing if he can apply to them, so the criteria must be right
+1. The goal is to **find a job**. Not to run a service.
+2. To find it he has to **apply a lot**. He applies to every role that fits.
+3. To apply a lot he needs **options**.
+4. Options come from looking everywhere: **every board, link and source there is**, checked
+   **every day**. The biggest POOL possible. A company may hire for design once a year, and
+   that day has to be caught.
+5. Reading a job properly (VISION) costs **tokens, and tokens are limited per 5-hour session**.
+   That is the only scarce thing here.
 
-He applies to every role that fits. A company's Staff, Senior and Lead postings are three
-jobs and three applications. So an application matches one posting or none: a similar title
-at the same company is not a match, and a role that is not certainly applied to stays live.
-A role shown twice costs a glance. A role wrongly hidden costs an application.
+So the rules for anyone, person or agent, working on this:
 
-Five words name the pipeline, and the logs and the board use no others for these:
+- **Never look at less.** No resting links, no dropping links, no trimming SOURCE or POOL to
+  save run time or traffic. Go faster or wider instead.
+- **Anything that costs no tokens runs now, and in parallel.** Opening links, POOL, CUT,
+  adding sources. Never queue it behind something else.
+- **VISION is the bottleneck and must never idle while a session has tokens.** It starts in
+  the first minute and is fed in rounds; when the limit hits, it waits for the reset and goes on.
+- **Tokens go where they produce options.** CUT removes what he has ruled out before VISION
+  sees it: non-design titles, intern and unpaid roles, and anything neither posted nor
+  updated in 45 days.
+- **The costly mistake is a job he could have applied to and never saw.** A wrong job shown
+  costs him a glance.
 
-    SOURCE   the file of links (company hiring boards, job boards) that says where the jobs are
-    POOL     going through SOURCE and getting every job from every link
-    CUT      the quick pass on POOL that drops jobs by title alone
-    VISION   reads what survives CUT on its real page and passes a job or rejects it
-    RESULTS  only the jobs fit for him, with a level of confidence
-
-Four modules. Each writes one file. None reaches into another.
-
-    pool.py      SOURCE            -> data/pool.json      POOL: every role found, no opinions
-    judge.py     data/pool.json    -> data/verdicts.json  criteria. the only opinions (CUT is its title pass)
-    results.py   pool x verdicts   -> data/results.json   RESULTS: three lanes, rejections kept
-    index.html   data/results.json                        renders. decides nothing
-
-VISION (`vision.py`) reads what survives CUT and writes `data/vision.json`; its second read of
-a tenth of its rejections is the audit. SOURCE is kept up to date by `harvest.py` and `discover.py`.
-
-    RadarRouting.json   on the Desktop, never in this repo. applied/discarded.
+The five words: **SOURCE** (the links that say where jobs are) → **POOL** (every job from
+every link) → **CUT** (quick, on title and age) → **VISION** (reads what is left, on its real
+page) → **RESULTS** (the jobs that fit him).
 
 ## The lanes
 
