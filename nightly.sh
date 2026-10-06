@@ -149,8 +149,13 @@ step "stats" 5 "tail -1" python3 stats_export.py
 # tokens, so a full queue is waiting; VISION itself starts at 01:00, when his
 # own day with his tokens is over (his call, 2026-10-06). A run started by
 # hand at any other hour does not wait.
-[ "$(date +%H)" = "00" ] && echo "-- VISION holds until 01:00; SOURCE and POOL are filling the queue"
-while [ "$(date +%H)" = "00" ]; do sleep 30; done
+# data/vision_now: for one night he has said his tokens are free from the start; no hold, then the file goes
+if [ -f data/vision_now ]; then
+  echo "-- VISION does not hold tonight (data/vision_now)"; rm -f data/vision_now
+else
+  [ "$(date +%H)" = "00" ] && echo "-- VISION holds until 01:00; SOURCE and POOL are filling the queue"
+  while [ "$(date +%H)" = "00" ]; do sleep 30; done
+fi
 # A VISION that stops moving is stopped, and the next pull carries on with the
 # rest. On 2026-10-06 one sat for fifty minutes on its last 7 pages, alive and
 # doing nothing; with no time limit on VISION that would have cost the night.
