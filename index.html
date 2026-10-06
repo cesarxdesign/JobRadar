@@ -21,17 +21,6 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .bucket{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;margin:14px 0 6px 46px}
 .route.drop{border-color:var(--acc);color:var(--acc);border-style:dashed}
 .route[disabled]{opacity:.5;cursor:wait}
-.filters{display:flex;gap:8px;align-items:center;padding:10px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-/* The sort control ran off the right edge on a narrow window, which is
-   where it is least findable and most needed. Everything wraps, and the
-   count sits with the controls instead of being pushed to the far edge. */
-.filters select{flex:0 1 auto;min-width:0}
-.filters .safari{color:var(--dim);font-size:12.5px;display:flex;align-items:center;gap:4px;cursor:pointer}
-.filters .n{margin-left:0;order:99}
-
-.filters select{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font-size:12.5px}
-.filters .clear{background:none;border:0;color:var(--dim);font-size:12.5px;cursor:pointer;text-decoration:underline}
-.filters .n{color:var(--dim);font-size:12.5px;margin-left:auto}
 .tabs{display:flex;gap:2px;padding:10px 20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .tabs{align-items:center}
 .tabs select{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12.5px;align-self:center;margin-right:8px}
@@ -113,23 +102,6 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .notes .past .when{color:var(--dimmer);font-size:11px;margin-top:2px}
 .verdict .sum{margin-top:10px;color:var(--dim);font-size:12px}
 [hidden]{display:none!important}
-.stats{padding:20px 24px;max-width:1100px}
-.stats h3{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;margin:26px 0 8px}
-.stats .facts{grid-template-columns:repeat(5,1fr);margin:0}
-.stats .fv{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
-.stats .fv small{font-size:12px;font-weight:400;color:var(--dim);margin-left:6px}
-.stats table{width:100%;border-collapse:collapse;font-size:13px}
-.stats th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--dimmer);font-weight:600;padding:6px 10px;border-bottom:1px solid var(--line)}
-.stats td{padding:7px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:top}
-.stats td.num,.stats th.num{text-align:right}
-.stats td small{color:var(--dim)}
-.stats .dim{color:var(--dim)}
-.stats .ms{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.stats .ms input,.stats .ms select{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font-size:12.5px}
-.stats .x{background:none;border:0;color:var(--dim);cursor:pointer;font-size:14px}
-.stats .x:hover{color:var(--warn)}
-.stats svg{display:block;width:100%;height:auto}
-.stats .st-callback{color:var(--good)}.stats .st-rejected{color:var(--warn)}.stats .st-none{color:var(--dimmer)}
 </style>
 
 <header>
@@ -177,14 +149,13 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <div class="list" id="list"></div>
   <div class="pane" id="pane"><div class="empty">Select a role.</div></div>
 </div>
-<div class="stats" id="stats" hidden></div>
 <div class="toast" id="toast"></div>
 
 <script>
 "use strict";
 // The board renders results.json and nothing else. It applies no criteria of
 // its own - the lane a role is in was decided by the judge, upstream.
-let DATA = null, LANE = "open", SEL = null, Q = "";
+let DATA = null, LANE = "open", SEL = null;
 // The batch view: the same board, showing the sample the judge just drew,
 // split pass / cut, with a Wrong button per role. Nothing else changes -
 // same cards, same pane, same search.
@@ -220,7 +191,6 @@ function setBatch(on){
   document.querySelectorAll(".tab:not(.bt)").forEach(t=>{t.hidden=on||(t.classList.contains("rr")&&!RR);});
   document.querySelectorAll(".tab.bt").forEach(t=>{t.hidden=!on;t.classList.toggle("on",on&&t.dataset.lane===BUCKET);});
   if(!on) document.querySelectorAll(".tab:not(.bt)").forEach(t=>t.classList.toggle("on",t.dataset.lane===LANE));
-  if($("q")) $("q").placeholder=on?"filter this batch…":"filter roles…";
   const b=$("batch");
   b.className="route"+(on?" on":"");
   b.textContent=on?"✓ Complete review":"Review last batch";
@@ -427,19 +397,6 @@ function ageLabel(r,d){
   return d===0?"?":"≥"+d+"d";
 }
 const byDays=(a,b)=>{const x=days(a),y=days(b);return (x===null)-(y===null)||x-y;};
-// Everything the board knows about a role, as one string to search. The lane
-// is untouched: a filtered role stays in its own column, the rest are hidden.
-function haystack(r){
-  const f=(r.fields)||(r.verdict&&r.verdict.fields)||{}, v=r.verdict||r.l2||{};
-  return [r.title,r.company,r.location,r.source,(r.sources||[]).join(" "),
-          f.role,f.seniority,f.remote,f.portugal_ok,f.language,f.salary,f.reports_to,
-          (f.countries||[]).join(" "),v.role,v.place,(v.why||[]).join(" "),v.reason]
-         .filter(Boolean).join(" ").toLowerCase();
-}
-// The filter bar. Every value is read off the role the board already has -
-// no new data, no server. A filter narrows what a lane shows; it never moves
-// a role between lanes, because the lane is the judge's verdict, not a view.
-const F={date:"",place:"",sen:"",src:"",sal:""};
 // The window in front of the tabs: the last N days, on every tab. Remembered per browser.
 let LAST="";
 try { LAST = localStorage.getItem("radar-last") || ""; } catch (e) {}
@@ -450,28 +407,9 @@ try { LAST = localStorage.getItem("radar-last") || ""; } catch (e) {}
 const OLD_DAYS=69;
 const isOld=r=>{const d=days(r);return d!==null&&d>OLD_DAYS;};
 let SORT="new";
-// A date filter on a newest-first list only removes the oldest rows, which sit
-// below the fold - it works and it looks inert. Sorting is what actually moves
-// the list, so it lives beside the filters rather than buried.
-function salNum(r){
-  const m=String(f(r).salary||"").replace(/[ ,.]/g,"").match(/(\d{4,})/g);
-  return m?Math.max(...m.map(Number)):-1;
-}
 function sortRows(rows){
   if(SORT==="old") return rows.sort((a,b)=>byDays(b,a));
-  if(SORT==="co")  return rows.sort((a,b)=>String(a.company||"").localeCompare(String(b.company||"")));
-  if(SORT==="sal") return rows.sort((a,b)=>salNum(b)-salNum(a)||byDays(a,b));
   return rows.sort(byDays);
-}
-
-function placeOf(r){
-  const t=((r.location||"")+" "+(f(r).remote||"")+" "+(r.workplace||"")).toLowerCase();
-  if(/portugal|lisbon|lisboa|porto/.test(t)) return "Portugal";
-  if(/worldwide|anywhere|global/.test(t)) return "Worldwide";
-  if(/emea|europe|eu\b|cet/.test(t)) return "Europe / EMEA";
-  if(/united states|usa|u\.s\.|canada|americas|latam/.test(t)) return "Americas";
-  if(/united kingdom|uk\b|london/.test(t)) return "UK";
-  return "Other";
 }
 
 // The board has to run in Chrome - it is the only browser that can read and
@@ -485,7 +423,6 @@ function outbound(u){
 }
 
 function matches(r){
-  if(Q && !Q.split(/\s+/).filter(Boolean).every(w=>haystack(r).includes(w))) return false;
   // A role whose posting carries no date has no place in a window of days:
   // it sits under "?" (and under "all time"), never under "last 1 day".
   // Bands, not ceilings: "1 week" is the last 7 days without the last day, "1
@@ -497,50 +434,10 @@ function matches(r){
     const d=days(r), lo={1:0,7:2,30:8,90:31}[LAST];
     if(!dated(r) || d===null || d < lo || d > +LAST) return false;
   }
-  if(F.date){
-    // "≤ 6 months" was read as "six months old and older", which is a fair
-    // reading of a bad label. Both directions now, spelled out: -N is the last
-    // N days, +N is older than N days.
-    const d=days(r);
-    if(F.date==="dated"){ if(d===null) return false; }
-    else if(d===null) return false;
-    else if(F.date[0]==="+"){ if(d <= +F.date.slice(1)) return false; }
-    else if(F.date.includes(":")){
-      // A band, not a ceiling. "5 weeks" means 35 to 42 days, not everything
-      // under 42 - cumulative ranges all start at zero, so every one of them
-      // showed the same newest roles at the top and the list never moved.
-      const [lo,hi]=F.date.split(":").map(Number);
-      if(d < lo || d >= hi) return false;
-    }
-  }
-  if(F.place && placeOf(r)!==F.place) return false;
-  if(F.sen && (f(r).seniority||"")!==F.sen) return false;
-  if(F.src && String(r.source||"").split("/")[0]!==F.src) return false;
-  if(F.sal==="y" && !f(r).salary) return false;
   return true;
 }
 
-// The dropdowns are built from what is actually in this board's data, so an
-// option never offers a value that would return nothing.
-function fillFilters(){
-  if(!DATA) return;
-  const rows=DATA.roles.filter(r=>r.active);
-  const opts=(sel,vals,keep)=>{
-    const el=$(sel); if(!el) return;
-    const cur=el.value;
-    el.innerHTML='<option value="">'+keep+'</option>'
-      +vals.map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');
-    el.value=cur;
-  };
-  const uniq=fn=>[...new Set(rows.map(fn).filter(Boolean))].sort();
-  opts("f-place",["Portugal","Worldwide","Europe / EMEA","UK","Americas","Other"]
-        .filter(p=>rows.some(r=>placeOf(r)===p)),"anywhere");
-  opts("f-sen",uniq(r=>f(r).seniority),"any seniority");
-  opts("f-src",uniq(r=>String(r.source||"").split("/")[0]),"any source");
-}
-
 function wireFilters(){
-  const map={"f-date":"date","f-place":"place","f-sen":"sen","f-src":"src","f-sal":"sal"};
   const so=$("f-sort");
   if(so) so.onchange=()=>{SORT=so.value;render();};
   const la=$("f-last");
@@ -562,14 +459,6 @@ function wireFilters(){
       try{localStorage.setItem("radar-safari",SAFARI?"1":"0");}catch(e){}
       render();};
   }
-  for(const id in map){
-    const el=$(id); if(!el) continue;
-    el.onchange=()=>{F[map[id]]=el.value;render();};
-  }
-  const c=$("f-clear");
-  if(c) c.onclick=()=>{for(const k in F)F[k]="";SORT="new";if(so)so.value="new";
-    for(const id in map){const el=$(id); if(el) el.value="";}
-    render();};
 }
 
 function pool(){
@@ -641,20 +530,10 @@ function counts(){
 let SHOW=200, SHOWN_FOR="";         // Cut holds thousands; draw 200, then more on request
 function render(){
   if(!DATA) return;
-  if(SHOWN_FOR!==LANE+"|"+Q){SHOW=200;SHOWN_FOR=LANE+"|"+Q;}
+  if(SHOWN_FOR!==LANE){SHOW=200;SHOWN_FOR=LANE;}
   counts();
-  // Stats is not a lane of roles: it takes the whole page, and only exists
-  // while the routing file is attached, because every number in it is his.
-  const st=LANE==="stats"&&!INBATCH&&!!RR;
-  $("stats").hidden=!st;$("split").hidden=st;
-  if(st) return renderStats();
   const rows=pool();
   $("list").innerHTML = rows.length ? "" : '<div class="empty">Nothing here.</div>';
-  const fc=$("f-count");
-  if(fc){
-    const all=(DATA.lanes[LANE]||[]).length;
-    fc.textContent = (Q||Object.values(F).some(Boolean)) && all ? rows.length+" of "+all : "";
-  }
   // The pane and every tool on it are his. A visitor gets the list, full width.
   $("split").classList.toggle("nopane",!RR||($("f-pane")&&$("f-pane").checked));
   document.querySelectorAll("label.safari").forEach(l=>{l.hidden=!RR;});
@@ -1083,58 +962,6 @@ function evidenceBox(r){
   return L.length?'<div class="why"><b>Evidence</b><br>'+L.join("<br>")+'</div>':"";
 }
 
-// ---------- Stats ----------
-// The numbers moved to cxd-stats (stats_export.py writes them there). What
-// stays is what needs the private file: the milestones he sets, every
-// application by name, and his actions against the filter's labels.
-// An application is proven by an email
-// (RR.applications, written by sweep.py) or by an "applied" click on the board
-// that no email covers. A callback is a person asking to talk or asking a
-// question; a test sent to every applicant (auto) is not one.
-const realCB=a=>(a.callbacks||[]).filter(c=>!c.auto);
-function applications(){
-  const A=(RR.applications||[]).map(a=>({...a}));
-  const ids=new Set(A.flatMap(a=>a.role_ids||[]));
-  for(const d of RR.decisions) if(d.decision==="applied"&&!ids.has(d.id))
-    A.push({company:d.company,role:d.title,applied:String(d.at||"").slice(0,10),rejected:null,callbacks:[],src:"board"});
-  return A.sort((a,b)=>String(b.applied||b.rejected||"").localeCompare(String(a.applied||a.rejected||"")));
-}
-// The filter's labels against what he did. Applied from Unsure or Cut is the
-// filter being too cautious; Incorrect is him saying so outright.
-function stampTable(){
-  const L=["open","portugal","unsure","closed","cut","not labeled"], acts=["applied","discarded","challenged"];
-  const n=(l,a)=>a==="challenged"?new Set((RR.flags||[]).filter(x=>(x.label||"not labeled")===l).concat((RR.retags||[]).filter(x=>(x.from||"not labeled")===l)).map(x=>x.id)).size
-    :RR.decisions.filter(d=>d.decision===a&&(d.label||d.lane||"not labeled")===l).length;
-  return '<table><tr><th>Filter called it</th>'+acts.map(a=>'<th class="num">'+a+'</th>').join("")+'</tr>'
-    +L.filter(l=>acts.some(a=>n(l,a))).map(l=>'<tr><td>'+esc(LANE_NAME[l]||l)+'</td>'
-      +acts.map(a=>'<td class="num">'+(n(l,a)||'<span class="dim">·</span>')+'</td>').join("")+'</tr>').join("")+'</table>';
-}
-function renderStats(){
-  const A=applications(), el=$("stats");
-  const status=a=>realCB(a).length?'<span class="st-callback">callback '+esc(realCB(a)[0].date)+(a.rejected?' · then rejected '+esc(a.rejected):'')+'</span>'
-    :a.rejected?'<span class="st-rejected">rejected '+esc(a.rejected)+'</span>':'<span class="st-none">no reply</span>';
-  const left=a=>a.withdrawn?' <span class="dim">· you withdrew '+esc(a.withdrawn)+'</span>':'';
-  el.innerHTML='<p class="dim">The counts, the weekly chart and the by-milestone table are on <a href="https://cesar-stats.vercel.app" target="_blank" rel="noopener" style="color:var(--acc)">cxd-stats ↗</a>, beside the site visits. They follow this file each time <code>stats_export.py</code> runs.</p>'
-    +'<h3>What you acted on, by what the filter had called it</h3>'+stampTable()
-    +'<h3>Milestones</h3><div class="ms"><input type="date" id="ms-d"><select id="ms-k"><option>CV</option><option>Folio</option><option>Other</option></select>'
-    +'<input id="ms-l" placeholder="what changed" size="34"><button class="route" id="ms-add">Add milestone</button></div>'
-    +'<table style="margin-top:8px">'+[...(RR.milestones||[])].sort((a,b)=>a.date.localeCompare(b.date)).map(m=>
-        '<tr><td style="width:110px">'+esc(m.date)+'</td><td style="width:70px" class="dim">'+esc(m.kind||"")+'</td><td>'+esc(m.label)+'</td>'
-        +'<td class="num"><button class="x" data-ms="'+esc(m.date+"|"+m.label)+'" title="remove">×</button></td></tr>').join("")+'</table>'
-    +'<h3>Every application</h3><table><tr><th>Sent</th><th>Company</th><th>Role</th><th>Outcome</th><th></th></tr>'
-    +A.map(a=>'<tr><td style="white-space:nowrap">'+(a.approx?'<span class="dim" title="no receipt in the inbox; this is the date of the first answer">≈ </span>':'')+esc(a.applied)+'</td><td>'+esc(a.company)+'</td><td>'+esc(a.role||"")
-        +'</td><td>'+status(a)+left(a)+'</td><td class="num" style="white-space:nowrap">'+(a.tids||[]).map(t=>'<a style="color:var(--dim)" target="_blank" rel="noopener" href="https://mail.google.com/mail/?authuser=cesarxdesign@gmail.com#all/'+esc(t)+'">✉</a>').join(" ")
-        +(a.src==="board"?'<small>board</small>':'')+'</td></tr>').join("")+'</table>';
-  $("ms-d").value=new Date().toISOString().slice(0,10);
-  $("ms-add").onclick=()=>{
-    const date=$("ms-d").value, label=$("ms-l").value.trim(), kind=$("ms-k").value;
-    if(!date||!label) return toast("A milestone needs a date and what changed.");
-    RR.milestones=[...(RR.milestones||[]),{date,kind,label:kind==="Other"?label:kind+": "+label}];
-    writeRR();render();};
-  el.querySelectorAll("[data-ms]").forEach(b=>b.onclick=()=>{
-    RR.milestones=(RR.milestones||[]).filter(m=>m.date+"|"+m.label!==b.dataset.ms);writeRR();render();});
-}
-
 // ---------- RadarRouting ----------
 // Every decision is written straight back to the file on the Desktop.
 // createWritable() stages to a swap file and only replaces the original on
@@ -1271,21 +1098,16 @@ document.querySelectorAll(".tab[data-lane]").forEach(t=>t.onclick=()=>{
 
 // Data reloads without the page: selection, tab and routing all stay.
 function load(){
-  const b=$("refresh")||{};b.disabled=true;
   return fetch("data/results.json?t="+Date.now()).then(r=>r.json()).then(d=>{
     DATA=d;
     // What is on the board is only what has been READ on its own page. The
     // rest of the design-titled roles are waiting their turn, and the line
     // says how many, so a short lane is never mistaken for a short market.
     stamp();
-    fillFilters();
     render();
-  }).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";})
-  .finally(()=>{b.disabled=false;});
+  }).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";});
 }
 wireFilters();
-if($("refresh")) $("refresh").onclick=load;
-if($("q")) $("q").oninput=e=>{Q=e.target.value.trim().toLowerCase();SEL=null;render();};
 $("batch").onclick=()=>INBATCH?completeBatch():setBatch(true);
 $("export").onclick=async()=>{
   const b=$("export");b.disabled=true;b.textContent="writing…";
