@@ -94,9 +94,9 @@ step "stats" 5 "tail -1" python3 stats_export.py
 publish
 ( while sleep 1200; do publish; done ) &
 TICK=$!
-# no time limit (see above); at most 1000 pages a night, the newest first, and
+# no time limit (see above); at most 3000 pages a night, the newest first, and
 # vision.py says how many it left for the next night
-step "VISION" 0 'grep -v "^  \[" | tail -12' caffeinate -i python3 vision.py --new --limit 1000
+step "VISION" 0 'grep -v "^  \[" | tail -12' caffeinate -i python3 vision.py --new --limit 3000
 kill $TICK 2>/dev/null
 # one cut in ten from this run, read a second time; disagreements go to For Reviewing
 step "VISION: second read of rejections" 60 'grep -v "^  \[" | tail -8' caffeinate -i python3 vision.py --audit

@@ -44,7 +44,7 @@ MAX_PAGES = 400               # per address pattern per snapshot
 RECHECK_DAYS = 0
 # systems that refuse a crowd: this many askers at a time, with a pause between
 SLOW = {k: threading.Semaphore(2) for k in ("dover", "workable", "join", "rippling", "personio")}
-WORKERS = 12
+WORKERS = 32          # was 12; VISION is to be the bottleneck, not this (2026-10-06)
 
 # system, what to ask the index for, how a board's name is read out of an
 # address, and how that name is written as the key pool.py's reader takes.

@@ -115,18 +115,17 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 </header>
 
 <div class="tabs" id="tabs">
-  <select id="f-last" title="how old the posting is, on every tab; the ranges do not overlap">
+  <select id="f-last" title="how long since the job was posted or last updated, on every tab; the ranges do not overlap">
+    <option value="" selected>all</option>
     <option value="1">1 day</option>
     <option value="7">1 week</option>
     <option value="30">1 month</option>
-    <option value="90">3 months</option>
-    <option value="" selected>all time</option>
     <option value="?">?</option>
   </select>
   <button class="tab on" data-lane="open">Open<span class="n" id="c-open"></span></button>
   <button class="tab" data-lane="portugal">Portugal<span class="n" id="c-portugal"></span></button>
   <button class="tab" data-lane="unsure">Unsure<span class="n" id="c-unsure"></span></button>
-  <button class="tab rr" data-lane="old69" hidden>69+<span class="n" id="c-old69"></span></button>
+  <button class="tab rr" data-lane="old69" hidden>45+<span class="n" id="c-old69"></span></button>
   <span class="tab rr sep" hidden></span>
   <button class="tab rr" hidden data-lane="agency" title="companies you moved here from the preview: the ones that flood the boards with the same roles">Bundlers<span class="n" id="c-agency"></span></button>
   <button class="tab rr" data-lane="review" hidden title="everything waiting on you: rejections VISION’s second read disagreed with, roles where the filter disagrees with what you did, and your own flags, moves and open notes">For Reviewing<span class="n" id="c-review"></span></button>
@@ -407,11 +406,12 @@ const byDays=(a,b)=>{const x=days(a),y=days(b);return (x===null)-(y===null)||x-y
 // The window in front of the tabs: the last N days, on every tab. Remembered per browser.
 let LAST="";
 try { LAST = localStorage.getItem("radar-last") || ""; } catch (e) {}
+if(!["","1","7","30","?"].includes(LAST)) LAST="";      // "3 months" is gone: back to all
 // Anything over 69 days leaves the three lanes and collects in its own. A
 // role that has been open ten weeks is a different kind of thing from a fresh
 // one - mostly it is an aggregator keeping a dead posting alive to pad its
 // count - and it should not sit in the same list as something posted today.
-const OLD_DAYS=69;
+const OLD_DAYS=45;        // the same 45 days CUT uses (his call, 2026-10-06); it was 69
 const isOld=r=>{const d=days(r);return d!==null&&d>OLD_DAYS;};
 let SORT="new";
 function sortRows(rows){
@@ -438,7 +438,7 @@ function matches(r){
   // not an hour, so "1 day" is today and yesterday.
   if(LAST==="?"){ if(dated(r)) return false; }
   else if(LAST){
-    const d=days(r), lo={1:0,7:2,30:8,90:31}[LAST];
+    const d=days(r), lo={1:0,7:2,30:8}[LAST];
     if(!dated(r) || d===null || d < lo || d > +LAST) return false;
   }
   return true;

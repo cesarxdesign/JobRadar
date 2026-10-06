@@ -1904,7 +1904,7 @@ SKIP = set()          # sources deliberately not scraped this run
 
 NEW_BOARDS = None             # set by --new-boards: the labels to scrape, everything else untouched
 SOURCE_LIMIT = 25 * 60        # seconds one source may take
-BOARDS_AT_ONCE = 10           # company boards read at the same time
+BOARDS_AT_ONCE = 24           # company boards read at the same time
 LEFT_BEHIND = []              # sources still running when their time was up
 
 
