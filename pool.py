@@ -187,7 +187,11 @@ def from_greenhouse(slug, cfg=None):
                "url": j.get("absolute_url"),
                "location": "; ".join(dict.fromkeys(
                    x.strip() for x in locs if x and x.strip())),
-               "posted": j.get("updated_at") or j.get("first_published"),
+               # Two dates, kept apart (2026-10-06). "posted" was the last edit
+               # when there was one, so a March posting touched last week read
+               # as a week old and nothing said it was from March.
+               "posted": j.get("first_published") or j.get("updated_at"),
+               "updated": j.get("updated_at"),
                "department": "; ".join(d.get("name") for d in (j.get("departments") or [])
                                        if d.get("name")) or None,
                "jd_text": strip_html(j.get("content"))}
@@ -596,8 +600,18 @@ def from_bamboohr(slug, cfg=None):
         if urllib.parse.urlparse(r.geturl()).netloc in ("www.bamboohr.com", "bamboohr.com"):
             raise urllib.error.HTTPError(url, 404, "no such BambooHR account (redirects to bamboohr.com)", None, None)
         doc = json.loads(r.read().decode("utf-8", "replace"))
+    import judge
     for j in doc.get("result") or []:
         loc = j.get("atsLocation") or j.get("location") or {}
+        # The list carries no date; the job's own page does. Asked only for the
+        # titles CUT keeps, or 40,000 postings would mean 40,000 more requests.
+        posted = None
+        if judge.l1(j.get("jobOpeningName")) is None:
+            try:
+                det = get_json(f"https://{slug}.bamboohr.com/careers/{j['id']}/detail")
+                posted = ((det.get("result") or {}).get("jobOpening") or {}).get("datePosted")
+            except Exception:
+                pass
         loc_s = ", ".join(filter(None, [loc.get("city"), loc.get("state"), loc.get("country")]))
         title = j.get("jobOpeningName")
         remote = j.get("isRemote")
@@ -605,7 +619,7 @@ def from_bamboohr(slug, cfg=None):
             remote = bool(re.search(r"remote", f"{title} {loc_s}", re.I)) or None
         yield {"company": _name(cfg) or slug, "title": title,
                "url": f"https://{slug}.bamboohr.com/careers/{j['id']}",
-               "location": loc_s, "remote": remote}
+               "location": loc_s, "remote": remote, "posted": posted}
 
 
 def from_breezy(slug, cfg=None):
@@ -2017,6 +2031,25 @@ def scrape(sources, on_batch=None):
     return out, errors
 
 
+def posting_changed(old, new):
+    """Did the employer edit this posting since the pool last read it? His
+    call, 2026-10-06: "updated is the most important one, on every job" - and
+    only Greenhouse and Recruitee publish an updated date. For the rest the
+    pool says so itself, from now on: the same posting at the same source, read
+    again, with another title, another place, or a description whose length
+    moved by more than a tracking token would move it. The day goes in
+    "changed"; a site's own "updated" is never overwritten by it."""
+    if not old.get("last_seen") or old.get("source") != new.get("source"):
+        return False
+    if (old.get("title") or "") != (new.get("title") or "") or (old.get("location") or "") != (new.get("location") or ""):
+        return True
+    try:
+        a, b = int(old.get("jdhash") or 0), int(new.get("jdhash") or 0)
+    except ValueError:
+        return False
+    return bool(a and b) and abs(a - b) > max(40, 0.02 * a)
+
+
 def update(previous, found, run_id, stamp, failed=(), keep_rest=False):
     """Fold this run's findings into the pool, minting ids only for new
     postings. One row per posting, matched by posting_key; company+title only
@@ -2059,6 +2092,8 @@ def update(previous, found, run_id, stamp, failed=(), keep_rest=False):
         prev = by_id[rid]
         sources = set(prev.get("sources") or ([prev["source"]] if prev.get("source") else []))
         if not prev.get("source") or rank(rec["source"]) >= rank(prev["source"]):
+            if posting_changed(prev, rec):
+                prev["changed"] = stamp[:10]
             prev.update(rec)              # the original, or the latest copy of a copy
         else:
             merged += 1                   # a copy of a posting the board reported: noted, not applied

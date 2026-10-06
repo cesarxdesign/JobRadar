@@ -379,15 +379,22 @@ const stateOf=r=>routing(r.id)||laneOf(r)||"cut";
 
 // Days the posting has been open: from the date the board gives, else the
 // day the pool first saw it. Every lane sorts freshest first.
+// His call, 2026-10-06: the last update is the date that matters, on every
+// job. So the age, the range picker and the order all run on the newest of:
+// the site's own updated date, the day the pool saw the posting change, and
+// the posting date. A posting from March that was edited last week is a week old.
+const fresh=r=>[r.updated,r.changed,r.posted].filter(Boolean).map(x=>String(x).slice(0,10)).sort().pop()||"";
+const edited=r=>{const u=[r.updated,r.changed].filter(Boolean).map(x=>String(x).slice(0,10)).sort().pop();
+  return u&&u!==String(r.posted||"").slice(0,10)?u:"";};
 function days(r){
-  const d=Date.parse(r.posted||r.first_seen||"");
+  const d=Date.parse(fresh(r)||r.first_seen||"");
   return isNaN(d)?null:Math.max(0,Math.floor((Date.now()-d)/86400000));
 }
 // Some boards print no date anywhere - not in the header, the side panel, the
 // body or the metadata. For those the age is measured from the day the radar
 // first saw the posting, which is a floor and not the truth: the posting is at
 // least this old. Shown as "≥12d" so it never reads as a real posting date.
-const dated=r=>!!r.posted;
+const dated=r=>!!fresh(r);
 // "0d" on a role whose posting carries no date reads as a bug, and it is a
 // lie either way - we do not know the age, we only know when we first saw it.
 // Say so: "?" until a day has passed, then "≥3d", which is true.
@@ -553,7 +560,7 @@ function render(){
     el.className="card"+(SEL===r.id?" sel":"");
     const d=days(r), rt=routing(r.id);
     el.innerHTML='<div class="days'+(dated(r)?'':' approx')+'" title="'
-      +(dated(r)?'posted '+esc(r.posted)
+      +(dated(r)?(edited(r)?'updated '+esc(edited(r))+' · ':'')+(r.posted?'posted '+esc(String(r.posted).slice(0,10)):'no posting date')
                 :'the posting shows no date anywhere; first seen on radar '
                  +esc(String(r.first_seen||"").slice(0,10))+', so it is at least this old')
       +'">'+ageLabel(r,d)+'</div>'
@@ -917,7 +924,8 @@ function renderPane(){
     + (r.gone?'<div class="why">This posting is no longer on the board - the company took it '
         +'down, or the judge has not re-read it yet. Your decision is kept.</div>':'')
     +'<div class="facts">'
-    + fact("Days open", days(r)===null?"—":days(r)+" · since "+esc((r.posted||r.first_seen||"").slice(0,10)))
+    + fact("Updated", edited(r)?esc(edited(r)):"—")
+    + fact("Posted", r.posted?esc(String(r.posted).slice(0,10)):"no date · first seen "+esc(String(r.first_seen||"").slice(0,10)))
     + fact("Location", esc(r.location))
     + fact("Remote", esc(f(r).remote))
     + fact("Countries", esc((f(r).countries||[]).join(", ")))
