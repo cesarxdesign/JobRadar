@@ -57,3 +57,5 @@
 {"at": "2026-10-06T03:53:18", "roles": 72, "pages_read": 72, "seconds": 273, "waited": 0, "tokens_per_page": 6144, "model": "sonnet", "criteria": "2026-10-05.5", "lanes": {"cut": 71, "open": 1}}
 {"at": "2026-10-06T04:18:52", "audit": true, "pages_read": 548, "tokens_per_page": 6991, "model": "sonnet", "criteria": "2026-10-05.5"}
 {"at": "2026-10-06T10:09:05", "roles": 300, "pages_read": 296, "seconds": 1171, "waited": 0, "tokens_per_page": 7150, "model": "sonnet", "criteria": "2026-10-05.5", "lanes": {"cut": 287, "open": 3, "closed": 7, "unsure": 3}}
+{"at": "2026-10-06T11:34:50", "roles": 1474, "pages_read": 1453, "seconds": 4848, "waited": 0, "tokens_per_page": 7427, "model": "sonnet", "criteria": "2026-10-05.5", "lanes": {"cut": 1428, "closed": 32, "unsure": 14}}
+{"at": "2026-10-06T11:50:50", "roles": 250, "pages_read": 250, "seconds": 916, "waited": 0, "tokens_per_page": 6354, "model": "sonnet", "criteria": "2026-10-05.5", "lanes": {"cut": 244, "unsure": 3, "open": 3}}
