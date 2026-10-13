@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-13T14:20:11+00:00",
- "built_at": "2026-10-13T15:22+01:00",
- "run_id": "2026-10-13T14:20:11+00:00",
+ "generated_at": "2026-10-13T16:22:55+00:00",
+ "built_at": "2026-10-13T17:24+01:00",
+ "run_id": "2026-10-13T16:22:55+00:00",
  "last_full": "2026-10-13T08:15:52+00:00",
- "last_partial": "2026-10-13T14:20:11+00:00",
+ "last_partial": "2026-10-13T16:22:55+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -20,12 +20,12 @@
   "folded": 80,
   "vision_read": 19565,
   "title_cuts": 58571,
-  "design": 23067,
-  "waiting": 600,
-  "unjudged": 506110,
-  "age_cuts": 13053,
-  "active": 581160,
-  "total": 586913
+  "design": 23174,
+  "waiting": 666,
+  "unjudged": 507899,
+  "age_cuts": 13094,
+  "active": 582949,
+  "total": 588702
  },
  "lanes": {
   "open": [
@@ -16463,9 +16463,14 @@
   "a6f738eb93384ae0"
  ],
  "sources": {
-  "ok": 0,
+  "ok": 2244,
   "failed": {
-   "workable/zicasso": "HTTPError: HTTP Error 429: Too Many Requests"
+   "paylocity/81ae8ec1-68fa-4966-abab-40ae33c65999": "HTTPError: HTTP Error 429: Too Many Requests",
+   "paylocity/804547a2-b757-4441-b936-c4534aa0b069": "HTTPError: HTTP Error 429: Too Many Requests",
+   "paylocity/fbe8e328-a870-484d-93b5-ffd45cfc5348": "HTTPError: HTTP Error 429: Too Many Requests",
+   "paylocity/76bda420-440c-48c6-8be5-52630a61dc4d": "HTTPError: HTTP Error 429: Too Many Requests",
+   "paylocity/cfa7537b-24d1-4568-be80-e3a7b0aca06c": "HTTPError: HTTP Error 429: Too Many Requests",
+   "paylocity/7a31154f-f429-4fb3-a0ac-562c23a97ed5": "HTTPError: HTTP Error 429: Too Many Requests"
   }
  },
  "roles": [
@@ -721378,18 +721383,20 @@
   },
   {
    "active": true,
-   "company": "Easyapplyrekluti",
+   "company": "Rimutee",
    "first_run": "2026-10-05T15:39:13+00:00",
    "first_seen": "2026-10-05T15:39:13+00:00",
    "id": "b69d938dcb95414c",
    "jdhash": "878",
-   "last_seen": "2026-10-13T08:15:52+00:00",
+   "last_seen": "2026-10-13T16:22:55+00:00",
    "location": "Ciudad de Mexico, Ciudad de México, Mexico",
    "posted": "2026-06-29",
    "remote": false,
-   "source": "recruitee/easyapplyrekluti",
+   "source": "recruitee/rimutee",
    "sources": [
-    "recruitee/easyapplyrekluti"
+    "recruitee/easyapplyrekluti",
+    "recruitee/easyapplyrimutee",
+    "recruitee/rimutee"
    ],
    "title": "DISEÑADOR UX/UI - CDMX",
    "updated": "2026-07-02",
@@ -721458,18 +721465,20 @@
   },
   {
    "active": true,
-   "company": "Easyapplyrekluti",
+   "company": "Rimutee",
    "first_run": "2026-10-05T15:39:13+00:00",
    "first_seen": "2026-10-05T15:39:13+00:00",
    "id": "c29f1a0c20bc4ee4",
    "jdhash": "127",
-   "last_seen": "2026-10-13T08:15:52+00:00",
+   "last_seen": "2026-10-13T16:22:55+00:00",
    "location": "Ciudad de México, Ciudad de México, Mexico",
    "posted": "2026-06-24",
    "remote": false,
-   "source": "recruitee/easyapplyrekluti",
+   "source": "recruitee/rimutee",
    "sources": [
-    "recruitee/easyapplyrekluti"
+    "recruitee/easyapplyrekluti",
+    "recruitee/easyapplyrimutee",
+    "recruitee/rimutee"
    ],
    "title": "UX/UI",
    "updated": "2026-08-04",
@@ -721533,18 +721542,20 @@
   },
   {
    "active": true,
-   "company": "Easyapplyrekluti",
+   "company": "Rimutee",
    "first_run": "2026-10-05T15:39:13+00:00",
    "first_seen": "2026-10-05T15:39:13+00:00",
    "id": "6b8fbca4a7c54bef",
    "jdhash": "2246",
-   "last_seen": "2026-10-13T08:15:52+00:00",
+   "last_seen": "2026-10-13T16:22:55+00:00",
    "location": "Remote job",
    "posted": "2026-04-14",
    "remote": true,
-   "source": "recruitee/easyapplyrekluti",
+   "source": "recruitee/rimutee",
    "sources": [
-    "recruitee/easyapplyrekluti"
+    "recruitee/easyapplyrekluti",
+    "recruitee/easyapplyrimutee",
+    "recruitee/rimutee"
    ],
    "title": "DISEÑADOR UX/UI",
    "updated": "2026-08-05",
@@ -721605,18 +721616,20 @@
   },
   {
    "active": true,
-   "company": "Easyapplyrekluti",
+   "company": "Rimutee",
    "first_run": "2026-10-05T15:39:13+00:00",
    "first_seen": "2026-10-05T15:39:13+00:00",
    "id": "1459a693e3f4430b",
    "jdhash": "666",
-   "last_seen": "2026-10-13T08:15:52+00:00",
+   "last_seen": "2026-10-13T16:22:55+00:00",
    "location": "Remote job",
    "posted": "2023-09-18",
    "remote": true,
-   "source": "recruitee/easyapplyrekluti",
+   "source": "recruitee/rimutee",
    "sources": [
-    "recruitee/easyapplyrekluti"
+    "recruitee/easyapplyrekluti",
+    "recruitee/easyapplyrimutee",
+    "recruitee/rimutee"
    ],
    "title": "DESIGN COMMUNITY",
    "updated": "2026-07-30",
@@ -923806,17 +923819,18 @@
   },
   {
    "active": true,
-   "company": "Werkenbijreisbalans",
+   "company": "Werkenbijmig",
    "first_run": "2026-10-06T14:45:56+00:00",
    "first_seen": "2026-10-06T14:45:56+00:00",
    "id": "30d1e1b370254064",
    "jdhash": "5638",
-   "last_seen": "2026-10-06T14:45:56+00:00",
+   "last_seen": "2026-10-13T16:22:55+00:00",
    "location": "Amersfoort, Utrecht, Nederland",
    "posted": "2026-08-28",
    "remote": false,
-   "source": "recruitee/werkenbijreisbalans",
+   "source": "recruitee/werkenbijmig",
    "sources": [
+    "recruitee/werkenbijmig",
     "recruitee/werkenbijreisbalans"
    ],
    "title": "Manager Solution Design & Implementation",
