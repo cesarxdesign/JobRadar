@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-13T12:53:04+00:00",
- "built_at": "2026-10-13T14:12+01:00",
- "run_id": "2026-10-13T12:53:04+00:00",
+ "generated_at": "2026-10-13T14:20:11+00:00",
+ "built_at": "2026-10-13T15:22+01:00",
+ "run_id": "2026-10-13T14:20:11+00:00",
  "last_full": "2026-10-13T08:15:52+00:00",
- "last_partial": "2026-10-13T12:53:04+00:00",
+ "last_partial": "2026-10-13T14:20:11+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -16465,7 +16465,7 @@
  "sources": {
   "ok": 0,
   "failed": {
-   "workable/tiger-analytics": "HTTPError: HTTP Error 429: Too Many Requests"
+   "workable/zicasso": "HTTPError: HTTP Error 429: Too Many Requests"
   }
  },
  "roles": [
