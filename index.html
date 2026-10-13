@@ -370,18 +370,6 @@ function stampOf(id){
   if(!d&&!w) return null;
   return (d&&(d.label||d.lane))||(w&&(w.label||w.lane))||"not labeled";
 }
-// apply: the roles he wants Claude to fill in the application for (2026-10-13). The click cannot reach
-// Claude, so it goes into the routing file as a queue; he says "go" in Claude, which reads the file, opens
-// the employer's form in its own Chrome tab group and fills it. He reviews, submits, and clicks "applied",
-// which takes the role out of the queue. Clicking an active apply takes it out too.
-function queued(id){return !!(RR&&(RR.apply||[]).some(x=>x.id===id));}
-function toggleApply(r){
-  const on=queued(r.id), v=r.verdict||{};
-  RR.apply=(RR.apply||[]).filter(x=>x.id!==r.id);
-  if(!on) RR.apply.push({id:r.id,company:r.company,title:r.title,url:v.read_url||r.url,listed:r.url,at:new Date().toISOString()});
-  writeRR(); render();
-  toast(on?"taken out of the apply queue":"queued · say go in Claude");
-}
 function toggleFav(id){RR.favorites=fav(id)?RR.favorites.filter(x=>x!==id):[...RR.favorites,id];writeRR();render();}
 const LANES=["open","portugal","unsure"];
 const PASS=["open","portugal"];
@@ -601,7 +589,6 @@ function render(){
          : RR?'<div class="acts">'
           +'<button class="star'+(fav(r.id)?" on":"")+'" data-f="1" title="favorite">'+(fav(r.id)?"★":"☆")+'</button>'
           +(rt?'<button data-d="">clear</button>':'')
-          +(rt==="applied"?'':'<button data-a="1" class="'+(queued(r.id)?"on":"")+'" title="queue this role for Claude to fill in the application; then say go in Claude">'+(queued(r.id)?"✓ apply":"apply")+'</button>')
           +'<button data-d="discarded" class="'+(rt==="discarded"?"on":"")+'">discard</button>'
           +'<button data-d="applied" class="'+(rt==="applied"?"on":"")+'">applied</button>'+'</div>':'')
       +'</div>';
@@ -614,7 +601,6 @@ function render(){
     el.querySelectorAll("button").forEach(b=>b.onclick=e=>{e.stopPropagation();
       if(b.dataset.w) return markWrong(r);
       if(b.dataset.f) return toggleFav(r.id);
-      if(b.dataset.a) return toggleApply(r);
       // The button that put a role somewhere takes it back out: clicking an
       // active "discard" un-discards it and the role returns to the lane the
       // judge gave it. Same for "applied". A dead button is a button you have
@@ -993,7 +979,6 @@ function evidenceBox(r){
 function decide(id,d){
   const r=roleById(id);
   RR.decisions=RR.decisions.filter(x=>x.id!==id);
-  if(d) RR.apply=(RR.apply||[]).filter(x=>x.id!==id);      // applied or discarded: no longer waiting for Claude
   if(d){
     const f=(r.verdict&&r.verdict.fields)||{}, v=r.verdict||{};
     // Snapshot what Radar knew at the moment he decided. The posting will
@@ -1076,7 +1061,6 @@ async function adopt(h){
   const d=JSON.parse(await (await h.getFile()).text());
   if(!d||!Array.isArray(d.decisions)) throw new Error("not a routing file");
   d.favorites=Array.isArray(d.favorites)?d.favorites:[];
-  d.apply=Array.isArray(d.apply)?d.apply:[];
   RRH=h; RR=d; LASTMOD=(await h.getFile()).lastModified;
   try{await idb("readwrite",s=>s.put(h,"h"));}catch(e){}
   rrUI(true); render(); $("export").hidden=!LOCAL;
