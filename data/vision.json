@@ -1312577,7 +1312577,7 @@
  },
  "7e37f484cf6d4dec": {
   "id": "7e37f484cf6d4dec",
-  "at": "2026-10-19T07:07:23",
+  "at": "2026-10-19T07:49:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.kaizengaming.com/job-details/8030166003?gh_jid=8030166003",
@@ -1312598,21 +1312598,21 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "While it does not represent an application for a specific role, we look forward to the possibility of connecting with you in the future.",
+  "open_quote": "We are building our talent community for future opportunities across Product & Design at Kaizen Gaming. ... While it does not represent an application for a specific role",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
-  "workplace_as_posted": "hybrid",
+  "workplace_as_posted": "not stated",
   "location_under_the_title": "Athens, Greece",
   "place_signals": [
    {
-    "quote": "Location Athens, Greece",
-    "where": "side panel",
+    "quote": "Athens, Greece",
+    "where": "under the title",
     "kind": "tag",
     "says": "portugal_out"
    },
    {
-    "quote": "Offices Greece - Athens",
+    "quote": "Greece - Athens",
     "where": "side panel",
     "kind": "tag",
     "says": "portugal_out"
@@ -1312620,24 +1312620,28 @@
    {
     "quote": "#LI-Hybrid",
     "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Future opportunities may include roles across areas such as: Product Management, Product Design (UX/UI), UX Research, Product Analytics, Product Leadership. Please note: Requirements will vary depending on the specific position that becomes available.",
+    "where": "body",
     "kind": "generic",
     "says": "says_nothing"
    }
   ],
   "place_verdict": "unclear",
-  "place_quote": "Location Athens, Greece / Offices Greece - Athens",
-  "reason": "This is a general talent-pool sign-up covering several future Product & Design roles (PM, Product Design, UX Research, etc.), not a single open job with defined duties or location requirements.",
-  "confidence": "low",
+  "place_quote": "joining our talent pool is a great way to stay connected with Kaizen Gaming ... it does not represent an application for a specific role",
+  "reason": "This is a generic talent-pool signup covering several future, unspecified roles with no defined job or location requirement, not a single job posting.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Join our Talent Pool – Product & Design",
    "company": "Kaizen Gaming",
    "seniority": "unstated",
-   "remote": "hybrid",
+   "remote": "unstated",
    "onsite_days": null,
-   "countries": [
-    "Greece"
-   ],
+   "countries": [],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
@@ -1312647,7 +1312651,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "1664d15631df4882": {
   "id": "1664d15631df4882",
@@ -1315436,7 +1315440,7 @@
  },
  "32d0462efe6c4091": {
   "id": "32d0462efe6c4091",
-  "at": "2026-10-19T07:08:42",
+  "at": "2026-10-19T07:49:40",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-4587243994893202713?ckey=UX+designer&rgn=-1&pos=79&groupId=1075&elckey=7868201785719396789&p=4&aq=8368760192759316175&cid=12006&jobAge=104&brelb=100&bscr=72.4963&scr=72.4963",
@@ -1315456,7 +1315460,7 @@
   "stage": "render",
   "open_quote": "jooble.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website ver",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "82eebc11d6f04f73": {
   "id": "82eebc11d6f04f73",
@@ -1316194,7 +1316198,7 @@
  },
  "69c1b20fb5f24783": {
   "id": "69c1b20fb5f24783",
-  "at": "2026-10-19T07:08:28",
+  "at": "2026-10-19T07:49:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://news.ycombinator.com/item?id=50071142",
@@ -1316214,7 +1316218,7 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "We're hiring for: Head of Engineering ... Product Manager ... Customer Success Manager ... Technical Product Marketing Manager ... Senior Growth Marketer, Content & Video ... Senior Compliance Engineer",
+  "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1316222,19 +1316226,19 @@
   "location_under_the_title": "US-Based / Remote",
   "place_signals": [
    {
-    "quote": "Estuary | US-Based / Remote | Full-time",
-    "where": "opening paragraph",
+    "quote": "US-Based / Remote",
+    "where": "under the title",
     "kind": "explicit",
     "says": "portugal_out"
    }
   ],
   "place_verdict": "unclear",
-  "place_quote": "US-Based / Remote",
-  "reason": "the page read is a different job · This Hacker News hiring thread lists six specific open roles at Estuary (Head of Engineering, Product Manager, Customer Success Manager, Technical Product Marketing Manager, Senior Growth Marketer, Senior Compliance Engineer) and contains no 'Designer' role at all, so it is not the posting the pool refers to.",
+  "place_quote": "Estuary | US-Based / Remote | Full-time",
+  "reason": "the page read is a different job · This is a Hacker News 'who is hiring' thread listing Estuary's open roles (Head of Engineering, Product Manager, CS Manager, Marketing roles, Compliance Engineer) - there is no Designer role posted here, so it does not match the pool's 'Designer at Estuary' listing.",
   "confidence": "high",
   "inferred": [],
   "fields": {
-   "role": null,
+   "role": "Designer",
    "company": "Estuary",
    "seniority": "unstated",
    "remote": "remote",
@@ -1316251,7 +1316255,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "398c777efb1c4378": {
   "id": "398c777efb1c4378",
@@ -1316723,7 +1316727,7 @@
  },
  "94bbcf1e33ce43e4": {
   "id": "94bbcf1e33ce43e4",
-  "at": "2026-10-19T07:08:51",
+  "at": "2026-10-19T07:49:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5903986863?v=EF98ABE573873FFE6966BF0A78176440AEC3931B&amp;frd=d22d10aae645ce4eaa389dc63d894947&amp;ccd=82ae06a3b998c6ce9d78b9cc2e2f6c86&amp;r=22809496&amp;utm_source=haystack-dynamic&amp;utm_medium=ppc&amp;partnerb=1&amp;chnlid=3986&amp;title=M%26E%20Design%20Engineer&amp;a=e&amp;utm_content=1&amp;utm_campaign=0.16",
@@ -1316745,14 +1316749,14 @@
   "posting_open": "unreadable",
   "open_quote": "Let's confirm you are human",
   "language_of_the_posting": "unstated",
-  "language_ok": false,
+  "language_ok": true,
   "role_verdict": "no",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Let's confirm you are human",
-  "reason": "The page is a bot-check/security wall, not the actual job posting content.",
+  "reason": "The page is a bot-check/security wall, not the actual job posting content, so nothing about the role can be read; title alone (M&E Design Engineer) indicates mechanical/electrical engineering, not a design role Cesar does.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1316771,7 +1316775,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "3ec96bdbc98045c8": {
   "id": "3ec96bdbc98045c8",
@@ -1317409,7 +1317413,7 @@
  },
  "419a2dfd18714326": {
   "id": "419a2dfd18714326",
-  "at": "2026-10-19T07:09:11",
+  "at": "2026-10-19T07:49:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5904182058?v=B84A20EF1C8469C9EA7371D4D22F29FE34244187&amp;r=22809496&amp;frd=a355efad0de9aa6feca21dc02097718d&amp;ccd=79b0f5e8cbcb60212f6a147c5fb3ab9a&amp;utm_source=haystack-dynamic&amp;utm_medium=ppc&amp;partnerb=1&amp;chnlid=3986&amp;title=Building%20Services%20Design%20Engineer%20%28Electrical%20%2F%20Remote%29&amp;a=e&amp;utm_content=1&amp;utm_campaign=0.21",
@@ -1317429,16 +1317433,16 @@
   "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Let's confirm you are human / Complete the security check before continuing.",
-  "language_of_the_posting": "English",
-  "language_ok": true,
-  "role_verdict": "no",
+  "open_quote": "Let's confirm you are human",
+  "language_of_the_posting": "unstated",
+  "language_ok": false,
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Let's confirm you are human",
-  "reason": "Page is a bot-check/verification wall, not the actual job posting content.",
+  "reason": "The page is a bot-check/CAPTCHA wall, not the actual job posting content.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1317452,12 +1317456,12 @@
    "salary": null,
    "years_xp": null,
    "reports_to": null,
-   "language": "English",
+   "language": "unstated",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "152cb4ca45e14cef": {
   "id": "152cb4ca45e14cef",
@@ -1317518,7 +1317522,7 @@
  },
  "9cf57cd49b53422b": {
   "id": "9cf57cd49b53422b",
-  "at": "2026-10-19T07:09:11",
+  "at": "2026-10-19T07:49:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5922502276?v=462368DCECBB3995827DD6C43B1B456C11E67C2D&amp;r=22809496&amp;ccd=8d7cecdb6c03b3bdd2cfd18a3ff0b89d&amp;frd=c0617db4c93ae8b1d6fcfd085ea830c0&amp;utm_source=haystack-dynamic&amp;utm_medium=ppc&amp;partnerb=1&amp;chnlid=3986&amp;title=Contract%20Civil%2FHighways%20Design%20Engineer&amp;a=e&amp;utm_content=1&amp;utm_campaign=0.14",
@@ -1317536,18 +1317540,18 @@
   "fetched_at": "2026-10-19T06:53:19",
   "same_job": "yes",
   "posted_by": "agency",
-  "hiring_for": "ALDWYCH CONSULTING LTD",
+  "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Let's confirm you are human",
-  "language_of_the_posting": "English",
-  "language_ok": true,
+  "open_quote": "Let's confirm you are human / Complete the security check before continuing.",
+  "language_of_the_posting": "unstated",
+  "language_ok": false,
   "role_verdict": "no",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": null,
-  "reason": "Page is a bot-check wall, not a readable job posting, and the title indicates an engineering (not design/UX) role.",
+  "place_quote": "Let's confirm you are human",
+  "reason": "Page is a bot-check wall, not a readable job posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1317561,12 +1317565,12 @@
    "salary": null,
    "years_xp": null,
    "reports_to": null,
-   "language": "English",
+   "language": "unstated",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "080afeac89764ec3": {
   "id": "080afeac89764ec3",
@@ -1317832,7 +1317836,7 @@
  },
  "0bddd62a89f4482f": {
   "id": "0bddd62a89f4482f",
-  "at": "2026-10-19T07:09:12",
+  "at": "2026-10-19T07:49:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5919551847?v=0C800627663DB356BC7C007DD7817E26712E30D7&amp;r=22809496&amp;ccd=a961ebd15ddb35346fffcb8e0ad10594&amp;frd=91262c7b978dd292023fdfeb177b14b1&amp;utm_source=haystack-dynamic&amp;utm_medium=ppc&amp;partnerb=1&amp;chnlid=3986&amp;title=Building%20Services%20Design%20Engineer%20%28Electrical%20%2F%20Remote%29&amp;a=e&amp;utm_content=1&amp;utm_campaign=0.16",
@@ -1317852,7 +1317856,7 @@
   "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Let's confirm you are human / Complete the security check before continuing.",
+  "open_quote": "Let's confirm you are human",
   "language_of_the_posting": "unstated",
   "language_ok": false,
   "role_verdict": "no",
@@ -1317861,12 +1317865,12 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Let's confirm you are human",
-  "reason": "Page is a bot-check wall, not the actual job posting content.",
+  "reason": "Page is a bot-check wall, not a readable job posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Building Services Design Engineer (Electrical / Remote)",
-   "company": "Ernest Gordon Recruitment",
+   "company": null,
    "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
@@ -1317880,7 +1317884,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "4790aaf513f54bdb": {
   "id": "4790aaf513f54bdb",
@@ -1318423,7 +1318427,7 @@
  },
  "2cbdce91fb07454a": {
   "id": "2cbdce91fb07454a",
-  "at": "2026-10-19T07:09:29",
+  "at": "2026-10-19T07:49:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5919021883?v=187440C1708A6AC00A061DBF4D5104D4840642C8&amp;r=22809496&amp;frd=f62cfe7df9b27f7d625a491f3475aba9&amp;ccd=04d1cda79c46457692a5379cd52ebe17&amp;utm_source=haystack-dynamic&amp;utm_medium=ppc&amp;partnerb=1&amp;chnlid=3986&amp;title=Building%20Services%20Design%20Engineer%20%28Electrical%20%2F%20Remote%29&amp;a=e&amp;utm_content=1&amp;utm_campaign=0.16",
@@ -1318451,13 +1318455,13 @@
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "",
-  "reason": "Page is a bot-check / security verification wall, not a readable job posting; title indicates an engineering (Electrical) role, not design.",
+  "place_quote": "Let's confirm you are human",
+  "reason": "The page is a bot-check/CAPTCHA wall, not a readable job posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Building Services Design Engineer (Electrical / Remote)",
-   "company": "Ernest Gordon Recruitment Limited",
+   "company": null,
    "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
@@ -1318471,7 +1318475,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "cb81611b13e24e72": {
   "id": "cb81611b13e24e72",
@@ -1319633,7 +1319637,7 @@
  },
  "23cd1bd95acd4b7a": {
   "id": "23cd1bd95acd4b7a",
-  "at": "2026-10-19T07:09:56",
+  "at": "2026-10-19T07:49:39",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-6278989802637645285?ckey=SEO+specialist&rgn=-1&pos=61&groupId=1091&elckey=-3562624520284857776&p=4&aq=8618554642290698204&cid=12006&jobAge=182&brelb=100&bscr=15.983905&scr=15.983905",
@@ -1319653,11 +1319657,11 @@
   "stage": "render",
   "open_quote": "jooble.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website ver",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "0ef677ba88f549bd": {
   "id": "0ef677ba88f549bd",
-  "at": "2026-10-19T07:09:57",
+  "at": "2026-10-19T07:49:45",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-519714009552957369?ckey=UX+designer&rgn=-1&pos=59&groupId=1075&elckey=-1307767148114954047&p=3&aq=242960136107969326&cid=12006&jobAge=198&brelb=100&bscr=86.802765&scr=86.802765",
@@ -1319677,7 +1319681,7 @@
   "stage": "render",
   "open_quote": "jooble.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website ver",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "554b503000e04753": {
   "id": "554b503000e04753",
@@ -1319903,7 +1319907,7 @@
  },
  "1cb6d473fd414dfe": {
   "id": "1cb6d473fd414dfe",
-  "at": "2026-10-19T07:09:54",
+  "at": "2026-10-19T07:49:35",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://euremotejobs.com/job/product-design-lead-design-system/",
@@ -1319948,14 +1319952,14 @@
    }
   ],
   "place_verdict": "unclear",
-  "place_quote": "158 jobs",
-  "reason": "The page is the Moniepoint careers listing/error page (error=true) showing a list of 158 jobs, not the single 'Product Design Lead – Design System' posting itself.",
+  "place_quote": "158 jobs ... Search / Department / Office",
+  "reason": "The URL loads an error page showing the general Moniepoint careers job listing (158 jobs), not the specific Product Design Lead – Design System posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Product Design Lead – Design System",
    "company": "Moniepoint",
-   "seniority": "lead",
+   "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
@@ -1319968,7 +1319972,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "4b8efa5d2d9b4f68": {
   "id": "4b8efa5d2d9b4f68",
@@ -1320039,7 +1320043,7 @@
  },
  "5bf82af639144242": {
   "id": "5bf82af639144242",
-  "at": "2026-10-19T07:10:00",
+  "at": "2026-10-19T07:49:35",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5904186895?v=A64F5066ABF2D10046E52BC08AD0E9DF14D3A60B&amp;frd=22e88ad229b1c883fef535defaab524c&amp;ccd=9979f8b68bec588c24cce4b894661f3a&amp;r=22809496&amp;utm_source=haystack-dynamic&amp;utm_medium=ppc&amp;partnerb=1&amp;chnlid=3986&amp;title=Building%20Services%20Design%20Engineer%20%28Electrical%20%2F%20Remote%29&amp;a=e&amp;utm_content=1&amp;utm_campaign=0.16",
@@ -1320059,7 +1320063,7 @@
   "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Let's confirm you are human / Complete the security check before continuing.",
+  "open_quote": "Let's confirm you are human",
   "language_of_the_posting": "unknown",
   "language_ok": false,
   "role_verdict": "no",
@@ -1320068,7 +1320072,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Let's confirm you are human",
-  "reason": "Page is a bot-check wall, not the actual job posting content.",
+  "reason": "The page is a bot-check/human-verification wall, not the actual job posting content.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1320087,7 +1320091,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "f784c45e12e340c7": {
   "id": "f784c45e12e340c7",
@@ -1320138,7 +1320142,7 @@
  },
  "cd02cee34b834684": {
   "id": "cd02cee34b834684",
-  "at": "2026-10-19T07:10:01",
+  "at": "2026-10-19T07:49:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5903987027?v=C7E09F327C59590CF1111D2338A4AFD96A5FD53B&amp;ccd=11637d09d351f1b8a917c6f0a0b48b71&amp;frd=7be0fdcba6e4595616d2c1a1f4c548ac&amp;r=22809496&amp;utm_source=haystack-dynamic&amp;utm_medium=ppc&amp;partnerb=1&amp;chnlid=3986&amp;title=Product%20Design%20Engineer%20-%20London%20%28Remote%29&amp;a=e&amp;utm_content=1&amp;utm_campaign=0.14",
@@ -1320158,8 +1320162,8 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Let's confirm you are human",
-  "language_of_the_posting": "unstated",
+  "open_quote": "Let's confirm you are human / Complete the security check before continuing.",
+  "language_of_the_posting": "unknown",
   "language_ok": false,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
@@ -1320167,7 +1320171,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Let's confirm you are human",
-  "reason": "Page is a bot-check verification wall, not the actual job posting content.",
+  "reason": "The page is a bot-check/CAPTCHA wall, not the actual job posting content.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1320181,12 +1320185,12 @@
    "salary": null,
    "years_xp": null,
    "reports_to": null,
-   "language": "unstated",
+   "language": "unknown",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "e1dab6021ca9404a": {
   "id": "e1dab6021ca9404a",
@@ -1320528,7 +1320532,7 @@
  },
  "796a1fec8aa04693": {
   "id": "796a1fec8aa04693",
-  "at": "2026-10-19T07:10:16",
+  "at": "2026-10-19T07:49:46",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/1947252372809175063?ckey=UX+designer&rgn=-1&pos=61&groupId=1075&elckey=7963007991760246733&p=4&aq=-6569187601042286318&cid=12006&jobAge=196&brelb=100&bscr=85.074265&scr=85.074265",
@@ -1320548,7 +1320552,7 @@
   "stage": "render",
   "open_quote": "jooble.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website ver",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "045ad89ab4664d12": {
   "id": "045ad89ab4664d12",
@@ -1320680,7 +1320684,7 @@
  },
  "c44d74454e884d39": {
   "id": "c44d74454e884d39",
-  "at": "2026-10-19T07:10:19",
+  "at": "2026-10-19T07:49:50",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/7648867201703781906?ckey=UX+designer&rgn=-1&pos=78&groupId=1075&elckey=7963007991760246733&p=4&aq=-6569187601042286318&cid=12006&jobAge=196&brelb=100&bscr=77.21709&scr=77.21709",
@@ -1320700,7 +1320704,7 @@
   "stage": "render",
   "open_quote": "jooble.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website ver",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "f5112ff73d2e470e": {
   "id": "f5112ff73d2e470e",
@@ -1320950,7 +1320954,7 @@
  },
  "15b2061b907f42c2": {
   "id": "15b2061b907f42c2",
-  "at": "2026-10-19T07:10:21",
+  "at": "2026-10-19T07:49:42",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=59fca267-6469-44e2-baa7-9b240075615b&jobId=520428&lang=en_US",
@@ -1320971,20 +1320975,20 @@
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": null,
-  "language_of_the_posting": "unstated",
-  "language_ok": false,
+  "language_of_the_posting": "English",
+  "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "",
-  "reason": "The page content shown is only a cookie consent banner; no job posting content loaded, so the page is an empty shell.",
+  "place_quote": null,
+  "reason": "The page only rendered a cookie consent banner; no job posting content (title, description, location) was loaded, likely because it requires JavaScript or further navigation through the ADP recruitment portal.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Designer",
-   "company": "unstated",
+   "company": null,
    "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
@@ -1320993,12 +1320997,12 @@
    "salary": null,
    "years_xp": null,
    "reports_to": null,
-   "language": "unstated",
+   "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "5e74eac79efa43fb": {
   "id": "5e74eac79efa43fb",
@@ -1321394,7 +1321398,7 @@
  },
  "800f240c610a42f0": {
   "id": "800f240c610a42f0",
-  "at": "2026-10-19T07:10:33",
+  "at": "2026-10-19T07:49:44",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jobs.workable.com/view/vfixqhCrXAezWpSPw7eDGR/remote-ai-designer-in-australia-at-mash",
@@ -1321416,14 +1321420,14 @@
   "posting_open": "unreadable",
   "open_quote": null,
   "language_of_the_posting": "unstated",
-  "language_ok": false,
+  "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only cookie notice and site footer, no job posting content loaded.",
+  "reason": "The page contains no job description, only cookie notices and footer boilerplate - the posting content did not load.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1321442,7 +1321446,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "fb97f29b9b924394": {
   "id": "fb97f29b9b924394",
@@ -1326925,7 +1326929,7 @@
  },
  "27faf6e95b264c8d": {
   "id": "27faf6e95b264c8d",
-  "at": "2026-10-19T07:19:31",
+  "at": "2026-10-19T07:50:16",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-harpercollins.icims.com/jobs/5488/designer-%28princeton%2c-nj-hybrid%29/job?hub=7&amp;in_iframe=1",
@@ -1326945,11 +1326949,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "6f35ee2ab47d4a25": {
   "id": "6f35ee2ab47d4a25",
-  "at": "2026-10-19T07:19:58",
+  "at": "2026-10-19T07:50:44",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27239/revit-designer---water-wastewater/job?hub=7&amp;in_iframe=1",
@@ -1326969,11 +1326973,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "a735481204a54197": {
   "id": "a735481204a54197",
-  "at": "2026-10-19T07:20:25",
+  "at": "2026-10-19T07:51:10",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27142/mep-plumbing-design-technician/job?hub=7&amp;in_iframe=1",
@@ -1326993,7 +1326997,7 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "8ccfd77d82044344": {
   "id": "8ccfd77d82044344",
