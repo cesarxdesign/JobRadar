@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-19T11:42:48+00:00",
- "built_at": "2026-10-19T16:23+01:00",
- "run_id": "2026-10-19T11:42:48+00:00",
+ "generated_at": "2026-10-19T15:40:42+00:00",
+ "built_at": "2026-10-19T16:45+01:00",
+ "run_id": "2026-10-19T15:40:42+00:00",
  "last_full": "2026-10-19T10:41:56+00:00",
- "last_partial": "2026-10-19T11:42:48+00:00",
+ "last_partial": "2026-10-19T15:40:42+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -17019,32 +17019,9 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 936,
+  "ok": 0,
   "failed": {
-   "workable/validate-talent": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/the-greater-change-1": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/essnova-solutions-inc": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/phillips-consulting": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/albireo-energy": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/userwise-services": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/greekingme": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/nimble-workforce": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/sleeping-dog-properties": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/spotted-zebra": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/apm-monaco": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/absolutelybeautifulflowers": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/enfos-inc": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/statom": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/big-potato": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/hire-overseas": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/space-matrix": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/rawafid": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/khibraty": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/glenveagh-properties-plc": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/avalore": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/happy-hour-games": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/aion": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/skinandme": "HTTPError: HTTP Error 429: Too Many Requests"
+   "workable/cmicareers": "HTTPError: HTTP Error 429: Too Many Requests"
   }
  },
  "roles": [
