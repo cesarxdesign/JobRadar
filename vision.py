@@ -631,6 +631,14 @@ def save(out):
     # "vision.json.tmp" stopped a run on 2026-10-05 - one renamed the file
     # away while the other was still about to.
     with _save_lock:
+        # The second read can run while the crawl still feeds new pulls (his call, 2026-10-19: "keep whatever
+        # is crawling, crawl, and run next steps on whatever is done"). Each run holds the file as it was when
+        # it started, so keep any verdict another run wrote since, or the last to save would wipe it.
+        try:
+            for k, v in json.load(open(OUT)).items():
+                out.setdefault(k, v)
+        except Exception:
+            pass
         tmp = f"{OUT}.{os.getpid()}.{threading.get_ident()}.tmp"
         json.dump(dict(out), open(tmp, "w"), indent=1, ensure_ascii=False)
         os.replace(tmp, OUT)
@@ -692,6 +700,7 @@ PREV = {}          # --employer: the verdicts already made on a board's copy, ke
 
 
 LEFT = [0]            # roles pick() held back because of --limit
+WAIT = [0]            # roles pick() held back because of --days: older than the window, still in the queue
 
 
 def pick(jobs, done):
@@ -733,11 +742,20 @@ def pick(jobs, done):
         rows.sort(key=rank)
         if "--fresh" in args:              # everything except what the old judge cut on the employer's own text
             rows = [j for j in rows if rank(j) < 2]
+        if "--days" in args:               # a lean run: only what is dated inside N days is read now. The rest is
+            # not cut: it stays in the queue, unread, for a run with tokens to spare. A job with no date counts
+            # from the day POOL first saw it. (His call, 2026-10-13.)
+            edge = time.strftime("%Y-%m-%d", time.localtime(time.time() - int(args[args.index("--days") + 1]) * 86400))
+            unread = lambda j: j["id"] not in done or ("--no-retry" not in args and done[j["id"]].get("posting_open") == "unreadable"
+                                                       and (done[j["id"]].get("unread_tries") or 1) < UNREAD_TRIES)
+            WAIT[0] = sum(1 for j in rows if fresh(j)[1] < edge and ("--again" in args or unread(j)))   # of the unread only
+            rows = [j for j in rows if fresh(j)[1] >= edge]
     if "--again" not in args:
         # Not read is not an answer. A page that would not open goes into the
         # next run once more ("add those to next batch run. if they dont open
         # again, cut them" - 2026-10-05); results.py cuts it after that.
-        again = lambda d: d.get("posting_open") == "unreadable" and (d.get("unread_tries") or 1) < UNREAD_TRIES
+        # --no-retry: a lean run leaves them out; they keep their one retry for a full run. (His call, 2026-10-13.)
+        again = lambda d: "--no-retry" not in args and d.get("posting_open") == "unreadable" and (d.get("unread_tries") or 1) < UNREAD_TRIES
         rows = [j for j in rows if j["id"] not in done or again(done[j["id"]])]
     if "--limit" in args:
         cap = int(args[args.index("--limit") + 1])
@@ -821,6 +839,11 @@ def main():
     print(f"VISION: {len(rows)} roles to read, model {MODEL}, {WORKERS} at a time", flush=True)
     if LEFT[0]:
         print(f"VISION: --limit leaves {LEFT[0]} roles unread for the next run", flush=True)
+    if WAIT[0]:
+        print(f"VISION: --days leaves {WAIT[0]} older roles unread, waiting in the queue", flush=True)
+    # --stop-open N: a lean run stops once N of the roles it read came out Open. Newest are read first, so these
+    # are the N most recent. Portugal and Unsure found on the way are kept and do not count. (His call, 2026-10-13.)
+    want_open = int(sys.argv[sys.argv.index("--stop-open") + 1]) if "--stop-open" in sys.argv else 0
     if not rows:
         return
     br, t0, n = render.Browser(), time.time(), [0]
@@ -828,7 +851,7 @@ def main():
     open(f"{ROOT}/data/vision.beat", "w").write(time.strftime("%F %H:%M:%S"))
 
     def one(rec):
-        if _usage.get("stop"):
+        if _usage.get("stop") or _usage.get("enough"):
             return
         try:
             v = see(finder, rec)
@@ -859,6 +882,11 @@ def main():
             n[0] += 1
             print(f"  [{n[0]}/{len(rows)}] {SHOWN.get(v['lane'], v['lane']):8} {v.get('read', '-'):8} {str(v.get('found_by') or ''):7} {rec['company'][:22]:22} | "
                   f"{rec['title'][:38]:38} | {str(v.get('place_quote') or v.get('open_quote') or v.get('reason'))[:70]}", flush=True)
+            if v.get("lane") == "open" and v.get("stage") == "vision":
+                _usage["opened"] = _usage.get("opened", 0) + 1
+                if want_open and _usage["opened"] >= want_open and not _usage.get("enough"):
+                    _usage["enough"] = True
+                    print(f"VISION: {want_open} new Open reached after {n[0]} of {len(rows)} roles; the rest waits in the queue", flush=True)
             if n[0] % 10 == 0:
                 save(out)
 
