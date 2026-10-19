@@ -1329137,5 +1329137,393 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "af261b9d0a7e4189": {
+  "id": "af261b9d0a7e4189",
+  "at": "2026-10-19T09:29:36",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.workatastartup.com/jobs/80061",
+  "board": null,
+  "employer": {
+   "url": "https://www.workatastartup.com/jobs/80061",
+   "status": 200,
+   "shot": "data/shots/af261b9d0a7e4189.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.workatastartup.com/jobs/80061",
+  "fetched_at": "2026-10-19T07:00:34",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "NYC Office",
+  "place_signals": [
+   {
+    "quote": "Location: NYC Office",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Visa: US citizen/visa only",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We're an in-person team based in New York, moving fast to ensure no patient call goes unanswered.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "In-person collaboration: Excited to work from our NYC office daily",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are an in-person company based in New York.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Visa: US citizen/visa only; In-person collaboration: Excited to work from our NYC office daily",
+  "reason": "The posting requires US citizenship/visa and daily in-person work at the NYC office, which rules out someone based in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Founding Product Designer",
+   "company": "Clarion",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$120K - $160K",
+   "years_xp": "3+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "98ab81a460344e9d": {
+  "id": "98ab81a460344e9d",
+  "at": "2026-10-19T09:29:56",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.eu.greenhouse.io/nscaleoperationsukltd/jobs/4959488101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/nscaleoperationsukltd/jobs/4959488101",
+   "status": 200,
+   "shot": "data/shots/98ab81a460344e9d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/nscaleoperationsukltd/jobs/4959488101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:18"
+ },
+ "0c64fc3d3780452e": {
+  "id": "0c64fc3d3780452e",
+  "at": "2026-10-19T09:37:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/landytech/j/BBECF3CF43/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/landytech/j/BBECF3CF43/",
+   "status": 429,
+   "shot": "data/shots/0c64fc3d3780452e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/landytech/j/BBECF3CF43/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "66e5179d6a6b4193": {
+  "id": "66e5179d6a6b4193",
+  "at": "2026-10-19T09:37:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/the-collecting-group/j/3C0A531523/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/the-collecting-group/j/3C0A531523/",
+   "status": 429,
+   "shot": "data/shots/66e5179d6a6b4193.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/the-collecting-group/j/3C0A531523/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "3d0c105a74fc4700": {
+  "id": "3d0c105a74fc4700",
+  "at": "2026-10-19T09:40:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/biglight/j/99DCD052B4/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/biglight/j/99DCD052B4/",
+   "status": 429,
+   "shot": "data/shots/3d0c105a74fc4700.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/biglight/j/99DCD052B4/",
+  "open_quote": "the employer's hiring system no longer has this posting",
+  "stage": "render",
+  "reason": "the employer says it is closed"
+ },
+ "6dc8b279defe452d": {
+  "id": "6dc8b279defe452d",
+  "at": "2026-10-19T09:41:26",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/landytech/j/56337F7FC8/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/landytech/j/56337F7FC8/",
+   "status": 429,
+   "shot": "data/shots/6dc8b279defe452d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/landytech/j/56337F7FC8/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "6ac0057459094a76": {
+  "id": "6ac0057459094a76",
+  "at": "2026-10-19T09:42:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/moneyfarm/j/17AB7ADFEC/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/moneyfarm/j/17AB7ADFEC/",
+   "status": 429,
+   "shot": "data/shots/6ac0057459094a76.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/moneyfarm/j/17AB7ADFEC/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Milan, Metropolitan City of Milan, Italy",
+  "place_signals": [
+   {
+    "quote": "Location: Milan, Metropolitan City of Milan, Italy / Location Type: hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Full-time and hybrid, based in our Milan office.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Full-time and hybrid, based in our Milan office.",
+  "reason": "Role is a graphic/creative/brand marketing design job (motion, video, UGC, paid social), not product/UX/UI design, and it is hybrid onsite in Milan, Italy, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital Creative Designer",
+   "company": "Moneyfarm",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Italy"
+   ],
+   "portugal_ok": "no",
+   "salary": "€40,000 to €50,000 gross per year",
+   "years_xp": "4+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "b9a1f2f5837a4c0a": {
+  "id": "b9a1f2f5837a4c0a",
+  "at": "2026-10-19T09:43:26",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/talent-voyager/j/D2A0ABB7DE/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/talent-voyager/j/D2A0ABB7DE/",
+   "status": 429,
+   "shot": "data/shots/b9a1f2f5837a4c0a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/talent-voyager/j/D2A0ABB7DE/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "625147bfcbd24abe": {
+  "id": "625147bfcbd24abe",
+  "at": "2026-10-19T09:44:46",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/mythwright/j/80E2C47D3D/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/mythwright/j/80E2C47D3D/",
+   "status": 429,
+   "shot": "data/shots/625147bfcbd24abe.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/mythwright/j/80E2C47D3D/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "United Kingdom",
+  "place_signals": [
+   {
+    "quote": "Location: United Kingdom",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: remote",
+    "where": "under the title",
+    "kind": "says_nothing",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This is a 12-month contract, remote-working position, open to anyone within the UK & Europe.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_in"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "remote-working position, open to anyone within the UK & Europe",
+  "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · The role is a game designer position (gameplay systems, level/feature design for a Unreal Engine simulation game), not product/UX/UI design, so it falls outside Cesar's field despite the remote-friendly UK & Europe location.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Designer",
+   "company": "Mythwright",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom",
+    "Europe"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "ed04ef9fed9d4d87": {
+  "id": "ed04ef9fed9d4d87",
+  "at": "2026-10-19T09:53:08",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/landytech/j/0E8A85E8BE/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/landytech/j/0E8A85E8BE/",
+   "status": 429,
+   "shot": "data/shots/ed04ef9fed9d4d87.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/landytech/j/0E8A85E8BE/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
  }
 }

@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-19T05:28:23+00:00",
- "built_at": "2026-10-19T09:47+01:00",
- "run_id": "2026-10-19T05:28:23+00:00",
+ "generated_at": "2026-10-19T08:51:24+00:00",
+ "built_at": "2026-10-19T09:53+01:00",
+ "run_id": "2026-10-19T08:51:24+00:00",
  "last_full": "2026-10-19T04:18:44+00:00",
- "last_partial": "2026-10-19T05:28:23+00:00",
+ "last_partial": "2026-10-19T08:51:24+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -12,20 +12,20 @@
   "portugal": 23,
   "unsure": 133,
   "ghosts": 0,
-  "cut": 19,
-  "closed": 589,
-  "vision_cut": 15600,
+  "cut": 16,
+  "closed": 590,
+  "vision_cut": 15609,
   "agency": 0,
   "not_read": 2,
   "folded": 78,
-  "vision_read": 21662,
+  "vision_read": 21672,
   "title_cuts": 52502,
-  "design": 22811,
-  "waiting": 10,
-  "unjudged": 522725,
-  "age_cuts": 12693,
-  "active": 592090,
-  "total": 599955
+  "design": 22936,
+  "waiting": 108,
+  "unjudged": 525975,
+  "age_cuts": 12715,
+  "active": 595347,
+  "total": 603212
  },
  "lanes": {
   "open": [
@@ -615,16 +615,13 @@
   "2eabc579af8a4445",
   "bd0e4aa788774dd3",
   "809e2fdc96d04841",
-  "625147bfcbd24abe",
   "0748e10c1f8b47d6",
   "65b4e4cb5e9d405c",
   "aaf22be40b4d4756",
-  "98ab81a460344e9d",
   "5900dea933ca470c",
   "34610dbbe09745b7",
   "fcd75b1e7af3442d",
   "51bf5a9418a94cc6",
-  "af261b9d0a7e4189",
   "16d63cccce5a4fe0",
   "5b5ada0faf0b44cb",
   "170e2b553f3e452e",
@@ -1203,6 +1200,7 @@
   "8c06eb1d9c4d43ad",
   "08ca39b8a8264f8e",
   "59cb6549dcc74ad0",
+  "3d0c105a74fc4700",
   "03fdb4cf447846e2",
   "e87c9d3f1a9748ec",
   "d9bdfe6b383c49b6",
@@ -2027,6 +2025,7 @@
   "316c9d45aa3f4894",
   "f1b4a2f6f69744a6",
   "e785888a3f5b48e8",
+  "625147bfcbd24abe",
   "cb170fe868f14881",
   "ee3c236201194010",
   "e7aacabf9916409a",
@@ -2464,6 +2463,7 @@
   "f10f25c13f8f4d6f",
   "3b32ab783cb44aa4",
   "52e60f2f5dd441ee",
+  "98ab81a460344e9d",
   "5c224f1d1ed7437b",
   "44ec793c551a428d",
   "07a763e8f9de4b29",
@@ -3185,6 +3185,7 @@
   "d7cbe0bb70304631",
   "d6edebe741c34eea",
   "ba63902b27de4104",
+  "af261b9d0a7e4189",
   "ddf8cb5a7fb64298",
   "4db3aaa0e8e74119",
   "04e4611506754843",
@@ -16510,12 +16511,18 @@
   "781044d8aacc4b84",
   "dc69442f8eb84a29",
   "e575576955d84779",
+  "0c64fc3d3780452e",
+  "6dc8b279defe452d",
+  "ed04ef9fed9d4d87",
   "1497861e8b494af7",
   "f734a6cd896f4202",
   "e7c81f01d56249e8",
   "4b0924a50f164383",
+  "66e5179d6a6b4193",
   "5e74eac79efa43fb",
+  "b9a1f2f5837a4c0a",
   "9a940ce54bae4d33",
+  "6ac0057459094a76",
   "4b0d031e80f44f8c",
   "485b4add01c74b8f",
   "1cb6d473fd414dfe",
@@ -16849,36 +16856,8 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 14870,
-  "failed": {
-   "workable/marshalls": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/bolderapps": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/bci-brands": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/homey": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/bitterne-park-school": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/ws-development": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/atcom": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/duel-dot-c-om": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/codeninjapk": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/excelya": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/jeeny": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/allwynls": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/equus-software": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/tajhr": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/interwood-mobel": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/elvespeed": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/barker-associates": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/followloop": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/angkas": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/brightplan": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/clubhouse-studio": "HTTPError: HTTP Error 429: Too Many Requests",
-   "paylocity/06f6f4c8-b5f6-40d5-823f-06f63a4ba846": "HTTPError: HTTP Error 429: Too Many Requests",
-   "paylocity/4d265716-84a9-4c4e-85d8-1382f4517c8c": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/momentumdesinglab": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/radley-yeldar": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/mythwright": "HTTPError: HTTP Error 429: Too Many Requests",
-   "workable/freelancer": "HTTPError: HTTP Error 429: Too Many Requests"
-  }
+  "ok": 3257,
+  "failed": {}
  },
  "roles": [
   {
@@ -97090,34 +97069,64 @@
    "url": "https://apply.workable.com/mythwright/j/80E2C47D3D/",
    "verdict": {
     "role": "no",
-    "place": "no",
-    "lane": "unsure",
+    "place": "remote",
+    "lane": "cut",
     "cut": true,
     "why": [
-     "This is a game design role focused on Unreal Engine simulation development, not product/UX design."
+     "the place named at the top is only a tag; the posting itself says Portugal is in · The role is a game designer position (gameplay systems, level/feature design for a Unreal Engine simulation game), not product/UX/UI design, so it falls outside Cesar's field despite the remote-friendly UK & Europe location.",
+     "Portugal OUT · under the title: \"Location: United Kingdom\"",
+     "Portugal in · body: \"This is a 12-month contract, remote-working position, open to anyone within the UK & Europe.\""
     ],
     "judged": true,
-    "text": "summary",
-    "stage": "judge",
+    "text": "employer's page",
+    "stage": "vision",
     "confidence": "high",
     "fields": {
      "role": "Senior Designer",
      "company": "Mythwright",
      "seniority": "senior",
-     "remote": "unstated",
+     "remote": "remote",
      "onsite_days": null,
      "countries": [
-      "United Kingdom"
+      "United Kingdom",
+      "Europe"
      ],
-     "portugal_ok": "no",
+     "portugal_ok": "yes",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
-     "language": "English"
+     "language": "English",
+     "posted": null
     },
-    "inferred": [
-     "workplace_as_posted"
-    ]
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/mythwright/j/80E2C47D3D/",
+    "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · The role is a game designer position (gameplay systems, level/feature design for a Unreal Engine simulation game), not product/UX/UI design, so it falls outside Cesar's field despite the remote-friendly UK & Europe location.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "remote-working position, open to anyone within the UK & Europe",
+    "signals": [
+     {
+      "quote": "Location: United Kingdom",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This is a 12-month contract, remote-working position, open to anyone within the UK & Europe.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/625147bfcbd24abe.jpg",
+    "read_at": "2026-10-19T09:44:46",
+    "evidence": {
+     "board_posted": "2026-06-20"
+    }
    }
   },
   {
@@ -138665,35 +138674,34 @@
    "url": "https://job-boards.eu.greenhouse.io/nscaleoperationsukltd/jobs/4959488101",
    "years_xp": 12,
    "verdict": {
-    "role": "no",
+    "role": null,
     "place": "no",
-    "lane": "unsure",
+    "lane": "cut",
     "cut": true,
     "why": [
-     "This is data centre engineering leadership, not product design or design-focused work."
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
-    "text": "original",
-    "stage": "judge",
-    "confidence": "high",
-    "fields": {
-     "role": "Director, Design & Engineering - APAC",
-     "company": "Nscale",
-     "seniority": "director",
-     "remote": "onsite",
-     "onsite_days": null,
-     "countries": [
-      "Singapore"
-     ],
-     "portugal_ok": "no",
-     "salary": null,
-     "years_xp": 12,
-     "reports_to": null,
-     "language": "English"
-    },
-    "inferred": [
-     "workplace_as_posted"
-    ]
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://job-boards.eu.greenhouse.io/nscaleoperationsukltd/jobs/4959488101",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/98ab81a460344e9d.jpg",
+    "read_at": "2026-10-19T09:29:56",
+    "evidence": {
+     "employer_posted": "2026-09-10"
+    }
    }
   },
   {
@@ -208297,31 +208305,81 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
+    "lane": "cut",
     "cut": true,
     "why": [
-     "Onsite role in NYC; requires daily in-person collaboration and team day at their office."
+     "The posting requires US citizenship/visa and daily in-person work at the NYC office, which rules out someone based in Portugal.",
+     "Portugal OUT · side panel: \"Location: NYC Office\"",
+     "Portugal OUT · side panel: \"Visa: US citizen/visa only\"",
+     "Portugal OUT · opening paragraph: \"We're an in-person team based in New York, moving fast to ensure no patient call goes unanswered.\"",
+     "Portugal OUT · body: \"In-person collaboration: Excited to work from our NYC office daily\"",
+     "Portugal OUT · body: \"We are an in-person company based in New York.\""
     ],
     "judged": true,
-    "text": "original",
-    "stage": "judge",
+    "text": "employer's page",
+    "stage": "vision",
     "confidence": "high",
     "fields": {
      "role": "Founding Product Designer",
      "company": "Clarion",
-     "seniority": "senior",
+     "seniority": "unstated",
      "remote": "onsite",
      "onsite_days": null,
      "countries": [
-      "United States"
+      "US"
      ],
      "portugal_ok": "no",
-     "salary": "USD 120k-160k",
-     "years_xp": 3,
+     "salary": "$120K - $160K",
+     "years_xp": "3+ years",
      "reports_to": null,
-     "language": "English"
+     "language": "English",
+     "posted": null
     },
-    "inferred": []
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.workatastartup.com/jobs/80061",
+    "reason": "The posting requires US citizenship/visa and daily in-person work at the NYC office, which rules out someone based in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Visa: US citizen/visa only; In-person collaboration: Excited to work from our NYC office daily",
+    "signals": [
+     {
+      "quote": "Location: NYC Office",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Visa: US citizen/visa only",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We're an in-person team based in New York, moving fast to ensure no patient call goes unanswered.",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "In-person collaboration: Excited to work from our NYC office daily",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We are an in-person company based in New York.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/af261b9d0a7e4189.jpg",
+    "read_at": "2026-10-19T09:29:36",
+    "evidence": {}
    }
   },
   {
@@ -1207432,6 +1207490,199 @@
   },
   {
    "active": true,
+   "company": "Landytech",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "0c64fc3d3780452e",
+   "jdhash": "5484",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "London, United Kingdom",
+   "posted": "2026-09-25",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Design Engineer (UX/UI & Front End) - Lead - AI",
+   "url": "https://apply.workable.com/landytech/j/BBECF3CF43/",
+   "years_xp": 5,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/landytech/j/BBECF3CF43/",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/0c64fc3d3780452e.jpg",
+    "read_at": "2026-10-19T09:37:24",
+    "evidence": {
+     "board_posted": "2026-09-25"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Landytech",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "6dc8b279defe452d",
+   "jdhash": "5484",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "London, United Kingdom",
+   "posted": "2026-09-25",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Senior AI Product Engineer (React / Typescript) - UX",
+   "url": "https://apply.workable.com/landytech/j/56337F7FC8/",
+   "years_xp": 5,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/landytech/j/56337F7FC8/",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6dc8b279defe452d.jpg",
+    "read_at": "2026-10-19T09:41:26",
+    "evidence": {
+     "board_posted": "2026-09-25"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Landytech",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "ed04ef9fed9d4d87",
+   "jdhash": "5073",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "London, United Kingdom",
+   "posted": "2026-09-25",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Product Experience Designer - Lead - AI",
+   "url": "https://apply.workable.com/landytech/j/0E8A85E8BE/",
+   "years_xp": 5,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/landytech/j/0E8A85E8BE/",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/ed04ef9fed9d4d87.jpg",
+    "read_at": "2026-10-19T09:53:08",
+    "evidence": {
+     "board_posted": "2026-09-25"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Biglight",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "3d0c105a74fc4700",
+   "jdhash": "7354",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "London, United Kingdom",
+   "posted": "2026-09-25",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Senior Experience Designer",
+   "url": "https://apply.workable.com/biglight/j/99DCD052B4/",
+   "years_xp": 5,
+   "verdict": {
+    "role": null,
+    "place": null,
+    "lane": "closed",
+    "cut": false,
+    "why": [
+     "the employer says it is closed",
+     "the page says: \"the employer's hiring system no longer has this posting\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/biglight/j/99DCD052B4/",
+    "reason": "the employer says it is closed",
+    "open": "no",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3d0c105a74fc4700.jpg",
+    "read_at": "2026-10-19T09:40:25",
+    "evidence": {
+     "board_posted": "2026-09-25"
+    }
+   }
+  },
+  {
+   "active": true,
    "company": "Freelancer.com",
    "first_run": "2026-10-19T04:18:44+00:00",
    "first_seen": "2026-10-19T04:18:44+00:00",
@@ -1207712,6 +1207963,54 @@
   },
   {
    "active": true,
+   "company": "The Collecting Group",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "66e5179d6a6b4193",
+   "jdhash": "4272",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "London, United Kingdom",
+   "posted": "2026-09-30",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Creative Designer",
+   "url": "https://apply.workable.com/the-collecting-group/j/3C0A531523/",
+   "years_xp": 2,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/the-collecting-group/j/3C0A531523/",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/66e5179d6a6b4193.jpg",
+    "read_at": "2026-10-19T09:37:45",
+    "evidence": {
+     "board_posted": "2026-09-30"
+    }
+   }
+  },
+  {
+   "active": true,
    "company": "PA Consulting",
    "first_run": "2026-10-19T04:18:44+00:00",
    "first_seen": "2026-10-19T04:18:44+00:00",
@@ -1207760,6 +1208059,54 @@
   },
   {
    "active": true,
+   "company": "Talent Voyager",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "b9a1f2f5837a4c0a",
+   "jdhash": "2276",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "Vantaa, Finland",
+   "posted": "2026-10-01",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Design Engineer",
+   "url": "https://apply.workable.com/talent-voyager/j/D2A0ABB7DE/",
+   "years_xp": 3,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/talent-voyager/j/D2A0ABB7DE/",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/b9a1f2f5837a4c0a.jpg",
+    "read_at": "2026-10-19T09:43:26",
+    "evidence": {
+     "board_posted": "2026-10-01"
+    }
+   }
+  },
+  {
+   "active": true,
    "company": "PA Consulting",
    "first_run": "2026-10-19T04:18:44+00:00",
    "first_seen": "2026-10-19T04:18:44+00:00",
@@ -1207801,6 +1208148,85 @@
     "found_by": null,
     "shot": "data/shots/9a940ce54bae4d33.jpg",
     "read_at": "2026-10-19T07:10:14",
+    "evidence": {
+     "board_posted": "2026-10-02"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Moneyfarm",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "6ac0057459094a76",
+   "jdhash": "4582",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "Milan, Italy",
+   "posted": "2026-10-02",
+   "salary": "€40.000 to €50.000",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Digital Creative Designer",
+   "url": "https://apply.workable.com/moneyfarm/j/17AB7ADFEC/",
+   "years_xp": 4,
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a graphic/creative/brand marketing design job (motion, video, UGC, paid social), not product/UX/UI design, and it is hybrid onsite in Milan, Italy, not Portugal.",
+     "Portugal OUT · under the title: \"Location: Milan, Metropolitan City of Milan, Italy / Location Type: hybrid\"",
+     "Portugal OUT · body: \"Full-time and hybrid, based in our Milan office.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Digital Creative Designer",
+     "company": "Moneyfarm",
+     "seniority": "unstated",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Italy"
+     ],
+     "portugal_ok": "no",
+     "salary": "€40,000 to €50,000 gross per year",
+     "years_xp": "4+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/moneyfarm/j/17AB7ADFEC/",
+    "reason": "Role is a graphic/creative/brand marketing design job (motion, video, UGC, paid social), not product/UX/UI design, and it is hybrid onsite in Milan, Italy, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Full-time and hybrid, based in our Milan office.",
+    "signals": [
+     {
+      "quote": "Location: Milan, Metropolitan City of Milan, Italy / Location Type: hybrid",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Full-time and hybrid, based in our Milan office.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6ac0057459094a76.jpg",
+    "read_at": "2026-10-19T09:42:06",
     "evidence": {
      "board_posted": "2026-10-02"
     }
@@ -1208027,7 +1208453,17 @@
     "shot": "data/shots/d9bdfe6b383c49b6.jpg",
     "read_at": "2026-10-19T06:24:27",
     "evidence": {
-     "board_posted": "2026-10-19"
+     "board_posted": "2026-10-19",
+     "employer_board": {
+      "source": "workday/bonterra.wd1/bonterratech",
+      "jobs": 9,
+      "listed": true,
+      "url": "https://bonterra.wd1.myworkdayjobs.com/bonterratech/job/Remote-United-States/MB-Lead-Product-Designer_R2026-0409-1",
+      "design": [
+       "MB-Lead Product Designer",
+       "MB-Lead Product Designer"
+      ]
+     }
     }
    }
   },
