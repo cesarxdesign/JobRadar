@@ -1304218,5 +1304218,3923 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "remote"
+ },
+ "cabbfed8747c416b": {
+  "id": "cabbfed8747c416b",
+  "at": "2026-10-19T07:01:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://click.appcast.io/t/DVo691t4IfnMtV4wo91iFLg9DhHvANfx9C_xUDz8Y0LaLFKz8DAKdW4WIdGqvbN7",
+  "board": {
+   "url": "https://www.dice.com/job-detail/4211e997-a3f8-41db-a73d-619d418beb93?utm_source=appcast&utm_medium=aggregator&utm_campaign=haystack-cpc_usd&_ccid=1792387509009i6si8w1uu",
+   "status": 200,
+   "shot": "data/shots/cabbfed8747c416b.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.dice.com/job-detail/4211e997-a3f8-41db-a73d-619d418beb93?utm_source=appcast&utm_medium=aggregator&utm_campaign=haystack-cpc_usd&_ccid=1792387509009i6si8w1uu",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "unnamed client (K12 Education/Ed tech company, referencing McGraw Hill Research Repository)",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Working Model: Fully Remote role",
+    "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Contract W2",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Ability and willingness to travel domestically up to 20%",
+    "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "No Travel Required",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Contract W2 ... Ability and willingness to travel domestically up to 20%",
+  "reason": "The role is a W2 US contract position and the description is almost entirely UX research work rather than product/UI/UX design, despite the 'Designer' title.",
+  "confidence": "medium",
+  "inferred": [
+   "hiring_for",
+   "place_verdict"
+  ],
+  "fields": {
+   "role": "Senior UX Designer",
+   "company": "unnamed client (K12 Education/Ed tech company)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "2+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "4 days ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "063c2ab5f7d74b16": {
+  "id": "063c2ab5f7d74b16",
+  "at": "2026-10-19T07:01:48",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://cranecompany.wd5.myworkdayjobs.com/careers/job/Ipswich-UK/Design-Engineer---Controls_JR101115",
+  "board": null,
+  "employer": {
+   "url": "https://cranecompany.wd5.myworkdayjobs.com/careers/job/Ipswich-UK/Design-Engineer---Controls_JR101115",
+   "status": 200,
+   "shot": "data/shots/063c2ab5f7d74b16.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://cranecompany.wd5.myworkdayjobs.com/careers/job/Ipswich-UK/Design-Engineer---Controls_JR101115",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Ipswich, UK",
+  "place_signals": [
+   {
+    "quote": "remote type Onsite",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "locations Ipswich, UK",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "remote type Onsite / locations Ipswich, UK",
+  "reason": "Title is Design Engineer (controls/electromechanical engineering, not a design/UX title) and the role is onsite in Ipswich, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Engineer - Controls",
+   "company": "Crane",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "UK"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "Senior Engineer",
+   "language": "English",
+   "posted": "Posted 5 Days Ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "648c145b628f4a0b": {
+  "id": "648c145b628f4a0b",
+  "at": "2026-10-19T07:01:50",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.ultipro.com/orb1000oeng/JobBoard/99afc845-206f-496e-bd6a-3427e944c046/OpportunityDetail?opportunityId=9732de86-f3c6-41df-9ea5-316fb81dc1fd",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.ultipro.com/orb1000oeng/JobBoard/99afc845-206f-496e-bd6a-3427e944c046/OpportunityDetail?opportunityId=9732de86-f3c6-41df-9ea5-316fb81dc1fd",
+   "status": 200,
+   "shot": "data/shots/648c145b628f4a0b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.ultipro.com/orb1000oeng/JobBoard/99afc845-206f-496e-bd6a-3427e944c046/OpportunityDetail?opportunityId=9732de86-f3c6-41df-9ea5-316fb81dc1fd",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "REMOTE United States",
+  "place_signals": [
+   {
+    "quote": "REMOTE United States",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Remote (U.S. based)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote position. Compensation is based on market data and internal equity and may vary depending on the candidate's location.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "REMOTE United States / Location: Remote (U.S. based)",
+  "reason": "This is an electrical/utility engineering supervisor role based remotely in the U.S., not a product/UX/UI design job, and restricted to the U.S.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Distribution Design Supervisor",
+   "company": "Orbital Engineering, Inc.",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$70,000-110,000 annually",
+   "years_xp": "3+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "October 13, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "9bed48660f814d21": {
+  "id": "9bed48660f814d21",
+  "at": "2026-10-19T07:01:41",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobalert.world/jobs/ux-designer-growth-at-lexroom-milano-lombardia-65397",
+  "board": {
+   "url": "https://jobalert.world/jobs/ux-designer-growth-at-lexroom-milano-lombardia-65397",
+   "status": 200,
+   "shot": "data/shots/9bed48660f814d21.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lexroom/aa89ff12-388a-4d2a-8f9f-93a0b5fef04b?utm_source=Xn8kOmPE6W",
+   "status": 200,
+   "shot": "data/shots/9bed48660f814d21.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://jobs.ashbyhq.com/lexroom/aa89ff12-388a-4d2a-8f9f-93a0b5fef04b?utm_source=Xn8kOmPE6"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lexroom/aa89ff12-388a-4d2a-8f9f-93a0b5fef04b?utm_source=Xn8kOmPE6W",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Italy; Milan",
+  "place_signals": [
+   {
+    "quote": "Italy; Milan",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Milan, Lombardia, 20143",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Hybrid",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid Work: Flexibility to balance remote work with in-person collaboration at our Milan HQ.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Hybrid Work: Flexibility to balance remote work with in-person collaboration at our Milan HQ.",
+  "reason": "The role is hybrid, tied to Lexroom's Milan, Italy office, with no remote-from-anywhere option mentioned, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer (Growth)",
+   "company": "Lexroom",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Italy"
+   ],
+   "portugal_ok": "no",
+   "salary": "€32K – €42K",
+   "years_xp": "1-3 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "5e7e8adac6f0410e": {
+  "id": "5e7e8adac6f0410e",
+  "at": "2026-10-19T07:01:52",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/imprint/76c46036-f731-45b2-be2d-7a635698d701",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/imprint/76c46036-f731-45b2-be2d-7a635698d701",
+   "status": 200,
+   "shot": "data/shots/5e7e8adac6f0410e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/imprint/76c46036-f731-45b2-be2d-7a635698d701",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "New York City",
+  "place_signals": [
+   {
+    "quote": "New York City",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: New York City; Location Type: Hybrid",
+  "reason": "Hybrid role tied to a New York City office, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer",
+   "company": "Imprint",
+   "seniority": "staff",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$190K – $250K",
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "4cbff08714204825": {
+  "id": "4cbff08714204825",
+  "at": "2026-10-19T07:01:51",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.ultipro.com/orb1000oeng/JobBoard/99afc845-206f-496e-bd6a-3427e944c046/OpportunityDetail?opportunityId=bade6162-41a2-4422-96ef-2c7ae3d7c8b1",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.ultipro.com/orb1000oeng/JobBoard/99afc845-206f-496e-bd6a-3427e944c046/OpportunityDetail?opportunityId=bade6162-41a2-4422-96ef-2c7ae3d7c8b1",
+   "status": 200,
+   "shot": "data/shots/4cbff08714204825.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.ultipro.com/orb1000oeng/JobBoard/99afc845-206f-496e-bd6a-3427e944c046/OpportunityDetail?opportunityId=bade6162-41a2-4422-96ef-2c7ae3d7c8b1",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (US based) with preference given for candidates who reside in the Greater Hammond, IN / Chicago, IL area",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote (US based) with preference given for candidates who reside in the Greater Hammond, IN / Chicago, IL area",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role will be a remote (work from home) position, with visits to client sites and Orbital's Hammond, IN office as required.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote position. Compensation is based on market data and internal equity and may vary depending on the candidate's location.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote (US based) with preference given for candidates who reside in the Greater Hammond, IN / Chicago, IL area",
+  "reason": "The role is a non-design engineering management title restricted to US-based remote candidates, so neither role nor place fits Cesar.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Distribution Design Senior Manager",
+   "company": "Orbital Engineering, Inc.",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$145,000 - $185,000 annually",
+   "years_xp": "7+",
+   "reports_to": "Director of Distribution and Joint Use Services",
+   "language": "English",
+   "posted": "October 13, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f159b3cd157f4450": {
+  "id": "f159b3cd157f4450",
+  "at": "2026-10-19T07:01:52",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/ba4d2636-d6f6-4fad-8d7d-b06fdc09b8fb",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/ba4d2636-d6f6-4fad-8d7d-b06fdc09b8fb",
+   "status": 200,
+   "shot": "data/shots/f159b3cd157f4450.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/ba4d2636-d6f6-4fad-8d7d-b06fdc09b8fb",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "LatAm / Remote",
+  "place_signals": [
+   {
+    "quote": "Location: LatAm",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: LatAm / Location Type: Remote",
+  "reason": "The role's explicit location field is LatAm-remote; Portugal is not part of Latin America.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - Global Insights & Strategy",
+   "company": "Truelogic (staffing for an unnamed client firm)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "LatAm"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f4a8d39c04d84130": {
+  "id": "f4a8d39c04d84130",
+  "at": "2026-10-19T07:01:52",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/c8c1587f-5aed-43ec-a0f3-3cd4af4a5954",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/c8c1587f-5aed-43ec-a0f3-3cd4af4a5954",
+   "status": 200,
+   "shot": "data/shots/f4a8d39c04d84130.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/c8c1587f-5aed-43ec-a0f3-3cd4af4a5954",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "unclear",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "LatAm",
+  "place_signals": [
+   {
+    "quote": "Location: LatAm",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: LatAm / Location Type: Remote",
+  "reason": "Posting is explicitly remote but restricted to LatAm, which excludes Portugal; the role itself mixes product design with heavy brand/marketing design work, making the design category unclear.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - Finance",
+   "company": null,
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "LatAm"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "6c177150fb3b42f4": {
+  "id": "6c177150fb3b42f4",
+  "at": "2026-10-19T07:02:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/embedding-vc/e5cc6c69-27a2-4fe1-992e-7246c1130515",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/embedding-vc/e5cc6c69-27a2-4fe1-992e-7246c1130515",
+   "status": 200,
+   "shot": "data/shots/6c177150fb3b42f4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/embedding-vc/e5cc6c69-27a2-4fe1-992e-7246c1130515",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Mountain View, CA",
+  "place_signals": [
+   {
+    "quote": "Mountain View, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Mountain View, CA / Hybrid",
+  "reason": "Hybrid role tied to a Mountain View, CA office, with no remote option stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Abaka AI",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$120,000 – $170,000 USD annually",
+   "years_xp": "1-4 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "93eb78428c054c98": {
+  "id": "93eb78428c054c98",
+  "at": "2026-10-19T07:02:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/42bb9fdb-ea44-46cb-a61b-38720cec1c9b",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/42bb9fdb-ea44-46cb-a61b-38720cec1c9b",
+   "status": 200,
+   "shot": "data/shots/93eb78428c054c98.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/42bb9fdb-ea44-46cb-a61b-38720cec1c9b",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "a U.S.-based personal finance platform (client of Truelogic)",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Mexico City",
+  "place_signals": [
+   {
+    "quote": "Mexico City",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type\n\nRemote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Mexico City / Location Type: Remote; team of 600+ ... based in Latin America",
+  "reason": "The role is tied to Mexico City/Latin America (Truelogic's nearshore talent pool) and the job itself is primarily brand, marketing-campaign and visual design work rather than product/UX design.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - Finance",
+   "company": "Truelogic (client: a U.S.-based personal finance platform)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Mexico"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "728f1f6e82864583": {
+  "id": "728f1f6e82864583",
+  "at": "2026-10-19T07:02:42",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/perk/11123204-b198-4e12-bcdd-2735dc1c38b4",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/perk/11123204-b198-4e12-bcdd-2735dc1c38b4",
+   "status": 200,
+   "shot": "data/shots/728f1f6e82864583.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/perk/11123204-b198-4e12-bcdd-2735dc1c38b4",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "1897ba72e202458f": {
+  "id": "1897ba72e202458f",
+  "at": "2026-10-19T07:02:05",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/cd385433-2bdf-4eb2-8bbc-d641dcda3a6f",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/cd385433-2bdf-4eb2-8bbc-d641dcda3a6f",
+   "status": 200,
+   "shot": "data/shots/1897ba72e202458f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/cd385433-2bdf-4eb2-8bbc-d641dcda3a6f",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Bogota",
+  "place_signals": [
+   {
+    "quote": "Location: Bogota ... Location Type: Hybrid",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Ability to work independently and collaborate effectively with distributed, cross-functional teams.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Bogota; Location Type: Hybrid",
+  "reason": "The structured job fields specify Hybrid work based in Bogota, requiring physical presence there, despite a generic 'remote' benefits blurb elsewhere.",
+  "confidence": "medium",
+  "inferred": [
+   "countries: Colombia (from Bogota location field)"
+  ],
+  "fields": {
+   "role": "Senior Product Designer - Global Insights & Strategy",
+   "company": "Truelogic's client (unnamed global insights & strategy firm)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Colombia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d63cb8816ee843b1": {
+  "id": "d63cb8816ee843b1",
+  "at": "2026-10-19T07:02:13",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/80473078-8529-4363-8d70-35ebe2731d2f",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/80473078-8529-4363-8d70-35ebe2731d2f",
+   "status": 200,
+   "shot": "data/shots/d63cb8816ee843b1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/80473078-8529-4363-8d70-35ebe2731d2f",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "a U.S.-based personal finance platform (client name not given)",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "São Paulo",
+  "place_signals": [
+   {
+    "quote": "Location\n\nSão Paulo",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type\n\nRemote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: São Paulo / Location Type: Remote; team based in Latin America partnering with U.S. companies",
+  "reason": "This is a nearshore LATAM staffing agency role tagged to São Paulo with remote work tied to its Latin-America-based workforce, not a Portugal-eligible remote role.",
+  "confidence": "medium",
+  "inferred": [
+   "place_verdict (combines São Paulo location tag with company's LATAM-based remote staffing model)"
+  ],
+  "fields": {
+   "role": "Senior Product Designer - Finance",
+   "company": "Client of Truelogic (U.S.-based personal finance platform, unnamed)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "São Paulo"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "1941628c00144978": {
+  "id": "1941628c00144978",
+  "at": "2026-10-19T07:02:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/xnrgy-climate-systems/bc703ceb-ca34-4a68-8a8d-5ccd40beeff2",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/xnrgy-climate-systems/bc703ceb-ca34-4a68-8a8d-5ccd40beeff2",
+   "status": 200,
+   "shot": "data/shots/1941628c00144978.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/xnrgy-climate-systems/bc703ceb-ca34-4a68-8a8d-5ccd40beeff2",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "03464ec4e87549d7": {
+  "id": "03464ec4e87549d7",
+  "at": "2026-10-19T07:02:13",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/28a4cd8e-38cc-4708-99ed-3fa16d6c3508",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/28a4cd8e-38cc-4708-99ed-3fa16d6c3508",
+   "status": 200,
+   "shot": "data/shots/03464ec4e87549d7.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/28a4cd8e-38cc-4708-99ed-3fa16d6c3508",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "São Paulo",
+  "place_signals": [
+   {
+    "quote": "Location\nSão Paulo\nEmployment Type\nFull time\nLocation Type\nRemote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies on their most impactful projects.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: São Paulo / Location Type: Remote",
+  "reason": "The location field explicitly pairs 'São Paulo' with 'Remote', marking this as a Latin America–based remote role for a nearshore staffing firm, which excludes Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - Global Insights & Strategy",
+   "company": "Truelogic",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "São Paulo"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "100c1ef9e73b4939": {
+  "id": "100c1ef9e73b4939",
+  "at": "2026-10-19T07:02:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/085412ac-8ee6-49f3-afb4-d3b51951a8ae",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/085412ac-8ee6-49f3-afb4-d3b51951a8ae",
+   "status": 200,
+   "shot": "data/shots/100c1ef9e73b4939.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/085412ac-8ee6-49f3-afb4-d3b51951a8ae",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Santo Domingo",
+  "place_signals": [
+   {
+    "quote": "Santo Domingo",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "says_nothing",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies on their most impactful projects.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Santo Domingo / Location Type: Remote",
+  "reason": "The posting is a nearshore staffing listing tied to Santo Domingo and a Latin America-based team, with no statement including Portugal or Europe.",
+  "confidence": "medium",
+  "inferred": [
+   "Santo Domingo implies Dominican Republic as the base country; no explicit Portugal/Europe eligibility stated anywhere"
+  ],
+  "fields": {
+   "role": "Senior Product Designer - Global Insights & Strategy",
+   "company": "Unnamed client of Truelogic (described as a global insights and strategy firm)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Santo Domingo"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "0d73784ef65e44d6": {
+  "id": "0d73784ef65e44d6",
+  "at": "2026-10-19T07:02:53",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/wearebeyondsports/e2ef33f7-e227-4d38-81eb-d8d588943126",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/wearebeyondsports/e2ef33f7-e227-4d38-81eb-d8d588943126",
+   "status": 200,
+   "shot": "data/shots/0d73784ef65e44d6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/wearebeyondsports/e2ef33f7-e227-4d38-81eb-d8d588943126",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "f9ff0a78c537443f": {
+  "id": "f9ff0a78c537443f",
+  "at": "2026-10-19T07:02:19",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/cd1e106d-f1d7-4e18-ae16-296bf69b47af",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/cd1e106d-f1d7-4e18-ae16-296bf69b47af",
+   "status": 200,
+   "shot": "data/shots/f9ff0a78c537443f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/cd1e106d-f1d7-4e18-ae16-296bf69b47af",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Mexico City",
+  "place_signals": [
+   {
+    "quote": "Location: Mexico City",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies on their most impactful projects.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Mexico City / Location Type: Remote",
+  "reason": "The posting is a Latin America nearshore staffing role tied to Mexico City/remote within that region, not open to Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - Global Insights & Strategy",
+   "company": "Truelogic",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Mexico"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7628eaadac77444c": {
+  "id": "7628eaadac77444c",
+  "at": "2026-10-19T07:02:09",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/8a44e86d-24b5-48c6-b641-cca9f1d0c801",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/8a44e86d-24b5-48c6-b641-cca9f1d0c801",
+   "status": 200,
+   "shot": "data/shots/7628eaadac77444c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/8a44e86d-24b5-48c6-b641-cca9f1d0c801",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Bogota / Remote",
+  "place_signals": [
+   {
+    "quote": "Location: Bogota / Location Type: Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies on their most impactful projects.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Bogota, Location Type: Remote",
+  "reason": "The posting's explicit location field ties the remote role to Bogota, an agency placement for a Latin-America-based nearshore team, not Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "countries: Colombia (from 'Bogota' location field)"
+  ],
+  "fields": {
+   "role": "Senior Product Designer - Finance",
+   "company": "Truelogic (agency, client unnamed - a U.S.-based personal finance platform)",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Colombia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "57ba9a1da0e64cc4": {
+  "id": "57ba9a1da0e64cc4",
+  "at": "2026-10-19T07:02:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/clera/0081c428-ef51-4449-8d67-93bf3094e6f2",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/clera/0081c428-ef51-4449-8d67-93bf3094e6f2",
+   "status": 200,
+   "shot": "data/shots/57ba9a1da0e64cc4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/clera/0081c428-ef51-4449-8d67-93bf3094e6f2",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "San Francisco",
+  "place_signals": [
+   {
+    "quote": "Location: San Francisco / Location Type: On-site",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Primarily on-site in San Francisco, California, with some remote arrangements available.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Visa sponsorship is available.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Primarily on-site in San Francisco, California, with some remote arrangements available.",
+  "reason": "Role is explicitly primarily on-site in San Francisco, with no mention of Portugal or EU remote eligibility.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Full-Stack Software Engineer, Design",
+   "company": "Clera",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$130,000 to $225,000 USD annually",
+   "years_xp": "3",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "65bf788da7734c13": {
+  "id": "65bf788da7734c13",
+  "at": "2026-10-19T07:03:01",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/eliseai/f8364aad-9c92-466a-b0d9-b692df225a95",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/eliseai/f8364aad-9c92-466a-b0d9-b692df225a95",
+   "status": 200,
+   "shot": "data/shots/65bf788da7734c13.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/eliseai/f8364aad-9c92-466a-b0d9-b692df225a95",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "3a8fd7ce3d2a4ec4": {
+  "id": "3a8fd7ce3d2a4ec4",
+  "at": "2026-10-19T07:03:03",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/perk/7e3d702f-0f59-4b3a-b9a3-0284a5ca227e",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/perk/7e3d702f-0f59-4b3a-b9a3-0284a5ca227e",
+   "status": 200,
+   "shot": "data/shots/3a8fd7ce3d2a4ec4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/perk/7e3d702f-0f59-4b3a-b9a3-0284a5ca227e",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "80f210b8b1d44b0d": {
+  "id": "80f210b8b1d44b0d",
+  "at": "2026-10-19T07:02:53",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/wearebeyondsports/00deaa86-469c-4157-a11c-6aa0a3b90017",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/wearebeyondsports/00deaa86-469c-4157-a11c-6aa0a3b90017",
+   "status": 200,
+   "shot": "data/shots/80f210b8b1d44b0d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/wearebeyondsports/00deaa86-469c-4157-a11c-6aa0a3b90017",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "London; Basingstoke",
+  "place_signals": [
+   {
+    "quote": "London; Basingstoke",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Comfortable leading design initiatives and collaborating in an English-speaking environment",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: London; Basingstoke / Location Type: Hybrid",
+  "reason": "Role is hybrid at UK offices (London or Basingstoke), not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Beyond Sports",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "dde044bae8e44488": {
+  "id": "dde044bae8e44488",
+  "at": "2026-10-19T07:02:55",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/carwow/2b0f3536-e584-4111-9d70-5c290881434d",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/carwow/2b0f3536-e584-4111-9d70-5c290881434d",
+   "status": 200,
+   "shot": "data/shots/dde044bae8e44488.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/carwow/2b0f3536-e584-4111-9d70-5c290881434d",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "London",
+  "place_signals": [
+   {
+    "quote": "Location: London",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working, competitive salary and equity",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Work from abroad for a month",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: London / Location Type: Hybrid",
+  "reason": "Role is hybrid at Carwow's London office, which requires onsite presence not possible from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer",
+   "company": "carwow",
+   "seniority": "staff",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f1eab3cd9565431c": {
+  "id": "f1eab3cd9565431c",
+  "at": "2026-10-19T07:02:59",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/axle-careers/59bcecd1-776a-4c9a-922e-6210aeb5454d",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/axle-careers/59bcecd1-776a-4c9a-922e-6210aeb5454d",
+   "status": 200,
+   "shot": "data/shots/f1eab3cd9565431c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/axle-careers/59bcecd1-776a-4c9a-922e-6210aeb5454d",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "London",
+  "place_signals": [
+   {
+    "quote": "Location: London",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working - We have a dog-friendly office around Farringdon. To maximize collaboration, we ask that you spend 2-3 days a week in the office.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Deep dive on a project of your choice (in-person)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Final interview (in-person)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Hybrid working - we ask that you spend 2-3 days a week in the office. Location: London.",
+  "reason": "Role requires 2-3 office days/week at the London (Farringdon) office, which cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Design",
+   "company": "Axle Energy",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": "2-3 days/week",
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£75k–£200k (base salary + equity)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "b5a7304771c648d8": {
+  "id": "b5a7304771c648d8",
+  "at": "2026-10-19T07:03:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/289a0f9e-17bf-4f77-abac-3bdb7f5509d8",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/289a0f9e-17bf-4f77-abac-3bdb7f5509d8",
+   "status": 200,
+   "shot": "data/shots/b5a7304771c648d8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/289a0f9e-17bf-4f77-abac-3bdb7f5509d8",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Irvine, CA",
+  "place_signals": [
+   {
+    "quote": "Irvine, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA uses E-Verify to confirm the employment eligibility of new hires.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Irvine, CA / Hybrid",
+  "reason": "This is an architecture coordinator role (not product/UX/UI design) requiring hybrid work at a US office with US work eligibility.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Architecture Design Coordinator: Civic + Cultural",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$80K – $120K, Offers Bonus",
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "8829dbf2ee1844be": {
+  "id": "8829dbf2ee1844be",
+  "at": "2026-10-19T07:03:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/searchable/b0efa13a-0ff8-4d3a-92e6-eba4880d28b0",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/searchable/b0efa13a-0ff8-4d3a-92e6-eba4880d28b0",
+   "status": 200,
+   "shot": "data/shots/8829dbf2ee1844be.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/searchable/b0efa13a-0ff8-4d3a-92e6-eba4880d28b0",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "998585a4c6814e4b": {
+  "id": "998585a4c6814e4b",
+  "at": "2026-10-19T07:02:03",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/truelogic/c14e4a9f-9b65-4b8a-8b34-3a0222b9fcfc",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/truelogic/c14e4a9f-9b65-4b8a-8b34-3a0222b9fcfc",
+   "status": 200,
+   "shot": "data/shots/998585a4c6814e4b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/truelogic/c14e4a9f-9b65-4b8a-8b34-3a0222b9fcfc",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "unclear",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Santo Domingo",
+  "place_signals": [
+   {
+    "quote": "Location: Santo Domingo",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "100% Remote Work: Enjoy the freedom to work from the location that helps you thrive. All it takes is a laptop and a reliable internet connection.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "A U.S.-based personal finance platform that empowers people to make smarter money decisions...",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Santo Domingo / Location Type: Remote / 'work from the location that helps you thrive'",
+  "reason": "The job is mostly a brand/marketing-plus-product role with mixed signals, and the location fields (a Santo Domingo office tag vs. an explicit Remote type with open 'work from anywhere' language) contradict each other, so neither the role nor the place can be read cleanly.",
+  "confidence": "low",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - Finance",
+   "company": null,
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "abe73651bd464656": {
+  "id": "abe73651bd464656",
+  "at": "2026-10-19T07:03:07",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/8ec977c4-5827-44c5-a882-7b79efe26d86",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/8ec977c4-5827-44c5-a882-7b79efe26d86",
+   "status": 200,
+   "shot": "data/shots/abe73651bd464656.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/8ec977c4-5827-44c5-a882-7b79efe26d86",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Irvine, CA",
+  "place_signals": [
+   {
+    "quote": "Irvine, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA uses E-Verify to confirm the employment eligibility of new hires.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA is an integrated design firm with offices in California and Texas",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Irvine, CA; Location Type: Hybrid",
+  "reason": "Structural engineering role, hybrid onsite in Irvine, CA, not a product/UX/UI design job and not workable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Structural Designer",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$68K – $99K",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "75b57400cb5a425b": {
+  "id": "75b57400cb5a425b",
+  "at": "2026-10-19T07:03:21",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://fxcollaborative.bamboohr.com/careers/81",
+  "board": null,
+  "employer": {
+   "url": "https://fxcollaborative.bamboohr.com/careers/81",
+   "status": 200,
+   "shot": "data/shots/75b57400cb5a425b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://fxcollaborative.bamboohr.com/careers/81",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "5cb571b152b94ffb": {
+  "id": "5cb571b152b94ffb",
+  "at": "2026-10-19T07:03:14",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/c4655769-e751-4c49-9109-e68678991505",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/c4655769-e751-4c49-9109-e68678991505",
+   "status": 200,
+   "shot": "data/shots/5cb571b152b94ffb.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/c4655769-e751-4c49-9109-e68678991505",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Sacramento, CA",
+  "place_signals": [
+   {
+    "quote": "Sacramento, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA is an integrated design firm with offices in California and Texas",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA uses E-Verify to confirm the employment eligibility of new hires.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Sacramento, CA; Hybrid",
+  "reason": "This is an architecture coordinator role (not product/UX/UI design) and it is hybrid onsite in Sacramento, CA, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Architecture Design Coordinator: Healthcare",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$80K – $120K",
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "c3447e302de64098": {
+  "id": "c3447e302de64098",
+  "at": "2026-10-19T07:03:15",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/25f11bb5-bb2d-467d-8bbd-8c2fd5488600",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/25f11bb5-bb2d-467d-8bbd-8c2fd5488600",
+   "status": 200,
+   "shot": "data/shots/c3447e302de64098.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/25f11bb5-bb2d-467d-8bbd-8c2fd5488600",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "San Jose, CA",
+  "place_signals": [
+   {
+    "quote": "San Jose, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA is an integrated design firm with offices in California and Texas",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "San Jose, CA; Location Type: Hybrid",
+  "reason": "A structural engineering role (civil/structural engineering degree, PE/SE licensure) hybrid-based in San Jose, CA, not a design role Cesar does and not available in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Structural Designer",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$83K – $109K",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "097f49c4628c4c88": {
+  "id": "097f49c4628c4c88",
+  "at": "2026-10-19T07:03:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/90c5b855-9540-4e5a-b970-812b9aaffbb0",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/90c5b855-9540-4e5a-b970-812b9aaffbb0",
+   "status": 200,
+   "shot": "data/shots/097f49c4628c4c88.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/90c5b855-9540-4e5a-b970-812b9aaffbb0",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Dallas, TX",
+  "place_signals": [
+   {
+    "quote": "Dallas, TX",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA is an integrated design firm with offices in California and Texas",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Dallas, TX / Hybrid",
+  "reason": "Structural engineering role onsite/hybrid in Dallas, TX, not a product design role and not in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Structural Designer",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$66K – $97K",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "2a6b987df7ef4c81": {
+  "id": "2a6b987df7ef4c81",
+  "at": "2026-10-19T07:03:20",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/b0ef2028-4564-411b-ba65-17b99498ff1d",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/b0ef2028-4564-411b-ba65-17b99498ff1d",
+   "status": 200,
+   "shot": "data/shots/2a6b987df7ef4c81.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/b0ef2028-4564-411b-ba65-17b99498ff1d",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "San Diego, CA",
+  "place_signals": [
+   {
+    "quote": "San Diego, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA uses E-Verify to confirm the employment eligibility of new hires.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "San Diego, CA; Hybrid",
+  "reason": "This is a structural engineering role hybrid in San Diego, CA, not a design role Cesar does and not based in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Structural Designer",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$68K – $99K",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "6fc0f8a300e643bd": {
+  "id": "6fc0f8a300e643bd",
+  "at": "2026-10-19T07:03:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/landor/jobs/8275795",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/landor/jobs/8275795",
+   "status": 200,
+   "shot": "data/shots/6fc0f8a300e643bd.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/landor/jobs/8275795",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "f0c8ac1ae9cf4815": {
+  "id": "f0c8ac1ae9cf4815",
+  "at": "2026-10-19T07:03:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278560",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278560",
+   "status": 200,
+   "shot": "data/shots/f0c8ac1ae9cf4815.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278560",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "deefe950458d464e": {
+  "id": "deefe950458d464e",
+  "at": "2026-10-19T07:03:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/kikoff/jobs/4449458009",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/kikoff/jobs/4449458009",
+   "status": 200,
+   "shot": "data/shots/deefe950458d464e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/kikoff/jobs/4449458009",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "c1991b3bfad34806": {
+  "id": "c1991b3bfad34806",
+  "at": "2026-10-19T07:03:28",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/d2066cba-6b50-4379-b0f2-79bc202bb456",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/d2066cba-6b50-4379-b0f2-79bc202bb456",
+   "status": 200,
+   "shot": "data/shots/c1991b3bfad34806.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/d2066cba-6b50-4379-b0f2-79bc202bb456",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Irvine, CA",
+  "place_signals": [
+   {
+    "quote": "Irvine, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA is an integrated design firm with offices in California and Texas",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "LPA uses E-Verify to confirm the employment eligibility of new hires.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Irvine, CA / Hybrid",
+  "reason": "This is an architecture coordinator role, hybrid onsite in Irvine, CA with E-Verify employment eligibility in the US, not product/UX/UI design and not feasible from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Architecture Design Coordinator: Higher Education",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$80K – $120K, Offers Bonus",
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "51669418be88432e": {
+  "id": "51669418be88432e",
+  "at": "2026-10-19T07:03:21",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/vitalize/468caa64-309e-44d0-b539-54c9fd5ff8d4",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/vitalize/468caa64-309e-44d0-b539-54c9fd5ff8d4",
+   "status": 200,
+   "shot": "data/shots/51669418be88432e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/vitalize/468caa64-309e-44d0-b539-54c9fd5ff8d4",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "San Francisco HQ",
+  "place_signals": [
+   {
+    "quote": "San Francisco HQ",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The listed compensation applies to candidates who will be based in or relocating to the San Francisco Bay Area. Compensation for remote candidates residing outside of the Bay Area is determined by location tiers and corresponding benchmarks.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_maybe"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location Type: Hybrid; Location: San Francisco HQ",
+  "reason": "Posting explicitly states Hybrid work type tied to a San Francisco HQ, with no country list including Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer",
+   "company": "Vitalize",
+   "seniority": "staff",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "$230K – $250K • Offers Equity",
+   "years_xp": "8+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7e9cb8711f954795": {
+  "id": "7e9cb8711f954795",
+  "at": "2026-10-19T07:03:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/41d1bb2d-2fdc-4d8b-a2ef-d244422e3e30",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/41d1bb2d-2fdc-4d8b-a2ef-d244422e3e30",
+   "status": 200,
+   "shot": "data/shots/7e9cb8711f954795.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/41d1bb2d-2fdc-4d8b-a2ef-d244422e3e30",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Irvine, CA",
+  "place_signals": [
+   {
+    "quote": "Irvine, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA uses E-Verify to confirm the employment eligibility of new hires.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Irvine, CA / Hybrid",
+  "reason": "Architecture design role hybrid in Irvine, CA, not a product/UX/UI design job and not open to Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Architecture Designer: Civic + Cultural",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$64K – $87K, Offers Bonus",
+   "years_xp": "2+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "df55b658a8e6445a": {
+  "id": "df55b658a8e6445a",
+  "at": "2026-10-19T07:03:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/lpadesignstudios/53758734-0b43-4a31-a87c-9192b9609df0",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/lpadesignstudios/53758734-0b43-4a31-a87c-9192b9609df0",
+   "status": 200,
+   "shot": "data/shots/df55b658a8e6445a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/lpadesignstudios/53758734-0b43-4a31-a87c-9192b9609df0",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Irvine, CA",
+  "place_signals": [
+   {
+    "quote": "Irvine, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Active architecture license in California.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LPA uses E-Verify to confirm the employment eligibility of new hires.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Irvine, CA / Hybrid / Active architecture license in California.",
+  "reason": "This is an architecture (not product/UX/UI) role, hybrid onsite in Irvine, CA, requiring a California architecture license.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Architecture Project Designer: Civic + Cultural",
+   "company": "LPA, Inc.",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$100K – $160K",
+   "years_xp": "10+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "92f56b89f51648fc": {
+  "id": "92f56b89f51648fc",
+  "at": "2026-10-19T07:03:42",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://sd-solutions.breezy.hr/p/68b63e2cb12c01-adtech-client-3-ai-designer",
+  "board": null,
+  "employer": {
+   "url": "https://sd-solutions.breezy.hr/p/68b63e2cb12c01-adtech-client-3-ai-designer",
+   "status": 200,
+   "shot": "data/shots/92f56b89f51648fc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://sd-solutions.breezy.hr/p/68b63e2cb12c01-adtech-client-3-ai-designer",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "dea34ee1ef6d4152": {
+  "id": "dea34ee1ef6d4152",
+  "at": "2026-10-19T07:03:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8015904003",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8015904003",
+   "status": 200,
+   "shot": "data/shots/dea34ee1ef6d4152.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8015904003",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "6658e4070ab14337": {
+  "id": "6658e4070ab14337",
+  "at": "2026-10-19T07:03:46",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.eu.greenhouse.io/gymshark/jobs/4974423101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/gymshark/jobs/4974423101",
+   "status": 200,
+   "shot": "data/shots/6658e4070ab14337.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/gymshark/jobs/4974423101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "130c5eb9d70d4322": {
+  "id": "130c5eb9d70d4322",
+  "at": "2026-10-19T07:03:47",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.ixl.com/company/jobs?gh_jid=8856961002",
+  "board": null,
+  "employer": {
+   "url": "https://www.ixl.com/company/careers?gh_jid=8856961002",
+   "status": 200,
+   "shot": "data/shots/130c5eb9d70d4322.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.ixl.com/company/careers?gh_jid=8856961002",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "d31b493740994679": {
+  "id": "d31b493740994679",
+  "at": "2026-10-19T07:03:41",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/hugeinc/jobs/8160150",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/hugeinc/jobs/8160150",
+   "status": 200,
+   "shot": "data/shots/d31b493740994679.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/hugeinc/jobs/8160150",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "United States",
+  "place_signals": [
+   {
+    "quote": "United States",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This position is remote within the United States.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you authorized to work in the United States for any employer?",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is currently not available for hire or work in New Mexico, and Hawaii, USA.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This position is remote within the United States.",
+  "reason": "Role is remote but explicitly restricted to within the United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Director, Visual Design",
+   "company": "Huge",
+   "seniority": "director",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$130,000 - $170,000 USD",
+   "years_xp": "10+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7ce16e69b4614e66": {
+  "id": "7ce16e69b4614e66",
+  "at": "2026-10-19T07:03:50",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/teague/jobs/4703095006",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/teague/jobs/4703095006",
+   "status": 200,
+   "shot": "data/shots/7ce16e69b4614e66.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/teague/jobs/4703095006",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "5a01011f919f42f8": {
+  "id": "5a01011f919f42f8",
+  "at": "2026-10-19T07:03:51",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.onepeloton.com/en/all-jobs/?gh_jid=8261289",
+  "board": null,
+  "employer": {
+   "url": "https://careers.onepeloton.com/en/all-jobs/8261289/senior-designer/?gh_jid=8261289",
+   "status": 200,
+   "shot": "data/shots/5a01011f919f42f8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://careers.onepeloton.com/en/all-jobs/8261289/senior-designer/?gh_jid=8261289",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "708c276770ed4f4c": {
+  "id": "708c276770ed4f4c",
+  "at": "2026-10-19T07:03:51",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/altentechnologyusa/jobs/5165806007",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/altentechnologyusa/jobs/5165806007",
+   "status": 200,
+   "shot": "data/shots/708c276770ed4f4c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/altentechnologyusa/jobs/5165806007",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "ab74b5d8ecf349d3": {
+  "id": "ab74b5d8ecf349d3",
+  "at": "2026-10-19T07:03:52",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/altentechnologyusa/jobs/5265095007",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/altentechnologyusa/jobs/5265095007",
+   "status": 200,
+   "shot": "data/shots/ab74b5d8ecf349d3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/altentechnologyusa/jobs/5265095007",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "26a1736e4e194d58": {
+  "id": "26a1736e4e194d58",
+  "at": "2026-10-19T07:03:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.eu.greenhouse.io/theinsidejob/jobs/4974424101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/theinsidejob/jobs/4974424101",
+   "status": 200,
+   "shot": "data/shots/26a1736e4e194d58.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/theinsidejob/jobs/4974424101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "2162b932596d43f8": {
+  "id": "2162b932596d43f8",
+  "at": "2026-10-19T07:03:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/4987765101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/4987765101",
+   "status": 200,
+   "shot": "data/shots/2162b932596d43f8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/4987765101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "8c534aee95584e8f": {
+  "id": "8c534aee95584e8f",
+  "at": "2026-10-19T07:03:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/fashionnova/jobs/8279175",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/fashionnova/jobs/8279175",
+   "status": 200,
+   "shot": "data/shots/8c534aee95584e8f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/fashionnova/jobs/8279175",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "b69ac833b0fe4438": {
+  "id": "b69ac833b0fe4438",
+  "at": "2026-10-19T07:03:55",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/hark/jobs/4450684009",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/hark/jobs/4450684009",
+   "status": 200,
+   "shot": "data/shots/b69ac833b0fe4438.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/hark/jobs/4450684009",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "7d7b73afb53b46b0": {
+  "id": "7d7b73afb53b46b0",
+  "at": "2026-10-19T07:03:55",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278320",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278320",
+   "status": 200,
+   "shot": "data/shots/7d7b73afb53b46b0.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278320",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "fe8803ee0bd444a0": {
+  "id": "fe8803ee0bd444a0",
+  "at": "2026-10-19T07:04:00",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.lever.co/syntronic/66de4997-0f51-42a5-88d1-7bb6c302a153",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.lever.co/syntronic/66de4997-0f51-42a5-88d1-7bb6c302a153",
+   "status": 200,
+   "shot": "data/shots/fe8803ee0bd444a0.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/syntronic/66de4997-0f51-42a5-88d1-7bb6c302a153",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "70b24e919e464dea": {
+  "id": "70b24e919e464dea",
+  "at": "2026-10-19T07:04:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/5004994101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/5004994101",
+   "status": 200,
+   "shot": "data/shots/70b24e919e464dea.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/5004994101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "a7c6983191e149f8": {
+  "id": "a7c6983191e149f8",
+  "at": "2026-10-19T07:04:04",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/5004993101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/5004993101",
+   "status": 200,
+   "shot": "data/shots/a7c6983191e149f8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/5004993101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "8ea1b39031a64dc6": {
+  "id": "8ea1b39031a64dc6",
+  "at": "2026-10-19T07:04:04",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/4988842101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/4988842101",
+   "status": 200,
+   "shot": "data/shots/8ea1b39031a64dc6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/michelscorporation/jobs/4988842101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "3f18664a7e844705": {
+  "id": "3f18664a7e844705",
+  "at": "2026-10-19T07:04:04",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.lever.co/espace/3625936b-77ac-4b97-8059-c9cd245412b5",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.lever.co/espace/3625936b-77ac-4b97-8059-c9cd245412b5",
+   "status": 200,
+   "shot": "data/shots/3f18664a7e844705.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/espace/3625936b-77ac-4b97-8059-c9cd245412b5",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "1fbf25b1d2344179": {
+  "id": "1fbf25b1d2344179",
+  "at": "2026-10-19T07:04:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.lever.co/syntronic/6c85d6ae-9def-40f8-909d-adc79d3ea816",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.lever.co/syntronic/6c85d6ae-9def-40f8-909d-adc79d3ea816",
+   "status": 200,
+   "shot": "data/shots/1fbf25b1d2344179.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/syntronic/6c85d6ae-9def-40f8-909d-adc79d3ea816",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "52b92a39864f4989": {
+  "id": "52b92a39864f4989",
+  "at": "2026-10-19T07:04:07",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.lever.co/fi/edc1f23b-2292-47fd-8852-95e2b89817dd",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.lever.co/fi/edc1f23b-2292-47fd-8852-95e2b89817dd",
+   "status": 200,
+   "shot": "data/shots/52b92a39864f4989.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/fi/edc1f23b-2292-47fd-8852-95e2b89817dd",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "0233699606604944": {
+  "id": "0233699606604944",
+  "at": "2026-10-19T07:04:08",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/turnertownsend/744000155266519",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/turnertownsend/744000155266519",
+   "status": 200,
+   "shot": "data/shots/0233699606604944.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/turnertownsend/744000155266519",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "e9dda9cb6f684d98": {
+  "id": "e9dda9cb6f684d98",
+  "at": "2026-10-19T07:04:08",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/turnertownsend/744000155267008",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/turnertownsend/744000155267008",
+   "status": 200,
+   "shot": "data/shots/e9dda9cb6f684d98.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/turnertownsend/744000155267008",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "b49d22af9c854c07": {
+  "id": "b49d22af9c854c07",
+  "at": "2026-10-19T07:04:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/ubisoft2/744000155326024",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/ubisoft2/744000155326024",
+   "status": 200,
+   "shot": "data/shots/b49d22af9c854c07.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/ubisoft2/744000155326024",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "6fb2eef04b5944bd": {
+  "id": "6fb2eef04b5944bd",
+  "at": "2026-10-19T07:03:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/hook/jobs/8886699002",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/hook/jobs/8886699002",
+   "status": 200,
+   "shot": "data/shots/6fb2eef04b5944bd.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/hook/jobs/8886699002",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "While this role can work from any approved location, this person must have the flexibility to work around PST hours as the team’s clients are based on the West Coast.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   },
+   {
+    "quote": "This is a full-time position that can be hybrid or remote, depending on geographic location.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   },
+   {
+    "quote": "Are you legally authorized to work in the United States?",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Are you legally authorized to work in the United States? ... must have the flexibility to work around PST hours as the team’s clients are based on the West Coast.",
+  "reason": "remote from a list of countries the page does not show · Despite 'remote' and vague 'approved location' language, the application explicitly asks about US work authorization and requires PST working hours, indicating the role is tied to the US.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Associate Design Director",
+   "company": "Hook",
+   "seniority": "director",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "no"
+ },
+ "8c00c8c716b04fec": {
+  "id": "8c00c8c716b04fec",
+  "at": "2026-10-19T07:04:15",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/turnertownsend/744000155262104",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/turnertownsend/744000155262104",
+   "status": 200,
+   "shot": "data/shots/8c00c8c716b04fec.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/turnertownsend/744000155262104",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "561f6ee5a90a4c95": {
+  "id": "561f6ee5a90a4c95",
+  "at": "2026-10-19T07:04:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/asos/744000155255209",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/asos/744000155255209",
+   "status": 200,
+   "shot": "data/shots/561f6ee5a90a4c95.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/asos/744000155255209",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "8caabd8b8c8f404a": {
+  "id": "8caabd8b8c8f404a",
+  "at": "2026-10-19T07:04:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/WeAreRosie/3743990016082908",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/WeAreRosie/3743990016082908",
+   "status": 200,
+   "shot": "data/shots/8caabd8b8c8f404a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/WeAreRosie/3743990016082908",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "791736bab05e4151": {
+  "id": "791736bab05e4151",
+  "at": "2026-10-19T07:04:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/linkedin3/744000155326439",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/linkedin3/744000155326439",
+   "status": 200,
+   "shot": "data/shots/791736bab05e4151.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/linkedin3/744000155326439",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "d70811d8d47848c6": {
+  "id": "d70811d8d47848c6",
+  "at": "2026-10-19T07:04:20",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333689",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333689",
+   "status": 200,
+   "shot": "data/shots/d70811d8d47848c6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333689",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "734f89e724b14870": {
+  "id": "734f89e724b14870",
+  "at": "2026-10-19T07:04:20",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333969",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333969",
+   "status": 200,
+   "shot": "data/shots/734f89e724b14870.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333969",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "7c378686d72347ea": {
+  "id": "7c378686d72347ea",
+  "at": "2026-10-19T07:04:20",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155334119",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/applusidiada1/744000155334119",
+   "status": 200,
+   "shot": "data/shots/7c378686d72347ea.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155334119",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "09d20bafa50f4b35": {
+  "id": "09d20bafa50f4b35",
+  "at": "2026-10-19T07:04:07",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.toasttab.com/jobs?gh_jid=8276127",
+  "board": null,
+  "employer": {
+   "url": "https://careers.toasttab.com/jobs/senior-product-designer-toast-retail-dublin-county-dublin-ireland?gh_jid=8276127",
+   "status": 200,
+   "shot": "data/shots/09d20bafa50f4b35.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://careers.toasttab.com/jobs/senior-product-designer-toast-retail-dublin-county-dublin-ireland?gh_jid=8276127",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Dublin, County Dublin, Ireland",
+  "place_signals": [
+   {
+    "quote": "Dublin, County Dublin, Ireland",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You will lead design for Toast Retail's Experience Platform team, working day to day with product and engineering partners in our Dublin office and the U.S., and reporting to Toast Retail's design leadership in the U.S.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You will be Toast Retail's design presence in our Dublin office: the on-site design partner for its product and engineering teams, and part of Toast's wider design community.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We embrace a hybrid work model that fosters in-person collaboration while valuing individual needs... please visit the Locations page on our career site to learn more about our in-office expectations by region",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Are you currently based in Ireland? (required)",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "You will be Toast Retail's design presence in our Dublin office: the on-site design partner for its product and engineering teams.",
+  "reason": "The role requires on-site presence as the design partner in Toast's Dublin office, with the application itself asking if the candidate is based in Ireland.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer – Toast Retail",
+   "company": "Toast",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Ireland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+ years",
+   "reports_to": "Toast Retail's design leadership in the U.S.",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f8a89d71e173488a": {
+  "id": "f8a89d71e173488a",
+  "at": "2026-10-19T07:04:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333264",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333264",
+   "status": 200,
+   "shot": "data/shots/f8a89d71e173488a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/applusidiada1/744000155333264",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "33936a3c215a4cd2": {
+  "id": "33936a3c215a4cd2",
+  "at": "2026-10-19T07:04:19",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/cern/744000155289136",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/cern/744000155289136",
+   "status": 200,
+   "shot": "data/shots/33936a3c215a4cd2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/cern/744000155289136",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Geneva, Switzerland",
+  "place_signals": [
+   {
+    "quote": "Geneva, Switzerland",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Job flexibility: Fully Onsite",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You are a national of a CERN Member or Associate Member State.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Job flexibility: Fully Onsite",
+  "reason": "remote from a list of countries the page does not show · Role is an ASIC/digital engineering design job, not product/UX/UI design, and it is fully onsite in Geneva, Switzerland.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital ASIC Designer (EP-ESE-ME-2026-134-GRAP)",
+   "company": "CERN",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Switzerland"
+   ],
+   "portugal_ok": "no",
+   "salary": "CHF 6,372 - CHF 7,004 monthly",
+   "years_xp": "2 to 6 years (Master's) or up to 3 years (PhD)",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "3cc669a0eecf4d19": {
+  "id": "3cc669a0eecf4d19",
+  "at": "2026-10-19T07:04:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000155265950",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/renesaselectronics/744000155265950",
+   "status": 200,
+   "shot": "data/shots/3cc669a0eecf4d19.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/renesaselectronics/744000155265950",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Remote Work Available: No",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Duluth, GEORGIA",
+    "where": "footer or small print",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "global team of over 21,000 engineers and problem solvers in more than 30 countries",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "it may be necessary for Renesas to obtain U.S. government export license prior to release of technology to certain persons",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote Work Available: No",
+  "reason": "This is an ASIC/IC digital hardware design engineering role (RTL/Verilog chip design), not product/UX/UI design, and it is explicitly not remote, based onsite in Duluth, Georgia.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal Digital Design Engineer",
+   "company": "Renesas Electronics",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "12+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "35e045625ec642f2": {
+  "id": "35e045625ec642f2",
+  "at": "2026-10-19T07:04:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/EgisGroup/744000155358112",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/EgisGroup/744000155358112",
+   "status": 200,
+   "shot": "data/shots/35e045625ec642f2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/EgisGroup/744000155358112",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Tampa, FL, USA",
+  "place_signals": [
+   {
+    "quote": "Tampa, FL, USA",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Willingness to travel within Florida as project needs require",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Active Florida Professional Engineer (PE) license required",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible work arrangements, including hybrid and remote opportunities where business needs allow",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Tampa, FL, USA",
+  "reason": "This is a highway engineering project manager role requiring a Florida PE license and onsite presence in Tampa, FL, not a design/UX role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Highway Design Build Project Manager",
+   "company": "Egis / Lochner",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "10+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "27561e7ec8df492d": {
+  "id": "27561e7ec8df492d",
+  "at": "2026-10-19T07:04:21",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/HarvardUniversity/3743990016096856",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/HarvardUniversity/3743990016096856",
+   "status": 200,
+   "shot": "data/shots/27561e7ec8df492d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/HarvardUniversity/3743990016096856",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Boston, Massachusetts, United States",
+  "place_signals": [
+   {
+    "quote": "Work Format: Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Boston, Massachusetts, United States",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a hybrid position which we consider to be a combination of remote and onsite work at our Boston, MA based campus. HBS expects all staff to be onsite a minimum of 3 days per week",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "When not working at a Harvard or Harvard-designated location, employees in hybrid positions must work in a Harvard registered state in compliance with the University's Policy on Employment Outside of Massachusetts",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Visa Sponsorship Information: Harvard University is unable to provide visa sponsorship for this position",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "HBS expects all staff to be onsite a minimum of 3 days per week ... employees in hybrid positions must work in a Harvard registered state",
+  "reason": "Role is facilities/architecture design management and BIM program leadership for physical campus buildings, not product/UX/UI design, and requires onsite presence in Boston/Massachusetts at least 3 days a week with no remote-from-Portugal option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Associate Director of Design, Operations",
+   "company": "Harvard Business School",
+   "seniority": "director",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": "Senior Director of Planning and Design",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "ab5462812b074b2c": {
+  "id": "ab5462812b074b2c",
+  "at": "2026-10-19T07:04:21",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/necsws/744000155252309",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/necsws/744000155252309",
+   "status": 200,
+   "shot": "data/shots/ab5462812b074b2c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/necsws/744000155252309",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Location: UK Hybrid",
+  "place_signals": [
+   {
+    "quote": "Location: UK Hybrid",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Salary: £46-65,000 subject to location and experience.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Candidates must be able to demonstrate a pre-existing right to work and travel within the UK. Documentary evidence will be required.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "SC clearance will also be required for the role.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote, United Kingdom, United Kingdom",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Candidates must be able to demonstrate a pre-existing right to work and travel within the UK.",
+  "reason": "The role requires a pre-existing right to work in the UK and is UK Hybrid/Remote-UK, excluding Portugal-based candidates.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Service Designer",
+   "company": "NEC Software Solutions (NECSWS)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "GBP 46,000 - GBP 65,000",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  }
 }
