@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-10-19T15:40:42+00:00",
- "built_at": "2026-10-19T17:30+01:00",
+ "built_at": "2026-10-19T18:24+01:00",
  "run_id": "2026-10-19T15:40:42+00:00",
  "last_full": "2026-10-19T10:41:56+00:00",
  "last_partial": "2026-10-19T15:40:42+00:00",
@@ -17009,9 +17009,16 @@
   "0db8affadea541a8",
   "b557bcbd98364ceb",
   "4d9a2f058dd74836",
+  "03464ec4e87549d7",
+  "0f25b6ae44774df4",
   "481ebce877dd4de2",
+  "dbf3a51e19d84dbc",
+  "063ea06755a8422c",
+  "6fc2d25aedd04689",
+  "c108baa2476b4c24",
   "d87db62e18194863",
   "1399726e488546f8",
+  "f95ef825792f4df4",
   "beacd9eef8344b03"
  ],
  "unread": [
@@ -1136538,7 +1136545,30 @@
     "evidence": {
      "employer_posted": "2026-10-13"
     },
-    "hiring_for": null
+    "hiring_for": null,
+    "audit": {
+     "at": "2026-10-19T18:17:47",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": "unclear",
+     "reason": "the page does not say where · Listed as São Paulo / Remote with a nearshore LATAM staffing company repeatedly emphasizing its Latin America-based talent pool, but no explicit country restriction is stated for this specific role.",
+     "signals": [
+      {
+       "quote": "Our team of 600+ highly skilled tech professionals, based in Latin America, drives digital disruption by partnering with U.S. companies",
+       "where": "opening paragraph",
+       "kind": "generic",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Diverse, Global Network: Connect with over 600 professionals in 25+ countries, expand your network, and collaborate with a multicultural team from Latin America.",
+       "where": "body",
+       "kind": "generic",
+       "says": "portugal_out"
+      }
+     ]
+    }
    }
   },
   {
@@ -1149929,6 +1149959,16 @@
     "read_at": "2026-10-19T06:42:31",
     "evidence": {
      "employer_posted": "2026-10-15"
+    },
+    "audit": {
+     "at": "2026-10-19T18:20:41",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "The page is an empty application shell with site navigation and footer only - no actual job description, location, or requirements text loaded.",
+     "signals": []
     }
    }
   },
@@ -1168778,6 +1168818,35 @@
     "read_at": "2026-10-19T06:30:50",
     "evidence": {
      "employer_posted": "2026-10-16"
+    },
+    "audit": {
+     "at": "2026-10-19T18:17:12",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "the page read is a different job · The posting is actually for Sandbar, a New York City company, not Urban Ridge Supplies, and gives no remote option, so it does not match the pool's listing nor can it be done from Portugal.",
+     "signals": [
+      {
+       "quote": "NEW YORK",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Sandbar is an interface company in New York City.",
+       "where": "opening paragraph",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Location: New York",
+       "where": "side panel",
+       "kind": "tag",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
@@ -1169227,6 +1169296,35 @@
     "read_at": "2026-10-19T06:30:59",
     "evidence": {
      "employer_posted": "2026-10-16"
+    },
+    "audit": {
+     "at": "2026-10-19T18:17:14",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "the page read is a different job · The job description is explicitly for PermitFlow (not Urban Ridge Supplies as the pool lists), and it requires a hybrid schedule with 3 in-office days per week in New York, making it unworkable from Portugal.",
+     "signals": [
+      {
+       "quote": "Our HQ is in New York City with a hybrid schedule (3 in-office days per week).",
+       "where": "opening paragraph",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "NEW YORK",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Location: New York",
+       "where": "side panel",
+       "kind": "tag",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
@@ -1169619,6 +1169717,35 @@
     "read_at": "2026-10-19T06:31:08",
     "evidence": {
      "employer_posted": "2026-10-16"
+    },
+    "audit": {
+     "at": "2026-10-19T18:19:58",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "the page read is a different job · The posting's title and location match the pool entry, but the described employer and business (Avallon, an AI insurance-claims startup requiring in-person NYC work) are entirely different from 'Urban Ridge Supplies' (a Karachi piping company), making this a mismatched/different-job page; the role itself requires onsite presence in NYC, which rules out Portugal regardless.",
+     "signals": [
+      {
+       "quote": "NEW YORK",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Based in NYC and excited to work in person",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Location\nNew York",
+       "where": "side panel",
+       "kind": "tag",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
@@ -1170994,6 +1171121,35 @@
     "read_at": "2026-10-19T06:31:45",
     "evidence": {
      "employer_posted": "2026-10-16"
+    },
+    "audit": {
+     "at": "2026-10-19T18:18:41",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "the page read is a different job · The posting is for a New York-based role requiring existing US work authorization, and the hiring company in the description (MRCL/Publicis) does not match the Urban Ridge Supplies piping company named elsewhere on the page.",
+     "signals": [
+      {
+       "quote": "NEW YORK",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Location\nNew York",
+       "where": "side panel",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Visa sponsorship is not available for this role including H1B, OPT EAD etc.",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
@@ -1177836,6 +1177992,23 @@
     "read_at": "2026-10-19T06:46:47",
     "evidence": {
      "employer_posted": "2026-10-15"
+    },
+    "audit": {
+     "at": "2026-10-19T18:17:33",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "unclear",
+     "place": null,
+     "reason": "The page is a Contingent Worker Access portal/onboarding form, not an actual job description, so role and openness cannot be determined.",
+     "signals": [
+      {
+       "quote": "Lincoln Building",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
