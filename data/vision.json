@@ -1328714,5 +1328714,428 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "37de808de7ac43e2": {
+  "id": "37de808de7ac43e2",
+  "at": "2026-10-19T08:40:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ats.rippling.com/forterra/jobs/90716026-f864-4de5-b198-949f76c02aa3",
+  "board": null,
+  "employer": {
+   "url": "https://ats.rippling.com/forterra/jobs/90716026-f864-4de5-b198-949f76c02aa3",
+   "status": 200,
+   "shot": "data/shots/37de808de7ac43e2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ats.rippling.com/forterra/jobs/90716026-f864-4de5-b198-949f76c02aa3",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:05"
+ },
+ "b786748af4734e44": {
+  "id": "b786748af4734e44",
+  "at": "2026-10-19T08:40:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.elemis.com/en/postings/120d617d-412b-4980-8206-ca8dc6acfe42",
+  "board": null,
+  "employer": {
+   "url": "https://careers.elemis.com/en/postings/120d617d-412b-4980-8206-ca8dc6acfe42",
+   "status": 200,
+   "shot": "data/shots/b786748af4734e44.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://careers.elemis.com/en/postings/120d617d-412b-4980-8206-ca8dc6acfe42",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:07"
+ },
+ "81b5f1d9d9864f4f": {
+  "id": "81b5f1d9d9864f4f",
+  "at": "2026-10-19T08:40:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.elemis.com/en/postings/5eb24942-e29f-44c7-aa25-c0ac2c951f33",
+  "board": null,
+  "employer": {
+   "url": "https://careers.elemis.com/en/postings/5eb24942-e29f-44c7-aa25-c0ac2c951f33",
+   "status": 200,
+   "shot": "data/shots/81b5f1d9d9864f4f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://careers.elemis.com/en/postings/5eb24942-e29f-44c7-aa25-c0ac2c951f33",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:03"
+ },
+ "38ea3f09b1504afb": {
+  "id": "38ea3f09b1504afb",
+  "at": "2026-10-19T08:40:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://gs1ca.pinpointhq.com/en/postings/270fb9d0-8044-480c-8973-9647fb87afe1",
+  "board": null,
+  "employer": {
+   "url": "https://gs1ca.pinpointhq.com/en/postings/270fb9d0-8044-480c-8973-9647fb87afe1",
+   "status": 200,
+   "shot": "data/shots/38ea3f09b1504afb.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://gs1ca.pinpointhq.com/en/postings/270fb9d0-8044-480c-8973-9647fb87afe1",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:32"
+ },
+ "c9af3977fef446ab": {
+  "id": "c9af3977fef446ab",
+  "at": "2026-10-19T08:40:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.pod-point.com/en/postings/b5ec31b9-324b-450f-8439-bd96336eb546",
+  "board": null,
+  "employer": {
+   "url": "https://careers.pod-point.com/en/postings/b5ec31b9-324b-450f-8439-bd96336eb546",
+   "status": 200,
+   "shot": "data/shots/c9af3977fef446ab.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://careers.pod-point.com/en/postings/b5ec31b9-324b-450f-8439-bd96336eb546",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:22"
+ },
+ "0543b71a027146e2": {
+  "id": "0543b71a027146e2",
+  "at": "2026-10-19T08:40:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/Singapore-Kallang/Staff-Digital-IC-Design-Engineer_R262356",
+  "board": null,
+  "employer": {
+   "url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/Singapore-Kallang/Staff-Digital-IC-Design-Engineer_R262356",
+   "status": 200,
+   "shot": "data/shots/0543b71a027146e2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/Singapore-Kallang/Staff-Digital-IC-Design-Engineer_R262356",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Singapore, Kallang",
+  "place_signals": [
+   {
+    "quote": "Singapore, Kallang",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "locations Singapore, Kallang",
+  "reason": "This is a digital IC design engineering role (hardware chip design) located onsite in Singapore, not a design/UX role and not remote or in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Digital IC Design Engineer",
+   "company": "Analog Devices",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Singapore"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "3+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Posted 30+ Days Ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "76a4dee9705c4eb2": {
+  "id": "76a4dee9705c4eb2",
+  "at": "2026-10-19T08:40:27",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/US-MA-Wilmington/Senior-Principal-Engineer--Digital-Design-Engineering_R262199",
+  "board": null,
+  "employer": {
+   "url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/US-MA-Wilmington/Senior-Principal-Engineer--Digital-Design-Engineering_R262199",
+   "status": 200,
+   "shot": "data/shots/76a4dee9705c4eb2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/US-MA-Wilmington/Senior-Principal-Engineer--Digital-Design-Engineering_R262199",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "US, MA, Wilmington",
+  "place_signals": [
+   {
+    "quote": "US, MA, Wilmington",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "applicants for this position – except US Citizens, US Permanent Residents, and protected individuals as defined by 8 U.S.C. 1324b(a)(3) – may have to go through an export licensing review process.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "US, MA, Wilmington",
+  "reason": "This is a hardware/semiconductor digital IC design engineering role (not UX/UI/product design) located onsite in Wilmington, MA, USA.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Principal Engineer, Digital Design Engineering",
+   "company": "Analog Devices",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$187,050 to $280,575",
+   "years_xp": "15+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Posted 30+ Days Ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "03fdb4cf447846e2": {
+  "id": "03fdb4cf447846e2",
+  "at": "2026-10-19T09:02:44",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/freelancer/j/B48E7879F3/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/freelancer/j/B48E7879F3/",
+   "status": 429,
+   "shot": "data/shots/03fdb4cf447846e2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/freelancer/j/B48E7879F3/",
+  "open_quote": "the employer's hiring system no longer has this posting",
+  "stage": "render",
+  "reason": "the employer says it is closed"
+ },
+ "12a66221850a4c73": {
+  "id": "12a66221850a4c73",
+  "at": "2026-10-19T09:03:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/withplum/j/6B85D5E77A/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/withplum/j/6B85D5E77A/",
+   "status": 429,
+   "shot": "data/shots/12a66221850a4c73.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/withplum/j/6B85D5E77A/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Athens, Attica, Greece / Location Type: hybrid",
+  "place_signals": [
+   {
+    "quote": "Location: Athens, Attica, Greece / Location Type: hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible approach to remote working: we encourage at least 2 days a week in one of our beautiful offices in London, Athens or Cyprus",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "45 work-from-anywhere days: giving you the flexibility to work your way.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Athens, Attica, Greece; Location Type: hybrid; we encourage at least 2 days a week in one of our offices in London, Athens or Cyprus",
+  "reason": "The role is hybrid tied to offices in Athens, London or Cyprus, with no mention of Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Plum",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "at least 2 days a week",
+   "countries": [
+    "Greece",
+    "United Kingdom",
+    "Cyprus"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "e5c0729dda7043f4": {
+  "id": "e5c0729dda7043f4",
+  "at": "2026-10-19T09:03:23",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.welcometothejungle.com/en/companies/lloyds/jobs/ux-designer-12-month-fixed-term-contract_edinburgh_yixyqc62",
+  "board": {
+   "url": "https://www.welcometothejungle.com/en/companies/lloyds/jobs/ux-designer-12-month-fixed-term-contract_edinburgh_yixyqc62",
+   "status": 200,
+   "shot": "data/shots/e5c0729dda7043f4.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://lbg.wd3.myworkdayjobs.com/en-US/lbg_Careers/job/Edinburgh/UX-Designer--12-Month-FT",
+   "link: https://wttj.notion.site/legal-hub",
+   "apply: https://lbg.wd3.myworkdayjobs.com/en-US/lbg_Careers/job/Edinburgh/UX-Designer--12-Month-FT"
+  ],
+  "read": "board",
+  "read_url": "https://www.welcometothejungle.com/en/companies/lloyds/jobs/ux-designer-12-month-fixed-term-contract_edinburgh_yixyqc62",
+  "fetched_at": "2026-10-19T07:00:40",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Edinburgh / A few days at home",
+  "place_signals": [
+   {
+    "quote": "Edinburgh",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "A few days at home",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Edinburgh Citymark 150 Fountainbridge, United Kingdom",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "A flexible way of working: Whether you want flexibility over your location or when you log on, together we can create an approach that works for you and for the business.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Edinburgh / A few days at home",
+  "reason": "Hybrid role tied to an Edinburgh office, not remote-eligible from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer (12 Month Fixed-Term Contract)",
+   "company": "Lloyds",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£61.3K to 68.2K",
+   "years_xp": "> 5 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "3 days ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  }
 }

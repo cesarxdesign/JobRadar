@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-10-19T05:28:23+00:00",
- "built_at": "2026-10-19T08:45+01:00",
+ "built_at": "2026-10-19T09:06+01:00",
  "run_id": "2026-10-19T05:28:23+00:00",
  "last_full": "2026-10-19T04:18:44+00:00",
  "last_partial": "2026-10-19T05:28:23+00:00",
@@ -12,18 +12,18 @@
   "portugal": 23,
   "unsure": 133,
   "ghosts": 0,
-  "cut": 21,
-  "closed": 588,
-  "vision_cut": 15591,
+  "cut": 19,
+  "closed": 589,
+  "vision_cut": 15600,
   "agency": 0,
   "not_read": 2,
   "folded": 78,
-  "vision_read": 21652,
+  "vision_read": 21662,
   "title_cuts": 52502,
   "design": 22811,
-  "waiting": 20,
-  "unjudged": 522733,
-  "age_cuts": 12684,
+  "waiting": 10,
+  "unjudged": 522725,
+  "age_cuts": 12693,
   "active": 592090,
   "total": 599955
  },
@@ -618,12 +618,10 @@
   "625147bfcbd24abe",
   "0748e10c1f8b47d6",
   "65b4e4cb5e9d405c",
-  "12a66221850a4c73",
   "aaf22be40b4d4756",
   "98ab81a460344e9d",
   "5900dea933ca470c",
   "34610dbbe09745b7",
-  "e5c0729dda7043f4",
   "fcd75b1e7af3442d",
   "51bf5a9418a94cc6",
   "af261b9d0a7e4189",
@@ -1205,6 +1203,7 @@
   "8c06eb1d9c4d43ad",
   "08ca39b8a8264f8e",
   "59cb6549dcc74ad0",
+  "03fdb4cf447846e2",
   "e87c9d3f1a9748ec",
   "d9bdfe6b383c49b6",
   "8e289a5e0bee42f7",
@@ -2071,6 +2070,7 @@
   "d8d84f49185f496c",
   "aa9018fb94344540",
   "8bdf1af188d1484c",
+  "12a66221850a4c73",
   "74f55a2fab384da2",
   "c75e59f7590e4d5f",
   "218290dc700947bc",
@@ -3087,6 +3087,7 @@
   "4dc8ec6d53334905",
   "eb19541d37874d42",
   "3ec288bb62d949ec",
+  "e5c0729dda7043f4",
   "ce497699d68a408b",
   "204a51ff306645b1",
   "830d46dc90bf40f6",
@@ -11684,6 +11685,7 @@
   "5be97da258114f62",
   "7aceb95336ae4b2c",
   "6f2bd5b7a67e422c",
+  "0543b71a027146e2",
   "b733cd0a49e14b5a",
   "d6e26c6aad60439b",
   "8585d482bcc542d8",
@@ -11700,6 +11702,7 @@
   "94e8be465c1d414f",
   "431d14e602414081",
   "9a87583b0b7548e0",
+  "76a4dee9705c4eb2",
   "3498b61090774f69",
   "38e95e98e3c94345",
   "17072872db0347c3",
@@ -16777,12 +16780,17 @@
   "f60915c913df4b6a",
   "e1dab6021ca9404a",
   "cb6544ee0d4e4689",
+  "37de808de7ac43e2",
   "136c0492964d4984",
   "27e940600865452c",
   "f949448c16004bdd",
   "94ed3c772f9c4140",
   "246f44b604444e8e",
   "a56451511dee4694",
+  "b786748af4734e44",
+  "81b5f1d9d9864f4f",
+  "38ea3f09b1504afb",
+  "c9af3977fef446ab",
   "b88278532fe54c05",
   "9580ce446343445b",
   "8012b918a73e460e",
@@ -101250,33 +101258,64 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
+    "lane": "cut",
     "cut": true,
     "why": [
-     "Onsite role in Athens, Greece - cannot be done from Portugal"
+     "The role is hybrid tied to offices in Athens, London or Cyprus, with no mention of Portugal.",
+     "Portugal OUT · under the title: \"Location: Athens, Attica, Greece / Location Type: hybrid\"",
+     "Portugal OUT · body: \"Flexible approach to remote working: we encourage at least 2 days a week in one of our beautiful offices in London, Athens or Cyprus\""
     ],
     "judged": true,
-    "text": "summary",
-    "stage": "judge",
+    "text": "employer's page",
+    "stage": "vision",
     "confidence": "high",
     "fields": {
      "role": "Senior Product Designer",
      "company": "Plum",
      "seniority": "senior",
-     "remote": "onsite",
-     "onsite_days": null,
+     "remote": "hybrid",
+     "onsite_days": "at least 2 days a week",
      "countries": [
-      "Greece"
+      "Greece",
+      "United Kingdom",
+      "Cyprus"
      ],
      "portugal_ok": "no",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
-     "language": "English"
+     "language": "English",
+     "posted": null
     },
-    "inferred": [
-     "workplace_as_posted"
-    ]
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/withplum/j/6B85D5E77A/",
+    "reason": "The role is hybrid tied to offices in Athens, London or Cyprus, with no mention of Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Athens, Attica, Greece; Location Type: hybrid; we encourage at least 2 days a week in one of our offices in London, Athens or Cyprus",
+    "signals": [
+     {
+      "quote": "Location: Athens, Attica, Greece / Location Type: hybrid",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Flexible approach to remote working: we encourage at least 2 days a week in one of our beautiful offices in London, Athens or Cyprus",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/12a66221850a4c73.jpg",
+    "read_at": "2026-10-19T09:03:10",
+    "evidence": {
+     "board_posted": "2026-07-30"
+    }
    }
   },
   {
@@ -199509,33 +199548,69 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
+    "lane": "cut",
     "cut": true,
     "why": [
-     "Hybrid role based in Edinburgh, GB; no remote-from-Portugal option stated."
+     "Hybrid role tied to an Edinburgh office, not remote-eligible from Portugal.",
+     "Portugal OUT · under the title: \"Edinburgh\"",
+     "Portugal OUT · under the title: \"A few days at home\"",
+     "Portugal OUT · side panel: \"Edinburgh Citymark 150 Fountainbridge, United Kingdom\""
     ],
     "judged": true,
-    "text": "original",
-    "stage": "judge",
+    "text": "job board's copy",
+    "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "UX Designer",
+     "role": "UX Designer (12 Month Fixed-Term Contract)",
      "company": "Lloyds",
-     "seniority": "senior",
+     "seniority": "unstated",
      "remote": "hybrid",
      "onsite_days": null,
      "countries": [
-      "GB"
+      "United Kingdom"
      ],
      "portugal_ok": "no",
-     "salary": "£61k–68k",
-     "years_xp": 5,
+     "salary": "£61.3K to 68.2K",
+     "years_xp": "> 5 years",
      "reports_to": null,
-     "language": "English"
+     "language": "English",
+     "posted": "3 days ago"
     },
-    "inferred": [
-     "workplace_as_posted"
-    ]
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.welcometothejungle.com/en/companies/lloyds/jobs/ux-designer-12-month-fixed-term-contract_edinburgh_yixyqc62",
+    "reason": "Hybrid role tied to an Edinburgh office, not remote-eligible from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Edinburgh / A few days at home",
+    "signals": [
+     {
+      "quote": "Edinburgh",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "A few days at home",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Edinburgh Citymark 150 Fountainbridge, United Kingdom",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/e5c0729dda7043f4.jpg",
+    "read_at": "2026-10-19T09:03:23",
+    "evidence": {
+     "board_posted": "2026-10-16"
+    }
    }
   },
   {
@@ -911830,6 +911905,72 @@
    "company": "analogdevices",
    "first_run": "2026-10-06T15:00:56+00:00",
    "first_seen": "2026-10-06T15:00:56+00:00",
+   "id": "0543b71a027146e2",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "Singapore, Kallang",
+   "source": "workday/analogdevices.wd1/external",
+   "sources": [
+    "workday/analogdevices.wd1/external"
+   ],
+   "title": "Staff Digital IC Design Engineer",
+   "url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/Singapore-Kallang/Staff-Digital-IC-Design-Engineer_R262356",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a digital IC design engineering role (hardware chip design) located onsite in Singapore, not a design/UX role and not remote or in Portugal.",
+     "Portugal OUT · under the title: \"Singapore, Kallang\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Staff Digital IC Design Engineer",
+     "company": "Analog Devices",
+     "seniority": "staff",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Singapore"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "3+",
+     "reports_to": null,
+     "language": "English",
+     "posted": "Posted 30+ Days Ago"
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/Singapore-Kallang/Staff-Digital-IC-Design-Engineer_R262356",
+    "reason": "This is a digital IC design engineering role (hardware chip design) located onsite in Singapore, not a design/UX role and not remote or in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "locations Singapore, Kallang",
+    "signals": [
+     {
+      "quote": "Singapore, Kallang",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/0543b71a027146e2.jpg",
+    "read_at": "2026-10-19T08:40:17",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "analogdevices",
+   "first_run": "2026-10-06T15:00:56+00:00",
+   "first_seen": "2026-10-06T15:00:56+00:00",
    "id": "b733cd0a49e14b5a",
    "jdhash": "4468",
    "last_seen": "2026-10-19T04:18:44+00:00",
@@ -912987,6 +913128,79 @@
     "evidence": {
      "employer_posted": "2026-10-05"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "analogdevices",
+   "first_run": "2026-10-06T15:00:56+00:00",
+   "first_seen": "2026-10-06T15:00:56+00:00",
+   "id": "76a4dee9705c4eb2",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "US, MA, Wilmington",
+   "source": "workday/analogdevices.wd1/external",
+   "sources": [
+    "workday/analogdevices.wd1/external"
+   ],
+   "title": "Senior Principal Engineer, Digital Design Engineering",
+   "url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/US-MA-Wilmington/Senior-Principal-Engineer--Digital-Design-Engineering_R262199",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a hardware/semiconductor digital IC design engineering role (not UX/UI/product design) located onsite in Wilmington, MA, USA.",
+     "Portugal OUT · under the title: \"US, MA, Wilmington\"",
+     "Portugal OUT · body: \"applicants for this position – except US Citizens, US Permanent Residents, and protected individuals as defined by 8 U.S.C. 1324b(a)(3) – may have to go through an export licensing review process.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Principal Engineer, Digital Design Engineering",
+     "company": "Analog Devices",
+     "seniority": "principal",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "US"
+     ],
+     "portugal_ok": "no",
+     "salary": "$187,050 to $280,575",
+     "years_xp": "15+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": "Posted 30+ Days Ago"
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://analogdevices.wd1.myworkdayjobs.com/external/job/US-MA-Wilmington/Senior-Principal-Engineer--Digital-Design-Engineering_R262199",
+    "reason": "This is a hardware/semiconductor digital IC design engineering role (not UX/UI/product design) located onsite in Wilmington, MA, USA.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "US, MA, Wilmington",
+    "signals": [
+     {
+      "quote": "US, MA, Wilmington",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "applicants for this position – except US Citizens, US Permanent Residents, and protected individuals as defined by 8 U.S.C. 1324b(a)(3) – may have to go through an export licensing review process.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/76a4dee9705c4eb2.jpg",
+    "read_at": "2026-10-19T08:40:27",
+    "evidence": {}
    }
   },
   {
@@ -1207218,6 +1207432,54 @@
   },
   {
    "active": true,
+   "company": "Freelancer.com",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "03fdb4cf447846e2",
+   "jdhash": "2064",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "Sydney, Australia",
+   "posted": "2026-09-25",
+   "source": "designjobsworld",
+   "sources": [
+    "designjobsworld"
+   ],
+   "title": "Content Designer",
+   "url": "https://apply.workable.com/freelancer/j/B48E7879F3/",
+   "verdict": {
+    "role": null,
+    "place": null,
+    "lane": "closed",
+    "cut": false,
+    "why": [
+     "the employer says it is closed",
+     "the page says: \"the employer's hiring system no longer has this posting\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/freelancer/j/B48E7879F3/",
+    "reason": "the employer says it is closed",
+    "open": "no",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/03fdb4cf447846e2.jpg",
+    "read_at": "2026-10-19T09:02:44",
+    "evidence": {
+     "board_posted": "2026-09-25"
+    }
+   }
+  },
+  {
+   "active": true,
    "company": "Sportradar",
    "first_run": "2026-10-19T04:18:44+00:00",
    "first_seen": "2026-10-19T04:18:44+00:00",
@@ -1229979,6 +1230241,49 @@
   },
   {
    "active": true,
+   "company": "forterra",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "37de808de7ac43e2",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Clarksburg, MD",
+   "source": "rippling/forterra",
+   "sources": [
+    "rippling/forterra"
+   ],
+   "title": "Cable Designer",
+   "url": "https://ats.rippling.com/forterra/jobs/90716026-f864-4de5-b198-949f76c02aa3",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://ats.rippling.com/forterra/jobs/90716026-f864-4de5-b198-949f76c02aa3",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/37de808de7ac43e2.jpg",
+    "read_at": "2026-10-19T08:40:11",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
    "changed": "2026-10-19",
    "company": "cmmce",
    "first_run": "2026-10-19T05:28:23+00:00",
@@ -1230349,6 +1230654,202 @@
     "evidence": {
      "employer_posted": "2026-10-13"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "elemis",
+   "department": "Creative Marketing",
+   "employment_type": "Permanent - Full Time",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "b786748af4734e44",
+   "jdhash": "4908",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Head Office, New York",
+   "reports_to": "Director of Omnichannel Marketing",
+   "salary": "$125,000 - $135,000 / year",
+   "source": "pinpoint/elemis",
+   "sources": [
+    "pinpoint/elemis"
+   ],
+   "title": "Design Lead",
+   "url": "https://careers.elemis.com/en/postings/120d617d-412b-4980-8206-ca8dc6acfe42",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.elemis.com/en/postings/120d617d-412b-4980-8206-ca8dc6acfe42",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/b786748af4734e44.jpg",
+    "read_at": "2026-10-19T08:40:11",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "elemis",
+   "department": "Creative Marketing",
+   "employment_type": "Permanent - Full Time",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "81b5f1d9d9864f4f",
+   "jdhash": "3354",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Head Office, New York",
+   "salary": "$75,000 - $81,000 / year",
+   "source": "pinpoint/elemis",
+   "sources": [
+    "pinpoint/elemis"
+   ],
+   "title": "Creative Designer",
+   "url": "https://careers.elemis.com/en/postings/5eb24942-e29f-44c7-aa25-c0ac2c951f33",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.elemis.com/en/postings/5eb24942-e29f-44c7-aa25-c0ac2c951f33",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/81b5f1d9d9864f4f.jpg",
+    "read_at": "2026-10-19T08:40:11",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "gs1ca",
+   "department": "Product & Services",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "38ea3f09b1504afb",
+   "jdhash": "3724",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Toronto, ON",
+   "salary": "CA$90,000 - CA$100,000 / year",
+   "source": "pinpoint/gs1ca",
+   "sources": [
+    "pinpoint/gs1ca"
+   ],
+   "title": "Senior Product Designer",
+   "url": "https://gs1ca.pinpointhq.com/en/postings/270fb9d0-8044-480c-8973-9647fb87afe1",
+   "workplace": "Hybrid",
+   "years_xp": 5,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://gs1ca.pinpointhq.com/en/postings/270fb9d0-8044-480c-8973-9647fb87afe1",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/38ea3f09b1504afb.jpg",
+    "read_at": "2026-10-19T08:40:11",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "pod-point",
+   "department": "Product",
+   "employment_type": "Full Time",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "c9af3977fef446ab",
+   "jdhash": "7268",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "London",
+   "reports_to": "VP of Product",
+   "salary": "£80,000 - £90,000 / year",
+   "source": "pinpoint/pod-point",
+   "sources": [
+    "pinpoint/pod-point"
+   ],
+   "title": "Head of Digital Design (14m FTC - Maternity Cover)",
+   "url": "https://careers.pod-point.com/en/postings/b5ec31b9-324b-450f-8439-bd96336eb546",
+   "workplace": "Hybrid",
+   "years_xp": 5,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://careers.pod-point.com/en/postings/b5ec31b9-324b-450f-8439-bd96336eb546",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/c9af3977fef446ab.jpg",
+    "read_at": "2026-10-19T08:40:11",
+    "evidence": {}
    }
   },
   {
