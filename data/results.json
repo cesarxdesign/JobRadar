@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-10-19T11:42:48+00:00",
- "built_at": "2026-10-19T12:50+01:00",
+ "built_at": "2026-10-19T14:11+01:00",
  "run_id": "2026-10-19T11:42:48+00:00",
  "last_full": "2026-10-19T10:41:56+00:00",
  "last_partial": "2026-10-19T11:42:48+00:00",
@@ -17008,7 +17008,11 @@
   "1238a34bfe8246aa",
   "0db8affadea541a8",
   "b557bcbd98364ceb",
-  "4d9a2f058dd74836"
+  "4d9a2f058dd74836",
+  "481ebce877dd4de2",
+  "d87db62e18194863",
+  "1399726e488546f8",
+  "beacd9eef8344b03"
  ],
  "unread": [
   "2dc6c294a7774ee7",
@@ -1168679,6 +1168683,29 @@
     "read_at": "2026-10-19T06:30:50",
     "evidence": {
      "employer_posted": "2026-10-16"
+    },
+    "audit": {
+     "at": "2026-10-19T14:09:00",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "the page read is a different job · The posting (whose content is entirely about MaintainX, now part of Autodesk, not about 'Urban Ridge Supplies' the piping company named in the pool) lists the role as based in New York with no remote option mentioned, and the company identity does not match the pool's listed company.",
+     "signals": [
+      {
+       "quote": "NEW YORK",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Location\nNew York",
+       "where": "side panel",
+       "kind": "tag",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
@@ -1172380,6 +1172407,35 @@
     "read_at": "2026-10-19T06:32:06",
     "evidence": {
      "employer_posted": "2026-10-16"
+    },
+    "audit": {
+     "at": "2026-10-19T14:09:18",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "the page read is a different job · The posting explicitly restricts eligibility to candidates in Canada and the US, excluding Portugal; also the page's actual hiring company (Clio) does not match the pool's listed company (Urban Ridge Supplies).",
+     "signals": [
+      {
+       "quote": "NEW YORK",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "This role is available to candidates in Canada (excluding Quebec) and the US, with a strong preference for candidates based on the East Coast.",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "If you are located near our Toronto or NYC hub, you will be expected to work in the office a minimum of twice per week on our designated Anchor Days.",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
@@ -1172621,6 +1172677,41 @@
     "read_at": "2026-10-19T06:32:16",
     "evidence": {
      "employer_posted": "2026-10-16"
+    },
+    "audit": {
+     "at": "2026-10-19T14:06:09",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": null,
+     "reason": "the page read is a different job · The job description names Forus (not Urban Ridge Supplies) as the employer and requires in-person work in New York, so this does not match the pool's listed job and is not doable from Portugal regardless.",
+     "signals": [
+      {
+       "quote": "NEW YORK",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "All full-time roles are in person in New York.",
+       "where": "opening paragraph",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Forus is based in New York, with our full team working out of a beautiful and spacious office in SoHo.",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Location: New York",
+       "where": "side panel",
+       "kind": "tag",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
@@ -1195421,6 +1195512,35 @@
     "read_at": "2026-10-19T07:08:09",
     "evidence": {
      "employer_posted": "2026-10-13"
+    },
+    "audit": {
+     "at": "2026-10-19T14:07:05",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "no",
+     "place": null,
+     "reason": "the page read is a different job · This is an onsite architectural/mechanical design management role in Jakarta, Indonesia, for a construction/data-center company (DAMAC), not a product/UX/UI design role, and the listed company (ejwe) does not match the page's employer (DAMAC).",
+     "signals": [
+      {
+       "quote": "Indonesia",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Location: Jakarta, Indonesia",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Locations: Indonesia",
+       "where": "side panel",
+       "kind": "tag",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
