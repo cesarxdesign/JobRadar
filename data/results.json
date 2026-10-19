@@ -1,28 +1,28 @@
 {
  "jd": {},
  "generated_at": "2026-10-19T05:28:23+00:00",
- "built_at": "2026-10-19T07:22+01:00",
+ "built_at": "2026-10-19T07:43+01:00",
  "run_id": "2026-10-19T05:28:23+00:00",
  "last_full": "2026-10-19T04:18:44+00:00",
  "last_partial": "2026-10-19T05:28:23+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 416,
+  "open": 419,
   "portugal": 23,
   "unsure": 133,
   "ghosts": 0,
   "cut": 21,
   "closed": 588,
-  "vision_cut": 15548,
+  "vision_cut": 15571,
   "agency": 0,
   "not_read": 22,
-  "folded": 74,
-  "vision_read": 21622,
+  "folded": 78,
+  "vision_read": 21652,
   "title_cuts": 52502,
   "design": 22811,
-  "waiting": 50,
-  "unjudged": 522763,
+  "waiting": 20,
+  "unjudged": 522733,
   "age_cuts": 12684,
   "active": 592090,
   "total": 599955
@@ -444,7 +444,10 @@
    "3a36d4ef8be94f72",
    "dde248059836442f",
    "366732ea74a0425a",
-   "93d374f8c0434447"
+   "93d374f8c0434447",
+   "6aafe557f5cd46d4",
+   "06405754733a400e",
+   "502c5b52d8aa499e"
   ],
   "portugal": [
    "4b0d368bc9284d5e",
@@ -16358,6 +16361,7 @@
   "f9a3a8175c624ded",
   "183134aafceb4a80",
   "8b0546e337574900",
+  "8ccfd77d82044344",
   "642486d18599492e",
   "96648d5ab4614f0d",
   "b62e6341308040ed",
@@ -16551,6 +16555,10 @@
   "fecd49a0e41f4900",
   "46cba0d494b541f4",
   "61231171099b4041",
+  "f1b34b36487c4ea7",
+  "fe46426eed2a427b",
+  "2b6f609455674698",
+  "2f061bb79cb64c36",
   "94a0bef40dd5456c",
   "375fb01cf2d147f7",
   "cc6053c5cd3b40fb",
@@ -16703,6 +16711,8 @@
   "9b64c3b6f5e94bca",
   "44c3b471560847f7",
   "d555f7db2e084f5e",
+  "a07226f1a0fe454b",
+  "2b459ce1154a4278",
   "82c71cce147f47b0",
   "dfcb9dbec5e64601",
   "4883ee827dc84d03",
@@ -16718,15 +16728,31 @@
   "e4b12fa014af4dee",
   "0c47b7402f884ca6",
   "f5b93952532248a6",
+  "bb0d65c791bc4259",
+  "3ebc035e8e894298",
+  "3ab404798ecb4920",
+  "6196a06e94f74cac",
+  "e9562440e7ee49b3",
   "8f5bf50e214e4562",
+  "d44a582ea5e34942",
+  "5b6d2ea4e8a244a8",
+  "d99981f8adcd4abc",
   "b88f76777d4f4569",
   "d56fff07d097479e",
   "588b883f688a42e2",
   "c65845d37f28491b",
+  "3fc957b8cad44585",
+  "ec471d80ea9f41a3",
   "067b94a594b84721",
   "b0ece2454f724e1a",
   "b09ca0690b864e18",
   "fb97f29b9b924394",
+  "c52bc2f7a2914787",
+  "23e076711e6d4310",
+  "1ade6d232b7b4e42",
+  "944ab2a15bb145fc",
+  "a0fad5d672e2442f",
+  "65edb7c961b94f62",
   "9758a376ec014148",
   "f60915c913df4b6a",
   "e1dab6021ca9404a",
@@ -1198913,6 +1198939,87 @@
   },
   {
    "active": true,
+   "company": "++hellohello",
+   "employment_type": "Permanent",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "8ccfd77d82044344",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "++ UY",
+   "source": "factorial/hellohello",
+   "sources": [
+    "factorial/hellohello"
+   ],
+   "title": "UX/UI Lead",
+   "url": "https://hellohello.factorial.com/job_posting/ux-ui-lead-328306",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role requires being based in Uruguay for a hybrid on-site/remote arrangement, which excludes someone living in Portugal.",
+     "Portugal OUT · body: \"This is a hybrid role: you must be based in Uruguay and work three days a week on-site at the office and two days remotely.\"",
+     "Portugal OUT · body: \"Based in Uruguay and available for a hybrid setup (3 days on-site and 2 days remote per week).\"",
+     "Portugal OUT · footer or small print: \"Hybrid (Uruguay)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "UX/UI Lead",
+     "company": "++hellohello",
+     "seniority": "lead",
+     "remote": "hybrid",
+     "onsite_days": "3 days on-site, 2 days remote per week",
+     "countries": [
+      "Uruguay"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "6+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://hellohello.factorial.com/job_posting/ux-ui-lead-328306",
+    "reason": "Role requires being based in Uruguay for a hybrid on-site/remote arrangement, which excludes someone living in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "you must be based in Uruguay and work three days a week on-site at the office and two days remotely",
+    "signals": [
+     {
+      "quote": "This is a hybrid role: you must be based in Uruguay and work three days a week on-site at the office and two days remotely.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Based in Uruguay and available for a hybrid setup (3 days on-site and 2 days remote per week).",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid (Uruguay)",
+      "where": "footer or small print",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/8ccfd77d82044344.jpg",
+    "read_at": "2026-10-19T07:20:26",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
    "company": "kimley-horn",
    "first_run": "2026-10-19T04:18:44+00:00",
    "first_seen": "2026-10-19T04:18:44+00:00",
@@ -1211892,6 +1211999,332 @@
     "evidence": {
      "board_posted": "2026-09-30"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "Salt (agency)",
+   "department": "Software Development & Engineering , Technology",
+   "employment_type": "Contract",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "f1b34b36487c4ea7",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "Canada",
+   "remote": true,
+   "source": "salt",
+   "sources": [
+    "salt"
+   ],
+   "title": "Senior UI Engineer",
+   "url": "https://welovesalt.com/jobs/senior-ui-engineer-715609",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is remote but restricted to Canada, and the title's 'UI Engineer' wording qualifies as design-leaning per the rule despite an engineering-heavy description.",
+     "Portugal OUT · under the title: \"Canada\"",
+     "Portugal OUT · side panel: \"Environment: Remote\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Senior UI Engineer",
+     "company": null,
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://welovesalt.com/jobs/senior-ui-engineer-715609",
+    "reason": "Role is remote but restricted to Canada, and the title's 'UI Engineer' wording qualifies as design-leaning per the rule despite an engineering-heavy description.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Canada / Environment: Remote",
+    "signals": [
+     {
+      "quote": "Canada",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Environment: Remote",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/f1b34b36487c4ea7.jpg",
+    "read_at": "2026-10-19T07:20:34",
+    "evidence": {},
+    "hiring_for": null
+   }
+  },
+  {
+   "active": true,
+   "company": "Salt (agency)",
+   "department": "Tech Product , Technology",
+   "employment_type": "Permanent",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "fe46426eed2a427b",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "United Arab Emirates, Abu Dhabi",
+   "source": "salt",
+   "sources": [
+    "salt"
+   ],
+   "title": "Product Design Lead",
+   "url": "https://welovesalt.com/jobs/product-design-lead-715597",
+   "workplace": "In-office",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is onsite/in-office in Abu Dhabi, UAE, with no remote option, so it cannot be done from Portugal.",
+     "Portugal OUT · under the title: \"United Arab Emirates, Abu Dhabi\"",
+     "Portugal OUT · side panel: \"Environment: In-office\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Design Lead",
+     "company": "my client (unnamed government-related organisation)",
+     "seniority": "lead",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United Arab Emirates"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "8+ years of experience in Product Design, UX Design or a related field",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://welovesalt.com/jobs/product-design-lead-715597",
+    "reason": "The role is onsite/in-office in Abu Dhabi, UAE, with no remote option, so it cannot be done from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "United Arab Emirates, Abu Dhabi ... Environment: In-office",
+    "signals": [
+     {
+      "quote": "United Arab Emirates, Abu Dhabi",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Environment: In-office",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/fe46426eed2a427b.jpg",
+    "read_at": "2026-10-19T07:20:56",
+    "evidence": {},
+    "hiring_for": null
+   }
+  },
+  {
+   "active": true,
+   "company": "Salt (agency)",
+   "department": "Creative , UI, UX and Product Design",
+   "employment_type": "Contract",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "2b6f609455674698",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "United Kingdom, London",
+   "salary": "£300.00 - £300.00 per day",
+   "source": "salt",
+   "sources": [
+    "salt"
+   ],
+   "title": "Freelance Product Designer",
+   "url": "https://welovesalt.com/jobs/freelance-product-designer-715571",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is explicitly UK-based (remote or hybrid within the UK), with no mention of Portugal or EU eligibility.",
+     "Portugal OUT · under the title: \"United Kingdom, London\"",
+     "Portugal OUT · side panel: \"Environment: Hybrid\"",
+     "Portugal OUT · opening paragraph: \"Remote (UK) · Inside IR35 · 3 months · Starts 26th October\"",
+     "Portugal OUT · body: \"Fully remote, UK-based\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior UX/UI Designer – Design Systems | Freelance Contract",
+     "company": null,
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£300.00 - £300.00 per day",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://welovesalt.com/jobs/freelance-product-designer-715571",
+    "reason": "The role is explicitly UK-based (remote or hybrid within the UK), with no mention of Portugal or EU eligibility.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote (UK) · Inside IR35 · 3 months · Starts 26th October / Fully remote, UK-based",
+    "signals": [
+     {
+      "quote": "United Kingdom, London",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Environment: Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Remote (UK) · Inside IR35 · 3 months · Starts 26th October",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Fully remote, UK-based",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/2b6f609455674698.jpg",
+    "read_at": "2026-10-19T07:21:08",
+    "evidence": {},
+    "hiring_for": null
+   }
+  },
+  {
+   "active": true,
+   "company": "Salt (agency)",
+   "department": "Creative , UI, UX and Product Design",
+   "employment_type": "Permanent",
+   "first_run": "2026-10-19T04:18:44+00:00",
+   "first_seen": "2026-10-19T04:18:44+00:00",
+   "id": "2f061bb79cb64c36",
+   "last_seen": "2026-10-19T04:18:44+00:00",
+   "location": "United Kingdom, London",
+   "remote": true,
+   "salary": "£90,000.00 per annum",
+   "source": "salt",
+   "sources": [
+    "salt"
+   ],
+   "title": "Senior UI Designer (Visual)",
+   "url": "https://welovesalt.com/jobs/senior-ui-designer-visual-712937",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Despite the 'Remote' tag, the opening line explicitly requires a 'sensible distance from London', ruling out candidates based in Portugal.",
+     "Portugal OUT · under the title: \"United Kingdom, London\"",
+     "Portugal OUT · opening paragraph: \"Senior UI Designer | Remote/Hybrid, sensible distance from London| Up to £90,000 + benefits\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Senior UI Designer (Visual)",
+     "company": "unnamed fintech client (via Salt)",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£90,000.00 per annum",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://welovesalt.com/jobs/senior-ui-designer-visual-712937",
+    "reason": "Despite the 'Remote' tag, the opening line explicitly requires a 'sensible distance from London', ruling out candidates based in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote/Hybrid, sensible distance from London",
+    "signals": [
+     {
+      "quote": "United Kingdom, London",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Senior UI Designer | Remote/Hybrid, sensible distance from London| Up to £90,000 + benefits",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/2f061bb79cb64c36.jpg",
+    "read_at": "2026-10-19T07:21:27",
+    "evidence": {},
+    "hiring_for": null
    }
   },
   {
@@ -1226337,6 +1226770,92 @@
   },
   {
    "active": true,
+   "company": "innovatingjustice",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "a07226f1a0fe454b",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "New York, NY",
+   "source": "jazzhr/innovatingjustice",
+   "sources": [
+    "jazzhr/innovatingjustice"
+   ],
+   "title": "Associate Director, Design and Construction",
+   "url": "https://innovatingjustice.applytojob.com/apply/S7WCp7sD29/Associate-Director-Design-And-Construction",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://innovatingjustice.applytojob.com/apply/S7WCp7sD29/Associate-Director-Design-And-Construction",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a07226f1a0fe454b.jpg",
+    "read_at": "2026-10-19T07:21:54",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "cityofsomerville",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "2b459ce1154a4278",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Somerville, MA",
+   "source": "jazzhr/cityofsomerville",
+   "sources": [
+    "jazzhr/cityofsomerville"
+   ],
+   "title": "Construction Liaison & Design Manager",
+   "url": "https://cityofsomerville.applytojob.com/apply/xrZ3f792ZW/Construction-Liaison-Design-Manager",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://cityofsomerville.applytojob.com/apply/xrZ3f792ZW/Construction-Liaison-Design-Manager",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/2b459ce1154a4278.jpg",
+    "read_at": "2026-10-19T07:21:54",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
    "company": "neighbor",
    "department": "Product & Design",
    "employment_type": "Full-time",
@@ -1227158,6 +1227677,398 @@
   },
   {
    "active": true,
+   "company": "wrshealth",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "6aafe557f5cd46d4",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote",
+   "remote": true,
+   "source": "jazzhr/wrshealth",
+   "sources": [
+    "jazzhr/wrshealth"
+   ],
+   "title": "Human Centered Design Engineer",
+   "url": "https://wrshealth.applytojob.com/apply/mfiDAAzRRU/Human-Centered-Design-Engineer",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Role is remote with no country restriction stated, only a US business-hours overlap requirement; title and duties are human-centered design/UX work.",
+     "the page says: \"Location: Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Human Centered Design Engineer",
+     "company": "WRS Health",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": "3 to 6+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://wrshealth.applytojob.com/apply/mfiDAAzRRU/Human-Centered-Design-Engineer",
+    "reason": "Role is remote with no country restriction stated, only a US business-hours overlap requirement; title and duties are human-centered design/UX work.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6aafe557f5cd46d4.jpg",
+    "read_at": "2026-10-19T07:21:54",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "wrshealth",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "06405754733a400e",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote",
+   "remote": true,
+   "source": "jazzhr/wrshealth",
+   "sources": [
+    "jazzhr/wrshealth"
+   ],
+   "title": "Human Centered Design Manager",
+   "url": "https://wrshealth.applytojob.com/apply/zGImnhb90a/Human-Centered-Design-Manager",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Posting says Remote with no country restriction, only US-hour overlap required.",
+     "the page says: \"Location: Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Human Centered Design Manager",
+     "company": "WRS Health",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": "3 to 6+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://wrshealth.applytojob.com/apply/zGImnhb90a/Human-Centered-Design-Manager",
+    "reason": "Posting says Remote with no country restriction, only US-hour overlap required.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/06405754733a400e.jpg",
+    "read_at": "2026-10-19T07:22:15",
+    "evidence": {},
+    "copies": [
+     {
+      "id": "56489988c0364c5a",
+      "url": "https://wrshealth.applytojob.com/apply/nrFV275aKt/Human-Centered-Design-Manager",
+      "read_url": "https://wrshealth.applytojob.com/apply/nrFV275aKt/Human-Centered-Design-Manager",
+      "source": "jazzhr/wrshealth",
+      "posted": null,
+      "location": "Remote",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "8825a9e07dbb48c2",
+      "url": "https://wrshealth.applytojob.com/apply/7gczb8YOsz/Human-Centered-Design-Manager",
+      "read_url": "https://wrshealth.applytojob.com/apply/7gczb8YOsz/Human-Centered-Design-Manager",
+      "source": "jazzhr/wrshealth",
+      "posted": null,
+      "location": "Remote",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "6cfa4498e4e741c3",
+      "url": "https://wrshealth.applytojob.com/apply/M1TblPFxMa/Human-Centered-Design-Manager",
+      "read_url": "https://wrshealth.applytojob.com/apply/M1TblPFxMa/Human-Centered-Design-Manager",
+      "source": "jazzhr/wrshealth",
+      "posted": null,
+      "location": "Remote",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "7146a27bd7bd4b1c",
+      "url": "https://wrshealth.applytojob.com/apply/MCxzaAxbX3/Human-Centered-Design-Manager",
+      "read_url": "https://wrshealth.applytojob.com/apply/MCxzaAxbX3/Human-Centered-Design-Manager",
+      "source": "jazzhr/wrshealth",
+      "posted": null,
+      "location": "Remote",
+      "lane": "open",
+      "read": "employer"
+     }
+    ]
+   }
+  },
+  {
+   "active": true,
+   "company": "wrshealth",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "56489988c0364c5a",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote",
+   "remote": true,
+   "source": "jazzhr/wrshealth",
+   "sources": [
+    "jazzhr/wrshealth"
+   ],
+   "title": "Human Centered Design Manager",
+   "url": "https://wrshealth.applytojob.com/apply/nrFV275aKt/Human-Centered-Design-Manager",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "The posting says the job is remote with only a US-timezone hours requirement and no country or work-authorization restriction stated.",
+     "the page says: \"Location: Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Human Centered Design Manager",
+     "company": "WRS Health",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": "3 to 6+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "seniority"
+    ],
+    "read": "employer",
+    "read_url": "https://wrshealth.applytojob.com/apply/nrFV275aKt/Human-Centered-Design-Manager",
+    "reason": "The posting says the job is remote with only a US-timezone hours requirement and no country or work-authorization restriction stated.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/56489988c0364c5a.jpg",
+    "read_at": "2026-10-19T07:22:29",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "wrshealth",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "8825a9e07dbb48c2",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote",
+   "remote": true,
+   "source": "jazzhr/wrshealth",
+   "sources": [
+    "jazzhr/wrshealth"
+   ],
+   "title": "Human Centered Design Manager",
+   "url": "https://wrshealth.applytojob.com/apply/7gczb8YOsz/Human-Centered-Design-Manager",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "The posting is fully remote with no country restriction stated anywhere, only a required US-timezone working window.",
+     "the page says: \"Location: Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Human Centered Design Manager",
+     "company": "WRS Health",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": "3 to 6+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://wrshealth.applytojob.com/apply/7gczb8YOsz/Human-Centered-Design-Manager",
+    "reason": "The posting is fully remote with no country restriction stated anywhere, only a required US-timezone working window.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/8825a9e07dbb48c2.jpg",
+    "read_at": "2026-10-19T07:22:48",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "wrshealth",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "6cfa4498e4e741c3",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote",
+   "remote": true,
+   "source": "jazzhr/wrshealth",
+   "sources": [
+    "jazzhr/wrshealth"
+   ],
+   "title": "Human Centered Design Manager",
+   "url": "https://wrshealth.applytojob.com/apply/M1TblPFxMa/Human-Centered-Design-Manager",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Job is stated as fully remote with no country restriction, only a US-timezone availability requirement which does not restrict residence.",
+     "the page says: \"Location: Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Human Centered Design Manager",
+     "company": "WRS Health",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": "3 to 6+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://wrshealth.applytojob.com/apply/M1TblPFxMa/Human-Centered-Design-Manager",
+    "reason": "Job is stated as fully remote with no country restriction, only a US-timezone availability requirement which does not restrict residence.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6cfa4498e4e741c3.jpg",
+    "read_at": "2026-10-19T07:23:08",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "wrshealth",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "7146a27bd7bd4b1c",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote",
+   "remote": true,
+   "source": "jazzhr/wrshealth",
+   "sources": [
+    "jazzhr/wrshealth"
+   ],
+   "title": "Human Centered Design Manager",
+   "url": "https://wrshealth.applytojob.com/apply/MCxzaAxbX3/Human-Centered-Design-Manager",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Posting is remote with no country restriction stated, only a US-hours working-time requirement, so nothing explicitly excludes Portugal.",
+     "the page says: \"Location: Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Human Centered Design Manager",
+     "company": "WRS Health",
+     "seniority": "lead",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": "3 to 6+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://wrshealth.applytojob.com/apply/MCxzaAxbX3/Human-Centered-Design-Manager",
+    "reason": "Posting is remote with no country restriction stated, only a US-hours working-time requirement, so nothing explicitly excludes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/7146a27bd7bd4b1c.jpg",
+    "read_at": "2026-10-19T07:23:36",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
    "company": "NexWafe GmbH",
    "first_run": "2026-10-19T05:28:23+00:00",
    "first_seen": "2026-10-19T05:28:23+00:00",
@@ -1227272,6 +1228183,298 @@
   },
   {
    "active": true,
+   "company": "EIT Health e.V.",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "bb0d65c791bc4259",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "EIT Health e.V.",
+   "source": "personio/eit-health.jobs.personio.de",
+   "sources": [
+    "personio/eit-health.jobs.personio.de"
+   ],
+   "title": "Freelance Instructional Designer & eLearning Developer (m/f/d)",
+   "url": "https://eit-health.jobs.personio.de/job/2820873",
+   "verdict": {
+    "role": "no",
+    "place": "remote",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is Instructional Designer & eLearning Developer, a learning-content role, not product design, UX, UI, or design-systems work.",
+     "the page says: \"Remote freelance engagement.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Freelance Instructional Designer & eLearning Developer (m/f/d)",
+     "company": "EIT Health e.V.",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://eit-health.jobs.personio.de/job/2820873",
+    "reason": "The role is Instructional Designer & eLearning Developer, a learning-content role, not product design, UX, UI, or design-systems work.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote freelance engagement.",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/bb0d65c791bc4259.jpg",
+    "read_at": "2026-10-19T07:24:05",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Riseup Labs",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "3ebc035e8e894298",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "source": "manatal/riseup-labs",
+   "sources": [
+    "manatal/riseup-labs"
+   ],
+   "title": "Sr. UI/UX Designer",
+   "url": "https://www.careers-page.com/riseup-labs/job/L9YY4576",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.careers-page.com/riseup-labs/job/L9YY4576",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3ebc035e8e894298.jpg",
+    "read_at": "2026-10-19T07:24:18",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Riseup Labs",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "3ab404798ecb4920",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "source": "manatal/riseup-labs",
+   "sources": [
+    "manatal/riseup-labs"
+   ],
+   "title": "Creative Designer",
+   "url": "https://www.careers-page.com/riseup-labs/job/L3VV9X8W",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.careers-page.com/riseup-labs/job/L3VV9X8W",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3ab404798ecb4920.jpg",
+    "read_at": "2026-10-19T07:24:18",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "WBH",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "6196a06e94f74cac",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Darmstadt",
+   "source": "personio/wbh.jobs.personio.de",
+   "sources": [
+    "personio/wbh.jobs.personio.de"
+   ],
+   "title": "Lehrbeauftragte als freie Mitarbeiter:innen – Design in der Fernlehre",
+   "url": "https://wbh.jobs.personio.de/job/2824646",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a German-language freelance university-lecturer post teaching design topics, not a hands-on product/UX/UI design job.",
+     "Portugal OUT · under the title: \"Darmstadt\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Lehrbeauftragte als freie Mitarbeiter:innen – Design in der Fernlehre",
+     "company": "Wilhelm Büchner Hochschule (WBH)",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "German",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://wbh.jobs.personio.de/job/2824646",
+    "reason": "This is a German-language freelance university-lecturer post teaching design topics, not a hands-on product/UX/UI design job.",
+    "open": "yes",
+    "language_ok": false,
+    "language": "German",
+    "quote": "Eine flexible, standortunabhängige Tätigkeit auf Honorarbasis. Standort: Remote",
+    "signals": [
+     {
+      "quote": "Darmstadt",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6196a06e94f74cac.jpg",
+    "read_at": "2026-10-19T07:24:18",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "Data and Operational excellence Hub Tbilisi",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "e9562440e7ee49b3",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Tbilisi",
+   "source": "personio/data-hub-tbilisi.jobs.personio.de",
+   "sources": [
+    "personio/data-hub-tbilisi.jobs.personio.de"
+   ],
+   "title": "Senior UX/UI Designer",
+   "url": "https://data-hub-tbilisi.jobs.personio.de/job/2840799",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is onsite in Tbilisi, Georgia with only one remote day from home near the office, making it undoable from Portugal.",
+     "Portugal OUT · under the title: \"Tbilisi\"",
+     "Portugal OUT · body: \"Location: Tbilisi, Merab Kostava Street 43a (On-Site)\"",
+     "Portugal OUT · body: \"4 days a week\n1 day remotely from home.\"",
+     "Portugal OUT · body: \"The job may occasionally require temporary business travel to our headquarters in Germany.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior UX/UI Designer",
+     "company": "Triple A (EIS, SATISFYER, GESKE)",
+     "seniority": "senior",
+     "remote": "hybrid",
+     "onsite_days": 4,
+     "countries": [
+      "Georgia"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://data-hub-tbilisi.jobs.personio.de/job/2840799",
+    "reason": "Role is onsite in Tbilisi, Georgia with only one remote day from home near the office, making it undoable from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Tbilisi, Merab Kostava Street 43a (On-Site); 4 days a week, 1 day remotely from home.",
+    "signals": [
+     {
+      "quote": "Tbilisi",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: Tbilisi, Merab Kostava Street 43a (On-Site)",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "4 days a week\n1 day remotely from home.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "The job may occasionally require temporary business travel to our headquarters in Germany.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/e9562440e7ee49b3.jpg",
+    "read_at": "2026-10-19T07:24:59",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
    "company": "Data and Operational excellence Hub Tbilisi",
    "first_run": "2026-10-19T05:28:23+00:00",
    "first_seen": "2026-10-19T05:28:23+00:00",
@@ -1227362,6 +1228565,141 @@
     "evidence": {
      "employer_posted": "2026-10-09"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "nypl",
+   "department": "Public Programs and Exhibitions",
+   "employment_type": "Part Time",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "d44a582ea5e34942",
+   "jdhash": "7181",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Stephen A. Schwarzman Building",
+   "reports_to": "Carl Auge",
+   "salary": "$45.00 / hour",
+   "source": "pinpoint/nypl",
+   "sources": [
+    "pinpoint/nypl"
+   ],
+   "title": "Exhibition Lighting Designer - Stephen A. Schwarzman Building (Part-Time)",
+   "url": "https://nypl.pinpointhq.com/en/postings/e6a3d666-d195-4fdb-943d-a811f3b1627c",
+   "workplace": "Onsite",
+   "years_xp": 12,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://nypl.pinpointhq.com/en/postings/e6a3d666-d195-4fdb-943d-a811f3b1627c",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/d44a582ea5e34942.jpg",
+    "read_at": "2026-10-19T07:25:09",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "bachmansinc",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "5b6d2ea4e8a244a8",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Minneapolis, MN",
+   "source": "jazzhr/bachmansinc",
+   "sources": [
+    "jazzhr/bachmansinc"
+   ],
+   "title": "Manager Design Operations",
+   "url": "https://bachmansinc.applytojob.com/apply/3rwdojjR2w/Manager-Design-Operations",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://bachmansinc.applytojob.com/apply/3rwdojjR2w/Manager-Design-Operations",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/5b6d2ea4e8a244a8.jpg",
+    "read_at": "2026-10-19T07:25:09",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "uhrs.careers-page.com",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "d99981f8adcd4abc",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "source": "manatal/uhrs.careers-page.com",
+   "sources": [
+    "manatal/uhrs.careers-page.com"
+   ],
+   "title": "Designer",
+   "url": "https://uhrs.careers-page.com/jobs/ca856622-cd40-4f50-928a-6c9886f18ed1",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://uhrs.careers-page.com/jobs/ca856622-cd40-4f50-928a-6c9886f18ed1",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/d99981f8adcd4abc.jpg",
+    "read_at": "2026-10-19T07:25:10",
+    "evidence": {}
    }
   },
   {
@@ -1227553,6 +1228891,181 @@
     "evidence": {
      "employer_posted": "2026-10-15"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "clubessential",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "3fc957b8cad44585",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote (United States)",
+   "remote": true,
+   "source": "rippling/clubessential",
+   "sources": [
+    "rippling/clubessential"
+   ],
+   "title": "Product Designer",
+   "url": "https://ats.rippling.com/clubessential/jobs/0892e18c-af68-4c59-a42f-b48bf375b76e",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role explicitly requires residence and work rights in the United States, excluding Portugal.",
+     "Portugal OUT · body: \"Fully Remote in United States: You can work remotely in this position, provided you reside in United States, have full working rights and do not require sponsorship.\"",
+     "Portugal OUT · footer or small print: \"Remote (United States)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer",
+     "company": "Clubessential",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "5+ years of relevant design experience",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://ats.rippling.com/clubessential/jobs/0892e18c-af68-4c59-a42f-b48bf375b76e",
+    "reason": "Role explicitly requires residence and work rights in the United States, excluding Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Fully Remote in United States: You can work remotely in this position, provided you reside in United States, have full working rights and do not require sponsorship.",
+    "signals": [
+     {
+      "quote": "Fully Remote in United States: You can work remotely in this position, provided you reside in United States, have full working rights and do not require sponsorship.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Remote (United States)",
+      "where": "footer or small print",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3fc957b8cad44585.jpg",
+    "read_at": "2026-10-19T07:25:10",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "tesolife-us-inc",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "ec471d80ea9f41a3",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Flushing, NY",
+   "source": "rippling/tesolife-us-inc",
+   "sources": [
+    "rippling/tesolife-us-inc"
+   ],
+   "title": "Store Construction & Design Specialist (Mandarin Required)",
+   "url": "https://ats.rippling.com/tesolife-us-inc/jobs/743dc86f-6e71-41da-80a5-fbd6c966ac14",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://ats.rippling.com/tesolife-us-inc/jobs/743dc86f-6e71-41da-80a5-fbd6c966ac14",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/ec471d80ea9f41a3.jpg",
+    "read_at": "2026-10-19T07:25:17",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "herenowhealth",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "502c5b52d8aa499e",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote",
+   "remote": true,
+   "source": "jazzhr/herenowhealth",
+   "sources": [
+    "jazzhr/herenowhealth"
+   ],
+   "title": "Product Manager & Designer",
+   "url": "https://herenowhealth.applytojob.com/apply/72jBQjO19h/Product-Manager-Designer",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "The posting states the role is 100% remote with no country or region restriction named anywhere on the page.",
+     "the page says: \"100% remote, with occasional travel for engagement with partners and stakeholders\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Product Manager & Designer",
+     "company": "Here Now Health",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [],
+     "portugal_ok": "unclear",
+     "salary": "$90,000 - $100,000 annually based on experience",
+     "years_xp": "3 to 5 years",
+     "reports_to": "Head of Product",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://herenowhealth.applytojob.com/apply/72jBQjO19h/Product-Manager-Designer",
+    "reason": "The posting states the role is 100% remote with no country or region restriction named anywhere on the page.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "100% remote, with occasional travel for engagement with partners and stakeholders",
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/502c5b52d8aa499e.jpg",
+    "read_at": "2026-10-19T07:25:17",
+    "evidence": {}
    }
   },
   {
@@ -1227806,6 +1229319,386 @@
     "evidence": {
      "employer_posted": "2026-09-30"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "unitedlegwearcompany",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "c52bc2f7a2914787",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Hoofddorp, Netherlands",
+   "source": "jazzhr/unitedlegwearcompany",
+   "sources": [
+    "jazzhr/unitedlegwearcompany"
+   ],
+   "title": "Menswear Designer",
+   "url": "https://unitedlegwearcompany.applytojob.com/apply/asrok9NM3o/Menswear-Designer",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is a fashion/apparel menswear jersey designer role (clothing design, not product/UX/UI), onsite in the Netherlands.",
+     "Portugal OUT · under the title: \"Hoofddorp, Netherlands\"",
+     "Portugal OUT · body: \"Join a passionate team working from our European headquarters just outside Amsterdam (Hoofddorp).\"",
+     "Portugal OUT · body (application form): \"Are you legally authorized to work in the Netherlands without visa sponsorship, both now and in the future?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Menswear Designer (Jersey)",
+     "company": "Scotch & Soda (United Legwear & Apparel Co.)",
+     "seniority": "mid",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Netherlands"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "5+",
+     "reports_to": "Design Lead",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://unitedlegwearcompany.applytojob.com/apply/asrok9NM3o/Menswear-Designer",
+    "reason": "This is a fashion/apparel menswear jersey designer role (clothing design, not product/UX/UI), onsite in the Netherlands.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Join a passionate team working from our European headquarters just outside Amsterdam (Hoofddorp).",
+    "signals": [
+     {
+      "quote": "Hoofddorp, Netherlands",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Join a passionate team working from our European headquarters just outside Amsterdam (Hoofddorp).",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you legally authorized to work in the Netherlands without visa sponsorship, both now and in the future?",
+      "where": "body (application form)",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/c52bc2f7a2914787.jpg",
+    "read_at": "2026-10-19T07:25:46",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "thorsolutionsllc",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "23e076711e6d4310",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Baltimore, MD",
+   "source": "jazzhr/thorsolutionsllc",
+   "sources": [
+    "jazzhr/thorsolutionsllc"
+   ],
+   "title": "Marine Designer (Mechanical), Senior",
+   "url": "https://thorsolutionsllc.applytojob.com/apply/VxAVpnKoRs/Marine-Designer-Mechanical-Senior",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://thorsolutionsllc.applytojob.com/apply/VxAVpnKoRs/Marine-Designer-Mechanical-Senior",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/23e076711e6d4310.jpg",
+    "read_at": "2026-10-19T07:25:54",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "acemoneytransfer",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "1ade6d232b7b4e42",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Lahore, Punjab, Pakistan",
+   "source": "jazzhr/acemoneytransfer",
+   "sources": [
+    "jazzhr/acemoneytransfer"
+   ],
+   "title": "Senior UI Designer",
+   "url": "https://acemoneytransfer.applytojob.com/apply/lKEKP5i7KI/Senior-UI-Designer",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role requires onsite work at the company's Lahore, Pakistan office five days a week.",
+     "Portugal OUT · under the title: \"Lahore, Punjab, Pakistan\"",
+     "Portugal OUT · body: \"Are you comfortable working onsite at the ACE Lahore office from Monday to Friday, 1:00 PM to 10:00 PM (PST)?\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior UI Designer",
+     "company": "ACE Money Transfer",
+     "seniority": "senior",
+     "remote": "onsite",
+     "onsite_days": "Monday to Friday",
+     "countries": [
+      "Pakistan"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "2",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://acemoneytransfer.applytojob.com/apply/lKEKP5i7KI/Senior-UI-Designer",
+    "reason": "Role requires onsite work at the company's Lahore, Pakistan office five days a week.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Are you comfortable working onsite at the ACE Lahore office from Monday to Friday, 1:00 PM to 10:00 PM (PST)?",
+    "signals": [
+     {
+      "quote": "Lahore, Punjab, Pakistan",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Are you comfortable working onsite at the ACE Lahore office from Monday to Friday, 1:00 PM to 10:00 PM (PST)?",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/1ade6d232b7b4e42.jpg",
+    "read_at": "2026-10-19T07:25:54",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "walden-robotics",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "944ab2a15bb145fc",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Cambridge, MA",
+   "source": "rippling/walden-robotics",
+   "sources": [
+    "rippling/walden-robotics"
+   ],
+   "title": "UX Designer",
+   "url": "https://ats.rippling.com/walden-robotics/jobs/fc5cb390-1a6c-449a-8de2-f146e515234c",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://ats.rippling.com/walden-robotics/jobs/fc5cb390-1a6c-449a-8de2-f146e515234c",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/944ab2a15bb145fc.jpg",
+    "read_at": "2026-10-19T07:26:02",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "covetcareers",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "a0fad5d672e2442f",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "Remote (Canada)",
+   "remote": true,
+   "source": "rippling/covetcareers",
+   "sources": [
+    "rippling/covetcareers"
+   ],
+   "title": "Product Designer (UX/UI)",
+   "url": "https://ats.rippling.com/covetcareers/jobs/b2d4ebf7-f9ec-469d-a11e-7cb50e9daac5",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is explicitly listed as Remote (Canada), excluding candidates based in Portugal despite generic 'globally distributed' language elsewhere.",
+     "Portugal OUT · body: \"The pay range for this role is: 80,000 - 90,000 CAD per year (Remote (Canada))\"",
+     "Portugal OUT · side panel: \"Remote (Canada)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer (UX/UI)",
+     "company": "CoVet",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "80,000 - 90,000 CAD per year (Remote (Canada))",
+     "years_xp": "3+ years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://ats.rippling.com/covetcareers/jobs/b2d4ebf7-f9ec-469d-a11e-7cb50e9daac5",
+    "reason": "The role is explicitly listed as Remote (Canada), excluding candidates based in Portugal despite generic 'globally distributed' language elsewhere.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "80,000 - 90,000 CAD per year (Remote (Canada))",
+    "signals": [
+     {
+      "quote": "The pay range for this role is: 80,000 - 90,000 CAD per year (Remote (Canada))",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Remote (Canada)",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a0fad5d672e2442f.jpg",
+    "read_at": "2026-10-19T07:26:02",
+    "evidence": {}
+   }
+  },
+  {
+   "active": true,
+   "company": "gaiias-open-positions",
+   "first_run": "2026-10-19T05:28:23+00:00",
+   "first_seen": "2026-10-19T05:28:23+00:00",
+   "id": "65edb7c961b94f62",
+   "last_seen": "2026-10-19T05:28:23+00:00",
+   "location": "(Remote) Canada",
+   "remote": true,
+   "source": "rippling/gaiias-open-positions",
+   "sources": [
+    "rippling/gaiias-open-positions"
+   ],
+   "title": "Intermediate Product Designer",
+   "url": "https://ats.rippling.com/gaiias-open-positions/jobs/98c91ec8-f73b-4df4-8263-11fb0c9c6471",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The side panel explicitly states the role is Remote within Canada, excluding Portugal despite generic company-wide remote claims.",
+     "Portugal OUT · side panel: \"(Remote) Canada\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Intermediate Product Designer",
+     "company": "gaiia",
+     "seniority": "mid",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Canada"
+     ],
+     "portugal_ok": "no",
+     "salary": "$90,000-$130,000 CAD",
+     "years_xp": "5+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://ats.rippling.com/gaiias-open-positions/jobs/98c91ec8-f73b-4df4-8263-11fb0c9c6471",
+    "reason": "The side panel explicitly states the role is Remote within Canada, excluding Portugal despite generic company-wide remote claims.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "(Remote) Canada",
+    "signals": [
+     {
+      "quote": "(Remote) Canada",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/65edb7c961b94f62.jpg",
+    "read_at": "2026-10-19T07:26:16",
+    "evidence": {}
    }
   },
   {

@@ -1327626,5 +1327626,1089 @@
   "stage": "vision",
   "lane": "open",
   "reader_place": "remote"
+ },
+ "8825a9e07dbb48c2": {
+  "id": "8825a9e07dbb48c2",
+  "at": "2026-10-19T07:22:48",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://wrshealth.applytojob.com/apply/7gczb8YOsz/Human-Centered-Design-Manager",
+  "board": null,
+  "employer": {
+   "url": "https://wrshealth.applytojob.com/apply/7gczb8YOsz/Human-Centered-Design-Manager",
+   "status": 200,
+   "shot": "data/shots/8825a9e07dbb48c2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://wrshealth.applytojob.com/apply/7gczb8YOsz/Human-Centered-Design-Manager",
+  "fetched_at": "2026-10-19T06:59:39",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Remote",
+    "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hours: Must be available during standard US business hours (9:00 AM – 5:00 PM EST or 8:30 AM – 4:30 PM EST)",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Compensation will be based on location, experience, and qualifications.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Location: Remote",
+  "reason": "The posting is fully remote with no country restriction stated anywhere, only a required US-timezone working window.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Human Centered Design Manager",
+   "company": "WRS Health",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": "3 to 6+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "6cfa4498e4e741c3": {
+  "id": "6cfa4498e4e741c3",
+  "at": "2026-10-19T07:23:08",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://wrshealth.applytojob.com/apply/M1TblPFxMa/Human-Centered-Design-Manager",
+  "board": null,
+  "employer": {
+   "url": "https://wrshealth.applytojob.com/apply/M1TblPFxMa/Human-Centered-Design-Manager",
+   "status": 200,
+   "shot": "data/shots/6cfa4498e4e741c3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://wrshealth.applytojob.com/apply/M1TblPFxMa/Human-Centered-Design-Manager",
+  "fetched_at": "2026-10-19T06:59:47",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Remote",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hours: Must be available during standard US business hours (9:00 AM – 5:00 PM EST or 8:30 AM – 4:30 PM EST)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Compensation will be based on location, experience, and qualifications.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Location: Remote",
+  "reason": "Job is stated as fully remote with no country restriction, only a US-timezone availability requirement which does not restrict residence.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Human Centered Design Manager",
+   "company": "WRS Health",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": "3 to 6+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "7146a27bd7bd4b1c": {
+  "id": "7146a27bd7bd4b1c",
+  "at": "2026-10-19T07:23:36",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://wrshealth.applytojob.com/apply/MCxzaAxbX3/Human-Centered-Design-Manager",
+  "board": null,
+  "employer": {
+   "url": "https://wrshealth.applytojob.com/apply/MCxzaAxbX3/Human-Centered-Design-Manager",
+   "status": 200,
+   "shot": "data/shots/7146a27bd7bd4b1c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://wrshealth.applytojob.com/apply/MCxzaAxbX3/Human-Centered-Design-Manager",
+  "fetched_at": "2026-10-19T06:59:43",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Remote",
+    "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Must be available during standard US business hours (9:00 AM – 5:00 PM EST or 8:30 AM – 4:30 PM EST)",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Location: Remote",
+  "reason": "Posting is remote with no country restriction stated, only a US-hours working-time requirement, so nothing explicitly excludes Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Human Centered Design Manager",
+   "company": "WRS Health",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "3 to 6+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "bb0d65c791bc4259": {
+  "id": "bb0d65c791bc4259",
+  "at": "2026-10-19T07:24:05",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://eit-health.jobs.personio.de/job/2820873",
+  "board": null,
+  "employer": {
+   "url": "https://eit-health.jobs.personio.de/job/2820873",
+   "status": 200,
+   "shot": "data/shots/bb0d65c791bc4259.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://eit-health.jobs.personio.de/job/2820873",
+  "fetched_at": "2026-10-19T06:59:59",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Remote freelance engagement.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Remote freelance engagement.",
+  "reason": "The role is Instructional Designer & eLearning Developer, a learning-content role, not product design, UX, UI, or design-systems work.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Freelance Instructional Designer & eLearning Developer (m/f/d)",
+   "company": "EIT Health e.V.",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "3ebc035e8e894298": {
+  "id": "3ebc035e8e894298",
+  "at": "2026-10-19T07:24:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.careers-page.com/riseup-labs/job/L9YY4576",
+  "board": null,
+  "employer": {
+   "url": "https://www.careers-page.com/riseup-labs/job/L9YY4576",
+   "status": 200,
+   "shot": "data/shots/3ebc035e8e894298.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.careers-page.com/riseup-labs/job/L9YY4576",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T06:59:49"
+ },
+ "3ab404798ecb4920": {
+  "id": "3ab404798ecb4920",
+  "at": "2026-10-19T07:24:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.careers-page.com/riseup-labs/job/L3VV9X8W",
+  "board": null,
+  "employer": {
+   "url": "https://www.careers-page.com/riseup-labs/job/L3VV9X8W",
+   "status": 200,
+   "shot": "data/shots/3ab404798ecb4920.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.careers-page.com/riseup-labs/job/L3VV9X8W",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T06:59:54"
+ },
+ "6196a06e94f74cac": {
+  "id": "6196a06e94f74cac",
+  "at": "2026-10-19T07:24:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://wbh.jobs.personio.de/job/2824646",
+  "board": null,
+  "employer": {
+   "url": "https://wbh.jobs.personio.de/job/2824646",
+   "status": 200,
+   "shot": "data/shots/6196a06e94f74cac.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://wbh.jobs.personio.de/job/2824646",
+  "fetched_at": "2026-10-19T06:59:58",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "German",
+  "language_ok": false,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Darmstadt",
+  "place_signals": [
+   {
+    "quote": "Darmstadt",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Eine flexible, standortunabhängige Tätigkeit auf Honorarbasis.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Standort: Remote",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Eine flexible, standortunabhängige Tätigkeit auf Honorarbasis. Standort: Remote",
+  "reason": "This is a German-language freelance university-lecturer post teaching design topics, not a hands-on product/UX/UI design job.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lehrbeauftragte als freie Mitarbeiter:innen – Design in der Fernlehre",
+   "company": "Wilhelm Büchner Hochschule (WBH)",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "German",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "e9562440e7ee49b3": {
+  "id": "e9562440e7ee49b3",
+  "at": "2026-10-19T07:24:59",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://data-hub-tbilisi.jobs.personio.de/job/2840799",
+  "board": null,
+  "employer": {
+   "url": "https://data-hub-tbilisi.jobs.personio.de/job/2840799",
+   "status": 200,
+   "shot": "data/shots/e9562440e7ee49b3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://data-hub-tbilisi.jobs.personio.de/job/2840799",
+  "fetched_at": "2026-10-19T06:59:47",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Tbilisi",
+  "place_signals": [
+   {
+    "quote": "Tbilisi",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Tbilisi, Merab Kostava Street 43a (On-Site)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "4 days a week\n1 day remotely from home.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The job may occasionally require temporary business travel to our headquarters in Germany.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "With locations in Georgia, Germany, Ukraine and the USA, our team is very international",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Tbilisi, Merab Kostava Street 43a (On-Site); 4 days a week, 1 day remotely from home.",
+  "reason": "Role is onsite in Tbilisi, Georgia with only one remote day from home near the office, making it undoable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX/UI Designer",
+   "company": "Triple A (EIS, SATISFYER, GESKE)",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 4,
+   "countries": [
+    "Georgia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d44a582ea5e34942": {
+  "id": "d44a582ea5e34942",
+  "at": "2026-10-19T07:25:09",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://nypl.pinpointhq.com/en/postings/e6a3d666-d195-4fdb-943d-a811f3b1627c",
+  "board": null,
+  "employer": {
+   "url": "https://nypl.pinpointhq.com/en/postings/e6a3d666-d195-4fdb-943d-a811f3b1627c",
+   "status": 200,
+   "shot": "data/shots/d44a582ea5e34942.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://nypl.pinpointhq.com/en/postings/e6a3d666-d195-4fdb-943d-a811f3b1627c",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T06:59:56"
+ },
+ "5b6d2ea4e8a244a8": {
+  "id": "5b6d2ea4e8a244a8",
+  "at": "2026-10-19T07:25:09",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://bachmansinc.applytojob.com/apply/3rwdojjR2w/Manager-Design-Operations",
+  "board": null,
+  "employer": {
+   "url": "https://bachmansinc.applytojob.com/apply/3rwdojjR2w/Manager-Design-Operations",
+   "status": 200,
+   "shot": "data/shots/5b6d2ea4e8a244a8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://bachmansinc.applytojob.com/apply/3rwdojjR2w/Manager-Design-Operations",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T06:59:56"
+ },
+ "d99981f8adcd4abc": {
+  "id": "d99981f8adcd4abc",
+  "at": "2026-10-19T07:25:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://uhrs.careers-page.com/jobs/ca856622-cd40-4f50-928a-6c9886f18ed1",
+  "board": null,
+  "employer": {
+   "url": "https://uhrs.careers-page.com/jobs/ca856622-cd40-4f50-928a-6c9886f18ed1",
+   "status": 200,
+   "shot": "data/shots/d99981f8adcd4abc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://uhrs.careers-page.com/jobs/ca856622-cd40-4f50-928a-6c9886f18ed1",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:00"
+ },
+ "3fc957b8cad44585": {
+  "id": "3fc957b8cad44585",
+  "at": "2026-10-19T07:25:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ats.rippling.com/clubessential/jobs/0892e18c-af68-4c59-a42f-b48bf375b76e",
+  "board": null,
+  "employer": {
+   "url": "https://ats.rippling.com/clubessential/jobs/0892e18c-af68-4c59-a42f-b48bf375b76e",
+   "status": 200,
+   "shot": "data/shots/3fc957b8cad44585.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ats.rippling.com/clubessential/jobs/0892e18c-af68-4c59-a42f-b48bf375b76e",
+  "fetched_at": "2026-10-19T06:59:56",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote (United States)",
+  "place_signals": [
+   {
+    "quote": "Fully Remote in United States: You can work remotely in this position, provided you reside in United States, have full working rights and do not require sponsorship.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote (United States)",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Fully Remote in United States: You can work remotely in this position, provided you reside in United States, have full working rights and do not require sponsorship.",
+  "reason": "Role explicitly requires residence and work rights in the United States, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Clubessential",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+ years of relevant design experience",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "ec471d80ea9f41a3": {
+  "id": "ec471d80ea9f41a3",
+  "at": "2026-10-19T07:25:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ats.rippling.com/tesolife-us-inc/jobs/743dc86f-6e71-41da-80a5-fbd6c966ac14",
+  "board": null,
+  "employer": {
+   "url": "https://ats.rippling.com/tesolife-us-inc/jobs/743dc86f-6e71-41da-80a5-fbd6c966ac14",
+   "status": 200,
+   "shot": "data/shots/ec471d80ea9f41a3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ats.rippling.com/tesolife-us-inc/jobs/743dc86f-6e71-41da-80a5-fbd6c966ac14",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T06:59:58"
+ },
+ "502c5b52d8aa499e": {
+  "id": "502c5b52d8aa499e",
+  "at": "2026-10-19T07:25:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://herenowhealth.applytojob.com/apply/72jBQjO19h/Product-Manager-Designer",
+  "board": null,
+  "employer": {
+   "url": "https://herenowhealth.applytojob.com/apply/72jBQjO19h/Product-Manager-Designer",
+   "status": 200,
+   "shot": "data/shots/502c5b52d8aa499e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://herenowhealth.applytojob.com/apply/72jBQjO19h/Product-Manager-Designer",
+  "fetched_at": "2026-10-19T07:00:08",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "100% remote, with occasional travel for engagement with partners and stakeholders",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Ability to pass a background check",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Salary: $90,000 - $100,000 annually based on experience",
+    "where": "side panel",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "100% remote, with occasional travel for engagement with partners and stakeholders",
+  "reason": "The posting states the role is 100% remote with no country or region restriction named anywhere on the page.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Product Manager & Designer",
+   "company": "Here Now Health",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "$90,000 - $100,000 annually based on experience",
+   "years_xp": "3 to 5 years",
+   "reports_to": "Head of Product",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "c52bc2f7a2914787": {
+  "id": "c52bc2f7a2914787",
+  "at": "2026-10-19T07:25:46",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://unitedlegwearcompany.applytojob.com/apply/asrok9NM3o/Menswear-Designer",
+  "board": null,
+  "employer": {
+   "url": "https://unitedlegwearcompany.applytojob.com/apply/asrok9NM3o/Menswear-Designer",
+   "status": 200,
+   "shot": "data/shots/c52bc2f7a2914787.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://unitedlegwearcompany.applytojob.com/apply/asrok9NM3o/Menswear-Designer",
+  "fetched_at": "2026-10-19T07:00:08",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Hoofddorp, Netherlands",
+  "place_signals": [
+   {
+    "quote": "Hoofddorp, Netherlands",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Join a passionate team working from our European headquarters just outside Amsterdam (Hoofddorp).",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you legally authorized to work in the Netherlands without visa sponsorship, both now and in the future?",
+    "where": "body (application form)",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Join a passionate team working from our European headquarters just outside Amsterdam (Hoofddorp).",
+  "reason": "This is a fashion/apparel menswear jersey designer role (clothing design, not product/UX/UI), onsite in the Netherlands.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Menswear Designer (Jersey)",
+   "company": "Scotch & Soda (United Legwear & Apparel Co.)",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Netherlands"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": "Design Lead",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "23e076711e6d4310": {
+  "id": "23e076711e6d4310",
+  "at": "2026-10-19T07:25:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://thorsolutionsllc.applytojob.com/apply/VxAVpnKoRs/Marine-Designer-Mechanical-Senior",
+  "board": null,
+  "employer": {
+   "url": "https://thorsolutionsllc.applytojob.com/apply/VxAVpnKoRs/Marine-Designer-Mechanical-Senior",
+   "status": 200,
+   "shot": "data/shots/23e076711e6d4310.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://thorsolutionsllc.applytojob.com/apply/VxAVpnKoRs/Marine-Designer-Mechanical-Senior",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:12"
+ },
+ "1ade6d232b7b4e42": {
+  "id": "1ade6d232b7b4e42",
+  "at": "2026-10-19T07:25:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://acemoneytransfer.applytojob.com/apply/lKEKP5i7KI/Senior-UI-Designer",
+  "board": null,
+  "employer": {
+   "url": "https://acemoneytransfer.applytojob.com/apply/lKEKP5i7KI/Senior-UI-Designer",
+   "status": 200,
+   "shot": "data/shots/1ade6d232b7b4e42.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://acemoneytransfer.applytojob.com/apply/lKEKP5i7KI/Senior-UI-Designer",
+  "fetched_at": "2026-10-19T07:00:22",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Lahore, Punjab, Pakistan",
+  "place_signals": [
+   {
+    "quote": "Lahore, Punjab, Pakistan",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you comfortable working onsite at the ACE Lahore office from Monday to Friday, 1:00 PM to 10:00 PM (PST)?",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Are you comfortable working onsite at the ACE Lahore office from Monday to Friday, 1:00 PM to 10:00 PM (PST)?",
+  "reason": "Role requires onsite work at the company's Lahore, Pakistan office five days a week.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UI Designer",
+   "company": "ACE Money Transfer",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": "Monday to Friday",
+   "countries": [
+    "Pakistan"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "2",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "944ab2a15bb145fc": {
+  "id": "944ab2a15bb145fc",
+  "at": "2026-10-19T07:26:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ats.rippling.com/walden-robotics/jobs/fc5cb390-1a6c-449a-8de2-f146e515234c",
+  "board": null,
+  "employer": {
+   "url": "https://ats.rippling.com/walden-robotics/jobs/fc5cb390-1a6c-449a-8de2-f146e515234c",
+   "status": 200,
+   "shot": "data/shots/944ab2a15bb145fc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ats.rippling.com/walden-robotics/jobs/fc5cb390-1a6c-449a-8de2-f146e515234c",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-19T07:00:07"
+ },
+ "a0fad5d672e2442f": {
+  "id": "a0fad5d672e2442f",
+  "at": "2026-10-19T07:26:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ats.rippling.com/covetcareers/jobs/b2d4ebf7-f9ec-469d-a11e-7cb50e9daac5",
+  "board": null,
+  "employer": {
+   "url": "https://ats.rippling.com/covetcareers/jobs/b2d4ebf7-f9ec-469d-a11e-7cb50e9daac5",
+   "status": 200,
+   "shot": "data/shots/a0fad5d672e2442f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ats.rippling.com/covetcareers/jobs/b2d4ebf7-f9ec-469d-a11e-7cb50e9daac5",
+  "fetched_at": "2026-10-19T07:00:04",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "We're a globally distributed team united by a shared mission to support veterinary professionals through thoughtful technology.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible remote-first work environment",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "As a globally distributed company, salary ranges are localized to reflect the market for comparable roles in a candidate's country or region.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "The pay range for this role is: 80,000 - 90,000 CAD per year (Remote (Canada))",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote (Canada)",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "80,000 - 90,000 CAD per year (Remote (Canada))",
+  "reason": "The role is explicitly listed as Remote (Canada), excluding candidates based in Portugal despite generic 'globally distributed' language elsewhere.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer (UX/UI)",
+   "company": "CoVet",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "80,000 - 90,000 CAD per year (Remote (Canada))",
+   "years_xp": "3+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "65edb7c961b94f62": {
+  "id": "65edb7c961b94f62",
+  "at": "2026-10-19T07:26:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ats.rippling.com/gaiias-open-positions/jobs/98c91ec8-f73b-4df4-8263-11fb0c9c6471",
+  "board": null,
+  "employer": {
+   "url": "https://ats.rippling.com/gaiias-open-positions/jobs/98c91ec8-f73b-4df4-8263-11fb0c9c6471",
+   "status": 200,
+   "shot": "data/shots/65edb7c961b94f62.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ats.rippling.com/gaiias-open-positions/jobs/98c91ec8-f73b-4df4-8263-11fb0c9c6471",
+  "fetched_at": "2026-10-19T07:00:04",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "(Remote) Canada",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "a 100% remote environment",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible working hours & all-remote work.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our workplace is fully remote and boasts accessible technologies",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "The salary range for this role is $90,000-$130,000 CAD",
+    "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "as per the Accessible Canada Act and human rights legislation",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "(Remote) Canada",
+  "reason": "The side panel explicitly states the role is Remote within Canada, excluding Portugal despite generic company-wide remote claims.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Intermediate Product Designer",
+   "company": "gaiia",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "$90,000-$130,000 CAD",
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  }
 }
