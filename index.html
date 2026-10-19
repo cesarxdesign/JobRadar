@@ -95,6 +95,13 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .verdict.ok{border-color:var(--line)}
 .verdict .k.ok{color:var(--good);border-color:var(--good)}
 .notes{margin:12px 0 4px}
+.answers{margin:14px 0 4px}
+.answers .qa{border:1px solid var(--line);border-radius:8px;padding:9px 11px;margin-top:8px;background:var(--panel)}
+.answers .qq{font-size:12px;color:var(--dim);margin-bottom:6px;padding-right:56px}
+.answers .aa{font-size:13px;line-height:1.5;white-space:pre-wrap}
+.answers .none{font-size:13px;color:var(--dimmer)}
+.answers .gap{font-size:12px;color:var(--acc);margin-top:6px}
+.answers .copy{float:right;background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:2px 8px;font-size:11.5px;cursor:pointer}
 .notes textarea{width:100%;min-height:64px;margin-top:6px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:13px;resize:vertical}
 .notes textarea:focus{outline:none;border-color:var(--acc)}
 .notes .past{border-left:2px solid var(--line);padding:2px 0 2px 10px;margin:8px 0;font-size:13px}
@@ -919,6 +926,7 @@ function renderPane(){
           +(isMulti(r)?"✓ in Bundlers · take out":"Move to Bundler")+'</button>':'')+'</div>'
     + (LANE==="review"?auditBox(r)+batteryBox(r):"")
     + whyBox(r)
+    + answersBox(r)
     + copiesBox(r)
     + historyBox(r)
     + evidenceBox(r)
@@ -948,6 +956,38 @@ function renderPane(){
   if($("multi")) $("multi").onclick=()=>toggleMulti(r);
   if($("aud-wrong")){$("aud-wrong").onclick=()=>auditCall(r,"wrong");$("aud-right").onclick=()=>auditCall(r,"right");}
   if($("note")) $("note").oninput=e=>autoNote(r,e.target.value);
+  $("pane").querySelectorAll(".copy[data-a]").forEach(b=>b.onclick=()=>{
+    navigator.clipboard.writeText(ANS[r.id].answers[+b.dataset.a].answer).then(()=>toast("answer copied"));});
+}
+
+// ---------- Application answers ----------
+// The questions on the role's application form, which the posting never
+// shows, with his drafts: forms.py read the form, answers.py wrote them the
+// answerThis way, after VISION's queue was empty. They are his, on this Mac
+// only (serve.py), so the public board never sees them. A draft is a start;
+// the Final is still settled in chat.
+let ANS={}, ANSLOADED=false;
+const ANSAPI=(LOCAL?"":"http://localhost:8125")+"/api/answers";
+function loadAnswers(){
+  if(!RR) return;
+  ANSLOADED=true;
+  fetch(ANSAPI+"?t="+Date.now()).then(x=>x.json()).then(d=>{ANS=d||{};renderPane();}).catch(()=>{});
+}
+window.addEventListener("focus",()=>{if(RR) loadAnswers();});
+function answersBox(r){
+  if(!RR) return "";
+  if(!ANSLOADED){setTimeout(loadAnswers);return "";}
+  const a=ANS[r.id];
+  if(!a) return "";
+  const gaps=g=>(g||[]).map(x=>'<div class="gap">↳ '+esc(x)+'</div>').join("");
+  return '<div class="answers"><div class="fk">Application answers · draft · '+esc(String(a.written_at||"").slice(0,10))
+    +(a.apply_url?' · <a href="'+esc(outbound(a.apply_url))+'" target="_blank" rel="noopener" style="color:var(--acc)">the form ↗</a>':'')+'</div>'
+    +gaps(a.gaps)
+    +a.answers.map((x,i)=>'<div class="qa">'+(x.answer?'<button class="copy" data-a="'+i+'">copy</button>':'')
+      +'<div class="qq">'+esc(x.q)+'</div>'
+      +(x.answer?'<div class="aa">'+esc(x.answer)+'</div>':'<div class="none">for you to answer</div>')
+      +gaps(x.gaps)+'</div>').join("")
+    +'</div>';
 }
 
 // ---------- Evidence ----------

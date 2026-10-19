@@ -36,6 +36,19 @@ class H(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(body)
             return
+        if path == "/api/answers":
+            # his application drafts (answers.py): private, so served from this
+            # Mac to the board, never committed to the public one
+            f = ROOT / "data" / "answers.json"
+            body = f.read_bytes() if f.exists() else b"{}"
+            self.send_response(200)
+            self._cors()
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
         if path == "/tb" or path.startswith("/tb/"):
             # the TestBattery page, served from this Mac so it can save here
             name = path[4:] or "index.html"

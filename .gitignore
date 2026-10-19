@@ -76,3 +76,10 @@ data/vision_now
 data/check.*.lock
 data/run_check.log
 data/run_pool.done
+
+# Application forms and his drafts for them (forms.py, answers.py). Private:
+# the board reads them from this Mac through serve.py.
+data/forms.json
+data/answers.json
+data/forms.json.tmp
+data/answers.json.tmp

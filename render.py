@@ -173,9 +173,10 @@ class Browser:
         req = urllib.request.Request(f"http://127.0.0.1:{self.port}{path}", method=method)
         return json.loads(urllib.request.urlopen(req, timeout=15).read() or b"{}")
 
-    def page(self, url, shot=None, settle=2.5, timeout=25):
+    def page(self, url, shot=None, settle=2.5, timeout=25, js=None):
         """Load one URL and report what rendered. Never raises for a bad page:
-        a page that will not load is a fact about the posting."""
+        a page that will not load is a fact about the posting. js, if given,
+        is run on the rendered page too, and what it returns is out["js"]."""
         out = {"asked": url, "url": url, "status": None, "title": "", "text": "", "apply": [], "links": [], "error": None}
         tab = None
         for attempt in range(3):
@@ -212,6 +213,9 @@ class Browser:
                     break
                 ws.drain(2.5, ev)                              # a slow single-page app
             out.update({k: got.get(k, out.get(k)) for k in ("url", "title", "text", "apply", "links")})
+            if js:
+                r = ws.call("Runtime.evaluate", events=ev, expression=js, returnByValue=True, awaitPromise=True)
+                out["js"] = json.loads(r["result"]["value"]) if r.get("result", {}).get("value") else None
             # The status of the page itself, after redirects. An embedded
             # frame answers too - 29 of 72 pages ended on one - and its 200
             # was hiding the page's own 404.
