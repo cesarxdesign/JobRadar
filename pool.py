@@ -2386,6 +2386,193 @@ AGGREGATORS.update({"uiuxjobsboard": agg_uiuxjobsboard,
                     "netempregos": agg_netempregos})
 
 
+# ---- crypto: VC portfolio boards (Getro, Consider), crypto job boards (his call, 2026-10-20) ----
+# "ANY source that can give me at least ONE job, stays": a board stays in SOURCE whatever its design count today.
+
+def _l1(title):
+    import judge
+    return judge.l1(title)
+
+
+def _rfc822(s):
+    from email.utils import parsedate_to_datetime
+    try:
+        return parsedate_to_datetime(s.strip()).isoformat()
+    except Exception:
+        return None
+
+
+def getro(host):
+    """A Getro portfolio board: the network id is in the page, then the job search API,
+    20 a page, every job; only design titles are kept, like every other board."""
+    html = get_text(f"https://{host}/jobs")
+    m = re.search(r'"network":\{"id":"?(\d+)', html)
+    if not m:
+        raise ValueError("no Getro network id")
+    for page in range(0, 400):
+        d = _post_json(f"https://api.getro.com/api/v2/collections/{m.group(1)}/search/jobs",
+                       {"hitsPerPage": 20, "page": page, "filters": "", "query": ""})
+        rows = (d.get("results") or {}).get("jobs") or []
+        for j in rows:
+            if _l1(j.get("title")) is not None:
+                continue
+            org = j.get("organization") or {}
+            yield {"company": org.get("name"), "title": j.get("title"), "url": j.get("url"),
+                   "location": "; ".join(j.get("locations") or []),
+                   "workplace": j.get("work_mode") or None,
+                   "remote": (j.get("work_mode") == "remote") or None,
+                   "salary": fmt_range((j.get("compensation_amount_min_cents") or 0) // 100,
+                                       (j.get("compensation_amount_max_cents") or 0) // 100,
+                                       j.get("compensation_currency") or "")
+                             if j.get("compensation_public") and j.get("compensation_amount_min_cents") else None,
+                   "posted": datetime.fromtimestamp(j["created_at"], timezone.utc).isoformat()
+                             if j.get("created_at") else None}
+        if len(rows) < 20:
+            break
+
+
+def consider(host, board):
+    """A Consider portfolio board: a session cookie and the page's CSRF token, then
+    the search API, 100 a page, paged by the sequence it hands back."""
+    import http.cookiejar
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    with op.open(urllib.request.Request(f"https://{host}/jobs", headers=UA), timeout=30) as r:
+        html = r.read().decode("utf-8", "replace")
+    tok = re.search(r'csrfToken":"([^"]+)', html).group(1)
+    seq = None
+    for _ in range(100):
+        body = {"meta": {"size": 100, **({"sequence": seq} if seq else {})},
+                "board": {"id": board, "isParent": True}, "query": {}, "grouped": False}
+        req = urllib.request.Request(f"https://{host}/api-boards/search-jobs", data=json.dumps(body).encode(),
+                                     headers={**UA, "Content-Type": "application/json",
+                                              "Accept": "application/json", "x-csrf-token": tok})
+        with op.open(req, timeout=30) as r:
+            d = json.loads(r.read().decode("utf-8", "replace"))
+        rows = d.get("jobs") or []
+        for j in rows:
+            if _l1(j.get("title")) is not None:
+                continue
+            sal = j.get("salary") or {}
+            yield {"company": j.get("companyName"), "title": j.get("title"),
+                   "url": j.get("applyUrl") or j.get("url"),
+                   "location": "; ".join(j.get("locations") or []),
+                   "remote": bool(j.get("remote")) or None,
+                   "salary": fmt_range(sal.get("minValue"), sal.get("maxValue"),
+                                       (sal.get("currency") or {}).get("value") or "") if sal.get("minValue") else None,
+                   "posted": j.get("timeStamp")}
+        seq = (d.get("meta") or {}).get("sequence")
+        if len(rows) < 100 or not seq:
+            break
+
+
+def agg_web3career():
+    """web3.career's design shelf: server-rendered rows, the JobPosting data beside them."""
+    for page in range(1, 40):
+        html = get_text("https://web3.career/design-jobs" + (f"?page={page}" if page > 1 else ""))
+        ld = []
+        for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+            try:
+                d = json.loads(b)
+            except ValueError:
+                continue
+            if isinstance(d, dict) and d.get("@type") == "JobPosting":
+                ld.append(d)
+        parts = re.split(r'<tr data-jobid=\d+', html)[1:]
+        if not parts:
+            break
+        for i, p in enumerate(parts):
+            m = re.search(r'href="(/[a-z0-9-]+/\d+)"', p)
+            t = re.search(r'<h2[^>]*>(.*?)</h2>', p, re.S)
+            c = re.search(r'<h3[^>]*>(.*?)</h3>', p, re.S)
+            if not (m and t):
+                continue
+            title = unescape(t.group(1)).strip()
+            loc = re.findall(r'href="/web3-jobs-[^"]*">([^<]+)</a>', p)
+            d = ld[i] if len(ld) == len(parts) else {}      # the JobPosting data comes in the rows' order
+            when = re.search(r'<time datetime="([^"]+)"', p)
+            yield {"company": unescape(c.group(1)).strip() if c else "", "title": title,
+                   "url": "https://web3.career" + m.group(1), "location": ", ".join(dict.fromkeys(loc)),
+                   "remote": (d.get("jobLocationType") == "TELECOMMUTE") or None,
+                   "posted": (when.group(1) if when else None) or d.get("datePosted"),
+                   "jd_text": strip_html(d.get("description"))}
+
+
+def agg_jobstash():
+    """JobStash: crypto jobs from 17,000+ postings, an open search API; design, UX and UI searches."""
+    seen = set()
+    for q in ("design", "ux", "ui"):
+        for page in range(1, 60):
+            d = get_json(f"https://middleware.jobstash.xyz/jobs/list?page={page}&limit=100&query={q}")
+            rows = d.get("data") or []
+            for j in rows:
+                if j.get("id") in seen or not j.get("url") or _l1(j.get("title")) is not None:
+                    continue
+                seen.add(j["id"])
+                yield {"company": (j.get("organization") or {}).get("name") or "", "title": j.get("title"),
+                       "url": j["url"], "location": j.get("location") or "",
+                       "workplace": j.get("locationType") or None,
+                       "remote": (j.get("locationType") == "REMOTE") or None,
+                       "salary": fmt_range(j.get("minimumSalary"), j.get("maximumSalary"), j.get("salaryCurrency") or "")
+                                 if j.get("minimumSalary") else None,
+                       "posted": datetime.fromtimestamp(j["timestamp"] / 1000, timezone.utc).isoformat()
+                                 if j.get("timestamp") else None,
+                       "jd_text": strip_html(j.get("description"))}
+            if len(rows) < 100:
+                break
+
+
+def agg_cryptocurrencyjobs():
+    """cryptocurrencyjobs.co: the feed of every new posting, "<title> at <company>"."""
+    for it in re.findall(r"<item>(.*?)</item>", get_text("https://cryptocurrencyjobs.co/index.xml"), re.S):
+        g = lambda t: unescape((re.search(rf"<{t}>(.*?)</{t}>", it, re.S) or [None, ""])[1]).strip()
+        title, _, company = g("title").rpartition(" at ")
+        if _l1(title) is not None:
+            continue
+        yield {"company": company, "title": title, "url": g("guid") or g("link"),
+               "location": "", "posted": _rfc822(g("pubDate")), "jd_text": strip_html(g("description"))}
+
+
+def agg_cryptojobs_feed(url, status=False):
+    """crypto.jobs and cryptojobs.com: RSS feeds of every posting."""
+    def strip_cdata(x):
+        return re.sub(r"^<!\[CDATA\[|\]\]>$", "", (x or "").strip()).strip()
+    for it in re.findall(r"<item>(.*?)</item>", get_text(url), re.S):
+        g = lambda t: strip_cdata(unescape((re.search(rf"<{t}>(.*?)</{t}>", it, re.S) or [None, ""])[1]))
+        if status and g("jobStatus") and g("jobStatus") != "open":
+            continue
+        title, company = g("title"), g("clientCompany")
+        if not company and " at " in title:
+            title, _, company = title.rpartition(" at ")
+        if _l1(title) is not None:
+            continue
+        desc = g("description")
+        loc = g("jobLocation") or (re.search(r"Location:</strong>\s*([^<]+)", desc) or [None, ""])[1]
+        comp = re.search(r"Company:</strong>\s*([^<]+)", desc)
+        posted = _rfc822(g("pubDate"))
+        if not posted and g("postedDate"):
+            try:
+                posted = datetime.strptime(g("postedDate"), "%b %d, %Y").replace(tzinfo=timezone.utc).isoformat()
+            except ValueError:
+                posted = None
+        yield {"company": company or (comp.group(1).strip() if comp else ""), "title": title,
+               "url": (g("externalApplicationLink") if g("applyByExternalLink") == "true" else "") or g("link").split("?utm_")[0],
+               "location": loc.strip(), "remote": True if re.search(r"remote", loc + g("workFlexibility"), re.I) else None,
+               "posted": posted, "jd_text": strip_html(desc)}
+
+
+GETRO = ["jobs.dragonfly.xyz", "jobs.multicoin.capital", "jobs.polychain.capital", "jobs.framework.ventures",
+         "jobs.variant.fund", "jobs.placeholder.vc", "jobs.coinfund.io", "jobs.castleisland.vc",
+         "jobs.blockchaincapital.com", "jobs.electriccapital.com", "jobs.solana.com", "jobs.avax.network",
+         "jobs.arbitrum.io", "jobs.delphiventures.io"]
+CONSIDER = {"jobs.panteracapital.com": "pantera-capital", "jobs.hashed.com": "hashed"}
+AGGREGATORS.update({"getro-" + h.split(".")[1]: (lambda h=h: getro(h)) for h in GETRO})
+AGGREGATORS.update({"consider-" + h.split(".")[1]: (lambda h=h, b=b: consider(h, b)) for h, b in CONSIDER.items()})
+AGGREGATORS.update({"web3career": agg_web3career, "jobstash": agg_jobstash,
+                    "cryptocurrencyjobs": agg_cryptocurrencyjobs,
+                    "cryptodotjobs": lambda: agg_cryptojobs_feed("https://crypto.jobs/feed/rss"),
+                    "cryptojobscom": lambda: agg_cryptojobs_feed("https://www.cryptojobs.com/jobs/feed", status=True)})
+
+
 
 SKIP = set()          # sources deliberately not scraped this run
 
