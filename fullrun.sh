@@ -26,10 +26,11 @@ echo; echo "=== run $(date '+%F %H:%M'): $VISION_WORKERS readers, 1000 a pull ==
 pgrep -f "harvest.py check" >/dev/null || ( python3 limit.py 21600 python3 harvest.py check > data/run_check.log 2>&1 ) &
 sleep 5
 # a VISION that gives no verdict for 20 minutes, and is not waiting on the usage limit, is stopped; the loop starts the next pull
+# only a pull: the queue check (vision.py --new --count) matched too, was killed, read as an empty queue, and could end the run early
 ( while sleep 300; do
-    pgrep -f "vision.py --new" >/dev/null || continue
+    pgrep -f "vision.py --new --limit" >/dev/null || continue
     [ -f data/vision.paused ] && continue
-    [ -n "$(find data/vision.beat -mmin +20 2>/dev/null)" ] && { echo "   VISION gave no verdict for 20 minutes: stopped; the next pull carries on"; pkill -f "vision.py --new"; }
+    [ -n "$(find data/vision.beat -mmin +20 2>/dev/null)" ] && { echo "   VISION gave no verdict for 20 minutes: stopped; the next pull carries on"; pkill -f "vision.py --new --limit"; }
   done ) &
 WATCH=$!
 # POOL lane: a full pass now for today's fresh jobs, then FETCH and CL on what comes through CTF, again and again
