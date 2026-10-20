@@ -2634,6 +2634,1333 @@ AGGREGATORS.update({"web3career": agg_web3career, "jobstash": agg_jobstash,
 
 
 
+# ---- more crypto boards and portfolio pages, found and tested 2026-10-20 ----
+# ---- crypto job boards, second batch (2026-10-20) ----
+# Each reader keeps design titles only. Sitemap readers open only job pages the sitemap
+# says changed in the last 60 days, and only when the slug reads like a design role.
+
+CX_DAYS = 60
+CX_SLUG = re.compile(r"design|(?:^|[-/])u[xi](?:[-/]|$)", re.I)
+
+
+def _cx_page(url, extra=None):
+    """One page, paced: these are small boards, read one request at a time."""
+    time.sleep(0.4)
+    return _get_text(url, extra or {})
+
+
+def _cx_recent(when, days=CX_DAYS):
+    try:
+        d = datetime.fromisoformat(str(when)[:10]).replace(tzinfo=timezone.utc)
+    except ValueError:
+        return True
+    return (datetime.now(timezone.utc) - d).days <= days
+
+
+def _cx_sitemap(url, part):
+    """(page, lastmod) for the job pages a sitemap lists as changed in the last 60 days."""
+    xml = _cx_page(url)
+    for loc, mod in re.findall(r"<loc>\s*([^<]+?)\s*</loc>\s*(?:<lastmod>\s*([^<]*?)\s*</lastmod>)?", xml):
+        if part in loc and _cx_recent(mod or "") and CX_SLUG.search(loc.rsplit("/", 1)[-1]):
+            yield unescape(loc), (mod or "")[:10] or None
+
+
+def _cx_ld(html):
+    """Every JobPosting in a page's JSON-LD."""
+    out = []
+    for raw in re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', html, re.S):
+        try:
+            d = json.loads(raw)
+        except ValueError:
+            continue
+        for x in (d if isinstance(d, list) else d.get("@graph", [d]) if isinstance(d, dict) else []):
+            if isinstance(x, dict) and x.get("@type") == "JobPosting":
+                out.append(x)
+    return out
+
+
+def _cx_ld_place(x):
+    """The place a JobPosting states: its address, else who may apply."""
+    places = []
+    locs = x.get("jobLocation") or []
+    for loc in (locs if isinstance(locs, list) else [locs]):
+        adr = (loc or {}).get("address") or {} if isinstance(loc, dict) else {}
+        if isinstance(adr, dict):
+            p = ", ".join(str(adr[k]) for k in ("addressLocality", "addressRegion", "addressCountry")
+                          if adr.get(k) and isinstance(adr[k], str))
+            if p:
+                places.append(p)
+    if not places:
+        req = x.get("applicantLocationRequirements") or []
+        for r in (req if isinstance(req, list) else [req]):
+            if isinstance(r, dict) and r.get("name"):
+                places.append(r["name"])
+    remote = x.get("jobLocationType") == "TELECOMMUTE"
+    if remote and not any(re.search(r"remote", p, re.I) for p in places):
+        places.insert(0, "Remote")
+    return "; ".join(places), (True if remote or any(re.search(r"remote", p, re.I) for p in places) else None)
+
+
+def _cx_ld_salary(x):
+    s = x.get("baseSalary") or {}
+    v = s.get("value") or {} if isinstance(s, dict) else {}
+    if isinstance(v, dict) and (v.get("minValue") or v.get("maxValue")):
+        return fmt_range(v.get("minValue"), v.get("maxValue"), s.get("currency") or "")
+    return None
+
+
+def _cx_clean(url, *refs):
+    """The employer's link without the board's ?ref= tag."""
+    for r in refs:
+        url = re.sub(rf"[?&]ref={re.escape(r)}\b", "", url or "")
+    return url or None
+
+
+def agg_findweb3():
+    """findweb3.com: the design category from its API, 50 a page, newest first. The page of
+    a recent role carries the employer's link (howToApply) and the text."""
+    off = 0
+    for _ in range(100):
+        d = get_json(f"https://findweb3.com/api/jobs?perPage=50&offset={off}&categoryPath=design")
+        rows = d.get("records") or []
+        for j in rows:
+            title = j.get("jobTitle")
+            if _l1(title) is not None:
+                continue
+            page, link, jd, remote = f"https://findweb3.com/job/{j['_id']}", None, None, None
+            if _cx_recent(j.get("postedDate")):
+                try:
+                    m = re.search(r'__NEXT_DATA__" type="application/json">(.*?)</script>', _cx_page(page), re.S)
+                    props = json.loads(m.group(1))["props"]["pageProps"]
+                    how = (props.get("job") or {}).get("howToApply") or ""
+                    link = how if how.startswith("http") else None
+                    remote = (props.get("job") or {}).get("fullyRemote") or None
+                    jd = strip_html(props.get("jobDescriptionHtml"))
+                except Exception:
+                    pass
+            loc = j.get("companyHq") or ""
+            yield {"company": j.get("companyName"), "title": title, "url": link or page, "location": loc,
+                   "remote": remote or (True if re.search(r"remote|anywhere", loc, re.I) else None),
+                   "salary": j.get("pay") or None, "posted": j.get("postedDate"), "jd_text": jd}
+        # newest first: once a whole page is older than the window, the rest is too
+        if not rows or d.get("offset") in (None, off) or not any(_cx_recent(j.get("postedDate")) for j in rows):
+            break
+        off = d["offset"]
+        time.sleep(0.4)
+
+
+def agg_sailonchain():
+    """sailonchain.com: the jobs sitemap, then each design page's JobPosting. The employer's
+    link is in the page data (applicationUrl); the title ends in " - <company>"."""
+    for page, _ in _cx_sitemap("https://sailonchain.com/sitemaps/jobs.xml", "/jobs/"):
+        try:
+            html = _cx_page(page)
+        except Exception:
+            continue
+        for x in _cx_ld(html)[:1]:
+            company = ((x.get("hiringOrganization") or {}).get("name") or "").strip()
+            title = unescape(x.get("title") or "").strip()
+            if company and title.endswith(f" - {company}"):
+                title = title[: -len(company) - 3].strip()
+            if _l1(title) is not None:
+                continue
+            m = re.search(r'applicationUrl\\?":\\?"(https?://[^"\\]+)', html)
+            loc, remote = _cx_ld_place(x)
+            yield {"company": company, "title": title,
+                   "url": _cx_clean(unescape(m.group(1)), "sailonchain.com") if m else page,
+                   "location": loc, "remote": remote, "salary": _cx_ld_salary(x),
+                   "posted": x.get("datePosted"), "jd_text": strip_html(x.get("description"))}
+
+
+def agg_degencryptojobs():
+    """degencryptojobs.com: the whole board from its API, 200 a page; rows link to the employer."""
+    for page in range(1, 30):
+        d = get_json(f"https://degencryptojobs.com/api/jobs?page={page}")
+        for j in d.get("jobs") or []:
+            if _l1(j.get("title")) is not None:
+                continue
+            locs = j.get("location") or []
+            locs = locs if isinstance(locs, list) else [locs]
+            sal = j.get("salary") or ""
+            yield {"company": j.get("company"), "title": j.get("title"), "url": j.get("link"),
+                   "location": "; ".join(locs), "remote": True if any(re.search(r"remote", str(l), re.I) for l in locs) else None,
+                   "salary": sal if re.search(r"\d", sal) else None,
+                   "posted": j.get("datePosted"), "jd_text": strip_html(j.get("description"))}
+        if page >= (d.get("totalPages") or 0):
+            break
+        time.sleep(0.4)
+
+
+def agg_web3jobs():
+    """web3jobs.io: the UX/UI design category (the page holds its rows as data, with the
+    employer's link), then the feed of the 100 newest for design titles filed elsewhere."""
+    seen = set()
+    for page in range(1, 20):
+        try:
+            html = _cx_page(f"https://web3jobs.io/jobs/ux-ui-design?page={page}")
+        except urllib.error.HTTPError as e:      # past the last page it answers 404
+            if e.code == 404:
+                break
+            raise
+        rows = []
+        for m in re.finditer(r"window\.jobsList\.concat\(", html):
+            try:
+                rows += json.JSONDecoder().raw_decode(html, m.end())[0]
+            except ValueError:
+                pass
+        fresh = [j for j in rows if j.get("id") not in seen]
+        for j in fresh:
+            seen.add(j.get("id"))
+            if _l1(j.get("title")) is not None:
+                continue
+            link = j.get("apply_to") if j.get("apply_by") == "by_link" else None
+            yield {"company": (j.get("employer") or {}).get("name"), "title": j.get("title"),
+                   "url": _cx_clean(link, "web3jobs.io") or "https://web3jobs.io" + (j.get("job_details_path") or ""),
+                   "location": j.get("location") or "", "remote": True if j.get("remote") else None,
+                   "salary": fmt_range(j.get("min_compensation"), j.get("max_compensation"),
+                                       (j.get("compensation_currency") or "").upper()) if j.get("min_compensation") else None,
+                   "posted": j.get("posted_at"), "jd_text": strip_html(j.get("description"))}
+        if not fresh:
+            break
+    for it in re.findall(r"<item>(.*?)</item>", _cx_page("https://web3jobs.io/rss/jobs"), re.S):
+        g = lambda t: unescape((re.search(rf"<{t}>(.*?)</{t}>", it, re.S) or [None, ""])[1]).strip()
+        company = g("company")
+        title = re.sub(rf"\s+at\s+{re.escape(company)}$", "", g("title")) if company else g("title")
+        jid = g("guid")
+        if jid.isdigit() and int(jid) in seen or _l1(title) is not None:
+            continue
+        loc = g("location")
+        yield {"company": company, "title": title, "url": g("link"), "location": loc,
+               "remote": True if re.search(r"remote", loc, re.I) else None,
+               "posted": g("pubDate")[:10] or None, "jd_text": strip_html(g("description"))}
+
+
+def agg_cryptogrind():
+    """cryptogrind.com: the sitemap names every job page by its title; each design page
+    carries a JobPosting with the employer's link (applyUrl)."""
+    for page, _ in _cx_sitemap("https://cryptogrind.com/sitemap.xml", "/job/"):
+        try:
+            html = _cx_page(page)
+        except Exception:
+            continue
+        for x in _cx_ld(html)[:1]:
+            title = unescape(x.get("title") or "").strip()
+            if _l1(title) is not None:
+                continue
+            loc, remote = _cx_ld_place(x)
+            jd = "\n\n".join(t for t in (strip_html(x.get("description")), strip_html(x.get("responsibilities"))) if t)
+            yield {"company": (x.get("hiringOrganization") or {}).get("name"), "title": title,
+                   "url": x.get("applyUrl") or page, "location": loc, "remote": remote,
+                   "salary": _cx_ld_salary(x), "posted": x.get("datePosted"), "jd_text": jd or None}
+
+
+def agg_ethereumjobboard():
+    """ethereumjobboard.com: the sitemap, then each design page. The page prints no date,
+    so the sitemap's last change is the row's last update."""
+    for page, mod in _cx_sitemap("https://www.ethereumjobboard.com/sitemap.xml", "/jobs/"):
+        try:
+            html = _cx_page(page)
+        except Exception:
+            continue
+        t = re.search(r'<h1 class="m-0 text-3xl[^"]*">(.*?)</h1>', html, re.S)
+        if not t or _l1(strip_html(t.group(1))) is not None:
+            continue
+        c = re.search(r'<h2 class="m-0 text-3xl[^"]*">(.*?)</h2>', html, re.S)
+        loc = re.search(r'<p class="p-0 m-0">(.*?)</p>', html, re.S)
+        a = re.search(r'<a href="([^"]+)"[^>]*><button[^>]*>Apply Now', html)
+        jd = re.search(r'<div class="[^"]*\bprose\b[^"]*">(.*?)<div class="flex justify-center self-start">', html, re.S)
+        place = strip_html(loc.group(1)) if loc else ""
+        yield {"company": strip_html(c.group(1)) if c else "", "title": strip_html(t.group(1)),
+               "url": _cx_clean(unescape(a.group(1)), "ethereumjobboard") if a else page,
+               "location": place, "remote": True if re.search(r"remote", place, re.I) else None,
+               "posted": None, "updated": mod, "jd_text": strip_html(jd.group(1)) if jd else None}
+
+
+def agg_workingincrypto():
+    """workingincrypto.com: the sitemap, then each design page. The page keeps its facts in
+    one hidden line: title, date, company, type, work mode, place, salary."""
+    for page, _ in _cx_sitemap("https://www.workingincrypto.com/sitemap.xml", "/job/"):
+        try:
+            html = _cx_page(page)
+        except Exception:
+            continue
+        m = re.search(r'id="wic-job-src">(.*?)</script>', html, re.S)
+        if not m:
+            continue
+        f = [unescape(s).strip() for s in m.group(1).split("@@WIC@@")] + [""] * 7
+        title, when, company, kind, mode, geo, sal = f[:7]
+        if _l1(title) is not None:
+            continue
+        a = re.search(r'href="(https?://[^"]+)"[^>]*>(?:(?!</a>).){0,200}Apply To This Job', html, re.S)
+        jd = re.search(r'>Job Description</h2>(.*?)<hr', html, re.S)
+        yield {"company": company, "title": title, "url": unescape(a.group(1)) if a else page,
+               "location": ", ".join(x for x in (mode, geo) if x),
+               "remote": True if re.search(r"remote", f"{mode} {geo}", re.I) else None,
+               "salary": sal or None, "employment_type": kind or None,
+               "posted": when[:10] or None, "jd_text": strip_html(jd.group(1)) if jd else None}
+
+
+# dejob.ai position ids that are design roles (Product Designer, UX Designer, UI/UX, UI, Visual,
+# Brand, Lead Designer, Design Director, Website, Motion, Graphic)
+DEJOB_DESIGN = (42, 43, 78, 9, 11, 41, 119, 253, 234, 296, 10)
+
+
+def agg_dejob():
+    """dejob.ai: each design position from its API, 20 a page. A posting has no title of its
+    own; the position it is filed under is the title. Pinned jobs repeat on every list."""
+    seen = set()
+    for pid in DEJOB_DESIGN:
+        for page in range(1, 50):
+            d = _cx_json(f"https://dejob.ai/api/worker/topics?page={page}&limit=20&positionId={pid}",
+                           {"Accept-Language": "en"})["data"]
+            rows = d.get("results") or []
+            for j in rows:
+                if j.get("topicId") in seen or _l1(j.get("positionName")) is not None:
+                    continue
+                seen.add(j.get("topicId"))
+                place = ", ".join(dict.fromkeys(x for x in (j.get("officeModeName"), j.get("base") or j.get("location")) if x))
+                sal = None
+                if j.get("compensationMode") == "salary_range" and j.get("minSalary"):
+                    sal = fmt_range(j.get("minSalary"), j.get("maxSalary"), j.get("currency") or "")
+                    sal = sal and sal + {"per_month": "/month", "per_year": "/year", "per_hour": "/hour"}.get(j.get("payPeriod"), "")
+                yield {"company": (j.get("company") or "").strip(), "title": j.get("positionName"), "url": j.get("url"),
+                       "location": place, "remote": True if j.get("officeModeName") == "Remote" else None,
+                       "salary": sal, "employment_type": j.get("workTypeName"),
+                       "posted": datetime.fromtimestamp(j["createTime"] / 1000, timezone.utc).isoformat()
+                                 if j.get("createTime") else None,
+                       "jd_text": "\n\n".join(j.get(k) for k in ("content", "content2", "content3") if j.get(k)) or None}
+            # newest first: a page with nothing from the last 60 days ends this position
+            mine = [j for j in rows if not j.get("isTopJob")]
+            if page * 20 >= ((d.get("page") or {}).get("total") or 0) or not any(
+                    _cx_recent(datetime.fromtimestamp(j["createTime"] / 1000, timezone.utc).isoformat())
+                    for j in mine if j.get("createTime")):
+                break
+            time.sleep(0.4)
+
+
+def _cx_json(url, extra):
+    return json.loads(_cx_page(url, extra))
+
+
+def agg_web3vacancy():
+    """web3vacancy.com: one API call returns the whole board, which keeps only the last few
+    days, so it is read every day. A row links to the original when it has one."""
+    def slug(s):
+        return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", (s or "").lower().replace("&", " and "))).strip("-")
+    for j in get_json("https://web3vacancy.com/api/jobs").get("items") or []:
+        title, company = j.get("title"), j.get("company_name") or (j.get("company") or {}).get("name")
+        if _l1(title) is not None:
+            continue
+        geo = ((j.get("editorial") or {}).get("data") or {}).get("geo") or {}
+        place = j.get("country_city") or ", ".join(geo.get("countries") or [])
+        remote = j.get("location_type") == "remote"
+        jd = j.get("description_clean") or j.get("description") or "\n\n".join(
+            j.get(k) for k in ("responsibilities", "requirements", "conditions") if j.get(k)) or j.get("raw_text")
+        yield {"company": company, "title": title,
+               "url": j.get("source_url") or f"https://web3vacancy.com/job/{slug(f'{title} at {company}')}-{str(j.get('id'))[-6:]}",
+               "location": ", ".join(x for x in ("Remote" if remote else "", place) if x),
+               "remote": True if remote else None,
+               "salary": fmt_range(j.get("salary_min_usd"), j.get("salary_max_usd"), "USD") if j.get("salary_min_usd") else None,
+               "employment_type": j.get("employment_type"), "posted": j.get("created_at"),
+               "jd_text": strip_html(jd) if jd else None}
+
+
+def agg_bitcoinerjobs():
+    """bitcoinerjobs.com (Niceboard): its job API answers only when every filter is sent."""
+    base = {"company": "all", "jobtype": "[]", "category": "[]", "secondary_category": "[]", "tags": "[]",
+            "city": "[]", "state": "[]", "country": "[]", "remote_ok": "false", "remote_only": "false",
+            "salary_timeframe": "", "salary_min": "", "salary_max": "", "keyword": "", "custom_fields": "{}",
+            "limit": "50", "sortby": "newest"}
+    for page in range(1, 40):
+        d = json.loads(_cx_page("https://bitcoinerjobs.com/api/jobs?" + urllib.parse.urlencode({**base, "page": page})))
+        rows = d.get("jobs") or []
+        for j in rows:
+            if _l1(j.get("title")) is not None:
+                continue
+            co = j.get("company") or {}
+            loc = j.get("location_name") or (j.get("location") or {}).get("name") or j.get("remote_required_location") or ""
+            if j.get("is_remote") and not re.search(r"remote", loc, re.I):
+                loc = ", ".join(x for x in ("Remote", loc) if x)
+            yield {"company": j.get("company_name") or co.get("name"), "title": j.get("title"),
+                   "url": j.get("apply_url") or f"https://bitcoinerjobs.com/job/{j['id']}-{j.get('slug')}"
+                          + (f"-{co.get('slug')}" if co.get("slug") and not co.get("anonymity_enabled") else ""),
+                   "location": loc, "remote": True if j.get("is_remote") else None,
+                   "salary": fmt_range(j.get("salary_min"), j.get("salary_max"), j.get("salary_currency") or "")
+                             if j.get("salary_min") else None,
+                   "employment_type": (j.get("jobtype") or {}).get("name"),
+                   "posted": j.get("published_at"), "jd_text": strip_html(j.get("description_html"))}
+        if len(rows) < 50 or page * 50 >= (d.get("count") or 0):
+            break
+
+
+def _cx_astro(v):
+    """Astro's island props: every value is [type, value]; 0 plain, 1 a list."""
+    t, x = v
+    if t == 0:
+        return {k: _cx_astro(w) for k, w in x.items()} if isinstance(x, dict) else x
+    if t == 1:
+        return [_cx_astro(w) for w in x]
+    return x
+
+
+def agg_jobs3():
+    """jobs3.io: its /jobs page holds the 40 newest rows as island data. They are copies of
+    Jobicy and Remote OK postings and link to them."""
+    html = _cx_page("https://jobs3.io/jobs/")
+    m = re.search(r'component-url="[^"]*JobFilter[^"]*"[^>]*props="([^"]*)"', html)
+    for j in _cx_astro(json.loads(unescape(m.group(1)))["jobs"]) if m else []:
+        if _l1(j.get("title")) is not None:
+            continue
+        yield {"company": j.get("company"), "title": j.get("title"), "url": j.get("applyUrl"),
+               "location": j.get("location") or "", "remote": True if j.get("remote") else None,
+               "salary": fmt_range(j.get("salaryMin"), j.get("salaryMax"), "USD") if j.get("salaryMin") else None,
+               "posted": j.get("postedAt"), "jd_text": strip_html(j.get("description"))}
+
+
+def agg_findweb3jobs():
+    """findweb3jobs.com: ten jobs at a time, as JobPostings in the home page, linked to the employer."""
+    for x in _cx_ld(_cx_page("https://findweb3jobs.com/")):
+        title = unescape(x.get("title") or "").strip()
+        if _l1(title) is not None:
+            continue
+        loc, remote = _cx_ld_place(x)
+        yield {"company": (x.get("hiringOrganization") or {}).get("name"), "title": title,
+               "url": x.get("url"), "location": loc, "remote": remote,
+               "salary": _cx_ld_salary(x), "posted": x.get("datePosted")}
+
+
+def agg_a16zcrypto():
+    """a16zcrypto.com/jobs: the page holds its portfolio's jobs as one list, by company."""
+    html = _cx_page("https://a16zcrypto.com/jobs/")
+    i = html.find("const portfolioJobs = ")
+    groups = json.JSONDecoder().raw_decode(html, i + len("const portfolioJobs = "))[0] if i >= 0 else []
+    for j in (j for g in groups for j in g.get("jobs") or []):
+        if _l1(j.get("title")) is not None:
+            continue
+        sal = j.get("salary") or {}
+        yield {"company": j.get("companyName"), "title": j.get("title"), "url": j.get("url"),
+               "location": "; ".join(j.get("locations") or []), "remote": True if j.get("remote") else None,
+               "salary": fmt_range(sal.get("minValue"), sal.get("maxValue"), sal.get("currency") or "")
+                         if sal.get("minValue") else None,
+               "posted": j.get("createdAt")}
+
+
+def agg_paradigm():
+    """paradigm.xyz/careers: its portfolio's jobs (2,300) are written into the 5 MB page as
+    script objects - {title:"..",companyName:"..",...,createdAt:"..",url:"..",salary:..}."""
+    html = _cx_page("https://www.paradigm.xyz/careers")
+    S = r'"((?:[^"\\]|\\.)*)"'
+    for o in re.finditer(r'\{title:' + S + r',companyName:' + S + r'(.*?)salary:(null|\{[^}]*\})\}', html, re.S):
+        title, company, rest, sal = json.loads(f'"{o.group(1)}"'), json.loads(f'"{o.group(2)}"'), o.group(3), o.group(4)
+        if _l1(title) is not None:
+            continue
+        g = lambda k: (lambda m: json.loads(f'"{m.group(1)}"') if m else None)(re.search(rf'\b{k}:' + S, rest))
+        locs = re.search(r'\blocations:\[(.*?)\]', rest)
+        locs = [json.loads(x) for x in re.findall(r'"(?:[^"\\]|\\.)*"', locs.group(1))] if locs else []
+        lo, hi, cur = (re.search(rf'{k}:([^,}}]+)', sal) for k in ("minValue", "maxValue", "currency"))
+        yield {"company": company, "title": title, "url": g("url"), "location": "; ".join(locs),
+               "remote": True if re.search(r'\bremote:true', rest) else None,
+               "salary": fmt_range(lo.group(1), hi.group(1) if hi else None, cur.group(1).strip('"') if cur else "")
+                         if lo and lo.group(1) != "null" else None,
+               "posted": g("createdAt")}
+
+
+def agg_southparkcommons():
+    """southparkcommons.com/jobs: its 2,000 portfolio jobs are one JSON block in the page."""
+    html = _cx_page("https://www.southparkcommons.com/jobs")
+    m = re.search(r'<script type="application/json" id="jobs-data">(.*?)</script>', html, re.S)
+    for j in json.loads(m.group(1)) if m else []:
+        if _l1(j.get("title")) is not None:
+            continue
+        yield {"company": j.get("companyName"), "title": j.get("title"), "url": j.get("url"),
+               "location": "; ".join(j.get("locations") or []), "remote": True if j.get("remote") else None,
+               "posted": j.get("createdAt")}
+
+
+def agg_protocollabs():
+    """os.pl.xyz/jobs: the Protocol Labs network's roles, grouped by team, in the page's
+    server data. A role without an employer link keeps the board page."""
+    html = _cx_page("https://os.pl.xyz/jobs")
+    s = "".join(json.loads(f'"{x}"') for x in re.findall(r'self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)', html))
+    i = s.find('"serverPage":')
+    page = json.JSONDecoder().raw_decode(s, i + len('"serverPage":'))[0].get("page") or {} if i >= 0 else {}
+    for g in page.get("groups") or []:
+        team = (g.get("team") or {}).get("name")
+        for r in g.get("roles") or []:
+            if _l1(r.get("roleTitle")) is not None:
+                continue
+            loc = "; ".join(r.get("location") or [])
+            if r.get("workMode") == "remote" and not re.search(r"remote", loc, re.I):
+                loc = ", ".join(x for x in ("Remote", loc) if x)
+            yield {"company": team, "title": r.get("roleTitle"),
+                   "url": r.get("applyUrl") or f"https://os.pl.xyz/jobs#{r.get('uid')}",
+                   "location": loc, "remote": True if r.get("workMode") == "remote" else None,
+                   "salary": r.get("pay") if isinstance(r.get("pay"), str) else None,
+                   "department": r.get("department"),
+                   "posted": r.get("postedDate"), "updated": r.get("lastUpdated")}
+
+
+AGGREGATORS.update({"findweb3": agg_findweb3, "sailonchain": agg_sailonchain,
+                    "degencryptojobs": agg_degencryptojobs, "web3jobs": agg_web3jobs,
+                    "cryptogrind": agg_cryptogrind, "ethereumjobboard": agg_ethereumjobboard,
+                    "workingincrypto": agg_workingincrypto, "dejob": agg_dejob,
+                    "web3vacancy": agg_web3vacancy, "bitcoinerjobs": agg_bitcoinerjobs,
+                    "jobs3": agg_jobs3, "findweb3jobs": agg_findweb3jobs,
+                    "a16zcrypto": agg_a16zcrypto,
+                    "consider-a16z": lambda: consider("portfoliojobs.a16z.com", "andreessen-horowitz"),
+                    "paradigm": agg_paradigm, "southparkcommons": agg_southparkcommons,
+                    "protocollabs": agg_protocollabs})
+
+
+# ---- more job boards: design, remote, Europe and Portugal, found and tested 2026-10-20 ----
+# ---- job boards found and probed 2026-10-20 ----
+# Runs inside pool's namespace: get_json, get_text, strip_html, fmt_range, age_to_date,
+# _l1, _rfc822, unescape, datetime, timezone, re, json, time, urllib come from pool.
+# Every reader keeps design titles only, and gives the date the source prints.
+
+
+def _next_data(html):
+    """The page's __NEXT_DATA__ JSON, or {}."""
+    m = re.search(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    try:
+        return json.loads(m.group(1)) if m else {}
+    except ValueError:
+        return {}
+
+
+def _rsc(html):
+    """Next.js app-router pages stream their data as self.__next_f string chunks; joined, they read as text."""
+    return "".join(json.loads(x) for x in
+                   re.findall(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)', html))
+
+
+def _ld_postings(html):
+    """Every JobPosting in the page's JSON-LD, including those inside an ItemList."""
+    out = []
+    for b in re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S):
+        try:
+            d = json.loads(b)
+        except ValueError:
+            continue
+        for x in d if isinstance(d, list) else [d]:
+            if not isinstance(x, dict):
+                continue
+            if x.get("@type") == "JobPosting":
+                out.append(x)
+            for li in x.get("itemListElement") or []:
+                it = (li or {}).get("item") if isinstance(li, dict) else None
+                if isinstance(it, dict) and it.get("@type") == "JobPosting":
+                    out.append(it)
+    return out
+
+
+def _ms(v):
+    """Epoch seconds or milliseconds to an ISO date-time."""
+    if not v:
+        return None
+    v = float(v)
+    return datetime.fromtimestamp(v / 1000 if v > 1e11 else v, timezone.utc).isoformat()
+
+
+# "il y a 3 jours", "Há 3 semanas", "2 weeks ago": unit stems in English, French, Portuguese
+_AGO_UNITS = [("min", "hour"), ("hour", "hour"), ("heure", "hour"), ("hora", "hour"),
+              ("day", "day"), ("jour", "day"), ("dia", "day"),
+              ("week", "week"), ("semaine", "week"), ("semana", "week"),
+              ("month", "month"), ("mois", "month"), ("mês", "month"), ("mes", "month"),
+              ("year", "year"), ("ano", "year"), ("an", "year")]
+
+
+def _ago(text):
+    t = (text or "").lower()
+    if re.search(r"\b(today|just now|hoje|new)\b|aujourd", t):
+        return age_to_date(0, "day")
+    if re.search(r"\b(yesterday|hier|ontem)\b", t):
+        return age_to_date(1, "day")
+    m = re.search(r"(\d+|an?|um|uma|une?)\+?\s+([a-zêç]+)", t)
+    if not m:
+        return None
+    n = int(m.group(1)) if m.group(1).isdigit() else 1
+    for stem, unit in _AGO_UNITS:
+        if m.group(2).startswith(stem):
+            return age_to_date(n, unit)
+    return None
+
+
+def _clean_url(u):
+    """Drop tracking parameters a board adds to the employer's link."""
+    u = (u or "").strip()
+    u = re.sub(r"[?&]utm_[^#]*$", "", u)
+    return u or None
+
+
+def agg_uxjobs():
+    """jobs.uxjobs.io embeds its whole board (about 3,500 design roles) as one JSON
+    block in the home page. Short keys: t title, co company, u the ATS link, l location,
+    rf remote region, wp workplace, p posted (ms). The title carries " - Company"."""
+    html = get_text("https://jobs.uxjobs.io/")
+    m = re.search(r'<script type="application/json" id="jobs-data">(.*?)</script>', html, re.S)
+    for j in json.loads(m.group(1)) if m else []:
+        co, title = j.get("co") or "", j.get("t") or ""
+        if co and title.endswith(" - " + co):
+            title = title[:-len(co) - 3]
+        if _l1(title) is not None:
+            continue
+        loc = j.get("l") or ""
+        if j.get("rm") and j.get("rf"):
+            loc = "; ".join(filter(None, [loc, "Remote: " + j["rf"]]))
+        yield {"company": co, "title": title,
+               "url": j.get("u") or f"https://jobs.uxjobs.io/jobs/{j.get('s')}/",
+               "location": loc, "remote": bool(j.get("rm")) or None,
+               "workplace": j.get("wp") or None, "salary": j.get("sal") or None,
+               "posted": _ms(j.get("p"))}
+
+
+def agg_fourdayweek():
+    """4dayweek.io's own API, design category, 25 a page until has_more is false.
+    Early-access rows come with no company and no slug (no page to open) and are skipped."""
+    seen = set()
+    for page in range(1, 80):
+        d = get_json(f"https://4dayweek.io/api/jobs?category=design&page={page}")
+        for j in d.get("jobs") or []:
+            if not j.get("slug") or j.get("id") in seen or j.get("is_expired") or _l1(j.get("title")) is not None:
+                continue
+            seen.add(j.get("id"))
+            locs = j.get("locations") or []
+            loc = "; ".join(", ".join(filter(None, [l.get("city"), l.get("country")])) for l in locs)
+            wa = j.get("work_arrangement") or ""
+            yield {"company": j.get("company_name") or (j.get("company") or {}).get("name"),
+                   "title": j.get("title"), "url": f"https://4dayweek.io/job/{j.get('slug')}",
+                   "location": loc, "remote": (wa == "remote") or None,
+                   "workplace": wa.replace("_", "-").title() or None, "posted": _ms(j.get("posted"))}
+        if not d.get("has_more"):
+            break
+        time.sleep(0.5)
+
+
+def agg_themuse():
+    """The Muse public API, Design and UX category, 20 a page, about 90 pages.
+    Not sorted by date, so every page is read."""
+    page, last = 1, 1
+    while page <= min(last, 120):
+        d = get_json("https://www.themuse.com/api/public/jobs?category=Design%20and%20UX&page=" + str(page))
+        last = int(d.get("page_count") or 1)
+        for j in d.get("results") or []:
+            if _l1(j.get("name")) is not None:
+                continue
+            locs = [l.get("name") for l in j.get("locations") or [] if l.get("name")]
+            yield {"company": (j.get("company") or {}).get("name"), "title": j.get("name"),
+                   "url": (j.get("refs") or {}).get("landing_page"), "location": "; ".join(locs),
+                   "remote": any("remote" in l.lower() for l in locs) or None,
+                   "posted": j.get("publication_date"), "jd_text": strip_html(j.get("contents"))}
+        page += 1
+        time.sleep(0.5)
+
+
+def agg_remotecom():
+    """remote.com's job board. An app-router page: the jobsData object sits in the
+    streamed __next_f text. 20 a page; applyUrl is the employer's posting when given."""
+    seen = set()
+    for q in ("designer", "design"):
+        page, last = 1, 1
+        while page <= min(last, 40):
+            s = _rsc(get_text(f"https://remote.com/jobs/all?query={q}&page={page}"))
+            i = s.find('"jobsData":')
+            if i < 0:
+                break
+            d, _ = json.JSONDecoder().raw_decode(s, i + len('"jobsData":'))
+            last = int(d.get("totalPages") or 1)
+            for j in d.get("jobs") or []:
+                if j.get("slug") in seen or _l1(j.get("title")) is not None:
+                    continue
+                seen.add(j.get("slug"))
+                cp = j.get("companyProfile") or {}
+                hl = j.get("hiringLocation") or {}
+                inc = [((x or {}).get("value") or {}).get("name") for x in hl.get("includedLocations") or []]
+                loc = "Worldwide" if hl.get("type") == "global" else ", ".join(filter(None, inc))
+                wp = (j.get("workplaceLocation") or {}).get("type") or ""
+                comp = j.get("compensation")      # amounts in cents
+                sal = fmt_range((comp.get("minimum") or 0) / 100, (comp.get("maximum") or 0) / 100,
+                                (comp.get("currency") or {}).get("code") or "") if isinstance(comp, dict) else None
+                yield {"company": cp.get("name"), "title": j.get("title"),
+                       "url": j.get("applyUrl") or f"https://remote.com/jobs/{cp.get('slug')}/{j.get('slug')}",
+                       "location": loc, "remote": (wp == "remote") or None,
+                       "workplace": wp.replace("_", "-").title() or None, "salary": sal,
+                       "posted": j.get("publishedAt"), "updated": j.get("updatedAt")}
+            page += 1
+            time.sleep(0.5)
+
+
+def agg_workablesearch():
+    """jobs.workable.com, the search across every Workable employer. Workable
+    rate-limits by IP, so few searches and 2 seconds between calls."""
+    seen = set()
+    searches = ["query=product%20designer&workplace=remote", "query=ux%20designer&workplace=remote",
+                "query=ui%20designer&workplace=remote", "query=product%20designer&location=Portugal",
+                "query=ux%20designer&location=Portugal"]
+    for s in searches:
+        token = None
+        for _ in range(15):
+            url = f"https://jobs.workable.com/api/v1/jobs?{s}&day_range=30"
+            if token:
+                url += "&pageToken=" + urllib.parse.quote(token)
+            d = get_json(url)
+            time.sleep(2)
+            for j in d.get("jobs") or []:
+                if j.get("id") in seen or _l1(j.get("title")) is not None:
+                    continue
+                seen.add(j.get("id"))
+                l = j.get("location") or {}
+                loc = ", ".join(filter(None, [l.get("city"), l.get("subregion"), l.get("countryName")]))
+                wp = j.get("workplace") or ""
+                yield {"company": (j.get("company") or {}).get("title"), "title": j.get("title"),
+                       "url": j.get("url"), "location": loc, "remote": (wp == "remote") or None,
+                       "workplace": wp.replace("_", "-").title() or None,
+                       "posted": j.get("created"), "updated": j.get("updated"),
+                       "jd_text": strip_html(j.get("description"))}
+            token = d.get("nextPageToken")
+            if not token or not d.get("jobs"):
+                break
+
+
+def agg_getonbrd():
+    """Get on Board's public search API (Latin America and Spain), 100 a page.
+    expand=company brings the company name, which the plain rows only give as an id."""
+    seen = set()
+    for q in ("designer", "ux", "diseñador"):
+        page, last = 1, 1
+        while page <= min(last, 20):
+            d = get_json("https://www.getonbrd.com/api/v0/search/jobs?query=" + urllib.parse.quote(q)
+                         + f"&per_page=100&page={page}&expand=%5B%22company%22%5D")
+            last = int((d.get("meta") or {}).get("total_pages") or 1)
+            for j in d.get("data") or []:
+                a = j.get("attributes") or {}
+                if j.get("id") in seen or _l1(a.get("title")) is not None:
+                    continue
+                seen.add(j.get("id"))
+                co = (((a.get("company") or {}).get("data") or {}).get("attributes") or {}).get("name")
+                mod = a.get("remote_modality") or ""
+                yield {"company": co, "title": a.get("title"),
+                       "url": (j.get("links") or {}).get("public_url"),
+                       "location": ", ".join(a.get("countries") or []) or ("Remote" if a.get("remote") else ""),
+                       "remote": bool(a.get("remote")) or None, "workplace": mod.replace("_", " ") or None,
+                       "salary": fmt_range(a.get("min_salary"), a.get("max_salary"), "USD")
+                                 if a.get("min_salary") or a.get("max_salary") else None,
+                       "posted": _ms(a.get("published_at")),
+                       "jd_text": strip_html("\n".join(filter(None, [a.get("functions"), a.get("description"),
+                                                                     a.get("desirable")])))}
+            page += 1
+            time.sleep(0.5)
+
+
+def agg_jobtech():
+    """Sweden's public employment service (Arbetsförmedlingen) JobSearch API, 100 a page.
+    The employer's own link is in application_details when the ad has one."""
+    seen = set()
+    for q in ("designer", "ux"):
+        offset, total = 0, 1
+        while offset < min(total, 2000):
+            d = get_json(f"https://jobsearch.api.jobtechdev.se/search?q={q}&limit=100&offset={offset}")
+            total = int((d.get("total") or {}).get("value") or 0)
+            hits = d.get("hits") or []
+            for j in hits:
+                if j.get("id") in seen or _l1(j.get("headline")) is not None:
+                    continue
+                seen.add(j.get("id"))
+                a = j.get("workplace_address") or {}
+                model = ((j.get("workplace_model") or {}).get("label") or "")
+                yield {"company": (j.get("employer") or {}).get("name"), "title": j.get("headline"),
+                       "url": (j.get("application_details") or {}).get("url") or j.get("webpage_url"),
+                       "location": ", ".join(filter(None, [a.get("city") or a.get("municipality"), a.get("country")])),
+                       "remote": True if "distans" in model.lower() else None, "workplace": model or None,
+                       "posted": j.get("publication_date"),
+                       "jd_text": strip_html((j.get("description") or {}).get("text"))}
+            if not hits:
+                break
+            offset += 100
+            time.sleep(0.5)
+
+
+def agg_djinni():
+    """Djinni (Ukraine and remote). Its RSS has no company, so this reads the listing
+    pages instead: each carries every card as a JobPosting in JSON-LD."""
+    seen = set()
+    for kw in ("Product Design", "UI UX", "Design"):
+        for page in range(1, 20):
+            html = get_text("https://djinni.co/jobs/?primary_keyword=" + urllib.parse.quote_plus(kw)
+                            + (f"&page={page}" if page > 1 else ""))
+            fresh = 0
+            for p in _ld_postings(html):
+                url = p.get("url")
+                if not url or url in seen:
+                    continue
+                seen.add(url)
+                fresh += 1
+                if _l1(p.get("title")) is not None:
+                    continue
+                req = p.get("applicantLocationRequirements") or []
+                req = req if isinstance(req, list) else [req]
+                countries = [((r or {}).get("address") or {}).get("addressCountry") or (r or {}).get("name") for r in req]
+                jl = p.get("jobLocation") or []
+                jl = jl if isinstance(jl, list) else [jl]
+                cities = [((x or {}).get("address") or {}).get("addressLocality") for x in jl]
+                flat = []
+                for v in cities + countries:        # a field can hold one value or a list
+                    flat += v if isinstance(v, list) else [v]
+                remote = p.get("jobLocationType") == "TELECOMMUTE"
+                loc = ", ".join(dict.fromkeys(x for x in flat if isinstance(x, str) and x))
+                yield {"company": (p.get("hiringOrganization") or {}).get("name"), "title": p.get("title"),
+                       "url": url, "location": ("Remote: " + loc if loc else "Remote") if remote else loc,
+                       "remote": remote or None, "posted": p.get("datePosted"),
+                       "jd_text": strip_html(p.get("description"))}
+            if not fresh:
+                break
+            time.sleep(0.5)
+
+
+def _rss_items(url):
+    """<item> blocks and a reader for their tags, CDATA and entities removed. Regex, not
+    an XML parser: several of these feeds are not well-formed."""
+    def g(it, tag):
+        m = re.search(rf"<{tag}\b[^>]*>(.*?)</{tag}>", it, re.S)
+        v = re.sub(r"^\s*<!\[CDATA\[|\]\]>\s*$", "", m.group(1)).strip() if m else ""
+        return unescape(v).strip()
+    return [(it, lambda tag, it=it: g(it, tag)) for it in re.findall(r"<item>(.*?)</item>", get_text(url), re.S)]
+
+
+def agg_remotefirstjobs():
+    """remotefirstjobs.com design feed, "<title> at <company>"."""
+    for _, g in _rss_items("https://remotefirstjobs.com/rss/jobs/design.rss"):
+        title, _, company = g("title").rpartition(" at ")
+        if not title:
+            title, company = g("title"), ""
+        if _l1(title) is not None:
+            continue
+        yield {"company": company, "title": title, "url": g("link"), "location": "",
+               "remote": True, "posted": _rfc822(g("pubDate")), "jd_text": strip_html(g("description"))}
+
+
+def agg_tryremotely():
+    """tryremotely.com: one feed of every posting, all categories, with company and location tags."""
+    for _, g in _rss_items("https://tryremotely.com/feeds/remote-jobs.rss"):
+        if _l1(g("title")) is not None:
+            continue
+        lo, hi = g("min_salary"), g("max_salary")
+        yield {"company": g("company"), "title": g("title"), "url": g("link"), "location": g("location"),
+               "remote": True if "remote" in (g("work_model") + g("location")).lower() else None,
+               "workplace": g("work_model") or None, "employment_type": g("job_type") or None,
+               "salary": fmt_range(lo, hi, "USD") if (lo or hi) else None,
+               "posted": _rfc822(g("pubDate")), "jd_text": strip_html(g("description"))}
+
+
+def agg_realworkfromanywhere():
+    """realworkfromanywhere.com: the design feed plus the all-jobs feed (malformed XML)."""
+    seen = set()
+    for url in ("https://www.realworkfromanywhere.com/remote-design-jobs/rss.xml",
+                "https://www.realworkfromanywhere.com/rss.xml"):
+        for _, g in _rss_items(url):
+            link = g("link")
+            title, _, company = g("title").rpartition(" at ")
+            if not title:
+                title, company = g("title"), ""
+            if link in seen or _l1(title) is not None:
+                continue
+            seen.add(link)
+            yield {"company": g("author") or company.strip(), "title": title.strip(), "url": link,
+                   "location": "Anywhere", "remote": True, "posted": _rfc822(g("pubDate")),
+                   "jd_text": strip_html(g("description"))}
+
+
+def agg_itjobs():
+    """itjobs.pt feeds; the keyword feeds are the only filter. Company and town are lines in the description."""
+    seen = set()
+    for q in ("ux", "designer", "design"):
+        for _, g in _rss_items(f"https://www.itjobs.pt/feed/emprego?q={q}"):
+            link = g("link")
+            if link in seen or _l1(g("title")) is not None:
+                continue
+            seen.add(link)
+            desc = g("description")
+            f = lambda k: (re.search(rf"{k}:\s*([^<\n]+)", desc) or [None, ""])[1].strip()
+            loc = f("Localidade")
+            yield {"company": f("Empresa"), "title": g("title"), "url": link, "location": loc or "Portugal",
+                   "remote": True if re.search(r"remot", loc + f("Tipo"), re.I) else None,
+                   "posted": _rfc822(g("pubDate"))}
+
+
+def agg_cargadetrabalhos():
+    """cargadetrabalhos.pt (Portuguese creative jobs): the WordPress feed, 10 a page."""
+    seen = set()
+    for page in range(1, 15):
+        try:
+            items = _rss_items(f"https://cargadetrabalhos.pt/ofertas/feed/?paged={page}")
+        except urllib.error.HTTPError:
+            break               # past the last page WordPress answers 404
+        fresh = 0
+        for _, g in items:
+            link = g("link")
+            if link in seen:
+                continue
+            seen.add(link)
+            fresh += 1
+            if _l1(g("title")) is not None:
+                continue
+            kind = g("job:type")       # either a workplace (Híbrido, Remoto) or a contract (Full Time, Estágio)
+            place = bool(re.search(r"remot|h[íi]brido|presencial", kind, re.I))
+            yield {"company": g("job:company") or g("dc:creator"), "title": g("title"), "url": link,
+                   "location": g("job:address") or "Portugal",
+                   "remote": True if re.search(r"remot", kind, re.I) else None,
+                   "workplace": kind if place else None, "employment_type": None if place else (kind or None),
+                   "posted": _rfc822(g("pubDate")), "jd_text": strip_html(g("description"))}
+        if not fresh:
+            break
+        time.sleep(0.5)
+
+
+def devjobs(host, currency):
+    """germantechjobs / swissdevjobs / devitjobs (one company, one code base). Their RSS
+    has no location, so this reads /api/jobsLight, the list the site's own map draws:
+    every live job with city, workplace, salary and the date it went live."""
+    for j in get_json(f"https://{host}/api/jobsLight"):
+        if j.get("isPaused") or _l1(j.get("name")) is not None:
+            continue
+        wp = j.get("workplace") or ""
+        # redirectJobUrl is the employer's own posting, when the job has one
+        emp = _clean_url(re.sub(r"#apply$", "", j.get("redirectJobUrl") or ""))
+        yield {"company": j.get("company"), "title": j.get("name"),
+               "url": emp or f"https://{host}/jobs/{j.get('jobUrl')}",
+               "location": ", ".join(dict.fromkeys(filter(None, [j.get("actualCity"), j.get("cityCategory")]))),
+               "remote": (wp == "remote") or None,
+               "workplace": {"office": "On-site"}.get(wp, wp.title()) or None,
+               "salary": fmt_range(j.get("annualSalaryFrom"), j.get("annualSalaryTo"), currency)
+                         if j.get("annualSalaryFrom") else None,
+               "employment_type": j.get("jobType") or None, "posted": j.get("activeFrom")}
+
+
+def agg_simplyhired():
+    """simplyhired.pt (Indeed's), newest first, last 30 days. Next pages need the cursor
+    the page itself carries in pageCursors."""
+    seen = set()
+    for q in ("product designer", "ux designer", "ui designer"):
+        base = "https://www.simplyhired.pt/search?q=" + urllib.parse.quote_plus(q) + "&s=d&t=30"
+        url = base
+        for _ in range(40):
+            pp = (_next_data(get_text(url)).get("props") or {}).get("pageProps") or {}
+            for j in pp.get("jobs") or []:
+                if j.get("jobKey") in seen or _l1(j.get("title")) is not None:
+                    continue
+                seen.add(j.get("jobKey"))
+                ra = ", ".join(j.get("remoteAttributes") or [])
+                yield {"company": j.get("company"), "title": j.get("title"),
+                       "url": "https://www.simplyhired.pt/job/" + j["jobKey"],
+                       "location": j.get("location") or "", "workplace": ra or None,
+                       "remote": True if re.search(r"remot", ra, re.I) else None,
+                       "salary": j.get("salaryInfo") or None, "posted": _ms(j.get("dateOnIndeed")),
+                       "jd_text": strip_html(j.get("snippet"))}
+            nxt = (pp.get("pageCursors") or {}).get(str(int(pp.get("currentPageNumber") or 1) + 1))
+            if not nxt or not pp.get("jobs"):
+                break
+            url = base + "&cursor=" + urllib.parse.quote(nxt)
+            time.sleep(1)
+
+
+def agg_remoterocketship():
+    """remoterocketship.com: a role page shows only its 20 newest (?page= is ignored), so
+    this reads many role x region pages and keeps each job once. url is the employer's posting."""
+    roles = ["product-designer", "senior-product-designer", "lead-product-designer",
+             "mid-level-product-designer", "junior-product-designer", "ux-designer",
+             "senior-ux-designer", "ui-designer", "ui-ux-designer"]
+    regions = ["", "country/europe/", "country/portugal/"]
+    seen = set()
+    for region in regions:
+        for role in roles:
+            try:
+                html = get_text(f"https://www.remoterocketship.com/{region}jobs/{role}/")
+            except urllib.error.HTTPError:
+                continue
+            pp = (_next_data(html).get("props") or {}).get("pageProps") or {}
+            for j in pp.get("initialJobOpenings") or []:
+                if j.get("id") in seen or _l1(j.get("roleTitle")) is not None:
+                    continue
+                seen.add(j.get("id"))
+                co = j.get("company") or {}
+                lt = j.get("locationType") or ""
+                sr = j.get("salaryRange")
+                yield {"company": co.get("name"), "title": j.get("roleTitle"),
+                       "url": j.get("url") or f"https://www.remoterocketship.com/company/{co.get('slug')}/jobs/{j.get('slug')}/",
+                       "location": j.get("location") or "", "remote": (lt == "remote") or None,
+                       "workplace": lt.title() or None, "employment_type": j.get("employmentType") or None,
+                       "salary": fmt_range(sr.get("min"), sr.get("max"), sr.get("currency") or "")
+                                 if isinstance(sr, dict) else None,
+                       "posted": j.get("created_at")}
+            time.sleep(1)
+
+
+def _astro(v):
+    """Astro serialises island props as [0, value] / [1, [items]] pairs; this unwraps them."""
+    if isinstance(v, list) and len(v) == 2 and isinstance(v[0], int):
+        t, x = v
+        if t == 1:
+            return [_astro(y) for y in x]
+        return {k: _astro(y) for k, y in x.items()} if isinstance(x, dict) else x
+    if isinstance(v, dict):
+        return {k: _astro(y) for k, y in v.items()}
+    return v
+
+
+def agg_jobgether():
+    """jobgether.com remote roles open to Portugal, 50 a page. The ItemList JSON-LD has
+    titles only; the full offers (company, apply link, date) are in the Astro island props."""
+    seen = set()
+    # the two role pages jobgether has for Portugal; ux-designer and ui-designer answer 410
+    for role in ("product-designer", "ux-ui-designer"):
+        page, last = 1, 1
+        while page <= min(last, 20):
+            try:
+                html = get_text(f"https://jobgether.com/remote-jobs/portugal/{role}?page={page}")
+            except urllib.error.HTTPError:
+                break           # a role with no offers in Portugal answers 410 Gone
+            res = {}
+            for m in re.finditer(r'<astro-island[^>]*?props="([^"]*)"', html):
+                if "offersRes" in m.group(1):
+                    res = _astro(json.loads(unescape(m.group(1)))).get("offersRes") or {}
+                    break
+            last = int(res.get("maxPages") or 1)
+            for j in res.get("data") or []:
+                if j.get("id") in seen or _l1(j.get("title")) is not None:
+                    continue
+                seen.add(j.get("id"))
+                # Ashby and careers-page links point at the form; the posting is one level up
+                apply = re.sub(r"/(application|apply)/?$", "", j.get("applyUrl") or "")
+                if apply and apply in seen:
+                    continue    # one posting listed again per country
+                seen.add(apply)
+                yield {"company": (j.get("companyData") or {}).get("name"), "title": j.get("title"),
+                       "url": apply or f"https://jobgether.com/offer/{j.get('slug')}",
+                       "location": j.get("requiredLocations") or "", "remote": True,
+                       "workplace": j.get("remoteOfferType") or None,
+                       "employment_type": j.get("contractType") or None, "posted": j.get("createdAt")}
+            page += 1
+            time.sleep(1)
+
+
+def agg_talentpt():
+    """pt.talent.com. The cards print "16 horas atrás", but the streamed page data carries
+    the real dates (system_date_found, re_found when reposted) and the employer's link."""
+    seen = set()
+    for q in ("product designer", "ux designer", "ui designer"):
+        for page in range(1, 26):
+            s = _rsc(get_text("https://pt.talent.com/jobs?k=" + urllib.parse.quote_plus(q) + f"&l=Portugal&p={page}"))
+            dec, fresh = json.JSONDecoder(), 0
+            for m in re.finditer(r'\{"id":"\d+","source_title"', s):
+                j, _ = dec.raw_decode(s, m.start())
+                if j["id"] in seen:
+                    continue
+                seen.add(j["id"])
+                fresh += 1
+                url = _clean_url(j.get("source_link")) or f"https://pt.talent.com/view?id={j.get('system_legacy_id')}"
+                if url in seen or _l1(j.get("source_title")) is not None:
+                    continue
+                seen.add(url)     # the same posting can come in from two feeds
+                yield {"company": j.get("enrich_company_name"), "title": j.get("source_title"),
+                       "url": url,
+                       "location": j.get("source_location") or "",
+                       "remote": True if j.get("enrich_geo_remote") else None,
+                       "posted": j.get("system_date_found") or None, "updated": j.get("system_date_re_found") or None,
+                       "jd_text": strip_html(j.get("source_jobdesc_text"))}
+            if not fresh:
+                break
+            time.sleep(1)
+
+
+def agg_designjobsboard():
+    """designjobsboard.com (UK design jobs): every live job is a panel on the home page,
+    with company, location, salary and "JOB ADDED: 4 days ago"."""
+    html = get_text("https://www.designjobsboard.com/")
+    parts = re.split(r'<div\s+class="panel [^"]*"[^>]*?data-panel-id="(\d+)"', html)
+    for pid, p in zip(parts[1::2], parts[2::2]):
+        heads = re.findall(r'<div class="hidden md:flex col-span-[^"]*"><span class="truncate">(.*?)</span>', p, re.S)
+        if len(heads) < 2:
+            continue
+        company, title = (strip_html(x, 200) for x in heads[:2])
+        if _l1(title) is not None:
+            continue
+        w = lambda name: (lambda m: strip_html(m.group(1), 200) if m else "")(
+            re.search(rf'>{name}</p>\s*<p[^>]*>(.*?)</p>', p, re.S))
+        url = re.search(rf'https://www\.designjobsboard\.com/job/{pid}/[^/"\s]+/', p)
+        body = re.search(r'class="job_listing_content[^"]*">(.*?)</div>', p, re.S)
+        loc = w("LOCATION")
+        yield {"company": company, "title": title,
+               "url": url.group(0) if url else f"https://www.designjobsboard.com/job/{pid}/",
+               "location": loc, "remote": True if re.search(r"remote", loc, re.I) else None,
+               "salary": w("SALARY") or None, "posted": _ago(w("JOB ADDED")),
+               "jd_text": strip_html(body.group(1)) if body else None}
+
+
+def agg_dynamitejobs():
+    """dynamitejobs.com skill pages: each holds its 20 newest in window.__PINIA_STATE__."""
+    seen = set()
+    for skill in ("product-design", "ux-design", "ui-design", "design-system"):
+        try:
+            html = get_text(f"https://dynamitejobs.com/skill/remote-{skill}-jobs")
+        except urllib.error.HTTPError:
+            continue
+        m = re.search(r'window\.__PINIA_STATE__ = ("(?:[^"\\]|\\.)*")', html)
+        st = json.loads(json.loads(m.group(1))) if m else {}
+        for j in (st.get("skillJobs") or {}).get("jobs") or []:
+            if j.get("id") in seen or j.get("status") != "published" or _l1(j.get("title")) is not None:
+                continue
+            seen.add(j.get("id"))
+            co, sal = j.get("company") or {}, j.get("salary") or {}
+            yield {"company": co.get("name"), "title": j.get("title"),
+                   "url": f"https://dynamitejobs.com/company/{co.get('username')}/remote-job/{j.get('slug')}",
+                   "location": ", ".join(j.get("locationSlugs") or []) or "Anywhere", "remote": True,
+                   "salary": fmt_range(sal.get("from"), sal.get("to"), sal.get("currency") or "")
+                             if sal.get("public") else None,
+                   "employment_type": ((j.get("type") or {}).get("name") or {}).get("display"),
+                   "posted": _ms(j.get("publishedAt")), "updated": _ms(j.get("updatedAt")),
+                   "jd_text": j.get("shortDescription")}
+        time.sleep(1)
+
+
+def agg_michaelpage():
+    """michaelpage.pt design jobs. The recruiter never names its client. The only date is
+    the month in the ref (jn-MMYYYY-...); the row takes that month's last day (today at most),
+    so a posting is never made to look older than it can be."""
+    seen = set()
+    for page in range(0, 15):
+        try:
+            html = get_text("https://www.michaelpage.pt/jobs/design" + (f"?page={page}" if page else ""))
+        except urllib.error.HTTPError:
+            break               # today the whole list fits one page and ?page=1 is a 404
+        tiles = re.split(r'<li class="views-row">', html)[1:]
+        fresh = 0
+        for t in tiles:
+            m = re.search(r'<a href="(/job-detail/[^"]+)"[^>]*>(.*?)</a>', t, re.S)
+            if not m or m.group(1) in seen:
+                continue
+            seen.add(m.group(1))
+            fresh += 1
+            title = strip_html(m.group(2), 200)
+            if _l1(title) is not None:
+                continue
+            g = lambda cls: (lambda x: strip_html(x.group(1), 200) if x else "")(
+                re.search(rf'class="{cls}">(.*?)</div>', t, re.S))
+            nature = g("job-nature")
+            posted = None
+            d = re.search(r"jn-(\d{2})(\d{4})-", m.group(1))
+            if d:
+                mo, yr = int(d.group(1)), int(d.group(2))
+                end = datetime(yr + (mo == 12), mo % 12 + 1, 1, tzinfo=timezone.utc) - timedelta(days=1)
+                posted = min(end, datetime.now(timezone.utc)).strftime("%Y-%m-%d")
+            yield {"company": "Michael Page", "title": title, "url": "https://www.michaelpage.pt" + m.group(1),
+                   "location": g("job-location"), "workplace": nature or None,
+                   "remote": True if re.search(r"remot", nature, re.I) else None,
+                   "employment_type": g("job-contract-type") or None, "posted": posted,
+                   "jd_text": g("job_advert__job-summary-text") or None}
+        if not fresh:
+            break
+        time.sleep(1)
+
+
+def agg_hellowork():
+    """hellowork.com (France), 30 a page, dates as "il y a 3 jours"."""
+    seen = set()
+    for q in ("product designer", "ux designer", "ui designer"):
+        for page in range(1, 15):
+            html = get_text("https://www.hellowork.com/fr-fr/emploi/recherche.html?k=" + urllib.parse.quote_plus(q)
+                            + (f"&p={page}" if page > 1 else ""))
+            cards = re.split(r'data-id-storage-item-id="(\d+)"', html)
+            fresh = 0
+            for jid, c in zip(cards[1::2], cards[2::2]):
+                if jid in seen:
+                    continue
+                seen.add(jid)
+                fresh += 1
+                t = re.search(r'<p class="typo-l[^"]*">(.*?)</p>\s*<p class="typo-s[^"]*">(.*?)</p>', c, re.S)
+                if not t:
+                    continue
+                title = strip_html(t.group(1), 200)
+                if _l1(title) is not None:
+                    continue
+                tag = lambda cy: (lambda x: strip_html(x.group(1), 200) if x else "")(
+                    re.search(rf'data-cy="{cy}"\s*>(.*?)</div>', c, re.S))
+                tele = tag("contractTag")
+                when = re.search(r'>\s*(il y a [^<]+|Aujourd[^<]+|Hier[^<]*)<', c)
+                yield {"company": strip_html(t.group(2), 200), "title": title,
+                       "url": f"https://www.hellowork.com/fr-fr/emplois/{jid}.html",
+                       "location": tag("localisationCard"), "workplace": tele or None,
+                       "remote": True if re.search(r"t[ée]l[ée]travail complet|full remote", tele, re.I) else None,
+                       "employment_type": tag("contractCard") or None,
+                       "posted": _ago(when.group(1)) if when else None}
+            if not fresh:
+                break
+            time.sleep(1)
+
+
+def agg_tecnoempleo():
+    """tecnoempleo.com (Spain, IT): server-rendered cards with dd/mm/yyyy dates."""
+    seen = set()
+    for q in ("product designer", "ux", "ui designer", "diseñador ux"):
+        for page in range(1, 10):
+            try:
+                html = get_text("https://www.tecnoempleo.com/ofertas-trabajo/?te=" + urllib.parse.quote_plus(q)
+                                + (f"&pagina={page}" if page > 1 else ""))
+            except urllib.error.HTTPError:
+                break           # no next page: the site answers 404
+            cards = re.split(r'<div class="p-3 border rounded mb-3', html)[1:]
+            fresh = 0
+            for c in cards:
+                m = re.search(r'<h3[^>]*>\s*<a href="([^"]+)"[^>]*>(.*?)</a>', c, re.S)
+                if not m or m.group(1) in seen:
+                    continue
+                seen.add(m.group(1))
+                fresh += 1
+                title = strip_html(m.group(2), 200)
+                if _l1(title) is not None:
+                    continue
+                co = re.search(r'</h3>\s*<a[^>]*>(.*?)</a>', c, re.S)
+                where = re.search(r'<b>([^<]+)</b>\s*(\([^)]*\))?\s*-\s*(\d{2})/(\d{2})/(\d{4})', c)
+                mode = (where.group(2) or "").strip("()") if where else ""
+                yield {"company": strip_html(co.group(1), 200) if co else "", "title": title, "url": m.group(1),
+                       "location": where.group(1).strip() if where else "", "workplace": mode or None,
+                       "remote": True if re.search(r"remot", mode, re.I) else None,
+                       "posted": f"{where.group(5)}-{where.group(4)}-{where.group(3)}" if where else None}
+            if not fresh:
+                break
+            time.sleep(1)
+
+
+def agg_jobsch():
+    """jobs.ch (Switzerland). Each results page lists its 20 jobs as JobPosting JSON-LD.
+    The search is fuzzy and sorted by relevance, so a page with no design title ends the search."""
+    seen = set()
+    for q in ("product designer", "ux designer", "ui designer"):
+        for page in range(1, 15):
+            html = get_text("https://www.jobs.ch/en/vacancies/?term=" + urllib.parse.quote(q)
+                            + (f"&page={page}" if page > 1 else ""))
+            posts, kept = _ld_postings(html), 0
+            for p in posts:
+                url = p.get("url")
+                if _l1(p.get("title")) is not None:
+                    continue
+                kept += 1
+                if url in seen:
+                    continue
+                seen.add(url)
+                jl = p.get("jobLocation") or []
+                jl = jl if isinstance(jl, list) else [jl]
+                loc = "; ".join(", ".join(filter(None, [((x or {}).get("address") or {}).get("addressLocality"),
+                                                        ((x or {}).get("address") or {}).get("addressCountry")]))
+                                for x in jl)
+                yield {"company": (p.get("hiringOrganization") or {}).get("name"), "title": p.get("title"),
+                       "url": url, "location": loc,
+                       "remote": (p.get("jobLocationType") == "TELECOMMUTE") or None,
+                       "employment_type": p.get("employmentType") or None, "posted": p.get("datePosted"),
+                       "jd_text": strip_html(p.get("description"))}
+            if not posts or not kept:
+                break
+            time.sleep(1)
+
+
+def agg_arcdev():
+    """arc.dev remote jobs. A category page holds its 30 newest and has no next page for
+    a visitor, so several design categories are read."""
+    seen = set()
+    for cat in ("ux-design", "ui-design", "product-design", "product-ux-design", "design-systems",
+                "service-design", "ui-web-design"):
+        try:
+            html = get_text(f"https://arc.dev/remote-jobs/{cat}")
+        except urllib.error.HTTPError:
+            continue
+        pp = (_next_data(html).get("props") or {}).get("pageProps") or {}
+        for j in pp.get("externalJobs") or []:
+            if j.get("randomKey") in seen or _l1(j.get("title")) is not None:
+                continue
+            seen.add(j.get("randomKey"))
+            yield {"company": (j.get("company") or {}).get("name"), "title": j.get("title"),
+                   "url": f"https://arc.dev/remote-jobs/j/{j.get('urlString')}-{j.get('randomKey')}",
+                   "location": ", ".join(j.get("requiredCountries") or []) or "Anywhere", "remote": True,
+                   "employment_type": j.get("jobType") or None, "posted": _ms(j.get("postedAt"))}
+        time.sleep(1)
+
+
+def agg_expressoemprego():
+    """expressoemprego.pt. Its keyword search returns everything, so this reads the newest
+    jobs, 15 a page, and keeps the design titles. About 15 pages a day are posted; reading
+    stops at the first page older than 45 days, or where paging wraps back to page 1."""
+    seen, oldest = set(), (datetime.now(timezone.utc) - timedelta(days=45)).strftime("%Y-%m-%d")
+    for page in range(1, 250):
+        html = get_text(f"https://expressoemprego.pt/ofertas-emprego?order=data&page={page}")
+        fresh = 0
+        for c in re.split(r'<div class="posRelative bgGray1 resultadosBox', html)[1:]:
+            m = re.search(r'<h3[^>]*>\s*<a href="([^"]+)" title="[^"]*">(.*?)</a>', c, re.S)
+            if not m or m.group(1) in seen:
+                continue
+            seen.add(m.group(1))
+            fresh += 1
+            title = strip_html(m.group(2), 200)
+            if _l1(title) is not None:
+                continue
+            co = re.search(r'<h4[^>]*>(.*?)</h4>', c, re.S)
+            when = re.search(r'(\d{2})\.(\d{2})\.(\d{4})\s*<span[^>]*>\|</span>\s*([^<]*)<', c)
+            loc = when.group(4).strip() if when else ""
+            yield {"company": strip_html(co.group(1), 200) if co else "", "title": title,
+                   "url": "https://expressoemprego.pt" + m.group(1), "location": loc,
+                   "remote": True if re.search(r"remot", loc, re.I) else None,
+                   "posted": f"{when.group(3)}-{when.group(2)}-{when.group(1)}" if when else None}
+        dates = ["-".join(reversed(d)) for d in re.findall(r"(\d{2})\.(\d{2})\.(\d{4})\s*<span", html)]
+        if not fresh or (dates and max(dates) < oldest):
+            break
+        time.sleep(1)
+
+
+def agg_teamlyzer():
+    """pt.teamlyzer.com IT jobs in Portugal: about 34 pages of 40, all read; the filter
+    is the title. Dates print as "Há 3 semanas"."""
+    seen = set()
+    for page in range(1, 45):
+        html = get_text(f"https://pt.teamlyzer.com/companies/jobs?page={page}")
+        fresh = 0
+        for c in re.split(r'<div class="panel jobcard">', html)[1:]:
+            m = re.search(r'class="jobcard__title-link" href="([^"]+)">(.*?)</a>', c, re.S)
+            if not m or m.group(1) in seen:
+                continue
+            seen.add(m.group(1))
+            fresh += 1
+            title = strip_html(m.group(2), 200)
+            if _l1(title) is not None:
+                continue
+            g = lambda cls: (lambda x: strip_html(x.group(1), 200) if x else "")(
+                re.search(rf'class="{cls}"[^>]*>(.*?)</(?:a|span)>', c, re.S))
+            loc = g("jobcard__location")
+            # a new card shows a "Nova" badge instead of its age: dated today
+            age = g("jobcard__on-site") or ("hoje" if "jobcard__new-badge" in c else "")
+            yield {"company": g("jobcard__company"), "title": title,
+                   "url": "https://pt.teamlyzer.com" + m.group(1), "location": loc,
+                   "remote": True if re.search(r"remot", loc, re.I) else None,
+                   "posted": _ago(age)}
+        if not fresh:
+            break
+        time.sleep(1)
+
+
+AGGREGATORS.update({
+    "uxjobs": agg_uxjobs, "fourdayweek": agg_fourdayweek, "themuse": agg_themuse,
+    "remotecom": agg_remotecom, "workablesearch": agg_workablesearch, "getonbrd": agg_getonbrd,
+    "jobtech": agg_jobtech, "djinni": agg_djinni, "remotefirstjobs": agg_remotefirstjobs,
+    "tryremotely": agg_tryremotely, "realworkfromanywhere": agg_realworkfromanywhere,
+    "itjobs": agg_itjobs, "cargadetrabalhos": agg_cargadetrabalhos,
+    "germantechjobs": lambda: devjobs("germantechjobs.de", "EUR"),
+    "swissdevjobs": lambda: devjobs("swissdevjobs.ch", "CHF"),
+    "devitjobs": lambda: devjobs("devitjobs.com", "CAD"),
+    "devitjobsuk": lambda: devjobs("devitjobs.uk", "GBP"),
+    "simplyhired": agg_simplyhired, "remoterocketship": agg_remoterocketship,
+    "jobgether": agg_jobgether, "talentpt": agg_talentpt, "designjobsboard": agg_designjobsboard,
+    "dynamitejobs": agg_dynamitejobs, "michaelpage": agg_michaelpage, "hellowork": agg_hellowork,
+    "tecnoempleo": agg_tecnoempleo, "jobsch": agg_jobsch, "arcdev": agg_arcdev,
+    "expressoemprego": agg_expressoemprego, "teamlyzer": agg_teamlyzer})
+
+
 SKIP = set()          # sources deliberately not scraped this run
 
 
