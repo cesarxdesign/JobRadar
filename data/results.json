@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-10-20T11:46:14+00:00",
- "built_at": "2026-10-20T21:18+01:00",
+ "built_at": "2026-10-20T21:21+01:00",
  "run_id": "2026-10-20T11:46:14+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
  "last_partial": "2026-10-20T11:46:14+00:00",
@@ -14,9 +14,9 @@
   "ghosts": 0,
   "cut": 21,
   "closed": 759,
-  "vision_cut": 17820,
+  "vision_cut": 17828,
   "agency": 0,
-  "not_read": 10,
+  "not_read": 2,
   "folded": 175,
   "vision_read": 24689,
   "title_cuts": 51511,
@@ -17972,6 +17972,8 @@
   "486a001fbfe74223",
   "111470521f7e4d8b",
   "e6bc58a12831415c",
+  "d85e574a93494c70",
+  "7a9e4df07bf5487c",
   "226600c260d444e9",
   "4ebeb5616a3f4a41",
   "0a977a3aa8704f88",
@@ -17985,6 +17987,7 @@
   "b687c93f189744a2",
   "2e099e471bcd4280",
   "05bb08ba6acb45cf",
+  "1872507b17e348ef",
   "cb5b01aae65b44d4",
   "4b3de2b644b44570",
   "334fcd1e54414f01",
@@ -18570,6 +18573,7 @@
   "4fe45f09bf54473a",
   "c57d3a86790843d8",
   "0544e87a17944b00",
+  "8c8c75c98ece4c5c",
   "af4a88c5cfa84180",
   "1ac2d40bdaa841e5",
   "a1cce8c13e00462c",
@@ -18577,6 +18581,7 @@
   "79b2f002462e4a4a",
   "c69fccfcaf1247e0",
   "d612eb16898b44bd",
+  "6e581c954ecc499f",
   "93b22d8deac84835",
   "6b70f275fef5450b",
   "3d87e4bfcbf14291",
@@ -18587,6 +18592,7 @@
   "6bc25bd81a7c46c5",
   "3c9300697d244a8e",
   "599d68afe4d54d32",
+  "f0e75087633642d2",
   "cd5befecdd9e474f",
   "047dfda22ef348ee",
   "dc2e5b07a08e4f92",
@@ -18594,6 +18600,7 @@
   "39303f30baeb4a73",
   "c975be0927a54afb",
   "8870e71fc7e44024",
+  "9b2b026d9db549c5",
   "e2c6ddcf4fee4a2b",
   "b4437f5b06d14555",
   "d9b23cf9666b484d",
@@ -18987,6 +18994,7 @@
   "3d354a03e10a4d78",
   "970747729aff4002",
   "00dd783b041045c8",
+  "00412768ac9a4a26",
   "07827edebee64e42",
   "040c13b51268421c",
   "531d6187e1454dad",
@@ -19465,15 +19473,7 @@
  ],
  "unread": [
   "2dc6c294a7774ee7",
-  "cc7fb0a126a3418c",
-  "d85e574a93494c70",
-  "7a9e4df07bf5487c",
-  "1872507b17e348ef",
-  "8c8c75c98ece4c5c",
-  "6e581c954ecc499f",
-  "f0e75087633642d2",
-  "9b2b026d9db549c5",
-  "00412768ac9a4a26"
+  "cc7fb0a126a3418c"
  ],
  "sources": {
   "ok": 5556,
@@ -1304826,10 +1304826,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only the title and company boilerplate with no job description, so it is an empty shell and place cannot be judged.",
+     "The page shows only the title and company boilerplate with no job description, so it is not a readable posting and place cannot be determined.",
      "the page says: \"Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.\"",
      "the page says: \"Senior Product Designer II - Lifecycle & Growth Get a Taste of Instacart\""
     ],
@@ -1304854,7 +1304854,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.instacart.careers/job?id=8191765",
-    "reason": "The page shows only the title and company boilerplate with no job description, so it is an empty shell and place cannot be judged.",
+    "reason": "the page would not open on two runs · The page shows only the title and company boilerplate with no job description, so it is not a readable posting and place cannot be determined.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1304863,7 +1304863,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d85e574a93494c70.jpg",
-    "read_at": "2026-10-20T21:16:28",
+    "read_at": "2026-10-20T21:20:22",
     "evidence": {
      "board_posted": "2026-09-11"
     }
@@ -1304887,10 +1304887,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only the title and company boilerplate with no job description, so it is an empty shell and the role and place cannot be judged.",
+     "The page shows only the title and company boilerplate with no job description, so the posting content is unreadable and place cannot be determined.",
      "the page says: \"Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.\"",
      "the page says: \"Senior Product Designer II - Lifecycle & Growth\""
     ],
@@ -1304912,13 +1304912,10 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "posting_open set to unreadable because no job description is present, only the title and generic footer text",
-     "company taken from the pool and page address; the page itself says Instacart, and the pool lists Caper (an Instacart company)"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://www.instacart.careers/job?id=8191763",
-    "reason": "The page shows only the title and company boilerplate with no job description, so it is an empty shell and the role and place cannot be judged.",
+    "reason": "the page would not open on two runs · The page shows only the title and company boilerplate with no job description, so the posting content is unreadable and place cannot be determined.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1304927,7 +1304924,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7a9e4df07bf5487c.jpg",
-    "read_at": "2026-10-20T21:16:28",
+    "read_at": "2026-10-20T21:20:22",
     "evidence": {
      "board_posted": "2026-09-11"
     }
@@ -1306255,10 +1306252,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a careers landing page with a list of 43 positions and no description of the Senior Nuclear Engineer SMR Design role, so it is not a single job posting.",
+     "The page is a careers landing page with a list of 43 openings (the listing is cut off), not a single posting for the Senior Nuclear Engineer role, and no description of that role appears.",
      "the page says: \"43 positions found\"",
      "the page says: \"43 positions found\""
     ],
@@ -1306268,7 +1306265,7 @@
     "confidence": "high",
     "fields": {
      "role": "Senior Nuclear Engineer - Small Modular Reactor Design",
-     "company": "NDB (Gammanics per pool)",
+     "company": "NDB (Gammanics)",
      "seniority": "senior",
      "remote": "unstated",
      "onsite_days": null,
@@ -1306280,13 +1306277,10 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "same_job is no because the page shows a general careers page and internship listings, not the Senior Nuclear Engineer posting",
-     "workplace_as_posted not stated because no description for this role appears"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://ndb.technology/careers#senior-nuclear-engineer-small-modular-reactor-design-479e99e7",
-    "reason": "The page is a careers landing page with a list of 43 positions and no description of the Senior Nuclear Engineer SMR Design role, so it is not a single job posting.",
+    "reason": "the page would not open on two runs · The page is a careers landing page with a list of 43 openings (the listing is cut off), not a single posting for the Senior Nuclear Engineer role, and no description of that role appears.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1306295,7 +1306289,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1872507b17e348ef.jpg",
-    "read_at": "2026-10-20T21:15:38",
+    "read_at": "2026-10-20T21:20:22",
     "evidence": {
      "board_posted": "2026-09-15"
     }
@@ -1352232,8 +1352226,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"This Website is not available in your country\""
@@ -1352246,7 +1352240,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://careers.athenahealth.com/us/en/job/R15431/Lead-UX-Designer",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1352255,7 +1352249,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/8c8c75c98ece4c5c.jpg",
-    "read_at": "2026-10-20T21:16:08",
+    "read_at": "2026-10-20T21:20:33",
     "evidence": {
      "board_posted": "2026-09-14"
     }
@@ -1352799,10 +1352793,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a generic Red Badger careers page with no job description, so it is not a single job posting.",
+     "The page is a generic Red Badger careers page with no job description, so the posting itself is not shown.",
      "the page says: \"Join Red Badger\""
     ],
     "judged": true,
@@ -1352826,7 +1352820,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://content.red-badger.com/all-jobs?gh_jid=7990881003",
-    "reason": "The page is a generic Red Badger careers page with no job description, so it is not a single job posting.",
+    "reason": "the page would not open on two runs · The page is a generic Red Badger careers page with no job description, so the posting itself is not shown.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1352835,7 +1352829,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6e581c954ecc499f.jpg",
-    "read_at": "2026-10-20T21:16:43",
+    "read_at": "2026-10-20T21:20:22",
     "evidence": {
      "board_posted": "2026-09-10"
     }
@@ -1353425,10 +1353419,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a generic Red Badger careers landing page with no job description, so the posting cannot be read.",
+     "The page is Red Badger's generic careers landing page with no job description, so the posting itself is not visible.",
      "the page says: \"Join Red Badger\""
     ],
     "judged": true,
@@ -1353452,7 +1353446,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://content.red-badger.com/all-jobs?gh_jid=7988749003",
-    "reason": "The page is a generic Red Badger careers landing page with no job description, so the posting cannot be read.",
+    "reason": "the page would not open on two runs · The page is Red Badger's generic careers landing page with no job description, so the posting itself is not visible.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1353461,7 +1353455,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f0e75087633642d2.jpg",
-    "read_at": "2026-10-20T21:17:19",
+    "read_at": "2026-10-20T21:20:22",
     "evidence": {
      "board_posted": "2026-09-08"
     }
@@ -1354006,10 +1354000,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a generic Red Badger careers page with no job description, so it is not a single job posting and nothing is stated about place.",
+     "The page is a generic Red Badger careers landing page with no job description, so the posting itself cannot be read.",
      "the page says: \"Join Red Badger\""
     ],
     "judged": true,
@@ -1354033,7 +1354027,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://content.red-badger.com/all-jobs?gh_jid=7709447003",
-    "reason": "The page is a generic Red Badger careers page with no job description, so it is not a single job posting and nothing is stated about place.",
+    "reason": "the page would not open on two runs · The page is a generic Red Badger careers landing page with no job description, so the posting itself cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1354042,7 +1354036,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9b2b026d9db549c5.jpg",
-    "read_at": "2026-10-20T21:17:29",
+    "read_at": "2026-10-20T21:20:22",
     "evidence": {
      "board_posted": "2026-09-07"
     }
@@ -1388703,11 +1388697,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only an application form with the title; there is no job description, so it is not a readable posting and is in Swedish.",
-     "the page says: \"Använd informationen från ditt konto på LinkedIn\""
+     "The page shows only the title and an application form with no job description, so it is not a readable posting; the visible text is Swedish.",
+     "the page says: \"Använd informationen från ditt konto på LinkedIn ... Förnamn Efternamn E-postadress Telefonnummer\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1388723,17 +1388717,16 @@
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
-     "reports_to": null,
      "language": "Swedish",
      "posted": null
     },
     "inferred": [
-     "posting_open set to unreadable because the page is only an application form with no description",
-     "language taken from the Swedish form text and title"
+     "posted_by is assumed employer because the page names no agency",
+     "language is judged from the Swedish title and form text since there is no description"
     ],
     "read": "board",
     "read_url": "https://pnty-apply.ponty-system.se/friday?id=5071&pnty_src=platsbanken",
-    "reason": "The page shows only an application form with the title; there is no job description, so it is not a readable posting and is in Swedish.",
+    "reason": "the page would not open on two runs · The page shows only the title and an application form with no job description, so it is not a readable posting; the visible text is Swedish.",
     "open": "unreadable",
     "language_ok": false,
     "language": "Swedish",
@@ -1388742,7 +1388735,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/00412768ac9a4a26.jpg",
-    "read_at": "2026-10-20T21:16:51",
+    "read_at": "2026-10-20T21:20:22",
     "evidence": {
      "board_posted": "2026-09-10"
     }

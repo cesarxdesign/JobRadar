@@ -1519030,7 +1519030,7 @@
  },
  "1872507b17e348ef": {
   "id": "1872507b17e348ef",
-  "at": "2026-10-20T21:15:38",
+  "at": "2026-10-20T21:20:22",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://ndb.technology/careers#senior-nuclear-engineer-small-modular-reactor-design-479e99e7",
@@ -1519059,15 +1519059,12 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "43 positions found",
-  "reason": "The page is a careers landing page with a list of 43 positions and no description of the Senior Nuclear Engineer SMR Design role, so it is not a single job posting.",
+  "reason": "The page is a careers landing page with a list of 43 openings (the listing is cut off), not a single posting for the Senior Nuclear Engineer role, and no description of that role appears.",
   "confidence": "high",
-  "inferred": [
-   "same_job is no because the page shows a general careers page and internship listings, not the Senior Nuclear Engineer posting",
-   "workplace_as_posted not stated because no description for this role appears"
-  ],
+  "inferred": [],
   "fields": {
    "role": "Senior Nuclear Engineer - Small Modular Reactor Design",
-   "company": "NDB (Gammanics per pool)",
+   "company": "NDB (Gammanics)",
    "seniority": "senior",
    "remote": "unstated",
    "onsite_days": null,
@@ -1519081,7 +1519078,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "b51fa5af48a14e4f": {
   "id": "b51fa5af48a14e4f",
@@ -1520291,7 +1520288,7 @@
  },
  "8c8c75c98ece4c5c": {
   "id": "8c8c75c98ece4c5c",
-  "at": "2026-10-20T21:16:08",
+  "at": "2026-10-20T21:20:33",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.athenahealth.com/us/en/job/R15431/Lead-UX-Designer",
@@ -1520311,7 +1520308,7 @@
   "stage": "render",
   "open_quote": "This Website is not available in your country",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "e02c45f6aa09482e": {
   "id": "e02c45f6aa09482e",
@@ -1521819,7 +1521816,7 @@
  },
  "d85e574a93494c70": {
   "id": "d85e574a93494c70",
-  "at": "2026-10-20T21:16:28",
+  "at": "2026-10-20T21:20:22",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://instacart.careers/job?id=8191765",
@@ -1521848,14 +1521845,14 @@
   "place_signals": [
    {
     "quote": "Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.",
-    "where": "body",
+    "where": "footer or small print",
     "kind": "generic",
     "says": "says_nothing"
    }
   ],
   "place_verdict": "unclear",
   "place_quote": "Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.",
-  "reason": "The page shows only the title and company boilerplate with no job description, so it is an empty shell and place cannot be judged.",
+  "reason": "The page shows only the title and company boilerplate with no job description, so it is not a readable posting and place cannot be determined.",
   "confidence": "medium",
   "inferred": [],
   "fields": {
@@ -1521874,7 +1521871,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "d7a14178005d43d6": {
   "id": "d7a14178005d43d6",
@@ -1521953,7 +1521950,7 @@
  },
  "7a9e4df07bf5487c": {
   "id": "7a9e4df07bf5487c",
-  "at": "2026-10-20T21:16:28",
+  "at": "2026-10-20T21:20:22",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://instacart.careers/job?id=8191763",
@@ -1521989,12 +1521986,9 @@
   ],
   "place_verdict": "unclear",
   "place_quote": "Instacart is a hybrid remote team. Most of our roles are open to in-office, flex, or remote work.",
-  "reason": "The page shows only the title and company boilerplate with no job description, so it is an empty shell and the role and place cannot be judged.",
+  "reason": "The page shows only the title and company boilerplate with no job description, so the posting content is unreadable and place cannot be determined.",
   "confidence": "medium",
-  "inferred": [
-   "posting_open set to unreadable because no job description is present, only the title and generic footer text",
-   "company taken from the pool and page address; the page itself says Instacart, and the pool lists Caper (an Instacart company)"
-  ],
+  "inferred": [],
   "fields": {
    "role": "Senior Product Designer II - Lifecycle & Growth",
    "company": "Instacart",
@@ -1522011,7 +1522005,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "325e84b140bb46ae": {
   "id": "325e84b140bb46ae",
@@ -1523180,7 +1523174,7 @@
  },
  "6e581c954ecc499f": {
   "id": "6e581c954ecc499f",
-  "at": "2026-10-20T21:16:43",
+  "at": "2026-10-20T21:20:22",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://content.red-badger.com/all-jobs?gh_jid=7990881003",
@@ -1523209,7 +1523203,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a generic Red Badger careers page with no job description, so it is not a single job posting.",
+  "reason": "The page is a generic Red Badger careers page with no job description, so the posting itself is not shown.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1523228,7 +1523222,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "537457b638da4205": {
   "id": "537457b638da4205",
@@ -1523758,7 +1523752,7 @@
  },
  "00412768ac9a4a26": {
   "id": "00412768ac9a4a26",
-  "at": "2026-10-20T21:16:51",
+  "at": "2026-10-20T21:20:22",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://pnty-apply.ponty-system.se/friday?id=5071&pnty_src=platsbanken",
@@ -1523778,7 +1523772,7 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Använd informationen från ditt konto på LinkedIn",
+  "open_quote": "Använd informationen från ditt konto på LinkedIn ... Förnamn Efternamn E-postadress Telefonnummer",
   "language_of_the_posting": "Swedish",
   "language_ok": false,
   "role_verdict": "unclear",
@@ -1523787,11 +1523781,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only an application form with the title; there is no job description, so it is not a readable posting and is in Swedish.",
+  "reason": "The page shows only the title and an application form with no job description, so it is not a readable posting; the visible text is Swedish.",
   "confidence": "medium",
   "inferred": [
-   "posting_open set to unreadable because the page is only an application form with no description",
-   "language taken from the Swedish form text and title"
+   "posted_by is assumed employer because the page names no agency",
+   "language is judged from the Swedish title and form text since there is no description"
   ],
   "fields": {
    "role": "Systemingenjör inom UX/UI till Flygindustrin",
@@ -1523803,13 +1523797,12 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reports_to": null,
    "language": "Swedish",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "8d7f00f081cd4478": {
   "id": "8d7f00f081cd4478",
@@ -1525831,7 +1525824,7 @@
  },
  "f0e75087633642d2": {
   "id": "f0e75087633642d2",
-  "at": "2026-10-20T21:17:19",
+  "at": "2026-10-20T21:20:22",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://content.red-badger.com/all-jobs?gh_jid=7988749003",
@@ -1525860,7 +1525853,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a generic Red Badger careers landing page with no job description, so the posting cannot be read.",
+  "reason": "The page is Red Badger's generic careers landing page with no job description, so the posting itself is not visible.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1525879,7 +1525872,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "0f614ea071a141d3": {
   "id": "0f614ea071a141d3",
@@ -1527024,7 +1527017,7 @@
  },
  "9b2b026d9db549c5": {
   "id": "9b2b026d9db549c5",
-  "at": "2026-10-20T21:17:29",
+  "at": "2026-10-20T21:20:22",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://content.red-badger.com/all-jobs?gh_jid=7709447003",
@@ -1527053,7 +1527046,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a generic Red Badger careers page with no job description, so it is not a single job posting and nothing is stated about place.",
+  "reason": "The page is a generic Red Badger careers landing page with no job description, so the posting itself cannot be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1527072,7 +1527065,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "ac1f19d496854d44": {
   "id": "ac1f19d496854d44",
