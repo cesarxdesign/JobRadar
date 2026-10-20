@@ -2403,40 +2403,49 @@ def _rfc822(s):
 
 
 def getro(host):
-    """A Getro portfolio board: the network id is in the page, then the job search API,
-    20 a page, every job; only design titles are kept, like every other board."""
+    """A Getro portfolio board: the network id is in the page, then the job search API, 20 a page.
+    A board up to 3,000 jobs is read whole; a bigger one (Accel lists 46,000) through its Design
+    function, so it fits a run. Only design titles are kept."""
     html = get_text(f"https://{host}/jobs")
     m = re.search(r'"network":\{"id":"?(\d+)', html)
     if not m:
         raise ValueError("no Getro network id")
-    for page in range(0, 400):
+
+    def ask(page, filters, query):
         # one API for every Getro board: it answers "too many requests" when asked fast, so pace it and wait it out
         for wait in (0, 20, 60, 120):
             time.sleep(wait or 0.6)
             try:
-                d = _post_json(f"https://api.getro.com/api/v2/collections/{m.group(1)}/search/jobs",
-                               {"hitsPerPage": 20, "page": page, "filters": "", "query": ""})
-                break
+                return _post_json(f"https://api.getro.com/api/v2/collections/{m.group(1)}/search/jobs",
+                                  {"hitsPerPage": 20, "page": page, "filters": filters, "query": query})
             except urllib.error.HTTPError as e:
                 if e.code != 429 or wait == 120:
                     raise
-        rows = (d.get("results") or {}).get("jobs") or []
-        for j in rows:
-            if _l1(j.get("title")) is not None:
-                continue
-            org = j.get("organization") or {}
-            yield {"company": org.get("name"), "title": j.get("title"), "url": j.get("url"),
-                   "location": "; ".join(j.get("locations") or []),
-                   "workplace": j.get("work_mode") or None,
-                   "remote": (j.get("work_mode") == "remote") or None,
-                   "salary": fmt_range((j.get("compensation_amount_min_cents") or 0) // 100,
-                                       (j.get("compensation_amount_max_cents") or 0) // 100,
-                                       j.get("compensation_currency") or "")
-                             if j.get("compensation_public") and j.get("compensation_amount_min_cents") else None,
-                   "posted": datetime.fromtimestamp(j["created_at"], timezone.utc).isoformat()
-                             if j.get("created_at") else None}
-        if len(rows) < 20:
-            break
+
+    total = (ask(0, {}, "").get("results") or {}).get("count") or 0
+    # (the text search also matches descriptions, so it pulls in thousands: the Design function alone)
+    passes = [({}, "")] if total <= 3000 else [({"job_functions": ["Design"]}, "")]
+    seen = set()
+    for filters, query in passes:
+        for page in range(0, 500):
+            rows = (ask(page, filters, query).get("results") or {}).get("jobs") or []
+            for j in rows:
+                if j.get("id") in seen or _l1(j.get("title")) is not None:
+                    continue
+                seen.add(j.get("id"))
+                org = j.get("organization") or {}
+                yield {"company": org.get("name"), "title": j.get("title"), "url": j.get("url"),
+                       "location": "; ".join(j.get("locations") or []),
+                       "workplace": j.get("work_mode") or None,
+                       "remote": (j.get("work_mode") == "remote") or None,
+                       "salary": fmt_range((j.get("compensation_amount_min_cents") or 0) // 100,
+                                           (j.get("compensation_amount_max_cents") or 0) // 100,
+                                           j.get("compensation_currency") or "")
+                                 if j.get("compensation_public") and j.get("compensation_amount_min_cents") else None,
+                       "posted": datetime.fromtimestamp(j["created_at"], timezone.utc).isoformat()
+                                 if j.get("created_at") else None}
+            if len(rows) < 20:
+                break
 
 
 def consider(host, board):
@@ -2447,16 +2456,20 @@ def consider(host, board):
     with op.open(urllib.request.Request(f"https://{host}/jobs", headers=UA), timeout=30) as r:
         html = r.read().decode("utf-8", "replace")
     tok = re.search(r'csrfToken":"([^"]+)', html).group(1)
-    seq = None
+    # a board up to 3,000 jobs is read whole; a bigger one (Lightspeed lists 17,000) through its Design function
+    query, seq = {}, None
     for _ in range(100):
         body = {"meta": {"size": 100, **({"sequence": seq} if seq else {})},
-                "board": {"id": board, "isParent": True}, "query": {}, "grouped": False}
+                "board": {"id": board, "isParent": True}, "query": query, "grouped": False}
         req = urllib.request.Request(f"https://{host}/api-boards/search-jobs", data=json.dumps(body).encode(),
                                      headers={**UA, "Content-Type": "application/json",
                                               "Accept": "application/json", "x-csrf-token": tok})
         with op.open(req, timeout=30) as r:
             d = json.loads(r.read().decode("utf-8", "replace"))
         rows = d.get("jobs") or []
+        if not seq and not query and (d.get("total") or 0) > 3000:
+            query = {"jobFunctions": ["Design"]}
+            continue
         for j in rows:
             if _l1(j.get("title")) is not None:
                 continue
@@ -2573,8 +2586,47 @@ GETRO = ["jobs.dragonfly.xyz", "jobs.multicoin.capital", "jobs.polychain.capital
          "jobs.blockchaincapital.com", "jobs.electriccapital.com", "jobs.solana.com", "jobs.avax.network",
          "jobs.arbitrum.io", "jobs.delphiventures.io"]
 CONSIDER = {"jobs.panteracapital.com": "pantera-capital", "jobs.hashed.com": "hashed"}
-AGGREGATORS.update({"getro-" + h.split(".")[1]: (lambda h=h: getro(h)) for h in GETRO})
-AGGREGATORS.update({"consider-" + h.split(".")[1]: (lambda h=h, b=b: consider(h, b)) for h, b in CONSIDER.items()})
+# VC portfolio boards, general tech and crypto, found and tested 2026-10-20
+GETRO += """jobs.accel.com jobs.generalcatalyst.com jobs.khoslaventures.com jobs.insightpartners.com jobs.thrivecap.com
+jobs.luxcapital.com jobs.8vc.com jobs.techstars.com careers.redpoint.com jobs.headline.com jobs.notablecap.com
+jobs.pointnine.com jobs.sapphireventures.com jobs.lererhippeau.com jobs.menlovc.com jobs.svangel.com jobs.greycroft.com
+careers.creandum.com portfolio.northzone.com careers.atomico.com jobs.firstmark.com careers.canaan.com jobs.blackbird.vc
+jobs.craftventures.com talent.seedcamp.com jobs.foundry.vc jobs.hvcapital.com jobs.madrona.com jobs.airtree.vc
+careers.homebrew.co jobs.trueventures.com talent.cherry.vc portfolio.joinef.com careers.antler.co talent.emcap.com
+careers.playground.global jobs.nfx.com jobs.eniac.vc jobs.scalevp.com jobs.dcg.co jobs.underscore.vc jobs.upfront.com
+careers.bitkraft.vc careers.inovia.vc jobs.primary.vc jobs.jumpcrypto.com talent.octopusventures.com jobs.dawncapital.com
+jobs.mmc.vc careers.speedinvest.com jobs.lightbank.com jobs.nascent.xyz jobs.peak.capital talent.daphni.com
+jobs.inflection.fund talent.uvcpartners.com talent.backed.vc careers.crane.vc jobs.earlybird.com jobs.kindredcapital.vc
+jobs.bnbchain.org jobs.firstminute.capital jobs.spartangroup.io jobs.outlierventures.io careers.fil.org
+jobs.archetype.fund careers.animocabrands.com careers.superseed.com jobs.byfounders.vc jobs.glasswing.vc""".split()
+CONSIDER.update(dict(x.split("=") for x in """jobs.lsvp.com=lightspeed jobs.gaingels.com=gaingels jobs.bvp.com=bessemer-ventures
+jobs.sequoiacap.com=sequoia-capital careers.ivp.com=ivp jobs.gv.com=gv careers.nea.com=nea jobs.kleinerperkins.com=kleiner-perkins
+jobs.battery.com=battery-ventures jobs.baincapitalventures.com=bain-ventures jobs.felicis.com=felicis
+portfoliojobs.goodwatercap.com=goodwater-capital jobs.forerunnerventures.com=forerunner-ventures careers.qedinvestors.com=qed-investors
+jobs.vuventurepartners.com=vu-venture-partners jobs.abstractvc.com=abstract-ventures careers.lightrock.com=lightrock
+jobs.initialized.com=initialized careers.edbi.com=edbi careers.griffingp.com=griffin-gaming careers.nvp.com=norwest-venture-partners
+jobs.fin.capital=fin-capital careers.balderton.com=balderton-capital jobs.alven.co=alven jobs.contrary.com=contrary jobs.crv.com=crv
+portcojobs.galvanizeclimate.com=galvanize-climate-solutions jobs.usv.com=union-square-ventures jobs.scribble.vc=scribble
+careers.aixventures.com=aix-ventures jobs.costanoavc.com=costanoa-ventures jobs.xange.vc=xange careers.serena.vc=serena
+jobs.expa.com=expa jobs.atlantic.vc=atlantic-labs careers.fabric.vc=fabric-ventures jobs.makersfund.com=makers-fund
+jobs.1517fund.com=1517-fund jobs.panoramic.vc=panoramic-ventures jobs.illuminatefinancial.com=illuminate-financial
+jobs.notion.vc=notion-capital jobs.anthemis.com=anthemis-group careers.jetblueventures.com=jetblue-ventures
+jobs.congruentvc.com=congruent-ventures jobs.surgeahead.com=surge-ahead careers.dynamo.vc=dynamo careers.radiancapital.com=radian-capital
+talent.amplifypartners.com=amplify-partners jobs.hoxtonventures.com=hoxton-ventures careers.playfair.vc=playfair-capital
+careers.freigeist.com=freigeist jobs.foothill.ventures=foothill-ventures jobs.golden.ventures=golden-ventures
+jobs.tenoneten.net=tenoneten-ventures jobs.amadeuscapital.com=amadeus careers.revent.vc=revent careers.setventures.com=set-ventures
+careers.sorensoncap.com=sorenson-capital jobs.necessary.vc=necessary-ventures jobs.amplify.la=amplify-la
+careers.lemniscap.com=lemniscap careers.gumi-cryptos.com=gumi-cryptos careers.greenfield.xyz=greenfield-capital
+jobs.baincapitalcrypto.com=bain-crypto jobs.ngc.fund=ngc careers.aifund.ai=ai-fund jobs.5amventures.com=5am-ventures
+jobs.atoneventures.com=at-one-ventures careers.neworleansbio.com=nobic""".split()))
+
+
+def _board_name(host):
+    """getro-accel, consider-lsvp: the host's own name, without jobs./careers./talent. and the domain ending"""
+    parts = host.split(".")
+    return parts[1] if len(parts) > 2 else parts[0]
+AGGREGATORS.update({"getro-" + _board_name(h): (lambda h=h: getro(h)) for h in GETRO})
+AGGREGATORS.update({"consider-" + _board_name(h): (lambda h=h, b=b: consider(h, b)) for h, b in CONSIDER.items()})
 AGGREGATORS.update({"web3career": agg_web3career, "jobstash": agg_jobstash,
                     "cryptocurrencyjobs": agg_cryptocurrencyjobs,
                     "cryptodotjobs": lambda: agg_cryptojobs_feed("https://crypto.jobs/feed/rss"),
