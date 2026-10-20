@@ -1370522,5 +1370522,51 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "a1e1d6c4d2d044c3": {
+  "id": "a1e1d6c4d2d044c3",
+  "at": "2026-10-20T04:04:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://octaviacarbon.bamboohr.com/careers/101",
+  "board": null,
+  "employer": {
+   "url": "https://octaviacarbon.bamboohr.com/careers/101",
+   "status": 200,
+   "shot": "data/shots/a1e1d6c4d2d044c3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://octaviacarbon.bamboohr.com/careers/101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T04:03:32"
+ },
+ "3b8228723f7546bd": {
+  "id": "3b8228723f7546bd",
+  "at": "2026-10-20T04:04:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://kalsoft.applytojob.com/apply/oyNDkR1sox/Senior-UIUX-Designer-Angular",
+  "board": null,
+  "employer": {
+   "url": "https://kalsoft.applytojob.com/apply/oyNDkR1sox/Senior-UIUX-Designer-Angular",
+   "status": 200,
+   "shot": "data/shots/3b8228723f7546bd.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://kalsoft.applytojob.com/apply/oyNDkR1sox/Senior-UIUX-Designer-Angular",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T04:03:33"
  }
 }
