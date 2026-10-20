@@ -1339818,7 +1339818,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:02:48",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a UX Content Designer (copywriting/content strategy) role, distinct from product/UX/UI design, and it is a hybrid role based in Auckland, New Zealand, not Portugal.",
+   "signals": [
+    {
+     "quote": "Hybrid Role",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "BNZ Place Auckland, 80 Queen Street",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "90c38704323b4645": {
   "id": "90c38704323b4645",
@@ -1340423,7 +1340446,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:37",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "Only two bare location tags are given (Warsaw, PL and the client's Israel location), with no remote option stated anywhere, and neither is Portugal.",
+   "signals": [
+    {
+     "quote": "Warsaw, Masovian Voivodeship, PL",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: Israel",
+     "where": "body",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "34371690f1ff4e20": {
   "id": "34371690f1ff4e20",
@@ -1340541,7 +1340587,42 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-19T09:52:28"
+  "fetched_at": "2026-10-19T09:52:28",
+  "audit": {
+   "at": "2026-10-20T09:03:24",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a Design Quality Leader/ASPICE automotive quality-assurance role, not product/UX/UI design, and it is onsite in Pune, India.",
+   "signals": [
+    {
+     "quote": "Pune City, India",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "City: Pune City",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "State/Province: Maharashtra",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Country: India",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "34108acd776a4e3a": {
   "id": "34108acd776a4e3a",
@@ -1340745,7 +1340826,36 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-19T09:52:24"
+  "fetched_at": "2026-10-19T09:52:24",
+  "audit": {
+   "at": "2026-10-20T09:02:44",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an onsite graphic/marketing/multimedia content role in Oklahoma, not a product/UX design job, and not workable from Portugal.",
+   "signals": [
+    {
+     "quote": "Catoosa, OK, United States (On-site)",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Catoosa - Hard Rock Hotel & Casino (OK) (On-site)",
+     "where": "side panel",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Work may be performed in a variety of settings, including climate-controlled office settings, casino properties, entertainment venues, promotional events, and other on-property locations.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "066f1ee6a2c244e4": {
   "id": "066f1ee6a2c244e4",
@@ -1341752,7 +1341862,42 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-19T09:52:36"
+  "fetched_at": "2026-10-19T09:52:36",
+  "audit": {
+   "at": "2026-10-20T09:03:38",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The role is based in Pune, India with a hybrid work tag and no mention of remote work outside India.",
+   "signals": [
+    {
+     "quote": "Pune, Maharashtra, India",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "join our User Experience Design team in Pune, India, reporting to the Manager, User Experience",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "#LI-Hybrid",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Infoblox Technical Support and Software Development Private Limited, Bangalore, Karnataka, 560010, IN",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "68ef43ec99ad4818": {
   "id": "68ef43ec99ad4818",
@@ -1341856,7 +1342001,30 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-19T09:52:37"
+  "fetched_at": "2026-10-19T09:52:37",
+  "audit": {
+   "at": "2026-10-20T09:03:28",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is a social/performance ad design (Art Director) position requiring onsite office days in Cologne, Germany, written in German, and is a brand/campaign design job rather than product/UX/UI work.",
+   "signals": [
+    {
+     "quote": "Köln, Deutschland (hybrid)",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Arbeitsort Hybrid Hohenstaufenring 29-37, 50674 Köln, Deutschland 1 Tag pro Woche vor Ort",
+     "where": "side panel",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "a50a63cf1d2d401b": {
   "id": "a50a63cf1d2d401b",
@@ -1342340,7 +1342508,48 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:27",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an onsite turbine controls engineering role in Sydney, Australia requiring Australian work rights, not a design/UX/UI job, and not doable from Portugal.",
+   "signals": [
+    {
+     "quote": "remote type On-Site",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "locations Sydney, AU",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Rights to work in Australia",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Own transportation",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Here in Sydney, we are a small, collaborative team",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "7febfcf6b5e3438f": {
   "id": "7febfcf6b5e3438f",
@@ -1342815,7 +1343024,24 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:02",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The only stated place for the role is Vilnius, Lithuania, with no mention of remote work, making it onsite there and not workable from Portugal.",
+   "signals": [
+    {
+     "quote": "Vilnius, Vilnius County, LT Middle/Senior Full-time",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "221989378c9f4b85": {
   "id": "221989378c9f4b85",
@@ -1343420,7 +1343646,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:37",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "Both location statements name places outside Portugal (Moldova and Israel) with no remote option mentioned anywhere on the page.",
+   "signals": [
+    {
+     "quote": "Chișinău, Chisinau, MD Middle/Senior Full-time",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: Israel",
+     "where": "body",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "c554c5f620294a5a": {
   "id": "c554c5f620294a5a",
@@ -1344731,7 +1344980,36 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:24",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a civil engineering management role requiring an NY Professional Engineer license and onsite presence in Buffalo, NY, not a design job Cesar does.",
+   "signals": [
+    {
+     "quote": "Buffalo, NY • Civil",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "10+ Years of Civil/Site design experience with state agencies (DASNY, OGS, SUCF), healthcare, higher education and K-12 education as well as local municipalities.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "NY State Licensed Professional Engineer (Required)",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "75fec8e2e8034ef0": {
   "id": "75fec8e2e8034ef0",
@@ -1344775,7 +1345053,24 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:09",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "Onsite interior/furniture design role in Pennsylvania, not product/UX/UI design, and not remote-eligible for Portugal.",
+   "signals": [
+    {
+     "quote": "Wayne, PA",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "032f1c21422847dd": {
   "id": "032f1c21422847dd",
@@ -1348171,7 +1348466,30 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:27",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The job is onsite in Linköping, Sweden, with security clearance/citizenship requirements, and the posting is written in Swedish.",
+   "signals": [
+    {
+     "quote": "locations: Linköping - Bröderna Ugglas Gata",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Befattningen kräver att du genomgår och godkänns enligt vid var tid gällande bestämmelser för säkerhetsskydd. För befattningar där Saab har krav på säkerhetsklassinplacering kan, i förekommande fall, medföra krav på visst medborgarskap.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "b6c72cc2784c4d35": {
   "id": "b6c72cc2784c4d35",
@@ -1348510,7 +1348828,54 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:02:43",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an Instrument Designer engineering role (instrumentation & control design, not product/UX/UI) requiring Malaysian citizenship/residency and onsite work in Kuala Lumpur.",
+   "signals": [
+    {
+     "quote": "Wilayah Persekutuan Kuala Lumpur, Malaysia",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "This opportunity is available to Malaysian citizens and permanent residents on a 12-month fixed-term contract commencing in December 2026.",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "You must hold (or be eligible to obtain) legal working rights in Malaysia as either a Malaysian Citizen or Permanent Resident.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "work from Malaysia - apply today!",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Join us in the heart of Kuala Lumpur",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Locations: Wilayah Persekutuan Kuala Lumpur, Malaysia",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "28e531908bd842e4": {
   "id": "28e531908bd842e4",
@@ -1349643,7 +1350008,36 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:02:46",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an onsite brand/campaign/graphic design role based in Manila/Pasig, Philippines, not a product/UX/UI role, so it fails both place and role.",
+   "signals": [
+    {
+     "quote": "Pasig, Philippines",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "We’re looking for a talented and driven Senior Designer to join our Manila team.",
+     "where": "opening paragraph",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Act as the senior design point of contact for our Manila team",
+     "where": "body",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "b4e79cf876d54d7a": {
   "id": "b4e79cf876d54d7a",
@@ -1349963,7 +1350357,36 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:09",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "Role is UX/UI design system work, but it is an onsite student-assistant internship requiring office presence in Lynge, Denmark, which cannot be done from Portugal.",
+   "signals": [
+    {
+     "quote": "INTERNSHIP · LYNGE, COPENHAGEN REGION, DENMARK",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "The headquarters of our company is located in Lynge north of Copenhagen and it is expected that you will be in the office.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: Lynge, Copenhagen Region, Denmark",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "bdacf49ef8704003": {
   "id": "bdacf49ef8704003",
@@ -1350609,7 +1351032,42 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:10",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The role is explicitly onsite in Riyadh, Saudi Arabia, with mandatory Arabic proficiency, so it cannot be done from Portugal.",
+   "signals": [
+    {
+     "quote": "Riyadh, Saudi Arabia",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "join one of our leading clients onsite",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Able to work onsite in Riyadh, Saudi Arabia.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Arabic proficiency is mandatory. You need excellent spoken Arabic and English.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "75cbc1043787437d": {
   "id": "75cbc1043787437d",
@@ -1351053,7 +1351511,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:02:37",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an ITS/signal system engineering role (not a design-titled UX/UI/design job) based onsite in the Alexandria, VA / DC metro area, so it fails both role and place.",
+   "signals": [
+    {
+     "quote": "US | VA | Alexandria - 5301 Shawnee Road",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "This position can be based in the DC metropolitan area.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "7d57b027284b499f": {
   "id": "7d57b027284b499f",
@@ -1351277,7 +1351758,30 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:07",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is a Quality Engineer (Design Control) position, not a design/UX role, and it is based onsite/hybrid in Clichy, France with only 60 days/year remote.",
+   "signals": [
+    {
+     "quote": "Lieu : Clichy (métro ligne 13 ou ligne 14, RER C, train L, bus 74 ou 341…)",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Télétravail flexible : 60 jours/an",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "f48bae461bc3471a": {
   "id": "f48bae461bc3471a",
@@ -1351574,7 +1352078,36 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:09",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an aircraft structural CAD design role (engineering), onsite in San Diego, not a product/UX/UI design job and not doable from Portugal.",
+   "signals": [
+    {
+     "quote": "Location: San Diego, United States",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Natilus is seeking a Structures Designer to join our team in San Diego, CA.",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Occasional travel and on-site work at the local hangar may be required",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "52d44928a62f400c": {
   "id": "52d44928a62f400c",
@@ -1351850,7 +1352383,24 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:43",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a civil/structural engineering design-and-engineering manager role for precast concrete infrastructure, not a product/UX/UI design job.",
+   "signals": [
+    {
+     "quote": "Elland, United Kingdom",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "0aa8e64514b944ee": {
   "id": "0aa8e64514b944ee",
@@ -1351932,7 +1352482,36 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:02:53",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The posting explicitly restricts the remote role to candidates in Brazil, Colombia, Argentina, or Mexico, which excludes Portugal.",
+   "signals": [
+    {
+     "quote": "Location",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "El Salvador",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: Brazil, Colombia, Argentina, or Mexico",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "917f433aa0ed4b46": {
   "id": "917f433aa0ed4b46",
@@ -1352352,7 +1352931,30 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:02:56",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a mechanical/manufacturing design engineer role (CAD, GD&T, machining) onsite in Ohio, not a product/UX/UI design role, and not remote.",
+   "signals": [
+    {
+     "quote": "Mentor, OH",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Occasionally lift and/or move up to 50 lbs. Personal protective equipment is required including but not limited to gloves, safety glasses, and hearing protection.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "356fb12c3e184023": {
   "id": "356fb12c3e184023",
@@ -1352468,7 +1353070,24 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:02:39",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "Fashion/apparel design role (garment construction, textiles) based onsite in New York, not a product/UX/UI design job and not based in Portugal.",
+   "signals": [
+    {
+     "quote": "Location\nNew York, United States",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "bde7b3b6285d451d": {
   "id": "bde7b3b6285d451d",
@@ -1352788,7 +1353407,24 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:24",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an architecture/interior design director role onsite in Cleveland, OH, not a product/UX/UI design role, and not remote or in Portugal.",
+   "signals": [
+    {
+     "quote": "Cleveland, OH",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "7491ee8102fd415b": {
   "id": "7491ee8102fd415b",
@@ -1354445,7 +1355081,42 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-19T12:43:55"
+  "fetched_at": "2026-10-19T12:43:55",
+  "audit": {
+   "at": "2026-10-20T09:03:16",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The page is for a Creative Designer at Avenir Collective (brand/campaign design role), not the pooled Olsamgroup listing, and requires 2 days a week in a London office.",
+   "signals": [
+    {
+     "quote": "Hybrid",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "London, Greater London, United Kingdom",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Full-time, permanent role based at our modern office in Holborn, London",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "This position is hybrid, with the expectation to go to the office 2 days per week",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "e9e2afd4b60843ef": {
   "id": "e9e2afd4b60843ef",
@@ -1354709,7 +1355380,30 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-19T12:44:36"
+  "fetched_at": "2026-10-19T12:44:36",
+  "audit": {
+   "at": "2026-10-20T09:03:17",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "Brand/graphic design role (FMCG packaging, VIS, brand systems) based onsite in London, not a product/UX/UI role and not remote.",
+   "signals": [
+    {
+     "quote": "Location: London, United Kingdom",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Join our London team and channel your ambition",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "bb9897f5356745f8": {
   "id": "bb9897f5356745f8",
@@ -1354756,7 +1355450,24 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-19T12:44:14"
+  "fetched_at": "2026-10-19T12:44:14",
+  "audit": {
+   "at": "2026-10-20T09:03:30",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a marine/mechanical design engineering role for boat structures, not a UX/UI/product design job, and it is onsite in South Carolina.",
+   "signals": [
+    {
+     "quote": "Moncks Corner, SC",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "4736598a555d4c21": {
   "id": "4736598a555d4c21",
@@ -1358979,7 +1359690,42 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-20T03:46:14"
+  "fetched_at": "2026-10-20T03:46:14",
+  "audit": {
+   "at": "2026-10-20T09:02:51",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The job is onsite in Zeeland, Michigan for automotive plastic parts CAD engineering, not a product/UX/UI design role and not available remotely from Portugal.",
+   "signals": [
+    {
+     "quote": "Zeeland, MI",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "On-Site",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "This opportunity is full-time hours, onsite in Zeeland Mi.",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Work full-time hours, onsite in Zeeland Mi",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "8c4b25d80b63481b": {
   "id": "8c4b25d80b63481b",
@@ -1359127,7 +1359873,36 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:02:59",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an onsite propulsion hardware engineering role in Seattle requiring US citizenship/ITAR compliance, not a design title and not doable from Portugal.",
+   "signals": [
+    {
+     "quote": "Seattle, Washington",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "On-Site",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "US citizenship or ability to comply with ITAR requirements.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "d0e55bbf9a274f73": {
   "id": "d0e55bbf9a274f73",
@@ -1359907,7 +1360682,24 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:02:51",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The posting states the work location is Brooklyn, NY, with no remote option, so it cannot be done from Portugal.",
+   "signals": [
+    {
+     "quote": "WORK LOCATION\nBrooklyn, NY",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "2f7c3b8867724efa": {
   "id": "2f7c3b8867724efa",
@@ -1360463,7 +1361255,42 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:03",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The role is explicitly onsite in Warsaw five days a week, with remote/hybrid listed as a disqualifier, so it cannot be done from Portugal.",
+   "signals": [
+    {
+     "quote": "WARSAW",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Willingness to work on-site in Warsaw five days a week.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "You need a remote or hybrid setup.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location Warsaw",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "90a37c32b2104c51": {
   "id": "90a37c32b2104c51",
@@ -1360657,7 +1361484,42 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:19",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The role requires in-office presence 3 days/week in London (Shoreditch or Cardiff), explicitly ruling out fully remote work from Portugal.",
+   "signals": [
+    {
+     "quote": "PRODUCT & DESIGN · LONDON · HYBRID",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "You want a fully remote role. We're office-first. You'll be in our Shoreditch office at least three days a week, because that's where the best collaboration happens.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "We're office-first, remote-friendly. We're based in our London Shoreditch or Cardiff office... We ask you to come into the office at least 3 days a week, with everyone coming in on Mondays.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: London / Remote status: Hybrid",
+     "where": "side panel",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "70c1c28b75924a64": {
   "id": "70c1c28b75924a64",
@@ -1362126,7 +1362988,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:40",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a mechanical design engineering role for automated/robotic equipment (CAD, SolidWorks, mechanical/pneumatic/hydraulic systems) hybrid in Longueuil, Quebec, Canada - not a product/UX/UI design job and not based in Portugal.",
+   "signals": [
+    {
+     "quote": "Hybrid",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Longueuil QC CA 2",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "7adb40085ae24780": {
   "id": "7adb40085ae24780",
@@ -1362304,7 +1363189,36 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:07",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is instructional/learning design (not product/UX/UI) and requires hybrid work in Seattle, WA.",
+   "signals": [
+    {
+     "quote": "Hybrid Remote",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Note: This is a hybrid position in Seattle, WA.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Disclaimer for Out of State Applicants - This compensation range is specific to Seattle, positions located outside of Seattle may be compensated differently depending on various factors.",
+     "where": "side panel",
+     "kind": "generic",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "69202b767e264441": {
   "id": "69202b767e264441",
@@ -1362448,7 +1363362,24 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:02:52",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The role is explicitly listed as USA - Remote with no mention of Portugal or international eligibility.",
+   "signals": [
+    {
+     "quote": "USA - Remote",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "778c492554bc43af": {
   "id": "778c492554bc43af",
@@ -1363429,7 +1364360,36 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:20",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is magazine/editorial print-and-digital design (graphic/layout design for Cosmo, Prima, Red), not product, UX or UI design, and it is a London hybrid in-office role, not available from Portugal.",
+   "signals": [
+    {
+     "quote": "London, United Kingdom (Hybrid)",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Hearst UK operates an in office policy with flexible Friday's. Our office is based at House of Hearst, 30 Panton Street, St James's, London, SW1Y 4AJ, where teams collaborate in person and connect across brands and functions.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "30 Panton Street, LONDON, LONDON, SW1Y 4AJ, GB (Hybrid)",
+     "where": "side panel",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "2a5490b5fe214fa7": {
   "id": "2a5490b5fe214fa7",
@@ -1363451,7 +1364411,36 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:02",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "It is a magazine/editorial design role (print and digital layout for Cosmo, Prima, Red) requiring hybrid in-office work at Hearst's London office, not a product/UX/UI job and not doable from Portugal.",
+   "signals": [
+    {
+     "quote": "London, United Kingdom (Hybrid)",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Hearst UK operates an in office policy with flexible Friday's. Our office is based at House of Hearst, 30 Panton Street, St James's, London, SW1Y 4AJ, where teams collaborate in person and connect across brands and functions.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "30 Panton Street, LONDON, LONDON, SW1Y 4AJ, GB (Hybrid)",
+     "where": "side panel",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "689a436cf7054a5b": {
   "id": "689a436cf7054a5b",
@@ -1363628,7 +1364617,42 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:18",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a water/wastewater civil engineering design role (not UX/product design) based onsite in Lakewood, Colorado, USA.",
+   "signals": [
+    {
+     "quote": "Geosyntec has an exciting opportunity for an experienced Water/Wastewater Design Engineer in our Lakewood, Colorado office.",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Minimum Salary: $92,835/year / Maximum Salary: $120,685/year (Lakewood, CO)",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Valid U.S. driver's license and a satisfactory driving record for business travel.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "#LI-Hybrid #LI-Onsite",
+     "where": "footer or small print",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "ba2a0a89d6f249c2": {
   "id": "ba2a0a89d6f249c2",
@@ -1364787,7 +1365811,42 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:08",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "Role is game/visual design (not product/UX/UI), and the posting explicitly restricts remote work to three U.S. states with a W2 employment requirement, excluding Portugal.",
+   "signals": [
+    {
+     "quote": "RemoteTexas, United States",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: Remote (AZ, FL, TX)",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Employment Type: Full-Time W2",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Our company participates in E-Verify to confirm work authorization for all newly hired U.S. employees; this process applies strictly to direct W-2 hires",
+     "where": "footer or small print",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "ddb3fa3d2c3041fa": {
   "id": "ddb3fa3d2c3041fa",
@@ -1365162,7 +1366221,42 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:02:40",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "The role explicitly requires being based in Copenhagen, with an onsite office and an application question about living there or nearby.",
+   "signals": [
+    {
+     "quote": "København, Capital Region of Denmark, Denmark",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "This role is based in our Copenhagen office.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Are you currently based in Copenhagen or nearby?",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "🌆 Beautiful office space with probably the best view in Copenhagen",
+     "where": "body",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "4f928c1be9234f2e": {
   "id": "4f928c1be9234f2e",
@@ -1366260,7 +1367354,48 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:02:59",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is a brand, web and presentation (marketing) design job, office-based in London with UK work authorisation required, so it fails both role and place for Cesar.",
+   "signals": [
+    {
+     "quote": "London, United Kingdom",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "This is an office-based role: you'll be in the room for conversations on product, marketing and customer decks",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Are keen to work in the office and be part of every conversation, from product to marketing to customer decks",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Are you legally authorised to work permanently in the UK? (without a visa or sponsorship)",
+     "where": "footer or small print",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "We thrive on in-person collaboration: 5 days/week in-office during probation, then 4 in-office / 1 remote.",
+     "where": "footer or small print",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "74cbc4a2f31642d6": {
   "id": "74cbc4a2f31642d6",
@@ -1367189,7 +1368324,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:04",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is remote within Canada (Toronto Metro) with an Ontario-based salary range, and the job is presentation/communications design rather than product, UX, or UI design.",
+   "signals": [
+    {
+     "quote": "Canada - Toronto Metro - Remote",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "For Ontario-based roles, the base salary hiring range for this position is CAD 140,000 to CAD 190,000 annually.",
+     "where": "footer or small print",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "a6adfe45b4e24b62": {
   "id": "a6adfe45b4e24b62",
@@ -1367311,7 +1368469,42 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:02:48",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an architectural design (NAAB-accredited architecture degree) role based onsite in Bozeman, Montana, requiring US work authorization - not a product/UX/UI design role and not available in Portugal.",
+   "signals": [
+    {
+     "quote": "Architecture Bozeman, Montana",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Cushing Terrell is seeking a Design Professional with up to 5 years of experience to join our Bozeman office.",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Applicants must be currently authorized to work in the United States on a full-time basis. Cushing Terrell will not sponsor applicants for work visas.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "The majority of the time, a person in this role will be sitting in an office with limited physical requirements.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "46a73a3a2c24495a": {
   "id": "46a73a3a2c24495a",
@@ -1367933,7 +1369126,36 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:39",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an onsite electrical/CAD drafting engineering role in Ohio, not a product, UX, or UI design job, and it is tied to a physical worksite in the US.",
+   "signals": [
+    {
+     "quote": "New Albany, OH",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "We're seeking a Protection and Control Designer to join our team in New Albany, OH.",
+     "where": "opening paragraph",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Occasional overnight travel to and work within a substation or power plant environment",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "b9110f4f4167413c": {
   "id": "b9110f4f4167413c",
@@ -1368044,7 +1369266,36 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:15",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a utility field technician role requiring physical, on-site work in Virginia, unrelated to product design.",
+   "signals": [
+    {
+     "quote": "Pulaski, VA",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Woodlawn, VA",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Walk right ways of various terrain in adverse conditions to patrol distribution power lines to determine damage.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "6d281d054f4f48bb": {
   "id": "6d281d054f4f48bb",
@@ -1368777,7 +1370028,30 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:42",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a mechanical/industrial equipment design engineering role based onsite in Wisconsin, not a product/UX/UI design job, and the company listed (Orbis Machinery) differs from the pool's company (Weldall Manufacturing).",
+   "signals": [
+    {
+     "quote": "Waukesha, WI",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Comfortable working in a hands-on manufacturing environment with regular involvement in fabrication, assembly, testing, and troubleshooting.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "b31bc041d42e4a2a": {
   "id": "b31bc041d42e4a2a",
@@ -1368851,7 +1370125,42 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:03:32",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a senior AI/semiconductor engineering architect role (not product/UX/UI design) and it is onsite in San Jose, California with US export authorization requirements.",
+   "signals": [
+    {
+     "quote": "San Jose, California, United States",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Primary Location: San Jose, California, United States",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Applicants must be eligible for any required U.S. export authorizations.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "The pay range below is for Bay Area California only.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "2adb34ebc5774ca2": {
   "id": "2adb34ebc5774ca2",
@@ -1369143,7 +1370452,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:17",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "Packaging design is a brand/graphic design role by title and content, and the posting restricts residency to specific U.S. states only.",
+   "signals": [
+    {
+     "quote": "This role is open to remote candidates across the U.S.; however, candidates based in the Miami area will be required to work in a hybrid capacity from our Miami HQ.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Due to current employment requirements, candidates must reside in one of the following states: Florida, New York, California, Minnesota, Maryland, Iowa, Illinois, Arizona, New Jersey, or Massachusetts.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "ab99471a59214c2d": {
   "id": "ab99471a59214c2d",
@@ -1369356,7 +1370688,24 @@
   "lane": "cut",
   "stage": "cl",
   "place_verdict": "no",
-  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "audit": {
+   "at": "2026-10-20T09:02:51",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "unclear",
+   "place": "no",
+   "reason": "Onsite role in Angola, Indiana with no remote option, and the title gives no clear sign of product/UX/UI design work.",
+   "signals": [
+    {
+     "quote": "Location: Angola, IN",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "f598becf91d544a9": {
   "id": "f598becf91d544a9",
@@ -1370068,7 +1371417,24 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:36",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is an electronics/semiconductor PDK engineering role onsite in Egypt, not a product design role and not available in Portugal.",
+   "signals": [
+    {
+     "quote": "locations Egypt",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "9fcff64dc8964e2f": {
   "id": "9fcff64dc8964e2f",
@@ -1370146,7 +1371512,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "remote"
+  "reader_place": "remote",
+  "audit": {
+   "at": "2026-10-20T09:03:17",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "remote",
+   "reason": "This is a Senior Product Manager role overseeing a design system as a product, not a hands-on product design/UX role, so it does not match the design titles the role test allows.",
+   "signals": [
+    {
+     "quote": "Porto, Portugal",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_in"
+    },
+    {
+     "quote": "The role is fully remote from Portugal, with travel to the UK once or twice a month.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_in"
+    }
+   ]
+  }
  },
  "f62a52eaff3240f0": {
   "id": "f62a52eaff3240f0",
@@ -1370521,7 +1371910,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:01",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is display/banner/campaign design for a marketing studio restricted to the MENA time zone, not a product/UX/UI role Cesar could do from Portugal.",
+   "signals": [
+    {
+     "quote": "LOCATION Dubai, UAE or Remote (MENA time zone)",
+     "where": "under the title",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location UAE",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "a1e1d6c4d2d044c3": {
   "id": "a1e1d6c4d2d044c3",
@@ -1370544,7 +1371956,42 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-20T04:03:32"
+  "fetched_at": "2026-10-20T04:03:32",
+  "audit": {
+   "at": "2026-10-20T09:03:34",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "This is a mechanical/piping engineering role onsite in Nairobi, Kenya, not a design job and not remote.",
+   "signals": [
+    {
+     "quote": "Job type: Full time - On site",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: Eastern Bypass Rd, Ruai – Nairobi, Kenya",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Nairobi",
+     "where": "side panel",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Willingness to spend regular time on site supporting operations and maintenance teams",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "3b8228723f7546bd": {
   "id": "3b8228723f7546bd",
@@ -1370841,7 +1372288,24 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-20T04:15:17"
+  "fetched_at": "2026-10-20T04:15:17",
+  "audit": {
+   "at": "2026-10-20T09:03:32",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is real estate/construction project coordination (AutoCAD site plans, zoning, permitting), not product/UX/UI design, and it is based at O'Reilly's headquarters with no remote option mentioned.",
+   "signals": [
+    {
+     "quote": "locations Headquarters",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "a93725502dbc483a": {
   "id": "a93725502dbc483a",
@@ -1371060,7 +1372524,30 @@
   },
   "stage": "vision",
   "lane": "cut",
-  "reader_place": "no"
+  "reader_place": "no",
+  "audit": {
+   "at": "2026-10-20T09:03:18",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "no",
+   "place": "no",
+   "reason": "The role is a Services/IT business analyst position (Oracle Enterprise Services, requirements, tickets) despite the 'Design' title, and it is onsite in Belgrade, Serbia, not Portugal.",
+   "signals": [
+    {
+     "quote": "locations BELGRADE, SRB",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Location: Belgarde, Serbia.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_out"
+    }
+   ]
+  }
  },
  "f3c469f7e6b345b3": {
   "id": "f3c469f7e6b345b3",
@@ -1371152,6 +1372639,23 @@
   "stage": "cl",
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
-  "fetched_at": "2026-10-20T05:25:53"
+  "fetched_at": "2026-10-20T05:25:53",
+  "audit": {
+   "at": "2026-10-20T09:03:33",
+   "criteria": "2026-10-05.5",
+   "lane": "cut",
+   "agrees": true,
+   "role": "yes",
+   "place": "no",
+   "reason": "Location is stated as New York, NY, US with no remote mention, and the role is product design which fits.",
+   "signals": [
+    {
+     "quote": "New York, NY, US",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    }
+   ]
+  }
  }
 }
