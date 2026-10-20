@@ -1372657,5 +1372657,3098 @@
     }
    ]
   }
+ },
+ "8ccefc25720d4397": {
+  "id": "8ccefc25720d4397",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/fuseenergy/j/1FCA44CDB9",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/fuseenergy/j/1FCA44CDB9",
+   "status": 200,
+   "shot": "data/shots/8ccefc25720d4397.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/fuseenergy/j/1FCA44CDB9",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:05"
+ },
+ "f7f90d3e13394d34": {
+  "id": "f7f90d3e13394d34",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/fuseenergy/j/9344DD45C0",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/fuseenergy/j/9344DD45C0",
+   "status": 200,
+   "shot": "data/shots/f7f90d3e13394d34.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/fuseenergy/j/9344DD45C0",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:05"
+ },
+ "98d877478cce49b0": {
+  "id": "98d877478cce49b0",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.linkedin.com/jobs/view/senior-product-designer-at-hadrian-4475602290",
+  "board": {
+   "url": "https://www.linkedin.com/",
+   "status": 200,
+   "shot": "data/shots/98d877478cce49b0.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "board",
+  "read": "board",
+  "read_url": "https://www.linkedin.com/",
+  "open_quote": "the board sent the link somewhere else: https://www.linkedin.com/",
+  "stage": "render",
+  "reason": "the board says it is closed, and the employer's posting was not found",
+  "fetched_at": "2026-10-20T11:16:05"
+ },
+ "aa270487da664395": {
+  "id": "aa270487da664395",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://databricks.com/company/careers/engineering---pipeline/engineering-manager---ui-platform-8013809002",
+  "board": {
+   "url": "https://www.databricks.com/company/careers/executive-engineering---pipeline/engineering-manager---ui-platform-8013809002",
+   "status": 200,
+   "shot": "data/shots/aa270487da664395.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://www.databricks.com/company/careers/executive-engineering---pipeline/engineering-manager---ui-platform-8013809002?gh_jid=8013809002",
+   "status": 200,
+   "shot": "data/shots/aa270487da664395.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://www.databricks.com/company/careers/executive-engineering---pipeline/engineering-ma"
+  ],
+  "read": "employer",
+  "read_url": "https://www.databricks.com/company/careers/executive-engineering---pipeline/engineering-manager---ui-platform-8013809002?gh_jid=8013809002",
+  "orig_id": "81107d4cb6054ef0",
+  "orig_posted": "2025-05-27",
+  "orig_updated": "2026-09-21",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:10"
+ },
+ "b320312d40d04142": {
+  "id": "b320312d40d04142",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://cryptocurrencyjobs.co/design/oku-product-designer/",
+  "board": {
+   "url": "https://cryptocurrencyjobs.co/design/oku-product-designer/",
+   "status": 200,
+   "shot": "data/shots/b320312d40d04142.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://careers.oku.trade/apply/product-designer-39EGNUOv?preview=false",
+   "status": 200,
+   "shot": "data/shots/b320312d40d04142.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://careers.oku.trade/apply/product-designer-39EGNUOv?preview=false"
+  ],
+  "read": "employer",
+  "read_url": "https://careers.oku.trade/apply/product-designer-39EGNUOv?preview=false",
+  "fetched_at": "2026-10-20T11:16:17",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Chicago or remote (North America only)",
+  "place_signals": [
+   {
+    "quote": "Chicago or remote (North America only)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Chicago or remote (North America only)",
+  "reason": "Role is explicitly restricted to North America, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Oku",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "North America"
+   ],
+   "portugal_ok": "no",
+   "salary": "$50k – $100k",
+   "years_xp": "2+ years as a product designer",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "8bb41f88e9d74618": {
+  "id": "8bb41f88e9d74618",
+  "at": "2026-10-20T11:17:34",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/exo/2d9292ba-e868-4c05-8dc6-e2c93229502f",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/exo/2d9292ba-e868-4c05-8dc6-e2c93229502f",
+   "status": 200,
+   "shot": "data/shots/8bb41f88e9d74618.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/exo/2d9292ba-e868-4c05-8dc6-e2c93229502f",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:06"
+ },
+ "8e60f659f768484a": {
+  "id": "8e60f659f768484a",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://sesterce.com/careers/data-center-design-lead-sesterce-modular-design",
+  "board": {
+   "url": "https://www.sesterce.com/careers/data-center-design-lead-sesterce-modular-design",
+   "status": 200,
+   "shot": "data/shots/8e60f659f768484a.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://www.sesterce.com/careers/data-center-design-lead-sesterce-modular-design",
+   "status": 200,
+   "shot": "data/shots/8e60f659f768484a.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://www.sesterce.com/careers/data-center-design-lead-sesterce-modular-design"
+  ],
+  "read": "employer",
+  "read_url": "https://www.sesterce.com/careers/data-center-design-lead-sesterce-modular-design",
+  "fetched_at": "2026-10-20T11:16:20",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "San Francisco, Seattle or Paris",
+  "place_signals": [
+   {
+    "quote": "San Francisco, Seattle or Paris",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "San Francisco, Seattle or Paris - On-site",
+  "reason": "This is a hardware/engineering design-of-infrastructure role (electrical/mechanical/modular construction) requiring on-site work in San Francisco, Seattle or Paris, not a product/UX/UI design role and not available in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Data Center Design Lead, Sesterce Modular Design",
+   "company": "Sesterce",
+   "seniority": "lead",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "10+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f9999a6d6fc74d13": {
+  "id": "f9999a6d6fc74d13",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/senior-product-designer-molecule/155356",
+  "board": {
+   "url": "https://web3.career/senior-product-designer-molecule/155356",
+   "status": 200,
+   "shot": "data/shots/f9999a6d6fc74d13.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/molecule/bef54315-4313-4af7-b625-bfbebf383fe4",
+   "status": 200,
+   "shot": "data/shots/f9999a6d6fc74d13.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/molecule/bef54315-4313-4af7-b625-bfbebf383fe4"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/molecule/bef54315-4313-4af7-b625-bfbebf383fe4",
+  "orig_id": "3bd399d3ea3d407c",
+  "orig_posted": "2026-10-11",
+  "orig_updated": null,
+  "fetched_at": "2026-10-20T11:16:10",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Location: Germany",
+  "place_signals": [
+   {
+    "quote": "Location: Germany",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type: Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Germany / Location Type: Remote",
+  "reason": "The posting pairs 'Remote' with a specific country, Germany, meaning the role is remote-from-Germany only, not Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Molecule",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "bf533477bb434030": {
+  "id": "bf533477bb434030",
+  "at": "2026-10-20T11:17:36",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://cryptocurrencyjobs.co/design/loopscale-product-designer-new-york-only/",
+  "board": {
+   "url": "https://cryptocurrencyjobs.co/design/loopscale-product-designer-new-york-only/",
+   "status": 200,
+   "shot": "data/shots/bf533477bb434030.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://careers.loopscale.com/37053",
+   "status": 200,
+   "shot": "data/shots/bf533477bb434030.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://careers.loopscale.com/37053"
+  ],
+  "read": "employer",
+  "read_url": "https://careers.loopscale.com/37053",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:20"
+ },
+ "c92bd5fac0524d17": {
+  "id": "c92bd5fac0524d17",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/senior-product-designer-securities-bitpanda/151678",
+  "board": {
+   "url": "https://web3.career/senior-product-designer-securities-bitpanda/151678",
+   "status": 200,
+   "shot": "data/shots/c92bd5fac0524d17.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/bitpanda/jobs/4928780101",
+   "status": 200,
+   "shot": "data/shots/c92bd5fac0524d17.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.eu.greenhouse.io/bitpanda/jobs/4928780101"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/bitpanda/jobs/4928780101",
+  "orig_id": "d3d93c66adf84965",
+  "orig_posted": "2026-07-17",
+  "orig_updated": "2026-10-15",
+  "fetched_at": "2026-10-20T11:16:09",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Barcelona, Spain",
+  "place_signals": [
+   {
+    "quote": "Barcelona, Spain",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexibility to work where you thrive – Enjoy the freedom of our Hybrid working model, combining onsite collaboration and remote work, with an additional 25 days per year to work from a city or country of your choice.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Are you happy to make yourself available for the required hybrid model of 3 days in office per week in our Barcelona or Vienna office?",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "At Bitpanda, we work Hybrid. 3 days onsite, 2 days from home, combining the best of in person collaboration and connection with at home flexibility.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "we provide a comprehensive in-person onboarding at our Vienna HQ, lasting 4–5 days",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Are you happy to make yourself available for the required hybrid model of 3 days in office per week in our Barcelona or Vienna office?",
+  "reason": "Role requires 3 days/week onsite in Barcelona or Vienna, which cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer, Securities",
+   "company": "Bitpanda",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "Spain",
+    "Austria"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "50ac144c888e46fe": {
+  "id": "50ac144c888e46fe",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.lunar.app/jobs/8469749-senior-product-designer",
+  "board": {
+   "url": "https://jobs.lunar.app/jobs/8469749-senior-product-designer",
+   "status": 200,
+   "shot": "data/shots/50ac144c888e46fe.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://www.teamtailor.com/en-us/?utm_campaign=poweredby&utm_content=jobs.lunar.app&utm_me"
+  ],
+  "read": "board",
+  "read_url": "https://jobs.lunar.app/jobs/8469749-senior-product-designer",
+  "fetched_at": "2026-10-20T11:16:09",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "COPENHAGEN, DENMARK, AARHUS, DENMARK",
+  "place_signals": [
+   {
+    "quote": "COPENHAGEN, DENMARK, AARHUS, DENMARK",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Aarhus or Copenhagen. Most of the design team sits in Aarhus, and that's the base for this role.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Like the rest of Lunar, we work to a 4-days-in-office policy.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "4 days in the office. We're a team that builds together, thinks together, and moves together. Showing up is part of how we work.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Locations Copenhagen, Denmark, Aarhus, Denmark",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Aarhus or Copenhagen...we work to a 4-days-in-office policy.",
+  "reason": "Role requires 4 days per week onsite in Aarhus or Copenhagen, Denmark; not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Lunar",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": 4,
+   "countries": [
+    "Denmark"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "6+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "6607452999ee413c": {
+  "id": "6607452999ee413c",
+  "at": "2026-10-20T11:17:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/senior-product-designer-molecule-xyz/155403",
+  "board": {
+   "url": "https://web3.career/senior-product-designer-molecule-xyz/155403",
+   "status": 200,
+   "shot": "data/shots/6607452999ee413c.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://web3.career/senior-product-designer-molecule-xyz/155403",
+  "fetched_at": "2026-10-20T11:16:14",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Location: Remote",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Location: Remote",
+  "reason": "Posting states Location: Remote with no country or region restriction anywhere on the page.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Web3 Senior Product Designer",
+   "company": "Molecule",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": "$74k - $110k estimated",
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "7d ago"
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "1b325ecc795843b4": {
+  "id": "1b325ecc795843b4",
+  "at": "2026-10-20T11:17:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://triple-a.io/open-position/product-designer-6-month-contract",
+  "board": {
+   "url": "https://www.triple-a.io/open-position/product-designer-6-month-contract",
+   "status": 200,
+   "shot": "data/shots/1b325ecc795843b4.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "apply: https://accounts.google.com/v3/signin/identifier?continue=https://docs.google.com/forms/d/"
+  ],
+  "read": "board",
+  "read_url": "https://www.triple-a.io/open-position/product-designer-6-month-contract",
+  "fetched_at": "2026-10-20T11:16:40",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Singapore\nHybrid",
+  "place_signals": [
+   {
+    "quote": "Singapore",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Singapore / Hybrid",
+  "reason": "Hybrid role tied to Singapore office, not workable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer (6-month contract)",
+   "company": "Triple-A",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Singapore"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "3+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "78e04cbe8cea4cb5": {
+  "id": "78e04cbe8cea4cb5",
+  "at": "2026-10-20T11:17:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://cryptocurrencyjobs.co/design/orderly-network-product-ux-ui-designer-orderly/",
+  "board": {
+   "url": "https://cryptocurrencyjobs.co/design/orderly-network-product-ux-ui-designer-orderly/",
+   "status": 200,
+   "shot": "data/shots/78e04cbe8cea4cb5.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/orderly/jobs/4740871008?ref=cryptocurrencyjobs.co",
+   "status": 200,
+   "shot": "data/shots/78e04cbe8cea4cb5.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://job-boards.greenhouse.io/orderly/jobs/4740871008?ref=cryptocurrencyjobs.co"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/orderly/jobs/4740871008?ref=cryptocurrencyjobs.co",
+  "fetched_at": "2026-10-20T11:16:12",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Remote",
+  "reason": "Title is remote with no country restriction stated anywhere on the page.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Product UX/UI Designer-Orderly",
+   "company": "Orderly Network",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "0ec8f5fa44b14987": {
+  "id": "0ec8f5fa44b14987",
+  "at": "2026-10-20T11:17:34",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/principal-product-designer-figure/58473",
+  "board": {
+   "url": "https://web3.career/principal-product-designer-figure/58473",
+   "status": 200,
+   "shot": "data/shots/0ec8f5fa44b14987.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/figure/jobs/8841922002",
+   "status": 200,
+   "shot": "data/shots/0ec8f5fa44b14987.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/figure/jobs/8841922002"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/figure/jobs/8841922002",
+  "orig_id": "48f4244789cb49eb",
+  "orig_posted": "2026-10-06",
+  "orig_updated": "2026-10-19",
+  "fetched_at": "2026-10-20T11:16:10",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This is the compensation range for the role in the United States.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Figure will not sponsor work visas for this position.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "all persons hired will be required to verify identity and eligibility to work in the United States and to complete the required employment eligibility verification form upon hire",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "What state do you currently reside in?*",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you authorized to work in the US for any employer?*",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "all persons hired will be required to verify identity and eligibility to work in the United States ... Figure will not sponsor work visas for this position.",
+  "reason": "Though labeled Remote, the posting requires US work eligibility, no visa sponsorship, and US-based compensation, excluding candidates based in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "countries"
+  ],
+  "fields": {
+   "role": "Principal Product Designer",
+   "company": "Figure",
+   "seniority": "principal",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$158,400 - $237,600/yr",
+   "years_xp": "8+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "345e6213b0c541e4": {
+  "id": "345e6213b0c541e4",
+  "at": "2026-10-20T11:17:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ar.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-at-f%C3%A9lix-4471995018",
+  "board": {
+   "url": "https://ar.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-at-f%C3%A9lix-4471995018",
+   "status": 200,
+   "shot": "data/shots/345e6213b0c541e4.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://ar.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-at-f%C3%A9lix-4471995018",
+  "fetched_at": "2026-10-20T11:16:13",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Buenos Aires, Buenos Aires (província), Argentina",
+  "place_signals": [
+   {
+    "quote": "Buenos Aires, Buenos Aires (província), Argentina",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Félix  Buenos Aires, Buenos Aires (província), Argentina ... Work model: currently fully remote, with a future transition to a hybrid set up",
+  "reason": "The only location given ties the role to Buenos Aires, Argentina, with a planned hybrid office setup there and no mention of Portugal or EU eligibility.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, Conversational AI Platform",
+   "company": "Félix",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Argentina"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "8+ years",
+   "reports_to": "Head of Product Design",
+   "language": "English",
+   "posted": "Há 2 semanas"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "86b76da0784045e8": {
+  "id": "86b76da0784045e8",
+  "at": "2026-10-20T11:18:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://openai.com/careers/actuator-gear-design-engineer-san-francisco/",
+  "board": {
+   "url": "https://openai.com/careers/search/",
+   "status": 200,
+   "shot": "data/shots/86b76da0784045e8.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/openai/4560b828-7624-414b-9670-6cc9bf0008ad",
+   "status": null,
+   "shot": null,
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/openai/4560b828-7624-414b-9670-6cc9bf0008ad"
+  ],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/openai/4560b828-7624-414b-9670-6cc9bf0008ad",
+  "open_quote": "the employer's own board no longer lists it",
+  "stage": "render",
+  "reason": "the employer says it is closed",
+  "fetched_at": "2026-10-20T11:16:19"
+ },
+ "d0244ca54c4b40bd": {
+  "id": "d0244ca54c4b40bd",
+  "at": "2026-10-20T11:18:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://openai.com/careers/actuator-design-engineer-san-francisco/",
+  "board": {
+   "url": "https://openai.com/careers/search/",
+   "status": 200,
+   "shot": "data/shots/d0244ca54c4b40bd.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/openai/5b75027a-a5eb-4d28-a608-aa6bebcb079f",
+   "status": null,
+   "shot": null,
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/openai/5b75027a-a5eb-4d28-a608-aa6bebcb079f"
+  ],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/openai/5b75027a-a5eb-4d28-a608-aa6bebcb079f",
+  "open_quote": "the employer's own board no longer lists it",
+  "stage": "render",
+  "reason": "the employer says it is closed",
+  "fetched_at": "2026-10-20T11:16:19"
+ },
+ "5d9f0c3793a4411a": {
+  "id": "5d9f0c3793a4411a",
+  "at": "2026-10-20T11:18:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.blackrock.com/job/london/director-principal-product-designer-aladdin-design/45831/97518867200",
+  "board": {
+   "url": "https://careers.blackrock.com/job/london/director-principal-product-designer-aladdin-design/45831/97518867200",
+   "status": 200,
+   "shot": "data/shots/5d9f0c3793a4411a.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/LO9-London---Drapers-Gardens/UX-Product-Designer---Aladdin-Design--Director_R264979",
+   "status": 200,
+   "shot": "data/shots/5d9f0c3793a4411a.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/LO9-London---Drapers-Ga"
+  ],
+  "read": "employer",
+  "read_url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/LO9-London---Drapers-Gardens/UX-Product-Designer---Aladdin-Design--Director_R264979",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:25"
+ },
+ "0bee9b4f0a0b4608": {
+  "id": "0bee9b4f0a0b4608",
+  "at": "2026-10-20T11:17:46",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/ui-engineer-salt-lake-city-taxbit/154703",
+  "board": {
+   "url": "https://web3.career/ui-engineer-salt-lake-city-taxbit/154703",
+   "status": 200,
+   "shot": "data/shots/0bee9b4f0a0b4608.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/taxbit/jobs/6111172004",
+   "status": 200,
+   "shot": "data/shots/0bee9b4f0a0b4608.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/taxbit/jobs/6111172004"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/taxbit/jobs/6111172004",
+  "orig_id": "5b1558760f854395",
+  "orig_posted": "2026-07-07",
+  "orig_updated": "2026-09-29",
+  "fetched_at": "2026-10-20T11:16:17",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Salt Lake City, Utah",
+  "place_signals": [
+   {
+    "quote": "Salt Lake City, Utah",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working model: 3 days in-office, 2 days WFH/flexible",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Taxbit does not offer remote opportunities. Taxbit operates on a hybrid remote policy, with 3 in-office days per week. Please confirm you will comply with this hybrid policy in our Salt Lake City office.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Please confirm that you are currently authorized to work in the United States and will not now or in the future require Taxbit to provide employment-based immigration sponsorship.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Taxbit does not offer remote opportunities and certain roles are specific to certain office locations... Salt Lake City office without requiring relocation.",
+  "reason": "Role requires hybrid onsite presence in Salt Lake City and US work authorization, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI Engineer, Salt Lake City",
+   "company": "Taxbit",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": 3,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$110,000 - $170,000",
+   "years_xp": "3+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7267d8252b034c66": {
+  "id": "7267d8252b034c66",
+  "at": "2026-10-20T11:17:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-at-f%C3%A9lix-4471989345",
+  "board": {
+   "url": "https://www.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-at-f%C3%A9lix-4471989345",
+   "status": 200,
+   "shot": "data/shots/7267d8252b034c66.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-at-f%C3%A9lix-4471989345",
+  "fetched_at": "2026-10-20T11:16:12",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Nova York, Nova York, Estados Unidos",
+  "place_signals": [
+   {
+    "quote": "Nova York, Nova York, Estados Unidos",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+  "reason": "Posting states the role is currently fully remote but lists New York, US as the job location and gives no explicit country eligibility, so Portugal cannot be confirmed either way.",
+  "confidence": "low",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, Conversational AI Platform",
+   "company": "Félix",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "8+ years designing consumer products, including two years leading design on a conversational or AI-native product",
+   "reports_to": "Head of Product Design",
+   "language": "English",
+   "posted": "Há 2 semanas"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "e7197f791a0e47aa": {
+  "id": "e7197f791a0e47aa",
+  "at": "2026-10-20T11:17:36",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-copy-at-f%C3%A9lix-4473378795",
+  "board": {
+   "url": "https://www.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-copy-at-f%C3%A9lix-4473378795?original_referer=",
+   "status": 200,
+   "shot": "data/shots/e7197f791a0e47aa.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.linkedin.com/jobs/view/staff-product-designer-conversational-ai-platform-copy-at-f%C3%A9lix-4473378795?original_referer=",
+  "fetched_at": "2026-10-20T11:16:08",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "San Francisco, Califórnia, Estados Unidos",
+  "place_signals": [
+   {
+    "quote": "Félix  San Francisco, Califórnia, Estados Unidos",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+  "reason": "Job is stated as currently fully remote with no country restriction given, but the location field lists only San Francisco, leaving Portugal eligibility unclear.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, Conversational AI Platform (Copy)",
+   "company": "Félix",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "8+",
+   "reports_to": "Head of Product Design",
+   "language": "English",
+   "posted": "Há 2 semanas"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "421cb8950b93456e": {
+  "id": "421cb8950b93456e",
+  "at": "2026-10-20T11:18:03",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/head-of-design-product-design-bitgo/154584",
+  "board": {
+   "url": "https://web3.career/head-of-design-product-design-bitgo/154584",
+   "status": 200,
+   "shot": "data/shots/421cb8950b93456e.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/bitgo/jobs/8842015002",
+   "status": 200,
+   "shot": "data/shots/421cb8950b93456e.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/bitgo/jobs/8842015002"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/bitgo/jobs/8842015002",
+  "orig_id": "dc51ee410f544c6a",
+  "orig_posted": "2026-09-24",
+  "orig_updated": "2026-10-02",
+  "fetched_at": "2026-10-20T11:16:23",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Palo Alto, California, United States",
+  "place_signals": [
+   {
+    "quote": "Palo Alto, California, United States",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role will require being full-time onsite at our Palo Alto office to support collaborative team dynamics and innovative problem-solving.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is onsite (Monday - Friday) in our Palo Alto, CA office. Are you willing to work onsite from Palo Alto full time?",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you legally authorized to work in the US?",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role will require being full-time onsite at our Palo Alto office to support collaborative team dynamics and innovative problem-solving.",
+  "reason": "Full-time onsite requirement at the Palo Alto, California office rules out working from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Head of Design, Product Design",
+   "company": "BitGo",
+   "seniority": "head",
+   "remote": "onsite",
+   "onsite_days": "5",
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$210,000 - $250,000 USD base salary",
+   "years_xp": null,
+   "reports_to": "Chief Product Officer",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "96b0447c450040fe": {
+  "id": "96b0447c450040fe",
+  "at": "2026-10-20T11:18:00",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://scrypt.swiss/company/careers/senior-product-designer",
+  "board": {
+   "url": "https://scrypt.swiss/company/careers/senior-product-designer",
+   "status": 200,
+   "shot": "data/shots/96b0447c450040fe.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://scrypt.swiss/company/careers/senior-product-designer",
+   "status": 200,
+   "shot": "data/shots/96b0447c450040fe.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://scrypt.swiss/company/careers/senior-product-designer"
+  ],
+  "read": "employer",
+  "read_url": "https://scrypt.swiss/company/careers/senior-product-designer",
+  "fetched_at": "2026-10-20T11:17:05",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Full time · Remote · EU Time Zone",
+  "place_signals": [
+   {
+    "quote": "Full time · Remote · EU Time Zone",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Swiss-anchored, globally operating - regulatory rigor where it matters, volume where it counts",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Full time · Remote · EU Time Zone",
+  "reason": "Role is explicitly remote within the EU time zone, which includes Portugal, and the work is clearly senior product design (trading UX, design system, research).",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "SCRYPT",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "Product Manager",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "1e7bca6842454624": {
+  "id": "1e7bca6842454624",
+  "at": "2026-10-20T11:18:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://unitree.com/position/1968196722727321600",
+  "board": {
+   "url": "https://www.unitree.com/position/1968196722727321600",
+   "status": 200,
+   "shot": "data/shots/1e7bca6842454624.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "board",
+  "read": "board",
+  "read_url": "https://www.unitree.com/position/1968196722727321600",
+  "open_quote": "the board sent the link somewhere else: https://www.unitree.com/position/1968196722727321600",
+  "stage": "render",
+  "reason": "the board says it is closed, and the employer's posting was not found",
+  "fetched_at": "2026-10-20T11:16:54"
+ },
+ "77879e9db87e40c8": {
+  "id": "77879e9db87e40c8",
+  "at": "2026-10-20T11:18:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://rebellions.career.greetinghr.com/o/200336",
+  "board": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200336",
+   "status": 200,
+   "shot": "data/shots/77879e9db87e40c8.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200336",
+   "status": 200,
+   "shot": "data/shots/77879e9db87e40c8.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://rebellions.career.greetinghr.com/ko/o/200336"
+  ],
+  "read": "employer",
+  "read_url": "https://rebellions.career.greetinghr.com/ko/o/200336",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:55"
+ },
+ "007222cfdac843a2": {
+  "id": "007222cfdac843a2",
+  "at": "2026-10-20T11:18:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://rebellions.career.greetinghr.com/o/200334",
+  "board": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200334",
+   "status": 200,
+   "shot": "data/shots/007222cfdac843a2.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200325",
+   "status": 200,
+   "shot": "data/shots/007222cfdac843a2.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://rebellions.career.greetinghr.com/ko/o/200325"
+  ],
+  "read": "employer",
+  "read_url": "https://rebellions.career.greetinghr.com/ko/o/200325",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:55"
+ },
+ "483c0a9f379c4f44": {
+  "id": "483c0a9f379c4f44",
+  "at": "2026-10-20T11:18:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.eterneva.com/apply/f5e0a915-5408-4dbc-a085-356822f3210f",
+  "board": {
+   "url": "https://careers.eterneva.com/apply/f5e0a915-5408-4dbc-a085-356822f3210f?draft=",
+   "status": 200,
+   "shot": "data/shots/483c0a9f379c4f44.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://careers.eterneva.com/apply/f5e0a915-5408-4dbc-a085-356822f3210f?draft=",
+  "fetched_at": "2026-10-20T11:16:40",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote – US",
+  "place_signals": [
+   {
+    "quote": "Remote – US",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Remote (U.S.)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our home base is Kerrville, Texas, in the Hill Country. This role is fully remote, working closely with our Kerrville team and production partners.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote – US / Location: Remote (U.S.)",
+  "reason": "This is a hands-on jewelry design and client-consultation role (not product/UX/UI design), and it is explicitly remote within the US only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Jewelry Designer",
+   "company": "Eterneva",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d2627264fde34094": {
+  "id": "d2627264fde34094",
+  "at": "2026-10-20T11:18:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://rebellions.career.greetinghr.com/o/200328",
+  "board": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200328",
+   "status": 200,
+   "shot": "data/shots/d2627264fde34094.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200325",
+   "status": 200,
+   "shot": "data/shots/d2627264fde34094.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://rebellions.career.greetinghr.com/ko/o/200325"
+  ],
+  "read": "employer",
+  "read_url": "https://rebellions.career.greetinghr.com/ko/o/200325",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:56"
+ },
+ "9fd9f998bd014305": {
+  "id": "9fd9f998bd014305",
+  "at": "2026-10-20T11:18:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://rebellions.career.greetinghr.com/o/200327",
+  "board": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200327",
+   "status": 200,
+   "shot": "data/shots/9fd9f998bd014305.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://rebellions.career.greetinghr.com/ko/o/200327",
+   "status": 200,
+   "shot": "data/shots/9fd9f998bd014305.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://rebellions.career.greetinghr.com/ko/o/200327"
+  ],
+  "read": "employer",
+  "read_url": "https://rebellions.career.greetinghr.com/ko/o/200327",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:16:53"
+ },
+ "5525da02d5f74aa9": {
+  "id": "5525da02d5f74aa9",
+  "at": "2026-10-20T11:18:03",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.ethena.fi/jobs/8445449-senior-product-designer-ethena-pay",
+  "board": {
+   "url": "https://careers.ethena.fi/jobs/8445449-senior-product-designer-ethena-pay",
+   "status": 200,
+   "shot": "data/shots/5525da02d5f74aa9.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://careers.ethena.fi/jobs/8445449-senior-product-designer-ethena-pay",
+   "status": 200,
+   "shot": "data/shots/5525da02d5f74aa9.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "link: https://app.teamtailor.com/login",
+   "link: https://www.teamtailor.com/en-us/?utm_campaign=poweredby&utm_content=careers.ethena.fi&utm",
+   "careers: https://careers.ethena.fi/jobs/8445449-senior-product-designer-ethena-pay"
+  ],
+  "read": "employer",
+  "read_url": "https://careers.ethena.fi/jobs/8445449-senior-product-designer-ethena-pay",
+  "fetched_at": "2026-10-20T11:16:50",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "FULLY REMOTE",
+  "place_signals": [
+   {
+    "quote": "FULLY REMOTE",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Fully Remote",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "FULLY REMOTE",
+  "reason": "The role is stated as fully remote with no country restriction or office requirement given anywhere on the page.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - Ethena Pay",
+   "company": "Ethena Labs",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "Head of Product",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "88befd910cb947a1": {
+  "id": "88befd910cb947a1",
+  "at": "2026-10-20T11:17:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/senior-product-designer-coinglass-coinmarketcap/154752",
+  "board": {
+   "url": "https://web3.career/senior-product-designer-coinglass-coinmarketcap/154752",
+   "status": 200,
+   "shot": "data/shots/88befd910cb947a1.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://web3.career/senior-product-designer-coinglass-coinmarketcap/154752",
+  "fetched_at": "2026-10-20T11:16:20",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Global / Dubai / Hong Kong / Singapore",
+  "place_signals": [
+   {
+    "quote": "Global / Dubai / Hong Kong / Singapore",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Full-time / Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: Dubai",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Global / Dubai / Hong Kong / Singapore ... Remote",
+  "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · The posting lists 'Global' as a location option alongside hub cities and tags the role Remote, including Portugal, though a side-panel tag narrows it to Dubai.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer - CoinGlass",
+   "company": "Coin Market Cap Ltd",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Global",
+    "Dubai",
+    "Hong Kong",
+    "Singapore"
+   ],
+   "portugal_ok": "yes",
+   "salary": "$95k - $117k estimated",
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "20d ago"
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "69fcd8f5472747fd": {
+  "id": "69fcd8f5472747fd",
+  "at": "2026-10-20T11:18:07",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.symbotic.com/careers/jobs/R7744/",
+  "board": {
+   "url": "https://www.symbotic.com/careers/jobs/R7744/",
+   "status": 200,
+   "shot": "data/shots/69fcd8f5472747fd.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [
+   "link: https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Senior-Manag",
+   "apply: https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Senior-Manag"
+  ],
+  "read": "board",
+  "read_url": "https://www.symbotic.com/careers/jobs/R7744/",
+  "fetched_at": "2026-10-20T11:16:33",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "USA WILMINGTON, MA - HQ",
+  "place_signals": [
+   {
+    "quote": "USA WILMINGTON, MA - HQ",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "#LI-Onsite",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The base range for this position in the posted location is $175,500.00 - $257,400.00",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "USA WILMINGTON, MA - HQ ... #LI-Onsite",
+  "reason": "The role is an engineering management position for simulation/robotics engineering, onsite in Wilmington, MA, not a product/UX design role and not workable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Manager, Simulation Engineering",
+   "company": "Symbotic",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "$175,500.00 - $257,400.00",
+   "years_xp": 10,
+   "reports_to": null,
+   "language": "English",
+   "posted": "October 02, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "afacbb4234694919": {
+  "id": "afacbb4234694919",
+  "at": "2026-10-20T11:18:16",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://sakana.ai/careers/product-designer/",
+  "board": {
+   "url": "https://sakana.ai/careers/product-designer/",
+   "status": 200,
+   "shot": "data/shots/afacbb4234694919.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://sakana.ai/careers/product-designer/",
+  "fetched_at": "2026-10-20T11:16:33",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English (and Japanese)",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Tokyo (Hybrid)",
+  "place_signals": [
+   {
+    "quote": "Tokyo (Hybrid)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Japanese (Business) & English",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Strong communication skills to perform in a global team, with a high level of proficiency in both Japanese and English.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Tokyo (Hybrid) / Japanese (Business) & English",
+  "reason": "Role is hybrid in Tokyo and requires business-level Japanese, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Sakana AI",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Japan"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English and Japanese",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "b08478f930e24dbf": {
+  "id": "b08478f930e24dbf",
+  "at": "2026-10-20T11:18:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/staff-product-designer-defi-mystenlabs/154492",
+  "board": {
+   "url": "https://web3.career/staff-product-designer-defi-mystenlabs/154492",
+   "status": 200,
+   "shot": "data/shots/b08478f930e24dbf.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/mystenlabs/b83dab9a-e925-4628-aaca-4caa122d4d73",
+   "status": 200,
+   "shot": "data/shots/b08478f930e24dbf.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/mystenlabs/b83dab9a-e925-4628-aaca-4caa122d4d73"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/mystenlabs/b83dab9a-e925-4628-aaca-4caa122d4d73",
+  "orig_id": "8996949a33bb4d24",
+  "orig_posted": "2026-09-18",
+  "orig_updated": null,
+  "fetched_at": "2026-10-20T11:16:39",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "USA (Remote)",
+  "place_signals": [
+   {
+    "quote": "USA (Remote)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The US base salary range for this full-time position is $150,000-$225,000. Our salary ranges are determined by role and level, but not location (within the US).",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team is remote first and we are hiring across the world.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: USA (Remote)",
+  "reason": "The specific location field for this role explicitly states USA (Remote), which excludes Portugal despite a generic company-wide remark about hiring globally.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, DeFi",
+   "company": "Mysten Labs",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "$150K – $225K",
+   "years_xp": "10 or more years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "206c72a6dda446b6": {
+  "id": "206c72a6dda446b6",
+  "at": "2026-10-20T11:18:22",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://civai.org/jobs/product-designer",
+  "board": {
+   "url": "https://civai.org/jobs/product-designer",
+   "status": 200,
+   "shot": "data/shots/206c72a6dda446b6.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://civai.org/jobs/product-designer",
+   "status": 200,
+   "shot": "data/shots/206c72a6dda446b6.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://civai.org/jobs/product-designer"
+  ],
+  "read": "employer",
+  "read_url": "https://civai.org/jobs/product-designer",
+  "fetched_at": "2026-10-20T11:17:01",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Product Designer (Berkeley, CA)",
+  "place_signals": [
+   {
+    "quote": "Product Designer (Berkeley, CA)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The role is full-time and on-site at our office in Berkeley. We may be open to remote for exceptional candidates.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Final round interview (4 hr) — At our office in Berkeley, though remote is possible if needed.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We may be able to sponsor visas in select cases.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The role is full-time and on-site at our office in Berkeley. We may be open to remote for exceptional candidates.",
+  "reason": "Role is onsite in Berkeley, CA with only a narrow, conditional exception for remote; no indication Portugal-based remote work is acceptable.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "CivAI",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$125,000 to $200,000",
+   "years_xp": "2+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a3734fa68530448e": {
+  "id": "a3734fa68530448e",
+  "at": "2026-10-20T11:18:23",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.linkedin.com/jobs/view/staff-product-designer-defi-at-mysten-labs-4469291240",
+  "board": {
+   "url": "https://www.linkedin.com/jobs/view/staff-product-designer-defi-at-mysten-labs-4469291240",
+   "status": 200,
+   "shot": "data/shots/a3734fa68530448e.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/mystenlabs/b83dab9a-e925-4628-aaca-4caa122d4d73",
+   "status": 200,
+   "shot": "data/shots/a3734fa68530448e.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/mystenlabs/b83dab9a-e925-4628-aaca-4caa122d4d73"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/mystenlabs/b83dab9a-e925-4628-aaca-4caa122d4d73",
+  "orig_id": "8996949a33bb4d24",
+  "orig_posted": "2026-09-18",
+  "orig_updated": null,
+  "fetched_at": "2026-10-20T11:16:46",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "USA (Remote)",
+  "place_signals": [
+   {
+    "quote": "USA (Remote)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The US base salary range for this full-time position is $150,000-$225,000. Our salary ranges are determined by role and level, but not location (within the US).",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our benefits package for US employees also includes:",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our team is remote first and we are hiring across the world.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "USA (Remote)",
+  "reason": "The posting explicitly restricts this role to USA (Remote), with US-only salary and benefits, overriding the generic 'hiring across the world' line.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, DeFi",
+   "company": "Mysten Labs",
+   "seniority": "staff",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "USA"
+   ],
+   "portugal_ok": "no",
+   "salary": "$150K – $225K",
+   "years_xp": "10 or more years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "9f85a56d7091406d": {
+  "id": "9f85a56d7091406d",
+  "at": "2026-10-20T11:18:26",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.gusto.com/postings/blockspaces-inc-sr-ui-ux-designer-3545f0fd-d79b-4cb9-a24b-df462ad75c57",
+  "board": {
+   "url": "https://jobs.gusto.com/postings/blockspaces-inc-sr-ui-ux-designer-3545f0fd-d79b-4cb9-a24b-df462ad75c57",
+   "status": 200,
+   "shot": "data/shots/9f85a56d7091406d.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://jobs.gusto.com/postings/blockspaces-inc-sr-ui-ux-designer-3545f0fd-d79b-4cb9-a24b-df462ad75c57",
+  "fetched_at": "2026-10-20T11:16:48",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote · Full time",
+  "place_signals": [
+   {
+    "quote": "Remote · Full time",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location: 100% Remote, but must be US based and preference given to Florida residence.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "office space at our HQ in Tampa, FL",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "100% Remote, but must be US based and preference given to Florida residence.",
+  "reason": "The role explicitly requires being US based, which excludes someone living in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Sr. UI/UX Designer",
+   "company": "BlockSpaces, Inc.",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "8612f1df413a4f6f": {
+  "id": "8612f1df413a4f6f",
+  "at": "2026-10-20T11:18:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.circle.com/us/en/job/JR101140",
+  "board": {
+   "url": "https://careers.circle.com/us/en/job/JR101140/Lead-Product-Designer",
+   "status": 200,
+   "shot": "data/shots/8612f1df413a4f6f.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/circle/130695ad-687e-4c49-976f-eb46f9b45ac9",
+   "status": 200,
+   "shot": "data/shots/8612f1df413a4f6f.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/circle/130695ad-687e-4c49-976f-eb46f9b45ac9"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/circle/130695ad-687e-4c49-976f-eb46f9b45ac9",
+  "orig_id": "649439618fc841b4",
+  "orig_posted": "2026-08-26",
+  "orig_updated": null,
+  "lane": "cut",
+  "stage": "cl",
+  "reason": "age: the employer's own posting was posted or last updated 55 days ago; the job board's copy made it look newer",
+  "fetched_at": "2026-10-20T11:17:00"
+ },
+ "bcf7d35860f94e4a": {
+  "id": "bcf7d35860f94e4a",
+  "at": "2026-10-20T11:18:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://cn.linkedin.com/jobs/view/senior-product-designer-at-bit-official-4466651303",
+  "board": {
+   "url": "https://cn.linkedin.com/jobs/view/senior-product-designer-at-bit-official-4466651303",
+   "status": 200,
+   "shot": "data/shots/bcf7d35860f94e4a.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://cn.linkedin.com/jobs/view/senior-product-designer-at-bit-official-4466651303",
+  "fetched_at": "2026-10-20T11:16:44",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": "BIT (formerly Matrixport)",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Pequim, China",
+  "place_signals": [
+   {
+    "quote": "BIT Official  Pequim, China",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Receba alertas de novas vagas de Designer de produtos em: Pequim, China.",
+    "where": "footer or small print",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Comfortable working in a fast-paced, bilingual (English/Chinese) environment.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "BIT Official  Pequim, China",
+  "reason": "The posting lists only a Beijing, China location with no mention of remote work, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "BIT (formerly Matrixport)",
+   "seniority": "senior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [
+    "China"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+ years of product design experience",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Há 1 mês"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d691816370424cc4": {
+  "id": "d691816370424cc4",
+  "at": "2026-10-20T11:18:14",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.verda.com/jobs/7980049-dx-designer",
+  "board": {
+   "url": "https://jobs.verda.com/jobs/7980049-dx-designer",
+   "status": 200,
+   "shot": "data/shots/d691816370424cc4.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.verda.com/jobs/7980049-dx-designer",
+   "status": 200,
+   "shot": "data/shots/d691816370424cc4.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "link: https://app.teamtailor.com/login",
+   "link: https://www.teamtailor.com/en-us/?utm_campaign=poweredby&utm_content=jobs.verda.com&utm_me",
+   "careers: https://jobs.verda.com/jobs/7980049-dx-designer"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.verda.com/jobs/7980049-dx-designer",
+  "fetched_at": "2026-10-20T11:16:53",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "DESIGN · HELSINKI, EU · HYBRID",
+  "place_signals": [
+   {
+    "quote": "DESIGN · HELSINKI, EU · HYBRID",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Helsinki or remote EU",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Hybrid mode: 3 days per week in the office",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Locations: Helsinki, EU",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote status: Hybrid",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Location: Helsinki or remote EU",
+  "reason": "the page says both, explicitly: Portugal in, and Portugal out · Posting offers Helsinki hybrid OR remote EU, and the remote EU option includes Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "DX Designer",
+   "company": "Verda",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "EU"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": "4+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "remote"
+ },
+ "66622d146a034372": {
+  "id": "66622d146a034372",
+  "at": "2026-10-20T11:18:28",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://metamask.io/careers/8202750",
+  "board": {
+   "url": "https://metamask.io/careers/8202750",
+   "status": 200,
+   "shot": "data/shots/66622d146a034372.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/embed/job_app?for=consensys&token=8202750",
+   "status": 200,
+   "shot": "data/shots/66622d146a034372.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://job-boards.greenhouse.io/embed/job_app?for=consensys&token=8202750"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/embed/job_app?for=consensys&token=8202750",
+  "fetched_at": "2026-10-20T11:16:51",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "unreadable",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "unclear",
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
+  "place_verdict": "unclear",
+  "place_quote": null,
+  "reason": "The page is only the application form/privacy notice, not the actual job description, so role and location cannot be read.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "MetaMask",
+   "seniority": "lead",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "unread_tries": 1
+ },
+ "81c6cd00583a4043": {
+  "id": "81c6cd00583a4043",
+  "at": "2026-10-20T11:18:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://metamask.io/careers/7256954",
+  "board": {
+   "url": "https://metamask.io/careers/7256954",
+   "status": 200,
+   "shot": "data/shots/81c6cd00583a4043.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/embed/job_app?for=consensys&token=7256954",
+   "status": 200,
+   "shot": "data/shots/81c6cd00583a4043.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://job-boards.greenhouse.io/embed/job_app?for=consensys&token=7256954"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/embed/job_app?for=consensys&token=7256954",
+  "fetched_at": "2026-10-20T11:16:52",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "unreadable",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "unclear",
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
+  "place_verdict": "unclear",
+  "place_quote": null,
+  "reason": "The page is only a Greenhouse application form (fields, privacy notice) with no job description, title context, or location stated.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Design Engineer",
+   "company": "MetaMask",
+   "seniority": "senior",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "unread_tries": 1
+ },
+ "891407a8ee104780": {
+  "id": "891407a8ee104780",
+  "at": "2026-10-20T11:18:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://circle.wd1.myworkdayjobs.com/Circle/job/San-Francisco---remote-first-in-US/Lead-Product-Designer_JR101140",
+  "board": null,
+  "employer": {
+   "url": "https://circle.wd1.myworkdayjobs.com/Circle/job/San-Francisco---remote-first-in-US/Lead-Product-Designer_JR101140",
+   "status": 200,
+   "shot": "data/shots/891407a8ee104780.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://circle.wd1.myworkdayjobs.com/Circle/job/San-Francisco---remote-first-in-US/Lead-Product-Designer_JR101140",
+  "fetched_at": "2026-10-20T11:16:55",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "San Francisco - remote first in US",
+  "place_signals": [
+   {
+    "quote": "San Francisco - remote first in US",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "#LI-Remote",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Please note that compensation ranges may differ for candidates in other locations.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Base Pay Range: $172,500 - $225,000",
+    "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "San Francisco - remote first in US",
+  "reason": "The posting explicitly states the role is remote first within the US, excluding Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "Circle",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$172,500 - $225,000",
+   "years_xp": "7+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Posted 30+ Days Ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f0667099e6b640a8": {
+  "id": "f0667099e6b640a8",
+  "at": "2026-10-20T11:18:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/product-designer-300k-500k-batoncorporation/153914",
+  "board": {
+   "url": "https://web3.career/product-designer-300k-500k-batoncorporation/153914",
+   "status": 200,
+   "shot": "data/shots/f0667099e6b640a8.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/batoncorporation/b4c1c019-6c93-4825-a341-bb500c5a66e5",
+   "status": 200,
+   "shot": "data/shots/f0667099e6b640a8.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/batoncorporation/b4c1c019-6c93-4825-a341-bb500c5a66e5"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/batoncorporation/b4c1c019-6c93-4825-a341-bb500c5a66e5",
+  "orig_id": "69b130c3e5a34dd4",
+  "orig_posted": "2026-09-08",
+  "orig_updated": null,
+  "fetched_at": "2026-10-20T11:17:01",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "New York",
+  "place_signals": [
+   {
+    "quote": "Location\n\nNew York",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type\n\nOn-site",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location Type: On-site, Location: New York",
+  "reason": "The role is explicitly on-site in New York, which rules out working from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer ($300k - $500k)",
+   "company": "Baton Corporation",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$300K – $500K Base, $75K – $500K Equity, Offers Bonus",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f0868cc5f01f4fe3": {
+  "id": "f0868cc5f01f4fe3",
+  "at": "2026-10-20T11:18:49",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.loopscale.com/37053",
+  "board": {
+   "url": "https://careers.loopscale.com/37053",
+   "status": 200,
+   "shot": "data/shots/f0868cc5f01f4fe3.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://careers.loopscale.com/37053",
+   "status": 200,
+   "shot": "data/shots/f0868cc5f01f4fe3.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "link: https://www.polymer.co/?utm_medium=internalJobBoard&utm_source=polymerJobsPage",
+   "careers: https://careers.loopscale.com/37053"
+  ],
+  "read": "employer",
+  "read_url": "https://careers.loopscale.com/37053",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T11:17:18"
+ },
+ "4f45d15d47f64ff4": {
+  "id": "4f45d15d47f64ff4",
+  "at": "2026-10-20T11:18:34",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://mb.inhire.app/vagas/bbde26cf-24d6-413e-86eb-56e4128d1584/designer-de-criacao-analista-pleno",
+  "board": null,
+  "employer": {
+   "url": "https://mb.inhire.app/vagas/bbde26cf-24d6-413e-86eb-56e4128d1584/designer-de-criacao-analista-pleno",
+   "status": 200,
+   "shot": "data/shots/4f45d15d47f64ff4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://mb.inhire.app/vagas/bbde26cf-24d6-413e-86eb-56e4128d1584/designer-de-criacao-analista-pleno",
+  "fetched_at": "2026-10-20T11:17:03",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Portuguese",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "São Paulo, SP, BR",
+  "place_signals": [
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "São Paulo, SP, BR",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Trabalhamos em modelo híbrido, de 2 a 3x por semana no escritório na Faria Lima (SP).",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you available to work on the hybrid model at São Paulo, São Paulo, Brasil?",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Trabalhamos em modelo híbrido, de 2 a 3x por semana no escritório na Faria Lima (SP).",
+  "reason": "The role is a brand/campaign graphic design position requiring hybrid office attendance in São Paulo, Brazil - neither the role type nor the location fit.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Designer de Criação — Analista Pleno",
+   "company": "Mercado Bitcoin",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": "2 a 3x por semana",
+   "countries": [
+    "Brazil"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "2 a 4 anos",
+   "reports_to": null,
+   "language": "Portuguese",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "c4aaa00e3b7447cc": {
+  "id": "c4aaa00e3b7447cc",
+  "at": "2026-10-20T11:18:47",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://sugared-duckling-ec8.notion.site/Lead-Product-Designer-379bc95efcca80d4bc63cf74aa6762dd?pvs=25",
+  "board": null,
+  "employer": {
+   "url": "https://sugared-duckling-ec8.notion.site/Lead-Product-Designer-379bc95efcca80d4bc63cf74aa6762dd",
+   "status": 200,
+   "shot": "data/shots/c4aaa00e3b7447cc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://sugared-duckling-ec8.notion.site/Lead-Product-Designer-379bc95efcca80d4bc63cf74aa6762dd",
+  "fetched_at": "2026-10-20T11:16:59",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Location\nRemote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Location: Remote",
+  "reason": "remote from a list of countries the page does not show · Posting says Remote with no country restriction or list, so Portugal eligibility cannot be confirmed from the page alone.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "Backpack",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "unclear"
+ },
+ "24051e35d0274b2a": {
+  "id": "24051e35d0274b2a",
+  "at": "2026-10-20T11:18:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://web3.career/event-design-coordinator-remote-europe-tetheroperationslimited/154190",
+  "board": {
+   "url": "https://web3.career/event-design-coordinator-remote-europe-tetheroperationslimited/154190",
+   "status": 200,
+   "shot": "data/shots/24051e35d0274b2a.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://web3.career/event-design-coordinator-remote-europe-tetheroperationslimited/154190",
+  "fetched_at": "2026-10-20T11:17:02",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Web3 Event Design Coordinator (Remote / Europe)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Our team is a global talent powerhouse, working remotely from every corner of the world.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Location: CT Barcelona ES",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Web3 Event Design Coordinator (Remote / Europe)",
+  "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · The role is an events/creative-operations coordinator job that explicitly says a designer background isn't required, so it is not a design role, even though the title headline marks it Remote/Europe.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Event Design Coordinator",
+   "company": "Tether Operations Limited",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Europe"
+   ],
+   "portugal_ok": "yes",
+   "salary": "$105k - $120k estimated",
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "1mo ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "cd98fb8c30db4650": {
+  "id": "cd98fb8c30db4650",
+  "at": "2026-10-20T11:18:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://co.linkedin.com/jobs/view/product-designer-credit-at-f%C3%A9lix-4464581470",
+  "board": {
+   "url": "https://co.linkedin.com/jobs/view/product-designer-credit-at-f%C3%A9lix-4464581470",
+   "status": 200,
+   "shot": "data/shots/cd98fb8c30db4650.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://co.linkedin.com/jobs/view/product-designer-credit-at-f%C3%A9lix-4464581470",
+  "fetched_at": "2026-10-20T11:16:56",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Félix  Bogota, D.C., Distrito Capital de Bogotá - Departamento, Colômbia",
+  "place_signals": [
+   {
+    "quote": "Bogota, D.C., Distrito Capital de Bogotá - Departamento, Colômbia",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+  "reason": "Location field names Bogotá, Colombia with no remote qualifier, while the only remote statement gives no geography, leaving eligibility from Portugal unclear.",
+  "confidence": "low",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer, Credit",
+   "company": "Félix",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "4+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Há 1 mês"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "e957f02488a542ff": {
+  "id": "e957f02488a542ff",
+  "at": "2026-10-20T11:18:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.linkedin.com/jobs/view/product-designer-credit-at-f%C3%A9lix-4464598335",
+  "board": {
+   "url": "https://www.linkedin.com/jobs/view/product-designer-credit-at-f%C3%A9lix-4464598335",
+   "status": 200,
+   "shot": "data/shots/e957f02488a542ff.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.linkedin.com/jobs/view/product-designer-credit-at-f%C3%A9lix-4464598335",
+  "fetched_at": "2026-10-20T11:16:56",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Miami, Flórida, Estados Unidos",
+  "place_signals": [
+   {
+    "quote": "Miami, Flórida, Estados Unidos",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work model: currently fully remote, with a future transition to a hybrid set up",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Miami, Flórida, Estados Unidos / Work model: currently fully remote, with a future transition to a hybrid set up",
+  "reason": "The only concrete location signal is Miami, USA, and the remote statement never names an eligible country, so there is no stated path to working from Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer, Credit",
+   "company": "Félix",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Estados Unidos"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "4+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Há 1 mês"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  }
 }
