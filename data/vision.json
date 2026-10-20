@@ -1370568,5 +1370568,118 @@
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
   "fetched_at": "2026-10-20T04:03:33"
+ },
+ "726c819371204144": {
+  "id": "726c819371204144",
+  "at": "2026-10-20T04:10:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://dekkerdesign.bamboohr.com/careers/399",
+  "board": null,
+  "employer": {
+   "url": "https://dekkerdesign.bamboohr.com/careers/399",
+   "status": 200,
+   "shot": "data/shots/726c819371204144.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://dekkerdesign.bamboohr.com/careers/399",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T04:09:19"
+ },
+ "59b75aeaa60c40bf": {
+  "id": "59b75aeaa60c40bf",
+  "at": "2026-10-20T04:10:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://fertifa.bamboohr.com/careers/62",
+  "board": null,
+  "employer": {
+   "url": "https://fertifa.bamboohr.com/careers/62",
+   "status": 200,
+   "shot": "data/shots/59b75aeaa60c40bf.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://fertifa.bamboohr.com/careers/62",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T04:09:19"
+ },
+ "173c4ac444354ca7": {
+  "id": "173c4ac444354ca7",
+  "at": "2026-10-20T04:10:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://9h.bamboohr.com/careers/246",
+  "board": null,
+  "employer": {
+   "url": "https://9h.bamboohr.com/careers/246",
+   "status": 200,
+   "shot": "data/shots/173c4ac444354ca7.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://9h.bamboohr.com/careers/246",
+  "fetched_at": "2026-10-20T04:09:18",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "9H - Sliema, Malta (Hybrid)",
+  "place_signals": [
+   {
+    "quote": "9H - Sliema, Malta (Hybrid)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sliema, Malta (Hybrid)",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "9H - Sliema, Malta (Hybrid)",
+  "reason": "This is an editorial/print design role (not product/UX/UI) and it's hybrid onsite in Malta, not Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Editorial Designer",
+   "company": "9H",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Malta"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "4+ years",
+   "reports_to": "Print Lead Designer",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  }
 }

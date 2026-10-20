@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-20T03:02:47+00:00",
- "built_at": "2026-10-20T04:05+01:00",
- "run_id": "2026-10-20T03:02:47+00:00",
+ "generated_at": "2026-10-20T03:08:40+00:00",
+ "built_at": "2026-10-20T04:10+01:00",
+ "run_id": "2026-10-20T03:08:40+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
- "last_partial": "2026-10-20T03:02:47+00:00",
+ "last_partial": "2026-10-20T03:08:40+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -14,18 +14,18 @@
   "ghosts": 0,
   "cut": 19,
   "closed": 590,
-  "vision_cut": 15878,
+  "vision_cut": 15881,
   "agency": 0,
   "not_read": 2,
   "folded": 90,
-  "vision_read": 22333,
+  "vision_read": 22336,
   "title_cuts": 51510,
-  "design": 23117,
+  "design": 23121,
   "waiting": 0,
-  "unjudged": 528627,
-  "age_cuts": 12692,
-  "active": 597301,
-  "total": 605653
+  "unjudged": 528644,
+  "age_cuts": 12695,
+  "active": 597321,
+  "total": 605673
  },
  "lanes": {
   "open": [
@@ -17111,7 +17111,10 @@
   "1999380cccbb4535",
   "616103051e44411f",
   "3b8228723f7546bd",
-  "a1e1d6c4d2d044c3"
+  "a1e1d6c4d2d044c3",
+  "173c4ac444354ca7",
+  "726c819371204144",
+  "59b75aeaa60c40bf"
  ],
  "agency": [],
  "review": [
@@ -17148,7 +17151,7 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 5,
+  "ok": 20,
   "failed": {}
  },
  "roles": [
@@ -1250826,6 +1250829,171 @@
     "found_by": null,
     "shot": "data/shots/a1e1d6c4d2d044c3.jpg",
     "read_at": "2026-10-20T04:04:37",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "9h",
+   "first_run": "2026-10-20T03:08:40+00:00",
+   "first_seen": "2026-10-20T03:08:40+00:00",
+   "id": "173c4ac444354ca7",
+   "last_seen": "2026-10-20T03:08:40+00:00",
+   "posted": "2026-10-07",
+   "source": "bamboohr/9h",
+   "sources": [
+    "bamboohr/9h"
+   ],
+   "title": "Editorial Designer",
+   "url": "https://9h.bamboohr.com/careers/246",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "This is an editorial/print design role (not product/UX/UI) and it's hybrid onsite in Malta, not Portugal.",
+     "Portugal OUT · under the title: \"9H - Sliema, Malta (Hybrid)\"",
+     "Portugal OUT · side panel: \"Sliema, Malta (Hybrid)\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Editorial Designer",
+     "company": "9H",
+     "seniority": "mid",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Malta"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "4+ years",
+     "reports_to": "Print Lead Designer",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://9h.bamboohr.com/careers/246",
+    "reason": "This is an editorial/print design role (not product/UX/UI) and it's hybrid onsite in Malta, not Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "9H - Sliema, Malta (Hybrid)",
+    "signals": [
+     {
+      "quote": "9H - Sliema, Malta (Hybrid)",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Sliema, Malta (Hybrid)",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/173c4ac444354ca7.jpg",
+    "read_at": "2026-10-20T04:10:18",
+    "evidence": {
+     "employer_posted": "2026-10-07"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "dekkerdesign",
+   "first_run": "2026-10-20T03:08:40+00:00",
+   "first_seen": "2026-10-20T03:08:40+00:00",
+   "id": "726c819371204144",
+   "last_seen": "2026-10-20T03:08:40+00:00",
+   "posted": "2026-10-19",
+   "source": "bamboohr/dekkerdesign",
+   "sources": [
+    "bamboohr/dekkerdesign"
+   ],
+   "title": "Landscape Designer",
+   "url": "https://dekkerdesign.bamboohr.com/careers/399",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://dekkerdesign.bamboohr.com/careers/399",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/726c819371204144.jpg",
+    "read_at": "2026-10-20T04:10:18",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "fertifa",
+   "first_run": "2026-10-20T03:08:40+00:00",
+   "first_seen": "2026-10-20T03:08:40+00:00",
+   "id": "59b75aeaa60c40bf",
+   "last_seen": "2026-10-20T03:08:40+00:00",
+   "posted": "2026-10-19",
+   "source": "bamboohr/fertifa",
+   "sources": [
+    "bamboohr/fertifa"
+   ],
+   "title": "Senior Product Designer",
+   "url": "https://fertifa.bamboohr.com/careers/62",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://fertifa.bamboohr.com/careers/62",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/59b75aeaa60c40bf.jpg",
+    "read_at": "2026-10-20T04:10:18",
     "evidence": {
      "employer_posted": "2026-10-19"
     }
