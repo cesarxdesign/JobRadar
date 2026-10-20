@@ -2410,8 +2410,16 @@ def getro(host):
     if not m:
         raise ValueError("no Getro network id")
     for page in range(0, 400):
-        d = _post_json(f"https://api.getro.com/api/v2/collections/{m.group(1)}/search/jobs",
-                       {"hitsPerPage": 20, "page": page, "filters": "", "query": ""})
+        # one API for every Getro board: it answers "too many requests" when asked fast, so pace it and wait it out
+        for wait in (0, 20, 60, 120):
+            time.sleep(wait or 0.6)
+            try:
+                d = _post_json(f"https://api.getro.com/api/v2/collections/{m.group(1)}/search/jobs",
+                               {"hitsPerPage": 20, "page": page, "filters": "", "query": ""})
+                break
+            except urllib.error.HTTPError as e:
+                if e.code != 429 or wait == 120:
+                    raise
         rows = (d.get("results") or {}).get("jobs") or []
         for j in rows:
             if _l1(j.get("title")) is not None:
