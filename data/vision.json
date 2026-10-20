@@ -1371130,5 +1371130,28 @@
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
   "fetched_at": "2026-10-20T04:55:17"
+ },
+ "bc8897e575af43ab": {
+  "id": "bc8897e575af43ab",
+  "at": "2026-10-20T05:27:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.comeet.com/jobs/Cellebrite/C3.00F/senior-ai-product-designer/93.473",
+  "board": null,
+  "employer": {
+   "url": "https://www.comeet.com/jobs/Cellebrite/C3.00F/senior-ai-product-designer/93.473",
+   "status": 200,
+   "shot": "data/shots/bc8897e575af43ab.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.comeet.com/jobs/Cellebrite/C3.00F/senior-ai-product-designer/93.473",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T05:25:53"
  }
 }

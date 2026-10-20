@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-20T03:54:06+00:00",
- "built_at": "2026-10-20T04:58+01:00",
- "run_id": "2026-10-20T03:54:06+00:00",
+ "generated_at": "2026-10-20T04:24:14+00:00",
+ "built_at": "2026-10-20T05:28+01:00",
+ "run_id": "2026-10-20T04:24:14+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
- "last_partial": "2026-10-20T03:54:06+00:00",
+ "last_partial": "2026-10-20T04:24:14+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -14,18 +14,18 @@
   "ghosts": 0,
   "cut": 19,
   "closed": 590,
-  "vision_cut": 15894,
+  "vision_cut": 15895,
   "agency": 0,
   "not_read": 2,
   "folded": 90,
-  "vision_read": 22349,
+  "vision_read": 22350,
   "title_cuts": 51510,
-  "design": 23136,
+  "design": 23137,
   "waiting": 0,
-  "unjudged": 529464,
+  "unjudged": 529501,
   "age_cuts": 12697,
-  "active": 598154,
-  "total": 606506
+  "active": 598192,
+  "total": 606544
  },
  "lanes": {
   "open": [
@@ -17127,7 +17127,8 @@
   "9ee84b9c967d4ff3",
   "f3c469f7e6b345b3",
   "69da762257da4898",
-  "aa1e2206825046f1"
+  "aa1e2206825046f1",
+  "bc8897e575af43ab"
  ],
  "agency": [],
  "review": [
@@ -17164,7 +17165,7 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 5,
+  "ok": 38,
   "failed": {}
  },
  "roles": [
@@ -1251717,6 +1251718,56 @@
     "evidence": {
      "employer_posted": "2026-10-19"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "Cellebrite",
+   "department": "Product and Technology",
+   "employment_type": "Full-time",
+   "first_run": "2026-10-20T04:24:14+00:00",
+   "first_seen": "2026-10-20T04:24:14+00:00",
+   "id": "bc8897e575af43ab",
+   "jdhash": "2999",
+   "last_seen": "2026-10-20T04:24:14+00:00",
+   "location": "New York, US",
+   "remote": false,
+   "source": "comeet/cellebrite/c3.00f",
+   "sources": [
+    "comeet/cellebrite/c3.00f"
+   ],
+   "title": "Senior AI Product Designer",
+   "updated": "2026-10-19",
+   "url": "https://www.comeet.com/jobs/Cellebrite/C3.00F/senior-ai-product-designer/93.473",
+   "workplace": "hybrid",
+   "years_xp": 5,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://www.comeet.com/jobs/Cellebrite/C3.00F/senior-ai-product-designer/93.473",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/bc8897e575af43ab.jpg",
+    "read_at": "2026-10-20T05:27:10",
+    "evidence": {}
    }
   }
  ]
