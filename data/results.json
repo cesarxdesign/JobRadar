@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-20T03:08:40+00:00",
- "built_at": "2026-10-20T04:10+01:00",
- "run_id": "2026-10-20T03:08:40+00:00",
+ "generated_at": "2026-10-20T03:14:26+00:00",
+ "built_at": "2026-10-20T04:16+01:00",
+ "run_id": "2026-10-20T03:14:26+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
- "last_partial": "2026-10-20T03:08:40+00:00",
+ "last_partial": "2026-10-20T03:14:26+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -14,18 +14,18 @@
   "ghosts": 0,
   "cut": 19,
   "closed": 590,
-  "vision_cut": 15881,
+  "vision_cut": 15891,
   "agency": 0,
   "not_read": 2,
   "folded": 90,
-  "vision_read": 22336,
+  "vision_read": 22346,
   "title_cuts": 51510,
-  "design": 23121,
+  "design": 23132,
   "waiting": 0,
-  "unjudged": 528644,
-  "age_cuts": 12695,
-  "active": 597321,
-  "total": 605673
+  "unjudged": 529066,
+  "age_cuts": 12696,
+  "active": 597753,
+  "total": 606105
  },
  "lanes": {
   "open": [
@@ -17114,7 +17114,17 @@
   "a1e1d6c4d2d044c3",
   "173c4ac444354ca7",
   "726c819371204144",
-  "59b75aeaa60c40bf"
+  "59b75aeaa60c40bf",
+  "667b7a2ab2ff4508",
+  "df4f95f5c67d4004",
+  "1033ffe53ba24d13",
+  "1db5bd9ae76941eb",
+  "c41539a695a44a1f",
+  "9c5867734de24eb1",
+  "7d6ea8cbd4bd405d",
+  "a93725502dbc483a",
+  "8f4c9082a798444f",
+  "9ee84b9c967d4ff3"
  ],
  "agency": [],
  "review": [
@@ -17151,7 +17161,7 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 20,
+  "ok": 432,
   "failed": {}
  },
  "roles": [
@@ -1250994,6 +1251004,569 @@
     "found_by": null,
     "shot": "data/shots/59b75aeaa60c40bf.jpg",
     "read_at": "2026-10-20T04:10:18",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "polypipe",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "667b7a2ab2ff4508",
+   "jdhash": "2923",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "Polypipe Aylesford",
+   "posted": "2026-10-19",
+   "source": "workday/polypipe.wd103/careers",
+   "sources": [
+    "workday/polypipe.wd103/careers"
+   ],
+   "title": "Advantage Designer",
+   "url": "https://polypipe.wd103.myworkdayjobs.com/careers/job/Polypipe-Aylesford/Advantage-Designer_JR102312-1",
+   "years_xp": 50,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://polypipe.wd103.myworkdayjobs.com/careers/job/Polypipe-Aylesford/Advantage-Designer_JR102312-1",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/667b7a2ab2ff4508.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "asda",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "df4f95f5c67d4004",
+   "jdhash": "3426",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "George House",
+   "posted": "2026-10-19",
+   "source": "workday/asda.wd103/asdajobs",
+   "sources": [
+    "workday/asda.wd103/asdajobs"
+   ],
+   "title": "Designer - Denim, Casual OW, Tail, Studio & Edit",
+   "url": "https://asda.wd103.myworkdayjobs.com/asdajobs/job/George-House/Designer---Denim--Casual-OW--Tail--Studio---Edit_R-108752",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://asda.wd103.myworkdayjobs.com/asdajobs/job/George-House/Designer---Denim--Casual-OW--Tail--Studio---Edit_R-108752",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/df4f95f5c67d4004.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "asda",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "1033ffe53ba24d13",
+   "jdhash": "3401",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "George House",
+   "posted": "2026-10-19",
+   "source": "workday/asda.wd103/asdajobs",
+   "sources": [
+    "workday/asda.wd103/asdajobs"
+   ],
+   "title": "Adult Design Footwear & Accessories",
+   "url": "https://asda.wd103.myworkdayjobs.com/asdajobs/job/George-House/Adult-Design-Footwear---Accessories_R-108751",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://asda.wd103.myworkdayjobs.com/asdajobs/job/George-House/Adult-Design-Footwear---Accessories_R-108751",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/1033ffe53ba24d13.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "asda",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "1db5bd9ae76941eb",
+   "jdhash": "3474",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "George House",
+   "posted": "2026-10-19",
+   "source": "workday/asda.wd103/asdajobs",
+   "sources": [
+    "workday/asda.wd103/asdajobs"
+   ],
+   "title": "Part time Designer - Ladies Lingerie - 12 month FTC",
+   "url": "https://asda.wd103.myworkdayjobs.com/asdajobs/job/George-House/Part-time-Designer---Ladies-Lingerie---12-month-FTC_R-108753",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://asda.wd103.myworkdayjobs.com/asdajobs/job/George-House/Part-time-Designer---Ladies-Lingerie---12-month-FTC_R-108753",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/1db5bd9ae76941eb.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "saskenergy",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "c41539a695a44a1f",
+   "jdhash": "4253",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "Regina, SK",
+   "posted": "2026-10-19",
+   "salary": "$92,716 - $132,958",
+   "source": "workday/saskenergy.wd10/saskenergy",
+   "sources": [
+    "workday/saskenergy.wd10/saskenergy"
+   ],
+   "title": "Senior Engineer, System Design and Planning",
+   "url": "https://saskenergy.wd10.myworkdayjobs.com/saskenergy/job/Regina-SK/Senior-Engineer--System-Design-and-Planning_R00004478",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://saskenergy.wd10.myworkdayjobs.com/saskenergy/job/Regina-SK/Senior-Engineer--System-Design-and-Planning_R00004478",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/c41539a695a44a1f.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "idahofalls",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "9c5867734de24eb1",
+   "jdhash": "8039",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "posted": "2026-10-19",
+   "source": "workday/idahofalls.wd501/external",
+   "sources": [
+    "workday/idahofalls.wd501/external"
+   ],
+   "title": "Design / Drafting Technician ( Engineering)",
+   "url": "https://idahofalls.wd501.myworkdayjobs.com/external/job/Design---Drafting-Technician_R26_000178",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://idahofalls.wd501.myworkdayjobs.com/external/job/Design---Drafting-Technician_R26_000178",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/9c5867734de24eb1.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "nba",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "7d6ea8cbd4bd405d",
+   "jdhash": "4601",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "Secaucus, USA - Remote",
+   "posted": "2026-10-19",
+   "remote": true,
+   "source": "workday/nba.wd108/nbacareers",
+   "sources": [
+    "workday/nba.wd108/nbacareers"
+   ],
+   "title": "Project Employee, Digital and Social Content Design",
+   "url": "https://nba.wd108.myworkdayjobs.com/nbacareers/job/Secaucus-USA---Remote/Project-Employee--Digital-and-Social-Content-Design_JR000655",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is social media graphic/content design (not product/UX/UI), and the location is tied explicitly to the USA.",
+     "Portugal OUT · under the title: \"Secaucus, USA - Remote\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Project Employee, Digital and Social Content Design",
+     "company": "NBA",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "USA"
+     ],
+     "portugal_ok": "no",
+     "salary": "$2307.69/biweekly",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": "Posted Today"
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://nba.wd108.myworkdayjobs.com/nbacareers/job/Secaucus-USA---Remote/Project-Employee--Digital-and-Social-Content-Design_JR000655",
+    "reason": "The role is social media graphic/content design (not product/UX/UI), and the location is tied explicitly to the USA.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Secaucus, USA - Remote",
+    "signals": [
+     {
+      "quote": "Secaucus, USA - Remote",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/7d6ea8cbd4bd405d.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "epiqsystems",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "a93725502dbc483a",
+   "jdhash": "6242",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "USA-Kansas City-KS-501 KS Ave; Chicago, IL; Minneapolis, MN; Austin, TX; Kansas City, MO; Atlanta, GA; Boulder, CO",
+   "posted": "2026-10-19",
+   "salary": "$110,000 to $115,000",
+   "source": "workday/epiqsystems.wd503/epiq_careers",
+   "sources": [
+    "workday/epiqsystems.wd503/epiq_careers"
+   ],
+   "title": "Senior UX Product Designer",
+   "url": "https://epiqsystems.wd503.myworkdayjobs.com/epiq_careers/job/USA-Kansas-City-KS-501-KS-Ave/Senior-UX-Product-Designer_R0035352",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is remote but explicitly requires US work authorization, ruling out someone based in Portugal.",
+     "Portugal OUT · under the title: \"USA-Kansas City-KS-501 KS Ave; Chicago, IL; Minneapolis, MN; Austin, TX; Kansas City, MO; View All 7 Locations\"",
+     "Portugal OUT · body: \"Must be authorized to work in the United States for any employer.\"",
+     "Portugal OUT · body: \"all persons hired will be required to verify identity and eligibility to work in the United States\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior UX Product Designer",
+     "company": "Epiq",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$110,000 to $115,000 USD annually",
+     "years_xp": "At least five years",
+     "reports_to": null,
+     "language": "English",
+     "posted": "Posted Today"
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://epiqsystems.wd503.myworkdayjobs.com/epiq_careers/job/USA-Kansas-City-KS-501-KS-Ave/Senior-UX-Product-Designer_R0035352",
+    "reason": "The role is remote but explicitly requires US work authorization, ruling out someone based in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Must be authorized to work in the United States for any employer.",
+    "signals": [
+     {
+      "quote": "USA-Kansas City-KS-501 KS Ave; Chicago, IL; Minneapolis, MN; Austin, TX; Kansas City, MO; View All 7 Locations",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Must be authorized to work in the United States for any employer.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "all persons hired will be required to verify identity and eligibility to work in the United States",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a93725502dbc483a.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "ncratleos",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "8f4c9082a798444f",
+   "jdhash": "5171",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "BELGRADE, SRB",
+   "posted": "2026-10-19",
+   "source": "workday/ncratleos.wd1/ext_non_usalteos",
+   "sources": [
+    "workday/ncratleos.wd1/ext_non_usalteos"
+   ],
+   "title": "Service Design Analyst",
+   "url": "https://ncratleos.wd1.myworkdayjobs.com/ext_non_usalteos/job/BELGRADE-SRB/Service-Design-Analyst_R1155030",
+   "verdict": {
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is an onsite Oracle ERP/business analyst position in Belgrade, Serbia, and despite the title 'Service Design Analyst' the work described is IT/operations business analysis, not UX or product design.",
+     "Portugal OUT · under the title: \"locations BELGRADE, SRB\"",
+     "Portugal OUT · body: \"Location: Belgarde, Serbia.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Service Design Analyst II",
+     "company": "NCR Atleos",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "Serbia"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "At least two years of Services experience",
+     "reports_to": null,
+     "language": "English",
+     "posted": "Posted Today"
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://ncratleos.wd1.myworkdayjobs.com/ext_non_usalteos/job/BELGRADE-SRB/Service-Design-Analyst_R1155030",
+    "reason": "The role is an onsite Oracle ERP/business analyst position in Belgrade, Serbia, and despite the title 'Service Design Analyst' the work described is IT/operations business analysis, not UX or product design.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Belgarde, Serbia.",
+    "signals": [
+     {
+      "quote": "locations BELGRADE, SRB",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: Belgarde, Serbia.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/8f4c9082a798444f.jpg",
+    "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "oreillyauto",
+   "first_run": "2026-10-20T03:14:26+00:00",
+   "first_seen": "2026-10-20T03:14:26+00:00",
+   "id": "9ee84b9c967d4ff3",
+   "jdhash": "4512",
+   "last_seen": "2026-10-20T03:14:26+00:00",
+   "location": "Headquarters",
+   "posted": "2026-10-19",
+   "source": "workday/oreillyauto.wd1/oreilly",
+   "sources": [
+    "workday/oreillyauto.wd1/oreilly"
+   ],
+   "title": "Real Estate Project Designer",
+   "url": "https://oreillyauto.wd1.myworkdayjobs.com/oreilly/job/Headquarters/Real-Estate-Project-Designer_R204214",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://oreillyauto.wd1.myworkdayjobs.com/oreilly/job/Headquarters/Real-Estate-Project-Designer_R204214",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/9ee84b9c967d4ff3.jpg",
+    "read_at": "2026-10-20T04:15:59",
     "evidence": {
      "employer_posted": "2026-10-19"
     }
