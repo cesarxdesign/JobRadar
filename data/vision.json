@@ -1371061,5 +1371061,28 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "f3c469f7e6b345b3": {
+  "id": "f3c469f7e6b345b3",
+  "at": "2026-10-20T04:22:07",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://indepthengsol.zohorecruit.com/jobs/Careers/724541000008166223/Design-Systems-Engineer-Driveline-System",
+  "board": null,
+  "employer": {
+   "url": "https://indepthengsol.zohorecruit.com/jobs/Careers/724541000008166223/Design-Systems-Engineer-Driveline-System",
+   "status": 200,
+   "shot": "data/shots/f3c469f7e6b345b3.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://indepthengsol.zohorecruit.com/jobs/Careers/724541000008166223/Design-Systems-Engineer-Driveline-System",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T04:21:04"
  }
 }

@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-20T03:14:26+00:00",
- "built_at": "2026-10-20T04:16+01:00",
- "run_id": "2026-10-20T03:14:26+00:00",
+ "generated_at": "2026-10-20T03:20:26+00:00",
+ "built_at": "2026-10-20T04:22+01:00",
+ "run_id": "2026-10-20T03:20:26+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
- "last_partial": "2026-10-20T03:14:26+00:00",
+ "last_partial": "2026-10-20T03:20:26+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -14,18 +14,18 @@
   "ghosts": 0,
   "cut": 19,
   "closed": 590,
-  "vision_cut": 15891,
+  "vision_cut": 15892,
   "agency": 0,
   "not_read": 2,
   "folded": 90,
-  "vision_read": 22346,
+  "vision_read": 22347,
   "title_cuts": 51510,
-  "design": 23132,
+  "design": 23133,
   "waiting": 0,
-  "unjudged": 529066,
+  "unjudged": 529102,
   "age_cuts": 12696,
-  "active": 597753,
-  "total": 606105
+  "active": 597790,
+  "total": 606142
  },
  "lanes": {
   "open": [
@@ -17124,7 +17124,8 @@
   "7d6ea8cbd4bd405d",
   "a93725502dbc483a",
   "8f4c9082a798444f",
-  "9ee84b9c967d4ff3"
+  "9ee84b9c967d4ff3",
+  "f3c469f7e6b345b3"
  ],
  "agency": [],
  "review": [
@@ -17161,7 +17162,7 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 432,
+  "ok": 37,
   "failed": {}
  },
  "roles": [
@@ -1251567,6 +1251568,52 @@
     "found_by": null,
     "shot": "data/shots/9ee84b9c967d4ff3.jpg",
     "read_at": "2026-10-20T04:15:59",
+    "evidence": {
+     "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "indepthengsol",
+   "first_run": "2026-10-20T03:20:26+00:00",
+   "first_seen": "2026-10-20T03:20:26+00:00",
+   "id": "f3c469f7e6b345b3",
+   "last_seen": "2026-10-20T03:20:26+00:00",
+   "location": "Auburn Hills, Michigan, United States",
+   "posted": "2026-10-19",
+   "source": "zoho/indepthengsol",
+   "sources": [
+    "zoho/indepthengsol"
+   ],
+   "title": "Design Systems Engineer ( Driveline System)",
+   "url": "https://indepthengsol.zohorecruit.com/jobs/Careers/724541000008166223/Design-Systems-Engineer-Driveline-System",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://indepthengsol.zohorecruit.com/jobs/Careers/724541000008166223/Design-Systems-Engineer-Driveline-System",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/f3c469f7e6b345b3.jpg",
+    "read_at": "2026-10-20T04:22:07",
     "evidence": {
      "employer_posted": "2026-10-19"
     }
