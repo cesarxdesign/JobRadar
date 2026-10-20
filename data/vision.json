@@ -1527822,5 +1527822,81 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "1a5e3299f9a04ad7": {
+  "id": "1a5e3299f9a04ad7",
+  "at": "2026-10-20T22:37:05",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://lucentive.io/careers/venture-product-designer",
+  "board": {
+   "url": "https://lucentive.io/careers/venture-product-designer",
+   "status": 200,
+   "shot": "data/shots/1a5e3299f9a04ad7.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://lucentive.io/careers/venture-product-designer",
+   "status": 200,
+   "shot": "data/shots/1a5e3299f9a04ad7.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "careers: https://lucentive.io/careers/venture-product-designer"
+  ],
+  "read": "employer",
+  "read_url": "https://lucentive.io/careers/venture-product-designer",
+  "fetched_at": "2026-10-20T22:36:59",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "REMOTE-FIRST · EU / CET OVERLAP · CONTRACT OR FULL-TIME",
+  "place_signals": [
+   {
+    "quote": "REMOTE-FIRST · EU / CET OVERLAP · CONTRACT OR FULL-TIME",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote-first. EU/CET overlap of at least four hours on a working day; Portugal hub for occasional in-person venture sessions.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_in"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Remote-first. EU/CET overlap of at least four hours on a working day; Portugal hub for occasional in-person venture sessions.",
+  "reason": "Product design role at a remote-first company with EU/CET overlap and a Portugal hub, so it fits someone in Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "Venture Product Designer",
+   "company": "Lucentive",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English; Portuguese welcome, not required",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
  }
 }

@@ -1,14 +1,14 @@
 {
  "jd": {},
- "generated_at": "2026-10-20T11:46:14+00:00",
- "built_at": "2026-10-20T21:21+01:00",
- "run_id": "2026-10-20T11:46:14+00:00",
+ "generated_at": "2026-10-20T21:36:25+00:00",
+ "built_at": "2026-10-20T22:37+01:00",
+ "run_id": "2026-10-20T21:36:25+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
- "last_partial": "2026-10-20T11:46:14+00:00",
+ "last_partial": "2026-10-20T21:36:25+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 534,
+  "open": 535,
   "portugal": 39,
   "unsure": 219,
   "ghosts": 0,
@@ -18,14 +18,14 @@
   "agency": 0,
   "not_read": 2,
   "folded": 175,
-  "vision_read": 24689,
+  "vision_read": 24690,
   "title_cuts": 51511,
-  "design": 27850,
+  "design": 27851,
   "waiting": 0,
   "unjudged": 531979,
   "age_cuts": 15156,
-  "active": 603067,
-  "total": 611353
+  "active": 603068,
+  "total": 611354
  },
  "lanes": {
   "open": [
@@ -562,7 +562,8 @@
    "8f478dfe69784547",
    "b708a8965b3b4e91",
    "d6dcfcd478034673",
-   "c75467402f904351"
+   "c75467402f904351",
+   "1a5e3299f9a04ad7"
   ],
   "portugal": [
    "4b0d368bc9284d5e",
@@ -19476,7 +19477,7 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 5556,
+  "ok": 1,
   "failed": {}
  },
  "roles": [
@@ -1437870,6 +1437871,83 @@
     "evidence": {
      "board_posted": "2026-10-16"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "Lucentive",
+   "first_run": "2026-10-20T21:36:25+00:00",
+   "first_seen": "2026-10-20T21:36:25+00:00",
+   "id": "1a5e3299f9a04ad7",
+   "jdhash": "5955",
+   "last_seen": "2026-10-20T21:36:25+00:00",
+   "location": "Remote-first · EU / CET overlap · Contract or full-time",
+   "remote": true,
+   "source": "lucentive",
+   "sources": [
+    "lucentive"
+   ],
+   "title": "Venture Product Designer",
+   "url": "https://lucentive.io/careers/venture-product-designer",
+   "verdict": {
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
+    "cut": false,
+    "why": [
+     "Product design role at a remote-first company with EU/CET overlap and a Portugal hub, so it fits someone in Portugal.",
+     "Portugal in · under the title: \"REMOTE-FIRST · EU / CET OVERLAP · CONTRACT OR FULL-TIME\"",
+     "Portugal in · body: \"Remote-first. EU/CET overlap of at least four hours on a working day; Portugal hub for occasional in-person venture sessions.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Venture Product Designer",
+     "company": "Lucentive",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Portugal"
+     ],
+     "portugal_ok": "yes",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English; Portuguese welcome, not required",
+     "posted": null
+    },
+    "inferred": [
+     "seniority"
+    ],
+    "read": "employer",
+    "read_url": "https://lucentive.io/careers/venture-product-designer",
+    "reason": "Product design role at a remote-first company with EU/CET overlap and a Portugal hub, so it fits someone in Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote-first. EU/CET overlap of at least four hours on a working day; Portugal hub for occasional in-person venture sessions.",
+    "signals": [
+     {
+      "quote": "REMOTE-FIRST · EU / CET OVERLAP · CONTRACT OR FULL-TIME",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Remote-first. EU/CET overlap of at least four hours on a working day; Portugal hub for occasional in-person venture sessions.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_in"
+     }
+    ],
+    "if_employer": null,
+    "found_by": "careers",
+    "shot": "data/shots/1a5e3299f9a04ad7.employer.jpg",
+    "read_at": "2026-10-20T22:37:05",
+    "evidence": {}
    }
   }
  ]
