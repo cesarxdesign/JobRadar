@@ -3961,6 +3961,26 @@ AGGREGATORS.update({
     "expressoemprego": agg_expressoemprego, "teamlyzer": agg_teamlyzer})
 
 
+# ---- company career sites of their own, one reader each (he points them out) ----
+
+def agg_lucentive():
+    """lucentive.io/careers: one page per role, no dates. The slug is the title, so only
+    design slugs are opened; the page gives the title, where and how it is offered, and the text."""
+    for slug in dict.fromkeys(re.findall(r'href="/careers/([a-z0-9-]+)"', get_text("https://lucentive.io/careers"))):
+        if slug == "apply" or _l1(slug.replace("-", " ")) is not None:
+            continue
+        html = get_text(f"https://lucentive.io/careers/{slug}")
+        t = re.search(r"<title>([^<|]+)", html)
+        text = strip_html(html)
+        where = re.search(r"(Remote[^.\n]{0,80}?(?:Contract|Full-time|full-time|Part-time)[^.\n]{0,20})", text)
+        yield {"company": "Lucentive", "title": unescape(t.group(1)).strip() if t else slug.replace("-", " ").title(),
+               "url": f"https://lucentive.io/careers/{slug}", "location": where.group(1).strip() if where else "",
+               "remote": True if re.search(r"\bremote", text[:600], re.I) else None, "jd_text": text}
+
+
+AGGREGATORS.update({"lucentive": agg_lucentive})
+
+
 SKIP = set()          # sources deliberately not scraped this run
 
 
