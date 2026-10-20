@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-20T03:26:09+00:00",
- "built_at": "2026-10-20T04:28+01:00",
- "run_id": "2026-10-20T03:26:09+00:00",
+ "generated_at": "2026-10-20T03:54:06+00:00",
+ "built_at": "2026-10-20T04:58+01:00",
+ "run_id": "2026-10-20T03:54:06+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
- "last_partial": "2026-10-20T03:26:09+00:00",
+ "last_partial": "2026-10-20T03:54:06+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -14,18 +14,18 @@
   "ghosts": 0,
   "cut": 19,
   "closed": 590,
-  "vision_cut": 15893,
+  "vision_cut": 15894,
   "agency": 0,
   "not_read": 2,
   "folded": 90,
-  "vision_read": 22348,
+  "vision_read": 22349,
   "title_cuts": 51510,
-  "design": 23135,
+  "design": 23136,
   "waiting": 0,
-  "unjudged": 529460,
+  "unjudged": 529464,
   "age_cuts": 12697,
-  "active": 598149,
-  "total": 606501
+  "active": 598154,
+  "total": 606506
  },
  "lanes": {
   "open": [
@@ -17126,7 +17126,8 @@
   "8f4c9082a798444f",
   "9ee84b9c967d4ff3",
   "f3c469f7e6b345b3",
-  "69da762257da4898"
+  "69da762257da4898",
+  "aa1e2206825046f1"
  ],
  "agency": [],
  "review": [
@@ -17163,10 +17164,8 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 360,
-  "failed": {
-   "homerun/kallan-co": "HTTPError: HTTP Error 403: Forbidden"
-  }
+  "ok": 5,
+  "failed": {}
  },
  "roles": [
   {
@@ -1251667,6 +1251666,56 @@
     "read_at": "2026-10-20T04:27:49",
     "evidence": {
      "employer_posted": "2026-10-15"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "eevd",
+   "first_run": "2026-10-20T03:54:06+00:00",
+   "first_seen": "2026-10-20T03:54:06+00:00",
+   "id": "aa1e2206825046f1",
+   "jdhash": "4198",
+   "last_seen": "2026-10-20T03:54:06+00:00",
+   "location": "London, United Kingdom",
+   "posted": "2026-10-19",
+   "remote": false,
+   "salary": "£30,000",
+   "source": "oraclerc/eevd.fa.us6.oraclecloud.com/cx_1001",
+   "sources": [
+    "oraclerc/eevd.fa.us6.oraclecloud.com/cx_1001"
+   ],
+   "title": "Designer, Lifestyle (12 Month FTC)",
+   "url": "https://eevd.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/cx_1001/job/2027719",
+   "workplace": "hybrid",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://eevd.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2027719",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/aa1e2206825046f1.jpg",
+    "read_at": "2026-10-20T04:57:28",
+    "evidence": {
+     "employer_posted": "2026-10-19"
     }
    }
   }

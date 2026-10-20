@@ -1371107,5 +1371107,28 @@
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
   "fetched_at": "2026-10-20T04:26:40"
+ },
+ "aa1e2206825046f1": {
+  "id": "aa1e2206825046f1",
+  "at": "2026-10-20T04:57:28",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://eevd.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/cx_1001/job/2027719",
+  "board": null,
+  "employer": {
+   "url": "https://eevd.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2027719",
+   "status": 200,
+   "shot": "data/shots/aa1e2206825046f1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://eevd.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2027719",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T04:55:17"
  }
 }
