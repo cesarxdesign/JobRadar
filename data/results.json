@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-10-20T03:20:26+00:00",
- "built_at": "2026-10-20T04:22+01:00",
- "run_id": "2026-10-20T03:20:26+00:00",
+ "generated_at": "2026-10-20T03:26:09+00:00",
+ "built_at": "2026-10-20T04:28+01:00",
+ "run_id": "2026-10-20T03:26:09+00:00",
  "last_full": "2026-10-20T01:53:36+00:00",
- "last_partial": "2026-10-20T03:20:26+00:00",
+ "last_partial": "2026-10-20T03:26:09+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -14,18 +14,18 @@
   "ghosts": 0,
   "cut": 19,
   "closed": 590,
-  "vision_cut": 15892,
+  "vision_cut": 15893,
   "agency": 0,
   "not_read": 2,
   "folded": 90,
-  "vision_read": 22347,
+  "vision_read": 22348,
   "title_cuts": 51510,
-  "design": 23133,
+  "design": 23135,
   "waiting": 0,
-  "unjudged": 529102,
-  "age_cuts": 12696,
-  "active": 597790,
-  "total": 606142
+  "unjudged": 529460,
+  "age_cuts": 12697,
+  "active": 598149,
+  "total": 606501
  },
  "lanes": {
   "open": [
@@ -17125,7 +17125,8 @@
   "a93725502dbc483a",
   "8f4c9082a798444f",
   "9ee84b9c967d4ff3",
-  "f3c469f7e6b345b3"
+  "f3c469f7e6b345b3",
+  "69da762257da4898"
  ],
  "agency": [],
  "review": [
@@ -17162,8 +17163,10 @@
   "cc7fb0a126a3418c"
  ],
  "sources": {
-  "ok": 37,
-  "failed": {}
+  "ok": 360,
+  "failed": {
+   "homerun/kallan-co": "HTTPError: HTTP Error 403: Forbidden"
+  }
  },
  "roles": [
   {
@@ -1251616,6 +1251619,54 @@
     "read_at": "2026-10-20T04:22:07",
     "evidence": {
      "employer_posted": "2026-10-19"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Lean Solutions Group",
+   "department": "Project & Delivery Management",
+   "first_run": "2026-10-20T03:26:09+00:00",
+   "first_seen": "2026-10-20T03:26:09+00:00",
+   "id": "69da762257da4898",
+   "jdhash": "6435",
+   "last_seen": "2026-10-20T03:26:09+00:00",
+   "posted": "2026-10-15",
+   "source": "jobvite/leantechio",
+   "sources": [
+    "jobvite/leantechio"
+   ],
+   "title": "Senior Implementation Design Lead",
+   "url": "https://jobs.jobvite.com/leantechio/job/oVZYAfwc",
+   "years_xp": 4,
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.jobvite.com/leantechio/job/oVZYAfwc",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/69da762257da4898.jpg",
+    "read_at": "2026-10-20T04:27:49",
+    "evidence": {
+     "employer_posted": "2026-10-15"
     }
    }
   }

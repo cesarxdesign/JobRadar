@@ -1371084,5 +1371084,28 @@
   "place_verdict": "no",
   "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
   "fetched_at": "2026-10-20T04:21:04"
+ },
+ "69da762257da4898": {
+  "id": "69da762257da4898",
+  "at": "2026-10-20T04:27:49",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.jobvite.com/leantechio/job/oVZYAfwc",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.jobvite.com/leantechio/job/oVZYAfwc",
+   "status": 200,
+   "shot": "data/shots/69da762257da4898.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.jobvite.com/leantechio/job/oVZYAfwc",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T04:26:40"
  }
 }
