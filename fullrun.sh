@@ -23,7 +23,10 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "p
 }
 echo; echo "=== run $(date '+%F %H:%M'): $VISION_WORKERS readers, 1000 a pull ==="
 # SOURCE: every link not yet opened today, in the background; the POOL lane below runs for as long as this does
-pgrep -f "harvest.py check" >/dev/null || ( python3 limit.py 21600 python3 harvest.py check > data/run_check.log 2>&1 ) &
+# Workable first, in a lane of its own: it blocks his own browser ("too many requests") while SOURCE asks it,
+# so it starts the run and finishes as early as it can, and the other systems never wait on it (his call, 2026-10-20)
+pgrep -f "harvest.py check --systems workable" >/dev/null || ( python3 limit.py 21600 python3 harvest.py check --systems workable > data/run_check_workable.log 2>&1 ) &
+pgrep -f "harvest.py check --except" >/dev/null || ( python3 limit.py 21600 python3 harvest.py check --except workable > data/run_check.log 2>&1 ) &
 sleep 5
 # a VISION that gives no verdict for 20 minutes, and is not waiting on the usage limit, is stopped; the loop starts the next pull
 # only a pull: the queue check (vision.py --new --count) matched too, was killed, read as an empty queue, and could end the run early

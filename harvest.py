@@ -566,6 +566,9 @@ if __name__ == "__main__":
         # --systems a,b,c: only those systems, with a lock of their own, so a
         # pass stuck in the slow tail of one system does not hold up the rest
         only = set(args[args.index("--systems") + 1].split(",")) if "--systems" in args else None
+        # --except a,b: every system but those, for the main pass while they run in a lane of their own
+        if "--except" in args:
+            only = set(b) - set(args[args.index("--except") + 1].split(","))
         if only:
             b = {s: d for s, d in b.items() if s in only}
         lock, waited = f"{ROOT}/data/check{'.' + '-'.join(sorted(only))[:60] if only else ''}.lock", False
