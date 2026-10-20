@@ -1375750,5 +1375750,74 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "b9a0cb70768d42d0": {
+  "id": "b9a0cb70768d42d0",
+  "at": "2026-10-20T14:01:07",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://boards.greenhouse.io/raisin/jobs/5008476101",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/raisin/jobs/5008476101",
+   "status": 200,
+   "shot": "data/shots/b9a0cb70768d42d0.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/raisin/jobs/5008476101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T13:01:57"
+ },
+ "b9e5759f62e0453b": {
+  "id": "b9e5759f62e0453b",
+  "at": "2026-10-20T14:01:40",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://reagroup.wd3.myworkdayjobs.com/reacareers/job/Richmond-Melbourne-VIC/Product-Designer_R0015792",
+  "board": null,
+  "employer": {
+   "url": "https://reagroup.wd3.myworkdayjobs.com/reacareers/job/Richmond-Melbourne-VIC/Product-Designer_R0015792",
+   "status": 200,
+   "shot": "data/shots/b9e5759f62e0453b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://reagroup.wd3.myworkdayjobs.com/reacareers/job/Richmond-Melbourne-VIC/Product-Designer_R0015792",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T13:03:07"
+ },
+ "482de3ac8c8e483a": {
+  "id": "482de3ac8c8e483a",
+  "at": "2026-10-20T14:02:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/sakana-ai/j/B2582F1E88/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/sakana-ai/j/B2582F1E88/",
+   "status": 200,
+   "shot": "data/shots/482de3ac8c8e483a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/sakana-ai/j/B2582F1E88/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-10-20T13:02:04"
  }
 }
