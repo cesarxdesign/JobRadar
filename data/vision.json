@@ -1530929,7 +1530929,7 @@
  },
  "969ed3d665a14a07": {
   "id": "969ed3d665a14a07",
-  "at": "2026-11-02T23:10:03",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://docs.google.com/forms/d/17tqMiBzVxl_j0NftahRobS0wruGJxxg0TMJrWQbMhQU/viewform?edit_requested=true",
@@ -1530944,7 +1530944,8 @@
   "looked": [],
   "read": "board",
   "read_url": "https://docs.google.com/forms/d/17tqMiBzVxl_j0NftahRobS0wruGJxxg0TMJrWQbMhQU/viewform?edit_requested=true",
-  "same_job": "no",
+  "fetched_at": "2026-11-02T23:23:07",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
@@ -1530957,11 +1530958,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "the page read is a different job · The page is a generic Google Forms application form with no job description, title, or location, so it is not a readable job posting.",
-  "confidence": "high",
+  "reason": "The page is only a Google application form with name, profile, position, motivation and CV fields; there is no job description, so role and place cannot be judged.",
+  "confidence": "medium",
   "inferred": [],
   "fields": {
-   "role": "Apply for a job in Mithraeum",
+   "role": "Balance Designer",
    "company": "Mithraeum",
    "seniority": "unstated",
    "remote": "unstated",
@@ -1530976,7 +1530977,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "51f2aeb46879469e": {
   "id": "51f2aeb46879469e",
@@ -1531679,7 +1531680,7 @@
  },
  "17b5e5d58e294d62": {
   "id": "17b5e5d58e294d62",
-  "at": "2026-11-02T23:10:24",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.kinexcs.com/careers#ui-ux-developer",
@@ -1531694,11 +1531695,12 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.kinexcs.com/careers/#ui-ux-developer",
+  "fetched_at": "2026-11-02T23:23:32",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Career Opportunities ... Tech Lead APPLY UI/UX Developer APPLY Front - End Developer APPLY Back - End Developer APPLY",
+  "open_quote": "Career Opportunities Software Development Tech Lead APPLY UI/UX Developer APPLY Front - End Developer APPLY Back - End Developer APPLY",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1531706,10 +1531708,13 @@
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "20A Tanjong Pagar Road, S(088443)",
-  "reason": "The page is a careers list of several roles with no description for the UI/UX Developer job, so it is not a single posting and place cannot be judged.",
+  "place_quote": "",
+  "reason": "The page is a general careers list with several roles and no description for the UI/UX Developer job, so it is not a single posting.",
   "confidence": "high",
-  "inferred": [],
+  "inferred": [
+   "Language judged from the page text, which is in English.",
+   "Seniority is not stated on the page."
+  ],
   "fields": {
    "role": "UI/UX Developer",
    "company": "Kinexcs",
@@ -1531726,7 +1531731,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "73a8685426f0423d": {
   "id": "73a8685426f0423d",
@@ -1542802,7 +1542807,7 @@
  },
  "d806100f337f492f": {
   "id": "d806100f337f492f",
-  "at": "2026-11-02T23:15:12",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://career.avito.com/vacancies/ux-issledovaniya/20853/",
@@ -1542824,15 +1542829,16 @@
   ],
   "read": "employer",
   "read_url": "https://career.avito.com/directions/ux/",
-  "same_job": "no",
+  "fetched_at": "2026-11-02T23:23:31",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Кого сейчас ищем ... Всего в Авито открыто 128 вакансий",
+  "open_quote": "Кого сейчас ищем",
   "language_of_the_posting": "Russian",
   "language_ok": false,
   "role_verdict": "unclear",
-  "workplace_as_posted": "not stated",
+  "workplace_as_posted": "remote",
   "location_under_the_title": null,
   "place_signals": [
    {
@@ -1542840,21 +1542846,15 @@
     "where": "body",
     "kind": "explicit",
     "says": "portugal_maybe"
-   },
-   {
-    "quote": "Москва, Санкт-Петербург, Гибрид",
-    "where": "body",
-    "kind": "explicit",
-    "says": "portugal_out"
    }
   ],
   "place_verdict": "unclear",
-  "place_quote": "Старший UX-исследователь в команду опыта покупателя Москва, Удалённая работа или гибрид",
-  "reason": "the page read is a different job · The page is a general UX-research careers landing page for Avito, not a single job posting, written in Russian, and it only lists the target role as a teaser.",
-  "confidence": "high",
+  "place_quote": "Москва, Удалённая работа или гибрид",
+  "reason": "The page is a UX research careers landing page listing several jobs, not a single job posting with a description, and it is in Russian.",
+  "confidence": "medium",
   "inferred": [
-   "same_job is no because the page is a direction landing page, not the specific posting",
-   "posting_open is unreadable because the page is a career overview with a list of vacancies, not one job"
+   "posting_open is unreadable because the page is a directions landing page with a list of vacancies, not a single posting",
+   "role_verdict set to unclear because the posting is not open/readable, although the title is user research, which would be no"
   ],
   "fields": {
    "role": "Старший UX-исследователь в команду опыта покупателя",
@@ -1542862,9 +1542862,7 @@
    "seniority": "senior",
    "remote": "unstated",
    "onsite_days": null,
-   "countries": [
-    "Russia"
-   ],
+   "countries": [],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
@@ -1542874,7 +1542872,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "1bbe463e37aa4d31": {
   "id": "1bbe463e37aa4d31",
@@ -1544893,7 +1544891,7 @@
  },
  "12c34b8935ba44d9": {
   "id": "12c34b8935ba44d9",
-  "at": "2026-11-02T23:16:15",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://pnty-apply.ponty-system.se/quest?id=8633&pnty_src=platsbanken",
@@ -1544908,11 +1544906,12 @@
   "looked": [],
   "read": "board",
   "read_url": "https://pnty-apply.ponty-system.se/quest?id=8633&pnty_src=platsbanken",
+  "fetched_at": "2026-11-02T23:23:06",
   "same_job": "yes",
   "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Använd informationen från ditt konto på LinkedIn ... Förnamn Efternamn E-postadress Telefonnummer",
+  "open_quote": "Använd informationen från ditt konto på LinkedIn",
   "language_of_the_posting": "Swedish (application form only; no job description)",
   "language_ok": false,
   "role_verdict": "unclear",
@@ -1544921,11 +1544920,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is only an application form with no job description, so it is not a readable posting.",
-  "confidence": "high",
+  "reason": "The page is only an application form with no job description, so openness, role details and place cannot be read.",
+  "confidence": "medium",
   "inferred": [
-   "posted_by agency inferred from Quest Consulting being a consultancy/recruiting system (ponty-system) and not stated on page",
-   "language is Swedish based on form labels; no description exists"
+   "posted_by is agency because Quest Consulting is a consulting/staffing firm, inferred from the pool listing and form",
+   "language is Swedish from the form labels, as there is no description"
   ],
   "fields": {
    "role": "UX Designer",
@@ -1544943,7 +1544942,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "b3c8dbd19f7746ea": {
   "id": "b3c8dbd19f7746ea",
@@ -1546061,7 +1546060,7 @@
  },
  "5217058955534992": {
   "id": "5217058955534992",
-  "at": "2026-11-02T23:17:01",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5924630532?v=7BE6E1DFCD30CD2F11585ED5347ABD3B9B96222B&ccd=5265fae1262eeaf23d10b03bc360be07&frd=7bad4a762b3daa2ed680130155475667&r=22903585",
@@ -1546076,8 +1546075,9 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5924630532?v=7BE6E1DFCD30CD2F11585ED5347ABD3B9B96222B&ccd=5265fae1262eeaf23d10b03bc360be07&frd=7bad4a762b3daa2ed680130155475667&r=22903585",
+  "fetched_at": "2026-11-02T23:23:13",
   "same_job": "yes",
-  "posted_by": "employer",
+  "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": "Let's confirm you are human. Complete the security check before continuing.",
@@ -1546089,12 +1546089,15 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human verification check with no job description, so the posting cannot be read.",
+  "reason": "The page is a security check wall with no job description, so nothing about the role or place can be read.",
   "confidence": "high",
-  "inferred": [],
+  "inferred": [
+   "posted_by is agency because the page is an Adzuna job aggregator listing",
+   "language assumed English from the page title and interface text"
+  ],
   "fields": {
    "role": "Service Designer",
-   "company": "Mercator IT Solutions Ltd",
+   "company": "Mercator IT Solutions Ltd.",
    "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
@@ -1546108,11 +1546111,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "14a50a088e01461f": {
   "id": "14a50a088e01461f",
-  "at": "2026-11-02T23:17:03",
+  "at": "2026-11-02T23:55:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5939309942?v=5B4E08537AABB3E7FC1934EC5895443C7185B903&ccd=894b7a7310321104567b56b08967895e&r=22903585&frd=b18b8e138f180eb7493e302c249a66e5",
@@ -1546127,12 +1546130,13 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5939309942?v=5B4E08537AABB3E7FC1934EC5895443C7185B903&ccd=894b7a7310321104567b56b08967895e&r=22903585&frd=b18b8e138f180eb7493e302c249a66e5",
-  "same_job": "no",
+  "fetched_at": "2026-11-02T23:23:13",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": "Let's confirm you are human. Complete the security check before continuing.",
-  "language_of_the_posting": "English",
+  "language_of_the_posting": "unknown",
   "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
@@ -1546140,29 +1546144,30 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human-verification wall with no job description, so nothing about the posting can be read.",
+  "reason": "The page is a human-verification security check with no job description, so the posting cannot be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Senior Service Designer - UK",
    "company": "Sanderson Government and Defence",
-   "seniority": "unstated",
+   "seniority": "senior",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "language": "English",
+   "reports_to": null,
+   "language": "unknown",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "0fcea544955247eb": {
   "id": "0fcea544955247eb",
-  "at": "2026-11-02T23:17:02",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5920960688?v=34E62717031E3862228D6A521A05FDB1F154E1D3&r=22903585&ccd=4eb77f9a4b7eaa612d24451fcc1b8f82&frd=4ecb50e13433ace01beda304f35a03df",
@@ -1546177,6 +1546182,7 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5920960688?v=34E62717031E3862228D6A521A05FDB1F154E1D3&r=22903585&ccd=4eb77f9a4b7eaa612d24451fcc1b8f82&frd=4ecb50e13433ace01beda304f35a03df",
+  "fetched_at": "2026-11-02T23:23:13",
   "same_job": "yes",
   "posted_by": "agency",
   "hiring_for": null,
@@ -1546190,7 +1546196,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human-verification wall with no job description, so the posting cannot be read.",
+  "reason": "The page is a security check wall with no job description, so nothing about the posting can be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1546209,11 +1546215,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "9bd44b63d3194ae0": {
   "id": "9bd44b63d3194ae0",
-  "at": "2026-11-02T23:17:01",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5921114272?v=5E3821EA873308E2C68F28B177BCD6D91196C0A4&ccd=197ee0bd8268eca3212cbb403b30e7f7&r=22903585&frd=10d0369cc2f06bcd469b547b3bd33a6f",
@@ -1546228,8 +1546234,9 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5921114272?v=5E3821EA873308E2C68F28B177BCD6D91196C0A4&ccd=197ee0bd8268eca3212cbb403b30e7f7&r=22903585&frd=10d0369cc2f06bcd469b547b3bd33a6f",
-  "same_job": "no",
-  "posted_by": "employer",
+  "fetched_at": "2026-11-02T23:23:13",
+  "same_job": "yes",
+  "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": "Let's confirm you are human. Complete the security check before continuing.",
@@ -1546241,7 +1546248,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human verification check, not a job posting, so nothing about the role or place can be read.",
+  "reason": "The page is a bot-check wall with no job description, so nothing about the role or place can be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1546260,11 +1546267,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "16d56c8ec253464d": {
   "id": "16d56c8ec253464d",
-  "at": "2026-11-02T23:17:06",
+  "at": "2026-11-02T23:55:29",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5946776426?v=AAE344A779F8238A824C5A2580C2AD83E2A332C7&ccd=c63f9e0717f10ab9f9546f0145760c52&frd=8d59221734cfcc39f8060229be898f5a&r=22903585",
@@ -1546279,22 +1546286,26 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5946776426?v=AAE344A779F8238A824C5A2580C2AD83E2A332C7&ccd=c63f9e0717f10ab9f9546f0145760c52&frd=8d59221734cfcc39f8060229be898f5a&r=22903585",
-  "same_job": "no",
-  "posted_by": "employer",
+  "fetched_at": "2026-11-02T23:23:13",
+  "same_job": "yes",
+  "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": "Let's confirm you are human. Complete the security check before continuing.",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "unclear",
+  "role_verdict": "yes",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human-verification wall with no job posting content, so nothing can be judged.",
-  "confidence": "high",
-  "inferred": [],
+  "reason": "The page is a security check wall with no job description, so place cannot be judged; role judged from title alone (Service Designer).",
+  "confidence": "low",
+  "inferred": [
+   "role_verdict judged from title only",
+   "posted_by assumed agency from the Adzuna job board and recruiter-style company name"
+  ],
   "fields": {
    "role": "SC Cleared Service Designer – Defence Programme",
    "company": "Sanderson Government and Defence",
@@ -1546311,11 +1546322,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "a5c110bd72f741af": {
   "id": "a5c110bd72f741af",
-  "at": "2026-11-02T23:17:08",
+  "at": "2026-11-02T23:55:29",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5946775532?v=95CF83A5A0057C2533E7B6A4E34BA5FFDDF8B0FB&ccd=95131ce002b61310eb627385ded4fca0&r=22903585&frd=af897fe1648bcb343cb83f544da74dbf",
@@ -1546330,6 +1546341,7 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5946775532?v=95CF83A5A0057C2533E7B6A4E34BA5FFDDF8B0FB&ccd=95131ce002b61310eb627385ded4fca0&r=22903585&frd=af897fe1648bcb343cb83f544da74dbf",
+  "fetched_at": "2026-11-02T23:23:13",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1546343,7 +1546355,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human verification wall with no job description, so the posting cannot be read.",
+  "reason": "The page is a security check with no job description, so nothing about the role or place can be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1546362,11 +1546374,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "03160448ee3348e6": {
   "id": "03160448ee3348e6",
-  "at": "2026-11-02T23:17:01",
+  "at": "2026-11-02T23:55:24",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5913961748?v=262AB2452714CED61C3D5FC445CB096218204AF1&frd=cdc60aa90d518e749de0115bdc847117&ccd=16ceeecad433f005b8d64720610eb785&r=22903585",
@@ -1546381,6 +1546393,7 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5913961748?v=262AB2452714CED61C3D5FC445CB096218204AF1&frd=cdc60aa90d518e749de0115bdc847117&ccd=16ceeecad433f005b8d64720610eb785&r=22903585",
+  "fetched_at": "2026-11-02T23:23:13",
   "same_job": "yes",
   "posted_by": "agency",
   "hiring_for": null,
@@ -1546394,10 +1546407,10 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human verification wall with no job description, so the posting cannot be read.",
+  "reason": "The page is a human-verification security check with no job description, so nothing about the role or place can be read.",
   "confidence": "high",
   "inferred": [
-   "posted_by is agency because the pool lists Hays, a recruitment firm, and the listing is on Adzuna, a job aggregator"
+   "posted_by agency inferred from pool listing company Hays, a recruitment firm; page itself does not say"
   ],
   "fields": {
    "role": "Cyber Design Lead",
@@ -1546415,11 +1546428,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "fa4a36c21b4d4e0d": {
   "id": "fa4a36c21b4d4e0d",
-  "at": "2026-11-02T23:17:10",
+  "at": "2026-11-02T23:55:29",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5947024445?v=6AA995570872A0715540DCDA83D0FACB872ECD3E&r=22903585&frd=bcde0d04d36d26f463656f7013a6c0f7&ccd=c1e0af0adebdcd0d56bd0b204d9acd6b",
@@ -1546434,7 +1546447,8 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5947024445?v=6AA995570872A0715540DCDA83D0FACB872ECD3E&r=22903585&frd=bcde0d04d36d26f463656f7013a6c0f7&ccd=c1e0af0adebdcd0d56bd0b204d9acd6b",
-  "same_job": "no",
+  "fetched_at": "2026-11-02T23:23:13",
+  "same_job": "yes",
   "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
@@ -1546447,12 +1546461,9 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human-verification wall with no job posting content, so nothing about the role or place can be read.",
+  "reason": "The page is a security check wall with no job description, so the posting cannot be read.",
   "confidence": "high",
-  "inferred": [
-   "same_job set to no because the page shows no posting at all, though it is a verification wall rather than a different job",
-   "posted_by agency guessed from the Adzuna job aggregator address"
-  ],
+  "inferred": [],
   "fields": {
    "role": "SC Cleared Senior Service Designer",
    "company": "Sanderson Government and Defence",
@@ -1546469,7 +1546480,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "492581d7d0bd4d77": {
   "id": "492581d7d0bd4d77",
@@ -1546899,7 +1546910,7 @@
  },
  "3ea58c0cfc3b4e27": {
   "id": "3ea58c0cfc3b4e27",
-  "at": "2026-11-02T23:17:24",
+  "at": "2026-11-02T23:55:29",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.adzuna.co.uk/jobs/land/ad/5934502110?v=2893487F07F703362ABE1541D546A3644B0F01D8&ccd=03de346b0e622c59f8dcbcbe1bc90ba9&frd=7cf0c249bdc6a1bab7960938bdda21d3&r=22903585",
@@ -1546914,8 +1546925,9 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.adzuna.co.uk/jobs/land/ad/5934502110?v=2893487F07F703362ABE1541D546A3644B0F01D8&ccd=03de346b0e622c59f8dcbcbe1bc90ba9&frd=7cf0c249bdc6a1bab7960938bdda21d3&r=22903585",
+  "fetched_at": "2026-11-02T23:23:13",
   "same_job": "yes",
-  "posted_by": "employer",
+  "posted_by": "agency",
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": "Let's confirm you are human. Complete the security check before continuing.",
@@ -1546927,7 +1546939,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a human verification wall with no job description, so nothing about the role or place can be read.",
+  "reason": "The page is a security check wall with no job description, so nothing about the role or place can be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1546946,7 +1546958,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "1c35d6cad3a0415d": {
   "id": "1c35d6cad3a0415d",
@@ -1548479,7 +1548491,7 @@
  },
  "73d2065d2f904e5b": {
   "id": "73d2065d2f904e5b",
-  "at": "2026-11-02T23:18:08",
+  "at": "2026-11-02T23:55:41",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-sesolutions.icims.com/jobs/8222/senior-service-designer/job",
@@ -1548494,21 +1548506,22 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://careers-steampunk.icims.com/jobs/8222/senior-service-designer/job?mobile=false&width=992&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+  "fetched_at": "2026-11-02T23:23:29",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Skip to content Open Positions",
+  "open_quote": "Skip Branding Skip to content Open Positions",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
-  "location_under_the_title": "Senior Service Designer in McLean, Virginia",
+  "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "Senior Service Designer in McLean, Virginia",
-  "reason": "The page shows only site navigation and office addresses with no job description, so it is an empty shell and place cannot be judged.",
-  "confidence": "medium",
+  "place_quote": "",
+  "reason": "The page shows only the site menu and office addresses, with no job description, so it is not a readable posting.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Senior Service Designer",
@@ -1548520,16 +1548533,17 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
+   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "895f522a37cf4a47": {
   "id": "895f522a37cf4a47",
-  "at": "2026-11-02T23:18:08",
+  "at": "2026-11-02T23:55:42",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-sesolutions.icims.com/jobs/7323/senior-ux-ui-designer/job",
@@ -1548544,23 +1548558,25 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://careers-steampunk.icims.com/jobs/7323/senior-ux-ui-designer/job?mobile=false&width=992&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+  "fetched_at": "2026-11-02T23:23:29",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Skip to content Open Positions",
+  "open_quote": "Skip Branding Skip to content Open Positions",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "unclear",
+  "role_verdict": "yes",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "Senior UX/UI Designer in McLean, Virginia",
-  "reason": "The page shows only the site header and footer with office addresses and no job description, so the posting cannot be read.",
+  "place_quote": "",
+  "reason": "The page shows only site navigation and office addresses with no job description, so openness and place cannot be determined; the title alone indicates a UX/UI design role.",
   "confidence": "medium",
   "inferred": [
-   "The page title 'Senior UX/UI Designer in McLean, Virginia' was not counted as a location signal because it is not in the visible page text, only in the title metadata."
+   "role_verdict judged from title alone",
+   "language assumed English from page text"
   ],
   "fields": {
    "role": "Senior UX/UI Designer",
@@ -1548578,7 +1548594,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "282ad6d58e4c4f80": {
   "id": "282ad6d58e4c4f80",
@@ -1549897,7 +1549913,7 @@
  },
  "5f96833a776944fb": {
   "id": "5f96833a776944fb",
-  "at": "2026-11-02T23:19:02",
+  "at": "2026-11-02T23:55:42",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDU4ODY1IDE0MQ?lang=en",
@@ -1549912,12 +1549928,13 @@
   "looked": [],
   "read": "board",
   "read_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDU4ODY1IDE0MQ?lang=en",
+  "fetched_at": "2026-11-02T23:23:31",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Job vacancy",
-  "language_of_the_posting": "English",
+  "open_quote": "Go to main content EN Search EURES (EURopean Employment Services)",
+  "language_of_the_posting": "unknown",
   "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
@@ -1549925,12 +1549942,12 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only the EURES portal shell with no job description, title, or company, so the posting cannot be read.",
+  "reason": "The page shows only EURES portal navigation and footer with no job description, so the posting cannot be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "DESIGNER DE TÊXTEIS E MODA",
-   "company": "",
+   "company": null,
    "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
@@ -1549939,12 +1549956,12 @@
    "salary": null,
    "years_xp": null,
    "reports_to": null,
-   "language": "English",
+   "language": "unknown",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "f1dd57edb0e843ab": {
   "id": "f1dd57edb0e843ab",
@@ -1550086,7 +1550103,7 @@
  },
  "3c093279d86f452b": {
   "id": "3c093279d86f452b",
-  "at": "2026-11-02T23:19:11",
+  "at": "2026-11-02T23:55:53",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/4114949616467419718?ckey=UX+designer&rgn=-1&pos=73&groupId=1075&elckey=-4398253504748366355&p=4&aq=-2467407010709726657&cid=12006&jobAge=14&brelb=100&bscr=80.823204&scr=80.823204",
@@ -1550106,7 +1550123,7 @@
   "stage": "render",
   "open_quote": "jooble.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website ver",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "24f4b7eb8a194eea": {
   "id": "24f4b7eb8a194eea",
@@ -1550215,10 +1550232,10 @@
  },
  "b5727d7d940a4e72": {
   "id": "b5727d7d940a4e72",
-  "at": "2026-11-02T23:19:09",
+  "at": "2026-11-02T23:55:45",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
-  "pool_url": "https://boards.greenhouse.io/houserx/jobs/4749398005",
+  "pool_url": "https://www.houserx.com/careers?gh_jid=4749398005",
   "board": null,
   "employer": {
    "url": "https://www.houserx.com/careers?gh_jid=4749398005",
@@ -1550230,15 +1550247,16 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://www.houserx.com/careers?gh_jid=4749398005",
+  "fetched_at": "2026-11-02T23:25:02",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Open Roles ... Sr. UI Engineer, Front End ... Senior Product Manager",
+  "open_quote": "Open Roles ... Sr. UI Engineer, Front End ... Product Senior Product Manager",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
-  "workplace_as_posted": "remote",
+  "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [
    {
@@ -1550250,7 +1550268,7 @@
   ],
   "place_verdict": "unclear",
   "place_quote": "Being remote-first enables us to hire the best talent and offer flexibility to our employees.",
-  "reason": "The page is a careers landing page listing many roles, not a single job posting, so no description is available.",
+  "reason": "The page is a careers listing with many roles and no job description for the Sr. UI Engineer role, so it is not a single posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1550268,7 +1550286,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "0bdfbb42abfd421e": {
   "id": "0bdfbb42abfd421e",
@@ -1551133,7 +1551151,7 @@
  },
  "8a46ee485a0c4651": {
   "id": "8a46ee485a0c4651",
-  "at": "2026-11-02T23:20:13",
+  "at": "2026-11-02T23:55:43",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://orange.jobs/gb/en/job/ERC-591746-20136094/UX-Designer",
@@ -1551155,26 +1551173,30 @@
   ],
   "read": "employer",
   "read_url": "https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?webid=5B850956-24F6-4EBB-B7A2-1AB55F4B8910",
+  "fetched_at": "2026-11-02T23:24:19",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
-  "posting_open": "unreadable",
-  "open_quote": "Aplikujesz na stanowisko: UX Designer",
-  "language_of_the_posting": "Polish (application form and privacy notice only; no job description)",
-  "language_ok": true,
-  "role_verdict": "yes",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Polish",
+  "language_ok": false,
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
-  "place_signals": [],
-  "place_verdict": "unclear",
-  "place_quote": "Do firmy: Orange Polska SA",
-  "reason": "The page is an application form with a data-privacy notice, not a job description, so it gives no information on place and the posting itself cannot be read.",
-  "confidence": "medium",
-  "inferred": [
-   "posting_open set to unreadable because the page is an application form rather than a single job posting",
-   "role_verdict judged from the title alone since there is no description",
-   "language is Polish judging from the form text only"
+  "place_signals": [
+   {
+    "quote": "Kraj: * wybierz Belgia Francja Inne Mołdawia Polska Rumunia Słowacja",
+    "where": "body",
+    "kind": "tag",
+    "says": "says_nothing"
+   }
   ],
+  "place_verdict": "unclear",
+  "place_quote": "Aplikujesz na stanowisko: UX Designer",
+  "reason": "The page is an application form in Polish with no job description; the country dropdown is just a form field, so place cannot be determined.",
+  "confidence": "medium",
+  "inferred": [],
   "fields": {
    "role": "UX Designer",
    "company": "Orange Polska SA",
@@ -1551190,8 +1551212,8 @@
    "posted": null
   },
   "stage": "vision",
-  "lane": "unsure",
-  "unread_tries": 1
+  "lane": "cut",
+  "reader_place": "unclear"
  },
  "c4a2765ac78f466b": {
   "id": "c4a2765ac78f466b",
@@ -1555193,7 +1555215,7 @@
  },
  "c4ef92cafb6a47d0": {
   "id": "c4ef92cafb6a47d0",
-  "at": "2026-11-02T23:22:26",
+  "at": "2026-11-02T23:55:45",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://job-boards.greenhouse.io/thetradedesk/jobs/5275868007",
@@ -1555208,25 +1555230,23 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://job-boards.greenhouse.io/thetradedesk/jobs/5275868007",
+  "fetched_at": "2026-11-02T23:23:33",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Apply for this job ... First Name* Last Name* Email* Phone Country* Phone* Resume/CV*",
+  "open_quote": "Apply for this job … First Name* Last Name* Email* Phone Country* Phone* Resume/CV*",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "yes",
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only the application form with no job description, so place cannot be judged; the title Principal Designer reads as a design role.",
+  "reason": "The page shows only the application form and legal self-identification text, with no job description, location or details beyond the title.",
   "confidence": "medium",
-  "inferred": [
-   "seniority from title 'Principal Designer'",
-   "role_verdict judged from the title alone"
-  ],
+  "inferred": [],
   "fields": {
    "role": "Principal Designer",
    "company": "The Trade Desk",
@@ -1555243,7 +1555263,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "709ed4c0ea194dd9": {
   "id": "709ed4c0ea194dd9",
@@ -1566703,7 +1566723,7 @@
  },
  "b5b8f54527224f58": {
   "id": "b5b8f54527224f58",
-  "at": "2026-11-02T23:27:38",
+  "at": "2026-11-02T23:55:58",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://app.careerpuck.com/job-board/udemy/job/6238257004",
@@ -1566723,7 +1566743,7 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "97b475cb03b74d59": {
   "id": "97b475cb03b74d59",
@@ -1567764,7 +1567784,7 @@
  },
  "b066ba990efd4bcf": {
   "id": "b066ba990efd4bcf",
-  "at": "2026-11-02T23:28:35",
+  "at": "2026-11-02T23:56:17",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-peraton.icims.com/jobs/172987/ui-ux-solutions-developer/job",
@@ -1567784,7 +1567804,7 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "a8c2ae170aeb471a": {
   "id": "a8c2ae170aeb471a",
@@ -1569121,7 +1569141,7 @@
  },
  "4f65faa96a5a44fb": {
   "id": "4f65faa96a5a44fb",
-  "at": "2026-11-02T23:29:57",
+  "at": "2026-11-02T23:55:50",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.teksystems.com/us/en/job/JP-006378598/Visual-Product-Designer",
@@ -1569136,6 +1569156,7 @@
   "looked": [],
   "read": "board",
   "read_url": "https://careers.teksystems.com/us/en/job/JP-006378598/Visual-Product-Designer",
+  "fetched_at": "2026-11-02T23:26:06",
   "same_job": "yes",
   "posted_by": "agency",
   "hiring_for": null,
@@ -1569149,7 +1569170,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The visible page holds only menus and footer text with no job description, so it is an empty shell and not a readable posting.",
+  "reason": "The page shows only site navigation and footer with no job description, so the posting cannot be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1569162,16 +1569183,17 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
+   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "98a38c4e007f459d": {
   "id": "98a38c4e007f459d",
-  "at": "2026-11-02T23:29:59",
+  "at": "2026-11-02T23:55:54",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.teksystems.com/us/en/job/JP-006371063/UX-Designer",
@@ -1569186,8 +1569208,9 @@
   "looked": [],
   "read": "board",
   "read_url": "https://careers.teksystems.com/us/en/job/JP-006371063/UX-Designer",
+  "fetched_at": "2026-11-02T23:26:07",
   "same_job": "yes",
-  "posted_by": "agency",
+  "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": "Get personalized tech job recommendations based on your skills and experience.",
@@ -1569199,8 +1569222,8 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only menus and footer with no job description, so it is an empty shell; the title alone (Chicago, Illinois) is not page content.",
-  "confidence": "medium",
+  "reason": "The page shows only site navigation and footer with no job description, so it is an empty shell rather than a readable posting.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "UX Designer",
@@ -1569218,7 +1569241,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "3ff3fd53681b48ed": {
   "id": "3ff3fd53681b48ed",
@@ -1569334,7 +1569357,7 @@
  },
  "7abaa87c19a54474": {
   "id": "7abaa87c19a54474",
-  "at": "2026-11-02T23:30:00",
+  "at": "2026-11-02T23:55:50",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.teksystems.com/us/en/job/JP-006373762/Product-Designer-Wearables",
@@ -1569349,6 +1569372,7 @@
   "looked": [],
   "read": "board",
   "read_url": "https://careers.teksystems.com/us/en/job/JP-006373762/Product-Designer-Wearables",
+  "fetched_at": "2026-11-02T23:26:09",
   "same_job": "yes",
   "posted_by": "agency",
   "hiring_for": null,
@@ -1569362,11 +1569386,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer with no job description, so it is an empty shell; the title alone mentions San Francisco but no description is present.",
-  "confidence": "medium",
+  "reason": "The page shows only site navigation and footer text, with no job description, so the posting cannot be read.",
+  "confidence": "high",
   "inferred": [
-   "posted_by agency inferred from TEKsystems being a staffing firm",
-   "role and company taken from the pool listing and page title, not from the page body"
+   "posted_by: TEKsystems is a staffing firm, inferred from the pool listing and company name",
+   "same_job: the page title matches the pool title"
   ],
   "fields": {
    "role": "Product Designer (Wearables)",
@@ -1569384,7 +1569408,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "70f070bd294c40b6": {
   "id": "70f070bd294c40b6",
@@ -1569468,27 +1569492,26 @@
  },
  "9dade8b10c674b73": {
   "id": "9dade8b10c674b73",
-  "at": "2026-11-02T23:30:17",
+  "at": "2026-11-02T23:55:54",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
-  "pool_url": "https://ejko.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/15127",
-  "board": {
+  "pool_url": "https://ejko.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/cx/job/15127",
+  "board": null,
+  "employer": {
    "url": "https://ejko.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3/job/15127",
    "status": 200,
    "shot": "data/shots/9dade8b10c674b73.jpg",
    "error": null
   },
-  "employer": null,
   "found_by": null,
   "looked": [],
-  "read": "board",
+  "read": "employer",
   "read_url": "https://ejko.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3/job/15127",
-  "lane": "unsure",
-  "posting_open": "unreadable",
-  "stage": "render",
-  "open_quote": "Skip to main content. Page Manager Conversational AI Design - BCBSM Career Section Careers loaded",
-  "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:25:57"
  },
  "74945c811086452a": {
   "id": "74945c811086452a",
@@ -1572254,5 +1572277,4357 @@
   "stage": "vision",
   "lane": "closed",
   "closed_by": "board"
+ },
+ "86e4197032fb48c5": {
+  "id": "86e4197032fb48c5",
+  "at": "2026-11-02T23:55:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/gofundme/jobs/8274780",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/gofundme/jobs/8274780",
+   "status": 200,
+   "shot": "data/shots/86e4197032fb48c5.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/gofundme/jobs/8274780",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:06"
+ },
+ "4e22b4adf7e345f5": {
+  "id": "4e22b4adf7e345f5",
+  "at": "2026-11-02T23:55:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.digicert.com/careers/?gh_jid=8892538002",
+  "board": null,
+  "employer": {
+   "url": "https://www.digicert.com/careers/?gh_jid=8892538002",
+   "status": 200,
+   "shot": "data/shots/4e22b4adf7e345f5.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "fed": "hiring system",
+  "read": "employer",
+  "read_url": "https://www.digicert.com/careers/?gh_jid=8892538002",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:41"
+ },
+ "82ec9613aaf744c6": {
+  "id": "82ec9613aaf744c6",
+  "at": "2026-11-02T23:55:29",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/gecko-robotics/521ebe0f-2aec-4bf9-a1e8-bc2cbaab8ee0",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/gecko-robotics/521ebe0f-2aec-4bf9-a1e8-bc2cbaab8ee0",
+   "status": 200,
+   "shot": "data/shots/82ec9613aaf744c6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/gecko-robotics/521ebe0f-2aec-4bf9-a1e8-bc2cbaab8ee0",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:06"
+ },
+ "2e238d8c8ea944ac": {
+  "id": "2e238d8c8ea944ac",
+  "at": "2026-11-02T23:55:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://thenewgen.bamboohr.com/careers/125",
+  "board": null,
+  "employer": {
+   "url": "https://thenewgen.bamboohr.com/careers/125",
+   "status": 200,
+   "shot": "data/shots/2e238d8c8ea944ac.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://thenewgen.bamboohr.com/careers/125",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:11"
+ },
+ "a4c9fa98e5d44b60": {
+  "id": "a4c9fa98e5d44b60",
+  "at": "2026-11-02T23:55:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "http://www.circleci.com/careers/jobs/8560754002/?gh_jid=8560754002",
+  "board": null,
+  "employer": {
+   "url": "https://circleci.com/careers/jobs/8560754002/?gh_jid=8560754002",
+   "status": 200,
+   "shot": "data/shots/a4c9fa98e5d44b60.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://circleci.com/careers/jobs/8560754002/?gh_jid=8560754002",
+  "fetched_at": "2026-11-02T23:23:15",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "San Francisco",
+  "place_signals": [
+   {
+    "quote": "San Francisco",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "*This is a hybrid role based in San Francisco, requiring 2 days per week in office",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "United States Base Pay Range $147,500—$183,500 USD",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "headquartered in downtown San Francisco with a global, remote workforce",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This is a hybrid role based in San Francisco, requiring 2 days per week in office",
+  "reason": "The role is explicitly hybrid in San Francisco with 2 office days per week, which cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "CircleCI",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$147,500—$183,500 USD",
+   "years_xp": "8+ years of product design experience, with at least 5 years designing B2B SaaS products",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "2ff1de1e8ade4c4b": {
+  "id": "2ff1de1e8ade4c4b",
+  "at": "2026-11-02T23:55:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://reachmobi.bamboohr.com/careers/285",
+  "board": null,
+  "employer": {
+   "url": "https://reachmobi.bamboohr.com/careers/285",
+   "status": 200,
+   "shot": "data/shots/2ff1de1e8ade4c4b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://reachmobi.bamboohr.com/careers/285",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:10"
+ },
+ "29b5d2620668404e": {
+  "id": "29b5d2620668404e",
+  "at": "2026-11-02T23:55:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://itmpowerplc.bamboohr.com/careers/742",
+  "board": null,
+  "employer": {
+   "url": "https://itmpowerplc.bamboohr.com/careers/742",
+   "status": 200,
+   "shot": "data/shots/29b5d2620668404e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://itmpowerplc.bamboohr.com/careers/742",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:10"
+ },
+ "e8e38173d9ad4ef6": {
+  "id": "e8e38173d9ad4ef6",
+  "at": "2026-11-02T23:55:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://itmpowerplc.bamboohr.com/careers/743",
+  "board": null,
+  "employer": {
+   "url": "https://itmpowerplc.bamboohr.com/careers/743",
+   "status": 200,
+   "shot": "data/shots/e8e38173d9ad4ef6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://itmpowerplc.bamboohr.com/careers/743",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:10"
+ },
+ "4fc613ebdb354cf6": {
+  "id": "4fc613ebdb354cf6",
+  "at": "2026-11-02T23:55:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://canacad.bamboohr.com/careers/129",
+  "board": null,
+  "employer": {
+   "url": "https://canacad.bamboohr.com/careers/129",
+   "status": 200,
+   "shot": "data/shots/4fc613ebdb354cf6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://canacad.bamboohr.com/careers/129",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:14"
+ },
+ "8904cfd7b00f40c4": {
+  "id": "8904cfd7b00f40c4",
+  "at": "2026-11-02T23:55:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/coursera/jobs/6238257004",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/coursera/jobs/6238257004",
+   "status": 200,
+   "shot": "data/shots/8904cfd7b00f40c4.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/coursera/jobs/6238257004",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:14"
+ },
+ "7d05ddb17abc4573": {
+  "id": "7d05ddb17abc4573",
+  "at": "2026-11-02T23:55:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://gecko.bamboohr.com/careers/157",
+  "board": null,
+  "employer": {
+   "url": "https://gecko.bamboohr.com/careers/157",
+   "status": 200,
+   "shot": "data/shots/7d05ddb17abc4573.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://gecko.bamboohr.com/careers/157",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:15"
+ },
+ "34dde9edd8724443": {
+  "id": "34dde9edd8724443",
+  "at": "2026-11-02T23:55:33",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/bertramcapitalmanagement/jobs/8926141002",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/bertramcapitalmanagement/jobs/8926141002",
+   "status": 200,
+   "shot": "data/shots/34dde9edd8724443.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/bertramcapitalmanagement/jobs/8926141002",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:17"
+ },
+ "b7cda68976c6416d": {
+  "id": "b7cda68976c6416d",
+  "at": "2026-11-02T23:55:33",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/nationallifeinsurancecompany/jobs/4457886009",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/nationallifeinsurancecompany/jobs/4457886009",
+   "status": 200,
+   "shot": "data/shots/b7cda68976c6416d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/nationallifeinsurancecompany/jobs/4457886009",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:17"
+ },
+ "994515fca87349c0": {
+  "id": "994515fca87349c0",
+  "at": "2026-11-02T23:55:29",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/gamechanger/2b0c50dc-9535-44e7-a847-514a1f8c2386",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/gamechanger/2b0c50dc-9535-44e7-a847-514a1f8c2386",
+   "status": 200,
+   "shot": "data/shots/994515fca87349c0.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/gamechanger/2b0c50dc-9535-44e7-a847-514a1f8c2386",
+  "fetched_at": "2026-11-02T23:23:06",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "GameChanger HQ - New York",
+  "place_signals": [
+   {
+    "quote": "GameChanger HQ - New York",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work from our well-furnished, modern office in Manhattan, NY.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are a remote-first, dynamic tech company based in New York City",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "we are unable to hire in AK, DE, HI, IA, LA, MS, MT, OK, and SC.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location Type: On-site. Work from our well-furnished, modern office in Manhattan, NY.",
+  "reason": "Role is on-site at the New York office; the generic 'remote-first' company line does not override the role-specific On-site designation.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "VP of Design",
+   "company": "GameChanger",
+   "seniority": "vp",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$260K – $280K, plus equity and bonus",
+   "years_xp": "10+ years designing consumer mobile and web experiences; 6+ years leading design organizations",
+   "reports_to": "Chief Product and Technology Officer",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "698632b3a43747cf": {
+  "id": "698632b3a43747cf",
+  "at": "2026-11-02T23:55:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.trustflight.io/o/learning-design-training-product-manager",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.trustflight.io/o/learning-design-training-product-manager",
+   "status": 200,
+   "shot": "data/shots/698632b3a43747cf.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.trustflight.io/o/learning-design-training-product-manager",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:20"
+ },
+ "f14e6dd2d0e949e8": {
+  "id": "f14e6dd2d0e949e8",
+  "at": "2026-11-02T23:55:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://almavivadebelgique.be/o/uiux-designer-deadline-041126",
+  "board": null,
+  "employer": {
+   "url": "https://www.almavivagroup.com/it",
+   "status": 200,
+   "shot": "data/shots/f14e6dd2d0e949e8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://almavivadebelgique.be/o/uiux-designer-deadline-041126",
+  "fed": true,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:48"
+ },
+ "898b44fa57ed4992": {
+  "id": "898b44fa57ed4992",
+  "at": "2026-11-02T23:55:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://precision-strategies.breezy.hr/p/6d181e56314e-senior-video-designer-avp-associate-creative-director",
+  "board": null,
+  "employer": {
+   "url": "https://precision-strategies.breezy.hr/p/6d181e56314e-senior-video-designer-avp-associate-creative-director",
+   "status": 200,
+   "shot": "data/shots/898b44fa57ed4992.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://precision-strategies.breezy.hr/p/6d181e56314e-senior-video-designer-avp-associate-creative-director",
+  "fetched_at": "2026-11-02T23:23:14",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Washington, DC / New York City, NY - Hybrid (Remote And In Person)",
+  "place_signals": [
+   {
+    "quote": "Washington, DC / New York City, NY - Hybrid (Remote And In Person)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The position can be based in either Washington, D.C. or New York, NY.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We currently work in a hybrid model and require staff to work in the office 50% of working days each month.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible hybrid remote/in office plan",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The position can be based in either Washington, D.C. or New York, NY.",
+  "reason": "This is a video editing and post-production role, not product design, and it requires being based in DC or NYC with 50% office time.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Video Designer (AVP/Associate Creative Director)",
+   "company": "Precision",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "50% of working days each month",
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$105,000.00 to $134,999.00",
+   "years_xp": "6+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a010a5c7a7a44118": {
+  "id": "a010a5c7a7a44118",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://institutminestelecom.recruitee.com/o/offre-de-stage-design-et-fabrication-dun-circuit-electronique-flexible-pour-capteur-de-gaz-portable-5-a-6-mois",
+  "board": null,
+  "employer": {
+   "url": "https://institutminestelecom.recruitee.com/o/offre-de-stage-design-et-fabrication-dun-circuit-electronique-flexible-pour-capteur-de-gaz-portable-5-a-6-mois",
+   "status": 200,
+   "shot": "data/shots/a010a5c7a7a44118.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://institutminestelecom.recruitee.com/o/offre-de-stage-design-et-fabrication-dun-circuit-electronique-flexible-pour-capteur-de-gaz-portable-5-a-6-mois",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:20"
+ },
+ "d761997262b64604": {
+  "id": "d761997262b64604",
+  "at": "2026-11-02T23:55:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://precision-strategies.breezy.hr/p/e6ec89aa442e-ux-ui-designer-senior-associate",
+  "board": null,
+  "employer": {
+   "url": "https://precision-strategies.breezy.hr/p/e6ec89aa442e-ux-ui-designer-senior-associate",
+   "status": 200,
+   "shot": "data/shots/d761997262b64604.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://precision-strategies.breezy.hr/p/e6ec89aa442e-ux-ui-designer-senior-associate",
+  "fetched_at": "2026-11-02T23:23:15",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Washington, DC / New York City, NY - Hybrid (Remote And In Person)",
+  "place_signals": [
+   {
+    "quote": "Washington, DC / New York City, NY - Hybrid (Remote And In Person)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The position can be based in either Washington, D.C. or New York, NY.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We currently work in a hybrid model and require staff to work in the office 50% of working days each month.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible hybrid remote/in office plan",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The position can be based in either Washington, D.C. or New York, NY. ... require staff to work in the office 50% of working days each month.",
+  "reason": "Senior UX/UI design role, but hybrid with 50% office days required in Washington DC or New York, so not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer (Senior Associate)",
+   "company": "Precision",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": "50% of working days each month",
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$62,000.00 to $84,999.00 annual",
+   "years_xp": "2+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "cc7b242cf0b546e6": {
+  "id": "cc7b242cf0b546e6",
+  "at": "2026-11-02T23:55:31",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://precision-strategies.breezy.hr/p/6192e3079b89-senior-designer-avp-associate-creative-director",
+  "board": null,
+  "employer": {
+   "url": "https://precision-strategies.breezy.hr/p/6192e3079b89-senior-designer-avp-associate-creative-director",
+   "status": 200,
+   "shot": "data/shots/cc7b242cf0b546e6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://precision-strategies.breezy.hr/p/6192e3079b89-senior-designer-avp-associate-creative-director",
+  "fetched_at": "2026-11-02T23:23:11",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Washington, DC / New York City, NY - Hybrid (Remote And In Person)",
+  "place_signals": [
+   {
+    "quote": "Washington, DC / New York City, NY - Hybrid (Remote And In Person)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The position can be based in either Washington, D.C. or New York, NY.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We currently work in a hybrid model and require staff to work in the office 50% of working days each month.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible hybrid remote/in office plan",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The position can be based in either Washington, D.C. or New York, NY.",
+  "reason": "Mostly brand, campaign, identity and presentation design (brand/creative role), and hybrid with 50% office days in DC or NYC.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Designer (AVP/Associate Creative Director)",
+   "company": "Precision Strategies",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "50% of working days each month",
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$105,000.00 to $139,999.00",
+   "years_xp": "6+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "5abefea197594091": {
+  "id": "5abefea197594091",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/wehkamp/744000159156456",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/wehkamp/744000159156456",
+   "status": 200,
+   "shot": "data/shots/5abefea197594091.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/wehkamp/744000159156456",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:20"
+ },
+ "45b77aab680a4b43": {
+  "id": "45b77aab680a4b43",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/wehkamp/744000159150321",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/wehkamp/744000159150321",
+   "status": 200,
+   "shot": "data/shots/45b77aab680a4b43.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/wehkamp/744000159150321",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:20"
+ },
+ "954bf0dc203b4da2": {
+  "id": "954bf0dc203b4da2",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/wehkamp/744000159148446",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/wehkamp/744000159148446",
+   "status": 200,
+   "shot": "data/shots/954bf0dc203b4da2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/wehkamp/744000159148446",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:20"
+ },
+ "00df00da6ac24c0b": {
+  "id": "00df00da6ac24c0b",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/EmbassySporthandelGmbH/744000159142259",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/EmbassySporthandelGmbH/744000159142259",
+   "status": 200,
+   "shot": "data/shots/00df00da6ac24c0b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/EmbassySporthandelGmbH/744000159142259",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:20"
+ },
+ "e8d713c1ac9a4835": {
+  "id": "e8d713c1ac9a4835",
+  "at": "2026-11-02T23:55:33",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.relexsolutions.com/careers/jobs/?gh_jid=8105403003",
+  "board": null,
+  "employer": {
+   "url": "https://www.relexsolutions.com/careers/jobs/lead-senior-product-designer-production/?gh_jid=8105403003",
+   "status": 200,
+   "shot": "data/shots/e8d713c1ac9a4835.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.relexsolutions.com/careers/jobs/lead-senior-product-designer-production/?gh_jid=8105403003",
+  "fetched_at": "2026-11-02T23:23:26",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [
+   {
+    "quote": "Flexibility in how and where you work",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "you must be fluent in English and hold a valid work permit for your country of residence",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "headquartered in Helsinki, with offices across Europe, North America, and Asia-Pacific",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Flexibility in how and where you work",
+  "reason": "the page does not say where · Open product design lead role with no stated location or workplace; only generic flexibility and work-permit-for-country-of-residence text.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Lead (Senior) Product Designer | Production",
+   "company": "RELEX Solutions",
+   "seniority": "lead",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "unclear"
+ },
+ "eb0f64c3933647fc": {
+  "id": "eb0f64c3933647fc",
+  "at": "2026-11-02T23:55:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://essc.wd501.myworkdayjobs.com/essc_careers/job/US-CA-Irvine/Learning-Experience-Design-Partner_R-1000002804",
+  "board": null,
+  "employer": {
+   "url": "https://essc.wd501.myworkdayjobs.com/essc_careers/job/US-CA-Irvine/Learning-Experience-Design-Partner_R-1000002804",
+   "status": 200,
+   "shot": "data/shots/eb0f64c3933647fc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://essc.wd501.myworkdayjobs.com/essc_careers/job/US-CA-Irvine/Learning-Experience-Design-Partner_R-1000002804",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:23"
+ },
+ "be7be53fa6ab4b61": {
+  "id": "be7be53fa6ab4b61",
+  "at": "2026-11-02T23:55:33",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.lever.co/adlook/fb9ede03-a7d2-425e-9d77-7072fddf2571",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.lever.co/adlook/fb9ede03-a7d2-425e-9d77-7072fddf2571",
+   "status": 200,
+   "shot": "data/shots/be7be53fa6ab4b61.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/adlook/fb9ede03-a7d2-425e-9d77-7072fddf2571",
+  "fetched_at": "2026-11-02T23:23:18",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Warsaw, PolandProduct – Marketing /Part-Time /Remote",
+  "place_signals": [
+   {
+    "quote": "Warsaw, Poland",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Part-Time /Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Warsaw, PolandProduct – Marketing /Part-Time /Remote",
+  "reason": "The job is mostly marketing creative work (ads, social graphics, event visuals, videos, decks), not product/UX/UI design, so the role is a no.",
+  "confidence": "high",
+  "inferred": [
+   "seniority unstated"
+  ],
+  "fields": {
+   "role": "AI-first Creative Designer",
+   "company": "Adlook",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "389cdfeeeabf45a9": {
+  "id": "389cdfeeeabf45a9",
+  "at": "2026-11-02T23:55:33",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/tefron/jobs/5281493007",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/tefron/jobs/5281493007",
+   "status": 200,
+   "shot": "data/shots/389cdfeeeabf45a9.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/tefron/jobs/5281493007",
+  "fetched_at": "2026-11-02T23:23:17",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English and French (bilingual)",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Montreal, Canada",
+  "place_signals": [
+   {
+    "quote": "Montreal, Canada",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you legally authorized to work in Canada?/Es-tu légalement autorisé à travailler au Canada ?*",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Must be able to travel for trend research and in-person client meetings.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Montreal, Canada; Are you legally authorized to work in Canada?",
+  "reason": "This is an activewear apparel design job (fashion/garment design, not product/UX/UI), located in Montreal with Canadian work authorization asked.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted onsite inferred from Montreal location with no remote mention",
+   "seniority senior from title"
+  ],
+  "fields": {
+   "role": "Senior Activewear Designer/Designer principal(e) – vêtements de sport",
+   "company": "Tefron",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "8-10 years",
+   "reports_to": null,
+   "language": "English and French",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "80e87c8b90714acc": {
+  "id": "80e87c8b90714acc",
+  "at": "2026-11-02T23:55:33",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/renttherunway/jobs/8345820",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/renttherunway/jobs/8345820",
+   "status": 200,
+   "shot": "data/shots/80e87c8b90714acc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/renttherunway/jobs/8345820",
+  "fetched_at": "2026-11-02T23:23:17",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Brooklyn, NY (Rent the Runway HQ)",
+  "place_signals": [
+   {
+    "quote": "Brooklyn, NY (Rent the Runway HQ)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Office-centric work - our corporate employees and technical leaders have the option to work remotely on Fridays, in accordance with Company policies.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you fully authorized to work in the United States for any employer?*",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Rent the Runway currently operates on an office-centric model, with employees working from our Brooklyn office 4-days per week, and working flexibly on Fridays. Can you meet this requirement?",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "employees working from our Brooklyn office 4-days per week, and working flexibly on Fridays. Can you meet this requirement?",
+  "reason": "Design leadership role requiring four days a week onsite at the Brooklyn office, with US work authorization needed.",
+  "confidence": "high",
+  "inferred": [
+   "seniority: senior director mapped to director"
+  ],
+  "fields": {
+   "role": "Senior Director, Design",
+   "company": "Rent the Runway",
+   "seniority": "director",
+   "remote": "onsite",
+   "onsite_days": "4 days per week in Brooklyn office",
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$207,692 - $270,000 base",
+   "years_xp": "10+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "b5c69e7ec76641cb": {
+  "id": "b5c69e7ec76641cb",
+  "at": "2026-11-02T23:55:33",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/autotradercanada/jobs/8163800003",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/autotradercanada/jobs/8163800003",
+   "status": 200,
+   "shot": "data/shots/b5c69e7ec76641cb.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/autotradercanada/jobs/8163800003",
+  "fetched_at": "2026-11-02T23:23:18",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Toronto, ON (Canada)",
+  "place_signals": [
+   {
+    "quote": "Toronto, ON (Canada)",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our Ways of Working require weekly office attendance. Are you open to coming to the office 2 times a week?",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you eligible to work in Canada?*",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Our Ways of Working require weekly office attendance. Are you open to coming to the office 2 times a week?",
+  "reason": "Hybrid role based in Toronto requiring 2 office days a week and eligibility to work in Canada, so not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "Hybrid workplace inferred from the application question about 2 office days per week; the description does not say 'hybrid' directly."
+  ],
+  "fields": {
+   "role": "Sr. Product Designer-AutoSync Retail Operations",
+   "company": "AutoTrader Canada",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "2 days per week",
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": "110K-115K",
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "431dae0b412844ae": {
+  "id": "431dae0b412844ae",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://saabgroup.wd116.myworkdayjobs.com/combitech_careers/job/Bromma---Gustavslundsvgen-42/UX-UI-Designer_REQ_46790",
+  "board": null,
+  "employer": {
+   "url": "https://saabgroup.wd116.myworkdayjobs.com/combitech_careers/job/Bromma---Gustavslundsvgen-42/UX-UI-Designer_REQ_46790",
+   "status": 200,
+   "shot": "data/shots/431dae0b412844ae.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://saabgroup.wd116.myworkdayjobs.com/combitech_careers/job/Bromma---Gustavslundsvgen-42/UX-UI-Designer_REQ_46790",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:24"
+ },
+ "f7a67ba7fea84777": {
+  "id": "f7a67ba7fea84777",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://tbinstitute.wd3.myworkdayjobs.com/tbi/job/United-Kingdom/Head-of-Design-and-Creative_JR002318",
+  "board": null,
+  "employer": {
+   "url": "https://tbinstitute.wd3.myworkdayjobs.com/tbi/job/United-Kingdom/Head-of-Design-and-Creative_JR002318",
+   "status": 200,
+   "shot": "data/shots/f7a67ba7fea84777.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://tbinstitute.wd3.myworkdayjobs.com/tbi/job/United-Kingdom/Head-of-Design-and-Creative_JR002318",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:27"
+ },
+ "60a7d5d3ef574a35": {
+  "id": "60a7d5d3ef574a35",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://copart.wd12.myworkdayjobs.com/copart/job/San-Francisco-CA/Director--Design_JR112590",
+  "board": null,
+  "employer": {
+   "url": "https://copart.wd12.myworkdayjobs.com/copart/job/San-Francisco-CA/Director--Design_JR112590",
+   "status": 200,
+   "shot": "data/shots/60a7d5d3ef574a35.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://copart.wd12.myworkdayjobs.com/copart/job/San-Francisco-CA/Director--Design_JR112590",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:27"
+ },
+ "7d5f51d349bc4771": {
+  "id": "7d5f51d349bc4771",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers-designworkshop.icims.com/jobs/1447/landscape-designer-planner/job",
+  "board": null,
+  "employer": {
+   "url": "https://careers-designworkshop.icims.com/jobs/1447/landscape-designer-planner/job?mobile=false&width=1280&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+   "status": 200,
+   "shot": "data/shots/7d5f51d349bc4771.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://careers-designworkshop.icims.com/jobs/1447/landscape-designer-planner/job",
+  "fed": true,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:25"
+ },
+ "09501f644c394f6e": {
+  "id": "09501f644c394f6e",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4632313",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4632313",
+   "status": 200,
+   "shot": "data/shots/09501f644c394f6e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4632313",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:26"
+ },
+ "c7b74f48ad794fc6": {
+  "id": "c7b74f48ad794fc6",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4633808",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4633808",
+   "status": 200,
+   "shot": "data/shots/c7b74f48ad794fc6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4633808",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:26"
+ },
+ "3a3e763540c647bf": {
+  "id": "3a3e763540c647bf",
+  "at": "2026-11-02T23:55:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://erstedigital.recruitee.com/o/student-part-time-pega-design-development-all-humans-workflow-casemanagement-pega",
+  "board": null,
+  "employer": {
+   "url": "https://erstedigital.recruitee.com/o/student-part-time-pega-design-development-all-humans-workflow-casemanagement-pega",
+   "status": 200,
+   "shot": "data/shots/3a3e763540c647bf.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://erstedigital.recruitee.com/o/student-part-time-pega-design-development-all-humans-workflow-casemanagement-pega",
+  "fetched_at": "2026-11-02T23:23:20",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Bratislava, Slovakia",
+  "place_signals": [
+   {
+    "quote": "Bratislava, Slovakia",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Enrolled student with on-going program at Slovak University",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "With your colleagues from SK and AT (frequent travel to Vienna possible and desirable)",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Combing the best of both worlds, remote and company time.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Bratislava, Slovakia",
+  "reason": "This is a part-time student internship in Pega development requiring Java skills and enrollment at a Slovak university, based in Bratislava; not a design role and not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from 'Internship' and student requirement"
+  ],
+  "fields": {
+   "role": "Student Part-time Pega Design & Development (all humans) #workflow #CaseManagement #Pega",
+   "company": "Erste Digital",
+   "seniority": "junior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Slovakia",
+    "Austria"
+   ],
+   "portugal_ok": "no",
+   "salary": "Internship salary starting from 8€/h",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "dae70bd0ab7d440b": {
+  "id": "dae70bd0ab7d440b",
+  "at": "2026-11-02T23:55:41",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.ultipro.com/rop1002ripic/JobBoard/4e0cc1ae-701f-49b2-91f8-a5fcfe1925e0/OpportunityDetail?opportunityId=0eb81075-bbd2-478b-a1a8-f006f1c1b966",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.ultipro.com/rop1002ripic/JobBoard/4e0cc1ae-701f-49b2-91f8-a5fcfe1925e0/OpportunityDetail?opportunityId=0eb81075-bbd2-478b-a1a8-f006f1c1b966",
+   "status": 200,
+   "shot": "data/shots/dae70bd0ab7d440b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.ultipro.com/rop1002ripic/JobBoard/4e0cc1ae-701f-49b2-91f8-a5fcfe1925e0/OpportunityDetail?opportunityId=0eb81075-bbd2-478b-a1a8-f006f1c1b966",
+  "fed": true,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:54"
+ },
+ "152023f62b644884": {
+  "id": "152023f62b644884",
+  "at": "2026-11-02T23:55:41",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.ultipro.com/pex1000pexco/JobBoard/f626cb69-5c8d-4819-ab26-d396bb0750b2/OpportunityDetail?opportunityId=a76010fc-24c7-42fe-a563-375a671ec849",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.ultipro.com/pex1000pexco/JobBoard/f626cb69-5c8d-4819-ab26-d396bb0750b2/OpportunityDetail?opportunityId=a76010fc-24c7-42fe-a563-375a671ec849",
+   "status": 200,
+   "shot": "data/shots/152023f62b644884.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.ultipro.com/pex1000pexco/JobBoard/f626cb69-5c8d-4819-ab26-d396bb0750b2/OpportunityDetail?opportunityId=a76010fc-24c7-42fe-a563-375a671ec849",
+  "fed": true,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:53"
+ },
+ "bcdc1172f1f34c1d": {
+  "id": "bcdc1172f1f34c1d",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://veoneerfr.teamtailor.com/jobs/8648714-design-leader-vie-serie-responsable-conception-vie-serie-f-h",
+  "board": null,
+  "employer": {
+   "url": "https://veoneerfr.teamtailor.com/jobs/8648714-design-leader-vie-serie-responsable-conception-vie-serie-f-h",
+   "status": 200,
+   "shot": "data/shots/bcdc1172f1f34c1d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://veoneerfr.teamtailor.com/jobs/8648714-design-leader-vie-serie-responsable-conception-vie-serie-f-h",
+  "fetched_at": "2026-11-02T23:23:21",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "French",
+  "language_ok": false,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "ENGINEERING - VIE SÉRIE & MAINTENANCE PRODUITS · CERGY (95) · HYBRIDE",
+  "place_signals": [
+   {
+    "quote": "ENGINEERING - VIE SÉRIE & MAINTENANCE PRODUITS · CERGY (95) · HYBRIDE",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Localisation Cergy (95) Statut à distance Hybride",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "CERGY (95) · HYBRIDE",
+  "reason": "This is an automotive electronics engineering role (series-life design leader) written in French, hybrid in Cergy, France, so it is not product design.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Leader Vie Série / Responsable Conception Vie Série f/h",
+   "company": "Veoneer France Safety Systems",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "environ 10 ans",
+   "reports_to": null,
+   "language": "French",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "81409a815004439d": {
+  "id": "81409a815004439d",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ats.rippling.com/trustlayer-inc/jobs/5b8b3455-2789-412b-8a3f-a1b9860a7314",
+  "board": null,
+  "employer": {
+   "url": "https://ats.rippling.com/trustlayer-inc/jobs/5b8b3455-2789-412b-8a3f-a1b9860a7314",
+   "status": 200,
+   "shot": "data/shots/81409a815004439d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ats.rippling.com/trustlayer-inc/jobs/5b8b3455-2789-412b-8a3f-a1b9860a7314",
+  "fetched_at": "2026-11-02T23:23:22",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Tampa, FL; Remote - EST",
+  "place_signals": [
+   {
+    "quote": "Tampa, FL",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote - EST",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   },
+   {
+    "quote": "Experience working with engineers on a distributed team, from scoping through release.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Remote - EST",
+  "reason": "remote from a list of countries the page does not show · Design-led (about 60%) product design and PM role; remote but 'EST' could mean Eastern time zone hours or US-based, so Portugal eligibility is not stated.",
+  "confidence": "medium",
+  "inferred": [
+   "seniority inferred from 5+ years experience requirement",
+   "onsite_days null as none stated"
+  ],
+  "fields": {
+   "role": "Technical Product Manager & Designer",
+   "company": "TrustLayer, Inc",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5+ years of combined experience in product design and product management, with at least 3 years designing complex web applications",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "unclear"
+ },
+ "d18cd5bc14d6404e": {
+  "id": "d18cd5bc14d6404e",
+  "at": "2026-11-02T23:55:42",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.playtika.com/position/?gh_jid=5015432101",
+  "board": null,
+  "employer": {
+   "url": "https://www.playtika.com/position/?gh_jid=5015432101",
+   "status": 200,
+   "shot": "data/shots/d18cd5bc14d6404e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.playtika.com/position/?gh_jid=5015432101",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:33"
+ },
+ "27a2bee5a4bf4d66": {
+  "id": "27a2bee5a4bf4d66",
+  "at": "2026-11-02T23:55:37",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/1699264CEC",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/workbrew/j/1699264CEC",
+   "status": 200,
+   "shot": "data/shots/27a2bee5a4bf4d66.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/workbrew/j/1699264CEC",
+  "fetched_at": "2026-11-02T23:23:22",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote; United States; United Kingdom",
+  "place_signals": [
+   {
+    "quote": "United States United Kingdom",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote: (almost) anywhere,",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   },
+   {
+    "quote": "Our fully-remote team is spread across North America, Europe, and Asia, and includes alumni of remote-first organizations like 37Signals and GitHub. There is no “HQ” and we have no plans to open one.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "For United States employees, we offer:",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "For United Kingdom employees, we offer:",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Remote: (almost) anywhere,",
+  "reason": "remote from a list of countries the page does not show · A UX design role, research-weighted, posted as remote 'almost anywhere' with a team spread across Europe; the US/UK tags are only location fields and benefits lists.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Workbrew",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "United Kingdom"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "remote"
+ },
+ "ec6cc56d01b74f44": {
+  "id": "ec6cc56d01b74f44",
+  "at": "2026-11-02T23:55:42",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.comeet.com/jobs/papayagaming/46.00B/uiux-designer-lead/68.479",
+  "board": null,
+  "employer": {
+   "url": "https://www.comeet.com/jobs/papayagaming/46.00B/uiux-designer-lead/68.479",
+   "status": 200,
+   "shot": "data/shots/ec6cc56d01b74f44.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://www.comeet.com/jobs/papayagaming/46.00B/uiux-designer-lead/68.479",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:33"
+ },
+ "958076c3c18f4873": {
+  "id": "958076c3c18f4873",
+  "at": "2026-11-02T23:55:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://normet.wd502.myworkdayjobs.com/normetcareers/job/Iisalmi/Design-Engineer--Hydraulics_R_007196",
+  "board": null,
+  "employer": {
+   "url": "https://normet.wd502.myworkdayjobs.com/normetcareers/job/Iisalmi/Design-Engineer--Hydraulics_R_007196",
+   "status": 200,
+   "shot": "data/shots/958076c3c18f4873.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://normet.wd502.myworkdayjobs.com/normetcareers/job/Iisalmi/Design-Engineer--Hydraulics_R_007196",
+  "fetched_at": "2026-11-02T23:23:22",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Iisalmi",
+  "place_signals": [
+   {
+    "quote": "locations Iisalmi",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The role is based in Iisalmi, Finland, with the possibility to work also remotely from our remote work office in Kuopio.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Full working proficiency with both Finnish and English",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We operate globally in over 30 countries with more than 1,800 experts.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The role is based in Iisalmi, Finland, with the possibility to work also remotely from our remote work office in Kuopio.",
+  "reason": "This is a hydraulics mechanical engineering job (not a design/UX role) based in Finland, with remote work only from a Kuopio office.",
+  "confidence": "high",
+  "inferred": [
+   "seniority: unstated; the posting says the candidate may be just graduating"
+  ],
+  "fields": {
+   "role": "Design Engineer, Hydraulics",
+   "company": "Normet",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Finland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "Jari Bovellan, Senior Manager, Electric & Hydraulic Engineering (contact person)",
+   "language": "English",
+   "posted": "Posted Today"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7321394daf5e4f5b": {
+  "id": "7321394daf5e4f5b",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://lilly.wd115.myworkdayjobs.com/cmp/job/US-Remote/Associate-Design-Director---Employer-Experience_R-113655-2",
+  "board": null,
+  "employer": {
+   "url": "https://lilly.wd115.myworkdayjobs.com/cmp/job/US-Remote/Associate-Design-Director---Employer-Experience_R-113655-2",
+   "status": 200,
+   "shot": "data/shots/7321394daf5e4f5b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://lilly.wd115.myworkdayjobs.com/cmp/job/US-Remote/Associate-Design-Director---Employer-Experience_R-113655-2",
+  "fetched_at": "2026-11-02T23:23:23",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "US, Remote",
+  "place_signals": [
+   {
+    "quote": "US, Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Qualified applicants must be authorized to work in the United States on a full-time basis. Lilly will not provide support for or sponsor work authorization or visas for this role",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Qualified applicants must be authorized to work in the United States on a full-time basis. Lilly will not provide support for or sponsor work authorization or visas for this role",
+  "reason": "Design leadership role that is remote only within the US, requiring US work authorization with no visa sponsorship.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Associate Design Director – Employer Experience",
+   "company": "Eli Lilly and Company",
+   "seniority": "director",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "no",
+   "salary": "$129,000 - $231,000",
+   "years_xp": "8–10+ years of design experience; 3+ years leading designers or setting design direction",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Posted Today"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "89765120f57342d9": {
+  "id": "89765120f57342d9",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=612bb66e-3607-4733-b0b5-ee07c92bf575&jobId=580724&lang=en_US",
+  "board": null,
+  "employer": {
+   "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=612bb66e-3607-4733-b0b5-ee07c92bf575&jobId=580724&lang=en_US",
+   "status": 200,
+   "shot": "data/shots/89765120f57342d9.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=612bb66e-3607-4733-b0b5-ee07c92bf575&jobId=580724&lang=en_US",
+  "fed": true,
+  "fetched_at": "2026-11-02T23:23:41",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Surrey, BC",
+  "place_signals": [
+   {
+    "quote": "Surrey, BC",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Full-Time | On-Site",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Based at our Surrey facility",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Ability to work on-site at the Surrey facility.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Full-Time | On-Site ... Ability to work on-site at the Surrey facility.",
+  "reason": "This is a mechanical CAD drafting job for water treatment equipment, not product/UX design, and it is onsite in Surrey, BC.",
+  "confidence": "high",
+  "inferred": [
+   "seniority unstated"
+  ],
+  "fields": {
+   "role": "KPW CAD Designer",
+   "company": "Komline Pure Water",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Canada"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "96b11ac1f07843a7": {
+  "id": "96b11ac1f07843a7",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://arlo.wd12.myworkdayjobs.com/external_careers/job/Milpitas-CA/UX-Design-Operations-Coordinator_JR100438",
+  "board": null,
+  "employer": {
+   "url": "https://arlo.wd12.myworkdayjobs.com/external_careers/job/Milpitas-CA/UX-Design-Operations-Coordinator_JR100438",
+   "status": 200,
+   "shot": "data/shots/96b11ac1f07843a7.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://arlo.wd12.myworkdayjobs.com/external_careers/job/Milpitas-CA/UX-Design-Operations-Coordinator_JR100438",
+  "fetched_at": "2026-11-02T23:23:27",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Milpitas, CA",
+  "place_signals": [
+   {
+    "quote": "Milpitas, CA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our talented employees, located throughout the United States, Canada, Asia, Australia, and Europe communicate, connect and work together",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Milpitas, CA",
+  "reason": "The job is a design operations coordinator (project/program management support for the UX team, 'operational excellence rather than visual design execution'), not a product design role; location is only a Milpitas, CA tag.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted set to onsite because only a city is named with no mention of remote",
+   "seniority unstated"
+  ],
+  "fields": {
+   "role": "UX Design Operations Coordinator",
+   "company": "Arlo",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "$100,000 – $130,000/year",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Posted Today"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "0ee5e09e6cd147b1": {
+  "id": "0ee5e09e6cd147b1",
+  "at": "2026-11-02T23:55:39",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://massgeneralbrigham.wd1.myworkdayjobs.com/mgbexternal/job/Somerville-MA/Technical-Instructional-Designer_RQ4084020",
+  "board": null,
+  "employer": {
+   "url": "https://massgeneralbrigham.wd1.myworkdayjobs.com/mgbexternal/job/Somerville-MA/Technical-Instructional-Designer_RQ4084020",
+   "status": 200,
+   "shot": "data/shots/0ee5e09e6cd147b1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://massgeneralbrigham.wd1.myworkdayjobs.com/mgbexternal/job/Somerville-MA/Technical-Instructional-Designer_RQ4084020",
+  "fetched_at": "2026-11-02T23:23:27",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "locations: Somerville-MA",
+  "place_signals": [
+   {
+    "quote": "locations Somerville-MA",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid, 4x/month onsite at minimum",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work Location 399 Revolution Drive",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Day (United States of America)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Hybrid, 4x/month onsite at minimum",
+  "reason": "This is an instructional design role (Epic training content) rather than product design, and it requires hybrid onsite work in Somerville, MA.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Technical Instructional Designer",
+   "company": "Mass General Brigham",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "at least 4 days per month",
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$79,560.00 - $115,720.80/Annual",
+   "years_xp": "5+ years of instruction design, curriculum development",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Posted Today"
+  },
+  "inferred_note": null,
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "bcc00f808a264643": {
+  "id": "bcc00f808a264643",
+  "at": "2026-11-02T23:55:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.gem.com/perceptyx/am9icG9zdDowV-Ng1N_e1C-F7uT7qhwQ",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.gem.com/perceptyx/am9icG9zdDowV-Ng1N_e1C-F7uT7qhwQ",
+   "status": 200,
+   "shot": "data/shots/bcc00f808a264643.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.gem.com/perceptyx/am9icG9zdDowV-Ng1N_e1C-F7uT7qhwQ",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:32"
+ },
+ "71a516ed781d4962": {
+  "id": "71a516ed781d4962",
+  "at": "2026-11-02T23:55:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.ashbyhq.com/biograph/bbf1dbe6-d10a-4631-acfc-16ce06179937",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/biograph/bbf1dbe6-d10a-4631-acfc-16ce06179937",
+   "status": 200,
+   "shot": "data/shots/71a516ed781d4962.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/biograph/bbf1dbe6-d10a-4631-acfc-16ce06179937",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:34"
+ },
+ "466bf9caac424c4e": {
+  "id": "466bf9caac424c4e",
+  "at": "2026-11-02T23:55:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://boards.greenhouse.io/relativity/jobs/8907529002?gh_jid=8907529002",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/relativity/jobs/8907529002?gh_jid=8907529002",
+   "status": 200,
+   "shot": "data/shots/466bf9caac424c4e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/relativity/jobs/8907529002?gh_jid=8907529002",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:23:34"
+ },
+ "249d80c260b54822": {
+  "id": "249d80c260b54822",
+  "at": "2026-11-02T23:55:42",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/537467F87B",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/99brightminds/j/537467F87B",
+   "status": 200,
+   "shot": "data/shots/249d80c260b54822.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/99brightminds/j/537467F87B",
+  "fetched_at": "2026-11-02T23:23:29",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Full time Amman, Amman Governorate, Jordan",
+  "place_signals": [
+   {
+    "quote": "Amman, Amman Governorate, Jordan",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "At least one successfully delivered project for a client based in Saudi Arabia.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "RemoteFull time Amman, Amman Governorate, Jordan",
+  "reason": "Role is a senior UI/UX design job labelled Remote with only a Jordan location tag and no stated residence restriction.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UI/UX Designer",
+   "company": "99brightminds",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Jordan"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "75c819f1d6844a2a": {
+  "id": "75c819f1d6844a2a",
+  "at": "2026-11-02T23:55:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/ninetwothree-ai-studio/j/45E3EAC96C",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/ninetwothree-ai-studio/j/45E3EAC96C",
+   "status": 200,
+   "shot": "data/shots/75c819f1d6844a2a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/ninetwothree-ai-studio/j/45E3EAC96C",
+  "fetched_at": "2026-11-02T23:23:30",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Operations Spain",
+  "place_signals": [
+   {
+    "quote": "Spain",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "RemoteOperations",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Clear written and spoken communication, working remotely and asynchronously across departments.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "RemoteOperations Spain",
+  "reason": "Open UI/UX role marked remote with a Spain location tag; the page does not say whether remote work is limited to Spain.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Middle UI/UX Designer",
+   "company": "NineTwoThree AI Studio",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "At least 3 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "4efd0b0de596434d": {
+  "id": "4efd0b0de596434d",
+  "at": "2026-11-02T23:55:45",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/emoneyadvisor/jobs/4380690009",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/emoneyadvisor/jobs/4380690009",
+   "status": 200,
+   "shot": "data/shots/4efd0b0de596434d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/emoneyadvisor/jobs/4380690009",
+  "fetched_at": "2026-11-02T23:23:32",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Are you legally permitted to work in the United States?*",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Will you now or in the future require visa sponsorship?*",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The salary range for this position is $119,000 - $156,000",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote ... Are you legally permitted to work in the United States?* ... Will you now or in the future require visa sponsorship?*",
+  "reason": "Role is a senior product designer and listed as remote with no geography, but the application form asks about US work authorization and visa sponsorship, which suggests a US-only hire.",
+  "confidence": "medium",
+  "inferred": [
+   "US work authorization requirement inferred from application form questions, not stated in the description"
+  ],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "eMoney Advisor",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": "$119,000 - $156,000",
+   "years_xp": "6+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "e38614627eba4330": {
+  "id": "e38614627eba4330",
+  "at": "2026-11-02T23:55:50",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://reface.breezy.hr/p/4a185def2926-senior-product-designer",
+  "board": null,
+  "employer": {
+   "url": "https://reface.breezy.hr/p/4a185def2926-senior-product-designer",
+   "status": 200,
+   "shot": "data/shots/e38614627eba4330.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://reface.breezy.hr/p/4a185def2926-senior-product-designer",
+  "fetched_at": "2026-11-02T23:25:27",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Ukrainian",
+  "language_ok": false,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "KYIV, KYIV - REMOTE (ANY LOCATION)",
+  "place_signals": [
+   {
+    "quote": "KYIV, KYIV - REMOTE (ANY LOCATION)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Наш офіс у Києві — це твоя фортеця стабільності. Безперебійне світло, вода та зв’язок гарантовані",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "KYIV, KYIV - REMOTE (ANY LOCATION)",
+  "reason": "Open remote product designer role from any location, but the description is written in Ukrainian, which is not an accepted language.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Reface",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Ukrainian",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "03734ccc1c3e4a64": {
+  "id": "03734ccc1c3e4a64",
+  "at": "2026-11-02T23:55:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.j-vers.com/job/AAAAAAAAAAAAAAAAAAAAANR6Rezz7cqvystAuHVv1acU6nx12ig2mqaF8T7LqpFOAf7qVD8YGHVnpUW_pTUCdjY-IsEhCdRPM2-2QcK7935IyDAVJoAFCrOuqxeo_DgkBaGkRCjPVnsC1o6HIJIzDKrj6wySpY2maES4trLG1o15nPOG-cbGvD9cIAEy0e886DYgAEwmLmE0BYwAvFdVOPEhrXrrN82qvOCWjtFsxB_3Mui9PX4V5uw_bEw1i8d_EQYq93VspmxO3LoaP_c80KfFCDk7rbYofQsHCwMkEnaySmKyXGVTHD5D2EH_xA8lyOk_cTiUQWv8RSXyAa7GqL98ITplFysNaHkcLdxCJvbBltePvCWKoGimkfH81_VLM2Wt4god6bvAYiyHAgu6CA==",
+  "board": {
+   "url": "https://www.linkedin.com/authwall?trk=qf&original_referer=https://click.appcast.io/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fview%2F4476459228%3Ftrk%3Dli_appcast_Global_careers_jobsgtm_fa4659c3-0501-447d-878b-e79b6bc5b4d0_job-dist%26utm_medium%3Djobdist%26mcid%3D6810586802156523522%26utm_source%3DJ-Vers%2520-%2520LI%2520-%2520US%26ePP%3DCwEAAAGhhxRSNH-DbbDK8k6dJLo98YMiJYmma61K-C8hnt8J-niIRHGRXGHX4l5oZnFL27sndjzRNAgubpd6j4r4SEwxcfY7Nf6iqFB83Q%26ccuid%3D76838371640",
+   "status": 200,
+   "shot": "data/shots/03734ccc1c3e4a64.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "board",
+  "read": "board",
+  "read_url": "https://www.linkedin.com/authwall?trk=qf&original_referer=https://click.appcast.io/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fview%2F4476459228%3Ftrk%3Dli_appcast_Global_careers_jobsgtm_fa4659c3-0501-447d-878b-e79b6bc5b4d0_job-dist%26utm_medium%3Djobdist%26mcid%3D6810586802156523522%26utm_source%3DJ-Vers%2520-%2520LI%2520-%2520US%26ePP%3DCwEAAAGhhxRSNH-DbbDK8k6dJLo98YMiJYmma61K-C8hnt8J-niIRHGRXGHX4l5oZnFL27sndjzRNAgubpd6j4r4SEwxcfY7Nf6iqFB83Q%26ccuid%3D76838371640",
+  "open_quote": "the board sent the link somewhere else: https://www.linkedin.com/authwall?trk=qf&original_referer=https://click.appcast.io/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fview%2F4476459228%3Ftrk%3Dli_appcast_Global_careers_jobsgtm_fa4659c3-0501-447d-878b-e79b6bc5b4d0_job-dist%26utm_medium%3Djobdist%26mcid%3D6810586802156523522%26utm_source%3DJ-Vers%2520-%2520LI%2520-%2520US%26ePP%3DCwEAAAGhhxRSNH-DbbDK8k6dJLo98YMiJYmma61K-C8hnt8J-niIRHGRXGHX4l5oZnFL27sndjzRNAgubpd6j4r4SEwxcfY7Nf6iqFB83Q%26ccuid%3D76838371640",
+  "stage": "render",
+  "reason": "the board says it is closed, and the employer's posting was not found",
+  "fetched_at": "2026-11-02T23:26:17"
+ },
+ "5edf455e50e44502": {
+  "id": "5edf455e50e44502",
+  "at": "2026-11-02T23:55:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/multiplicaa/j/BE26B5BFE4/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/multiplicaa/j/BE26B5BFE4/",
+   "status": 200,
+   "shot": "data/shots/5edf455e50e44502.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/multiplicaa/j/BE26B5BFE4/",
+  "fetched_at": "2026-11-02T23:25:47",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "BBVA",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Spanish",
+  "language_ok": false,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "HybridMexicoFull time44,OS,UP#1 / Mexico City, Mexico City, Mexico",
+  "place_signals": [
+   {
+    "quote": "Mexico City, Mexico City, Mexico",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HybridMexicoFull time",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Actualmente colaboramos con empresas en LATAM, USA, Europa y África y contamos con talentos que trabajan presencialmente y/o remoto en diferentes partes del mundo.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "HybridMexicoFull time / Mexico City, Mexico City, Mexico",
+  "reason": "Hybrid product design role in Mexico City, written in Spanish, posted by a consultancy for BBVA.",
+  "confidence": "high",
+  "inferred": [
+   "hiring_for BBVA taken from 'Talent Implant en BBVA'",
+   "seniority unstated"
+  ],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Multiplica",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Mexico"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "language": "Spanish",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "dd9ad83382d24857": {
+  "id": "dd9ad83382d24857",
+  "at": "2026-11-02T23:55:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/hunt-st/j/019F1B8087/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/hunt-st/j/019F1B8087/",
+   "status": 200,
+   "shot": "data/shots/dd9ad83382d24857.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/hunt-st/j/019F1B8087/",
+  "fetched_at": "2026-11-02T23:25:49",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Philippines",
+  "place_signals": [
+   {
+    "quote": "Philippines",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Looking for Philippines-based candidates",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "we help Australian companies hire top remote talent in the Philippines",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "All of our roles are 100% remote so you'll be able to work from home.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This role is expected to align with the AU business hours (approx. 9 AM - 5 PM, Monday to Friday)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Looking for Philippines-based candidates",
+  "reason": "Remote UI/UX design role, but restricted to Philippines-based candidates, so not open to someone in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer (029 - 1458)",
+   "company": "Hunt St",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Philippines"
+   ],
+   "portugal_ok": "no",
+   "salary": "$2,000 AUD - $3,000 AUD / Monthly",
+   "years_xp": null,
+   "reports_to": "Australian Creative Director",
+   "language": "English",
+   "posted": null
+  },
+  "_note": "Hunt St recruits on behalf of Australian clients, but the page states it is not an outsourcing agency and engagement is direct with the client, so posted_by is employer.",
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "50c0cc532c2c46e7": {
+  "id": "50c0cc532c2c46e7",
+  "at": "2026-11-02T23:55:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.cv-library.co.uk/job/225716433/Service-Designer?s=106923",
+  "board": {
+   "url": "https://www.cv-library.co.uk/job/225716433/service-designer?s=106923",
+   "status": 200,
+   "shot": "data/shots/50c0cc532c2c46e7.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.cv-library.co.uk/job/225716433/service-designer?s=106923",
+  "fetched_at": "2026-11-02T23:26:31",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Manchester, Greater Manchester",
+  "place_signals": [
+   {
+    "quote": "Manchester, Greater Manchester",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you a Senior Service Designer with active SC clearance ready to take the lead on exciting public sector digital transformation projects?",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Active SC clearance - ESSENTIAL.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Active SC clearance - ESSENTIAL.",
+  "reason": "Service design role (counted as product/UX design) but located in Manchester with no remote mention and UK SC clearance essential, which Cesar as a Portugal-based worker would not hold.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted onsite inferred from the Manchester location with no remote mention",
+   "posted_by agency inferred: the company name 83zero Ltd appears as a recruiter-style poster and the advert is written in recruiter voice",
+   "seniority senior taken from the advert title text",
+   "role counted as design because service design with UX/UI collaboration and product design experience"
+  ],
+  "fields": {
+   "role": "Service Designer",
+   "company": "83zero Ltd",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£75,000 - £85,000 per annum",
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "12th Oct"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "ff702cf535fb4514": {
+  "id": "ff702cf535fb4514",
+  "at": "2026-11-02T23:55:56",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/gilbert-pharmaceuticals/j/A08DC49302",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/gilbert-pharmaceuticals/j/A08DC49302",
+   "status": 200,
+   "shot": "data/shots/ff702cf535fb4514.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/gilbert-pharmaceuticals/j/A08DC49302",
+  "fetched_at": "2026-11-02T23:26:18",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Full time United States",
+  "place_signals": [
+   {
+    "quote": "United States",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Ability to travel to pharmacy sites as needed for construction oversight, inspections, and go-live support.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote Full time United States",
+  "reason": "This is a facilities design and construction role for building US pharmacies, not product/UX design, and it is tied to the United States.",
+  "confidence": "high",
+  "inferred": [
+   "Pharmacy site travel is nationwide (US) so it is read as requiring US presence"
+  ],
+  "fields": {
+   "role": "Head of Design & Development & Construction",
+   "company": "Gilbert Pharmaceuticals",
+   "seniority": "head",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": "Director of Pharmacy Development & Operations",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "134618d40aba4b3c": {
+  "id": "134618d40aba4b3c",
+  "at": "2026-11-02T23:55:58",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://careers.nexaconsulting.pl/jobs/8641639-ux-ui-designer-mid-e-commerce",
+  "board": {
+   "url": "https://careers.nexaconsulting.pl/jobs/8641639-ux-ui-designer-mid-e-commerce",
+   "status": 200,
+   "shot": "data/shots/134618d40aba4b3c.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://careers.nexaconsulting.pl/jobs/8641639-ux-ui-designer-mid-e-commerce",
+   "status": 200,
+   "shot": "data/shots/134618d40aba4b3c.employer.jpg",
+   "error": null
+  },
+  "found_by": "careers",
+  "looked": [
+   "link: https://app.teamtailor.com/login",
+   "link: https://www.teamtailor.com/en-us/?utm_campaign=poweredby&utm_content=careers.nexaconsultin",
+   "careers: https://careers.nexaconsulting.pl/jobs/8641639-ux-ui-designer-mid-e-commerce"
+  ],
+  "read": "employer",
+  "read_url": "https://careers.nexaconsulting.pl/jobs/8641639-ux-ui-designer-mid-e-commerce",
+  "fetched_at": "2026-11-02T23:26:58",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Polish (with English headings)",
+  "language_ok": false,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "IT SERVICES · WARSAW · FULLY REMOTE",
+  "place_signals": [
+   {
+    "quote": "IT SERVICES · WARSAW · FULLY REMOTE",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "B2B contract | 100% remote| full-time",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote status Fully Remote",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "IT SERVICES · WARSAW · FULLY REMOTE",
+  "reason": "Open, fully remote UX/UI design role with no stated country restriction, but the description is written in Polish, which is not an accepted language.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer (Mid) – E-commerce",
+   "company": "neXa",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "Minimum 3 years",
+   "reports_to": null,
+   "language": "Polish",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "5b9c885350924d88": {
+  "id": "5b9c885350924d88",
+  "at": "2026-11-02T23:55:57",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://pagefreezer-software-inc.breezy.hr/p/d0a2b7c10f79-product-designer",
+  "board": null,
+  "employer": {
+   "url": "https://pagefreezer-software-inc.breezy.hr/p/d0a2b7c10f79-product-designer",
+   "status": 200,
+   "shot": "data/shots/5b9c885350924d88.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://pagefreezer-software-inc.breezy.hr/p/d0a2b7c10f79-product-designer",
+  "fetched_at": "2026-11-02T23:26:21",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Brazil - Remote (Within Location)",
+  "place_signals": [
+   {
+    "quote": "Brazil - Remote (Within Location)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote opportunity for a Product Designer based in Brazil who is willing to join us as an independent contractor (PJ).",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote first environment",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "\"Work from (Almost) Anywhere\" policy",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_maybe"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This is a remote opportunity for a Product Designer based in Brazil who is willing to join us as an independent contractor (PJ).",
+  "reason": "Product design role is open, but the role-specific location lines require being based in Brazil as a PJ contractor.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Pagefreezer",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Brazil"
+   ],
+   "portugal_ok": "no",
+   "salary": "$35,000 – $60,000 / Year (USD)",
+   "years_xp": "3+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a7e863275cdd4839": {
+  "id": "a7e863275cdd4839",
+  "at": "2026-11-02T23:55:58",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4622280",
+  "board": {
+   "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4622280",
+   "status": 200,
+   "shot": "data/shots/a7e863275cdd4839.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4622280",
+  "fetched_at": "2026-11-02T23:26:25",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Fully Remote • Remote Worker - N/A",
+  "place_signals": [
+   {
+    "quote": "Fully Remote • Remote Worker - N/A",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "#LI-Remote",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "more than 60 locations across the United States, Canada, and Europe",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Fully Remote • Remote Worker - N/A",
+  "reason": "A UX/UI-focused web experience role that is fully remote with no stated geographic restriction.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Digital UX Specialist",
+   "company": "SurfacePrep",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "784cc5ef6db7486b": {
+  "id": "784cc5ef6db7486b",
+  "at": "2026-11-02T23:56:00",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.gem.com/mixbook/am9icG9zdDrQzvh-9Sn5TqucpXGah00B",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.gem.com/mixbook/am9icG9zdDrQzvh-9Sn5TqucpXGah00B",
+   "status": 200,
+   "shot": "data/shots/784cc5ef6db7486b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.gem.com/mixbook/am9icG9zdDrQzvh-9Sn5TqucpXGah00B",
+  "fetched_at": "2026-11-02T23:26:22",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Romania • United States • Europe • Moldova",
+  "place_signals": [
+   {
+    "quote": "Romania • United States • Europe • Moldova",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Romania • United States • Europe • Moldova Remote",
+  "reason": "Remote senior UX/UI contract role whose location list includes Europe, which contains Portugal.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX/UI Designer (Contract)",
+   "company": "Mixbook",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Romania",
+    "United States",
+    "Europe",
+    "Moldova"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": "8–10 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "e4ae30c998584eef": {
+  "id": "e4ae30c998584eef",
+  "at": "2026-11-02T23:56:00",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/workbrew/j/1699264CEC",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/workbrew/j/1699264CEC",
+   "status": 200,
+   "shot": "data/shots/e4ae30c998584eef.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/workbrew/j/1699264CEC",
+  "fetched_at": "2026-11-02T23:26:21",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote; United States; United Kingdom",
+  "place_signals": [
+   {
+    "quote": "United States United Kingdom",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote: (almost) anywhere,",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   },
+   {
+    "quote": "Our fully-remote team is spread across North America, Europe, and Asia",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "There is no “HQ” and we have no plans to open one.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "For United States employees, we offer:",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "For United Kingdom employees, we offer:",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Remote: (almost) anywhere,",
+  "reason": "remote from a list of countries the page does not show · UX design role (research-weighted but includes UX design) at a fully-remote company, remote 'almost anywhere' with US/UK tags only.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Workbrew",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "United Kingdom"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5+ years designing B2B software products",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "remote"
+ },
+ "0e0220b775a146c6": {
+  "id": "0e0220b775a146c6",
+  "at": "2026-11-02T23:56:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/duel-dot-c-om/j/143E9145E0",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/duel-dot-c-om/j/143E9145E0",
+   "status": 200,
+   "shot": "data/shots/0e0220b775a146c6.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/duel-dot-c-om/j/143E9145E0",
+  "fetched_at": "2026-11-02T23:26:24",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote",
+  "place_signals": [
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "RemoteDesignFull time",
+  "reason": "Senior UI Designer role marked Remote with no geographic restriction anywhere on the page.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from title"
+  ],
+  "fields": {
+   "role": "Senior UI Designer",
+   "company": "Duel",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "3+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "5d242f2066694be0": {
+  "id": "5d242f2066694be0",
+  "at": "2026-11-02T23:56:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.careers-page.com/spanish-engineers/job/RYWYVR9X",
+  "board": {
+   "url": "https://www.careers-page.com/spanish-engineers/job/RYWYVR9X",
+   "status": 200,
+   "shot": "data/shots/5d242f2066694be0.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.careers-page.com/spanish-engineers/job/RYWYVR9X",
+  "fetched_at": "2026-11-02T23:26:53",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "Spanish",
+  "language_ok": false,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remoto – Project Design Manager – Data Centres",
+  "place_signals": [
+   {
+    "quote": "UBICACIÓN: Remoto desde Reino Unido, Irlanda, Dinamarca, Suecia, Noruega, Finlandia, Estonia, Letonia, Lituania, Alemania, Francia, Países Bajos, Bélgica, Luxemburgo, Austria, Suiza, Polonia, República Checa, Eslovaquia, Hungría, Rumanía, Bulgaria, Eslovenia, Croacia, Italia, Portugal, Grecia, Chipre o Malta. Se EXCLUYE ESPAÑA",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Modalidad de trabajo 100 % remoto desde uno de los países autorizados.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   },
+   {
+    "quote": "modalidad de trabajo 100 % remoto, viajes puntuales a proyectos en Europa",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Remoto desde Reino Unido, Irlanda, ... Italia, Portugal, Grecia, Chipre o Malta. Se EXCLUYE ESPAÑA",
+  "reason": "The job is a data centre construction design manager (engineering/architecture coordination), not product/UX design, and the posting is written in Spanish; it is remote from a list that includes Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "posted_by agency inferred from Spanish Engineers recruiting for an unnamed 'organización internacional'",
+   "seniority unstated"
+  ],
+  "fields": {
+   "role": "Project Design Manager – Data Centres",
+   "company": "Spanish Engineers",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Reino Unido",
+    "Irlanda",
+    "Dinamarca",
+    "Suecia",
+    "Noruega",
+    "Finlandia",
+    "Estonia",
+    "Letonia",
+    "Lituania",
+    "Alemania",
+    "Francia",
+    "Países Bajos",
+    "Bélgica",
+    "Luxemburgo",
+    "Austria",
+    "Suiza",
+    "Polonia",
+    "República Checa",
+    "Eslovaquia",
+    "Hungría",
+    "Rumanía",
+    "Bulgaria",
+    "Eslovenia",
+    "Croacia",
+    "Italia",
+    "Portugal",
+    "Grecia",
+    "Chipre",
+    "Malta"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "Spanish",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "6c25aa9fcc674089": {
+  "id": "6c25aa9fcc674089",
+  "at": "2026-11-02T23:56:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://seeknow.breezy.hr/p/75bd15f31f21-ux-designer-engineer",
+  "board": null,
+  "employer": {
+   "url": "https://seeknow.breezy.hr/p/75bd15f31f21-ux-designer-engineer",
+   "status": 200,
+   "shot": "data/shots/6c25aa9fcc674089.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://seeknow.breezy.hr/p/75bd15f31f21-ux-designer-engineer",
+  "fetched_at": "2026-11-02T23:26:36",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Atlanta, GA - Hybrid (Remote And In Person)",
+  "place_signals": [
+   {
+    "quote": "Atlanta, GA - Hybrid (Remote And In Person)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Atlanta, GA - Hybrid (Remote And In Person)",
+  "reason": "Title is a UX Design Engineer role (yes), but location is Atlanta, GA hybrid with 'remote and in person' ambiguity and no statement on whether remote extends outside the US.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer Engineer",
+   "company": "Seek Now",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "US"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": "Lead Product Designer",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "f1ef810c37b74376": {
+  "id": "f1ef810c37b74376",
+  "at": "2026-11-02T23:56:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/sustainment/jobs/4726230006",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/sustainment/jobs/4726230006",
+   "status": 200,
+   "shot": "data/shots/f1ef810c37b74376.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/sustainment/jobs/4726230006",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:31"
+ },
+ "6acb4a6fbbab4af8": {
+  "id": "6acb4a6fbbab4af8",
+  "at": "2026-11-02T23:56:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://engagestar.bamboohr.com/careers/190",
+  "board": null,
+  "employer": {
+   "url": "https://engagestar.bamboohr.com/careers/190",
+   "status": 200,
+   "shot": "data/shots/6acb4a6fbbab4af8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://engagestar.bamboohr.com/careers/190",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:35"
+ },
+ "aa7d470cbcf341d9": {
+  "id": "aa7d470cbcf341d9",
+  "at": "2026-11-02T23:56:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.jobs.ch/en/vacancies/detail/6e4f3e4d-23c0-4418-9ec2-21e381d74148/",
+  "board": {
+   "url": "https://www.jobs.ch/en/vacancies/detail/6e4f3e4d-23c0-4418-9ec2-21e381d74148/",
+   "status": 200,
+   "shot": "data/shots/aa7d470cbcf341d9.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.jobs.ch/en/vacancies/detail/6e4f3e4d-23c0-4418-9ec2-21e381d74148/",
+  "fetched_at": "2026-11-02T23:26:28",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English (AI-translated from German)",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Bern",
+  "place_signals": [
+   {
+    "quote": "Bern",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Berner Fachhochschule Bern 60 – 80%",
+  "reason": "This is an IT and UX project management role leading software developers and UX designers, based in Bern with no remote option stated, so not a design role for Cesar and not doable from Portugal.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted onsite inferred from city named with no mention of remote",
+   "seniority unstated",
+   "role_verdict no inferred because the job is project management of IT/UX teams rather than product design itself"
+  ],
+  "fields": {
+   "role": "IT & UX Projektleitung (60 - 80%)",
+   "company": "Berner Fachhochschule",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Switzerland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English (AI-translated from German)",
+   "posted": "3 days ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d2dc65484b244e59": {
+  "id": "d2dc65484b244e59",
+  "at": "2026-11-02T23:56:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/studiokraftonboard/jobs/8906044002",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/studiokraftonboard/jobs/8906044002",
+   "status": 200,
+   "shot": "data/shots/d2dc65484b244e59.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/studiokraftonboard/jobs/8906044002",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:34"
+ },
+ "a3391c35174945e9": {
+  "id": "a3391c35174945e9",
+  "at": "2026-11-02T23:56:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/studiokraftonboard/jobs/8906125002",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/studiokraftonboard/jobs/8906125002",
+   "status": 200,
+   "shot": "data/shots/a3391c35174945e9.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/studiokraftonboard/jobs/8906125002",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:35"
+ },
+ "6ba8e25f67a64ce6": {
+  "id": "6ba8e25f67a64ce6",
+  "at": "2026-11-02T23:56:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.jobs.ch/en/vacancies/detail/cd959b89-b537-448f-b3b0-c115d0988740/",
+  "board": {
+   "url": "https://www.jobs.ch/en/vacancies/detail/cd959b89-b537-448f-b3b0-c115d0988740/",
+   "status": 200,
+   "shot": "data/shots/6ba8e25f67a64ce6.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.jobs.ch/en/vacancies/detail/cd959b89-b537-448f-b3b0-c115d0988740/",
+  "fetched_at": "2026-11-02T23:26:48",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "German",
+  "language_ok": false,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Burgdorf; Maritzstrasse 47, 3401 Burgdorf",
+  "place_signals": [
+   {
+    "quote": "Maritzstrasse 47, 3401 Burgdorf",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Wir suchen am Hauptsitz in Burgdorf eine kreative und motivierte Persönlichkeit",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Wir suchen am Hauptsitz in Burgdorf eine kreative und motivierte Persönlichkeit",
+  "reason": "The posting is in German and is a print, social and graphic design role onsite at the Burgdorf headquarters in Switzerland.",
+  "confidence": "high",
+  "inferred": [
+   "workplace_as_posted is onsite because only a Burgdorf address is given with no mention of remote work",
+   "seniority is unstated; the page asks for first work experience as an advantage"
+  ],
+  "fields": {
+   "role": "Multimedia Designer/in",
+   "company": "ESA",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Switzerland"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "German",
+   "posted": "3 days ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7df4d33941444888": {
+  "id": "7df4d33941444888",
+  "at": "2026-11-02T23:56:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.lever.co/nahc/c551e3f0-5624-40c3-a506-e328c09a6572",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.lever.co/nahc/c551e3f0-5624-40c3-a506-e328c09a6572",
+   "status": 200,
+   "shot": "data/shots/7df4d33941444888.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.lever.co/nahc/c551e3f0-5624-40c3-a506-e328c09a6572",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:40"
+ },
+ "12ea674ed9cc4c61": {
+  "id": "12ea674ed9cc4c61",
+  "at": "2026-11-02T23:56:08",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://erbis.breezy.hr/p/5cc7fd9c2b2701-web-graphical-designer-part-time",
+  "board": null,
+  "employer": {
+   "url": "https://erbis.breezy.hr/p/5cc7fd9c2b2701-web-graphical-designer-part-time",
+   "status": 200,
+   "shot": "data/shots/12ea674ed9cc4c61.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://erbis.breezy.hr/p/5cc7fd9c2b2701-web-graphical-designer-part-time",
+  "fetched_at": "2026-11-02T23:26:36",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Kyiv, UA - Remote (Any Location)Part-Time",
+  "place_signals": [
+   {
+    "quote": "Kyiv, UA - Remote (Any Location)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Kyiv, UA - Remote (Any Location)",
+  "reason": "Hybrid UI/UX and graphic designer role, remote from any location, so Portugal is fine; it is part-time.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Web/Graphical designer (Part Time)",
+   "company": "Erbis",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": "2+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "816eddec24914eda": {
+  "id": "816eddec24914eda",
+  "at": "2026-11-02T23:56:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://dfb.jobs.personio.de/job/2869704",
+  "board": null,
+  "employer": {
+   "url": "https://dfb.jobs.personio.de/job/2869704",
+   "status": 200,
+   "shot": "data/shots/816eddec24914eda.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://dfb.jobs.personio.de/job/2869704",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:50"
+ },
+ "c787ef7b290e41bd": {
+  "id": "c787ef7b290e41bd",
+  "at": "2026-11-02T23:56:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://samy1.recruitee.com/o/designer",
+  "board": null,
+  "employer": {
+   "url": "https://samy1.recruitee.com/o/designer",
+   "status": 200,
+   "shot": "data/shots/c787ef7b290e41bd.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://samy1.recruitee.com/o/designer",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:50"
+ },
+ "3a98a7ece30e4285": {
+  "id": "3a98a7ece30e4285",
+  "at": "2026-11-02T23:56:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/EndeavourGroupCareers/744000158669319",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/EndeavourGroupCareers/744000158669319",
+   "status": 200,
+   "shot": "data/shots/3a98a7ece30e4285.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/EndeavourGroupCareers/744000158669319",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:40"
+ },
+ "e37b670166d54c37": {
+  "id": "e37b670166d54c37",
+  "at": "2026-11-02T23:56:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/jysk/744000158691154",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/jysk/744000158691154",
+   "status": 200,
+   "shot": "data/shots/e37b670166d54c37.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/jysk/744000158691154",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:42"
+ },
+ "68eed1ab39764635": {
+  "id": "68eed1ab39764635",
+  "at": "2026-11-02T23:56:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.smartrecruiters.com/WMHProject/744000158715920",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/WMHProject/744000158715920",
+   "status": 200,
+   "shot": "data/shots/68eed1ab39764635.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/WMHProject/744000158715920",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:41"
+ },
+ "95efaf67835a46a8": {
+  "id": "95efaf67835a46a8",
+  "at": "2026-11-02T23:56:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/volterapower/jobs/5270072007",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/volterapower/jobs/5270072007",
+   "status": 200,
+   "shot": "data/shots/95efaf67835a46a8.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/volterapower/jobs/5270072007",
+  "fetched_at": "2026-11-02T23:26:33",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Arlington, Virginia, United States; Brooklyn, NY; Remote",
+  "place_signals": [
+   {
+    "quote": "Arlington, Virginia, United States; Brooklyn, NY; Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "East Coast preferred, particularly the Washington, D.C. or New York City metro areas. Other U.S. locations may be considered.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Candidates must be legally authorized to work in the United States.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Expect to travel to sites and customer offices roughly 25% of the time.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "#LI-Remote",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Candidates must be legally authorized to work in the United States.",
+  "reason": "This is a Design Manager role for EV charging infrastructure construction and permitting (civil/electrical site design), not product design, and it requires US work authorization.",
+  "confidence": "high",
+  "inferred": [
+   "role_verdict: the job is infrastructure/site design project management, not product/UX design"
+  ],
+  "fields": {
+   "role": "Design Manager",
+   "company": "Voltera",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$135,000 - $155,000",
+   "years_xp": "4-7 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a2c1931a2913434a": {
+  "id": "a2c1931a2913434a",
+  "at": "2026-11-02T23:56:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://job-boards.greenhouse.io/careaccess/jobs/4474603009",
+  "board": null,
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/careaccess/jobs/4474603009",
+   "status": 200,
+   "shot": "data/shots/a2c1931a2913434a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/careaccess/jobs/4474603009",
+  "fetched_at": "2026-11-02T23:26:36",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "USA Remote",
+  "place_signals": [
+   {
+    "quote": "USA Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Remote within the United States. This role requires 100% of work to be performed in a remote office environment.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Are you authorized to work in the U.S.?*",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Care Access is unable to sponsor work visas at this time.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Benefits & Perks (US Full Time Employees)",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Remote within the United States. This role requires 100% of work to be performed in a remote office environment.",
+  "reason": "Title says Web Design Engineer (design in title, design-leaning), but the role is restricted to remote within the United States, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority: 5+ years experience suggests senior, not stated as such"
+  ],
+  "fields": {
+   "role": "Web Design Engineer",
+   "company": "Care Access",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": "$100,00 - $140,000 USD per year",
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "4a9a0bbca5bd425c": {
+  "id": "4a9a0bbca5bd425c",
+  "at": "2026-11-02T23:56:15",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://electrolux.wd3.myworkdayjobs.com/adhocafteradvertising/job/Curitiba/Sr-Surface-Designer_JR81566-2",
+  "board": null,
+  "employer": {
+   "url": "https://electrolux.wd3.myworkdayjobs.com/adhocafteradvertising/job/Curitiba/Sr-Surface-Designer_JR81566-2",
+   "status": 200,
+   "shot": "data/shots/4a9a0bbca5bd425c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://electrolux.wd3.myworkdayjobs.com/adhocafteradvertising/job/Curitiba/Sr-Surface-Designer_JR81566-2",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:46"
+ },
+ "45c2c7fcb7a54881": {
+  "id": "45c2c7fcb7a54881",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://freseniusglobal.wd3.myworkdayjobs.com/linkedin/job/Bad-Hersfeld/Design-Quality-Professional--m-w-d---befristet-bis-31032029_R-01030219-1",
+  "board": null,
+  "employer": {
+   "url": "https://freseniusglobal.wd3.myworkdayjobs.com/linkedin/job/Bad-Hersfeld/Design-Quality-Professional--m-w-d---befristet-bis-31032029_R-01030219-1",
+   "status": 200,
+   "shot": "data/shots/45c2c7fcb7a54881.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://freseniusglobal.wd3.myworkdayjobs.com/linkedin/job/Bad-Hersfeld/Design-Quality-Professional--m-w-d---befristet-bis-31032029_R-01030219-1",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:47"
+ },
+ "55d71c24adf647aa": {
+  "id": "55d71c24adf647aa",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://freseniusglobal.wd3.myworkdayjobs.com/fk_careers_de/job/Bad-Hersfeld/Design-Quality-Professional--m-w-d---befristet-bis-31032029_R-01030219-2",
+  "board": null,
+  "employer": {
+   "url": "https://freseniusglobal.wd3.myworkdayjobs.com/fk_careers_de/job/Bad-Hersfeld/Design-Quality-Professional--m-w-d---befristet-bis-31032029_R-01030219-2",
+   "status": 200,
+   "shot": "data/shots/55d71c24adf647aa.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://freseniusglobal.wd3.myworkdayjobs.com/fk_careers_de/job/Bad-Hersfeld/Design-Quality-Professional--m-w-d---befristet-bis-31032029_R-01030219-2",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:47"
+ },
+ "9aeea0ff492344ab": {
+  "id": "9aeea0ff492344ab",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://humanoids.homerun.co/senior-ux-ui-designer-4",
+  "board": null,
+  "employer": {
+   "url": "https://humanoids.homerun.co/senior-ux-ui-designer-4",
+   "status": 200,
+   "shot": "data/shots/9aeea0ff492344ab.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://humanoids.homerun.co/senior-ux-ui-designer-4",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:53"
+ },
+ "81feb0a7ee8745f9": {
+  "id": "81feb0a7ee8745f9",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ig.wd103.myworkdayjobs.com/ext_ig/job/Raffles-Place---Singapore/Head-of-Product---Design--APAC_R_17714",
+  "board": null,
+  "employer": {
+   "url": "https://ig.wd103.myworkdayjobs.com/ext_ig/job/Raffles-Place---Singapore/Head-of-Product---Design--APAC_R_17714",
+   "status": 200,
+   "shot": "data/shots/81feb0a7ee8745f9.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ig.wd103.myworkdayjobs.com/ext_ig/job/Raffles-Place---Singapore/Head-of-Product---Design--APAC_R_17714",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:49"
+ },
+ "6812964479a4495f": {
+  "id": "6812964479a4495f",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4593882",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4593882",
+   "status": 200,
+   "shot": "data/shots/6812964479a4495f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4593882",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:50"
+ },
+ "56e844b32eb648e1": {
+  "id": "56e844b32eb648e1",
+  "at": "2026-11-02T23:56:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://salzburgglobalseminar.recruitee.com/o/content-designer-and-creator",
+  "board": null,
+  "employer": {
+   "url": "https://salzburgglobalseminar.recruitee.com/o/content-designer-and-creator",
+   "status": 200,
+   "shot": "data/shots/56e844b32eb648e1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://salzburgglobalseminar.recruitee.com/o/content-designer-and-creator",
+  "fetched_at": "2026-11-02T23:26:50",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "On-site Salzburg, Salzburg, Austria",
+  "place_signals": [
+   {
+    "quote": "On-site Salzburg, Salzburg, Austria",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The position is based at Schloss Leopoldskron, home of Salzburg Global in Salzburg, Austria.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Modest relocation package will be offered for candidates outside of Salzburg.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The position is based at Schloss Leopoldskron, home of Salzburg Global in Salzburg, Austria.",
+  "reason": "This is a content creation role (photo, video, graphics, social media) that is mostly marketing and brand content rather than product design, and it is onsite in Salzburg, Austria.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Content Designer and Creator",
+   "company": "Salzburg Global Seminar",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Austria"
+   ],
+   "portugal_ok": "no",
+   "salary": "€28,364 - €37,511 per year",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "1ddc0ec086274a97": {
+  "id": "1ddc0ec086274a97",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4279055",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4279055",
+   "status": 200,
+   "shot": "data/shots/1ddc0ec086274a97.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4279055",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:51"
+ },
+ "315f08e5097549bc": {
+  "id": "315f08e5097549bc",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4630178",
+  "board": null,
+  "employer": {
+   "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4630178",
+   "status": 200,
+   "shot": "data/shots/315f08e5097549bc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4630178",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:26:52"
+ },
+ "17ff8b4600704b08": {
+  "id": "17ff8b4600704b08",
+  "at": "2026-11-02T23:56:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://ejko.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/cx_3/job/15127",
+  "board": null,
+  "employer": {
+   "url": "https://ejko.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3/job/15127",
+   "status": 200,
+   "shot": "data/shots/17ff8b4600704b08.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://ejko.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/cx_3/job/15127",
+  "fed": true,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-02T23:27:23"
  }
 }
