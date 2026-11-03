@@ -3981,6 +3981,36 @@ def agg_lucentive():
 AGGREGATORS.update({"lucentive": agg_lucentive})
 
 
+def agg_eurotoptech():
+    """eurotoptech.com: about 18,000 roles at Europe's top tech companies, one page each, all in
+    its sitemap. The slug is title-company-city-id, so only design slugs are opened; the page
+    carries the role as data (title, company, city, country, workplace, posted date, the text).
+    Its apply link is the LinkedIn posting. (From his LinkedIn feed, 2026-11-03.)"""
+    sm = get_text("https://www.eurotoptech.com/sitemap.xml")
+    for url in dict.fromkeys(re.findall(r"<loc>(https://www\.eurotoptech\.com/jobs/preview/[a-z0-9-]+)</loc>", sm)):
+        slug = url.rsplit("/", 1)[1]
+        if _l1(re.sub(r"-\d+$", "", slug).replace("-", " ")) is not None:
+            continue
+        try:
+            html = get_text(url)
+        except Exception:
+            continue
+        flat = html.replace('\\"', '"')
+        f = lambda k: (re.search(r'"' + k + r'":"\$?D?([^"]*)"', flat) or [None, ""])[1]
+        ld = re.search(r'"@type":"JobPosting","title":"([^"]+)"', flat)
+        title = unescape(ld.group(1)) if ld else slug.replace("-", " ")
+        text = strip_html(html)
+        where = ", ".join(x for x in (f("city"), f("country")) if x)
+        yield {"company": f("company") or "", "title": title, "url": url, "apply_url": f("applyUrl") or None,
+               "location": where + (f" ({f('workplaceType')})" if f("workplaceType") else ""),
+               "remote": True if f("workplaceType").lower() == "remote" else None,
+               "posted": f("postedDate")[:10] or None, "jd_text": text}
+        time.sleep(.3)
+
+
+AGGREGATORS.update({"eurotoptech": agg_eurotoptech})
+
+
 SKIP = set()          # sources deliberately not scraped this run
 
 
