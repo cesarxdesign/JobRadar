@@ -1635500,16 +1635500,16 @@
  },
  "ee2ad8b343d143a7": {
   "id": "ee2ad8b343d143a7",
-  "at": "2026-11-03T08:24:56",
+  "at": "2026-11-03T08:51:29",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://synera.recruitee.com/o/senior-uiux-designer-fmd-remote-in-germany",
   "board": null,
   "employer": {
-   "url": "https://synera.recruitee.com/o/senior-uiux-designer-fmd-remote-in-germany",
+   "url": "chrome-error://chromewebdata/",
    "status": null,
-   "shot": null,
-   "error": "TimeoutError: Page.navigate"
+   "shot": "data/shots/ee2ad8b343d143a7.jpg",
+   "error": null
   },
   "found_by": null,
   "looked": [],
@@ -1635520,7 +1635520,7 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "a1391a357a9d457c": {
   "id": "a1391a357a9d457c",
@@ -1635657,7 +1635657,7 @@
  },
  "40b430bf8d9347a1": {
   "id": "40b430bf8d9347a1",
-  "at": "2026-11-03T08:24:56",
+  "at": "2026-11-03T08:51:02",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.teksystems.com/us/en/job/JP-006377763/Sr-UX-Designer",
@@ -1635705,7 +1635705,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "2b1e74eac9ac415e": {
   "id": "2b1e74eac9ac415e",
@@ -1644271,7 +1644271,7 @@
  },
  "74af19de38964a3e": {
   "id": "74af19de38964a3e",
-  "at": "2026-11-03T08:26:59",
+  "at": "2026-11-03T08:51:02",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=2ff3b597-ca38-4d81-ab0f-0742a4eefc24&jobId=608148&lang=en_US",
@@ -1644300,11 +1644300,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description; the title (Store Manager for Furniture Sales) is a retail store management role, not design.",
+  "reason": "Page shows only a cookie banner with no job description; the title (Store Manager for Furniture Sales) is a retail store role, not a design job.",
   "confidence": "medium",
   "inferred": [
    "role_verdict judged from title alone",
-   "language assumed from title and page text"
+   "posting_open set to unreadable because only a cookie notice is visible"
   ],
   "fields": {
    "role": "Store Manager for Furniture Sales + Design/Home-Style Specialist",
@@ -1644322,7 +1644322,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "68c69824df994dd6": {
   "id": "68c69824df994dd6",
@@ -1646308,7 +1646308,7 @@
  },
  "4d1bc85b379f4f5a": {
   "id": "4d1bc85b379f4f5a",
-  "at": "2026-11-03T08:27:32",
+  "at": "2026-11-03T08:51:05",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-4847521136925213083?ckey=UX+designer&rgn=-1&pos=9&groupId=1075&elckey=-2947816532472510145&p=1&aq=3762882333462100115&cid=12006&jobAge=42&brelb=100&bscr=105.33343&scr=105.33343",
@@ -1646328,11 +1646328,11 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "cb722ac21d4543e7": {
   "id": "cb722ac21d4543e7",
-  "at": "2026-11-03T08:27:34",
+  "at": "2026-11-03T08:51:08",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/3255913257466366293?ckey=UX+designer&rgn=-1&pos=59&groupId=1075&elckey=6845454431354775350&p=3&aq=-4020709367531804460&cid=12006&jobAge=92&brelb=100&bscr=84.727646&scr=84.727646",
@@ -1646352,7 +1646352,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "3167da4f67a340f3": {
   "id": "3167da4f67a340f3",
@@ -1646457,7 +1646457,7 @@
  },
  "20a2c6e48ffd4e8f": {
   "id": "20a2c6e48ffd4e8f",
-  "at": "2026-11-03T08:27:32",
+  "at": "2026-11-03T08:51:06",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://apply.careers.microsoft.com/careers/job/1970393557045560",
@@ -1646477,18 +1646477,21 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Single Position View All Jobs Use AI to find out how well you match with this job Upload resume Job description Company and benefits",
+  "open_quote": "Job description",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "unclear",
+  "role_verdict": "no",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only the site shell and section headings with no job description text, so the posting cannot be read.",
+  "reason": "The page shows only the title and navigation with no job description, and the title is a manufacturing engineering role, not design.",
   "confidence": "medium",
-  "inferred": [],
+  "inferred": [
+   "role_verdict judged from title alone: Manufacturing Engineer (NPI) is engineering, not product/UX design",
+   "posting_open set to unreadable because the description body is missing (empty shell)"
+  ],
   "fields": {
    "role": "Senior Manufacturing Engineer--NPI Design",
    "company": "Microsoft",
@@ -1646505,7 +1646508,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "c6406133233a4d65": {
   "id": "c6406133233a4d65",
@@ -1648844,7 +1648847,7 @@
  },
  "c2692e1020d14868": {
   "id": "c2692e1020d14868",
-  "at": "2026-11-03T08:28:06",
+  "at": "2026-11-03T08:51:07",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://content.red-badger.com/all-jobs?gh_jid=8044098003",
@@ -1648873,7 +1648876,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a generic Red Badger careers page with no job description for the Senior UX Designer role, so it is not a single readable posting.",
+  "reason": "The page is a generic Red Badger careers landing page with no job description, so it is not a single job posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1648892,7 +1648895,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "37adac3a005747be": {
   "id": "37adac3a005747be",
@@ -1650140,13 +1650143,13 @@
  },
  "5e91e7fc2a434571": {
   "id": "5e91e7fc2a434571",
-  "at": "2026-11-03T08:28:38",
+  "at": "2026-11-03T08:51:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.cv-library.co.uk/job/225765278/Service-Designer?s=106923",
   "board": {
-   "url": "https://www.cv-library.co.uk/job/225765278/Service-Designer?s=106923",
-   "status": 403,
+   "url": "https://www.cv-library.co.uk/job/225765278/service-designer?s=106923",
+   "status": 200,
    "shot": "data/shots/5e91e7fc2a434571.jpg",
    "error": null
   },
@@ -1650154,13 +1650157,70 @@
   "found_by": null,
   "looked": [],
   "read": "board",
-  "read_url": "https://www.cv-library.co.uk/job/225765278/Service-Designer?s=106923",
-  "lane": "unsure",
-  "posting_open": "unreadable",
-  "stage": "render",
-  "open_quote": "Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a0172bc08464f 46.102.17.26 PT",
-  "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "read_url": "https://www.cv-library.co.uk/job/225765278/service-designer?s=106923",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "a major Central Government organisation (unnamed)",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "London",
+  "place_signals": [
+   {
+    "quote": "London",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: Remote",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Clearance: SC Clearance",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Strong and recent experience delivering GDS-aligned Service Design within UK Government or the wider public sector.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: Remote ... Clearance: SC Clearance",
+  "reason": "Service design role is remote with no stated geography, but UK Government work needing SC clearance and London tag make eligibility from Portugal doubtful.",
+  "confidence": "medium",
+  "inferred": [
+   "SC clearance typically requires UK residency history, which is not stated on the page",
+   "posted_by agency inferred from TXP being a recruiter supporting an unnamed government client"
+  ],
+  "fields": {
+   "role": "Service Designer",
+   "company": "TXP",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "Up to £569 per day (Inside IR35)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "26th Oct"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
  },
  "0336f90b849a4864": {
   "id": "0336f90b849a4864",
@@ -1653632,7 +1653692,7 @@
  },
  "c014b74a24e2495e": {
   "id": "c014b74a24e2495e",
-  "at": "2026-11-03T08:29:53",
+  "at": "2026-11-03T08:51:49",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-1218753107499923789?ckey=UX+designer&rgn=-1&pos=74&groupId=1075&elckey=6322958607402690635&p=4&aq=8964841209497550966&cid=12006&jobAge=40&brelb=100&bscr=79.42938&scr=79.42938",
@@ -1653652,7 +1653712,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "34a6cf72977642cd": {
   "id": "34a6cf72977642cd",
@@ -1655113,7 +1655173,7 @@
  },
  "b443cbf3613c44e7": {
   "id": "b443cbf3613c44e7",
-  "at": "2026-11-03T08:30:24",
+  "at": "2026-11-03T08:51:49",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-lmi.icims.com/jobs/14750/ui-ux-designer---clearance-required/job",
@@ -1655133,7 +1655193,7 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Skip Branding SKIP TO MAIN CONTENT",
+  "open_quote": "Skip Branding SKIP TO MAIN CONTENT U.S. Army Expands LMI-Built Training System to Serve up to 2M Enterprise-Wide",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1655142,11 +1655202,9 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer with no job description, so the posting content is an empty shell; title suggests UI/UX but clearance requirement implies US.",
-  "confidence": "medium",
-  "inferred": [
-   "Role judged from title only, but verdicts set to unclear because the page is an empty shell"
-  ],
+  "reason": "The page shows only site navigation and a press banner with no job description, so the posting cannot be read.",
+  "confidence": "high",
+  "inferred": [],
   "fields": {
    "role": "UI/UX Designer - Clearance Required",
    "company": "LMI",
@@ -1655157,14 +1655215,13 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reason": null,
    "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "2f41338a581741e7": {
   "id": "2f41338a581741e7",

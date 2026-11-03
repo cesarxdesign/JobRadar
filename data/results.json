@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-02T23:21:36+00:00",
- "built_at": "2026-11-03T08:50+00:00",
+ "built_at": "2026-11-03T08:56+00:00",
  "run_id": "2026-11-02T23:21:36+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-02T23:21:36+00:00",
@@ -14,9 +14,9 @@
   "ghosts": 0,
   "cut": 33,
   "closed": 591,
-  "vision_cut": 16285,
+  "vision_cut": 16295,
   "agency": 0,
-  "not_read": 16,
+  "not_read": 6,
   "folded": 147,
   "vision_read": 27316,
   "title_cuts": 42691,
@@ -16639,6 +16639,7 @@
   "48a20b57ff294319",
   "9526cce638e94179",
   "e5c05ec9637e4e72",
+  "74af19de38964a3e",
   "d07bb4633f744cca",
   "ca1ea8c75f5c49a5",
   "4ab507d20f7f4f52",
@@ -16866,6 +16867,9 @@
   "0902cf187b8b455d",
   "27fb827f4f054350",
   "3167da4f67a340f3",
+  "4d1bc85b379f4f5a",
+  "cb722ac21d4543e7",
+  "c014b74a24e2495e",
   "75568989b72a4a22",
   "fc92c4c3835645b1",
   "77caffb1f2db4510",
@@ -16930,6 +16934,7 @@
   "410f0b9fb05c4544",
   "5f7495716dd84d34",
   "f728b59ea2714399",
+  "20a2c6e48ffd4e8f",
   "c6406133233a4d65",
   "2d57aa8834874c6c",
   "8a7aebd4cc554b10",
@@ -17217,12 +17222,14 @@
   "10c5b2f2f7fe4718",
   "f7d03e7eddd542d7",
   "9b27d4ede7b448cd",
+  "ee2ad8b343d143a7",
   "3e6c0d121c22486f",
   "94913a76def34238",
   "188c72f7a6d74d15",
   "7df5ea0d0fc64605",
   "e88d210c23694336",
   "a1391a357a9d457c",
+  "40b430bf8d9347a1",
   "a3fab37d1f8047b5",
   "e09cbc012a7d45d6",
   "7a8452268fa04d2e",
@@ -17239,6 +17246,7 @@
   "a438b956c55b466d",
   "04f6f2a2a913431a",
   "11282944a8a04443",
+  "c2692e1020d14868",
   "287e4e0bd36b42f5",
   "e9591361da6649d5",
   "ceeb8fc0937d42de",
@@ -17258,6 +17266,7 @@
   "6dd174ad39134efb",
   "3c286ecc2599435f",
   "2f41338a581741e7",
+  "b443cbf3613c44e7",
   "0559d4813d3546cf",
   "733c8e30bee54027",
   "2790410111b541a0",
@@ -17384,6 +17393,7 @@
   "50c0cc532c2c46e7",
   "dc7c27b797ab4be0",
   "b42e65dd624f439c",
+  "5e91e7fc2a434571",
   "3ea58c0cfc3b4e27",
   "89a6b55a35364117",
   "492581d7d0bd4d77",
@@ -17682,19 +17692,9 @@
  "unread": [
   "2dc6c294a7774ee7",
   "cc7fb0a126a3418c",
-  "74af19de38964a3e",
-  "4d1bc85b379f4f5a",
-  "cb722ac21d4543e7",
-  "c014b74a24e2495e",
   "623cb47c35184a05",
   "2f0aa3bc0dd04c7a",
-  "20a2c6e48ffd4e8f",
   "25cf19db967f47a8",
-  "ee2ad8b343d143a7",
-  "40b430bf8d9347a1",
-  "c2692e1020d14868",
-  "b443cbf3613c44e7",
-  "5e91e7fc2a434571",
   "6701b63c4eff477a"
  ],
  "sources": {
@@ -1208152,10 +1208152,10 @@
    "verdict": {
     "role": "no",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a cookie banner with no job description; the title (Store Manager for Furniture Sales) is a retail store management role, not design.",
+     "Page shows only a cookie banner with no job description; the title (Store Manager for Furniture Sales) is a retail store role, not a design job.",
      "the page says: \"Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.\""
     ],
     "judged": true,
@@ -1208178,11 +1208178,11 @@
     },
     "inferred": [
      "role_verdict judged from title alone",
-     "language assumed from title and page text"
+     "posting_open set to unreadable because only a cookie notice is visible"
     ],
     "read": "employer",
     "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=2ff3b597-ca38-4d81-ab0f-0742a4eefc24&jobId=608148&lang=en_US",
-    "reason": "The page shows only a cookie banner with no job description; the title (Store Manager for Furniture Sales) is a retail store management role, not design.",
+    "reason": "the page would not open on two runs · Page shows only a cookie banner with no job description; the title (Store Manager for Furniture Sales) is a retail store role, not a design job.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1208191,7 +1208191,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/74af19de38964a3e.jpg",
-    "read_at": "2026-11-03T08:26:59",
+    "read_at": "2026-11-03T08:51:02",
     "evidence": {
      "employer_posted": "2026-10-26"
     }
@@ -1226673,8 +1226673,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1226687,7 +1226687,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-4847521136925213083?ckey=UX+designer&rgn=-1&pos=9&groupId=1075&elckey=-2947816532472510145&p=1&aq=3762882333462100115&cid=12006&jobAge=42&brelb=100&bscr=105.33343&scr=105.33343",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1226696,7 +1226696,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4d1bc85b379f4f5a.jpg",
-    "read_at": "2026-11-03T08:27:32",
+    "read_at": "2026-11-03T08:51:05",
     "evidence": {
      "board_posted": "2026-10-26",
      "employer_board": {
@@ -1226738,8 +1226738,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1226752,7 +1226752,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/3255913257466366293?ckey=UX+designer&rgn=-1&pos=59&groupId=1075&elckey=6845454431354775350&p=3&aq=-4020709367531804460&cid=12006&jobAge=92&brelb=100&bscr=84.727646&scr=84.727646",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1226761,7 +1226761,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/cb722ac21d4543e7.jpg",
-    "read_at": "2026-11-03T08:27:34",
+    "read_at": "2026-11-03T08:51:08",
     "evidence": {
      "board_posted": "2026-10-26"
     }
@@ -1226789,8 +1226789,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1226803,7 +1226803,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-1218753107499923789?ckey=UX+designer&rgn=-1&pos=74&groupId=1075&elckey=6322958607402690635&p=4&aq=8964841209497550966&cid=12006&jobAge=40&brelb=100&bscr=79.42938&scr=79.42938",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1226812,7 +1226812,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c014b74a24e2495e.jpg",
-    "read_at": "2026-11-03T08:29:53",
+    "read_at": "2026-11-03T08:51:49",
     "evidence": {
      "board_posted": "2026-10-24",
      "employer_board": {
@@ -1232569,13 +1232569,13 @@
    "url": "https://apply.careers.microsoft.com/careers/job/1970393557045560",
    "workplace": "on_site",
    "verdict": {
-    "role": "unclear",
+    "role": "no",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only the site shell and section headings with no job description text, so the posting cannot be read.",
-     "the page says: \"Single Position View All Jobs Use AI to find out how well you match with this job Upload resume Job description Company and benefits\""
+     "The page shows only the title and navigation with no job description, and the title is a manufacturing engineering role, not design.",
+     "the page says: \"Job description\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1232595,10 +1232595,13 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "role_verdict judged from title alone: Manufacturing Engineer (NPI) is engineering, not product/UX design",
+     "posting_open set to unreadable because the description body is missing (empty shell)"
+    ],
     "read": "board",
     "read_url": "https://apply.careers.microsoft.com/careers/job/1970393557045560",
-    "reason": "The page shows only the site shell and section headings with no job description text, so the posting cannot be read.",
+    "reason": "the page would not open on two runs · The page shows only the title and navigation with no job description, and the title is a manufacturing engineering role, not design.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1232607,7 +1232610,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/20a2c6e48ffd4e8f.jpg",
-    "read_at": "2026-11-03T08:27:32",
+    "read_at": "2026-11-03T08:51:06",
     "evidence": {
      "board_posted": "2026-10-26"
     }
@@ -1255655,8 +1255658,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1255668,7 +1255671,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1255676,8 +1255679,8 @@
     "signals": [],
     "if_employer": null,
     "found_by": null,
-    "shot": null,
-    "read_at": "2026-11-03T08:24:56",
+    "shot": "data/shots/ee2ad8b343d143a7.jpg",
+    "read_at": "2026-11-03T08:51:29",
     "evidence": {
      "board_posted": "2026-10-27",
      "employer_board": {
@@ -1256104,8 +1256107,8 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "The page shows only site navigation and footer text with no job description, so it is an empty shell rather than a readable posting.",
      "the page says: \"Get personalized tech job recommendations based on your skills and experience.\""
@@ -1256131,7 +1256134,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://careers.teksystems.com/us/en/job/JP-006377763/Sr-UX-Designer",
-    "reason": "The page shows only site navigation and footer text with no job description, so it is an empty shell rather than a readable posting.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and footer text with no job description, so it is an empty shell rather than a readable posting.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1256140,7 +1256143,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/40b430bf8d9347a1.jpg",
-    "read_at": "2026-11-03T08:24:56",
+    "read_at": "2026-11-03T08:51:02",
     "evidence": {
      "board_posted": "2026-10-27"
     }
@@ -1257417,10 +1257420,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a generic Red Badger careers page with no job description for the Senior UX Designer role, so it is not a single readable posting.",
+     "The page is a generic Red Badger careers landing page with no job description, so it is not a single job posting.",
      "the page says: \"Join Red Badger\""
     ],
     "judged": true,
@@ -1257444,7 +1257447,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://content.red-badger.com/all-jobs?gh_jid=8044098003",
-    "reason": "The page is a generic Red Badger careers page with no job description for the Senior UX Designer role, so it is not a single readable posting.",
+    "reason": "the page would not open on two runs · The page is a generic Red Badger careers landing page with no job description, so it is not a single job posting.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1257453,7 +1257456,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c2692e1020d14868.jpg",
-    "read_at": "2026-11-03T08:28:06",
+    "read_at": "2026-11-03T08:51:07",
     "evidence": {
      "board_posted": "2026-10-26"
     }
@@ -1258782,16 +1258785,16 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation and footer with no job description, so the posting content is an empty shell; title suggests UI/UX but clearance requirement implies US.",
-     "the page says: \"Skip Branding SKIP TO MAIN CONTENT\""
+     "The page shows only site navigation and a press banner with no job description, so the posting cannot be read.",
+     "the page says: \"Skip Branding SKIP TO MAIN CONTENT U.S. Army Expands LMI-Built Training System to Serve up to 2M Enterprise-Wide\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "UI/UX Designer - Clearance Required",
      "company": "LMI",
@@ -1258802,17 +1258805,14 @@
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
-     "reason": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "Role judged from title only, but verdicts set to unclear because the page is an empty shell"
-    ],
+    "inferred": [],
     "read": "employer",
     "read_url": "https://careers-lmi.icims.com/jobs/14750/ui-ux-designer---clearance-required/job",
-    "reason": "The page shows only site navigation and footer with no job description, so the posting content is an empty shell; title suggests UI/UX but clearance requirement implies US.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and a press banner with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1258821,7 +1258821,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b443cbf3613c44e7.jpg",
-    "read_at": "2026-11-03T08:30:24",
+    "read_at": "2026-11-03T08:51:49",
     "evidence": {
      "board_posted": "2026-10-24"
     }
@@ -1273056,35 +1273056,68 @@
    "url": "https://www.cv-library.co.uk/job/225765278/Service-Designer?s=106923",
    "workplace": "On-site",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a0172bc08464f 46.102.17.26 PT\""
+     "Service design role is remote with no stated geography, but UK Government work needing SC clearance and London tag make eligibility from Portugal doubtful.",
+     "Portugal OUT · under the title: \"London\"",
+     "Portugal OUT · opening paragraph: \"Clearance: SC Clearance\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
-    "inferred": [],
+    "confidence": "medium",
+    "fields": {
+     "role": "Service Designer",
+     "company": "TXP",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "unclear",
+     "salary": "Up to £569 per day (Inside IR35)",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": "26th Oct"
+    },
+    "inferred": [
+     "SC clearance typically requires UK residency history, which is not stated on the page",
+     "posted_by agency inferred from TXP being a recruiter supporting an unnamed government client"
+    ],
     "read": "board",
-    "read_url": "https://www.cv-library.co.uk/job/225765278/Service-Designer?s=106923",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "read_url": "https://www.cv-library.co.uk/job/225765278/service-designer?s=106923",
+    "reason": "Service design role is remote with no stated geography, but UK Government work needing SC clearance and London tag make eligibility from Portugal doubtful.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote ... Clearance: SC Clearance",
+    "signals": [
+     {
+      "quote": "London",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Clearance: SC Clearance",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5e91e7fc2a434571.jpg",
-    "read_at": "2026-11-03T08:28:38",
+    "read_at": "2026-11-03T08:51:28",
     "evidence": {
      "board_posted": "2026-10-26"
-    }
+    },
+    "hiring_for": "a major Central Government organisation (unnamed)"
    }
   },
   {
