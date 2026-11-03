@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-02T23:21:36+00:00",
- "built_at": "2026-11-03T09:42+00:00",
+ "built_at": "2026-11-03T09:43+00:00",
  "run_id": "2026-11-02T23:21:36+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-02T23:21:36+00:00",
@@ -13,10 +13,10 @@
   "unsure": 218,
   "ghosts": 0,
   "cut": 27,
-  "closed": 624,
-  "vision_cut": 17347,
+  "closed": 625,
+  "vision_cut": 17366,
   "agency": 0,
-  "not_read": 46,
+  "not_read": 26,
   "folded": 165,
   "vision_read": 28493,
   "title_cuts": 42690,
@@ -1388,6 +1388,7 @@
   "b26d9d68afa9496e",
   "84a1f297b1cf4b6e",
   "b0df690a00dc4d11",
+  "08577b63c7724e21",
   "e12b76aba53f4fec",
   "1f501ccb27504935",
   "fad4644b8f4a4804",
@@ -14728,6 +14729,7 @@
   "537457b638da4205",
   "6ba0677360784fd3",
   "fe0e4ba6d9ef4b4f",
+  "68e1415e17af485f",
   "4b09c3ab41d44bd9",
   "27645023261c435e",
   "10f0ef64e7484671",
@@ -17210,6 +17212,7 @@
   "9526cce638e94179",
   "e5c05ec9637e4e72",
   "74af19de38964a3e",
+  "db4adefd9bb244e3",
   "d07bb4633f744cca",
   "ca1ea8c75f5c49a5",
   "4ab507d20f7f4f52",
@@ -17501,8 +17504,13 @@
   "75568989b72a4a22",
   "623cb47c35184a05",
   "cae54ad5856d4440",
+  "c1b314d96a0f47bb",
+  "bb808006d7bd4b8a",
+  "c3c1e71af1cb47fa",
   "119d2ff5dae34a18",
   "22a0f93424b84522",
+  "f35a7322f6d443c4",
+  "536bce1561be4991",
   "9b50104226684f9e",
   "d7e29d11c5714334",
   "3176811d4ac64da4",
@@ -17669,6 +17677,7 @@
   "620f3d0f424740b5",
   "c6c095828ca1475b",
   "133ab783ed824a47",
+  "69b61c581463480b",
   "1d334a363da241aa",
   "33b9d89765a94541",
   "51a1ebdc3a204e8b",
@@ -18076,6 +18085,7 @@
   "ab8804f086d64d26",
   "279cd8416ad74dc8",
   "dcf4eadfa0124c48",
+  "d6c3e331def64dea",
   "fe86ad4bcb6c4977",
   "45462ecd287140a7",
   "be6ac9f37c484b26",
@@ -18086,6 +18096,7 @@
   "02ec870a262248a0",
   "10d2913f42804cca",
   "2b5976d212a44ffe",
+  "97acf866f94646c2",
   "c64094eccbd5407c",
   "c31d81f0acee4eb0",
   "02e0b2129cdb440b",
@@ -18114,6 +18125,7 @@
   "96a44c5a4e70443d",
   "7957eb8f6484405b",
   "18499468b7334b83",
+  "fb4f9ed37a0349a3",
   "345136c83d184023",
   "008ead4c09d641cd",
   "a119d44ae56c4260",
@@ -18273,6 +18285,7 @@
   "a57c1b98d9104686",
   "18a7515833ed4ca2",
   "12c34b8935ba44d9",
+  "1cced7ae68dc4578",
   "38eaa174870a433b",
   "4ea66a9e3f5a47ae",
   "f04e9347321b4ff9",
@@ -18282,6 +18295,8 @@
   "d188594c5db94366",
   "ee9fa479a75b44c3",
   "29bb4f1ffaa14d03",
+  "9d046d2994fb4b0f",
+  "265dd60573ed4b8b",
   "b79319235e064dcb",
   "0e88fc3576a54fea",
   "09e8bc5d126747b3",
@@ -18328,6 +18343,9 @@
   "5e91e7fc2a434571",
   "f6e7620db4044c20",
   "f40085096a21428a",
+  "319366fb7ead4696",
+  "5fd0b73f67874d50",
+  "a6d7e3a9972040a7",
   "3ea58c0cfc3b4e27",
   "89a6b55a35364117",
   "492581d7d0bd4d77",
@@ -18352,6 +18370,7 @@
   "68239ef2b3ce4d83",
   "1f06168e261d4c07",
   "ee18a0f0a1ba4e49",
+  "9175438167d3425a",
   "b52f8ae5691e4f75",
   "468a45760d904bcb",
   "9fe8ddb22812429c",
@@ -18725,6 +18744,7 @@
   "032b15ae7cbf41ac",
   "97ab34d2ec3b4b35",
   "555e259eaeb44d22",
+  "e66b0e0aded84ac6",
   "6b8d6b7e8a3f4145",
   "9448416219a14f7a",
   "adb1b0f214be4fe7",
@@ -18798,20 +18818,14 @@
   "063ea06755a8422c",
   "6fc2d25aedd04689",
   "c108baa2476b4c24",
-  "beacd9eef8344b03"
+  "beacd9eef8344b03",
+  "74945c811086452a",
+  "94913a76def34238"
  ],
  "unread": [
   "2dc6c294a7774ee7",
   "cc7fb0a126a3418c",
-  "68e1415e17af485f",
-  "db4adefd9bb244e3",
-  "c1b314d96a0f47bb",
-  "bb808006d7bd4b8a",
-  "c3c1e71af1cb47fa",
-  "f35a7322f6d443c4",
-  "536bce1561be4991",
   "cdbbb4dcd94a44f0",
-  "69b61c581463480b",
   "b3f5162eb3fc4d8e",
   "5a225a8e4a874576",
   "66c707971d08411e",
@@ -18821,32 +18835,20 @@
   "3c1c8ad96fb34081",
   "e631e564a6154326",
   "10f71dfd1bd64987",
-  "d6c3e331def64dea",
-  "97acf866f94646c2",
   "7a27ebbf1cbe48aa",
   "35eb392f8aa9453f",
   "46e3172d88354163",
-  "08577b63c7724e21",
   "0aeee9646b5048db",
   "6951230398704f31",
   "ddb5240f97b74f86",
   "1ddcfc853f7c4ce3",
-  "fb4f9ed37a0349a3",
   "c8b6f883ef2e4df9",
-  "1cced7ae68dc4578",
-  "9d046d2994fb4b0f",
-  "265dd60573ed4b8b",
-  "319366fb7ead4696",
-  "5fd0b73f67874d50",
-  "a6d7e3a9972040a7",
   "dcc25136637940f3",
   "c4ea83e934b94a2c",
   "b35ee929383b46bf",
   "56e75262102b4eba",
   "b15651e496d14407",
-  "9175438167d3425a",
-  "b9f2374d844e45a3",
-  "e66b0e0aded84ac6"
+  "b9f2374d844e45a3"
  ],
  "sources": {
   "ok": 26840,
@@ -1062206,10 +1062208,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Cvent careers login page with only menu and footer text, no job posting content.",
+     "The page is a Cvent careers login page with navigation only and no job posting content.",
      "the page says: \"Login\""
     ],
     "judged": true,
@@ -1062233,7 +1062235,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://uscareers-cvent.icims.com/jobs/8991/login",
-    "reason": "The page is a Cvent careers login page with only menu and footer text, no job posting content.",
+    "reason": "the page would not open on two runs · The page is a Cvent careers login page with navigation only and no job posting content.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1062242,7 +1062244,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/68e1415e17af485f.jpg",
-    "read_at": "2026-11-03T09:06:11",
+    "read_at": "2026-11-03T09:21:48",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1241592,16 +1241594,16 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
+     "The page shows only a cookie consent banner with no job description, so the posting cannot be read; the title alone (P&ID and Piping Designer) is a process/piping engineering design role, but status is unreadable.",
      "the page says: \"Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "P&ID and Piping Designer",
      "company": "9e11f3d3-6c67-472b-abab-e5460d08e697",
@@ -1241619,7 +1241621,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9e11f3d3-6c67-472b-abab-e5460d08e697&jobId=554336&lang=en_US",
-    "reason": "The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
+    "reason": "the page would not open on two runs · The page shows only a cookie consent banner with no job description, so the posting cannot be read; the title alone (P&ID and Piping Designer) is a process/piping engineering design role, but status is unreadable.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1241628,7 +1241630,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/db4adefd9bb244e3.jpg",
-    "read_at": "2026-11-03T09:14:54",
+    "read_at": "2026-11-03T09:21:51",
     "evidence": {
      "employer_posted": "2026-10-20"
     }
@@ -1266303,8 +1266305,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266317,7 +1266319,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-6316504667218702890?ckey=UX+designer&rgn=-1&pos=51&groupId=1075&elckey=6845454431354775350&p=3&aq=-4020709367531804460&cid=12006&jobAge=188&brelb=100&bscr=84.95024&scr=84.95024",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266326,7 +1266328,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c1b314d96a0f47bb.jpg",
-    "read_at": "2026-11-03T09:02:28",
+    "read_at": "2026-11-03T09:21:19",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1266353,8 +1266355,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266367,7 +1266369,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/8770498185579381181?ckey=UX+designer&rgn=-1&pos=70&groupId=1075&elckey=6845454431354775350&p=4&aq=-7295448912987507070&cid=12006&jobAge=188&brelb=100&bscr=84.51098&scr=84.51098",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266376,7 +1266378,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/bb808006d7bd4b8a.jpg",
-    "read_at": "2026-11-03T09:02:29",
+    "read_at": "2026-11-03T09:21:19",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1266403,8 +1266405,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266417,7 +1266419,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-513961471400230687?ckey=UX+designer&rgn=-1&pos=12&groupId=1075&elckey=6845454431354775350&p=1&aq=-4281334290100560780&cid=12006&jobAge=212&brelb=100&bscr=102.42857&scr=102.42857",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266426,7 +1266428,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c3c1e71af1cb47fa.jpg",
-    "read_at": "2026-11-03T09:08:13",
+    "read_at": "2026-11-03T09:21:22",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1266649,8 +1266651,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266663,7 +1266665,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/3824942177114830890?ckey=UX+designer&rgn=-1&pos=59&groupId=1075&elckey=6417764813443540579&p=3&aq=-2396726538537014954&cid=12006&jobAge=36&brelb=100&bscr=80.153046&scr=80.153046",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266672,7 +1266674,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f35a7322f6d443c4.jpg",
-    "read_at": "2026-11-03T09:15:06",
+    "read_at": "2026-11-03T09:21:40",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1266699,8 +1266701,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266713,7 +1266715,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-7537850345726094615?ckey=UX+designer&rgn=-1&pos=3&groupId=1075&elckey=6417764813443540579&p=1&aq=3723811435019407819&cid=12006&jobAge=36&brelb=100&bscr=104.19895&scr=104.19895",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266722,7 +1266724,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/536bce1561be4991.jpg",
-    "read_at": "2026-11-03T09:15:06",
+    "read_at": "2026-11-03T09:21:41",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1281189,10 +1281191,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a list of Earnix jobs, not a single posting, and no Digital Designer role appears in it.",
+     "The page is a list of Earnix jobs with no Digital Designer posting, so it is not a single job posting.",
      "the page says: \"Come Work With Us\""
     ],
     "judged": true,
@@ -1281216,7 +1281218,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://www.comeet.com/jobs/earnix/93.00B",
-    "reason": "The page is a list of Earnix jobs, not a single posting, and no Digital Designer role appears in it.",
+    "reason": "the page would not open on two runs · The page is a list of Earnix jobs with no Digital Designer posting, so it is not a single job posting.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1281225,7 +1281227,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/69b61c581463480b.jpg",
-    "read_at": "2026-11-03T09:09:54",
+    "read_at": "2026-11-03T09:21:37",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1296267,6 +1296269,16 @@
     "read_at": "2026-11-02T23:30:48",
     "evidence": {
      "board_posted": "2026-10-30"
+    },
+    "audit": {
+     "at": "2026-11-03T09:39:16",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "unclear",
+     "place": null,
+     "reason": "The page shows only site navigation and footer with no job description, so it is not a readable single posting.",
+     "signals": []
     }
    }
   },
@@ -1304361,6 +1304373,16 @@
     "read_at": "2026-11-03T08:24:40",
     "evidence": {
      "board_posted": "2026-10-27"
+    },
+    "audit": {
+     "at": "2026-11-03T09:41:10",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "unclear",
+     "place": null,
+     "reason": "The page shows only site navigation and office addresses, with no job description, so the posting cannot be read.",
+     "signals": []
     }
    }
   },
@@ -1313427,12 +1313449,12 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only the careers site header and footer with no job description, so it is an empty shell and the posting cannot be read.",
-     "the page says: \"45335 Vintage Park Plaza, Sterling, VA 20166\"",
-     "the page says: \"Help Us Help Others\""
+     "The page shows only the site menu, a careers banner and the footer, with no job description, so it is an empty shell. The only place information is the Sterling, Virginia tag in the page title.",
+     "Portugal OUT · under the title: \"Senior UI/UX Designer in Sterling, Virginia\"",
+     "the page says: \"Search Jobs\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1313452,19 +1313474,29 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "posting_open is unreadable because the visible page holds no job content, not because the page says so",
+     "seniority taken from the title in the pool and page title"
+    ],
     "read": "employer",
     "read_url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job?mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
-    "reason": "The page shows only the careers site header and footer with no job description, so it is an empty shell and the posting cannot be read.",
+    "reason": "the page would not open on two runs · The page shows only the site menu, a careers banner and the footer, with no job description, so it is an empty shell. The only place information is the Sterling, Virginia tag in the page title.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "45335 Vintage Park Plaza, Sterling, VA 20166",
-    "signals": [],
+    "quote": "Senior UI/UX Designer in Sterling, Virginia",
+    "signals": [
+     {
+      "quote": "Senior UI/UX Designer in Sterling, Virginia",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d6c3e331def64dea.jpg",
-    "read_at": "2026-11-03T09:10:33",
+    "read_at": "2026-11-03T09:21:38",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1314216,10 +1314248,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation and footer with no job posting content; the job description did not load.",
+     "The page shows only Nextiva site navigation and footer with no job posting or description, so it is an empty shell.",
      "the page says: \"Join the Team - Careers - Nextiva\""
     ],
     "judged": true,
@@ -1314240,13 +1314272,10 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "same_job set to no because the page contains no posting for the listed role, only a generic careers shell",
-     "language assumed English from navigation text"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://www.nextiva.com/company/careers-listing?gh_jid=8888979002",
-    "reason": "The page shows only site navigation and footer with no job posting content; the job description did not load.",
+    "reason": "the page would not open on two runs · The page shows only Nextiva site navigation and footer with no job posting or description, so it is an empty shell.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1314255,7 +1314284,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/97acf866f94646c2.jpg",
-    "read_at": "2026-11-03T09:11:35",
+    "read_at": "2026-11-03T09:22:19",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1315733,21 +1315762,22 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
+    "lane": "closed",
     "cut": false,
     "why": [
-     "the page could not be read in the browser"
+     "the employer says it is closed",
+     "the page says: \"the employer's board no longer has this posting: its link opens the list of open jobs\""
     ],
     "judged": true,
-    "text": "job board's copy",
+    "text": "employer's page",
     "stage": "vision",
     "confidence": null,
     "fields": {},
     "inferred": [],
-    "read": "board",
-    "read_url": null,
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
+    "read": "employer",
+    "read_url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers/job/US---TX-Austin/Product-Designer_R57872",
+    "reason": "the employer says it is closed",
+    "open": "no",
     "language_ok": null,
     "language": null,
     "quote": null,
@@ -1315755,7 +1315785,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/08577b63c7724e21.jpg",
-    "read_at": "2026-11-03T09:16:03",
+    "read_at": "2026-11-03T09:22:08",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1316923,23 +1316953,26 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation and footer with no job description, so it is not a readable single posting.",
+     "The page shows only site navigation and footer with no job description, so it is an empty shell; the only place hint is Noida, India in the page title.",
+     "Portugal OUT · under the title: \"Senior User Exp Design Engineer I in Noida | Careers at Noida, India\"",
      "the page says: \"Skip Branding Explore Us PRODUCTS Amplify Platform B2B Integration\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "Senior User Exp Design Engineer I",
-     "company": "Axway (74Software)",
+     "company": "74Software (Axway)",
      "seniority": "senior",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "India"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -1316948,20 +1316981,28 @@
      "posted": null
     },
     "inferred": [
-     "The page title mentions Noida, India, but the visible text has no description, so no place signal was recorded."
+     "Seniority 'senior' read from the page title",
+     "Company read from the pool listing and Axway/74Software branding"
     ],
     "read": "employer",
     "read_url": "https://careers-axway.icims.com/jobs/8948/senior-user-exp-design-engineer-i/job",
-    "reason": "The page shows only site navigation and footer with no job description, so it is not a readable single posting.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and footer with no job description, so it is an empty shell; the only place hint is Noida, India in the page title.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Senior User Exp Design Engineer I in Noida | Careers at Noida, India",
+    "signals": [
+     {
+      "quote": "Senior User Exp Design Engineer I in Noida | Careers at Noida, India",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/fb4f9ed37a0349a3.jpg",
-    "read_at": "2026-11-03T09:18:51",
+    "read_at": "2026-11-03T09:21:57",
     "evidence": {
      "board_posted": "2026-10-15"
     }
@@ -1332743,12 +1332784,13 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a company career landing page that lists one job title with no description, not a single job posting; the only place line is Malmö, Hybrid.",
+     "The page is a company career landing page with a one-line job listing and no job description, so it is not a readable single posting.",
      "Portugal OUT · under the title: \"Products Solutions · Malmö · Hybrid\"",
-     "the page says: \"Join the team ... Senior UX/UI designer Products Solutions · Malmö · Hybrid All jobs\""
+     "Portugal OUT · side panel: \"Malmö\"",
+     "the page says: \"Job openings ... Join the team ... Senior UX/UI designer Products Solutions · Malmö · Hybrid All jobs\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1332770,12 +1332812,10 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "seniority from the title"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://career.curamet.se/",
-    "reason": "The page is a company career landing page that lists one job title with no description, not a single job posting; the only place line is Malmö, Hybrid.",
+    "reason": "the page would not open on two runs · The page is a company career landing page with a one-line job listing and no job description, so it is not a readable single posting.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1332786,12 +1332826,18 @@
       "where": "under the title",
       "kind": "explicit",
       "says": "portugal_out"
+     },
+     {
+      "quote": "Malmö",
+      "where": "side panel",
+      "kind": "tag",
+      "says": "portugal_out"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1cced7ae68dc4578.jpg",
-    "read_at": "2026-11-03T08:58:06",
+    "read_at": "2026-11-03T09:21:26",
     "evidence": {
      "board_posted": "2026-10-23"
     }
@@ -1333586,12 +1333632,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is only an application start screen with no job description, so the posting cannot be read as a job posting.",
-     "Portugal OUT · footer or small print: \"Stockholm---Solna\"",
-     "the page says: \"Start Your Application\""
+     "The page is only an application start shell with no job description, so open status, role and place cannot be judged.",
+     "the page says: \"Start Your Application Autofill with Resume Apply Manually Use My Last Application\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1333599,7 +1333644,7 @@
     "confidence": "medium",
     "fields": {
      "role": "Systemingenjör inom UX-Design",
-     "company": "SAAB Aktiebolag",
+     "company": "Saab",
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
@@ -1333608,33 +1333653,25 @@
      "salary": null,
      "years_xp": null,
      "reports_to": null,
-     "language": "Swedish",
+     "language": "unknown",
      "posted": null
     },
     "inferred": [
-     "Location Stockholm/Solna taken from the page address, not the page text",
-     "Company Saab taken from the pool listing",
-     "Language inferred from the Swedish title"
+     "Stockholm/Solna location appears only in the URL, not on the page text",
+     "seniority unstated"
     ],
     "read": "board",
     "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46514/apply?source=arbetsformedlingen_v2",
-    "reason": "The page is only an application start screen with no job description, so the posting cannot be read as a job posting.",
+    "reason": "the page would not open on two runs · The page is only an application start shell with no job description, so open status, role and place cannot be judged.",
     "open": "unreadable",
-    "language_ok": false,
-    "language": "Swedish (title only; no description shown)",
-    "quote": "Stockholm---Solna",
-    "signals": [
-     {
-      "quote": "Stockholm---Solna",
-      "where": "footer or small print",
-      "kind": "tag",
-      "says": "portugal_out"
-     }
-    ],
+    "language_ok": true,
+    "language": "unknown (no description; title in Swedish)",
+    "quote": "",
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9d046d2994fb4b0f.jpg",
-    "read_at": "2026-11-03T09:05:08",
+    "read_at": "2026-11-03T09:21:42",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1333659,16 +1333696,17 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is only an application-start shell with a title and no description, so open status, role and place cannot be judged.",
-     "the page says: \"Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application\""
+     "The page is an application start screen with no job description, only a title and a Stockholm-Solna location in the URL.",
+     "Portugal OUT · footer or small print: \"Stockholm---Solna\"",
+     "the page says: \"Start Your Application\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "low",
+    "confidence": "medium",
     "fields": {
      "role": "Systemingenjör inom UX-Design",
      "company": "SAAB Aktiebolag",
@@ -1333680,25 +1333718,33 @@
      "salary": null,
      "years_xp": null,
      "reports_to": null,
-     "language": "unknown",
+     "language": "Swedish",
      "posted": null
     },
     "inferred": [
-     "The URL path says Stockholm---Solna, but the page text itself gives no location, so it is not listed as a place signal.",
-     "language_ok is set true because no description exists to be in another language; the Swedish title alone is not the description."
+     "place signal taken from the URL path, not visible page text",
+     "seniority unknown",
+     "company taken from the pool listing"
     ],
     "read": "board",
     "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46515/apply?source=arbetsformedlingen_v2",
-    "reason": "The page is only an application-start shell with a title and no description, so open status, role and place cannot be judged.",
+    "reason": "the page would not open on two runs · The page is an application start screen with no job description, only a title and a Stockholm-Solna location in the URL.",
     "open": "unreadable",
-    "language_ok": true,
-    "language": "unknown (no description; title in Swedish)",
-    "quote": "",
-    "signals": [],
+    "language_ok": false,
+    "language": "Swedish (title only; no description)",
+    "quote": "Stockholm---Solna",
+    "signals": [
+     {
+      "quote": "Stockholm---Solna",
+      "where": "footer or small print",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/265dd60573ed4b8b.jpg",
-    "read_at": "2026-11-03T09:05:00",
+    "read_at": "2026-11-03T09:21:47",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1339752,35 +1339798,75 @@
    "url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
    "workplace": "On-site",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d22eb2ae3cc 46.102.17.26 PT\""
+     "Design leadership role (yes), but it is hybrid based in Nottingham, UK with no remote option, so it cannot be done from Portugal.",
+     "Portugal OUT · under the title: \"Nottingham, Nottinghamshire\"",
+     "Portugal OUT · opening paragraph: \"Hybrid | Nottingham | £90,000 + Excellent Benefits\"",
+     "Portugal OUT · body: \"Hybrid working from Nottingham\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
-    "inferred": [],
+    "confidence": "high",
+    "fields": {
+     "role": "Head of UX / PX",
+     "company": "Experis",
+     "seniority": "head",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£85,000 - £90,000 per annum bonus + bens",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": "23rd Oct"
+    },
+    "inferred": [
+     "seniority: head, from the title",
+     "hiring_for: not named; the page says only 'an innovative software organisation'"
+    ],
     "read": "board",
-    "read_url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "read_url": "https://www.cv-library.co.uk/job/225759998/head-of-ux-px?s=106923",
+    "reason": "Design leadership role (yes), but it is hybrid based in Nottingham, UK with no remote option, so it cannot be done from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
+    "signals": [
+     {
+      "quote": "Nottingham, Nottinghamshire",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid working from Nottingham",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/319366fb7ead4696.jpg",
-    "read_at": "2026-11-03T08:58:27",
+    "read_at": "2026-11-03T09:21:31",
     "evidence": {
      "board_posted": "2026-10-23"
-    }
+    },
+    "hiring_for": null
    }
   },
   {
@@ -1339802,35 +1339888,75 @@
    "url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
    "workplace": "On-site",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d4de8b1e3cc 46.102.17.26 PT\""
+     "A UX/PX design lead role, but hybrid and based in Nottingham, UK, with no remote option, so it cannot be done from Portugal.",
+     "Portugal OUT · under the title: \"Nottingham, Nottinghamshire\"",
+     "Portugal OUT · opening paragraph: \"Hybrid - Nottingham | £90,000 + Excellent Benefits\"",
+     "Portugal OUT · body: \"Hybrid working based in Nottingham\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
-    "inferred": [],
+    "confidence": "high",
+    "fields": {
+     "role": "UX / PX Design Lead",
+     "company": "Experis",
+     "seniority": "lead",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£85,000 - £90,000 per annum bonus + bens",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": "23rd Oct"
+    },
+    "inferred": [
+     "seniority inferred from 'Lead' title and leadership description",
+     "onsite_days not stated"
+    ],
     "read": "board",
-    "read_url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "read_url": "https://www.cv-library.co.uk/job/225759935/ux-px-design-lead?s=106923",
+    "reason": "A UX/PX design lead role, but hybrid and based in Nottingham, UK, with no remote option, so it cannot be done from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
+    "signals": [
+     {
+      "quote": "Nottingham, Nottinghamshire",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid working based in Nottingham",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5fd0b73f67874d50.jpg",
-    "read_at": "2026-11-03T08:58:34",
+    "read_at": "2026-11-03T09:21:31",
     "evidence": {
      "board_posted": "2026-10-23"
-    }
+    },
+    "hiring_for": "a market-leading software organisation (unnamed)"
    }
   },
   {
@@ -1339853,11 +1339979,11 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
-     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a47eb9de8750d 46.102.17.26 PT\""
+     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a4f780daeb77c 46.102.17.26 PT\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1339867,7 +1339993,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1339876,7 +1340002,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a6d7e3a9972040a7.jpg",
-    "read_at": "2026-11-03T09:16:44",
+    "read_at": "2026-11-03T09:21:53",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1342896,10 +1343022,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting for an employee.",
+     "This is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting.",
      "Portugal in · body: \"Na localização do especialista (máx. 25 km de distância)\"",
      "Portugal in · under the title: \"Design de Impressão - 4910 - Dem - Caminha\"",
      "the page says: \"Detalhes do pedido - ID3970346 - M. M.\""
@@ -1342909,7 +1343035,7 @@
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Design de Impressão",
+     "role": "Design de Impressão - Designer de Impressão / Designers de Impressão",
      "company": "Fixando",
      "seniority": "unstated",
      "remote": "onsite",
@@ -1342925,12 +1343051,12 @@
      "posted": "21.10.2026 - 11:04"
     },
     "inferred": [
-     "posting_open is unreadable because the page is a client service request, not a job posting",
-     "workplace_as_posted is onsite because the work happens at the specialist's location near Caminha"
+     "posting_open set to unreadable because the page is a client service request, not a job posting",
+     "workplace_as_posted inferred as onsite from the within-25-km service location"
     ],
     "read": "board",
     "read_url": "https://www.fixando.pt/partilhar/3970346/procura-Designers-de-Impressao-em-Caminha?ref=xml_feed",
-    "reason": "The page is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting for an employee.",
+    "reason": "the page would not open on two runs · This is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting.",
     "open": "unreadable",
     "language_ok": true,
     "language": "Portuguese",
@@ -1342952,7 +1343078,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9175438167d3425a.jpg",
-    "read_at": "2026-11-03T09:05:12",
+    "read_at": "2026-11-03T09:21:30",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1370055,10 +1370181,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a cookie consent banner with no job description, so it cannot be read as a posting.",
+     "The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
      "the page says: \"Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.\""
     ],
     "judged": true,
@@ -1370075,14 +1370201,13 @@
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
-     "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c4da4d30-6e6e-4dd4-9141-60a5db3b3321&jobId=572000&lang=en_US",
-    "reason": "The page shows only a cookie consent banner with no job description, so it cannot be read as a posting.",
+    "reason": "the page would not open on two runs · The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1370091,7 +1370216,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e66b0e0aded84ac6.jpg",
-    "read_at": "2026-11-03T09:05:46",
+    "read_at": "2026-11-03T09:21:33",
     "evidence": {
      "employer_posted": "2026-10-22"
     }
