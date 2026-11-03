@@ -1707848,7 +1707848,7 @@
  },
  "56e75262102b4eba": {
   "id": "56e75262102b4eba",
-  "at": "2026-11-03T09:17:04",
+  "at": "2026-11-03T11:12:10",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://apply.workable.com/j/578D640188apply/",
@@ -1707876,7 +1707876,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a 429 rate-limit error with no job posting content.",
+  "reason": "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1707895,11 +1707895,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "b9f2374d844e45a3": {
   "id": "b9f2374d844e45a3",
-  "at": "2026-11-03T09:17:05",
+  "at": "2026-11-03T11:12:41",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://apply.workable.com/j/85CB593AF7apply/",
@@ -1707927,7 +1707927,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a rate-limit error (429), not a job posting, so nothing about the role or place can be read.",
+  "reason": "The page is a 429 rate-limit error with no job description, so the posting cannot be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1707940,12 +1707940,13 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
+   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "ad265f701c424011": {
   "id": "ad265f701c424011",
@@ -1709900,7 +1709901,7 @@
  },
  "b15651e496d14407": {
   "id": "b15651e496d14407",
-  "at": "2026-11-03T09:17:59",
+  "at": "2026-11-03T11:13:10",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://apply.workable.com/j/5880FEB888apply/",
@@ -1709915,7 +1709916,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://apply.workable.com/j/5880FEB888apply/",
-  "same_job": "no",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
@@ -1709947,7 +1709948,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "4017af5466994d77": {
   "id": "4017af5466994d77",

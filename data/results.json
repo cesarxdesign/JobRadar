@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-02T23:21:36+00:00",
- "built_at": "2026-11-03T11:11+00:00",
+ "built_at": "2026-11-03T11:35+00:00",
  "run_id": "2026-11-02T23:21:36+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-02T23:21:36+00:00",
@@ -14,9 +14,9 @@
   "ghosts": 0,
   "cut": 27,
   "closed": 624,
-  "vision_cut": 17347,
+  "vision_cut": 17350,
   "agency": 0,
-  "not_read": 46,
+  "not_read": 43,
   "folded": 165,
   "vision_read": 28493,
   "title_cuts": 42690,
@@ -18351,7 +18351,10 @@
   "2ff2412f316b42d5",
   "68239ef2b3ce4d83",
   "1f06168e261d4c07",
+  "56e75262102b4eba",
+  "b15651e496d14407",
   "ee18a0f0a1ba4e49",
+  "b9f2374d844e45a3",
   "b52f8ae5691e4f75",
   "468a45760d904bcb",
   "9fe8ddb22812429c",
@@ -18842,10 +18845,7 @@
   "dcc25136637940f3",
   "c4ea83e934b94a2c",
   "b35ee929383b46bf",
-  "56e75262102b4eba",
-  "b15651e496d14407",
   "9175438167d3425a",
-  "b9f2374d844e45a3",
   "e66b0e0aded84ac6"
  ],
  "sources": {
@@ -1342690,10 +1342690,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error with no job posting content.",
+     "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
      "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
     ],
     "judged": true,
@@ -1342717,7 +1342717,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/j/578D640188apply/",
-    "reason": "The page is a 429 rate-limit error with no job posting content.",
+    "reason": "the page would not open on two runs · The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1342726,7 +1342726,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/56e75262102b4eba.jpg",
-    "read_at": "2026-11-03T09:17:04",
+    "read_at": "2026-11-03T11:12:10",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1342751,8 +1342751,8 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
      "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
@@ -1342778,7 +1342778,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/j/5880FEB888apply/",
-    "reason": "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
+    "reason": "the page would not open on two runs · The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1342787,7 +1342787,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b15651e496d14407.jpg",
-    "read_at": "2026-11-03T09:17:59",
+    "read_at": "2026-11-03T11:13:10",
     "evidence": {
      "board_posted": "2026-10-19"
     }
@@ -1342977,10 +1342977,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a rate-limit error (429), not a job posting, so nothing about the role or place can be read.",
+     "The page is a 429 rate-limit error with no job description, so the posting cannot be read.",
      "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
     ],
     "judged": true,
@@ -1342997,13 +1342997,14 @@
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
+     "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/j/85CB593AF7apply/",
-    "reason": "The page is a rate-limit error (429), not a job posting, so nothing about the role or place can be read.",
+    "reason": "the page would not open on two runs · The page is a 429 rate-limit error with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1343012,7 +1343013,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b9f2374d844e45a3.jpg",
-    "read_at": "2026-11-03T09:17:05",
+    "read_at": "2026-11-03T11:12:41",
     "evidence": {
      "board_posted": "2026-10-20"
     }
