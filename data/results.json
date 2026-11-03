@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-02T23:21:36+00:00",
- "built_at": "2026-11-03T00:29+00:00",
+ "built_at": "2026-11-03T00:37+00:00",
  "run_id": "2026-11-02T23:21:36+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-02T23:21:36+00:00",
@@ -14,15 +14,15 @@
   "ghosts": 0,
   "cut": 33,
   "closed": 570,
-  "vision_cut": 15415,
+  "vision_cut": 15425,
   "agency": 0,
-  "not_read": 10,
+  "not_read": 2,
   "folded": 140,
-  "vision_read": 26354,
+  "vision_read": 26356,
   "title_cuts": 42691,
   "design": 26816,
-  "waiting": 2182,
-  "unjudged": 562543,
+  "waiting": 2180,
+  "unjudged": 562541,
   "age_cuts": 14819,
   "active": 622050,
   "total": 635894
@@ -16197,13 +16197,17 @@
   "4960baa4ef534ec4",
   "a6108b8cfcc944b2",
   "6986e8de66a14ba4",
+  "aeacdd04959648dd",
   "94ddb5b65f734944",
   "c9e295590b2545ef",
   "234f3dcfa15243d1",
   "5773a88cfa954438",
   "1c4385b5b09441f5",
+  "b195b137fe644bd9",
+  "4fb02490ae844874",
   "ceef2e81cd9d466e",
   "2adc3edc136f415d",
+  "14d171b5752b46b5",
   "a669708c3cf44c23",
   "bea67d222d4d418e",
   "e1ce7a1197f54110",
@@ -16308,6 +16312,7 @@
   "f09f74e96c744109",
   "4a3efa1fef4a4ff8",
   "b5727d7d940a4e72",
+  "e75df8e336224839",
   "e6821c6724ee422f",
   "b5b8f54527224f58",
   "a977eccdebb3452f",
@@ -16466,6 +16471,8 @@
   "dc8162fb6ebb43aa",
   "bddeff32bf77435e",
   "a3780dd0538747bb",
+  "c5aaa07239294ca4",
+  "e9229dc491e54bd6",
   "c0a3603f415d4a9c",
   "56358ffb1b814ad3",
   "aea437cdcec14949",
@@ -16482,6 +16489,8 @@
   "b682b593d4eb4743",
   "e8a1b86806094fa8",
   "504faf4bdd6245c4",
+  "e630c98e6d564984",
+  "de5d93b87a4d41ef",
   "4e22b4adf7e345f5",
   "85728c3072ca4f59",
   "6c6aa26f34cf4e7d",
@@ -16571,6 +16580,7 @@
   "5d242f2066694be0",
   "e033761d40894812",
   "1cbfb0619c79481a",
+  "1f06168e261d4c07",
   "5676cca88ecf42e4",
   "424ed835f2e74e9f",
   "81bd5bbacabe4699",
@@ -16732,15 +16742,7 @@
  ],
  "unread": [
   "2dc6c294a7774ee7",
-  "cc7fb0a126a3418c",
-  "aeacdd04959648dd",
-  "b195b137fe644bd9",
-  "4fb02490ae844874",
-  "14d171b5752b46b5",
-  "e75df8e336224839",
-  "c5aaa07239294ca4",
-  "e9229dc491e54bd6",
-  "1f06168e261d4c07"
+  "cc7fb0a126a3418c"
  ],
  "sources": {
   "ok": 26840,
@@ -1186019,10 +1186021,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation and footer with no job description, so it is not a readable posting.",
+     "The page shows only site navigation and footer with no job description, so it is an empty shell and nothing about the role or place can be read.",
      "the page says: \"Find a job Explore companies Resources I'm a recruiter Sign in\""
     ],
     "judged": true,
@@ -1186046,7 +1186048,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/beam-1/jobs/senior-product-designer_london",
-    "reason": "The page shows only site navigation and footer with no job description, so it is not a readable posting.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and footer with no job description, so it is an empty shell and nothing about the role or place can be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1186055,7 +1186057,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/aeacdd04959648dd.jpg",
-    "read_at": "2026-11-03T00:06:45",
+    "read_at": "2026-11-03T00:30:35",
     "evidence": {
      "board_posted": "2026-10-28"
     }
@@ -1186483,11 +1186485,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a consent banner and site navigation/footer, with no job description, so the posting cannot be read.",
-     "the page says: \"Consent Management Platform: Personalize Your Options\""
+     "The page shows only a consent banner and site navigation with no job description, so the posting cannot be read.",
+     "the page says: \"Axeptio consent Consent Management Platform: Personalize Your Options\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1186503,14 +1186505,13 @@
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
-     "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/vendelux/jobs/staff-product-designer_us_uh6hnuef",
-    "reason": "The page shows only a consent banner and site navigation/footer, with no job description, so the posting cannot be read.",
+    "reason": "the page would not open on two runs · The page shows only a consent banner and site navigation with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1186519,7 +1186520,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b195b137fe644bd9.jpg",
-    "read_at": "2026-11-02T23:58:08",
+    "read_at": "2026-11-03T00:30:23",
     "evidence": {
      "board_posted": "2026-10-29",
      "employer_board": {
@@ -1186557,10 +1186558,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a consent banner and site navigation, with no job description, so it is not a readable posting.",
+     "The page shows only a consent banner and site navigation, with no job description, so the posting cannot be read.",
      "the page says: \"Consent Management Platform: Personalize Your Options\""
     ],
     "judged": true,
@@ -1186584,7 +1186585,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/sift/jobs/senior-product-designer_us_v5cbmwrs",
-    "reason": "The page shows only a consent banner and site navigation, with no job description, so it is not a readable posting.",
+    "reason": "the page would not open on two runs · The page shows only a consent banner and site navigation, with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1186593,7 +1186594,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4fb02490ae844874.jpg",
-    "read_at": "2026-11-02T23:58:09",
+    "read_at": "2026-11-03T00:30:23",
     "evidence": {
      "board_posted": "2026-10-29"
     }
@@ -1186747,10 +1186748,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a consent banner and site navigation/footer, with no job description, so the posting cannot be read.",
+     "The page shows only a consent banner, menus and footer with no job description, so the posting cannot be read.",
      "the page says: \"Consent Management Platform: Personalize Your Options\""
     ],
     "judged": true,
@@ -1186774,7 +1186775,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.welcometothejungle.com/en/companies/datasite/jobs/lead-product-designer_new-york_mijyfx4v",
-    "reason": "The page shows only a consent banner and site navigation/footer, with no job description, so the posting cannot be read.",
+    "reason": "the page would not open on two runs · The page shows only a consent banner, menus and footer with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1186783,7 +1186784,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/14d171b5752b46b5.jpg",
-    "read_at": "2026-11-02T23:58:13",
+    "read_at": "2026-11-03T00:30:23",
     "evidence": {
      "board_posted": "2026-10-29"
     }
@@ -1196277,10 +1196278,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a company careers landing page listing job titles with no description for the Product Designer role, so place and role details cannot be read.",
+     "The page is the company careers landing page with a list of jobs and no Product Designer description, so place and role details cannot be read.",
      "the page says: \"Business Development Partner Success Manager Remote (US) Product & Design Product Designer\""
     ],
     "judged": true,
@@ -1196302,12 +1196303,12 @@
      "posted": null
     },
     "inferred": [
-     "role_verdict is unclear rather than yes because only a title in a jobs list is shown, with no posting content",
-     "posting_open unreadable because the page is a careers list, not a single posting"
+     "posting_open set to unreadable because the page is a careers listing, not a single posting",
+     "seniority unstated"
     ],
     "read": "board",
     "read_url": "https://splitpay.com/careers#c0ein5be6u4po92oihpdojffg&",
-    "reason": "The page is a company careers landing page listing job titles with no description for the Product Designer role, so place and role details cannot be read.",
+    "reason": "the page would not open on two runs · The page is the company careers landing page with a list of jobs and no Product Designer description, so place and role details cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1196316,7 +1196317,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e75df8e336224839.jpg",
-    "read_at": "2026-11-02T23:58:26",
+    "read_at": "2026-11-03T00:30:23",
     "evidence": {
      "board_posted": "2026-10-29"
     }
@@ -1208947,11 +1208948,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only the career site menu and company boilerplate with no job description, so the posting itself cannot be read.",
-     "the page says: \"Skip to main content\""
+     "The page shows only site navigation and company boilerplate with no job description, so the posting cannot be read.",
+     "the page says: \"Skip to main content Discover Life Here Career Areas Students & New Grads Candidate Resources Locations Events Global Saved jobs (0)\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1208967,13 +1208968,14 @@
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
+     "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.thermofisher.com/global/en/job/R-01353684/Product-Designer-AI-and-Enterprise-Software-Job-Posting-Title-here",
-    "reason": "The page shows only the career site menu and company boilerplate with no job description, so the posting itself cannot be read.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and company boilerplate with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1208982,7 +1208984,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c5aaa07239294ca4.jpg",
-    "read_at": "2026-11-02T23:59:17",
+    "read_at": "2026-11-03T00:30:27",
     "evidence": {
      "board_posted": "2026-10-29"
     }
@@ -1209006,10 +1209008,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation and footer text with no job description, so it is not a readable single posting.",
+     "The page shows only site navigation and footer text with no job description, so it is an empty shell and the role and place cannot be judged.",
      "the page says: \"Get personalized tech job recommendations based on your skills and experience.\""
     ],
     "judged": true,
@@ -1209033,7 +1209035,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://careers.teksystems.com/us/en/job/JP-006379652/Mobile-UI-Designer",
-    "reason": "The page shows only site navigation and footer text with no job description, so it is not a readable single posting.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and footer text with no job description, so it is an empty shell and the role and place cannot be judged.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1209042,7 +1209044,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e9229dc491e54bd6.jpg",
-    "read_at": "2026-11-02T23:59:21",
+    "read_at": "2026-11-03T00:30:31",
     "evidence": {
      "board_posted": "2026-10-29"
     }
@@ -1210298,6 +1210300,161 @@
      "board_posted": "2026-10-28"
     },
     "hiring_for": null
+   }
+  },
+  {
+   "active": true,
+   "company": "WilsonHCG",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "e630c98e6d564984",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Location not specified",
+   "posted": "2026-10-28",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "New Jersey United States UI UX Designer",
+   "url": "https://wilsonhcg.avature.net/ctscareers/JobDetail/New-Jersey-United-States-UI-UX-Designer/181309",
+   "verdict": {
+    "role": "unclear",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Title says UI/UX Designer but the description is for a Divisional Quality Engineer, so the role is unclear; location is New Jersey with no remote mention.",
+     "Portugal OUT · under the title: \"Location: New Jersey, United States\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "UI/UX Designer",
+     "company": "WilsonHCG",
+     "seniority": "unstated",
+     "remote": "unstated",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "2+ years (communication, documentation review, quality investigation)",
+     "reports_to": null,
+     "language": "English",
+     "posted": "26-Oct-2026"
+    },
+    "inferred": [
+     "posted_by agency (WilsonHCG is a recruitment firm)",
+     "workplace_as_posted onsite from a bare location with no remote mention"
+    ],
+    "read": "board",
+    "read_url": "https://wilsonhcg.avature.net/ctscareers/JobDetail/New-Jersey-United-States-UI-UX-Designer/181309",
+    "reason": "Title says UI/UX Designer but the description is for a Divisional Quality Engineer, so the role is unclear; location is New Jersey with no remote mention.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: New Jersey, United States",
+    "signals": [
+     {
+      "quote": "Location: New Jersey, United States",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/e630c98e6d564984.jpg",
+    "read_at": "2026-11-03T00:30:38",
+    "evidence": {
+     "board_posted": "2026-10-28"
+    },
+    "hiring_for": null
+   }
+  },
+  {
+   "active": true,
+   "company": "Electronic Arts",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "de5d93b87a4d41ef",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Montreal, Canada",
+   "posted": "2026-10-28",
+   "salary": "CA$161k–CA$225k",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "Engagement Design Director",
+   "url": "https://jobs.ea.com/en_US/careers/JobDetail/Engagement-Design-Director/216555",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "unclear",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is hybrid at offices in Canada and the US only, with no remote option or Portugal location, and the role itself (game meta-systems design leadership) is not clearly product design.",
+     "Portugal OUT · under the title: \"Montreal, Quebec, Canada Vancouver - Great Northern Way British Columbia Canada Los Angeles - Del Rey California United States of America\"",
+     "Portugal OUT · side panel: \"Work Model Hybrid\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Engagement Design Director",
+     "company": "Electronic Arts",
+     "seniority": "director",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Canada",
+      "United States of America"
+     ],
+     "portugal_ok": "no",
+     "salary": "British Columbia: $160,700 - $224,700 CAD; California: $182,600 - $276,300 USD",
+     "years_xp": "3+ years leading game teams and defining player-focused meta systems in a live service environment",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "role_verdict is unclear because the job leads game progression, economy and social systems design with UX/UI as one part",
+     "seniority is director from the title"
+    ],
+    "read": "board",
+    "read_url": "https://jobs.ea.com/en_US/careers/JobDetail/Engagement-Design-Director/216555",
+    "reason": "The role is hybrid at offices in Canada and the US only, with no remote option or Portugal location, and the role itself (game meta-systems design leadership) is not clearly product design.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Work Model Hybrid; Locations: Montreal, Quebec, Canada; Vancouver, British Columbia, Canada; Los Angeles, California, United States of America",
+    "signals": [
+     {
+      "quote": "Montreal, Quebec, Canada Vancouver - Great Northern Way British Columbia Canada Los Angeles - Del Rey California United States of America",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Work Model Hybrid",
+      "where": "side panel",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/de5d93b87a4d41ef.jpg",
+    "read_at": "2026-11-03T00:30:43",
+    "evidence": {
+     "board_posted": "2026-10-28"
+    }
    }
   },
   {
@@ -1221246,11 +1221403,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Workable 429 error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You've sent too many requests too fast. Please try again later.\""
+     "The page is a Workable 429 error with no job content, so nothing about the posting can be read.",
+     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1221273,7 +1221430,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/j/86662B0C6Aapply/",
-    "reason": "The page is a Workable 429 error, not a job posting, so nothing about the role or place can be read.",
+    "reason": "the page would not open on two runs · The page is a Workable 429 error with no job content, so nothing about the posting can be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1221282,7 +1221439,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1f06168e261d4c07.jpg",
-    "read_at": "2026-11-02T23:56:28",
+    "read_at": "2026-11-03T00:30:49",
     "evidence": {
      "board_posted": "2026-10-30"
     }
