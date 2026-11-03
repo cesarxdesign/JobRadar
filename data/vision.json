@@ -1713829,7 +1713829,7 @@
  },
  "3f6c0595c3ed4a47": {
   "id": "3f6c0595c3ed4a47",
-  "at": "2026-11-03T09:23:21",
+  "at": "2026-11-03T09:31:57",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.nttdata.com/global/en/job/380557/Web-Design-UX-UI-Advisor",
@@ -1713847,20 +1713847,34 @@
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
-  "posting_open": "unreadable",
-  "open_quote": "Hi There! Are you interested in this job? I'm interested Similar Jobs",
+  "posting_open": "yes",
+  "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "unclear",
-  "workplace_as_posted": "not stated",
-  "location_under_the_title": null,
-  "place_signals": [],
-  "place_verdict": "unclear",
-  "place_quote": "",
-  "reason": "The page shows only site navigation, cookie notice and chatbot text with no job description, so the posting cannot be read.",
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Bangalore, IN-KA, India (from page title: 'Web Design UX/UI Advisor job in Bangalore, IN-KA, India')",
+  "place_signals": [
+   {
+    "quote": "The Web Design UX/UI Advisor at NTT DATA in Bangalore",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Web Design UX/UI Advisor job in Bangalore, IN-KA, India",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The Web Design UX/UI Advisor at NTT DATA in Bangalore is responsible for designing user-centric digital experiences",
+  "reason": "UX/UI design role, but the page places it in Bangalore, India with no mention of remote work.",
   "confidence": "medium",
   "inferred": [
-   "Page title suggests Bangalore, India, but no location appears in the visible page text"
+   "workplace_as_posted onsite inferred from a city named with no mention of remote",
+   "seniority not stated; 3-8 years of experience suggests mid to senior"
   ],
   "fields": {
    "role": "Web Design UX/UI Advisor",
@@ -1713868,17 +1713882,19 @@
    "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
-   "countries": [],
-   "portugal_ok": "unclear",
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "no",
    "salary": null,
-   "years_xp": null,
+   "years_xp": "3–8 years",
    "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
-  "lane": "unsure",
-  "unread_tries": 1
+  "lane": "cut",
+  "reader_place": "no"
  },
  "92b608ac22604c6f": {
   "id": "92b608ac22604c6f",
@@ -1714520,7 +1714536,7 @@
  },
  "355a3ec8eef0405b": {
   "id": "355a3ec8eef0405b",
-  "at": "2026-11-03T09:23:51",
+  "at": "2026-11-03T09:31:29",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://rits.traffit.com/public/an/7d83dccb9d88aa698aaa0d7079bd09ce5041694c56513d3d?source=career_page",
@@ -1714540,7 +1714556,7 @@
   "stage": "render",
   "open_quote": "Hey, requested job post is inactive",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "87f44af326784449": {
   "id": "87f44af326784449",
@@ -1714821,7 +1714837,7 @@
  },
  "7320692147f94b2b": {
   "id": "7320692147f94b2b",
-  "at": "2026-11-03T09:24:05",
+  "at": "2026-11-03T09:31:58",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.idexx.com/us/en/job/J-054909/Senior-Product-Designer",
@@ -1714848,23 +1714864,29 @@
   "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
-  "location_under_the_title": null,
-  "place_signals": [],
-  "place_verdict": "unclear",
-  "place_quote": "",
-  "reason": "The page shows only menus, footer and a chatbot with no job description; the page title mentions Auckland, New Zealand but the body gives no location or details.",
-  "confidence": "medium",
-  "inferred": [
-   "Seniority 'senior' is taken from the title only.",
-   "Company IDEXX is taken from the pool listing and page title."
+  "location_under_the_title": "Senior Product Designer in Auckland, New Zealand (from the page title only; no location is printed in the visible text)",
+  "place_signals": [
+   {
+    "quote": "Senior Product Designer in Auckland, New Zealand",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
   ],
+  "place_verdict": "unclear",
+  "place_quote": "Senior Product Designer in Auckland, New Zealand",
+  "reason": "The visible page holds only menus, footer links and a chatbot, with no job description, so the posting cannot be read; the page title names Auckland, New Zealand.",
+  "confidence": "medium",
+  "inferred": [],
   "fields": {
    "role": "Senior Product Designer",
    "company": "IDEXX",
    "seniority": "senior",
    "remote": "unstated",
    "onsite_days": null,
-   "countries": [],
+   "countries": [
+    "New Zealand"
+   ],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
@@ -1714874,7 +1714896,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "fb6b6b83bf924b67": {
   "id": "fb6b6b83bf924b67",
@@ -1716546,7 +1716568,7 @@
  },
  "a7b0d8c2163b4fb8": {
   "id": "a7b0d8c2163b4fb8",
-  "at": "2026-11-03T09:25:28",
+  "at": "2026-11-03T09:31:59",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.emdgroup.com/us/en/job/302019/Principal-Frontend-UI-UX-Engineer",
@@ -1716565,28 +1716587,20 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Today 09:24 am Bot message Hi There! Are you interested in this job? I'm interested Similar Jobs",
+  "open_quote": "Hi There! Are you interested in this job?",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "yes",
   "workplace_as_posted": "not stated",
   "location_under_the_title": "Principal Frontend UI/UX Engineer in Jerusalem, Jerusalem, Israel at EMD Group",
-  "place_signals": [
-   {
-    "quote": "Principal Frontend UI/UX Engineer in Jerusalem, Jerusalem, Israel at EMD Group",
-    "where": "under the title",
-    "kind": "tag",
-    "says": "portugal_out"
-   }
-  ],
+  "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Principal Frontend UI/UX Engineer in Jerusalem, Jerusalem, Israel at EMD Group",
-  "reason": "The page shows only benefits, footer and chatbot text with no job description, so it is not a readable posting; the title names UI/UX Engineer and Jerusalem, Israel.",
-  "confidence": "medium",
+  "reason": "The page shows only benefits, menus and footer with no job description, so it is not a readable posting; the title (UI/UX Engineer) suggests a design-leaning role but place cannot be determined.",
+  "confidence": "low",
   "inferred": [
-   "posting_open set to unreadable because the page has no job description, only boilerplate",
-   "role_verdict judged from title alone: UI/UX Engineer counts as design-leaning engineering",
-   "seniority principal taken from the title"
+   "role_verdict judged from title alone, since the title says UI/UX",
+   "location taken from the page title, not from the visible body"
   ],
   "fields": {
    "role": "Principal Frontend UI/UX Engineer",
@@ -1716606,7 +1716620,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "68e9f2f70403424d": {
   "id": "68e9f2f70403424d",
@@ -1717462,7 +1717476,7 @@
  },
  "33045d27f1d948f3": {
   "id": "33045d27f1d948f3",
-  "at": "2026-11-03T09:25:59",
+  "at": "2026-11-03T09:31:37",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=cbabd1ae-568b-4f70-933b-3f462f76c1b5&ccId=19000101_000001&lang=en_US&jobId=618831",
@@ -1717490,11 +1717504,12 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description; the title 'Firmware Design Engineer' is engineering by title, not product/UX/UI design.",
+  "reason": "The page shows only a cookie banner with no job description, so it is unreadable; the title alone (Firmware Design Engineer) is engineering by title, not a design role.",
   "confidence": "medium",
   "inferred": [
-   "role_verdict judged from the pool title only, since the page has no description",
-   "posting_open set to unreadable because only a cookie notice is visible"
+   "role_verdict judged from pool title only, as page has no description",
+   "seniority unstated",
+   "language assumed English from page interface text"
   ],
   "fields": {
    "role": "Firmware Design Engineer",
@@ -1717512,7 +1717527,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "00f83382a12a429e": {
   "id": "00f83382a12a429e",
@@ -1718431,7 +1718446,7 @@
  },
  "d255a0c4870d4474": {
   "id": "d255a0c4870d4474",
-  "at": "2026-11-03T09:26:34",
+  "at": "2026-11-03T09:32:04",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.roche.com/global/en/job/ROCHGLOBAL202609122755EXTERNALENGLOBAL/Content-Design-AI-Readiness-Specialist-3",
@@ -1718468,7 +1718483,7 @@
   ],
   "place_verdict": "unclear",
   "place_quote": "Content Design & AI Readiness Specialist-3 in Warsaw, Masovian, Poland",
-  "reason": "The page text has no job description, only site navigation and a scam notice, so the posting cannot be read; the only place information is Warsaw, Poland in the page title.",
+  "reason": "The page shows only menus, a scam notice and footer with no job description, so it is an empty shell; the only place information is Warsaw, Poland in the page title.",
   "confidence": "medium",
   "inferred": [],
   "fields": {
@@ -1718489,7 +1718504,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "4bc47f4e297d47a2": {
   "id": "4bc47f4e297d47a2",
@@ -1721847,13 +1721862,13 @@
  },
  "7c250b8487de4b1e": {
   "id": "7c250b8487de4b1e",
-  "at": "2026-11-03T09:28:16",
+  "at": "2026-11-03T09:31:46",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27434/structural-design-technician---telecom/job?hub=7&amp;in_iframe=1",
   "board": null,
   "employer": {
-   "url": "https://careers-kimley-horn.icims.com/jobs/27434/structural-design-technician---telecom/job?hub=7&mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+   "url": "https://careers-kimley-horn.icims.com/jobs/27434/structural-design-technician---telecom/job?hub=7&amp",
    "status": 200,
    "shot": "data/shots/7c250b8487de4b1e.jpg",
    "error": null
@@ -1721867,17 +1721882,17 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "6ef3cfa8ace3411f": {
   "id": "6ef3cfa8ace3411f",
-  "at": "2026-11-03T09:28:16",
+  "at": "2026-11-03T09:31:46",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27480/experienced-civil-eit---traffic-engineering-its-design/job?hub=7&amp;in_iframe=1",
   "board": null,
   "employer": {
-   "url": "https://careers-kimley-horn.icims.com/jobs/27480/experienced-civil-eit---traffic-engineering-its-design/job?hub=7&mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+   "url": "https://careers-kimley-horn.icims.com/jobs/27480/experienced-civil-eit---traffic-engineering-its-design/job?hub=7&amp",
    "status": 200,
    "shot": "data/shots/6ef3cfa8ace3411f.jpg",
    "error": null
@@ -1721891,11 +1721906,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "d70c8ff5a1474095": {
   "id": "d70c8ff5a1474095",
-  "at": "2026-11-03T09:28:18",
+  "at": "2026-11-03T09:31:46",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27432/structural-design-technician---telecom/job?hub=7&amp;in_iframe=1",
@@ -1721915,11 +1721930,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "3cb06647698a41c1": {
   "id": "3cb06647698a41c1",
-  "at": "2026-11-03T09:28:20",
+  "at": "2026-11-03T09:32:08",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27407/structural-design-technician/job?hub=7&amp;in_iframe=1",
@@ -1721939,11 +1721954,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "255968057e814eec": {
   "id": "255968057e814eec",
-  "at": "2026-11-03T09:28:20",
+  "at": "2026-11-03T09:32:12",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27389/designer/job?hub=7&amp;in_iframe=1",
@@ -1721963,11 +1721978,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "7a16e987bb764b5d": {
   "id": "7a16e987bb764b5d",
-  "at": "2026-11-03T09:28:20",
+  "at": "2026-11-03T09:31:56",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27411/structural-design-technician/job?hub=7&amp;in_iframe=1",
@@ -1721987,11 +1722002,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "e3f8e602aa354fc8": {
   "id": "e3f8e602aa354fc8",
-  "at": "2026-11-03T09:28:21",
+  "at": "2026-11-03T09:32:12",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27387/water-treatment-plant-design-engineer/job?hub=7&amp;in_iframe=1",
@@ -1722011,11 +1722026,11 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "4a964e0bbc194e16": {
   "id": "4a964e0bbc194e16",
-  "at": "2026-11-03T09:28:21",
+  "at": "2026-11-03T09:32:12",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27345/structural-revit-designer/job?hub=7&amp;in_iframe=1",
@@ -1722035,7 +1722050,7 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "397c9518cd6f4f32": {
   "id": "397c9518cd6f4f32",
@@ -1722658,7 +1722673,7 @@
  },
  "ee84b6b79ee44745": {
   "id": "ee84b6b79ee44745",
-  "at": "2026-11-03T09:28:43",
+  "at": "2026-11-03T09:32:23",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27303/roadway-design-technician/job?hub=7&amp;in_iframe=1",
@@ -1722678,7 +1722693,7 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "375d2aab1c15468f": {
   "id": "375d2aab1c15468f",

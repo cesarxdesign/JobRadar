@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-02T23:21:36+00:00",
- "built_at": "2026-11-03T09:31+00:00",
+ "built_at": "2026-11-03T09:32+00:00",
  "run_id": "2026-11-02T23:21:36+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-02T23:21:36+00:00",
@@ -14,9 +14,9 @@
   "ghosts": 0,
   "cut": 27,
   "closed": 625,
-  "vision_cut": 17351,
+  "vision_cut": 17366,
   "agency": 0,
-  "not_read": 41,
+  "not_read": 26,
   "folded": 165,
   "vision_read": 28493,
   "title_cuts": 42690,
@@ -16873,7 +16873,16 @@
   "3a04718e31e34b1f",
   "a6c7bc2b07cd415d",
   "6cce0ab6671e4323",
+  "6ef3cfa8ace3411f",
+  "7c250b8487de4b1e",
+  "d70c8ff5a1474095",
+  "7a16e987bb764b5d",
+  "3cb06647698a41c1",
+  "255968057e814eec",
+  "e3f8e602aa354fc8",
+  "4a964e0bbc194e16",
   "fda4c8a108104dd9",
+  "ee84b6b79ee44745",
   "c7814116ef96413d",
   "a6a5788267be48cc",
   "8ae5b43eaa144113",
@@ -17774,6 +17783,7 @@
   "0f70d43091b54dfd",
   "709864d29a2b46fe",
   "4d0a4e9ef95a4a84",
+  "33045d27f1d948f3",
   "0b235cd301604c69",
   "1c486e9dd08a40b6",
   "e70355f631e24908",
@@ -18133,11 +18143,14 @@
   "1df7043667bc46ba",
   "c510b573f4154971",
   "13e88b69edcd441d",
+  "3f6c0595c3ed4a47",
   "695fd9f428c340a0",
   "b3b6fb36d4044d8a",
   "f6d4b7f1ffe34b40",
   "9893b333364a4329",
   "92b608ac22604c6f",
+  "7320692147f94b2b",
+  "355a3ec8eef0405b",
   "7df23fb5b667443a",
   "826baec1f64a4596",
   "2486aa884ee64fc3",
@@ -18148,6 +18161,7 @@
   "97768a83ffd942d1",
   "a91e6b37c20f49fa",
   "91bd281f7f804262",
+  "a7b0d8c2163b4fb8",
   "9322760b75914c68",
   "dc7c3d1aa8434cf6",
   "6e70e516c7de431f",
@@ -18158,6 +18172,7 @@
   "8afd99a018e24125",
   "9cad641844904911",
   "fc49a148e50d4213",
+  "d255a0c4870d4474",
   "3307c2c3f7e643df",
   "00bfa068ca7e4109",
   "beff82e488ba4607",
@@ -18808,17 +18823,7 @@
  "unread": [
   "2dc6c294a7774ee7",
   "cc7fb0a126a3418c",
-  "6ef3cfa8ace3411f",
-  "7c250b8487de4b1e",
-  "d70c8ff5a1474095",
-  "7a16e987bb764b5d",
-  "3cb06647698a41c1",
-  "255968057e814eec",
-  "e3f8e602aa354fc8",
-  "4a964e0bbc194e16",
-  "ee84b6b79ee44745",
   "cdbbb4dcd94a44f0",
-  "33045d27f1d948f3",
   "b3f5162eb3fc4d8e",
   "5a225a8e4a874576",
   "66c707971d08411e",
@@ -18836,11 +18841,6 @@
   "ddb5240f97b74f86",
   "1ddcfc853f7c4ce3",
   "c8b6f883ef2e4df9",
-  "3f6c0595c3ed4a47",
-  "7320692147f94b2b",
-  "355a3ec8eef0405b",
-  "a7b0d8c2163b4fb8",
-  "d255a0c4870d4474",
   "dcc25136637940f3",
   "c4ea83e934b94a2c",
   "b35ee929383b46bf",
@@ -1223142,8 +1223142,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223155,7 +1223155,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223164,7 +1223164,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6ef3cfa8ace3411f.jpg",
-    "read_at": "2026-11-03T09:28:16",
+    "read_at": "2026-11-03T09:31:46",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223200,8 +1223200,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223213,7 +1223213,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223222,7 +1223222,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7c250b8487de4b1e.jpg",
-    "read_at": "2026-11-03T09:28:16",
+    "read_at": "2026-11-03T09:31:46",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223258,8 +1223258,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223271,7 +1223271,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223280,7 +1223280,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d70c8ff5a1474095.jpg",
-    "read_at": "2026-11-03T09:28:18",
+    "read_at": "2026-11-03T09:31:46",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223316,8 +1223316,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223329,7 +1223329,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223338,7 +1223338,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7a16e987bb764b5d.jpg",
-    "read_at": "2026-11-03T09:28:20",
+    "read_at": "2026-11-03T09:31:56",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223374,8 +1223374,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223387,7 +1223387,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223396,7 +1223396,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3cb06647698a41c1.jpg",
-    "read_at": "2026-11-03T09:28:20",
+    "read_at": "2026-11-03T09:32:08",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223433,8 +1223433,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223446,7 +1223446,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223455,7 +1223455,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/255968057e814eec.jpg",
-    "read_at": "2026-11-03T09:28:20",
+    "read_at": "2026-11-03T09:32:12",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223492,8 +1223492,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223505,7 +1223505,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223514,7 +1223514,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e3f8e602aa354fc8.jpg",
-    "read_at": "2026-11-03T09:28:21",
+    "read_at": "2026-11-03T09:32:12",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223550,8 +1223550,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223563,7 +1223563,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223572,7 +1223572,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4a964e0bbc194e16.jpg",
-    "read_at": "2026-11-03T09:28:21",
+    "read_at": "2026-11-03T09:32:12",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1223684,8 +1223684,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser"
     ],
@@ -1223697,7 +1223697,7 @@
     "inferred": [],
     "read": "board",
     "read_url": null,
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1223706,7 +1223706,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ee84b6b79ee44745.jpg",
-    "read_at": "2026-11-03T09:28:43",
+    "read_at": "2026-11-03T09:32:23",
     "evidence": {
      "employer_board": {
       "source": "icims/jobs-kimley-horn",
@@ -1290128,10 +1290128,10 @@
    "verdict": {
     "role": "no",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a cookie banner with no job description; the title 'Firmware Design Engineer' is engineering by title, not product/UX/UI design.",
+     "The page shows only a cookie banner with no job description, so it is unreadable; the title alone (Firmware Design Engineer) is engineering by title, not a design role.",
      "the page says: \"Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.\""
     ],
     "judged": true,
@@ -1290153,12 +1290153,13 @@
      "posted": null
     },
     "inferred": [
-     "role_verdict judged from the pool title only, since the page has no description",
-     "posting_open set to unreadable because only a cookie notice is visible"
+     "role_verdict judged from pool title only, as page has no description",
+     "seniority unstated",
+     "language assumed English from page interface text"
     ],
     "read": "board",
     "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=cbabd1ae-568b-4f70-933b-3f462f76c1b5&ccId=19000101_000001&lang=en_US&jobId=618831",
-    "reason": "The page shows only a cookie banner with no job description; the title 'Firmware Design Engineer' is engineering by title, not product/UX/UI design.",
+    "reason": "the page would not open on two runs · The page shows only a cookie banner with no job description, so it is unreadable; the title alone (Firmware Design Engineer) is engineering by title, not a design role.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1290167,7 +1290168,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/33045d27f1d948f3.jpg",
-    "read_at": "2026-11-03T09:25:59",
+    "read_at": "2026-11-03T09:31:37",
     "evidence": {
      "board_posted": "2026-09-28"
     }
@@ -1318246,13 +1318247,14 @@
    "title": "Web Design UX/UI Advisor",
    "url": "https://careers.nttdata.com/global/en/job/380557/Web-Design-UX-UI-Advisor",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation, cookie notice and chatbot text with no job description, so the posting cannot be read.",
-     "the page says: \"Hi There! Are you interested in this job? I'm interested Similar Jobs\""
+     "UX/UI design role, but the page places it in Bangalore, India with no mention of remote work.",
+     "Portugal OUT · body: \"The Web Design UX/UI Advisor at NTT DATA in Bangalore\"",
+     "Portugal OUT · under the title: \"Web Design UX/UI Advisor job in Bangalore, IN-KA, India\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1318264,29 +1318266,45 @@
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "India"
+     ],
+     "portugal_ok": "no",
      "salary": null,
-     "years_xp": null,
+     "years_xp": "3–8 years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [
-     "Page title suggests Bangalore, India, but no location appears in the visible page text"
+     "workplace_as_posted onsite inferred from a city named with no mention of remote",
+     "seniority not stated; 3-8 years of experience suggests mid to senior"
     ],
     "read": "board",
     "read_url": "https://careers.nttdata.com/global/en/job/380557/Web-Design-UX-UI-Advisor",
-    "reason": "The page shows only site navigation, cookie notice and chatbot text with no job description, so the posting cannot be read.",
-    "open": "unreadable",
+    "reason": "UX/UI design role, but the page places it in Bangalore, India with no mention of remote work.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "The Web Design UX/UI Advisor at NTT DATA in Bangalore is responsible for designing user-centric digital experiences",
+    "signals": [
+     {
+      "quote": "The Web Design UX/UI Advisor at NTT DATA in Bangalore",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Web Design UX/UI Advisor job in Bangalore, IN-KA, India",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3f6c0595c3ed4a47.jpg",
-    "read_at": "2026-11-03T09:23:21",
+    "read_at": "2026-11-03T09:31:57",
     "evidence": {
      "board_posted": "2026-10-13"
     }
@@ -1318799,10 +1318817,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only menus, footer and a chatbot with no job description; the page title mentions Auckland, New Zealand but the body gives no location or details.",
+     "The visible page holds only menus, footer links and a chatbot, with no job description, so the posting cannot be read; the page title names Auckland, New Zealand.",
+     "Portugal OUT · under the title: \"Senior Product Designer in Auckland, New Zealand\"",
      "the page says: \"Are you interested in this job?\""
     ],
     "judged": true,
@@ -1318815,7 +1318834,9 @@
      "seniority": "senior",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "New Zealand"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -1318823,22 +1318844,26 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "Seniority 'senior' is taken from the title only.",
-     "Company IDEXX is taken from the pool listing and page title."
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://careers.idexx.com/us/en/job/J-054909/Senior-Product-Designer",
-    "reason": "The page shows only menus, footer and a chatbot with no job description; the page title mentions Auckland, New Zealand but the body gives no location or details.",
+    "reason": "the page would not open on two runs · The visible page holds only menus, footer links and a chatbot, with no job description, so the posting cannot be read; the page title names Auckland, New Zealand.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Senior Product Designer in Auckland, New Zealand",
+    "signals": [
+     {
+      "quote": "Senior Product Designer in Auckland, New Zealand",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7320692147f94b2b.jpg",
-    "read_at": "2026-11-03T09:24:05",
+    "read_at": "2026-11-03T09:31:58",
     "evidence": {
      "board_posted": "2026-10-09"
     }
@@ -1318862,8 +1318887,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Hey, requested job post is inactive\""
@@ -1318876,7 +1318901,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://rits.traffit.com/public/an/7d83dccb9d88aa698aaa0d7079bd09ce5041694c56513d3d?source=career_page",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1318885,7 +1318910,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/355a3ec8eef0405b.jpg",
-    "read_at": "2026-11-03T09:23:51",
+    "read_at": "2026-11-03T09:31:29",
     "evidence": {
      "board_posted": "2026-10-08"
     }
@@ -1319687,17 +1319712,17 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only benefits, footer and chatbot text with no job description, so it is not a readable posting; the title names UI/UX Engineer and Jerusalem, Israel.",
-     "Portugal OUT · under the title: \"Principal Frontend UI/UX Engineer in Jerusalem, Jerusalem, Israel at EMD Group\"",
-     "the page says: \"Today 09:24 am Bot message Hi There! Are you interested in this job? I'm interested Similar Jobs\""
+     "The page shows only benefits, menus and footer with no job description, so it is not a readable posting; the title (UI/UX Engineer) suggests a design-leaning role but place cannot be determined.",
+     "the page says: \"Principal Frontend UI/UX Engineer in Jerusalem, Jerusalem, Israel at EMD Group\"",
+     "the page says: \"Hi There! Are you interested in this job?\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "low",
     "fields": {
      "role": "Principal Frontend UI/UX Engineer",
      "company": "EMD Group",
@@ -1319715,29 +1319740,21 @@
      "posted": null
     },
     "inferred": [
-     "posting_open set to unreadable because the page has no job description, only boilerplate",
-     "role_verdict judged from title alone: UI/UX Engineer counts as design-leaning engineering",
-     "seniority principal taken from the title"
+     "role_verdict judged from title alone, since the title says UI/UX",
+     "location taken from the page title, not from the visible body"
     ],
     "read": "board",
     "read_url": "https://careers.emdgroup.com/us/en/job/302019/Principal-Frontend-UI-UX-Engineer",
-    "reason": "The page shows only benefits, footer and chatbot text with no job description, so it is not a readable posting; the title names UI/UX Engineer and Jerusalem, Israel.",
+    "reason": "the page would not open on two runs · The page shows only benefits, menus and footer with no job description, so it is not a readable posting; the title (UI/UX Engineer) suggests a design-leaning role but place cannot be determined.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
     "quote": "Principal Frontend UI/UX Engineer in Jerusalem, Jerusalem, Israel at EMD Group",
-    "signals": [
-     {
-      "quote": "Principal Frontend UI/UX Engineer in Jerusalem, Jerusalem, Israel at EMD Group",
-      "where": "under the title",
-      "kind": "tag",
-      "says": "portugal_out"
-     }
-    ],
+    "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a7b0d8c2163b4fb8.jpg",
-    "read_at": "2026-11-03T09:25:28",
+    "read_at": "2026-11-03T09:31:59",
     "evidence": {
      "board_posted": "2026-10-03",
      "employer_board": {
@@ -1320490,10 +1320507,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page text has no job description, only site navigation and a scam notice, so the posting cannot be read; the only place information is Warsaw, Poland in the page title.",
+     "The page shows only menus, a scam notice and footer with no job description, so it is an empty shell; the only place information is Warsaw, Poland in the page title.",
      "Portugal OUT · under the title: \"Content Design & AI Readiness Specialist-3 in Warsaw, Masovian, Poland\"",
      "the page says: \"Important Notice: Beware of Recruitment Scams!\""
     ],
@@ -1320520,7 +1320537,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://careers.roche.com/global/en/job/ROCHGLOBAL202609122755EXTERNALENGLOBAL/Content-Design-AI-Readiness-Specialist-3",
-    "reason": "The page text has no job description, only site navigation and a scam notice, so the posting cannot be read; the only place information is Warsaw, Poland in the page title.",
+    "reason": "the page would not open on two runs · The page shows only menus, a scam notice and footer with no job description, so it is an empty shell; the only place information is Warsaw, Poland in the page title.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1320536,7 +1320553,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d255a0c4870d4474.jpg",
-    "read_at": "2026-11-03T09:26:34",
+    "read_at": "2026-11-03T09:32:04",
     "evidence": {
      "board_posted": "2026-09-27"
     }
