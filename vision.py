@@ -273,8 +273,10 @@ def greenhouse_feed(rec):
 # held all 9 readers for 8 hours).
 SLOW_FILE = f"{ROOT}/data/slow_hosts.json"
 SLOW_FOR = 86400
-_lane = threading.local()          # _lane.slow: this is the slow lane, and it may wait
-_slow_stop = threading.Event()
+_lane = threading.local()          # _lane.slow: this is the slow lane, the one that may ask a slow site
+COOL = 3600                        # a site still refusing is left alone this long, then asked ONE request
+# Asking a refusing site every few minutes keeps its block on, and the block is on his
+# own browser too (Workable, 2026-11-03). So: one request an hour until it answers.
 
 
 class SlowHost(Exception):
@@ -323,22 +325,16 @@ def _get(url, timeout=20):
     slow = getattr(_lane, "slow", False)
     if not slow and _dom(url) in _slow:
         raise SlowHost(_dom(url))
-    for wait in ((30, 90, 180) if slow else (0,)):
-        try:
-            raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout).read()
-            return 200, json.loads(raw)
-        except urllib.error.HTTPError as e:
-            if e.code != 429:
-                return e.code, None
-            _mark_slow(_dom(url))
-            if not slow:
-                raise SlowHost(_dom(url))
-            open(f"{ROOT}/data/vision.beat", "w").write(time.strftime("%F %H:%M:%S"))    # waiting on purpose, not stuck
-            if _slow_stop.wait(wait):
-                raise SlowHost(_dom(url))
-        except Exception:
-            return 0, None
-    raise SlowHost(_dom(url))          # still refusing after three waits: the next pull asks again
+    try:
+        raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout).read()
+        return 200, json.loads(raw)
+    except urllib.error.HTTPError as e:
+        if e.code != 429:
+            return e.code, None
+        _mark_slow(_dom(url))
+        raise SlowHost(_dom(url))      # never waited on here: the slow lane decides when to ask again
+    except Exception:
+        return 0, None
 
 
 def _gh_boards(_c={}):
@@ -962,14 +958,47 @@ def main():
     import collections
     if "--slow-lane" in sys.argv:      # one reader, as patient as the site wants; the pulls never wait for it
         _lane.slow = True
-        last = time.time()
+        import urllib.request, urllib.error
+
+        def answers(url):              # ONE request: is the site still refusing?
+            try:
+                urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=20).read(1)
+            except urllib.error.HTTPError as e:
+                return e.code != 429
+            except Exception:
+                pass
+            return True
+
+        cool, pending, last, fresh = {}, collections.deque(rows), time.time(), 0
         try:
-            for r in rows:
+            while pending and not _usage.get("stop"):
+                r = pending.popleft()
+                d = _dom(r["url"])
+                if cool.get(d, 0) > time.time():
+                    pending.append(r)
+                    if all(cool.get(_dom(x["url"]), 0) > time.time() for x in pending):
+                        open(f"{ROOT}/data/vision.beat", "w").write(time.strftime("%F %H:%M:%S"))   # waiting on purpose
+                        time.sleep(max(1, min(600, min(cool.values()) - time.time())))
+                    continue
+                if d in cool:
+                    if not answers(r["url"]):
+                        cool[d] = time.time() + COOL
+                        print(f"SLOW LANE: {d} still refuses; asking again at {time.strftime('%H:%M', time.localtime(cool[d]))}", flush=True)
+                        pending.append(r)
+                        continue
+                    print(f"SLOW LANE: {d} answers again {time.strftime('%H:%M')}; reading on", flush=True)
+                    del cool[d]
+                was, had = _usage.get("slowed", 0), len(out)
                 one(r)
-                if time.time() - last > 1200:          # his board hears from the slow lane every 20 minutes
+                if _usage.get("slowed", 0) > was:          # refused mid-read: leave the site alone for an hour
+                    cool[d] = time.time() + COOL
+                    print(f"SLOW LANE: {d} refuses; leaving it alone until {time.strftime('%H:%M', time.localtime(cool[d]))}", flush=True)
+                    pending.append(r)
+                fresh += len(out) - had
+                if fresh and time.time() - last > 1200:    # his board hears from the slow lane every 20 minutes
                     save(out)
                     subprocess.run(["sh", f"{ROOT}/publish.sh"], cwd=ROOT)
-                    last = time.time()
+                    last, fresh = time.time(), 0
         finally:
             br.close()
             save(out)
