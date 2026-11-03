@@ -1725680,5 +1725680,1629 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "unclear"
+ },
+ "fe69c5c3bd064eda": {
+  "id": "fe69c5c3bd064eda",
+  "at": "2026-11-03T11:52:03",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/raydar/j/9408763C1C/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/raydar/j/9408763C1C/",
+   "status": 200,
+   "shot": "data/shots/fe69c5c3bd064eda.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/raydar/j/9408763C1C/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "08482e6ffe6a40b9": {
+  "id": "08482e6ffe6a40b9",
+  "at": "2026-11-03T11:52:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/008E0FDBEE",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/luxasia/j/008E0FDBEE",
+   "status": 200,
+   "shot": "data/shots/08482e6ffe6a40b9.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/luxasia/j/008E0FDBEE",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "e2ceac4ddc444ad1": {
+  "id": "e2ceac4ddc444ad1",
+  "at": "2026-11-03T11:52:09",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/DE0AF4557B",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/serko-ltd/j/DE0AF4557B",
+   "status": 200,
+   "shot": "data/shots/e2ceac4ddc444ad1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/serko-ltd/j/DE0AF4557B",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Hybrid; Auckland, Auckland, New Zealand",
+  "place_signals": [
+   {
+    "quote": "Auckland, Auckland, New Zealand",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "With established hubs across New Zealand, Australia, North America, India and China",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Hybrid Technology - Serko.ai FY23003X Auckland, Auckland, New Zealand",
+  "reason": "Title is Software Engineer (engineering by title, not design/UX/UI), and it is hybrid in Auckland, New Zealand with no remote option.",
+  "confidence": "high",
+  "inferred": [
+   "Hybrid in Auckland is inferred to require office attendance in New Zealand; the page gives no days"
+  ],
+  "fields": {
+   "role": "Software Engineer, Design System - Fixed Term Mat Contract",
+   "company": "Serko Ltd",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "New Zealand"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "Senior Engineering Manager or Engineering Manager",
+   "language": "English",
+   "posted": null
+  },
+  "_note": "Hybrid under the title is a bare workplace label alongside the Auckland location; treated together as hybrid in Auckland.",
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "3b4cdbdfb46e409c": {
+  "id": "3b4cdbdfb46e409c",
+  "at": "2026-11-03T11:52:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/raydar/j/A9DC72743C/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/raydar/j/A9DC72743C/",
+   "status": 200,
+   "shot": "data/shots/3b4cdbdfb46e409c.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/raydar/j/A9DC72743C/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "d40dd43de6f5426a": {
+  "id": "d40dd43de6f5426a",
+  "at": "2026-11-03T11:52:20",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/1DEC3C6F47",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/albireo-energy/j/1DEC3C6F47",
+   "status": 200,
+   "shot": "data/shots/d40dd43de6f5426a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/albireo-energy/j/1DEC3C6F47",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "d0e5fb225917412b": {
+  "id": "d0e5fb225917412b",
+  "at": "2026-11-03T11:52:23",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/fuel50/j/72D5F8E4E5/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/fuel50/j/72D5F8E4E5/",
+   "status": 200,
+   "shot": "data/shots/d0e5fb225917412b.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/fuel50/j/72D5F8E4E5/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "New Zealand",
+  "place_signals": [
+   {
+    "quote": "New Zealand",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Fuel50’s team is fully remote, with an HQ in New Zealand, and team members across five countries.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote work and flexible work times",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "If you’re based outside of Auckland and are needed on-site for anything, we’ll pay for you to get here.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This role is based in New Zealand, candidates must hold the relevant right to work in NZ i.e. Citizenship or a work visa at the time of application.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role is based in New Zealand, candidates must hold the relevant right to work in NZ i.e. Citizenship or a work visa at the time of application.",
+  "reason": "Role is a design lead job, but the posting states it is based in New Zealand and requires NZ right to work, which excludes someone in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Design Lead",
+   "company": "Fuel50",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "New Zealand"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "7 or more years in product design, including at least 2 years leading, managing or coaching designers",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "940e52859815496f": {
+  "id": "940e52859815496f",
+  "at": "2026-11-03T11:52:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/jagex-limited/j/C3FE5C5A9C/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/jagex-limited/j/C3FE5C5A9C/",
+   "status": 200,
+   "shot": "data/shots/940e52859815496f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/jagex-limited/j/C3FE5C5A9C/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Cambridge, England, United Kingdom",
+  "place_signals": [
+   {
+    "quote": "Cambridge, England, United Kingdom",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Office location: Cambridge, UK – This position offers flexible working options, including predominantly remote work. Applicants should be based (or willing to relocate) within a comfortable commuting distance of our office to attend onsite as required.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is only open to applicants who have the permanent right to work in the UK. We are unable to provide or take over visa sponsorship for this position, either now or in the future.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Applicants should be based (or willing to relocate) within a comfortable commuting distance of our office to attend onsite as required.",
+  "reason": "UI Artist role in game UI/UX team is a UI design job, but it requires being based near Cambridge, UK and having permanent UK right to work.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI Artist - RuneScape: Dragonwilds",
+   "company": "Jagex",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "58c918f297a74382": {
+  "id": "58c918f297a74382",
+  "at": "2026-11-03T11:52:41",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/modash/j/2E1104CE35/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/modash/j/2E1104CE35/",
+   "status": 200,
+   "shot": "data/shots/58c918f297a74382.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/modash/j/2E1104CE35/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote; Tallinn, Harju County, Estonia; Riga, Riga, Latvia; Vilnius County, Lithuania",
+  "place_signals": [
+   {
+    "quote": "Tallinn, Harju County, Estonia Riga, Riga, Latvia Vilnius County, Lithuania",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Fully remote working in Europe 🏠 As long as you have a reliable internet connection, work wherever is best for you.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "We hire across Europe, so the exact number depends on your location, employment type, skills, and experience.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "We're remote-first, but we make time to connect, collaborate, and have fun together in person.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our team is spread across many countries, and we work together in English every day.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Fully remote working in Europe 🏠 As long as you have a reliable internet connection, work wherever is best for you.",
+  "reason": "the place named at the top is only a tag; the posting itself says Portugal is in · A hybrid product designer/PM role that is fully remote across Europe, which includes Portugal; the Baltic locations are only tags.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from title"
+  ],
+  "fields": {
+   "role": "Senior Product Designer/Product Manager",
+   "company": "Modash",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Estonia",
+    "Latvia",
+    "Lithuania",
+    "Europe"
+   ],
+   "portugal_ok": "yes",
+   "salary": "65,000€ - 85,000€ annual plus stock options",
+   "years_xp": null,
+   "reports_to": "Head of Product",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "2192e1cbe4404587": {
+  "id": "2192e1cbe4404587",
+  "at": "2026-11-03T11:52:49",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/72D5F8E4E5",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/fuel50/j/72D5F8E4E5",
+   "status": 200,
+   "shot": "data/shots/2192e1cbe4404587.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/fuel50/j/72D5F8E4E5",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "New Zealand",
+  "place_signals": [
+   {
+    "quote": "New Zealand",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Fuel50’s team is fully remote, with an HQ in New Zealand, and team members across five countries.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This role is based in New Zealand, candidates must hold the relevant right to work in NZ i.e. Citizenship or a work visa at the time of application.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "If you’re based outside of Auckland and are needed on-site for anything, we’ll pay for you to get here.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role is based in New Zealand, candidates must hold the relevant right to work in NZ i.e. Citizenship or a work visa at the time of application.",
+  "reason": "Role is remote but explicitly based in New Zealand and requires NZ right to work, which excludes someone in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Design Lead",
+   "company": "Fuel50",
+   "seniority": "lead",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "New Zealand"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "7 or more years in product design, including at least 2 years leading, managing or coaching designers",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "c900b8ba18124e39": {
+  "id": "c900b8ba18124e39",
+  "at": "2026-11-03T11:52:59",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/1868B5B8A7",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/essnova-solutions-inc/j/1868B5B8A7",
+   "status": 200,
+   "shot": "data/shots/c900b8ba18124e39.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/essnova-solutions-inc/j/1868B5B8A7",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "7c2197c7f4cc4022": {
+  "id": "7c2197c7f4cc4022",
+  "at": "2026-11-03T11:53:03",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/teltonika/j/1EDCD3EDAD/",
+  "board": null,
+  "employer": {
+   "url": "https://career.teltonika.lt/_/j/1EDCD3EDAD",
+   "status": 200,
+   "shot": "data/shots/7c2197c7f4cc4022.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://career.teltonika.lt/_/j/1EDCD3EDAD",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "On-site Engineering and R&D Kaunas, Kaunas City Municipality, Lithuania",
+  "place_signals": [
+   {
+    "quote": "On-siteEngineering and R&D",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Kaunas, Kaunas City Municipality, Lithuania",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "join our growing R&D team in Kaunas",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "On-site ... Kaunas, Kaunas City Municipality, Lithuania ... join our growing R&D team in Kaunas",
+  "reason": "The role is UI/UX design but is on-site in Kaunas, Lithuania with no remote option stated.",
+  "confidence": "high",
+  "inferred": [
+   "seniority unstated; 2+ years experience suggests mid but not labelled"
+  ],
+  "fields": {
+   "role": "UI/UX designer | Networking Solutions",
+   "company": "Teltonika",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Lithuania"
+   ],
+   "portugal_ok": "no",
+   "salary": "19 Eur/h up to 28 Eur/h (~3170 Eur—4670 Eur) pre-tax",
+   "years_xp": "At least 2 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "4c64913ca0d14bfc": {
+  "id": "4c64913ca0d14bfc",
+  "at": "2026-11-03T11:53:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/51AEEA51E3",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/essnova-solutions-inc/j/51AEEA51E3",
+   "status": 200,
+   "shot": "data/shots/4c64913ca0d14bfc.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/essnova-solutions-inc/j/51AEEA51E3",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "79d4d584e6484110": {
+  "id": "79d4d584e6484110",
+  "at": "2026-11-03T11:53:14",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/zicasso/j/55437B4F04/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/zicasso/j/55437B4F04/",
+   "status": 200,
+   "shot": "data/shots/79d4d584e6484110.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/zicasso/j/55437B4F04/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote; Argentina, Brazil, Colombia, Costa Rica",
+  "place_signals": [
+   {
+    "quote": "Argentina Brazil Colombia Costa Rica",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is an international, fully-remote, freelance contractor position, working from home, at a location outside of the United States.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "We are particularly seeking candidates who are based in Latin America.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are a fully remote company spanning five continents",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "There is flexibility in your work hours but we expect that you will generally maximize your overlap with California hours (eg. until 3pm Pacific Time Zone).",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "We are particularly seeking candidates who are based in Latin America.",
+  "reason": "the page says both, explicitly: Portugal in, and Portugal out · Open remote Product Designer role, but the location list (Argentina, Brazil, Colombia, Costa Rica) and the Latin America preference point away from Portugal, while the 'outside the United States' line is broad.",
+  "confidence": "medium",
+  "inferred": [
+   "seniority"
+  ],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Zicasso",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Argentina",
+    "Brazil",
+    "Colombia",
+    "Costa Rica"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "4+",
+   "reports_to": "Senior Product Manager",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "unclear"
+ },
+ "8f624df1f3664007": {
+  "id": "8f624df1f3664007",
+  "at": "2026-11-03T11:53:26",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/189EDD8D91",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/albireo-energy/j/189EDD8D91",
+   "status": 200,
+   "shot": "data/shots/8f624df1f3664007.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/albireo-energy/j/189EDD8D91",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "3ac63289083c45d1": {
+  "id": "3ac63289083c45d1",
+  "at": "2026-11-03T11:53:29",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/medvirtual/j/E220A25C3D/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/medvirtual/j/E220A25C3D/",
+   "status": 200,
+   "shot": "data/shots/3ac63289083c45d1.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/medvirtual/j/E220A25C3D/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote India",
+  "place_signals": [
+   {
+    "quote": "India",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Permanent Work-from-Home setup",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Permanent remote work setup",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Paid US holidays",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "RemoteInternalFull time India",
+  "reason": "A remote UI/UX design role with India as the only location tag; the page doesn't say whether remote applicants elsewhere are accepted.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "MedVirtual",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "India"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "3 years collaborating with developers; 2 years in a senior or lead design role",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "953dd0c733e34808": {
+  "id": "953dd0c733e34808",
+  "at": "2026-11-03T11:53:38",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/human-intelligence/j/39308F1144/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/human-intelligence/j/39308F1144/",
+   "status": 200,
+   "shot": "data/shots/953dd0c733e34808.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/human-intelligence/j/39308F1144/",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "Desquared",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Athens, Attica, Greece",
+  "place_signals": [
+   {
+    "quote": "Athens, Attica, Greece",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HybridICTFull timeProduct/Germ.",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "to join its growing team in Athens",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible hybrid working model: work from their Athens offices, from home, or another location suitable for high-impact work and collaboration.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Flexible hybrid working model: work from their Athens offices, from home, or another location suitable for high-impact work and collaboration.",
+  "reason": "an agency posting: the place its opening line names is the client's requirement · Product design role in Athens, labelled hybrid, with a benefit line allowing work from home or another suitable location, but no clear statement on residence; German fluency is also required.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer - German Speaking",
+   "company": "Desquared",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Greece"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "bf9cc7ad738f4344": {
+  "id": "bf9cc7ad738f4344",
+  "at": "2026-11-03T11:53:46",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/human-intelligence/j/A3B85DD93E/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/human-intelligence/j/A3B85DD93E/",
+   "status": 200,
+   "shot": "data/shots/bf9cc7ad738f4344.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/human-intelligence/j/A3B85DD93E/",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "Desquared",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Athens, Attica, Greece",
+  "place_signals": [
+   {
+    "quote": "Athens, Attica, Greece",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HybridICTFull timeDesigner/TV",
+    "where": "under the title",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "to join its growing team in Athens",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Flexible hybrid working model: work from their Athens offices, from home, or another location suitable for high-impact work and collaboration.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Flexible hybrid working model: work from their Athens offices, from home, or another location suitable for high-impact work and collaboration.",
+  "reason": "an agency posting: the place its opening line names is the client's requirement · Open product design role for Desquared in Athens, labelled hybrid, but the benefits say staff may work from home or another suitable location, so whether Portugal is acceptable is not clear.",
+  "confidence": "medium",
+  "inferred": [
+   "posted_by agency: HumanI is partnering with Desquared, the company the job is at",
+   "seniority unstated"
+  ],
+  "fields": {
+   "role": "Product Designer - TV & Entertainment Products",
+   "company": "Desquared",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Greece"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "4ed67d25e8c340fe": {
+  "id": "4ed67d25e8c340fe",
+  "at": "2026-11-03T11:53:56",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/bjak-1/j/114FBB925F/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/bjak-1/j/114FBB925F/",
+   "status": 200,
+   "shot": "data/shots/4ed67d25e8c340fe.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/bjak-1/j/114FBB925F/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Petaling Jaya, Selangor, Malaysia",
+  "place_signals": [
+   {
+    "quote": "Petaling Jaya, Selangor, Malaysia",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is based in Malaysia. This is a hybrid role. You are expected to work from our Malaysia office at least 3 days per week",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We have teams working around the world, with over 20 nationalities from our offices and remotely",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role is based in Malaysia. This is a hybrid role. You are expected to work from our Malaysia office at least 3 days per week",
+  "reason": "Product design role requires hybrid work at the Malaysia office at least 3 days per week, which rules out working from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "BJAK",
+   "seniority": "unstated",
+   "remote": "hybrid",
+   "onsite_days": "at least 3 days per week",
+   "countries": [
+    "Malaysia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "3+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "644deca523c34384": {
+  "id": "644deca523c34384",
+  "at": "2026-11-03T11:54:04",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/hospitable/j/B5161621AB/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/hospitable/j/B5161621AB/",
+   "status": 200,
+   "shot": "data/shots/644deca523c34384.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/hospitable/j/B5161621AB/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Head of Design (North America/Europe - Remote)",
+  "place_signals": [
+   {
+    "quote": "Head of Design (North America/Europe - Remote)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hospitable is a remote-only, global, and trust-based company.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hospitable is a remote-only and distributed company. The ideal fit would work in a European or North American (up to East Coast) timezone.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We can hire talent internationally as contractors—or employees if you are based in the United States, the European Union, or Australia",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Head of Design (North America/Europe - Remote)",
+  "reason": "Open remote Head of Design role in North America/Europe, which includes Portugal; no restriction contradicts it.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from title (head)"
+  ],
+  "fields": {
+   "role": "Head of Design (North America/Europe - Remote)",
+   "company": "Hospitable",
+   "seniority": "head",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "North America",
+    "Europe"
+   ],
+   "portugal_ok": "yes",
+   "salary": "USD$171,000.00 to $218,900.00 total cash budget, depending on seniority and cost of living; plus RSUs up to $119,400 and PSUs",
+   "years_xp": null,
+   "reports_to": "CEO (Pierre)",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "801e877e01684205": {
+  "id": "801e877e01684205",
+  "at": "2026-11-03T11:54:23",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/homey/j/3745D06C0A/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/homey/?not_found=true",
+   "status": 200,
+   "shot": "data/shots/801e877e01684205.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://apply.workable.com/homey/?not_found=true",
+  "open_quote": "the employer's hiring system no longer has this posting",
+  "stage": "render",
+  "reason": "the employer says it is closed"
+ },
+ "302d82e758c544b0": {
+  "id": "302d82e758c544b0",
+  "at": "2026-11-03T11:54:26",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/aviso/j/C0333395EC/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/aviso/j/C0333395EC/",
+   "status": 200,
+   "shot": "data/shots/302d82e758c544b0.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/aviso/j/C0333395EC/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "67f9b978d6c64858": {
+  "id": "67f9b978d6c64858",
+  "at": "2026-11-03T11:54:29",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/cubx/j/9FB2773667/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/cubx/j/9FB2773667/",
+   "status": 200,
+   "shot": "data/shots/67f9b978d6c64858.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/cubx/j/9FB2773667/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "36a3ede089ac4e31": {
+  "id": "36a3ede089ac4e31",
+  "at": "2026-11-03T11:54:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/mrsool-3/j/C6EED30892/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/mrsool-3/j/C6EED30892/",
+   "status": 200,
+   "shot": "data/shots/36a3ede089ac4e31.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/mrsool-3/j/C6EED30892/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "3f3f0fc179e94161": {
+  "id": "3f3f0fc179e94161",
+  "at": "2026-11-03T11:54:35",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/propeller/j/213D9F7F8C/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/propeller/j/213D9F7F8C/",
+   "status": 200,
+   "shot": "data/shots/3f3f0fc179e94161.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/propeller/j/213D9F7F8C/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Hybrid; Sydney, New South Wales, Australia",
+  "place_signals": [
+   {
+    "quote": "Sydney, New South Wales, Australia",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid work arrangements and WFH equipment provided",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Thrive in a distributed team, working autonomously across locations and time zones while building strong connections with customers and teammates.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Hybrid ... Sydney, New South Wales, Australia",
+  "reason": "It is a product designer role, but it is hybrid based in Sydney, Australia, and the page offers no remote option for other countries.",
+  "confidence": "medium",
+  "inferred": [
+   "Hybrid in Sydney implies office attendance in Sydney; the page does not state the number of days."
+  ],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Propeller",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Australia"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "3-5 years' experience as a product designer",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a8ac56a5aef74d5e": {
+  "id": "a8ac56a5aef74d5e",
+  "at": "2026-11-03T11:54:47",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/innovaccer-analytics/j/299D21D6D3/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/innovaccer-analytics/j/299D21D6D3/",
+   "status": 200,
+   "shot": "data/shots/a8ac56a5aef74d5e.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/innovaccer-analytics/j/299D21D6D3/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "6238754a27fa422f": {
+  "id": "6238754a27fa422f",
+  "at": "2026-11-03T11:54:50",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/innovaccer-analytics/j/C697715EF9/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/innovaccer-analytics/j/C697715EF9/",
+   "status": 200,
+   "shot": "data/shots/6238754a27fa422f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/innovaccer-analytics/j/C697715EF9/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "c62e50891297421d": {
+  "id": "c62e50891297421d",
+  "at": "2026-11-03T11:54:53",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/platzi/j/28D7BEC272/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/platzi/j/28D7BEC272/",
+   "status": 200,
+   "shot": "data/shots/c62e50891297421d.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/platzi/j/28D7BEC272/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "533614daf4eb40a7": {
+  "id": "533614daf4eb40a7",
+  "at": "2026-11-03T11:54:57",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/prismplus/j/22C5C470A3/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/prismplus/j/22C5C470A3/",
+   "status": 200,
+   "shot": "data/shots/533614daf4eb40a7.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/prismplus/j/22C5C470A3/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "46dc18403c214d77": {
+  "id": "46dc18403c214d77",
+  "at": "2026-11-03T11:54:59",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/qodea/j/26E2DCF38D/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/qodea/j/26E2DCF38D/",
+   "status": 200,
+   "shot": "data/shots/46dc18403c214d77.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/qodea/j/26E2DCF38D/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Buenos Aires, Buenos Aires, Argentina",
+  "place_signals": [
+   {
+    "quote": "Buenos Aires, Buenos Aires, Argentina",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We are looking for a Lead Experience Designer to join our delivery center in Buenos Aires.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "We are looking for a Lead Experience Designer to join our delivery center in Buenos Aires.",
+  "reason": "Lead UX/experience design role that is hybrid at the Buenos Aires delivery center, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority inferred from title 'Lead'"
+  ],
+  "fields": {
+   "role": "Lead Experience Designer",
+   "company": "Qodea",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Argentina"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "8+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "27763c8bfc8c42f0": {
+  "id": "27763c8bfc8c42f0",
+  "at": "2026-11-03T11:55:07",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/qodea/j/9CF43C21F3/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/qodea/j/9CF43C21F3/",
+   "status": 200,
+   "shot": "data/shots/27763c8bfc8c42f0.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/qodea/j/9CF43C21F3/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Buenos Aires, Buenos Aires, Argentina",
+  "place_signals": [
+   {
+    "quote": "Buenos Aires, Buenos Aires, Argentina",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "HybridDeliveryFull time",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We are looking for a Senior Experience Designer to join our delivery center in Buenos Aires.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "As our hiring team is international, we kindly ask that you submit your CV in English",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "We are looking for a Senior Experience Designer to join our delivery center in Buenos Aires.",
+  "reason": "Hybrid Senior Experience Designer role tied to the Buenos Aires delivery center, with no remote option offered for other locations.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Experience Designer",
+   "company": "Qodea",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Argentina"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "997de017516d4081": {
+  "id": "997de017516d4081",
+  "at": "2026-11-03T11:55:15",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/innovaccer-analytics/j/DD9CF05BD8/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/innovaccer-analytics/j/DD9CF05BD8/",
+   "status": 200,
+   "shot": "data/shots/997de017516d4081.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/innovaccer-analytics/j/DD9CF05BD8/",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+ },
+ "54604a2edae04c15": {
+  "id": "54604a2edae04c15",
+  "at": "2026-11-03T11:55:18",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/rapsodo/j/C6833163DD/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/rapsodo/j/C6833163DD/",
+   "status": 200,
+   "shot": "data/shots/54604a2edae04c15.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/rapsodo/j/C6833163DD/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "On-site RSO Full time İzmir, İzmir, Turkey",
+  "place_signals": [
+   {
+    "quote": "İzmir, İzmir, Turkey",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Ability to work with both collocated and remote collaborators.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "On-site ... İzmir, İzmir, Turkey",
+  "reason": "Product design role is open, but it is on-site in İzmir, Turkey, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority unstated; 3+ years experience listed",
+   "fixed-term noted in title"
+  ],
+  "fields": {
+   "role": "Product Designer (Fixed-Term)",
+   "company": "Rapsodo",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Turkey"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "At least 3 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  }
 }
