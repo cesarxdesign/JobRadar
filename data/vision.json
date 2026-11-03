@@ -1666026,7 +1666026,7 @@
  },
  "1cced7ae68dc4578": {
   "id": "1cced7ae68dc4578",
-  "at": "2026-11-03T12:58:32",
+  "at": "2026-11-03T08:58:06",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://career.curamet.se/",
@@ -1666044,15 +1666044,14 @@
   ],
   "read": "board",
   "read_url": "https://career.curamet.se/",
-  "fetched_at": "2026-11-03T12:56:17",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
-  "posting_open": "yes",
-  "open_quote": null,
+  "posting_open": "unreadable",
+  "open_quote": "Join the team ... Senior UX/UI designer Products Solutions · Malmö · Hybrid All jobs",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "yes",
+  "role_verdict": "unclear",
   "workplace_as_posted": "hybrid",
   "location_under_the_title": "Products Solutions · Malmö · Hybrid",
   "place_signals": [
@@ -1666063,36 +1666062,29 @@
     "says": "portugal_out"
    },
    {
-    "quote": "Malmö",
-    "where": "side panel",
-    "kind": "tag",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "ensuring required local and on-site support and services for sustaining successful implementations",
+    "quote": "Curamet offers its diverse set of solutions and services across the nation while ensuring required local and on-site support and services for sustaining successful implementations.",
     "where": "opening paragraph",
     "kind": "generic",
     "says": "says_nothing"
    }
   ],
-  "place_verdict": "no",
+  "place_verdict": "unclear",
   "place_quote": "Senior UX/UI designer Products Solutions · Malmö · Hybrid",
-  "reason": "The role is hybrid in Malmö, Sweden, with no remote option stated, so it can't be done from Portugal.",
+  "reason": "The page is a company career landing page that lists one job title with no description, not a single job posting; the only place line is Malmö, Hybrid.",
   "confidence": "medium",
   "inferred": [
-   "posting_open: the page is a company career site start page showing this one job, with no description, but the page title matches the job",
-   "seniority from title"
+   "seniority from the title"
   ],
   "fields": {
-   "role": "Senior UX/UI Designer",
-   "company": "Curamet AB",
+   "role": "Senior UX/UI designer",
+   "company": "Curamet",
    "seniority": "senior",
    "remote": "hybrid",
    "onsite_days": null,
    "countries": [
     "Sweden"
    ],
-   "portugal_ok": "no",
+   "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
@@ -1666100,8 +1666092,8 @@
    "posted": null
   },
   "stage": "vision",
-  "lane": "cut",
-  "reader_place": "no"
+  "lane": "unsure",
+  "unread_tries": 1
  },
  "7ee15645d1fe4114": {
   "id": "7ee15645d1fe4114",
@@ -1666349,13 +1666341,13 @@
  },
  "319366fb7ead4696": {
   "id": "319366fb7ead4696",
-  "at": "2026-11-03T12:58:35",
+  "at": "2026-11-03T08:58:27",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
   "board": {
-   "url": "https://www.cv-library.co.uk/job/225759998/head-of-ux-px?s=106923",
-   "status": 200,
+   "url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
+   "status": 403,
    "shot": "data/shots/319366fb7ead4696.jpg",
    "error": null
   },
@@ -1666363,66 +1666355,13 @@
   "found_by": null,
   "looked": [],
   "read": "board",
-  "read_url": "https://www.cv-library.co.uk/job/225759998/head-of-ux-px?s=106923",
-  "fetched_at": "2026-11-03T12:56:23",
-  "same_job": "yes",
-  "posted_by": "agency",
-  "hiring_for": null,
-  "posting_open": "yes",
-  "open_quote": null,
-  "language_of_the_posting": "English",
-  "language_ok": true,
-  "role_verdict": "yes",
-  "workplace_as_posted": "hybrid",
-  "location_under_the_title": "Nottingham, Nottinghamshire",
-  "place_signals": [
-   {
-    "quote": "Nottingham, Nottinghamshire",
-    "where": "under the title",
-    "kind": "tag",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
-    "where": "opening paragraph",
-    "kind": "explicit",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "Hybrid working from Nottingham",
-    "where": "body",
-    "kind": "explicit",
-    "says": "portugal_out"
-   }
-  ],
-  "place_verdict": "no",
-  "place_quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
-  "reason": "Head of UX/PX is a design leadership role, but it is hybrid and based in Nottingham, UK, with no remote option offered.",
-  "confidence": "high",
-  "inferred": [
-   "hiring_for is null because the page only says 'an innovative software organisation' and does not name the client",
-   "seniority taken as head from the title",
-   "onsite_days not stated"
-  ],
-  "fields": {
-   "role": "Head of UX / PX",
-   "company": "Experis",
-   "seniority": "head",
-   "remote": "hybrid",
-   "onsite_days": null,
-   "countries": [
-    "United Kingdom"
-   ],
-   "portugal_ok": "no",
-   "salary": "£85,000 - £90,000 per annum bonus + bens",
-   "years_xp": null,
-   "reports_to": null,
-   "language": "English",
-   "posted": "23rd Oct"
-  },
-  "stage": "vision",
-  "lane": "cut",
-  "reader_place": "no"
+  "read_url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
+  "lane": "unsure",
+  "posting_open": "unreadable",
+  "stage": "render",
+  "open_quote": "Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d22eb2ae3cc 46.102.17.26 PT",
+  "reason": "the page could not be read in the browser",
+  "unread_tries": 1
  },
  "47eeaf98419143a0": {
   "id": "47eeaf98419143a0",
@@ -1666545,13 +1666484,13 @@
  },
  "5fd0b73f67874d50": {
   "id": "5fd0b73f67874d50",
-  "at": "2026-11-03T12:58:35",
+  "at": "2026-11-03T08:58:34",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
   "board": {
-   "url": "https://www.cv-library.co.uk/job/225759935/ux-px-design-lead?s=106923",
-   "status": 200,
+   "url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
+   "status": 403,
    "shot": "data/shots/5fd0b73f67874d50.jpg",
    "error": null
   },
@@ -1666559,65 +1666498,13 @@
   "found_by": null,
   "looked": [],
   "read": "board",
-  "read_url": "https://www.cv-library.co.uk/job/225759935/ux-px-design-lead?s=106923",
-  "fetched_at": "2026-11-03T12:56:23",
-  "same_job": "yes",
-  "posted_by": "agency",
-  "hiring_for": null,
-  "posting_open": "yes",
-  "open_quote": null,
-  "language_of_the_posting": "English",
-  "language_ok": true,
-  "role_verdict": "yes",
-  "workplace_as_posted": "hybrid",
-  "location_under_the_title": "Nottingham, Nottinghamshire",
-  "place_signals": [
-   {
-    "quote": "Nottingham, Nottinghamshire",
-    "where": "under the title",
-    "kind": "tag",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
-    "where": "opening paragraph",
-    "kind": "explicit",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "Hybrid working based in Nottingham",
-    "where": "body",
-    "kind": "explicit",
-    "says": "portugal_out"
-   }
-  ],
-  "place_verdict": "no",
-  "place_quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
-  "reason": "Design lead role is hybrid based in Nottingham, UK, with no remote option, so it cannot be done from Portugal.",
-  "confidence": "high",
-  "inferred": [
-   "Seniority 'lead' inferred from title",
-   "Hiring company is an unnamed 'market-leading software organisation'; Experis is the recruiter (ManpowerGroup)"
-  ],
-  "fields": {
-   "role": "UX / PX Design Lead",
-   "company": "Experis",
-   "seniority": "lead",
-   "remote": "hybrid",
-   "onsite_days": null,
-   "countries": [
-    "United Kingdom"
-   ],
-   "portugal_ok": "no",
-   "salary": "£85,000 - £90,000 per annum bonus + bens",
-   "years_xp": null,
-   "reports_to": null,
-   "language": "English",
-   "posted": "23rd Oct"
-  },
-  "stage": "vision",
-  "lane": "cut",
-  "reader_place": "no"
+  "read_url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
+  "lane": "unsure",
+  "posting_open": "unreadable",
+  "stage": "render",
+  "open_quote": "Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d4de8b1e3cc 46.102.17.26 PT",
+  "reason": "the page could not be read in the browser",
+  "unread_tries": 1
  },
  "f6e7620db4044c20": {
   "id": "f6e7620db4044c20",
@@ -1676371,7 +1676258,7 @@
  },
  "c1b314d96a0f47bb": {
   "id": "c1b314d96a0f47bb",
-  "at": "2026-11-03T12:58:38",
+  "at": "2026-11-03T09:02:28",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-6316504667218702890?ckey=UX+designer&rgn=-1&pos=51&groupId=1075&elckey=6845454431354775350&p=3&aq=-4020709367531804460&cid=12006&jobAge=188&brelb=100&bscr=84.95024&scr=84.95024",
@@ -1676391,7 +1676278,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "81c647b9851e4f7e": {
   "id": "81c647b9851e4f7e",
@@ -1676486,7 +1676373,7 @@
  },
  "bb808006d7bd4b8a": {
   "id": "bb808006d7bd4b8a",
-  "at": "2026-11-03T12:58:39",
+  "at": "2026-11-03T09:02:29",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/8770498185579381181?ckey=UX+designer&rgn=-1&pos=70&groupId=1075&elckey=6845454431354775350&p=4&aq=-7295448912987507070&cid=12006&jobAge=188&brelb=100&bscr=84.51098&scr=84.51098",
@@ -1676506,7 +1676393,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "362d7bc080eb403f": {
   "id": "362d7bc080eb403f",
@@ -1680840,7 +1680727,7 @@
  },
  "265dd60573ed4b8b": {
   "id": "265dd60573ed4b8b",
-  "at": "2026-11-03T12:58:38",
+  "at": "2026-11-03T09:05:00",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.aplitrak.com/?adid=dC55ZGVmam9yZC40Mjg1NS4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ",
@@ -1680859,13 +1680746,12 @@
   ],
   "read": "board",
   "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46515/apply?source=arbetsformedlingen_v2",
-  "fetched_at": "2026-11-03T12:56:44",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Start Your Application Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application",
-  "language_of_the_posting": "unknown (no description visible; title in Swedish)",
+  "open_quote": "Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application",
+  "language_of_the_posting": "unknown (no description; title in Swedish)",
   "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
@@ -1680873,11 +1680759,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is only an application-start shell with no job description, so openness, role details and place cannot be judged.",
-  "confidence": "medium",
+  "reason": "The page is only an application-start shell with a title and no description, so open status, role and place cannot be judged.",
+  "confidence": "low",
   "inferred": [
-   "Company Saab taken from the pool and URL, not from the page text",
-   "Location Stockholm/Solna appears only in the URL, not in the page text"
+   "The URL path says Stockholm---Solna, but the page text itself gives no location, so it is not listed as a place signal.",
+   "language_ok is set true because no description exists to be in another language; the Swedish title alone is not the description."
   ],
   "fields": {
    "role": "Systemingenjör inom UX-Design",
@@ -1680889,12 +1680775,13 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "language": "Swedish (title only)",
+   "reports_to": null,
+   "language": "unknown",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "4e0e4c1c12474139": {
   "id": "4e0e4c1c12474139",
@@ -1681286,7 +1681173,7 @@
  },
  "9d046d2994fb4b0f": {
   "id": "9d046d2994fb4b0f",
-  "at": "2026-11-03T12:58:36",
+  "at": "2026-11-03T09:05:08",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.aplitrak.com/?adid=dC55ZGVmam9yZC4zOTcxNS4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ",
@@ -1681305,24 +1681192,32 @@
   ],
   "read": "board",
   "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46514/apply?source=arbetsformedlingen_v2",
-  "fetched_at": "2026-11-03T12:56:44",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Start Your Application Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application",
-  "language_of_the_posting": "unknown (no description; title in Swedish)",
+  "open_quote": "Start Your Application",
+  "language_of_the_posting": "Swedish (title only; no description shown)",
   "language_ok": false,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
-  "place_signals": [],
+  "place_signals": [
+   {
+    "quote": "Stockholm---Solna",
+    "where": "footer or small print",
+    "kind": "tag",
+    "says": "portugal_out"
+   }
+  ],
   "place_verdict": "unclear",
-  "place_quote": "",
-  "reason": "The page is only an application-start shell with no job description, so open status, language and place cannot be read.",
+  "place_quote": "Stockholm---Solna",
+  "reason": "The page is only an application start screen with no job description, so the posting cannot be read as a job posting.",
   "confidence": "medium",
   "inferred": [
-   "The URL path says Stockholm---Solna, but the page text itself gives no location."
+   "Location Stockholm/Solna taken from the page address, not the page text",
+   "Company Saab taken from the pool listing",
+   "Language inferred from the Swedish title"
   ],
   "fields": {
    "role": "Systemingenjör inom UX-Design",
@@ -1681335,12 +1681230,12 @@
    "salary": null,
    "years_xp": null,
    "reports_to": null,
-   "language": "unknown",
+   "language": "Swedish",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "bec1efbf30394361": {
   "id": "bec1efbf30394361",
@@ -1681529,7 +1681424,7 @@
  },
  "9175438167d3425a": {
   "id": "9175438167d3425a",
-  "at": "2026-11-03T12:58:39",
+  "at": "2026-11-03T09:05:12",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.fixando.pt/partilhar/3970346/procura-Designers-de-Impressao-em-Caminha?ref=xml_feed",
@@ -1681544,17 +1681439,16 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.fixando.pt/partilhar/3970346/procura-Designers-de-Impressao-em-Caminha?ref=xml_feed",
-  "fetched_at": "2026-11-03T12:56:26",
   "same_job": "no",
   "posted_by": "employer",
   "hiring_for": null,
-  "posting_open": "yes",
-  "open_quote": null,
+  "posting_open": "unreadable",
+  "open_quote": "Detalhes do pedido - ID3970346 - M. M.",
   "language_of_the_posting": "Portuguese",
   "language_ok": true,
-  "role_verdict": "no",
+  "role_verdict": "unclear",
   "workplace_as_posted": "onsite",
-  "location_under_the_title": "Caminha",
+  "location_under_the_title": "Design de Impressão - 4910 - Dem - Caminha",
   "place_signals": [
    {
     "quote": "Na localização do especialista (máx. 25 km de distância)",
@@ -1681563,19 +1681457,19 @@
     "says": "portugal_in"
    },
    {
-    "quote": "Caminha",
+    "quote": "Design de Impressão - 4910 - Dem - Caminha",
     "where": "under the title",
     "kind": "tag",
     "says": "portugal_in"
    }
   ],
-  "place_verdict": "pt_onsite",
+  "place_verdict": "unclear",
   "place_quote": "Na localização do especialista (máx. 25 km de distância)",
-  "reason": "This is a customer's request for a one-off print job (a fanzine) on a marketplace, not an employment posting for a designer role.",
+  "reason": "The page is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting for an employee.",
   "confidence": "high",
   "inferred": [
-   "same_job is no because the page is a client's service request, not a job posting",
-   "workplace onsite inferred from the service location being at the specialist's location within 25 km of Caminha"
+   "posting_open is unreadable because the page is a client service request, not a job posting",
+   "workplace_as_posted is onsite because the work happens at the specialist's location near Caminha"
   ],
   "fields": {
    "role": "Design de Impressão",
@@ -1681586,17 +1681480,16 @@
    "countries": [
     "Portugal"
    ],
-   "portugal_ok": "yes",
+   "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
    "language": "Portuguese",
    "posted": "21.10.2026 - 11:04"
   },
-  "inferred_note": "Client request on a freelance marketplace; the requester is a private individual, not a hiring company.",
   "stage": "vision",
-  "lane": "cut",
-  "reader_place": "pt_onsite"
+  "lane": "unsure",
+  "unread_tries": 1
  },
  "4682802a62504661": {
   "id": "4682802a62504661",
@@ -1683026,7 +1682919,7 @@
  },
  "e66b0e0aded84ac6": {
   "id": "e66b0e0aded84ac6",
-  "at": "2026-11-03T12:58:40",
+  "at": "2026-11-03T09:05:46",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c4da4d30-6e6e-4dd4-9141-60a5db3b3321&jobId=572000&lang=en_US",
@@ -1683041,7 +1682934,6 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c4da4d30-6e6e-4dd4-9141-60a5db3b3321&jobId=572000&lang=en_US",
-  "fetched_at": "2026-11-03T12:56:29",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1683055,28 +1682947,26 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title 'System Design Engineer I' is engineering by title, but nothing else is shown.",
-  "confidence": "medium",
-  "inferred": [
-   "posting_open set to unreadable because only a cookie notice is visible",
-   "seniority inferred from 'I' in the title"
-  ],
+  "reason": "The page shows only a cookie consent banner with no job description, so it cannot be read as a posting.",
+  "confidence": "high",
+  "inferred": [],
   "fields": {
    "role": "System Design Engineer I",
-   "company": null,
-   "seniority": "junior",
+   "company": "c4da4d30-6e6e-4dd4-9141-60a5db3b3321",
+   "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
+   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "0326c516031a445e": {
   "id": "0326c516031a445e",
@@ -1684009,7 +1683899,7 @@
  },
  "68e1415e17af485f": {
   "id": "68e1415e17af485f",
-  "at": "2026-11-03T12:58:41",
+  "at": "2026-11-03T09:06:11",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://uscareers-cvent.icims.com/jobs/8991/login",
@@ -1684024,12 +1683914,11 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://uscareers-cvent.icims.com/jobs/8991/login",
-  "fetched_at": "2026-11-03T12:56:41",
-  "same_job": "yes",
+  "same_job": "no",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Skip Branding Skip to Main Content Home Life At Cvent Benefits Campus Locations FIND JOBS COMPANY",
+  "open_quote": "Login",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1684038,7 +1683927,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer text with no job description, so it is an empty shell, not a readable posting.",
+  "reason": "The page is a Cvent careers login page with only menu and footer text, no job posting content.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1684057,7 +1683946,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "1f7bb53c3e944bf9": {
   "id": "1f7bb53c3e944bf9",
@@ -1688510,7 +1688399,7 @@
  },
  "c3c1e71af1cb47fa": {
   "id": "c3c1e71af1cb47fa",
-  "at": "2026-11-03T12:58:43",
+  "at": "2026-11-03T09:08:13",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-513961471400230687?ckey=UX+designer&rgn=-1&pos=12&groupId=1075&elckey=6845454431354775350&p=1&aq=-4281334290100560780&cid=12006&jobAge=212&brelb=100&bscr=102.42857&scr=102.42857",
@@ -1688530,7 +1688419,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "b78255c3db0a4b38": {
   "id": "b78255c3db0a4b38",
@@ -1691030,7 +1690919,7 @@
  },
  "69b61c581463480b": {
   "id": "69b61c581463480b",
-  "at": "2026-11-03T12:58:44",
+  "at": "2026-11-03T09:09:54",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.comeet.com/jobs/earnix/93.00B/digital-designer/A1.470",
@@ -1691045,8 +1690934,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://www.comeet.com/jobs/earnix/93.00B",
-  "fetched_at": "2026-11-03T12:56:31",
-  "same_job": "yes",
+  "same_job": "no",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
@@ -1691059,7 +1690947,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a careers list of Earnix openings and does not contain a Digital Designer posting or description, so it cannot be read as a single job.",
+  "reason": "The page is a list of Earnix jobs, not a single posting, and no Digital Designer role appears in it.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1691072,12 +1690960,13 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
+   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "51a1ebdc3a204e8b": {
   "id": "51a1ebdc3a204e8b",
@@ -1692565,7 +1692454,7 @@
  },
  "d6c3e331def64dea": {
   "id": "d6c3e331def64dea",
-  "at": "2026-11-03T12:58:44",
+  "at": "2026-11-03T09:10:33",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job",
@@ -1692580,12 +1692469,11 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job?mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
-  "fetched_at": "2026-11-03T12:56:20",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Search Jobs",
+  "open_quote": "Help Us Help Others",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1692593,9 +1692481,9 @@
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "",
-  "reason": "The page shows only the careers site header and footer with no job description, so the posting content is an empty shell.",
-  "confidence": "high",
+  "place_quote": "45335 Vintage Park Plaza, Sterling, VA 20166",
+  "reason": "The page shows only the careers site header and footer with no job description, so it is an empty shell and the posting cannot be read.",
+  "confidence": "medium",
   "inferred": [],
   "fields": {
    "role": "Senior UI/UX Designer",
@@ -1692613,7 +1692501,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "45462ecd287140a7": {
   "id": "45462ecd287140a7",
@@ -1693450,7 +1693338,7 @@
  },
  "97acf866f94646c2": {
   "id": "97acf866f94646c2",
-  "at": "2026-11-03T12:58:44",
+  "at": "2026-11-03T09:11:35",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.nextiva.com/company/careers-listing?gh_jid=8888979002",
@@ -1693472,12 +1693360,11 @@
   ],
   "read": "board",
   "read_url": "https://www.nextiva.com/company/careers-listing?gh_jid=8888979002",
-  "fetched_at": "2026-11-03T12:57:03",
-  "same_job": "yes",
+  "same_job": "no",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Products Solutions Resources Pricing Sales 800-799-0600 Support Log In Get a Demo",
+  "open_quote": "Join the Team - Careers - Nextiva",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1693486,9 +1693373,12 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only Nextiva site navigation and footer with no job description, so it is an empty shell rather than a posting.",
+  "reason": "The page shows only site navigation and footer with no job posting content; the job description did not load.",
   "confidence": "high",
-  "inferred": [],
+  "inferred": [
+   "same_job set to no because the page contains no posting for the listed role, only a generic careers shell",
+   "language assumed English from navigation text"
+  ],
   "fields": {
    "role": "Senior Product Designer",
    "company": "Nextiva",
@@ -1693505,7 +1693395,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "c64094eccbd5407c": {
   "id": "c64094eccbd5407c",
@@ -1702426,7 +1702316,7 @@
  },
  "db4adefd9bb244e3": {
   "id": "db4adefd9bb244e3",
-  "at": "2026-11-03T12:58:44",
+  "at": "2026-11-03T09:14:54",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9e11f3d3-6c67-472b-abab-e5460d08e697&jobId=554336&lang=en_US",
@@ -1702441,7 +1702331,6 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9e11f3d3-6c67-472b-abab-e5460d08e697&jobId=554336&lang=en_US",
-  "fetched_at": "2026-11-03T12:56:32",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1702455,12 +1702344,9 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title alone (P&ID and Piping Designer) is an engineering/drafting job, not clearly product design.",
-  "confidence": "low",
-  "inferred": [
-   "language assumed English from the banner text",
-   "role verdict left unclear because the page is unreadable"
-  ],
+  "reason": "The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
+  "confidence": "high",
+  "inferred": [],
   "fields": {
    "role": "P&ID and Piping Designer",
    "company": "9e11f3d3-6c67-472b-abab-e5460d08e697",
@@ -1702477,7 +1702363,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "bcfc7d2d2ae94640": {
   "id": "bcfc7d2d2ae94640",
@@ -1702743,7 +1702629,7 @@
  },
  "f35a7322f6d443c4": {
   "id": "f35a7322f6d443c4",
-  "at": "2026-11-03T12:58:47",
+  "at": "2026-11-03T09:15:06",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/3824942177114830890?ckey=UX+designer&rgn=-1&pos=59&groupId=1075&elckey=6417764813443540579&p=3&aq=-2396726538537014954&cid=12006&jobAge=36&brelb=100&bscr=80.153046&scr=80.153046",
@@ -1702763,11 +1702649,11 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "536bce1561be4991": {
   "id": "536bce1561be4991",
-  "at": "2026-11-03T12:58:48",
+  "at": "2026-11-03T09:15:06",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-7537850345726094615?ckey=UX+designer&rgn=-1&pos=3&groupId=1075&elckey=6417764813443540579&p=1&aq=3723811435019407819&cid=12006&jobAge=36&brelb=100&bscr=104.19895&scr=104.19895",
@@ -1702787,7 +1702673,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "90128276fc2b49b4": {
   "id": "90128276fc2b49b4",
@@ -1704922,7 +1704808,7 @@
  },
  "08577b63c7724e21": {
   "id": "08577b63c7724e21",
-  "at": "2026-11-03T12:59:16",
+  "at": "2026-11-03T09:16:03",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers/job/US---TX-Austin/Product-Designer_R57872",
@@ -1704935,14 +1704821,14 @@
   },
   "found_by": null,
   "looked": [],
-  "lane": "closed",
-  "posting_open": "no",
-  "closed_by": "employer",
-  "read": "employer",
-  "read_url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers/job/US---TX-Austin/Product-Designer_R57872",
-  "open_quote": "the employer's board no longer has this posting: its link opens the list of open jobs",
+  "read": "board",
+  "read_url": null,
+  "lane": "unsure",
+  "posting_open": "unreadable",
   "stage": "render",
-  "reason": "the employer says it is closed"
+  "open_quote": null,
+  "reason": "the page could not be read in the browser",
+  "unread_tries": 1
  },
  "faaef21505d24789": {
   "id": "faaef21505d24789",
@@ -1706855,13 +1706741,13 @@
  },
  "a6d7e3a9972040a7": {
   "id": "a6d7e3a9972040a7",
-  "at": "2026-11-03T12:59:03",
+  "at": "2026-11-03T09:16:44",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
   "board": {
-   "url": "https://www.cv-library.co.uk/job/225746134/ux-ui-designer?s=106923",
-   "status": 200,
+   "url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
+   "status": 403,
    "shot": "data/shots/a6d7e3a9972040a7.jpg",
    "error": null
   },
@@ -1706869,61 +1706755,13 @@
   "found_by": null,
   "looked": [],
   "read": "board",
-  "read_url": "https://www.cv-library.co.uk/job/225746134/ux-ui-designer?s=106923",
-  "same_job": "yes",
-  "posted_by": "agency",
-  "hiring_for": "a public sector organisation in London (Housing Repairs Transformation programme)",
-  "posting_open": "yes",
-  "open_quote": null,
-  "language_of_the_posting": "English",
-  "language_ok": true,
-  "role_verdict": "yes",
-  "workplace_as_posted": "hybrid",
-  "location_under_the_title": "City of London, London",
-  "place_signals": [
-   {
-    "quote": "City of London, London",
-    "where": "under the title",
-    "kind": "tag",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "Location: London / Hybrid - 2/3 days on-site",
-    "where": "opening paragraph",
-    "kind": "explicit",
-    "says": "portugal_out"
-   },
-   {
-    "quote": "Sellick Partnership is currently supporting a public sector organisation in London",
-    "where": "opening paragraph",
-    "kind": "generic",
-    "says": "says_nothing"
-   }
-  ],
-  "place_verdict": "no",
-  "place_quote": "Location: London / Hybrid - 2/3 days on-site",
-  "reason": "Hybrid contract role requiring 2-3 days on-site in London, which is not doable from Portugal.",
-  "confidence": "high",
-  "inferred": [],
-  "fields": {
-   "role": "UX/UI Designer",
-   "company": "Sellick Partnership",
-   "seniority": "senior",
-   "remote": "hybrid",
-   "onsite_days": "2-3 days per week",
-   "countries": [
-    "United Kingdom"
-   ],
-   "portugal_ok": "no",
-   "salary": "£600 per day, Umbrella",
-   "years_xp": null,
-   "reports_to": null,
-   "language": "English",
-   "posted": "20th Oct"
-  },
-  "stage": "vision",
-  "lane": "cut",
-  "reader_place": "no"
+  "read_url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
+  "lane": "unsure",
+  "posting_open": "unreadable",
+  "stage": "render",
+  "open_quote": "Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a47eb9de8750d 46.102.17.26 PT",
+  "reason": "the page could not be read in the browser",
+  "unread_tries": 1
  },
  "1a35bf713cf143c0": {
   "id": "1a35bf713cf143c0",
@@ -1711398,7 +1711236,7 @@
  },
  "fb4f9ed37a0349a3": {
   "id": "fb4f9ed37a0349a3",
-  "at": "2026-11-03T12:58:49",
+  "at": "2026-11-03T09:18:51",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-axway.icims.com/jobs/8948/senior-user-exp-design-engineer-i/job",
@@ -1711413,7 +1711251,6 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://careers-axway.icims.com/jobs/8948/senior-user-exp-design-engineer-i/job",
-  "fetched_at": "2026-11-03T12:56:35",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1711421,22 +1711258,21 @@
   "open_quote": "Skip Branding Explore Us PRODUCTS Amplify Platform B2B Integration",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "yes",
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer with no job description, so the posting cannot be read; the title suggests a UX role.",
-  "confidence": "medium",
+  "reason": "The page shows only site navigation and footer with no job description, so it is not a readable single posting.",
+  "confidence": "high",
   "inferred": [
-   "role_verdict judged from title alone",
-   "company taken from pool listing (74Software/Axway)"
+   "The page title mentions Noida, India, but the visible text has no description, so no place signal was recorded."
   ],
   "fields": {
-   "role": "Lead Design Analyst - User Experience (UX)",
-   "company": "74Software",
-   "seniority": "lead",
+   "role": "Senior User Exp Design Engineer I",
+   "company": "Axway (74Software)",
+   "seniority": "senior",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
@@ -1711449,7 +1711285,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "22607711276a4855": {
   "id": "22607711276a4855",
@@ -1727774,6 +1727610,89 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "7c5feb58568b40ac": {
+  "id": "7c5feb58568b40ac",
+  "at": "2026-11-03T15:52:13",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/pairedrecruiting/j/576673C79D/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/pairedrecruiting/j/576673C79D/",
+   "status": 200,
+   "shot": "data/shots/7c5feb58568b40ac.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/pairedrecruiting/j/576673C79D/",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote; Recruiting Team; Argentina",
+  "place_signals": [
+   {
+    "quote": "Senior Designer for an DTC company (US-Based/Remote)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Argentina",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote Working for US Company",
+    "where": "side panel",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our mission is to provide great jobs to talented people, no matter where they are located.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Senior Designer for an DTC company (US-Based/Remote)",
+  "reason": "The job is mostly brand, campaign, paid media and e-commerce creative design, so it is not a product design role; the location is also conflicting (US-Based/Remote vs Argentina).",
+  "confidence": "medium",
+  "inferred": [
+   "role_verdict judged from the description: mostly brand/marketing creative",
+   "hiring company not named, so hiring_for is null"
+  ],
+  "fields": {
+   "role": "Senior Designer for an DTC company (US-Based/Remote)",
+   "company": "Paired",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "US",
+    "Argentina"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "place_verdict_note": null,
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
  },
  "e269ff4fe26e4f1e": {
   "id": "e269ff4fe26e4f1e",
