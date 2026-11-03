@@ -51,6 +51,13 @@ def cli_env():
     for k in ("CLAUDECODE", "CLAUDECODE_ENTRYPOINT", "CLAUDE_CODE_SSE_PORT",
               "CLAUDE_CODE_ENTRYPOINT"):
         env.pop(k, None)
+    # Started from a chat, a run also inherits that chat's session: its login is
+    # refreshed by the app, through a socket that dies when the app quits. The
+    # night VISION of 2026-11-03 lost 6 hours that way. His own login stands alone.
+    for k in ("CLAUDE_CODE_SDK_HAS_HOST_AUTH_REFRESH", "CLAUDE_CODE_MESSAGING_SOCKET", "CLAUDE_CODE_MESSAGING_TOKEN",
+              "CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_SESSION_ID", "CLAUDE_CODE_HOST_SESSION_ID",
+              "CLAUDE_CODE_OAUTH_SCOPES", "CLAUDE_CODE_SESSION_ATTENDED", "CLAUDE_PID"):
+        env.pop(k, None)
     return env
 
 

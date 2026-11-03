@@ -264,16 +264,18 @@ def greenhouse_feed(rec):
     return None
 
 
-def _get(url, timeout=20):
+def _get(url, timeout=20, again=True):
     """(status, parsed json or None). 0 when the network failed: that is not an answer."""
     import urllib.request, urllib.error
     try:
         raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout).read()
         return 200, json.loads(raw)
     except urllib.error.HTTPError as e:
-        if e.code == 429 and timeout != -1:              # asked too fast: wait, ask once more
+        # asked too fast: wait, ask once more. Once: it asked forever on the night of 2026-11-03,
+        # while Workable refused every call, and all 9 readers sat on it for 6 hours
+        if e.code == 429 and again:
             time.sleep(20)
-            code, d = _get(url, 30)
+            code, d = _get(url, 30, again=False)
             return (0, None) if code == 429 else (code, d)
         return e.code, None
     except Exception:
