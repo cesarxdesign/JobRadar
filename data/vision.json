@@ -1666026,7 +1666026,7 @@
  },
  "1cced7ae68dc4578": {
   "id": "1cced7ae68dc4578",
-  "at": "2026-11-03T08:58:06",
+  "at": "2026-11-03T12:58:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://career.curamet.se/",
@@ -1666044,14 +1666044,15 @@
   ],
   "read": "board",
   "read_url": "https://career.curamet.se/",
+  "fetched_at": "2026-11-03T12:56:17",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
-  "posting_open": "unreadable",
-  "open_quote": "Join the team ... Senior UX/UI designer Products Solutions · Malmö · Hybrid All jobs",
+  "posting_open": "yes",
+  "open_quote": null,
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "unclear",
+  "role_verdict": "yes",
   "workplace_as_posted": "hybrid",
   "location_under_the_title": "Products Solutions · Malmö · Hybrid",
   "place_signals": [
@@ -1666062,29 +1666063,36 @@
     "says": "portugal_out"
    },
    {
-    "quote": "Curamet offers its diverse set of solutions and services across the nation while ensuring required local and on-site support and services for sustaining successful implementations.",
+    "quote": "Malmö",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "ensuring required local and on-site support and services for sustaining successful implementations",
     "where": "opening paragraph",
     "kind": "generic",
     "says": "says_nothing"
    }
   ],
-  "place_verdict": "unclear",
+  "place_verdict": "no",
   "place_quote": "Senior UX/UI designer Products Solutions · Malmö · Hybrid",
-  "reason": "The page is a company career landing page that lists one job title with no description, not a single job posting; the only place line is Malmö, Hybrid.",
+  "reason": "The role is hybrid in Malmö, Sweden, with no remote option stated, so it can't be done from Portugal.",
   "confidence": "medium",
   "inferred": [
-   "seniority from the title"
+   "posting_open: the page is a company career site start page showing this one job, with no description, but the page title matches the job",
+   "seniority from title"
   ],
   "fields": {
-   "role": "Senior UX/UI designer",
-   "company": "Curamet",
+   "role": "Senior UX/UI Designer",
+   "company": "Curamet AB",
    "seniority": "senior",
    "remote": "hybrid",
    "onsite_days": null,
    "countries": [
     "Sweden"
    ],
-   "portugal_ok": "unclear",
+   "portugal_ok": "no",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
@@ -1666092,8 +1666100,8 @@
    "posted": null
   },
   "stage": "vision",
-  "lane": "unsure",
-  "unread_tries": 1
+  "lane": "cut",
+  "reader_place": "no"
  },
  "7ee15645d1fe4114": {
   "id": "7ee15645d1fe4114",
@@ -1666341,13 +1666349,13 @@
  },
  "319366fb7ead4696": {
   "id": "319366fb7ead4696",
-  "at": "2026-11-03T08:58:27",
+  "at": "2026-11-03T12:58:35",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
   "board": {
-   "url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
-   "status": 403,
+   "url": "https://www.cv-library.co.uk/job/225759998/head-of-ux-px?s=106923",
+   "status": 200,
    "shot": "data/shots/319366fb7ead4696.jpg",
    "error": null
   },
@@ -1666355,13 +1666363,66 @@
   "found_by": null,
   "looked": [],
   "read": "board",
-  "read_url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
-  "lane": "unsure",
-  "posting_open": "unreadable",
-  "stage": "render",
-  "open_quote": "Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d22eb2ae3cc 46.102.17.26 PT",
-  "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "read_url": "https://www.cv-library.co.uk/job/225759998/head-of-ux-px?s=106923",
+  "fetched_at": "2026-11-03T12:56:23",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Nottingham, Nottinghamshire",
+  "place_signals": [
+   {
+    "quote": "Nottingham, Nottinghamshire",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working from Nottingham",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
+  "reason": "Head of UX/PX is a design leadership role, but it is hybrid and based in Nottingham, UK, with no remote option offered.",
+  "confidence": "high",
+  "inferred": [
+   "hiring_for is null because the page only says 'an innovative software organisation' and does not name the client",
+   "seniority taken as head from the title",
+   "onsite_days not stated"
+  ],
+  "fields": {
+   "role": "Head of UX / PX",
+   "company": "Experis",
+   "seniority": "head",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£85,000 - £90,000 per annum bonus + bens",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "23rd Oct"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  },
  "47eeaf98419143a0": {
   "id": "47eeaf98419143a0",
@@ -1666484,13 +1666545,13 @@
  },
  "5fd0b73f67874d50": {
   "id": "5fd0b73f67874d50",
-  "at": "2026-11-03T08:58:34",
+  "at": "2026-11-03T12:58:35",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
   "board": {
-   "url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
-   "status": 403,
+   "url": "https://www.cv-library.co.uk/job/225759935/ux-px-design-lead?s=106923",
+   "status": 200,
    "shot": "data/shots/5fd0b73f67874d50.jpg",
    "error": null
   },
@@ -1666498,13 +1666559,65 @@
   "found_by": null,
   "looked": [],
   "read": "board",
-  "read_url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
-  "lane": "unsure",
-  "posting_open": "unreadable",
-  "stage": "render",
-  "open_quote": "Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d4de8b1e3cc 46.102.17.26 PT",
-  "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "read_url": "https://www.cv-library.co.uk/job/225759935/ux-px-design-lead?s=106923",
+  "fetched_at": "2026-11-03T12:56:23",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Nottingham, Nottinghamshire",
+  "place_signals": [
+   {
+    "quote": "Nottingham, Nottinghamshire",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working based in Nottingham",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
+  "reason": "Design lead role is hybrid based in Nottingham, UK, with no remote option, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "Seniority 'lead' inferred from title",
+   "Hiring company is an unnamed 'market-leading software organisation'; Experis is the recruiter (ManpowerGroup)"
+  ],
+  "fields": {
+   "role": "UX / PX Design Lead",
+   "company": "Experis",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£85,000 - £90,000 per annum bonus + bens",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "23rd Oct"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  },
  "f6e7620db4044c20": {
   "id": "f6e7620db4044c20",
@@ -1676258,7 +1676371,7 @@
  },
  "c1b314d96a0f47bb": {
   "id": "c1b314d96a0f47bb",
-  "at": "2026-11-03T09:02:28",
+  "at": "2026-11-03T12:58:38",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-6316504667218702890?ckey=UX+designer&rgn=-1&pos=51&groupId=1075&elckey=6845454431354775350&p=3&aq=-4020709367531804460&cid=12006&jobAge=188&brelb=100&bscr=84.95024&scr=84.95024",
@@ -1676278,7 +1676391,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "81c647b9851e4f7e": {
   "id": "81c647b9851e4f7e",
@@ -1676373,7 +1676486,7 @@
  },
  "bb808006d7bd4b8a": {
   "id": "bb808006d7bd4b8a",
-  "at": "2026-11-03T09:02:29",
+  "at": "2026-11-03T12:58:39",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/8770498185579381181?ckey=UX+designer&rgn=-1&pos=70&groupId=1075&elckey=6845454431354775350&p=4&aq=-7295448912987507070&cid=12006&jobAge=188&brelb=100&bscr=84.51098&scr=84.51098",
@@ -1676393,7 +1676506,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "362d7bc080eb403f": {
   "id": "362d7bc080eb403f",
@@ -1680727,7 +1680840,7 @@
  },
  "265dd60573ed4b8b": {
   "id": "265dd60573ed4b8b",
-  "at": "2026-11-03T09:05:00",
+  "at": "2026-11-03T12:58:38",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.aplitrak.com/?adid=dC55ZGVmam9yZC40Mjg1NS4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ",
@@ -1680746,12 +1680859,13 @@
   ],
   "read": "board",
   "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46515/apply?source=arbetsformedlingen_v2",
+  "fetched_at": "2026-11-03T12:56:44",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application",
-  "language_of_the_posting": "unknown (no description; title in Swedish)",
+  "open_quote": "Start Your Application Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application",
+  "language_of_the_posting": "unknown (no description visible; title in Swedish)",
   "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
@@ -1680759,11 +1680873,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is only an application-start shell with a title and no description, so open status, role and place cannot be judged.",
-  "confidence": "low",
+  "reason": "The page is only an application-start shell with no job description, so openness, role details and place cannot be judged.",
+  "confidence": "medium",
   "inferred": [
-   "The URL path says Stockholm---Solna, but the page text itself gives no location, so it is not listed as a place signal.",
-   "language_ok is set true because no description exists to be in another language; the Swedish title alone is not the description."
+   "Company Saab taken from the pool and URL, not from the page text",
+   "Location Stockholm/Solna appears only in the URL, not in the page text"
   ],
   "fields": {
    "role": "Systemingenjör inom UX-Design",
@@ -1680775,13 +1680889,12 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reports_to": null,
-   "language": "unknown",
+   "language": "Swedish (title only)",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "4e0e4c1c12474139": {
   "id": "4e0e4c1c12474139",
@@ -1681173,7 +1681286,7 @@
  },
  "9d046d2994fb4b0f": {
   "id": "9d046d2994fb4b0f",
-  "at": "2026-11-03T09:05:08",
+  "at": "2026-11-03T12:58:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.aplitrak.com/?adid=dC55ZGVmam9yZC4zOTcxNS4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ",
@@ -1681192,32 +1681305,24 @@
   ],
   "read": "board",
   "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46514/apply?source=arbetsformedlingen_v2",
+  "fetched_at": "2026-11-03T12:56:44",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Start Your Application",
-  "language_of_the_posting": "Swedish (title only; no description shown)",
+  "open_quote": "Start Your Application Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application",
+  "language_of_the_posting": "unknown (no description; title in Swedish)",
   "language_ok": false,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
-  "place_signals": [
-   {
-    "quote": "Stockholm---Solna",
-    "where": "footer or small print",
-    "kind": "tag",
-    "says": "portugal_out"
-   }
-  ],
+  "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "Stockholm---Solna",
-  "reason": "The page is only an application start screen with no job description, so the posting cannot be read as a job posting.",
+  "place_quote": "",
+  "reason": "The page is only an application-start shell with no job description, so open status, language and place cannot be read.",
   "confidence": "medium",
   "inferred": [
-   "Location Stockholm/Solna taken from the page address, not the page text",
-   "Company Saab taken from the pool listing",
-   "Language inferred from the Swedish title"
+   "The URL path says Stockholm---Solna, but the page text itself gives no location."
   ],
   "fields": {
    "role": "Systemingenjör inom UX-Design",
@@ -1681230,12 +1681335,12 @@
    "salary": null,
    "years_xp": null,
    "reports_to": null,
-   "language": "Swedish",
+   "language": "unknown",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "bec1efbf30394361": {
   "id": "bec1efbf30394361",
@@ -1681424,7 +1681529,7 @@
  },
  "9175438167d3425a": {
   "id": "9175438167d3425a",
-  "at": "2026-11-03T09:05:12",
+  "at": "2026-11-03T12:58:39",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.fixando.pt/partilhar/3970346/procura-Designers-de-Impressao-em-Caminha?ref=xml_feed",
@@ -1681439,16 +1681544,17 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.fixando.pt/partilhar/3970346/procura-Designers-de-Impressao-em-Caminha?ref=xml_feed",
+  "fetched_at": "2026-11-03T12:56:26",
   "same_job": "no",
   "posted_by": "employer",
   "hiring_for": null,
-  "posting_open": "unreadable",
-  "open_quote": "Detalhes do pedido - ID3970346 - M. M.",
+  "posting_open": "yes",
+  "open_quote": null,
   "language_of_the_posting": "Portuguese",
   "language_ok": true,
-  "role_verdict": "unclear",
+  "role_verdict": "no",
   "workplace_as_posted": "onsite",
-  "location_under_the_title": "Design de Impressão - 4910 - Dem - Caminha",
+  "location_under_the_title": "Caminha",
   "place_signals": [
    {
     "quote": "Na localização do especialista (máx. 25 km de distância)",
@@ -1681457,19 +1681563,19 @@
     "says": "portugal_in"
    },
    {
-    "quote": "Design de Impressão - 4910 - Dem - Caminha",
+    "quote": "Caminha",
     "where": "under the title",
     "kind": "tag",
     "says": "portugal_in"
    }
   ],
-  "place_verdict": "unclear",
+  "place_verdict": "pt_onsite",
   "place_quote": "Na localização do especialista (máx. 25 km de distância)",
-  "reason": "The page is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting for an employee.",
+  "reason": "This is a customer's request for a one-off print job (a fanzine) on a marketplace, not an employment posting for a designer role.",
   "confidence": "high",
   "inferred": [
-   "posting_open is unreadable because the page is a client service request, not a job posting",
-   "workplace_as_posted is onsite because the work happens at the specialist's location near Caminha"
+   "same_job is no because the page is a client's service request, not a job posting",
+   "workplace onsite inferred from the service location being at the specialist's location within 25 km of Caminha"
   ],
   "fields": {
    "role": "Design de Impressão",
@@ -1681480,16 +1681586,17 @@
    "countries": [
     "Portugal"
    ],
-   "portugal_ok": "unclear",
+   "portugal_ok": "yes",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
    "language": "Portuguese",
    "posted": "21.10.2026 - 11:04"
   },
+  "inferred_note": "Client request on a freelance marketplace; the requester is a private individual, not a hiring company.",
   "stage": "vision",
-  "lane": "unsure",
-  "unread_tries": 1
+  "lane": "cut",
+  "reader_place": "pt_onsite"
  },
  "4682802a62504661": {
   "id": "4682802a62504661",
@@ -1682919,7 +1683026,7 @@
  },
  "e66b0e0aded84ac6": {
   "id": "e66b0e0aded84ac6",
-  "at": "2026-11-03T09:05:46",
+  "at": "2026-11-03T12:58:40",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c4da4d30-6e6e-4dd4-9141-60a5db3b3321&jobId=572000&lang=en_US",
@@ -1682934,6 +1683041,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c4da4d30-6e6e-4dd4-9141-60a5db3b3321&jobId=572000&lang=en_US",
+  "fetched_at": "2026-11-03T12:56:29",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1682947,26 +1683055,28 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie consent banner with no job description, so it cannot be read as a posting.",
-  "confidence": "high",
-  "inferred": [],
+  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title 'System Design Engineer I' is engineering by title, but nothing else is shown.",
+  "confidence": "medium",
+  "inferred": [
+   "posting_open set to unreadable because only a cookie notice is visible",
+   "seniority inferred from 'I' in the title"
+  ],
   "fields": {
    "role": "System Design Engineer I",
-   "company": "c4da4d30-6e6e-4dd4-9141-60a5db3b3321",
-   "seniority": "unstated",
+   "company": null,
+   "seniority": "junior",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "0326c516031a445e": {
   "id": "0326c516031a445e",
@@ -1683899,7 +1684009,7 @@
  },
  "68e1415e17af485f": {
   "id": "68e1415e17af485f",
-  "at": "2026-11-03T09:06:11",
+  "at": "2026-11-03T12:58:41",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://uscareers-cvent.icims.com/jobs/8991/login",
@@ -1683914,11 +1684024,12 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://uscareers-cvent.icims.com/jobs/8991/login",
-  "same_job": "no",
+  "fetched_at": "2026-11-03T12:56:41",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Login",
+  "open_quote": "Skip Branding Skip to Main Content Home Life At Cvent Benefits Campus Locations FIND JOBS COMPANY",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1683927,7 +1684038,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a Cvent careers login page with only menu and footer text, no job posting content.",
+  "reason": "The page shows only site navigation and footer text with no job description, so it is an empty shell, not a readable posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1683946,7 +1684057,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "1f7bb53c3e944bf9": {
   "id": "1f7bb53c3e944bf9",
@@ -1688399,7 +1688510,7 @@
  },
  "c3c1e71af1cb47fa": {
   "id": "c3c1e71af1cb47fa",
-  "at": "2026-11-03T09:08:13",
+  "at": "2026-11-03T12:58:43",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-513961471400230687?ckey=UX+designer&rgn=-1&pos=12&groupId=1075&elckey=6845454431354775350&p=1&aq=-4281334290100560780&cid=12006&jobAge=212&brelb=100&bscr=102.42857&scr=102.42857",
@@ -1688419,7 +1688530,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "b78255c3db0a4b38": {
   "id": "b78255c3db0a4b38",
@@ -1690919,7 +1691030,7 @@
  },
  "69b61c581463480b": {
   "id": "69b61c581463480b",
-  "at": "2026-11-03T09:09:54",
+  "at": "2026-11-03T12:58:44",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.comeet.com/jobs/earnix/93.00B/digital-designer/A1.470",
@@ -1690934,7 +1691045,8 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://www.comeet.com/jobs/earnix/93.00B",
-  "same_job": "no",
+  "fetched_at": "2026-11-03T12:56:31",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
@@ -1690947,7 +1691059,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a list of Earnix jobs, not a single posting, and no Digital Designer role appears in it.",
+  "reason": "The page is a careers list of Earnix openings and does not contain a Digital Designer posting or description, so it cannot be read as a single job.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1690960,13 +1691072,12 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "51a1ebdc3a204e8b": {
   "id": "51a1ebdc3a204e8b",
@@ -1692454,7 +1692565,7 @@
  },
  "d6c3e331def64dea": {
   "id": "d6c3e331def64dea",
-  "at": "2026-11-03T09:10:33",
+  "at": "2026-11-03T12:58:44",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job",
@@ -1692469,11 +1692580,12 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job?mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+  "fetched_at": "2026-11-03T12:56:20",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Help Us Help Others",
+  "open_quote": "Search Jobs",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1692481,9 +1692593,9 @@
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "45335 Vintage Park Plaza, Sterling, VA 20166",
-  "reason": "The page shows only the careers site header and footer with no job description, so it is an empty shell and the posting cannot be read.",
-  "confidence": "medium",
+  "place_quote": "",
+  "reason": "The page shows only the careers site header and footer with no job description, so the posting content is an empty shell.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Senior UI/UX Designer",
@@ -1692501,7 +1692613,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "45462ecd287140a7": {
   "id": "45462ecd287140a7",
@@ -1693338,7 +1693450,7 @@
  },
  "97acf866f94646c2": {
   "id": "97acf866f94646c2",
-  "at": "2026-11-03T09:11:35",
+  "at": "2026-11-03T12:58:44",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.nextiva.com/company/careers-listing?gh_jid=8888979002",
@@ -1693360,11 +1693472,12 @@
   ],
   "read": "board",
   "read_url": "https://www.nextiva.com/company/careers-listing?gh_jid=8888979002",
-  "same_job": "no",
+  "fetched_at": "2026-11-03T12:57:03",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Join the Team - Careers - Nextiva",
+  "open_quote": "Products Solutions Resources Pricing Sales 800-799-0600 Support Log In Get a Demo",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1693373,12 +1693486,9 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer with no job posting content; the job description did not load.",
+  "reason": "The page shows only Nextiva site navigation and footer with no job description, so it is an empty shell rather than a posting.",
   "confidence": "high",
-  "inferred": [
-   "same_job set to no because the page contains no posting for the listed role, only a generic careers shell",
-   "language assumed English from navigation text"
-  ],
+  "inferred": [],
   "fields": {
    "role": "Senior Product Designer",
    "company": "Nextiva",
@@ -1693395,7 +1693505,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "c64094eccbd5407c": {
   "id": "c64094eccbd5407c",
@@ -1702316,7 +1702426,7 @@
  },
  "db4adefd9bb244e3": {
   "id": "db4adefd9bb244e3",
-  "at": "2026-11-03T09:14:54",
+  "at": "2026-11-03T12:58:44",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9e11f3d3-6c67-472b-abab-e5460d08e697&jobId=554336&lang=en_US",
@@ -1702331,6 +1702441,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9e11f3d3-6c67-472b-abab-e5460d08e697&jobId=554336&lang=en_US",
+  "fetched_at": "2026-11-03T12:56:32",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1702344,9 +1702455,12 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
-  "confidence": "high",
-  "inferred": [],
+  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title alone (P&ID and Piping Designer) is an engineering/drafting job, not clearly product design.",
+  "confidence": "low",
+  "inferred": [
+   "language assumed English from the banner text",
+   "role verdict left unclear because the page is unreadable"
+  ],
   "fields": {
    "role": "P&ID and Piping Designer",
    "company": "9e11f3d3-6c67-472b-abab-e5460d08e697",
@@ -1702363,7 +1702477,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "bcfc7d2d2ae94640": {
   "id": "bcfc7d2d2ae94640",
@@ -1702629,7 +1702743,7 @@
  },
  "f35a7322f6d443c4": {
   "id": "f35a7322f6d443c4",
-  "at": "2026-11-03T09:15:06",
+  "at": "2026-11-03T12:58:47",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/3824942177114830890?ckey=UX+designer&rgn=-1&pos=59&groupId=1075&elckey=6417764813443540579&p=3&aq=-2396726538537014954&cid=12006&jobAge=36&brelb=100&bscr=80.153046&scr=80.153046",
@@ -1702649,11 +1702763,11 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "536bce1561be4991": {
   "id": "536bce1561be4991",
-  "at": "2026-11-03T09:15:06",
+  "at": "2026-11-03T12:58:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-7537850345726094615?ckey=UX+designer&rgn=-1&pos=3&groupId=1075&elckey=6417764813443540579&p=1&aq=3723811435019407819&cid=12006&jobAge=36&brelb=100&bscr=104.19895&scr=104.19895",
@@ -1702673,7 +1702787,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "90128276fc2b49b4": {
   "id": "90128276fc2b49b4",
@@ -1704808,7 +1704922,7 @@
  },
  "08577b63c7724e21": {
   "id": "08577b63c7724e21",
-  "at": "2026-11-03T09:16:03",
+  "at": "2026-11-03T12:59:16",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers/job/US---TX-Austin/Product-Designer_R57872",
@@ -1704821,14 +1704935,14 @@
   },
   "found_by": null,
   "looked": [],
-  "read": "board",
-  "read_url": null,
-  "lane": "unsure",
-  "posting_open": "unreadable",
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers/job/US---TX-Austin/Product-Designer_R57872",
+  "open_quote": "the employer's board no longer has this posting: its link opens the list of open jobs",
   "stage": "render",
-  "open_quote": null,
-  "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "reason": "the employer says it is closed"
  },
  "faaef21505d24789": {
   "id": "faaef21505d24789",
@@ -1706741,13 +1706855,13 @@
  },
  "a6d7e3a9972040a7": {
   "id": "a6d7e3a9972040a7",
-  "at": "2026-11-03T09:16:44",
+  "at": "2026-11-03T12:59:03",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
   "board": {
-   "url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
-   "status": 403,
+   "url": "https://www.cv-library.co.uk/job/225746134/ux-ui-designer?s=106923",
+   "status": 200,
    "shot": "data/shots/a6d7e3a9972040a7.jpg",
    "error": null
   },
@@ -1706755,13 +1706869,61 @@
   "found_by": null,
   "looked": [],
   "read": "board",
-  "read_url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
-  "lane": "unsure",
-  "posting_open": "unreadable",
-  "stage": "render",
-  "open_quote": "Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a47eb9de8750d 46.102.17.26 PT",
-  "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "read_url": "https://www.cv-library.co.uk/job/225746134/ux-ui-designer?s=106923",
+  "same_job": "yes",
+  "posted_by": "agency",
+  "hiring_for": "a public sector organisation in London (Housing Repairs Transformation programme)",
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "City of London, London",
+  "place_signals": [
+   {
+    "quote": "City of London, London",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: London / Hybrid - 2/3 days on-site",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Sellick Partnership is currently supporting a public sector organisation in London",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location: London / Hybrid - 2/3 days on-site",
+  "reason": "Hybrid contract role requiring 2-3 days on-site in London, which is not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX/UI Designer",
+   "company": "Sellick Partnership",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "2-3 days per week",
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£600 per day, Umbrella",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "20th Oct"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  },
  "1a35bf713cf143c0": {
   "id": "1a35bf713cf143c0",
@@ -1711236,7 +1711398,7 @@
  },
  "fb4f9ed37a0349a3": {
   "id": "fb4f9ed37a0349a3",
-  "at": "2026-11-03T09:18:51",
+  "at": "2026-11-03T12:58:49",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-axway.icims.com/jobs/8948/senior-user-exp-design-engineer-i/job",
@@ -1711251,6 +1711413,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://careers-axway.icims.com/jobs/8948/senior-user-exp-design-engineer-i/job",
+  "fetched_at": "2026-11-03T12:56:35",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1711258,21 +1711421,22 @@
   "open_quote": "Skip Branding Explore Us PRODUCTS Amplify Platform B2B Integration",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "unclear",
+  "role_verdict": "yes",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer with no job description, so it is not a readable single posting.",
-  "confidence": "high",
+  "reason": "The page shows only site navigation and footer with no job description, so the posting cannot be read; the title suggests a UX role.",
+  "confidence": "medium",
   "inferred": [
-   "The page title mentions Noida, India, but the visible text has no description, so no place signal was recorded."
+   "role_verdict judged from title alone",
+   "company taken from pool listing (74Software/Axway)"
   ],
   "fields": {
-   "role": "Senior User Exp Design Engineer I",
-   "company": "Axway (74Software)",
-   "seniority": "senior",
+   "role": "Lead Design Analyst - User Experience (UX)",
+   "company": "74Software",
+   "seniority": "lead",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
@@ -1711285,7 +1711449,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "22607711276a4855": {
   "id": "22607711276a4855",
@@ -1727606,6 +1727770,4728 @@
    "reports_to": null,
    "language": "English",
    "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "e269ff4fe26e4f1e": {
+  "id": "e269ff4fe26e4f1e",
+  "at": "2026-11-03T12:57:43",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-knowledge-graph-nasa-emea-remote-grafana-labs-2517109",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-knowledge-graph-nasa-emea-remote-grafana-labs-2517109",
+   "status": 429,
+   "shot": "data/shots/e269ff4fe26e4f1e.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-knowledge-graph-nasa-emea-remote-grafana-labs-2517109",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:38",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "France (Remote)",
+  "place_signals": [
+   {
+    "quote": "France (Remote)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Open to applicants in France",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote position based in France.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are a 100% remote company with team members across 40+ countries",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Compensation ranges are country specific. If you are applying for this role from a different location than listed above, your recruiter will discuss your specific market's defined pay range & benefits at the beginning of the process.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "NASA/EMEA",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "This is a remote position based in France.",
+  "reason": "the page says both, explicitly: Portugal in, and Portugal out · Senior product design role, but the posting says remote and based in France, with applicants open only in France; the NASA/EMEA title tag conflicts.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer, Knowledge Graph | NASA/EMEA | Remote",
+   "company": "Grafana Labs",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "€99,000 total comp",
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Nov 3, 2026"
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "no"
+ },
+ "597d36fd5fe24cfd": {
+  "id": "597d36fd5fe24cfd",
+  "at": "2026-11-03T12:57:43",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-lisbon-2507121",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-lisbon-2507121",
+   "status": 200,
+   "shot": "data/shots/597d36fd5fe24cfd.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-lisbon-2507121",
+  "fetched_at": "2026-11-03T12:55:31",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Lisbon, Portugal·On-site·Senior·Posted Nov 3, 2026",
+  "place_signals": [
+   {
+    "quote": "Lisbon, Portugal·On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "This role must attend our local office for part of the week. The specific in-office schedule is to be determined by the hiring manager.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hybrid: In this role, our hybrid experience is designed at the team level to give you a rich onsite experience packed with connection, collaboration, learning, and celebration - while also giving you flexibility to work remotely for part of the week.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "You will get to collaborate mostly with teams in Germany, Portugal, Denmark and Poland but also distributed teams in AMER and APAC.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible working hours and the ability to work remotely",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "The Poland annualized base salary range for this position is zł332,000.00-zł498,000.00.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "pt_onsite",
+  "place_quote": "Lisbon, Portugal·On-site·Senior; This role must attend our local office for part of the week.",
+  "reason": "Product design role with hybrid/onsite requirement at the local office, with the page listing Lisbon, Portugal as the location.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "Zendesk",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Portugal"
+   ],
+   "portugal_ok": "yes",
+   "salary": "€72,000 total comp",
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Nov 3, 2026"
+  },
+  "stage": "vision",
+  "lane": "portugal",
+  "reader_place": "pt_onsite"
+ },
+ "502459d7c0dc46df": {
+  "id": "502459d7c0dc46df",
+  "at": "2026-11-03T12:57:43",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-berlin-2516652",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-berlin-2516652",
+   "status": 429,
+   "shot": "data/shots/502459d7c0dc46df.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-berlin-2516652",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:37",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Berlin, Germany (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Berlin, Germany (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Berlin, Germany · On-site · Senior · Posted Nov 3, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You will get to collaborate mostly with teams in Germany, Portugal, Denmark and Poland but also distributed teams in AMER and APAC.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible working hours and the ability to work remotely",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "This role must attend our local office for part of the week. The specific in-office schedule is to be determined by the hiring manager.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The Poland annualized base salary range for this position is zł332,000.00-zł498,000.00.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our hybrid way of working, enables us to purposefully come together in person, at one of our many Zendesk offices around the world, to connect, collaborate and learn whilst also giving our people the flexibility to work remotely for part of the week.",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Berlin, Germany (Onsite)",
+  "reason": "Lead product design role, but the page lists it as onsite in Berlin and requires part-week attendance at the local office, with no Portugal option.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "Zendesk",
+   "seniority": "lead",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": "€123,000 total comp (aggregator estimate); Poland base zł332,000-zł498,000",
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Nov 3, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "128a16d1ac164e23": {
+  "id": "128a16d1ac164e23",
+  "at": "2026-11-03T12:57:43",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-gameplay-designer-enemies-cd-projekt-red-warsaw-2516813",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-gameplay-designer-enemies-cd-projekt-red-warsaw-2516813",
+   "status": 200,
+   "shot": "data/shots/128a16d1ac164e23.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.smartrecruiters.com/cdprojektred/744000159369000",
+   "status": 200,
+   "shot": "data/shots/128a16d1ac164e23.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://jobs.smartrecruiters.com/cdprojektred/744000159369000"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.smartrecruiters.com/cdprojektred/744000159369000",
+  "fetched_at": "2026-11-03T12:55:34",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Warsaw, Poland",
+  "place_signals": [
+   {
+    "quote": "Warsaw, Poland",
+    "where": "side panel",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Office-First — Working primarily from the Warsaw for a minimum of 10 days per month or Remote-First — Possibility of remote work from within +/- 3 hours away from Warsaw time zone.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Remote-First — Possibility of remote work from within +/- 3 hours away from Warsaw time zone.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "annual budget for medical expenses (for those working outside Poland)",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Contract type in Poland: Employment Contract (\"Umowa o pracę\") for employees in Poland.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote-First — Possibility of remote work from within +/- 3 hours away from Warsaw time zone.",
+  "reason": "This is a gameplay design role (enemy/NPC behavior, AI subsystems) in games, not product/UX/UI design; the remote option is time-zone based, which Portugal (about 1-2 hours behind Warsaw) fits.",
+  "confidence": "medium",
+  "inferred": [
+   "Gameplay design for enemy and NPC behavior is judged not to be product, UX or UI design, so role is no."
+  ],
+  "fields": {
+   "role": "Senior Gameplay Designer (Enemies)",
+   "company": "CD Projekt Red",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": "10 days per month for the office-first option",
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "yes",
+   "salary": "20 100 – 34 700 PLN gross monthly",
+   "years_xp": "At least 6 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "remote"
+ },
+ "d93e2d51b49f4b76": {
+  "id": "d93e2d51b49f4b76",
+  "at": "2026-11-03T12:57:43",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-knowledge-graph-nasa-emea-remote-grafana-labs-2517110",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-knowledge-graph-nasa-emea-remote-grafana-labs-2517110",
+   "status": 200,
+   "shot": "data/shots/d93e2d51b49f4b76.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/6146095004",
+   "status": 200,
+   "shot": "data/shots/d93e2d51b49f4b76.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://job-boards.greenhouse.io/grafanalabs/jobs/6146095004"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/grafanalabs/jobs/6146095004",
+  "fetched_at": "2026-11-03T12:55:35",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Republic of Ireland (Remote)",
+  "place_signals": [
+   {
+    "quote": "NASA/EMEA | Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   },
+   {
+    "quote": "Republic of Ireland (Remote)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a remote position based in Ireland.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are a 100% remote company with team members across 40+ countries",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "*Compensation ranges are country specific. If you are applying for this role from a different location than listed above, your recruiter will discuss your specific market's defined pay range & benefits at the beginning of the process.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Are you currently eligible to work in your country of residence?*",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "This is a remote position based in Ireland.",
+  "reason": "remote from a list of countries the page does not show · Open senior product design role; title says NASA/EMEA remote (Portugal is in EMEA) but the location field and body say remote based in Ireland, which conflict.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer, Knowledge Graph | NASA/EMEA | Remote",
+   "company": "Grafana Labs",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Ireland"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "unclear"
+ },
+ "0ca80a11b96c4a03": {
+  "id": "0ca80a11b96c4a03",
+  "at": "2026-11-03T12:57:43",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-krakow-2510335",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-krakow-2510335",
+   "status": 429,
+   "shot": "data/shots/0ca80a11b96c4a03.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-krakow-2510335",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:38",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Krakow, Poland (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Krakow, Poland (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Krakow, Poland · On-site · Senior · Posted Nov 3, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You will get to collaborate mostly with teams in Germany, Portugal, Denmark and Poland but also distributed teams in AMER and APAC.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Flexible working hours and the ability to work remotely",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Hybrid: In this role, our hybrid experience is designed at the team level to give you a rich onsite experience packed with connection, collaboration, learning, and celebration - while also giving you flexibility to work remotely for part of the week. This role must attend our local office for part of the week.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The Poland annualized base salary range for this position is zł332,000.00-zł498,000.00.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role must attend our local office for part of the week.",
+  "reason": "Lead product design role in Krakow, Poland requires hybrid office attendance with no remote option from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from 'Senior' tag and 'Lead' title and 7+ years requirement",
+   "onsite_days not stated; schedule set by hiring manager"
+  ],
+  "fields": {
+   "role": "Lead Product Designer",
+   "company": "Zendesk",
+   "seniority": "lead",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": "PLN 332,000 to 498,000 per year (base)",
+   "years_xp": "7+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Nov 3, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "acdee05922614dfa": {
+  "id": "acdee05922614dfa",
+  "at": "2026-11-03T12:57:49",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/staff-subsystem-soc-design-engineer-arm-cambridge-2516313",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/staff-subsystem-soc-design-engineer-arm-cambridge-2516313",
+   "status": 429,
+   "shot": "data/shots/acdee05922614dfa.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/staff-subsystem-soc-design-engineer-arm-cambridge-2516313",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:38",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Cambridge, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Cambridge, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Cambridge, United Kingdom · On-site · Staff · Posted Nov 2, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Please note that no relocation package is available for this role.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "If skilled worker sponsorship is required, Arm will meet costs associated with sponsorship for the employer only.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Arm's approach to hybrid working is designed to create a working environment that supports both high performance and personal wellbeing.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Cambridge, United Kingdom · On-site · Staff · Posted Nov 2, 2026",
+  "reason": "This is a hardware SoC/RTL design engineering role, not product design, and it is onsite in Cambridge, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Subsystem & SoC Design Engineer",
+   "company": "Arm",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£97,300 - £131,700 per year",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Nov 2, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "948016af24434f6a": {
+  "id": "948016af24434f6a",
+  "at": "2026-11-03T12:57:49",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/tise-head-of-product-design-ebay-oslo-2515912",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/tise-head-of-product-design-ebay-oslo-2515912",
+   "status": 200,
+   "shot": "data/shots/948016af24434f6a.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://ebay.wd5.myworkdayjobs.com/apply/job/Oslo/Tise-Head-of-Product-Design_R0075205",
+   "status": 200,
+   "shot": "data/shots/948016af24434f6a.employer.jpg",
+   "error": null
+  },
+  "found_by": "link",
+  "looked": [
+   "link: https://ebay.wd5.myworkdayjobs.com/apply/job/Oslo/Tise-Head-of-Product-Design_R0075205"
+  ],
+  "read": "employer",
+  "read_url": "https://ebay.wd5.myworkdayjobs.com/apply/job/Oslo/Tise-Head-of-Product-Design_R0075205",
+  "fetched_at": "2026-11-03T12:55:36",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "locations: Oslo; remote type: Hybrid",
+  "place_signals": [
+   {
+    "quote": "remote type Hybrid",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "locations Oslo",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Based in Oslo, you will join a team of around 45 people across these fields",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Based in Oslo, you will join a team of around 45 people across these fields",
+  "reason": "Head of Product Design role is hybrid based in Oslo with no remote option, so it can't be done from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "Hybrid in Oslo means office attendance in Norway; days per week not stated"
+  ],
+  "fields": {
+   "role": "Tise Head of Product Design",
+   "company": "eBay (Tise)",
+   "seniority": "head",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Norway"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "8+",
+   "reports_to": "Chief Product Officer (CPO)",
+   "language": "English",
+   "posted": "Posted Yesterday"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "118d83d63ea8405c": {
+  "id": "118d83d63ea8405c",
+  "at": "2026-11-03T12:57:48",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-deel-united-kingdom-and-france-and-spain-and-denmark-and-sweden-and-israel-and-united-arab-emirates-and-argentina-and-brazil-and-germany-and-poland-and-norway-and-finla-2516794",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-deel-united-kingdom-and-france-and-spain-and-denmark-and-sweden-and-israel-and-united-arab-emirates-and-argentina-and-brazil-and-germany-and-poland-and-norway-and-finla-2516794",
+   "status": 200,
+   "shot": "data/shots/118d83d63ea8405c.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.deel.com/deel/job-details/e4c0f93d-86b8-46ee-87d5-ee8d5ab625d3/overview",
+   "status": 200,
+   "shot": "data/shots/118d83d63ea8405c.employer.jpg",
+   "error": null
+  },
+  "found_by": "apply",
+  "looked": [
+   "apply: https://jobs.deel.com/deel/job-details/e4c0f93d-86b8-46ee-87d5-ee8d5ab625d3/overview"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.deel.com/deel/job-details/e4c0f93d-86b8-46ee-87d5-ee8d5ab625d3/overview",
+  "fetched_at": "2026-11-03T12:55:45",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "United Kingdom, France, Spain, Denmark, Sweden, Israel, United Arab Emirates, Argentina, Brazil, Germany, Poland, Norway, Finland, Ireland, Austria",
+  "place_signals": [
+   {
+    "quote": "United Kingdom, France, Spain, Denmark, Sweden, Israel, United Arab Emirates, Argentina, Brazil, Germany, Poland, Norway, Finland, Ireland, Austria",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Among the largest globally distributed companies in the world, our team of 7,000 spans more than 100 countries",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Final pay is based on objective, job-related criteria including experience, skills, and location.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "United Kingdom, France, Spain, Denmark, Sweden, Israel, United Arab Emirates, Argentina, Brazil, Germany, Poland, Norway, Finland, Ireland, Austria",
+  "reason": "Role is remote but the page lists 15 countries it is open to, and Portugal is not among them.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Deel",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom",
+    "France",
+    "Spain",
+    "Denmark",
+    "Sweden",
+    "Israel",
+    "United Arab Emirates",
+    "Argentina",
+    "Brazil",
+    "Germany",
+    "Poland",
+    "Norway",
+    "Finland",
+    "Ireland",
+    "Austria"
+   ],
+   "portugal_ok": "no",
+   "salary": "$60,000 USD - $141,300 USD",
+   "years_xp": "5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a2cb96113c3f4880": {
+  "id": "a2cb96113c3f4880",
+  "at": "2026-11-03T12:57:50",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-cohere-toronto-and-san-francisco-and-london-and-new-york-2515822",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-cohere-toronto-and-san-francisco-and-london-and-new-york-2515822",
+   "status": 429,
+   "shot": "data/shots/a2cb96113c3f4880.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/cohere/5dcad8a9-5daf-4e28-b315-ee91b5f98512",
+   "status": 200,
+   "shot": "data/shots/a2cb96113c3f4880.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/cohere/5dcad8a9-5daf-4e28-b315-ee91b5f98512"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/cohere/5dcad8a9-5daf-4e28-b315-ee91b5f98512",
+  "orig_id": "8281770c7f2543ee",
+  "orig_posted": "2026-11-02",
+  "orig_updated": null,
+  "fetched_at": "2026-11-03T12:55:42",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Toronto; London; New York; San Francisco",
+  "place_signals": [
+   {
+    "quote": "Toronto; London; New York; San Francisco",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location Type Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Cohere is remote-friendly, but we also have offices in Toronto, London, New York City, San Francisco, Montreal, Paris, Berlin and Seoul with more opening soon.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "For those not near an office: a co-working benefit so you can work alongside others in your city.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "USA - California, New York and Washington; USA - All Other States; Canada",
+    "where": "side panel",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location Type Remote; Location: Toronto; London; New York; San Francisco",
+  "reason": "Role is a remote Senior Product Designer, but the location field lists only Toronto, London, New York and San Francisco with no stated geography for remote work, so Portugal eligibility is not shown.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Cohere",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Canada",
+    "United States",
+    "United Kingdom"
+   ],
+   "portugal_ok": "unclear",
+   "salary": "USA CA/NY/WA $140K–$220K; USA other states $125K–$200K; Canada $180K–$280K",
+   "years_xp": "4+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "ccd393ea7bb04452": {
+  "id": "ccd393ea7bb04452",
+  "at": "2026-11-03T12:57:49",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-staff-product-designer-n8n-germany-and-bosnia-and-norway-and-estonia-and-slovenia-and-italy-and-netherlands-and-hungary-and-portugal-and-france-and-poland-and-serbia-and-austria-and-fin-2516199",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-staff-product-designer-n8n-germany-and-bosnia-and-norway-and-estonia-and-slovenia-and-italy-and-netherlands-and-hungary-and-portugal-and-france-and-poland-and-serbia-and-austria-and-fin-2516199",
+   "status": 429,
+   "shot": "data/shots/ccd393ea7bb04452.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/n8n/fe05c209-8069-4a88-aeba-8da23488cd30",
+   "status": 200,
+   "shot": "data/shots/ccd393ea7bb04452.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/n8n/fe05c209-8069-4a88-aeba-8da23488cd30"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/n8n/fe05c209-8069-4a88-aeba-8da23488cd30",
+  "orig_id": "4bfc7320c29a44ec",
+  "orig_posted": "2026-11-02",
+  "orig_updated": null,
+  "fetched_at": "2026-11-03T12:55:41",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Germany; Austria; Belgium; Bosnia; Croatia; Czech Republic; Denmark; Estonia; Finland; France; Greece; Hungary; Ireland; Italy; Montenegro; Netherlands; Norway; Poland; Portugal; Serbia; Slovakia; Slovenia; Spain; Sweden; Ukraine; United Kingdom",
+  "place_signals": [
+   {
+    "quote": "Germany; Austria; Belgium; Bosnia; Croatia; Czech Republic; Denmark; Estonia; Finland; France; Greece; Hungary; Ireland; Italy; Montenegro; Netherlands; Norway; Poland; Portugal; Serbia; Slovakia; Slovenia; Spain; Sweden; Ukraine; United Kingdom",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Location Type Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "We can sponsor visas to Germany; for any other country, you need to have existing right to work.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "If you see multiple job postings for the same role, it is most likely because we're hiring remotely for this role and posting in different locations to make sure every potential candidate can see the role. Please apply to the location you're the most likely to work from in the future.",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Our team works remotely across Europe, with regular off-sites for team bonding.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "remote",
+  "place_quote": "Location Type Remote; location list includes Portugal; \"fixed Europe remote-first company\"; existing right to work needed outside Germany",
+  "reason": "Remote Senior/Staff Product Designer role at n8n with Portugal in the listed countries and Cesar has the right to work in the EU.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior/Staff Product Designer",
+   "company": "n8n",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Germany",
+    "Austria",
+    "Belgium",
+    "Bosnia",
+    "Croatia",
+    "Czech Republic",
+    "Denmark",
+    "Estonia",
+    "Finland",
+    "France",
+    "Greece",
+    "Hungary",
+    "Ireland",
+    "Italy",
+    "Montenegro",
+    "Netherlands",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Serbia",
+    "Slovakia",
+    "Slovenia",
+    "Spain",
+    "Sweden",
+    "Ukraine",
+    "United Kingdom"
+   ],
+   "portugal_ok": "yes",
+   "salary": null,
+   "years_xp": "5+ years in product design",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "open",
+  "reader_place": "remote"
+ },
+ "a97f1d3fdfe0425a": {
+  "id": "a97f1d3fdfe0425a",
+  "at": "2026-11-03T12:57:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/design-manager-west-tesla-st-ouen-2516571",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/design-manager-west-tesla-st-ouen-2516571",
+   "status": 200,
+   "shot": "data/shots/a97f1d3fdfe0425a.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/design-manager-west-tesla-st-ouen-2516571",
+  "fetched_at": "2026-11-03T12:55:34",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "St.-Ouen, France·On-site·Senior·Posted Nov 1, 2026",
+  "place_signals": [
+   {
+    "quote": "St.-Ouen, France·On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role will require travel around the Western region (Benelux & France)",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Fluent in both English & French",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "St.-Ouen, France·On-site",
+  "reason": "This is an architecture/construction design management role (Revit, building permits) rather than product design, and it is onsite in France.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Manager, West",
+   "company": "Tesla",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "France",
+    "Belgium",
+    "Netherlands",
+    "Luxembourg"
+   ],
+   "portugal_ok": "no",
+   "salary": "€99,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Nov 1, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "5ae3f37d3d2a4afa": {
+  "id": "5ae3f37d3d2a4afa",
+  "at": "2026-11-03T12:57:52",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/ui-ux-designer-nordea-helsinki-2515801",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/ui-ux-designer-nordea-helsinki-2515801",
+   "status": 200,
+   "shot": "data/shots/5ae3f37d3d2a4afa.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/ui-ux-designer-nordea-helsinki-2515801",
+  "fetched_at": "2026-11-03T12:55:31",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Helsinki, Finland·On-site·Mid-level·Posted Nov 2, 2026",
+  "place_signals": [
+   {
+    "quote": "Helsinki, Finland·On-site·Mid-level·Posted Nov 2, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a full-time, permanent role with hybrid model working opportunity. Base location is Helsinki.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working model – we believe in the value of bringing people together and at the same time we embrace the freedom of flexibility.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Only for candidates in Finland: A security clearance will be performed for the person selected for this position.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This is a full-time, permanent role with hybrid model working opportunity. Base location is Helsinki.",
+  "reason": "UX designer role based in Helsinki, hybrid/on-site, with no remote option for people living elsewhere.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer",
+   "company": "Nordea",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": null,
+   "countries": [
+    "Finland"
+   ],
+   "portugal_ok": "no",
+   "salary": "€72,000 total comp",
+   "years_xp": "2+ years of digital product design experience",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Nov 2, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "cd0f73cc5d6a4f92": {
+  "id": "cd0f73cc5d6a4f92",
+  "at": "2026-11-03T12:57:55",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/product-designer-senior-staff-d-f-m-personio-berlin-2515066",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/product-designer-senior-staff-d-f-m-personio-berlin-2515066",
+   "status": 200,
+   "shot": "data/shots/cd0f73cc5d6a4f92.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/product-designer-senior-staff-d-f-m-personio-berlin-2515066",
+  "fetched_at": "2026-11-03T12:55:37",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Berlin, Germany·On-site·Senior",
+  "place_signals": [
+   {
+    "quote": "Berlin, Germany·On-site·Senior",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role requires 2 days per week in the office and is based in Munich, Berlin or London.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is office-based, with 2 days per week required in your contracted office location. The remaining days can be worked from home or in the office if you prefer.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "you'll have 20 Flex Days per year to work remotely from other locations",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role requires 2 days per week in the office and is based in Munich, Berlin or London.",
+  "reason": "Hybrid/office-based role requiring 2 days weekly in Munich, Berlin or London offices, none in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer (Senior/Staff) (d/f/m)",
+   "company": "Personio",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "2 days per week",
+   "countries": [
+    "Germany",
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€123,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 31, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "6448909953924fb1": {
+  "id": "6448909953924fb1",
+  "at": "2026-11-03T12:57:57",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/asic-digital-design-architect-synopsys-inc-dublin-2514988",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/asic-digital-design-architect-synopsys-inc-dublin-2514988",
+   "status": 429,
+   "shot": "data/shots/6448909953924fb1.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/asic-digital-design-architect-synopsys-inc-dublin-2514988",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:45",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "ublin, Ireland (Onsite)",
+  "place_signals": [
+   {
+    "quote": "ublin, Ireland (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Dublin, Ireland · On-site · Mid-level · Posted Oct 31, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Dublin, Ireland · On-site · Mid-level · Posted Oct 31, 2026",
+  "reason": "This is an ASIC chip design (hardware RTL) engineering role, not product design, and it is onsite in Dublin.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "ASIC Digital Design Architect",
+   "company": "Synopsys Inc",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Ireland"
+   ],
+   "portugal_ok": "no",
+   "salary": "€96,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 31, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "99ea67b8455f44cc": {
+  "id": "99ea67b8455f44cc",
+  "at": "2026-11-03T12:57:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/ux-engineer-powertrain-tesla-east-attica-2515508",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/ux-engineer-powertrain-tesla-east-attica-2515508",
+   "status": 200,
+   "shot": "data/shots/99ea67b8455f44cc.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/ux-engineer-powertrain-tesla-east-attica-2515508",
+  "fetched_at": "2026-11-03T12:55:34",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "East Attica, Greece·On-site·Mid-level·Posted Oct 31, 2026",
+  "place_signals": [
+   {
+    "quote": "East Attica, Greece·On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "East Attica, Greece·On-site·Mid-level·Posted Oct 31, 2026",
+  "reason": "UX Engineer title with design system ownership counts as design-leaning, but the role is on-site in East Attica, Greece, which is outside Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Engineer, Powertrain",
+   "company": "Tesla",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Greece"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 31, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "be911037f2934673": {
+  "id": "be911037f2934673",
+  "at": "2026-11-03T12:57:57",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/product-designer-senior-staff-d-f-m-personio-london-2486272",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/product-designer-senior-staff-d-f-m-personio-london-2486272",
+   "status": 429,
+   "shot": "data/shots/be911037f2934673.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/product-designer-senior-staff-d-f-m-personio-london-2486272",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:45",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "London, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "London, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "London, United Kingdom · On-site · Senior",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role requires 2 days per week in the office and is based in Munich, Berlin or London.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is office-based, with 2 days per week required in your contracted office location. The remaining days can be worked from home or in the office if you prefer.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "In addition, you’ll have 20 Flex Days per year to work remotely from other locations.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role requires 2 days per week in the office and is based in Munich, Berlin or London.",
+  "reason": "Product design role is office-based with 2 required office days in Munich, Berlin or London, none in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer (Senior/Staff) (d/f/m)",
+   "company": "Personio",
+   "seniority": "senior",
+   "remote": "hybrid",
+   "onsite_days": "2 days per week",
+   "countries": [
+    "United Kingdom",
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": "€141,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 31, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "6822976bdf434e49": {
+  "id": "6822976bdf434e49",
+  "at": "2026-11-03T12:57:59",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/product-designer-wave-remote-2514648",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/product-designer-wave-remote-2514648",
+   "status": 429,
+   "shot": "data/shots/6822976bdf434e49.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/product-designer-wave-remote-2514648",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:46",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote, Global (Remote)",
+  "place_signals": [
+   {
+    "quote": "Remote, Global (Remote)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_in"
+   },
+   {
+    "quote": "Open to applicants in United States, United Kingdom, Spain, Kenya, Ghana, Canada, Senegal, Côte d'Ivoire, Burkina Faso",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a fully remote role. Candidates must be based in one of our hiring hubs (US, UK, Spain, Kenya, Ghana, Canada) or in one of our operating markets in Africa, including Senegal, Côte d'Ivoire, and Burkina Faso.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "plus remote team members spread across the world",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "Candidates must be based in one of our hiring hubs (US, UK, Spain, Kenya, Ghana, Canada) or in one of our operating markets in Africa",
+  "reason": "the page says both, explicitly: Portugal in, and Portugal out · Product design role, but the posting restricts candidates to listed hiring hubs and African markets that exclude Portugal, despite the 'Global' tag.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Product Designer",
+   "company": "Wave",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States",
+    "United Kingdom",
+    "Spain",
+    "Kenya",
+    "Ghana",
+    "Canada",
+    "Senegal",
+    "Côte d'Ivoire",
+    "Burkina Faso"
+   ],
+   "portugal_ok": "no",
+   "salary": "up to $187,000 USD based on location; $100k+ pay range",
+   "years_xp": "At least 6 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "unsure",
+  "reader_place": "no"
+ },
+ "7c49df19829f4d0e": {
+  "id": "7c49df19829f4d0e",
+  "at": "2026-11-03T12:57:58",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-incentives-bolt-tallinn-2486221",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-incentives-bolt-tallinn-2486221",
+   "status": 429,
+   "shot": "data/shots/7c49df19829f4d0e.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-incentives-bolt-tallinn-2486221",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:46",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Tallinn, Estonia (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Tallinn, Estonia (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Tallinn, Estonia · On-site · Mid-level · Posted Oct 31, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Balance flexibility and in-person collaboration with our hybrid model, including at least 12 monthly in-office days.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Some perks may differ depending on your location and role.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Tallinn, Estonia (Onsite)",
+  "reason": "Staff Product Designer role is onsite in Tallinn, Estonia, with no remote option stated, so it can't be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, Incentives",
+   "company": "Bolt",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": "at least 12 monthly in-office days (company-wide hybrid model text)",
+   "countries": [
+    "Estonia"
+   ],
+   "portugal_ok": "no",
+   "salary": "€68,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 31, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "58794fed148b4443": {
+  "id": "58794fed148b4443",
+  "at": "2026-11-03T12:58:01",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/software-design-architecture-engineer-tesla-east-attica-2515528",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/software-design-architecture-engineer-tesla-east-attica-2515528",
+   "status": 200,
+   "shot": "data/shots/58794fed148b4443.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/software-design-architecture-engineer-tesla-east-attica-2515528",
+  "fetched_at": "2026-11-03T12:55:40",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "East Attica, Greece·On-site·Mid-level·Posted Oct 30, 2026",
+  "place_signals": [
+   {
+    "quote": "East Attica, Greece·On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The role is based in Greece, in a team whose work has global impact on Tesla’s motors.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "East Attica, Greece·On-site ... The role is based in Greece",
+  "reason": "This is a software/data engineering role for motor design, not product design, and it is onsite in Greece.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Software Design / Architecture Engineer",
+   "company": "Tesla",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Greece"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "3+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "c81aabf667724e09": {
+  "id": "c81aabf667724e09",
+  "at": "2026-11-03T12:58:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/emc-design-technologist-apple-slough-2514920",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/emc-design-technologist-apple-slough-2514920",
+   "status": 429,
+   "shot": "data/shots/c81aabf667724e09.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/emc-design-technologist-apple-slough-2514920",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:48",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Slough, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Slough, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Slough, United Kingdom · On-site · Mid-level · Posted Oct 30, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Slough, United Kingdom (Onsite)",
+  "reason": "This is an electromagnetic compatibility simulation engineering role, not product design, and it is onsite in Slough, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "EMC Design Technologist",
+   "company": "Apple",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€155,000 total comp",
+   "years_xp": "3+ years of experience with EM simulation software",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "8c3e0f97ae5047a3": {
+  "id": "8c3e0f97ae5047a3",
+  "at": "2026-11-03T12:58:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/fellow-software-system-design-eng-linux-kernel-x86-systems-architect-amd-munich-2514892",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/fellow-software-system-design-eng-linux-kernel-x86-systems-architect-amd-munich-2514892",
+   "status": 200,
+   "shot": "data/shots/8c3e0f97ae5047a3.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/fellow-software-system-design-eng-linux-kernel-x86-systems-architect-amd-munich-2514892",
+  "fetched_at": "2026-11-03T12:55:41",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Munich, Germany·On-site·Mid-level·Posted Oct 30, 2026",
+  "place_signals": [
+   {
+    "quote": "Munich, Germany·On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Munich, Germany·On-site·Mid-level·Posted Oct 30, 2026",
+  "reason": "This is a Linux kernel and x86 systems architecture engineering role, not design, and it is onsite in Munich.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Fellow Software System Design Eng. (Linux Kernel & x86 Systems Architect)",
+   "company": "AMD",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": "€116,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "seniority_note": null,
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7905947a4d324969": {
+  "id": "7905947a4d324969",
+  "at": "2026-11-03T12:58:05",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-incentives-bolt-berlin-2514313",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-incentives-bolt-berlin-2514313",
+   "status": 200,
+   "shot": "data/shots/7905947a4d324969.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-incentives-bolt-berlin-2514313",
+  "fetched_at": "2026-11-03T12:55:40",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Berlin, Germany·On-site·Mid-level·Posted Oct 30, 2026",
+  "place_signals": [
+   {
+    "quote": "Berlin, Germany·On-site·Mid-level·Posted Oct 30, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is open to candidates based in Berlin. However, relocation support is provided only for candidates relocating to Tallinn, Estonia.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Balance flexibility and in-person collaboration with our hybrid model, including at least 12 monthly in-office days.",
+    "where": "body",
+    "kind": "generic",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role is open to candidates based in Berlin. However, relocation support is provided only for candidates relocating to Tallinn, Estonia.",
+  "reason": "Role is a staff product designer job, but it is onsite in Berlin and open only to candidates based in Berlin.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer, Incentives",
+   "company": "Bolt",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": "at least 12 monthly in-office days (hybrid model mentioned in perks)",
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": "€116,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "439789fe903545e8": {
+  "id": "439789fe903545e8",
+  "at": "2026-11-03T12:58:02",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/digital-design-engineer-core-debug-amd-iasi-2514863",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/digital-design-engineer-core-debug-amd-iasi-2514863",
+   "status": 429,
+   "shot": "data/shots/439789fe903545e8.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/digital-design-engineer-core-debug-amd-iasi-2514863",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:48",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Iasi, Romania (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Iasi, Romania (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Iasi, Romania · On-site · Mid-level · Posted Oct 30, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "LOCATION: • Iasi, Romania (onsite)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Iasi, Romania (onsite)",
+  "reason": "This is a digital hardware (silicon) design verification engineering job, not product design, and it is onsite in Romania.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Digital Design Engineer - Core Debug",
+   "company": "AMD",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Romania"
+   ],
+   "portugal_ok": "no",
+   "salary": "€68,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "3bede05afd554d54": {
+  "id": "3bede05afd554d54",
+  "at": "2026-11-03T12:58:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/ux-writer-mid-senior-web-product-and-apps-nord-security-vilnius-2513757",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/ux-writer-mid-senior-web-product-and-apps-nord-security-vilnius-2513757",
+   "status": 429,
+   "shot": "data/shots/3bede05afd554d54.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/nord-security/5c5ad630-61b7-420b-b159-fe1d3bceaa97",
+   "status": 200,
+   "shot": "data/shots/3bede05afd554d54.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/nord-security/5c5ad630-61b7-420b-b159-fe1d3bceaa97"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/nord-security/5c5ad630-61b7-420b-b159-fe1d3bceaa97",
+  "orig_id": "f7e5cf9194454dee",
+  "orig_posted": "2026-10-29",
+  "orig_updated": null,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-03T12:55:58"
+ },
+ "1ace668f9d5f4280": {
+  "id": "1ace668f9d5f4280",
+  "at": "2026-11-03T12:58:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/ux-writer-mid-senior-web-product-and-apps-nord-security-2513751",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/ux-writer-mid-senior-web-product-and-apps-nord-security-2513751",
+   "status": 429,
+   "shot": "data/shots/1ace668f9d5f4280.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/nord-security/5c5ad630-61b7-420b-b159-fe1d3bceaa97",
+   "status": 200,
+   "shot": "data/shots/1ace668f9d5f4280.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/nord-security/5c5ad630-61b7-420b-b159-fe1d3bceaa97"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/nord-security/5c5ad630-61b7-420b-b159-fe1d3bceaa97",
+  "orig_id": "f7e5cf9194454dee",
+  "orig_posted": "2026-10-29",
+  "orig_updated": null,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-03T12:55:58"
+ },
+ "5e4e2e5b19c3456d": {
+  "id": "5e4e2e5b19c3456d",
+  "at": "2026-11-03T12:58:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/head-of-compiance-systems-design-jd-com-paris-2513933",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/head-of-compiance-systems-design-jd-com-paris-2513933",
+   "status": 200,
+   "shot": "data/shots/5e4e2e5b19c3456d.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/head-of-compiance-systems-design-jd-com-paris-2513933",
+  "fetched_at": "2026-11-03T12:56:12",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "French and English (mixed)",
+  "language_ok": false,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Paris, France·On-site·Principal·Posted Oct 30, 2026",
+  "place_signals": [
+   {
+    "quote": "Paris, France·On-site·Principal·Posted Oct 30, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Paris, France·On-site",
+  "reason": "The job is a compliance/risk head role, not design, and it is onsite in Paris, France.",
+  "confidence": "high",
+  "inferred": [
+   "language_ok set false because the description opens in French and the page is mostly French, though the duties list is in English",
+   "seniority taken from the 'Principal' label under the title"
+  ],
+  "fields": {
+   "role": "Head of Compiance Systems Design",
+   "company": "JD.COM",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": "€430,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "French",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "e3e99c4e52c9405d": {
+  "id": "e3e99c4e52c9405d",
+  "at": "2026-11-03T12:58:08",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/principal-design-engineer-arm-manchester-2513861",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/principal-design-engineer-arm-manchester-2513861",
+   "status": 429,
+   "shot": "data/shots/e3e99c4e52c9405d.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/principal-design-engineer-arm-manchester-2513861",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:51",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Manchester, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Manchester, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Manchester, United Kingdom · On-site · Staff · Posted Oct 30, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "a relocation package (including visa sponsorship support) is available for this role, for candidates who require it.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Details of what this means for each role will be shared upon application.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Manchester, United Kingdom (Onsite)",
+  "reason": "This is an RTL/SoC hardware design engineering job, not product design, and it is onsite in Manchester, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Principal Design Engineer",
+   "company": "Arm",
+   "seniority": "principal",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "£126,200 - £170,800 per year",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "af92d027fb674439": {
+  "id": "af92d027fb674439",
+  "at": "2026-11-03T12:58:09",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/design-manager-operations-design-team-amazon-barcelona-2485743",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/design-manager-operations-design-team-amazon-barcelona-2485743",
+   "status": 429,
+   "shot": "data/shots/af92d027fb674439.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/design-manager-operations-design-team-amazon-barcelona-2485743",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:52",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Barcelona, Spain (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Barcelona, Spain (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Barcelona, Spain · On-site · Senior · Posted Oct 30, 2026",
+    "where": "side panel",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The role will be based in Barcelona, with some travel expected for up to 50% of the time, depending on the project portfolio.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The role will be based in Barcelona, with some travel expected for up to 50% of the time, depending on the project portfolio.",
+  "reason": "This is a design manager for construction and fulfillment-center layouts (engineering/CAD), not product or UX design, and it is onsite in Barcelona.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Manager, Operations Design Team",
+   "company": "Amazon",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": "€130,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "13a8c31ef5bb4f62": {
+  "id": "13a8c31ef5bb4f62",
+  "at": "2026-11-03T12:58:13",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-logical-design-engineer-fractile-london-2512208",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-logical-design-engineer-fractile-london-2512208",
+   "status": 429,
+   "shot": "data/shots/13a8c31ef5bb4f62.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.eu.greenhouse.io/fractile?error=true",
+   "status": 404,
+   "shot": "data/shots/13a8c31ef5bb4f62.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.eu.greenhouse.io/fractile?error=true"
+  ],
+  "lane": "closed",
+  "posting_open": "no",
+  "closed_by": "employer",
+  "read": "employer",
+  "read_url": "https://job-boards.eu.greenhouse.io/fractile?error=true",
+  "open_quote": "the employer's page answered 404",
+  "stage": "render",
+  "reason": "the employer says it is closed",
+  "fetched_at": "2026-11-03T12:56:08"
+ },
+ "8c99e6ab9d604260": {
+  "id": "8c99e6ab9d604260",
+  "at": "2026-11-03T12:58:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-design-manager-digital-integration-legoland-the-lego-group-billund-2513856",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-design-manager-digital-integration-legoland-the-lego-group-billund-2513856",
+   "status": 429,
+   "shot": "data/shots/8c99e6ab9d604260.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/senior-design-manager-digital-integration-legoland-the-lego-group-billund-2513856",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:52",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "unclear",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Billund, Denmark · On-site · Senior · Posted Oct 29, 2026",
+  "place_signals": [
+   {
+    "quote": "Billund, enmark (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Billund, Denmark · On-site · Senior · Posted Oct 29, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Your workplace: Your workplace will be the office, store or factory specified in this advert.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our hybrid work model, Best of Both offers you the option of flexibility to work from home up to two days per week.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Billund, Denmark · On-site · Senior · Posted Oct 29, 2026",
+  "reason": "Onsite in Billund, Denmark, so it cannot be done from Portugal; the role is design-manager-titled but mostly brand/experience governance, so role is unclear.",
+  "confidence": "medium",
+  "inferred": [
+   "role_verdict unclear: title says Design Manager but duties are brand assurance, creative governance and digital experience integration for theme parks"
+  ],
+  "fields": {
+   "role": "Senior Design Manager, Digital Integration, LEGOLAND",
+   "company": "the LEGO Group",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Denmark"
+   ],
+   "portugal_ok": "no",
+   "salary": "€136,000 total comp (site estimate)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 29, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a62173d587694a82": {
+  "id": "a62173d587694a82",
+  "at": "2026-11-03T12:58:10",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/process-design-engineer-amazon-logistics-eu-design-engineering-amazon-berlin-2513066",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/process-design-engineer-amazon-logistics-eu-design-engineering-amazon-berlin-2513066",
+   "status": 429,
+   "shot": "data/shots/a62173d587694a82.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/process-design-engineer-amazon-logistics-eu-design-engineering-amazon-berlin-2513066",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:56",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Berlin, Germany (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Berlin, Germany (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Berlin, Germany · On-site · Mid-level · Posted Oct 29, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This job is located in Germany with up to 25% of time traveling domestically.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This job is located in Germany with up to 25% of time traveling domestically.",
+  "reason": "This is a process/layout engineering job for Amazon delivery stations, not product design, and it is onsite in Berlin, Germany.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from 'Mid-level' tag on the page",
+   "onsite_days not stated; role is fully onsite"
+  ],
+  "fields": {
+   "role": "Process/Design Engineer Amazon Logistics, EU Design Engineering",
+   "company": "Amazon",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": "€145,000 total comp",
+   "years_xp": null,
+   "reports_to": "Manager of the Design Engineering team of the country supported",
+   "language": "English",
+   "posted": "Oct 29, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f5e8872f7a1644a2": {
+  "id": "f5e8872f7a1644a2",
+  "at": "2026-11-03T12:58:08",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/operations-designer-operations-design-team-amazon-barcelona-2485759",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/operations-designer-operations-design-team-amazon-barcelona-2485759",
+   "status": 429,
+   "shot": "data/shots/f5e8872f7a1644a2.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/operations-designer-operations-design-team-amazon-barcelona-2485759",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:51",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Barcelona, Spain (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Barcelona, Spain (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Barcelona, Spain · On-site · Mid-level · Posted Oct 30, 2026",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The role will be based in Spain, with travel expected for up to 50% of the time depending on the project portfolio",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The role will be based in Spain, with travel expected for up to 50% of the time depending on the project portfolio",
+  "reason": "This is an onsite fulfillment-center operations/engineering design role (BIM/CAD), not product design, and it is based in Barcelona, Spain.",
+  "confidence": "high",
+  "inferred": [
+   "seniority mid taken from the 'Mid-level' label on the page"
+  ],
+  "fields": {
+   "role": "Operations Designer, Operations Design Team",
+   "company": "Amazon",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": "€90,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 30, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "608c7ec661cb4abc": {
+  "id": "608c7ec661cb4abc",
+  "at": "2026-11-03T12:58:11",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/asic-digital-design-sr-staff-engineer-synopsys-inc-reading-2512588",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/asic-digital-design-sr-staff-engineer-synopsys-inc-reading-2512588",
+   "status": 429,
+   "shot": "data/shots/608c7ec661cb4abc.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/asic-digital-design-sr-staff-engineer-synopsys-inc-reading-2512588",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:56",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Reading, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Reading, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Reading, United Kingdom · On-site · Senior · Posted Oct 29, 2026",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Reading, United Kingdom (Onsite)",
+  "reason": "This is an ASIC digital design engineering job (chip design), not product design, and it is onsite in Reading, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "ASIC Digital Design, Sr Staff Engineer",
+   "company": "Synopsys Inc",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€129,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 29, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "cb2cc4e04d204f0c": {
+  "id": "cb2cc4e04d204f0c",
+  "at": "2026-11-03T12:58:12",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/product-designer-aws-search-security-observability-governance-amazon-web-services-aws-dublin-2512510",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/product-designer-aws-search-security-observability-governance-amazon-web-services-aws-dublin-2512510",
+   "status": 429,
+   "shot": "data/shots/cb2cc4e04d204f0c.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/product-designer-aws-search-security-observability-governance-amazon-web-services-aws-dublin-2512510",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:55:57",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "ublin, Ireland (Onsite)",
+  "place_signals": [
+   {
+    "quote": "ublin, Ireland (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Dublin, Ireland · On-site · Mid-level · Posted Oct 29, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Dublin, Ireland · On-site · Mid-level · Posted Oct 29, 2026",
+  "reason": "Product design role at AWS that is onsite in Dublin, Ireland, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "seniority taken from the 'Mid-level' label on the page"
+  ],
+  "fields": {
+   "role": "Product Designer, AWS Search, Security, Observability, Governance",
+   "company": "Amazon Web Services (AWS)",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Ireland"
+   ],
+   "portugal_ok": "no",
+   "salary": "€160,000 total comp · €38,000 kept per year on a comfortable lifestyle",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 29, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d0aeaf28793947b6": {
+  "id": "d0aeaf28793947b6",
+  "at": "2026-11-03T12:58:15",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/experienced-analyst-in-digital-operating-model-design-danske-bank-vilnius-2513744",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/experienced-analyst-in-digital-operating-model-design-danske-bank-vilnius-2513744",
+   "status": 200,
+   "shot": "data/shots/d0aeaf28793947b6.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/experienced-analyst-in-digital-operating-model-design-danske-bank-vilnius-2513744",
+  "fetched_at": "2026-11-03T12:55:51",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Vilnius, Lithuania·On-site·Mid-level·Posted Oct 28, 2026",
+  "place_signals": [
+   {
+    "quote": "Vilnius, Lithuania·On-site·Mid-level·Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The workplace is located in Vilnius. Danske Bank supports workplace flexibility and currently operates a hybrid work model, where employees work at least three days per week from the office.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working conditions: Work from home up to two days a week; home office budget (after the probation period)",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "The workplace is located in Vilnius. ... employees work at least three days per week from the office.",
+  "reason": "This is a business and organisational-design analyst role (Transformation & Change), not product design, and it requires working at least three days a week in the Vilnius office.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Experienced Analyst in Digital Operating Model & Design",
+   "company": "Danske Bank",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": "at least 3 days per week",
+   "countries": [
+    "Lithuania"
+   ],
+   "portugal_ok": "no",
+   "salary": "EUR 3,760 to 5,640 gross per month (EUR 45,120 to 67,680 a year)",
+   "years_xp": "5+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "c84490175ebe491b": {
+  "id": "c84490175ebe491b",
+  "at": "2026-11-03T12:58:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/experienced-cad-automation-engineer-design-verification-apple-st-albans-2511474",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/experienced-cad-automation-engineer-design-verification-apple-st-albans-2511474",
+   "status": 429,
+   "shot": "data/shots/c84490175ebe491b.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/experienced-cad-automation-engineer-design-verification-apple-st-albans-2511474",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:02",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "St Albans, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "St Albans, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "St Albans, United Kingdom · On-site · Mid-level · Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "St Albans, United Kingdom (Onsite)",
+  "reason": "This is a chip-design CAD automation engineering job, not product design, and it is onsite in St Albans, UK.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Experienced CAD Automation Engineer (Design Verification)",
+   "company": "Apple",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€155,000 total comp · €44,000 kept per year on a comfortable lifestyle",
+   "years_xp": "Minimum 5 years of experience working on RTL simulation tools",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7b01ce704c8e4f48": {
+  "id": "7b01ce704c8e4f48",
+  "at": "2026-11-03T12:58:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/cpu-architecture-and-rtl-design-engineer-amd-dublin-2512437",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/cpu-architecture-and-rtl-design-engineer-amd-dublin-2512437",
+   "status": 429,
+   "shot": "data/shots/7b01ce704c8e4f48.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/cpu-architecture-and-rtl-design-engineer-amd-dublin-2512437",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:01",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Dublin, Ireland · On-site · Mid-level · Posted Oct 28, 2026",
+  "place_signals": [
+   {
+    "quote": "ublin, Ireland (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Dublin, Ireland · On-site · Mid-level · Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Dublin or Cork, Ireland.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Dublin, Ireland · On-site · Mid-level · Posted Oct 28, 2026",
+  "reason": "This is a CPU architecture/RTL hardware design engineering job, not product design, and it is onsite in Ireland.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from 'Mid-level' label is stated, not inferred; onsite_days not given"
+  ],
+  "fields": {
+   "role": "CPU Architecture and RTL Design Engineer",
+   "company": "AMD",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Ireland"
+   ],
+   "portugal_ok": "no",
+   "salary": "€128,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7c9060fc7b744e49": {
+  "id": "7c9060fc7b744e49",
+  "at": "2026-11-03T12:58:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/design-manger-west-tesla-amsterdam-2511476",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/design-manger-west-tesla-amsterdam-2511476",
+   "status": 429,
+   "shot": "data/shots/7c9060fc7b744e49.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/design-manger-west-tesla-amsterdam-2511476",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:01",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Amsterdam, Netherlands (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Amsterdam, Netherlands (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Amsterdam, Netherlands · On-site · Mid-level · Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role will require travel around the Western region (Benelux & France)",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Amsterdam, Netherlands (Onsite)",
+  "reason": "This is an architectural/construction design management role for Tesla facilities, not product design, and it is onsite in Amsterdam.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Design Manger, West",
+   "company": "Tesla",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Netherlands",
+    "Belgium",
+    "Luxembourg",
+    "France"
+   ],
+   "portugal_ok": "no",
+   "salary": "€78,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "9f1e680ae82f45db": {
+  "id": "9f1e680ae82f45db",
+  "at": "2026-11-03T12:58:23",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-staff-product-designer-virtual-clinics-flo-health-london-2511171",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-staff-product-designer-virtual-clinics-flo-health-london-2511171",
+   "status": 429,
+   "shot": "data/shots/9f1e680ae82f45db.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/flohealth?error=true",
+   "status": 200,
+   "shot": "data/shots/9f1e680ae82f45db.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/flohealth?error=true"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/flohealth?error=true",
+  "orig_id": "ea173c0a64b34c69",
+  "orig_posted": "2026-01-15",
+  "orig_updated": "2026-08-12",
+  "lane": "cut",
+  "stage": "cl",
+  "reason": "age: the employer's own posting was posted or last updated 83 days ago; the job board's copy made it look newer",
+  "fetched_at": "2026-11-03T12:56:12"
+ },
+ "efeaeb14ac334c43": {
+  "id": "efeaeb14ac334c43",
+  "at": "2026-11-03T12:58:19",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-ux-designer-international-seller-services-amazon-madrid-2473008",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-ux-designer-international-seller-services-amazon-madrid-2473008",
+   "status": 429,
+   "shot": "data/shots/efeaeb14ac334c43.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/senior-ux-designer-international-seller-services-amazon-madrid-2473008",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:02",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Madrid, Spain (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Madrid, Spain (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Madrid, Spain · On-site · Senior · Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Madrid, Spain (Onsite)",
+  "reason": "Senior UX design role at Amazon, but explicitly onsite in Madrid, Spain, with no remote option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior UX Designer, International Seller Services",
+   "company": "Amazon",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": "€130,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "e05755994b2548ab": {
+  "id": "e05755994b2548ab",
+  "at": "2026-11-03T12:58:17",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/game-designer-inception-deepmind-google-deepmind-london-2511935",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/game-designer-inception-deepmind-google-deepmind-london-2511935",
+   "status": 429,
+   "shot": "data/shots/e05755994b2548ab.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/game-designer-inception-deepmind-google-deepmind-london-2511935",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:01",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "London, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "London, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "London, United Kingdom · On-site · Mid-level · Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This collaborative, multidisciplinary group is situated primarily in London and Mountain View with collaborators across the globe.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "London, United Kingdom (Onsite)",
+  "reason": "This is a game design job (not product/UX/UI design) and it is onsite in London, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Game Designer, Inception, DeepMind",
+   "company": "Google DeepMind",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€201,250 total comp (estimate shown by the site)",
+   "years_xp": "5 years of experience in game design",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "ec5b14f2004b4010": {
+  "id": "ec5b14f2004b4010",
+  "at": "2026-11-03T12:58:20",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/design-manager-emea-portfolio-design-sustainability-engineering-amazon-madrid-2460480",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/design-manager-emea-portfolio-design-sustainability-engineering-amazon-madrid-2460480",
+   "status": 429,
+   "shot": "data/shots/ec5b14f2004b4010.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/design-manager-emea-portfolio-design-sustainability-engineering-amazon-madrid-2460480",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:06",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Madrid, Spain (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Madrid, Spain (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Madrid, Spain · On-site · Senior · Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "we generally expect employees to work from our offices five days a week",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This is a Regional role focused on the EMEA region, so requires regional travel approximately 20-30% of the time.",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Madrid, Spain (Onsite) ... we generally expect employees to work from our offices five days a week",
+  "reason": "This is a workplace/architectural interior design role (tenant improvement, construction projects), not product design, and it is onsite in Madrid.",
+  "confidence": "high",
+  "inferred": [
+   "seniority inferred from the 'Senior' tag on the page and the manager title"
+  ],
+  "fields": {
+   "role": "Design Manager, EMEA Portfolio, Design, Sustainability & Engineering",
+   "company": "Amazon",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": "5 days a week",
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": "€130,000 total comp",
+   "years_xp": null,
+   "reports_to": "EMEA Design Manager",
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "f1e0b27607b44ab9": {
+  "id": "f1e0b27607b44ab9",
+  "at": "2026-11-03T12:58:23",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-staff-product-designer-d-f-m-personio-berlin-2448140",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-staff-product-designer-d-f-m-personio-berlin-2448140",
+   "status": 429,
+   "shot": "data/shots/f1e0b27607b44ab9.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/senior-staff-product-designer-d-f-m-personio-berlin-2448140",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:07",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Berlin, Germany (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Berlin, Germany (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Berlin, Germany · On-site · Senior",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role requires 2 days per week in the office and is based in Munich, Berlin or London.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is office-based, with 2 days per week required in your contracted office location. The remaining days can be worked from home or in the office if you prefer.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "you'll have 20 Flex Days per year to work remotely from other locations",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role requires 2 days per week in the office and is based in Munich, Berlin or London.",
+  "reason": "Senior Staff Product Designer is a product design role, but it requires 2 office days per week in Munich, Berlin or London, none in Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Staff Product Designer (d/f/m)",
+   "company": "Personio",
+   "seniority": "staff",
+   "remote": "hybrid",
+   "onsite_days": "2 days per week",
+   "countries": [
+    "Germany",
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€123,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d12ecfa14ab7499b": {
+  "id": "d12ecfa14ab7499b",
+  "at": "2026-11-03T12:58:22",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/staff-technical-product-designer-ai-d-f-m-personio-london-2452793",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/staff-technical-product-designer-ai-d-f-m-personio-london-2452793",
+   "status": 429,
+   "shot": "data/shots/d12ecfa14ab7499b.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/staff-technical-product-designer-ai-d-f-m-personio-london-2452793",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:06",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "London, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "London, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "London, United Kingdom · On-site · Mid-level · Posted Oct 28, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role requires 2 days per week in the office and is based in London.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is office-based, with 2 days per week required in your contracted office location. The remaining days can be worked from home or in the office if you prefer.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "you’ll have 20 Flex Days per year to work remotely from other locations.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role requires 2 days per week in the office and is based in London.",
+  "reason": "Staff product design role is open, but it requires 2 office days per week in London with no remote option.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Technical Product Designer, AI (d/f/m)",
+   "company": "Personio",
+   "seniority": "staff",
+   "remote": "hybrid",
+   "onsite_days": 2,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€105,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 28, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d0c20165492a4ac3": {
+  "id": "d0c20165492a4ac3",
+  "at": "2026-11-03T12:58:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-software-engineer-fullstack-repayments-ux-affirm-2511146",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-software-engineer-fullstack-repayments-ux-affirm-2511146",
+   "status": 200,
+   "shot": "data/shots/d0c20165492a4ac3.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/affirm/jobs/8040380003",
+   "status": 200,
+   "shot": "data/shots/d0c20165492a4ac3.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/affirm/jobs/8040380003"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/affirm/jobs/8040380003",
+  "orig_id": "355f298abf5744df",
+  "orig_posted": "2026-10-27",
+  "orig_updated": "2026-10-30",
+  "fetched_at": "2026-11-03T12:56:07",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Spain",
+  "place_signals": [
+   {
+    "quote": "Remote Spain",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We're a full-stack team located entirely in Europe within the same time zone",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location - Remote Spain",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are able to offer visa sponsorship for this role, but do require that someone is based in Spain for the role.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role does require someone to work remotely from Spain. What is your current country of residence? *",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Affirm is proud to be a remote-first company. Most roles can be done from almost anywhere within the country of employment.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "We are able to offer visa sponsorship for this role, but do require that someone is based in Spain for the role.",
+  "reason": "This is a fullstack software engineering role by title, not design, and it requires being based in Spain.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Software Engineer, Fullstack (Repayments UX)",
+   "company": "Affirm",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": "€86,000 - €122,000 per year (ESP base pay range)",
+   "years_xp": "4+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d6df016f3d2d40a8": {
+  "id": "d6df016f3d2d40a8",
+  "at": "2026-11-03T12:58:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-software-engineer-fullstack-repayments-ux-affirm-2511147",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-software-engineer-fullstack-repayments-ux-affirm-2511147",
+   "status": 429,
+   "shot": "data/shots/d6df016f3d2d40a8.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/affirm/jobs/8040380003",
+   "status": 200,
+   "shot": "data/shots/d6df016f3d2d40a8.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/affirm/jobs/8040380003"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/affirm/jobs/8040380003",
+  "orig_id": "355f298abf5744df",
+  "orig_posted": "2026-10-27",
+  "orig_updated": "2026-10-30",
+  "fetched_at": "2026-11-03T12:56:12",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Spain",
+  "place_signals": [
+   {
+    "quote": "Remote Spain",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We're a full-stack team located entirely in Europe within the same time zone",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location - Remote Spain",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We are able to offer visa sponsorship for this role, but do require that someone is based in Spain for the role.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role does require someone to work remotely from Spain. What is your current country of residence? *",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Most roles can be done from almost anywhere within the country of employment.",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "We are able to offer visa sponsorship for this role, but do require that someone is based in Spain for the role.",
+  "reason": "This is a fullstack software engineering role by title, not a design role, and it also requires being based in Spain.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from title"
+  ],
+  "fields": {
+   "role": "Senior Software Engineer, Fullstack (Repayments UX)",
+   "company": "Affirm",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": "€86,000 - €122,000 per year (ESP base pay range)",
+   "years_xp": "4+",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "7c5337a5206f43b5": {
+  "id": "7c5337a5206f43b5",
+  "at": "2026-11-03T12:58:27",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/software-engineer-ii-fullstack-repayment-ux-affirm-2511151",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/software-engineer-ii-fullstack-repayment-ux-affirm-2511151",
+   "status": 200,
+   "shot": "data/shots/7c5337a5206f43b5.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/affirm/jobs/8040392003",
+   "status": 200,
+   "shot": "data/shots/7c5337a5206f43b5.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/affirm/jobs/8040392003"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/affirm/jobs/8040392003",
+  "orig_id": "fe7d403ccd7c4d61",
+  "orig_posted": "2026-10-27",
+  "orig_updated": "2026-10-30",
+  "fetched_at": "2026-11-03T12:56:07",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Poland",
+  "place_signals": [
+   {
+    "quote": "Remote Poland",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We're a full-stack team located entirely in Europe within the same time zone",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location - Remote Poland",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The majority of our roles can be located anywhere in Poland.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Affirm is proud to be a remote-first company. Most roles can be done from almost anywhere within the country of employment.",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Do you now or in the future require sponsorship for employment visa status in Poland?*",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location - Remote Poland. The majority of our roles can be located anywhere in Poland.",
+  "reason": "This is a fullstack software engineering role, not design, and it is remote only within Poland.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Software Engineer II, Fullstack (Repayment UX)",
+   "company": "Affirm",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": "259,000 zł - 379,000 zł",
+   "years_xp": "1.5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "seniority_note": null,
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "0f5b805acdf54381": {
+  "id": "0f5b805acdf54381",
+  "at": "2026-11-03T12:58:32",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/product-designer-mid-senior-nord-security-vilnius-2511325",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/product-designer-mid-senior-nord-security-vilnius-2511325",
+   "status": 429,
+   "shot": "data/shots/0f5b805acdf54381.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/nord-security/32669d32-3901-49be-81d5-9c8ca880568a",
+   "status": 200,
+   "shot": "data/shots/0f5b805acdf54381.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/nord-security/32669d32-3901-49be-81d5-9c8ca880568a"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/nord-security/32669d32-3901-49be-81d5-9c8ca880568a",
+  "orig_id": "519044379bd44a65",
+  "orig_posted": "2026-10-27",
+  "orig_updated": null,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-03T12:56:20"
+ },
+ "c7b24512d98a4238": {
+  "id": "c7b24512d98a4238",
+  "at": "2026-11-03T12:58:25",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/software-engineer-ii-fullstack-repayment-ux-affirm-2511150",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/software-engineer-ii-fullstack-repayment-ux-affirm-2511150",
+   "status": 200,
+   "shot": "data/shots/c7b24512d98a4238.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/affirm/jobs/8040392003",
+   "status": 200,
+   "shot": "data/shots/c7b24512d98a4238.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/affirm/jobs/8040392003"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/affirm/jobs/8040392003",
+  "orig_id": "fe7d403ccd7c4d61",
+  "orig_posted": "2026-10-27",
+  "orig_updated": "2026-10-30",
+  "fetched_at": "2026-11-03T12:56:07",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote Poland",
+  "place_signals": [
+   {
+    "quote": "Remote Poland",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We're a full-stack team located entirely in Europe within the same time zone",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Location - Remote Poland",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The majority of our roles can be located anywhere in Poland.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Most roles can be done from almost anywhere within the country of employment.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Do you now or in the future require sponsorship for employment visa status in Poland?*",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Location - Remote Poland. The majority of our roles can be located anywhere in Poland.",
+  "reason": "This is a fullstack software engineering role, not design, and it is remote only within Poland.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Software Engineer II, Fullstack (Repayment UX)",
+   "company": "Affirm",
+   "seniority": "mid",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": "259,000 zł - 379,000 zł",
+   "years_xp": "1.5+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "_note": "seniority 'mid' is inferred from the Software Engineer II title",
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "4d7dd74bc4394cbd": {
+  "id": "4d7dd74bc4394cbd",
+  "at": "2026-11-03T12:58:29",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/student-worker-design-and-asset-governance-the-lego-group-billund-2514966",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/student-worker-design-and-asset-governance-the-lego-group-billund-2514966",
+   "status": 429,
+   "shot": "data/shots/4d7dd74bc4394cbd.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/student-worker-design-and-asset-governance-the-lego-group-billund-2514966",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:12",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Billund, enmark (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Billund, enmark (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Billund, Denmark · On-site · Mid-level · Posted Oct 27, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "You are able to work at a minimum of 10-15 hours per week in our office at Havremarken in Billund",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Your workplace will be the office, store or factory specified in this advert.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Our hybrid work model, Best of Both offers you the option of flexibility to work from home up to two days per week.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "You are able to work at a minimum of 10-15 hours per week in our office at Havremarken in Billund",
+  "reason": "A student worker role in brand/asset governance (not product design), onsite in Billund, Denmark.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Student Worker - Design and Asset Governance",
+   "company": "the LEGO Group",
+   "seniority": "junior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Denmark"
+   ],
+   "portugal_ok": "no",
+   "salary": "€96,000 total comp (aggregator estimate)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 27, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "c0f64835207b4b0d": {
+  "id": "c0f64835207b4b0d",
+  "at": "2026-11-03T12:58:30",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/sr-innovation-and-design-engineer-worldwide-design-and-engineering-amazon-london-2511352",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/sr-innovation-and-design-engineer-worldwide-design-and-engineering-amazon-london-2511352",
+   "status": 429,
+   "shot": "data/shots/c0f64835207b4b0d.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/sr-innovation-and-design-engineer-worldwide-design-and-engineering-amazon-london-2511352",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:16",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "London, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "London, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "London, United Kingdom · On-site · Senior · Posted Oct 27, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We’re looking to add a high-impact engineer to our team in Europe / United Kingdom.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_maybe"
+   }
+  ],
+  "place_verdict": "unclear",
+  "place_quote": "London, United Kingdom (Onsite)",
+  "reason": "remote from a list of countries the page does not show · This is a physical-systems and logistics engineering job at Amazon, not product design, and it is onsite in London.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Sr Innovation and Design Engineer, Worldwide Design and Engineering",
+   "company": "Amazon",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€235,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 27, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "6596586b42874654": {
+  "id": "6596586b42874654",
+  "at": "2026-11-03T12:58:30",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-bolt-2512097",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-bolt-2512097",
+   "status": 429,
+   "shot": "data/shots/6596586b42874654.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/senior-product-designer-bolt-2512097",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:16",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Poland (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Poland (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Poland · On-site · Senior · Posted Oct 27, 2026",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Poland (Onsite)",
+  "reason": "Senior product design role at Bolt that is onsite in Poland, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Senior Product Designer",
+   "company": "Bolt",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Poland"
+   ],
+   "portugal_ok": "no",
+   "salary": "€102,000 total comp",
+   "years_xp": "6+",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 27, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "8eed2fc908d84d34": {
+  "id": "8eed2fc908d84d34",
+  "at": "2026-11-03T12:58:28",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/backend-engineer-ui-platform-stripe-barcelona-2510673",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/backend-engineer-ui-platform-stripe-barcelona-2510673",
+   "status": 429,
+   "shot": "data/shots/8eed2fc908d84d34.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/backend-engineer-ui-platform-stripe-barcelona-2510673",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:12",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Barcelona, Spain (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Barcelona, Spain (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Barcelona, Spain · On-site · Mid-level · Posted Oct 27, 2026",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Barcelona, Spain (Onsite)",
+  "reason": "Backend engineering role by title, onsite in Barcelona, Spain.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Backend Engineer, UI Platform",
+   "company": "Stripe",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "no",
+   "salary": "€103,500 total comp",
+   "years_xp": "2+ years",
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 27, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "45c0c4e9f3df49cc": {
+  "id": "45c0c4e9f3df49cc",
+  "at": "2026-11-03T12:58:49",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/design-engineer-uk-writer-london-2507897",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/design-engineer-uk-writer-london-2507897",
+   "status": 429,
+   "shot": "data/shots/45c0c4e9f3df49cc.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://jobs.ashbyhq.com/writer/fe2940b1-d097-472c-a310-4d60a76cecbf",
+   "status": 200,
+   "shot": "data/shots/45c0c4e9f3df49cc.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://jobs.ashbyhq.com/writer/fe2940b1-d097-472c-a310-4d60a76cecbf"
+  ],
+  "read": "employer",
+  "read_url": "https://jobs.ashbyhq.com/writer/fe2940b1-d097-472c-a310-4d60a76cecbf",
+  "orig_id": "cc22eb58ec88461b",
+  "orig_posted": "2026-10-07",
+  "orig_updated": null,
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-03T12:56:37"
+ },
+ "5550dfe323b84bea": {
+  "id": "5550dfe323b84bea",
+  "at": "2026-11-03T12:58:51",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-finance-business-partner-drug-design-and-development-london-uk-isomorphic-labs-london-2503748",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-finance-business-partner-drug-design-and-development-london-uk-isomorphic-labs-london-2503748",
+   "status": 429,
+   "shot": "data/shots/5550dfe323b84bea.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/isomorphiclabs/jobs/6219244004",
+   "status": 200,
+   "shot": "data/shots/5550dfe323b84bea.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/isomorphiclabs/jobs/6219244004"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/isomorphiclabs/jobs/6219244004",
+  "orig_id": "e932e88afbb14a76",
+  "orig_posted": "2026-10-07",
+  "orig_updated": "2026-10-07",
+  "lane": "cut",
+  "stage": "cl",
+  "place_verdict": "no",
+  "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+  "fetched_at": "2026-11-03T12:56:39"
+ },
+ "9ad5b6efb91a4524": {
+  "id": "9ad5b6efb91a4524",
+  "at": "2026-11-03T12:58:51",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/ux-writer-ii-partnerships-booking-com-amsterdam-2485374",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/ux-writer-ii-partnerships-booking-com-amsterdam-2485374",
+   "status": 429,
+   "shot": "data/shots/9ad5b6efb91a4524.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/ux-writer-ii-partnerships-booking-com-amsterdam-2485374",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:39",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Amsterdam, Netherlands (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Amsterdam, Netherlands (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Amsterdam, Netherlands · On-site · Mid-level · Posted Oct 7, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Team Location : Amsterdam, Netherlands",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Hybrid working including flexible working arrangements, working from home furniture and ergonomic support, and up to 20 days per year working from abroad (home country)",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Full relocation support will be offered for you and your family (if the case) to move to Amsterdam",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Amsterdam, Netherlands (Onsite)",
+  "reason": "UX Writer is a writing role, not product design, and it is onsite in Amsterdam with relocation offered.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Writer II - Partnerships",
+   "company": "Booking.com",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Netherlands"
+   ],
+   "portugal_ok": "no",
+   "salary": "€109,200 total comp",
+   "years_xp": "minimum 3 years",
+   "reports_to": "UX Writing Manager",
+   "language": "English",
+   "posted": "Oct 7, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "6ece75a5c9c8451c": {
+  "id": "6ece75a5c9c8451c",
+  "at": "2026-11-03T12:58:51",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/senior-digital-designer-adyen-amsterdam-2485054",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/senior-digital-designer-adyen-amsterdam-2485054",
+   "status": 429,
+   "shot": "data/shots/6ece75a5c9c8451c.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/adyen/jobs/8242349",
+   "status": 200,
+   "shot": "data/shots/6ece75a5c9c8451c.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/adyen/jobs/8242349"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/adyen/jobs/8242349",
+  "orig_id": "09bdbb4275044b7f",
+  "orig_posted": "2026-10-07",
+  "orig_updated": "2026-11-02",
+  "fetched_at": "2026-11-03T12:56:45",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "unclear",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Amsterdam",
+  "place_signals": [
+   {
+    "quote": "Amsterdam",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role will be based in our Amsterdam office and reports directly to the Global Design Team Lead.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is based out of our Amsterdam office. We are an office-first company and value in-person collaboration; we do not offer remote-only roles.",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Some domestic and international travel is required.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role is based out of our Amsterdam office. We are an office-first company and value in-person collaboration; we do not offer remote-only roles.",
+  "reason": "Onsite in Amsterdam with no remote option, so it cannot be done from Portugal; the role is a Global Marketing digital designer on the website, with UI/UX/design-system work, so the role fit is ambiguous.",
+  "confidence": "high",
+  "inferred": [
+   "seniority from the title",
+   "remote/onsite status from the Amsterdam office statements"
+  ],
+  "fields": {
+   "role": "Senior Digital Designer",
+   "company": "Adyen",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Netherlands"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "7+",
+   "reports_to": "Global Design Team Lead",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "e8ba4bf40d5845b6": {
+  "id": "e8ba4bf40d5845b6",
+  "at": "2026-11-03T12:58:51",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/construction-manager-design-and-construction-amazon-berlin-2485034",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/construction-manager-design-and-construction-amazon-berlin-2485034",
+   "status": 429,
+   "shot": "data/shots/e8ba4bf40d5845b6.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/construction-manager-design-and-construction-amazon-berlin-2485034",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:42",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "no",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Berlin, Germany (Onsite)",
+  "place_signals": [
+   {
+    "quote": "Berlin, Germany (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "The role will be based DEU with 50% of time traveling either domestically or to other EMEA countries.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Speak, write, and read fluently in German and English at C1 level or above",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Berlin, Germany (Onsite)",
+  "reason": "This is a construction management job for fulfillment centers, not a design role, and it is onsite in Berlin.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Construction Manager, Design and Construction",
+   "company": "Amazon",
+   "seniority": "senior",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "Germany"
+   ],
+   "portugal_ok": "no",
+   "salary": "€119,925 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 7, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "81b75abaa41d4b62": {
+  "id": "81b75abaa41d4b62",
+  "at": "2026-11-03T12:58:54",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/principal-product-designer-new-relic-barcelona-2462242",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/principal-product-designer-new-relic-barcelona-2462242",
+   "status": 429,
+   "shot": "data/shots/81b75abaa41d4b62.jpg",
+   "error": null
+  },
+  "employer": {
+   "url": "https://job-boards.greenhouse.io/newrelic/jobs/5396630008",
+   "status": 200,
+   "shot": "data/shots/81b75abaa41d4b62.employer.jpg",
+   "error": null
+  },
+  "found_by": "pool",
+  "looked": [
+   "pool: https://job-boards.greenhouse.io/newrelic/jobs/5396630008"
+  ],
+  "read": "employer",
+  "read_url": "https://job-boards.greenhouse.io/newrelic/jobs/5396630008",
+  "orig_id": "802cedc60cb24ba4",
+  "orig_posted": "2026-08-25",
+  "orig_updated": "2026-10-30",
+  "fetched_at": "2026-11-03T12:56:46",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "Barcelona, Spain",
+  "place_signals": [
+   {
+    "quote": "Barcelona, Spain",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Please note that visa sponsorship is not available for this position.",
+    "where": "body",
+    "kind": "explicit",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Are you now authorized to work for New Relic in the country where this position is located?*",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This model allows us to work in a variety of workplaces that best support our success, including fully office-based, fully remote, or hybrid.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Comfort working in a distributed, cross-cultural team.",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Barcelona, Spain",
+  "reason": "Principal Product Designer role is a fit, but the only location is Barcelona, Spain with no remote statement for this role, and the application asks about authorization in the position's country.",
+  "confidence": "medium",
+  "inferred": [
+   "workplace_as_posted onsite derived from a city named with no mention of remote for this role"
+  ],
+  "fields": {
+   "role": "Principal Product Designer",
+   "company": "New Relic",
+   "seniority": "principal",
+   "remote": "unstated",
+   "onsite_days": null,
+   "countries": [
+    "Spain"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": "Design Director (partners closely with; deputizes for)",
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "6064764ce0544efd": {
+  "id": "6064764ce0544efd",
+  "at": "2026-11-03T12:58:56",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-retail-deliveroo-london-2502084",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-retail-deliveroo-london-2502084",
+   "status": 429,
+   "shot": "data/shots/6064764ce0544efd.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/staff-product-designer-retail-deliveroo-london-2502084",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:45",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "London, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "London, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "London, United Kingdom · On-site · Staff · Posted Oct 6, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "We’re looking for a Staff Product Designer to join our Retail team in London. This is a hybrid role.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "We’re looking for a Staff Product Designer to join our Retail team in London. This is a hybrid role.",
+  "reason": "Staff product design role tied to the London office (onsite/hybrid), with no remote option, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Staff Product Designer (Retail)",
+   "company": "Deliveroo",
+   "seniority": "staff",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€198,000 total comp (estimate shown by the job board)",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 6, 2026"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "d3015c8922174ae0": {
+  "id": "d3015c8922174ae0",
+  "at": "2026-11-03T12:58:56",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://www.eurotoptech.com/jobs/preview/ux-designer-amazon-london-2487422",
+  "board": {
+   "url": "https://www.eurotoptech.com/jobs/preview/ux-designer-amazon-london-2487422",
+   "status": 429,
+   "shot": "data/shots/d3015c8922174ae0.jpg",
+   "error": null
+  },
+  "employer": null,
+  "found_by": null,
+  "looked": [],
+  "read": "board",
+  "read_url": "https://www.eurotoptech.com/jobs/preview/ux-designer-amazon-london-2487422",
+  "fed": true,
+  "fetched_at": "2026-11-03T12:56:47",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "London, United Kingdom (Onsite)",
+  "place_signals": [
+   {
+    "quote": "London, United Kingdom (Onsite)",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "London, United Kingdom · On-site · Mid-level · Posted Oct 6, 2026",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "London, United Kingdom (Onsite)",
+  "reason": "UX Designer role at Amazon is onsite in London with no remote option, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Amazon",
+   "seniority": "mid",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": "€175,000 total comp",
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": "Oct 6, 2026"
   },
   "stage": "vision",
   "lane": "cut",
