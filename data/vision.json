@@ -1727304,5 +1727304,311 @@
   "stage": "vision",
   "lane": "cut",
   "reader_place": "no"
+ },
+ "3d053412a8b64fc2": {
+  "id": "3d053412a8b64fc2",
+  "at": "2026-11-03T12:01:06",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/aristotle/j/E168755C69/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/aristotle/j/E168755C69/",
+   "status": 200,
+   "shot": "data/shots/3d053412a8b64fc2.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/aristotle/j/E168755C69/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "hybrid",
+  "location_under_the_title": "Provo, Utah, United States",
+  "place_signals": [
+   {
+    "quote": "Provo, Utah, United States",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This position follows a hybrid work model, requiring once a week in-office attendance.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "remote work friendly",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This position follows a hybrid work model, requiring once a week in-office attendance.",
+  "reason": "Hybrid UX role requiring weekly office attendance in Provo, Utah, which is not doable from Portugal.",
+  "confidence": "high",
+  "inferred": [
+   "Office location for the weekly attendance is inferred from the Provo, Utah location under the title."
+  ],
+  "fields": {
+   "role": "UX Designer",
+   "company": "Aristotle",
+   "seniority": "mid",
+   "remote": "hybrid",
+   "onsite_days": "1 day per week",
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "2-4 years",
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "a99bc8b75f1a4e5f": {
+  "id": "a99bc8b75f1a4e5f",
+  "at": "2026-11-03T12:01:15",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/astral-media-group-limited/j/A3080E9A81/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/astral-media-group-limited/j/A3080E9A81/",
+   "status": 200,
+   "shot": "data/shots/a99bc8b75f1a4e5f.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/astral-media-group-limited/j/A3080E9A81/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote, Temporary; United Arab Emirates, Egypt, Philippines",
+  "place_signals": [
+   {
+    "quote": "United Arab Emirates Egypt Philippines",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote Temporary United Arab Emirates Egypt Philippines",
+  "reason": "Role is a remote UI/UX design-system job, but the location field lists only UAE, Egypt and Philippines, with no statement that Portugal is eligible.",
+  "confidence": "medium",
+  "inferred": [],
+  "fields": {
+   "role": "UI/UX Designer (Project-Based)",
+   "company": "Plutus Media",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United Arab Emirates",
+    "Egypt",
+    "Philippines"
+   ],
+   "portugal_ok": "unclear",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "unclear"
+ },
+ "6a3816c46638412a": {
+  "id": "6a3816c46638412a",
+  "at": "2026-11-03T12:01:24",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/rebellion/j/04AC8EE295/",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/rebellion/j/04AC8EE295/",
+   "status": 200,
+   "shot": "data/shots/6a3816c46638412a.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/rebellion/j/04AC8EE295/",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "onsite",
+  "location_under_the_title": "On-site; Oxford, England, United Kingdom",
+  "place_signals": [
+   {
+    "quote": "Oxford, England, United Kingdom",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "On-site",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "This role is based at our riverside headquarters in Oxford, offering a creative and relaxed atmosphere where teamwork drives our success. We can provide a relocation package",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "#LI-Onsite",
+    "where": "footer or small print",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "This role is based at our riverside headquarters in Oxford",
+  "reason": "Technical UI Designer role is onsite at the Oxford, UK headquarters with relocation offered, so it can't be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Technical UI Designer",
+   "company": "Rebellion",
+   "seniority": "unstated",
+   "remote": "onsite",
+   "onsite_days": null,
+   "countries": [
+    "United Kingdom"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
+ },
+ "ef6afc8706044daa": {
+  "id": "ef6afc8706044daa",
+  "at": "2026-11-03T12:01:36",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://apply.workable.com/j/98EDD0725E",
+  "board": null,
+  "employer": {
+   "url": "https://apply.workable.com/keywords-intl1/j/98EDD0725E",
+   "status": 200,
+   "shot": "data/shots/ef6afc8706044daa.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://apply.workable.com/keywords-intl1/j/98EDD0725E",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote; Malaysia; Indonesia; Vietnam",
+  "place_signals": [
+   {
+    "quote": "Malaysia Indonesia Vietnam",
+    "where": "under the title",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "These opportunities can be located in Malaysia, Indonesia, or Vietnam (Remote) . Sponsorship and relocation are not being offered as part of this package.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Location: APAC, Malaysia, Indonesia, Vietnam",
+    "where": "footer or small print",
+    "kind": "tag",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Working Pattern: Full Time, Remote/Hybrid",
+    "where": "footer or small print",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "Keywords Studios is currently looking to expand its team in Southeast Asia.",
+    "where": "opening paragraph",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "These opportunities can be located in Malaysia, Indonesia, or Vietnam (Remote) . Sponsorship and relocation are not being offered as part of this package.",
+  "reason": "Remote UI Artist game-UI role is design work, but it is restricted to Malaysia, Indonesia or Vietnam with no relocation, so it cannot be done from Portugal.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "UI Artist",
+   "company": "Keywords Studios",
+   "seniority": "unstated",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "Malaysia",
+    "Indonesia",
+    "Vietnam"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": null,
+   "reports_to": null,
+   "language": "English",
+   "posted": null
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  }
 }

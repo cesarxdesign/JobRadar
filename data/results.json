@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-02T23:21:36+00:00",
- "built_at": "2026-11-03T12:00+00:00",
+ "built_at": "2026-11-03T12:01+00:00",
  "run_id": "2026-11-02T23:21:36+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-02T23:21:36+00:00",
@@ -12,17 +12,17 @@
   "portugal": 38,
   "unsure": 218,
   "ghosts": 0,
-  "cut": 27,
+  "cut": 26,
   "closed": 625,
-  "vision_cut": 17378,
+  "vision_cut": 17382,
   "agency": 0,
   "not_read": 43,
   "folded": 168,
-  "vision_read": 28525,
+  "vision_read": 28529,
   "title_cuts": 42690,
   "design": 26816,
-  "waiting": 11,
-  "unjudged": 560381,
+  "waiting": 7,
+  "unjudged": 560378,
   "age_cuts": 14892,
   "active": 622050,
   "total": 635894
@@ -776,7 +776,6 @@
  "cut": [
   "4f1c2bc3d9354611",
   "07379ea82af24042",
-  "ef6afc8706044daa",
   "2eabc579af8a4445",
   "8c56e1ee502c4483",
   "809e2fdc96d04841",
@@ -1719,6 +1718,7 @@
   "9a698974894d4994",
   "9bc4b3b6f30942de",
   "e076354837b54808",
+  "ef6afc8706044daa",
   "c6ebf2a3067845b4",
   "31aea42ce1b24a3a",
   "0089c0b9e8554ee2",
@@ -18190,6 +18190,9 @@
   "27763c8bfc8c42f0",
   "997de017516d4081",
   "54604a2edae04c15",
+  "3d053412a8b64fc2",
+  "a99bc8b75f1a4e5f",
+  "6a3816c46638412a",
   "00bfa068ca7e4109",
   "beff82e488ba4607",
   "7d895d7de82a4b1f",
@@ -49546,20 +49549,24 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
+    "lane": "cut",
     "cut": true,
     "why": [
-     "Role is relevant but location restricted to Malaysia, Indonesia, Vietnam; no Portugal eligibility."
+     "Remote UI Artist game-UI role is design work, but it is restricted to Malaysia, Indonesia or Vietnam with no relocation, so it cannot be done from Portugal.",
+     "Portugal OUT · under the title: \"Malaysia Indonesia Vietnam\"",
+     "Portugal OUT · opening paragraph: \"These opportunities can be located in Malaysia, Indonesia, or Vietnam (Remote) . Sponsorship and relocation are not being offered as part of this package.\"",
+     "Portugal OUT · footer or small print: \"Location: APAC, Malaysia, Indonesia, Vietnam\"",
+     "Portugal OUT · opening paragraph: \"Keywords Studios is currently looking to expand its team in Southeast Asia.\""
     ],
     "judged": true,
-    "text": "original",
-    "stage": "judge",
+    "text": "employer's page",
+    "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "UI/UX Designer",
+     "role": "UI Artist",
      "company": "Keywords Studios",
      "seniority": "unstated",
-     "remote": "unstated",
+     "remote": "remote",
      "onsite_days": null,
      "countries": [
       "Malaysia",
@@ -49570,11 +49577,50 @@
      "salary": null,
      "years_xp": null,
      "reports_to": null,
-     "language": "English"
+     "language": "English",
+     "posted": null
     },
-    "inferred": [
-     "workplace_as_posted"
-    ]
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/keywords-intl1/j/98EDD0725E",
+    "reason": "Remote UI Artist game-UI role is design work, but it is restricted to Malaysia, Indonesia or Vietnam with no relocation, so it cannot be done from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "These opportunities can be located in Malaysia, Indonesia, or Vietnam (Remote) . Sponsorship and relocation are not being offered as part of this package.",
+    "signals": [
+     {
+      "quote": "Malaysia Indonesia Vietnam",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "These opportunities can be located in Malaysia, Indonesia, or Vietnam (Remote) . Sponsorship and relocation are not being offered as part of this package.",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: APAC, Malaysia, Indonesia, Vietnam",
+      "where": "footer or small print",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Keywords Studios is currently looking to expand its team in Southeast Asia.",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/ef6afc8706044daa.jpg",
+    "read_at": "2026-11-03T12:01:36",
+    "evidence": {
+     "employer_posted": "2026-10-21"
+    }
    }
   },
   {
@@ -1322619,6 +1322665,249 @@
     "read_at": "2026-11-03T11:55:18",
     "evidence": {
      "board_posted": "2026-09-22"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Aristotle",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "3d053412a8b64fc2",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Provo, United States",
+   "posted": "2026-09-21",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "UX Designer",
+   "url": "https://apply.workable.com/aristotle/j/E168755C69/",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Hybrid UX role requiring weekly office attendance in Provo, Utah, which is not doable from Portugal.",
+     "Portugal OUT · under the title: \"Provo, Utah, United States\"",
+     "Portugal OUT · opening paragraph: \"This position follows a hybrid work model, requiring once a week in-office attendance.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "UX Designer",
+     "company": "Aristotle",
+     "seniority": "mid",
+     "remote": "hybrid",
+     "onsite_days": "1 day per week",
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "2-4 years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "Office location for the weekly attendance is inferred from the Provo, Utah location under the title."
+    ],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/aristotle/j/E168755C69/",
+    "reason": "Hybrid UX role requiring weekly office attendance in Provo, Utah, which is not doable from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This position follows a hybrid work model, requiring once a week in-office attendance.",
+    "signals": [
+     {
+      "quote": "Provo, Utah, United States",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position follows a hybrid work model, requiring once a week in-office attendance.",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/3d053412a8b64fc2.jpg",
+    "read_at": "2026-11-03T12:01:06",
+    "evidence": {
+     "board_posted": "2026-09-21"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Astral Media Group",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "a99bc8b75f1a4e5f",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Remote, Philippines; Remote: Asia-Pacific",
+   "posted": "2026-09-21",
+   "remote": true,
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "UI/UX Designer (Project-Based)",
+   "url": "https://apply.workable.com/astral-media-group-limited/j/A3080E9A81/",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Role is a remote UI/UX design-system job, but the location field lists only UAE, Egypt and Philippines, with no statement that Portugal is eligible.",
+     "Portugal OUT · under the title: \"United Arab Emirates Egypt Philippines\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "UI/UX Designer (Project-Based)",
+     "company": "Plutus Media",
+     "seniority": "unstated",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United Arab Emirates",
+      "Egypt",
+      "Philippines"
+     ],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/astral-media-group-limited/j/A3080E9A81/",
+    "reason": "Role is a remote UI/UX design-system job, but the location field lists only UAE, Egypt and Philippines, with no statement that Portugal is eligible.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote Temporary United Arab Emirates Egypt Philippines",
+    "signals": [
+     {
+      "quote": "United Arab Emirates Egypt Philippines",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/a99bc8b75f1a4e5f.jpg",
+    "read_at": "2026-11-03T12:01:15",
+    "evidence": {
+     "board_posted": "2026-09-21"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Rebellion",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "6a3816c46638412a",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Oxford, United Kingdom",
+   "posted": "2026-09-21",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "Technical UI Designer",
+   "url": "https://apply.workable.com/rebellion/j/04AC8EE295/",
+   "workplace": "On-site",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Technical UI Designer role is onsite at the Oxford, UK headquarters with relocation offered, so it can't be done from Portugal.",
+     "Portugal OUT · under the title: \"Oxford, England, United Kingdom\"",
+     "Portugal OUT · under the title: \"On-site\"",
+     "Portugal OUT · body: \"This role is based at our riverside headquarters in Oxford, offering a creative and relaxed atmosphere where teamwork drives our success. We can provide a relocation package\"",
+     "Portugal OUT · footer or small print: \"#LI-Onsite\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Technical UI Designer",
+     "company": "Rebellion",
+     "seniority": "unstated",
+     "remote": "onsite",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/rebellion/j/04AC8EE295/",
+    "reason": "Technical UI Designer role is onsite at the Oxford, UK headquarters with relocation offered, so it can't be done from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This role is based at our riverside headquarters in Oxford",
+    "signals": [
+     {
+      "quote": "Oxford, England, United Kingdom",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "On-site",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This role is based at our riverside headquarters in Oxford, offering a creative and relaxed atmosphere where teamwork drives our success. We can provide a relocation package",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "#LI-Onsite",
+      "where": "footer or small print",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/6a3816c46638412a.jpg",
+    "read_at": "2026-11-03T12:01:24",
+    "evidence": {
+     "board_posted": "2026-09-21"
     }
    }
   },
