@@ -264,22 +264,81 @@ def greenhouse_feed(rec):
     return None
 
 
-def _get(url, timeout=20, again=True):
+# THE SLOW LANE. A site that answers "too many requests" never holds up the rest: its roles
+# move to a lane of their own, one reader that waits on it as long as it likes, while the
+# other readers carry on with everything else. Learned once, remembered for a day
+# (data/slow_hosts.json), so the next pull sends its roles straight there.
+# His rule, said many times: "shit that needs to crawl, move to slow lane, and keep going
+# with the rest. dont stop the whole pipeline bc of one" (2026-11-03, after Workable's 429s
+# held all 9 readers for 8 hours).
+SLOW_FILE = f"{ROOT}/data/slow_hosts.json"
+SLOW_FOR = 86400
+_lane = threading.local()          # _lane.slow: this is the slow lane, and it may wait
+_slow_stop = threading.Event()
+
+
+class SlowHost(Exception):
+    """This site is asking us to slow down: the role goes to the slow lane."""
+
+
+def _dom(url):
+    import urllib.parse
+    h = (urllib.parse.urlparse(url or "").hostname or "").lower()
+    return ".".join(h.split(".")[-2:])
+
+
+def _slow_hosts():
+    try:
+        d = json.load(open(SLOW_FILE))
+    except Exception:
+        return {}
+    return {k: t for k, t in d.items() if time.time() - t < SLOW_FOR}
+
+
+_slow = _slow_hosts()
+
+
+def _mark_slow(dom):
+    with _lock:
+        if dom in _slow:
+            _slow[dom] = time.time()
+            return
+        _slow[dom] = time.time()
+        print(f"SLOW LANE: {dom} asks us to slow down; its roles move to the slow lane, the rest carry on", flush=True)
+        try:
+            d = _slow_hosts()
+            d[dom] = time.time()
+            json.dump(d, open(SLOW_FILE, "w"), indent=1)
+        except Exception:
+            pass
+
+
+def is_slow(rec):
+    return any(_dom(rec.get(k)) in _slow for k in ("url", "apply_url") if rec.get(k))
+
+
+def _get(url, timeout=20):
     """(status, parsed json or None). 0 when the network failed: that is not an answer."""
     import urllib.request, urllib.error
-    try:
-        raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout).read()
-        return 200, json.loads(raw)
-    except urllib.error.HTTPError as e:
-        # asked too fast: wait, ask once more. Once: it asked forever on the night of 2026-11-03,
-        # while Workable refused every call, and all 9 readers sat on it for 6 hours
-        if e.code == 429 and again:
-            time.sleep(20)
-            code, d = _get(url, 30, again=False)
-            return (0, None) if code == 429 else (code, d)
-        return e.code, None
-    except Exception:
-        return 0, None
+    slow = getattr(_lane, "slow", False)
+    if not slow and _dom(url) in _slow:
+        raise SlowHost(_dom(url))
+    for wait in ((30, 90, 180) if slow else (0,)):
+        try:
+            raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout).read()
+            return 200, json.loads(raw)
+        except urllib.error.HTTPError as e:
+            if e.code != 429:
+                return e.code, None
+            _mark_slow(_dom(url))
+            if not slow:
+                raise SlowHost(_dom(url))
+            open(f"{ROOT}/data/vision.beat", "w").write(time.strftime("%F %H:%M:%S"))    # waiting on purpose, not stuck
+            if _slow_stop.wait(wait):
+                raise SlowHost(_dom(url))
+        except Exception:
+            return 0, None
+    raise SlowHost(_dom(url))          # still refusing after three waits: the next pull asks again
 
 
 def _gh_boards(_c={}):
@@ -759,6 +818,10 @@ def pick(jobs, done):
         # --no-retry: a lean run leaves them out; they keep their one retry for a full run. (His call, 2026-10-13.)
         again = lambda d: "--no-retry" not in args and d.get("posting_open") == "unreadable" and (d.get("unread_tries") or 1) < UNREAD_TRIES
         rows = [j for j in rows if j["id"] not in done or again(done[j["id"]])]
+    if "--slow-lane" in args:
+        rows = [j for j in rows if is_slow(j)]
+    elif "--new" in args:
+        rows = [j for j in rows if not is_slow(j)]
     if "--limit" in args:
         cap = int(args[args.index("--limit") + 1])
         LEFT[0] = max(0, len(rows) - cap)      # the night run caps the read (--limit 1000); the rest waits for tomorrow
@@ -857,6 +920,10 @@ def main():
             return
         try:
             v = see(finder, rec)
+        except SlowHost:
+            with _lock:
+                _usage["slowed"] = _usage.get("slowed", 0) + 1     # not a failure: the slow lane takes it
+            return
         except render.BrowserDown as e:
             _usage["stop"] = True
             print(f"STOPPED: {e}", flush=True)
@@ -892,13 +959,30 @@ def main():
             if n[0] % 10 == 0:
                 save(out)
 
-    try:
-        with ThreadPoolExecutor(WORKERS) as ex:
-            list(ex.map(one, rows))
-    finally:
-        br.close()
-        save(out)
     import collections
+    if "--slow-lane" in sys.argv:      # one reader, as patient as the site wants; the pulls never wait for it
+        _lane.slow = True
+        last = time.time()
+        try:
+            for r in rows:
+                one(r)
+                if time.time() - last > 1200:          # his board hears from the slow lane every 20 minutes
+                    save(out)
+                    subprocess.run(["sh", f"{ROOT}/publish.sh"], cwd=ROOT)
+                    last = time.time()
+        finally:
+            br.close()
+            save(out)
+        subprocess.run(["sh", f"{ROOT}/publish.sh"], cwd=ROOT)
+    else:
+        try:
+            with ThreadPoolExecutor(WORKERS) as ex:
+                list(ex.map(one, rows))
+        finally:
+            br.close()
+            save(out)
+    if _usage.get("slowed"):
+        print(f"SLOW LANE: {_usage['slowed']} roles moved there from this pull", flush=True)
     c = collections.Counter(out[r["id"]]["lane"] for r in rows if r["id"] in out)
     u = _usage
     shown = {SHOWN.get(k, k): n for k, n in c.items()}

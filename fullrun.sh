@@ -12,15 +12,7 @@ export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 if pgrep -f "vision.py --new" >/dev/null; then echo "a run is already going"; exit 0; fi
 export VISION_WORKERS=${VISION_WORKERS:-9}
 exec >> data/nightly.log 2>&1
-publish() {
-  python3 names.py | tail -1
-  python3 results.py | head -1 | cut -c1-240
-  python3 poolparts.py split >/dev/null
-  git add data/boards.json data/pool[0-9]*.json data/sources.json data/discovered.json data/results.json data/vision.json data/shipped.json data/vision_runs.jsonl data/cut_names.json 2>/dev/null
-  git diff --cached --quiet || { git commit -q -m "run $(date '+%F %H:%M')
-
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "pushed $(date +%H:%M)"; }
-}
+publish() { sh publish.sh; }
 echo; echo "=== run $(date '+%F %H:%M'): $VISION_WORKERS readers, 1000 a pull ==="
 # SOURCE: every link not yet opened today, in the background; the POOL lane below runs for as long as this does
 # Workable first, in a lane of its own: it blocks his own browser ("too many requests") while SOURCE asks it,
@@ -59,6 +51,9 @@ EMPTY=0; N=0
 while [ "$EMPTY" -lt 3 ]; do
   Q=$(python3 vision.py --new --count 2>/dev/null | tail -1); case "$Q" in ''|*[!0-9]*) Q=0 ;; esac
   if [ "$Q" -gt 0 ]; then
+    # the slow lane: roles on sites that ask us to slow down (429), read by one patient reader of their own,
+    # so nothing else ever waits on them (his rule, 2026-11-03); it publishes by itself and may outlive the run
+    pgrep -f "vision.py --slow-lane" >/dev/null || ( python3 vision.py --slow-lane 2>&1 | grep -v "^  \[" ) &
     EMPTY=0; N=$((N + 1)); echo "-- VISION, pull $N: 1000 of $Q  $(date +%H:%M)"
     python3 vision.py --new --limit 1000 2>&1 | grep -v "^  \[" | tail -4
     publish
