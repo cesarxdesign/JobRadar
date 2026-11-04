@@ -84,12 +84,24 @@ def cut_names():
     return _names.get("names") or {}
 
 
+WORKDAY = re.compile(r"myworkdayjobs\.com|myworkdaysite\.com|workday\.com|^workday/", re.I)
+
+
+def workday(job, *more):
+    """His rule (2026-11-04): any role whose application goes to Workday is
+    cut. Checked on the role's links and source, and on any page VISION read."""
+    for u in (job.get("url"), job.get("apply_url"), job.get("source")) + more:
+        if u and WORKDAY.search(str(u)):
+            return "workday: the application goes to Workday"
+    return None
+
+
 def cut(job):
-    """CTF: the title, the names VISION has learned, then the 45 days. None
-    when the job goes on to FETCH, else the reason. l1() stays title-only for
-    the callers that have nothing but a title (a link is worth keeping for
-    one design title, however old)."""
-    r = l1(job.get("title"))
+    """CTF: Workday, the title, the names VISION has learned, then the 45
+    days. None when the job goes on to FETCH, else the reason. l1() stays
+    title-only for the callers that have nothing but a title (a link is worth
+    keeping for one design title, however old)."""
+    r = workday(job) or l1(job.get("title"))
     if r:
         return r
     n = cut_names().get(name_of(job.get("title")))

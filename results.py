@@ -353,6 +353,10 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             if lane == "cut" and aud and not aud.get("agrees"):
                 role["verdict"]["audit"] = aud
                 review.append(rec["id"])
+            wd = judge.workday(rec, vis.get("read_url"))
+            if wd and lane in lanes:      # his rule, 2026-11-04: Workday applications are cut
+                lane = "cut"
+                role["verdict"].update({"lane": "cut", "cut": True, "reason": wd + " · " + str(role["verdict"].get("reason") or "")})
             (lanes[lane] if lane in lanes else closed if lane == "closed" else vcut).append(rec["id"])
             continue
         v = dict(DEFAULT_VERDICT)
@@ -369,6 +373,9 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         roles.append(role)
         if v.get("judged") and v.get("stage") != "parse":
             lane = v["lane"]
+            if not v["cut"] and judge.workday(rec):
+                cut.append(rec["id"])          # Workday application, his rule 2026-11-04
+                continue
             if not v["cut"] and lane in ("open", "unsure") and placed_elsewhere(rec):
                 cut.append(rec["id"])          # remote, but somewhere he is not
                 continue
