@@ -104,6 +104,13 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
 .answers .none{font-size:13px;color:var(--dimmer)}
 .answers .gap{font-size:12px;color:var(--acc);margin-top:6px}
 .answers .copy{float:right;background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:2px 8px;font-size:11.5px;cursor:pointer}
+.answers .copy{transition:background .15s,color .15s,border-color .15s,transform .1s}
+.answers .copy:active{transform:scale(.92)}
+.answers .copy.done{background:var(--acc);border-color:var(--acc);color:#fff;animation:copypop .35s ease-out}
+@keyframes copypop{0%{transform:scale(.9)}50%{transform:scale(1.12)}100%{transform:scale(1)}}
+.answers .qa.flash{animation:qaflash .7s ease-out}
+@keyframes qaflash{0%{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc)}100%{box-shadow:0 0 0 0 transparent}}
+.answers .me .aa{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:12.5px}
 .notes textarea{width:100%;min-height:64px;margin-top:6px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:13px;resize:vertical}
 .notes textarea:focus{outline:none;border-color:var(--acc)}
 .notes .past{border-left:2px solid var(--line);padding:2px 0 2px 10px;margin:8px 0;font-size:13px}
@@ -958,8 +965,8 @@ function renderPane(){
   if($("multi")) $("multi").onclick=()=>toggleMulti(r);
   if($("aud-wrong")){$("aud-wrong").onclick=()=>auditCall(r,"wrong");$("aud-right").onclick=()=>auditCall(r,"right");}
   if($("note")) $("note").oninput=e=>autoNote(r,e.target.value);
-  $("pane").querySelectorAll(".copy[data-a]").forEach(b=>b.onclick=()=>{
-    navigator.clipboard.writeText(ANS[r.id].answers[+b.dataset.a].answer).then(()=>toast("answer copied"));});
+  $("pane").querySelectorAll(".copy[data-a]").forEach(b=>b.onclick=()=>copyBtn(b,ANS[r.id].answers[+b.dataset.a].answer));
+  $("pane").querySelectorAll(".copy[data-me]").forEach(b=>b.onclick=()=>copyBtn(b,ME[+b.dataset.me][1]));
 }
 
 // ---------- Application answers ----------
@@ -968,23 +975,40 @@ function renderPane(){
 // answerThis way, after VISION's queue was empty. They are his, on this Mac
 // only (serve.py), so the public board never sees them. A draft is a start;
 // the Final is still settled in chat.
-let ANS={}, ANSLOADED=false;
+let ANS={}, ANSLOADED=false, ANSRAW="";
 const ANSAPI=(LOCAL?"":"http://localhost:8125")+"/api/answers";
 function loadAnswers(){
   if(!RR) return;
   ANSLOADED=true;
-  fetch(ANSAPI+"?t="+Date.now()).then(x=>x.json()).then(d=>{ANS=d||{};renderPane();}).catch(()=>{});
+  // re-draw only when the drafts changed: a re-draw on every window focus
+  // wiped the copy button's "copied" before he could see it
+  fetch(ANSAPI+"?t="+Date.now()).then(x=>x.text()).then(t=>{if(t===ANSRAW) return;ANSRAW=t;ANS=JSON.parse(t)||{};renderPane();}).catch(()=>{});
 }
 window.addEventListener("focus",()=>{if(RR) loadAnswers();});
+// His links, first on every form (his ask, 2026-11-04)
+const ME=[["LinkedIn","https://www.linkedin.com/in/cesarxdesign"],["Portfolio","https://cesarxdesign.com"],["GitHub","https://github.com/cesarxdesign"]];
+// The button itself says it worked: it turns to "copied ✓" and its card flashes.
+function copyBtn(b,text){
+  const done=()=>{b.textContent="copied ✓";b.classList.remove("done");void b.offsetWidth;b.classList.add("done");
+    const c=b.closest(".qa");if(c){c.classList.remove("flash");void c.offsetWidth;c.classList.add("flash");}
+    clearTimeout(b._t);b._t=setTimeout(()=>{b.textContent="copy";b.classList.remove("done");},1600);};
+  const fallback=()=>{const t=document.createElement("textarea");t.value=text;t.style.position="fixed";t.style.opacity="0";
+    document.body.appendChild(t);t.select();let ok=false;try{ok=document.execCommand("copy");}catch(e){}t.remove();
+    if(!ok){b.classList.remove("done");b.textContent="copy failed";toast("could not copy");}};
+  // the button answers at once; only a copy that truly failed takes it back
+  done();
+  (navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(text).catch(fallback):fallback());
+}
 function answersBox(r){
   if(!RR) return "";
   if(!ANSLOADED){setTimeout(loadAnswers);return "";}
   const a=ANS[r.id];
-  if(!a) return "";
+  const me=ME.map((m,i)=>'<div class="qa me"><button class="copy" data-me="'+i+'">copy</button><div class="qq">'+m[0]+'</div><div class="aa">'+esc(m[1])+'</div></div>').join("");
+  if(!a) return '<div class="answers"><div class="fk">Application answers</div>'+me+'</div>';
   const gaps=g=>(g||[]).map(x=>'<div class="gap">↳ '+esc(x)+'</div>').join("");
   return '<div class="answers"><div class="fk">Application answers · draft · '+esc(String(a.written_at||"").slice(0,10))
     +(a.apply_url?' · <a href="'+esc(outbound(a.apply_url))+'" target="_blank" rel="noopener" style="color:var(--acc)">the form ↗</a>':'')+'</div>'
-    +gaps(a.gaps)
+    +me+gaps(a.gaps)
     +a.answers.map((x,i)=>'<div class="qa">'+(x.answer?'<button class="copy" data-a="'+i+'">copy</button>':'')
       +'<div class="qq">'+esc(x.q)+'</div>'
       +(x.answer?'<div class="aa">'+esc(x.answer)+'</div>':'<div class="none">for you to answer</div>')
