@@ -89,7 +89,10 @@ WORKDAY = re.compile(r"myworkdayjobs\.com|myworkdaysite\.com|workday\.com|^workd
 
 def workday(job, *more):
     """His rule (2026-11-04): any role whose application goes to Workday is
-    cut. Checked on the role's links and source, and on any page VISION read."""
+    cut. Checked on the role's links and source, on any page VISION read, and
+    on the employer's own board when it was found there."""
+    if str(job.get("company") or "").strip().lower() == "workday":
+        return "workday: the application goes to Workday"
     for u in (job.get("url"), job.get("apply_url"), job.get("source")) + more:
         if u and WORKDAY.search(str(u)):
             return "workday: the application goes to Workday"

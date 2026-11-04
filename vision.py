@@ -650,7 +650,7 @@ def see(finder, rec):
         if a is not None and a >= judge.CUT_DAYS:
             return {**v, "lane": "cut", "stage": "cl",
                     "reason": f"age: the employer's own posting was posted or last updated {a} days ago; the job board's copy made it look newer"}
-    wd = judge.workday(rec, v.get("read_url"))
+    wd = judge.workday(rec, v.get("read_url"), (v.get("employer") or {}).get("url"), (v.get("employer") or {}).get("source"))
     if wd:
         return {**v, "lane": "cut", "stage": "cl", "reason": wd}
     # CL: the real page names none of his places. No tokens, and no reading.

@@ -353,7 +353,9 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             if lane == "cut" and aud and not aud.get("agrees"):
                 role["verdict"]["audit"] = aud
                 review.append(rec["id"])
-            wd = judge.workday(rec, vis.get("read_url"))
+            eb = (role["verdict"].get("evidence") or {}).get("employer_board") or {}
+            wd = judge.workday(rec, vis.get("read_url"), eb.get("url"), eb.get("source"),
+                               (vis.get("employer") or {}).get("url"), (vis.get("employer") or {}).get("source"))
             if wd and lane in lanes:      # his rule, 2026-11-04: Workday applications are cut
                 lane = "cut"
                 role["verdict"].update({"lane": "cut", "cut": True, "reason": wd + " · " + str(role["verdict"].get("reason") or "")})
