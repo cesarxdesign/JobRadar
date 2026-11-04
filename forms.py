@@ -234,6 +234,18 @@ def read_one(browser, r):
     return out
 
 
+def stale(r, f):
+    """Read the form again unless the last read found it and nothing changed
+    since. A failed read is never final (n8n, 2026-11-04: Ashby said "no such
+    posting" on 10-20, the role was live again and Open on 11-02, and its form
+    was never read again, so it had no answers). Every run retries a failed
+    read, and re-reads a form whose posting was posted or updated after it."""
+    if not f or f.get("error"):
+        return True
+    when = max(str(r.get(k) or "")[:10] for k in ("updated", "changed", "posted"))
+    return bool(when) and when > str(f.get("read_at") or "")[:10]
+
+
 def main(argv):
     ids = next((a.split("=", 1)[1] if "=" in a else argv[argv.index(a) + 1] for a in argv if a.startswith("--ids")), None)
     limit = next((int(argv[argv.index(a) + 1]) for a in argv if a == "--limit"), None)
@@ -245,7 +257,7 @@ def main(argv):
         allr = {r["id"]: r for r in json.load(open(f"{ROOT}/data/results.json"))["roles"]}
         roles = [allr[i] for i in want if i in allr]
     elif not again:
-        roles = [r for r in roles if r["id"] not in forms]
+        roles = [r for r in roles if stale(r, forms.get(r["id"]))]
     roles = roles[:limit] if limit else roles
     if not roles:
         print("forms: nothing to read")
