@@ -1,29 +1,29 @@
 {
  "jd": {},
  "generated_at": "2026-11-03T12:53:24+00:00",
- "built_at": "2026-11-03T15:52+00:00",
+ "built_at": "2026-11-04T09:47+00:00",
  "run_id": "2026-11-03T12:53:24+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-03T12:53:24+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 482,
-  "portugal": 38,
-  "unsure": 220,
+  "open": 476,
+  "portugal": 36,
+  "unsure": 214,
   "ghosts": 0,
   "cut": 26,
   "closed": 626,
-  "vision_cut": 17439,
+  "vision_cut": 17457,
   "agency": 0,
   "not_read": 43,
-  "folded": 171,
+  "folded": 167,
   "vision_read": 28592,
   "title_cuts": 42690,
   "design": 26887,
   "waiting": 7,
   "unjudged": 560387,
-  "age_cuts": 14900,
+  "age_cuts": 16366,
   "active": 622122,
   "total": 635966
  },
@@ -251,8 +251,6 @@
    "6de89b49b22e4fb6",
    "5ca2210fe87141fa",
    "4e00c28d15574d48",
-   "7b59eec005584026",
-   "40e6b03c07064d75",
    "bbbdf5fa12b841b7",
    "967c03cfdd0d4ad9",
    "691b3ad3de05488c",
@@ -269,7 +267,6 @@
    "e111de7df71b4e1a",
    "80a1102bddeb4e8d",
    "8a7449fdb78549a5",
-   "286f71920290488a",
    "b888199436da46ec",
    "7866491a8e8a4487",
    "5c2d789ae13947ee",
@@ -321,7 +318,6 @@
    "d3cd3205a8504a97",
    "19e38ebe3fcc4ba8",
    "af7e5057a3754fcb",
-   "6f615ce2287b4dfb",
    "3c6f84197d3047a4",
    "472905e543d84588",
    "7f7e90183b5a49b4",
@@ -348,7 +344,6 @@
    "c84ec0df2bf64ccd",
    "64f9f56823044d68",
    "c1266fef95174cd8",
-   "dd92ab9ada554f5e",
    "cb9f5149b93147b1",
    "e821bfbd1a6848e1",
    "c496fd66a61b41eb",
@@ -442,7 +437,6 @@
    "655edc826d954488",
    "716c4cdbfa0b4275",
    "3f4427110a0d4e24",
-   "998aee1bce40438e",
    "afe89a47985a4522",
    "c9dfe01d045f4438",
    "522fc870b6084846",
@@ -525,7 +519,6 @@
    "11074439bb0949d5",
    "0eb77b20ba8446ad",
    "a841eec59455442d",
-   "7da684cebe304ad7",
    "f4d68e680a804972",
    "40bcc752bb1b40bb",
    "1b3902b41219468f",
@@ -533,9 +526,7 @@
    "72393944382d4132",
    "9a2b0d1cb42441c7",
    "f27fb2e4aa614652",
-   "4bb7963a3a364246",
    "e2e615a9624b4b01",
-   "d2ef8ca358894e3d",
    "1f10fbe6b3074fd9",
    "62875204720a46e2",
    "1cbba50b0d994f4a",
@@ -550,7 +541,8 @@
    "291bbfd4cb764c12",
    "20696b77ada1479e",
    "ebda20b97b064b4e",
-   "a0b70ffda5db46ee"
+   "a0b70ffda5db46ee",
+   "597d36fd5fe24cfd"
   ],
   "unsure": [
    "e7a32523d4d6401a",
@@ -642,13 +634,10 @@
    "091a69a08c2f4a40",
    "6f6b605e05e04377",
    "ba845bad0fcf4c17",
-   "8defc762ef764b16",
-   "52fdbf8d249e448f",
    "1df1f404661340de",
    "7fd0216f6c474d7b",
    "939ce3787c6845e8",
    "725994b609a64ec8",
-   "526aba4171df4d77",
    "abb68b24eaff4d4b",
    "499eb3658a1247e8",
    "f50caf2d17ee4606",
@@ -665,7 +654,6 @@
    "0e920281776c4315",
    "390e999c949b4041",
    "5609017b94b6403c",
-   "f3fd7bc5cae74f80",
    "3221bf750e6f4c82",
    "490776c9c2034682",
    "b5e64a70d3e34d39",
@@ -719,7 +707,6 @@
    "3326eaeef2634d0c",
    "ea5a0516a0f542b8",
    "3fb54e932ad54ce8",
-   "9169272e913f4180",
    "fb6b6b83bf924b67",
    "acb7d14c2de54ce3",
    "6d136ef6d0764378",
@@ -736,7 +723,6 @@
    "2c3c66698ac14fad",
    "fd33543614634a10",
    "1fe097349a734fea",
-   "273530d86a9e459a",
    "56a14dcd54e74837",
    "e4ae30c998584eef",
    "d260513382bc4adf",
@@ -8478,11 +8464,13 @@
   "ad8f08569ce044cc",
   "2a1b8a1a9f44419b",
   "8a85cd2f09a54c5f",
+  "447d1abdeefc4273",
   "923df147c531410a",
   "4af701a907984a1d",
   "bff16e17d9564565",
   "4dcd843b8fa44ccf",
   "44bbefc44d634d74",
+  "7b59eec005584026",
   "93af8cd8ee0246b8",
   "076866ddc08f4466",
   "6c4c03e9db74477c",
@@ -8491,6 +8479,7 @@
   "db5646960ce741ff",
   "0d82f3c3c2a1451e",
   "5c46cba10b8d47e4",
+  "40e6b03c07064d75",
   "4689c32824b64421",
   "8d409613eb7948ed",
   "6ddd7aaa90e04231",
@@ -10161,6 +10150,7 @@
   "51e44b4416d446c2",
   "a2599a204f18455d",
   "37028cea2b8644fc",
+  "286f71920290488a",
   "65e9de24c64b46f6",
   "da0e1603ff414300",
   "0ab892ecf8844916",
@@ -10284,6 +10274,8 @@
   "c9091d3cb6b74d51",
   "d5495674c70c40b8",
   "6590979754e44863",
+  "8defc762ef764b16",
+  "52fdbf8d249e448f",
   "94d388b492434612",
   "94983c0cb9e04c52",
   "aa93032429a64570",
@@ -10754,6 +10746,7 @@
   "9423f8c2d8874f8d",
   "f40002940aa646da",
   "d75e290ae5fa4057",
+  "7da684cebe304ad7",
   "49d0402980e34aa9",
   "a7ea053016b94d87",
   "4ef3995893a24efc",
@@ -10895,6 +10888,7 @@
   "74f9ab685d9c4ceb",
   "e0a085de18f14e33",
   "c6e36d6f511f4ff1",
+  "526aba4171df4d77",
   "105274c70655414c",
   "f29365e1fd8c43c1",
   "8400c44bee944196",
@@ -11808,6 +11802,7 @@
   "73a39d80c9f14405",
   "85ff63e40af7479b",
   "d91a4c0d001243ee",
+  "715e78b2b6194410",
   "3c36d77169fb4a65",
   "d96635a426824435",
   "0db0cf39ff8246c7",
@@ -13100,6 +13095,7 @@
   "2e8cb0c55c6244f1",
   "6108bc3f05fe43f2",
   "8a690f3a559e4c92",
+  "6f615ce2287b4dfb",
   "6d6a1dfd85ab40be",
   "9908cf276c9c4a63",
   "4895da2733ba4986",
@@ -13895,6 +13891,7 @@
   "309e982babc7452f",
   "7782c5564c3c4d0c",
   "44b96b0f0b8d4e88",
+  "f3fd7bc5cae74f80",
   "70559f9b46744a0b",
   "d39477d9945a4a80",
   "eda2c1d19d584121",
@@ -14387,6 +14384,7 @@
   "5268a05028eb4d2e",
   "710c16cf4c8544a0",
   "4f8ac7049afb4166",
+  "dd92ab9ada554f5e",
   "21df44277dea4acf",
   "7562467a91964a66",
   "1d9816c69fdc4993",
@@ -14770,6 +14768,7 @@
   "486a001fbfe74223",
   "d85e574a93494c70",
   "7a9e4df07bf5487c",
+  "4bb7963a3a364246",
   "226600c260d444e9",
   "4ebeb5616a3f4a41",
   "0a977a3aa8704f88",
@@ -15059,6 +15058,7 @@
   "e61e8a7330c448e2",
   "62ae5da8431f4cba",
   "edef4caf38d7429a",
+  "d2ef8ca358894e3d",
   "24178354c62848f6",
   "a1ce989a48294298",
   "a5f80d60e8f4465a",
@@ -15394,6 +15394,7 @@
   "86286e44e93c466d",
   "b620ecbab0514fb2",
   "62894c2f0a8e4627",
+  "05103a099f814ad3",
   "4b235f7ffd7e46dc",
   "6346f9c9dba8457b",
   "dde1888990724d33",
@@ -16611,6 +16612,7 @@
   "9db33da718014245",
   "a19018b6eaad4ce2",
   "f43a2b0f6ade4cab",
+  "998aee1bce40438e",
   "def7bbc572bb4c5f",
   "371e15c63a2049c5",
   "675d36aeb98f49b4",
@@ -17330,6 +17332,7 @@
   "91c4596c77d94b34",
   "f32b17f0a8a14111",
   "7c64503f281f4cd4",
+  "9169272e913f4180",
   "26f2293221fd44bb",
   "c5c8f4b84537453e",
   "addab46d1afa49c0",
@@ -18149,6 +18152,7 @@
   "b3b6fb36d4044d8a",
   "f6d4b7f1ffe34b40",
   "9893b333364a4329",
+  "273530d86a9e459a",
   "92b608ac22604c6f",
   "7320692147f94b2b",
   "d0e5fb225917412b",
@@ -657067,8 +657071,8 @@
    "verdict": {
     "role": "yes",
     "place": "pt_onsite",
-    "lane": "portugal",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "The posting explicitly lists Lisbon, Portugal as one of three hybrid office locations for this role.",
      "Portugal in · under the title: \"locations Krakow, Poland Berlin, Germany Lisbon, Portugal\""
@@ -657098,7 +657102,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://zendesk.wd1.myworkdayjobs.com/zendesk/job/Remote-Poland/Lead-Product-Designer_R35496",
-    "reason": "The posting explicitly lists Lisbon, Portugal as one of three hybrid office locations for this role.",
+    "reason": "workday: the application goes to Workday · The posting explicitly lists Lisbon, Portugal as one of three hybrid office locations for this role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -657805,8 +657809,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Role is listed only as 'Remote' with no country restriction stated anywhere on the page.",
      "the page says: \"locations Remote\""
@@ -657832,7 +657836,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://recar.wd108.myworkdayjobs.com/SLATEcareers/job/Remote/Designer--Principal-UX_2247",
-    "reason": "Role is listed only as 'Remote' with no country restriction stated anywhere on the page.",
+    "reason": "workday: the application goes to Workday · Role is listed only as 'Remote' with no country restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -658690,8 +658694,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Location field and Work Location both say 'Any Location / Remote' with no country exclusion, and US citizenship is not required.",
      "Portugal in · under the title: \"Any Location / Remote\"",
@@ -658718,7 +658722,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site/job/Any-Location--Remote/UI-UX-Human-Centered-Design-Specialist_RQ228429",
-    "reason": "Location field and Work Location both say 'Any Location / Remote' with no country exclusion, and US citizenship is not required.",
+    "reason": "workday: the application goes to Workday · Location field and Work Location both say 'Any Location / Remote' with no country exclusion, and US citizenship is not required.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -769650,8 +769654,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Location field explicitly states Remote Portugal, matching Cesar's location.",
      "Portugal in · under the title: \"Remote Portugal\""
@@ -769679,7 +769683,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://bitsight.wd1.myworkdayjobs.com/bitsight/job/Remote-Portugal/Senior-Product-Designer_JR101399-1",
-    "reason": "Location field explicitly states Remote Portugal, matching Cesar's location.",
+    "reason": "workday: the application goes to Workday · Location field explicitly states Remote Portugal, matching Cesar's location.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -769698,29 +769702,7 @@
     "read_at": "2026-10-06T17:11:07",
     "evidence": {
      "employer_posted": "2026-10-20"
-    },
-    "copies": [
-     {
-      "id": "715e78b2b6194410",
-      "url": "https://bitsight.wd1.myworkdayjobs.com/broadbean_external/job/Remote-Portugal/Senior-Product-Designer_JR101399",
-      "read_url": "https://bitsight.wd1.myworkdayjobs.com/broadbean_external/job/Remote-Portugal/Senior-Product-Designer_JR101399",
-      "source": "workday/bitsight.wd1/broadbean_external",
-      "posted": "2026-10-20",
-      "location": "Remote Portugal",
-      "lane": "open",
-      "read": "employer"
-     },
-     {
-      "id": "05103a099f814ad3",
-      "url": "https://www.simplyhired.pt/job/jU087XjudIHTHMkzo8PbtO6t343xUEnk2y2qI4fjnaIIvpccGrd0fw",
-      "read_url": "https://bitsight.wd1.myworkdayjobs.com/bitsight/job/Remote-Portugal/Senior-Product-Designer_JR101399-1",
-      "source": "simplyhired",
-      "posted": "2026-10-10",
-      "location": "1070 Lisboa",
-      "lane": "open",
-      "read": "employer"
-     }
-    ]
+    }
    }
   },
   {
@@ -778276,8 +778258,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · Role requires commutable distance to Brooklyn office with hybrid in-office days, and pay zones/salary are strictly US-based, so it cannot be done from Portugal.",
      "Portugal OUT · under the title: \"remote type: Partially Remote / locations: Brooklyn, New York\"",
@@ -778309,7 +778291,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://etsy.wd5.myworkdayjobs.com/etsy_careers/job/Brooklyn-New-York/Senior-Product-Design-Manager--Buyer-Desktop-and-Mobile-Web_JR5400-1",
-    "reason": "remote from a list of countries the page does not show · Role requires commutable distance to Brooklyn office with hybrid in-office days, and pay zones/salary are strictly US-based, so it cannot be done from Portugal.",
+    "reason": "workday: the application goes to Workday · remote from a list of countries the page does not show · Role requires commutable distance to Brooklyn office with hybrid in-office days, and pay zones/salary are strictly US-based, so it cannot be done from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -778378,8 +778360,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · The posting prioritizes candidates near Brooklyn with hybrid office days, and only vaguely allows remote 'case-by-case' with occasional office travel, giving no clear statement on whether Portugal-based remote is eligible.",
      "Portugal OUT · side panel: \"Brooklyn, New York\"",
@@ -778406,7 +778388,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://etsy.wd5.myworkdayjobs.com/etsy_careers/job/Brooklyn-New-York/Staff-Product-Designer--Listing---Inventory_JR5788-1",
-    "reason": "remote from a list of countries the page does not show · The posting prioritizes candidates near Brooklyn with hybrid office days, and only vaguely allows remote 'case-by-case' with occasional office travel, giving no clear statement on whether Portugal-based remote is eligible.",
+    "reason": "workday: the application goes to Workday · remote from a list of countries the page does not show · The posting prioritizes candidates near Brooklyn with hybrid office days, and only vaguely allows remote 'case-by-case' with occasional office travel, giving no clear statement on whether Portugal-based remote is eligible.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -807345,8 +807327,8 @@
    "verdict": {
     "role": "yes",
     "place": "pt_onsite",
-    "lane": "portugal",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Design Lead is a product design leadership role, located in Lisbon with no remote option stated.",
      "Portugal in · under the title: \"Lisbon, Santos 37\""
@@ -807376,7 +807358,7 @@
     ],
     "read": "employer",
     "read_url": "https://accenture.wd103.myworkdayjobs.com/accenturecareers/job/Lisbon-Santos-37/Design-Lead_R00303875",
-    "reason": "Design Lead is a product design leadership role, located in Lisbon with no remote option stated.",
+    "reason": "workday: the application goes to Workday · Design Lead is a product design leadership role, located in Lisbon with no remote option stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -816065,8 +816047,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · Listed locations are Ireland/Poland but the body opens eligibility to any 'supported European country' without naming which ones, so Portugal's inclusion can't be confirmed.",
      "Portugal OUT · under the title: \"locations Ireland - Dublin, Poland - Krakow\"",
@@ -816096,7 +816078,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://guidewire.wd5.myworkdayjobs.com/external/job/Ireland---Dublin/Senior-Design-System-Designer_JR_15043",
-    "reason": "remote from a list of countries the page does not show · Listed locations are Ireland/Poland but the body opens eligibility to any 'supported European country' without naming which ones, so Portugal's inclusion can't be confirmed.",
+    "reason": "workday: the application goes to Workday · remote from a list of countries the page does not show · Listed locations are Ireland/Poland but the body opens eligibility to any 'supported European country' without naming which ones, so Portugal's inclusion can't be confirmed.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -865115,8 +865097,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Location field explicitly states Remote Portugal, matching his location.",
      "Portugal in · under the title: \"Remote Portugal\""
@@ -865144,7 +865126,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://bitsight.wd1.myworkdayjobs.com/broadbean_external/job/Remote-Portugal/Senior-Product-Designer_JR101399",
-    "reason": "Location field explicitly states Remote Portugal, matching his location.",
+    "reason": "workday: the application goes to Workday · Location field explicitly states Remote Portugal, matching his location.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -947550,8 +947532,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "The posting says the role is fully remote with no country restriction stated anywhere on the page.",
      "the page says: \"This is a fully remote position.\""
@@ -947577,7 +947559,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://wealthenhancement.wd1.myworkdayjobs.com/weg_careers/job/Remote/Senior-User-Interface-Designer---Platform-Development_R-102796",
-    "reason": "The posting says the role is fully remote with no country restriction stated anywhere on the page.",
+    "reason": "workday: the application goes to Workday · The posting says the role is fully remote with no country restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -998307,8 +998289,8 @@
    "verdict": {
     "role": "yes",
     "place": "no",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page read is a different job · The posting explicitly restricts eligibility to Canada (excl. Quebec) and the US, excluding Portugal.",
      "Portugal OUT · under the title: \"New York Remote - Canada Remote - USA\"",
@@ -998338,7 +998320,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://clio.wd3.myworkdayjobs.com/en-US/ClioCareerSite/job/New-York/Senior-Product-Designer--Enterprise_REQ-4702",
-    "reason": "the page read is a different job · The posting explicitly restricts eligibility to Canada (excl. Quebec) and the US, excluding Portugal.",
+    "reason": "workday: the application goes to Workday · the page read is a different job · The posting explicitly restricts eligibility to Canada (excl. Quebec) and the US, excluding Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1033720,8 +1033702,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Role is labeled Remote Home-Based but no country or eligibility is stated beyond a Seattle location tag and a US-only compensation note, so Portugal eligibility can't be confirmed from the page.",
      "the page says: \"remote type: Remote Home-Based; locations: Washington - Seattle\""
@@ -1033747,7 +1033729,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://salesforce.wd12.myworkdayjobs.com/external_career_site/job/Washington---Seattle/Lead-Product-Designer--LMTS_JR350894",
-    "reason": "Role is labeled Remote Home-Based but no country or eligibility is stated beyond a Seattle location tag and a US-only compensation note, so Portugal eligibility can't be confirmed from the page.",
+    "reason": "workday: the application goes to Workday · Role is labeled Remote Home-Based but no country or eligibility is stated beyond a Seattle location tag and a US-only compensation note, so Portugal eligibility can't be confirmed from the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1066040,8 +1066022,8 @@
    "verdict": {
     "role": "yes",
     "place": "pt_onsite",
-    "lane": "portugal",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Hybrid role listing Lisbon as one of three office locations, requiring part-week attendance at the local office.",
      "Portugal in · under the title: \"Krakow, Poland Berlin, Germany Lisbon, Portugal\"",
@@ -1066074,7 +1066056,7 @@
     ],
     "read": "employer",
     "read_url": "https://zendesk.wd1.myworkdayjobs.com/zendesk/job/Krakow-Poland/Lead-Product-Designer_R35496",
-    "reason": "Hybrid role listing Lisbon as one of three office locations, requiring part-week attendance at the local office.",
+    "reason": "workday: the application goes to Workday · Hybrid role listing Lisbon as one of three office locations, requiring part-week attendance at the local office.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1066099,29 +1066081,7 @@
     "read_at": "2026-10-20T21:03:24",
     "evidence": {
      "board_posted": "2026-10-02"
-    },
-    "copies": [
-     {
-      "id": "447d1abdeefc4273",
-      "url": "https://zendesk.wd1.myworkdayjobs.com/zendesk/job/Remote-Poland/Lead-Product-Designer_R35496",
-      "read_url": "https://zendesk.wd1.myworkdayjobs.com/zendesk/job/Remote-Poland/Lead-Product-Designer_R35496",
-      "source": "jobgether",
-      "posted": "2026-09-21",
-      "location": "Poland, Portugal, Germany",
-      "lane": "portugal",
-      "read": "employer"
-     },
-     {
-      "id": "597d36fd5fe24cfd",
-      "url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-lisbon-2507121",
-      "read_url": "https://www.eurotoptech.com/jobs/preview/lead-product-designer-zendesk-lisbon-2507121",
-      "source": "eurotoptech",
-      "posted": "2026-11-03",
-      "location": "Lisbon, Portugal (Onsite)",
-      "lane": "portugal",
-      "read": "board"
-     }
-    ]
+    }
    }
   },
   {
@@ -1089476,8 +1089436,8 @@
    "verdict": {
     "role": "yes",
     "place": "pt_onsite",
-    "lane": "portugal",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "UX design role, hybrid with Lisbon listed as a location, so it can be done from Portugal.",
      "Portugal in · under the title: \"remote type Hybrid\"",
@@ -1089510,7 +1089470,7 @@
     ],
     "read": "employer",
     "read_url": "https://amadeus.wd502.myworkdayjobs.com/jobs/job/Lisbon/UX-Design-Specialist_R37470-1",
-    "reason": "UX design role, hybrid with Lisbon listed as a location, so it can be done from Portugal.",
+    "reason": "workday: the application goes to Workday · UX design role, hybrid with Lisbon listed as a location, so it can be done from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1120253,8 +1120213,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Open Senior Product Designer role, located as Remote Portugal, in English.",
      "Portugal in · under the title: \"Remote Portugal\""
@@ -1120282,7 +1120242,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://bitsight.wd1.myworkdayjobs.com/bitsight/job/Remote-Portugal/Senior-Product-Designer_JR101399-1",
-    "reason": "Open Senior Product Designer role, located as Remote Portugal, in English.",
+    "reason": "workday: the application goes to Workday · Open Senior Product Designer role, located as Remote Portugal, in English.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1206794,8 +1206754,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Product design role posted as Remote with no country stated, but the company text refers to eligible US locations and USD pay, so eligibility from Portugal is not confirmed.",
      "Portugal OUT · opening paragraph: \"allowing you to choose to work in the nearest office, from your home, or a hybrid of both (subject to location restrictions and roles that are required to be in the office- see the full list of eligible US locations HERE)\""
@@ -1206821,7 +1206781,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://ancestry.wd501.myworkdayjobs.com/careers/job/Remote/Product-Designer--DNA-Experience_R003478",
-    "reason": "Product design role posted as Remote with no country stated, but the company text refers to eligible US locations and USD pay, so eligibility from Portugal is not confirmed.",
+    "reason": "workday: the application goes to Workday · Product design role posted as Remote with no country stated, but the company text refers to eligible US locations and USD pay, so eligibility from Portugal is not confirmed.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1247936,8 +1247896,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · Open UX/UI Product Designer role, but all locations are in Brazil, hybrid or remote depending on location, with a CLT (Brazilian) contract.",
      "Portugal OUT · under the title: \"Pernambuco - Recife Paraíba - Campina Grande Santa Catarina - Florianopolis Distrito Federal - Brasilia Ceará - Fortaleza View All 8 Locations\"",
@@ -1247971,7 +1247931,7 @@
     ],
     "read": "employer",
     "read_url": "https://accenture.wd103.myworkdayjobs.com/accenturecareers/job/Pernambuco---Recife/UX-Writer---Pleno_R00280726",
-    "reason": "remote from a list of countries the page does not show · Open UX/UI Product Designer role, but all locations are in Brazil, hybrid or remote depending on location, with a CLT (Brazilian) contract.",
+    "reason": "workday: the application goes to Workday · remote from a list of countries the page does not show · Open UX/UI Product Designer role, but all locations are in Brazil, hybrid or remote depending on location, with a CLT (Brazilian) contract.",
     "open": "yes",
     "language_ok": true,
     "language": "Portuguese",
@@ -1319300,8 +1319260,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · Title says Hybrid - ME while the field says Remote, and 'ME' is never explained, so where he could work is unclear.",
      "Portugal OUT · under the title: \"Senior Product Designer (Hybrid - ME)\""
@@ -1319329,7 +1319289,7 @@
     ],
     "read": "employer",
     "read_url": "https://ansira.wd1.myworkdayjobs.com/Ansira_Careers/job/Remote-ME/Senior-Product-Designer_R1149",
-    "reason": "remote from a list of countries the page does not show · Title says Hybrid - ME while the field says Remote, and 'ME' is never explained, so where he could work is unclear.",
+    "reason": "workday: the application goes to Workday · remote from a list of countries the page does not show · Title says Hybrid - ME while the field says Remote, and 'ME' is never explained, so where he could work is unclear.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
