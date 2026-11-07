@@ -1,29 +1,29 @@
 {
  "jd": {},
  "generated_at": "2026-11-03T12:53:24+00:00",
- "built_at": "2026-11-04T09:48+00:00",
+ "built_at": "2026-11-07T11:19+00:00",
  "run_id": "2026-11-03T12:53:24+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-03T12:53:24+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
-  "open": 476,
+  "open": 457,
   "portugal": 36,
-  "unsure": 210,
+  "unsure": 206,
   "ghosts": 0,
   "cut": 26,
   "closed": 626,
-  "vision_cut": 17461,
+  "vision_cut": 17485,
   "agency": 0,
   "not_read": 43,
-  "folded": 167,
+  "folded": 166,
   "vision_read": 28592,
   "title_cuts": 42690,
   "design": 26887,
-  "waiting": 7,
+  "waiting": 6,
   "unjudged": 560387,
-  "age_cuts": 16367,
+  "age_cuts": 16782,
   "active": 622122,
   "total": 635966
  },
@@ -375,20 +375,10 @@
    "aa9c77248fe4478a",
    "51f2aeb46879469e",
    "20fea46f98ef4388",
-   "5b7d1c4a6cbe419b",
-   "ddf9654252294503",
    "cb981a748b964b91",
-   "3c399b54a61340be",
-   "18c9d888466e4d1e",
-   "600ebcb0f9d9477f",
-   "3516f52438864abd",
-   "ca7c455385eb497a",
    "951756f4da2948aa",
-   "cefb9bda80a444ab",
-   "e760d47e3573497e",
    "4804815ebc024312",
    "6f27e0577254459b",
-   "09753f3896fc4430",
    "9e9b8f8f318f49bf",
    "940b10f91c7e455f",
    "e46e0c3fff54456a",
@@ -467,16 +457,7 @@
    "97da2594b19742fa",
    "c67ab65390b2441a",
    "c6b1358bc8e24576",
-   "81f425a644ea43cb",
    "9940f7245fc346e2",
-   "5739fb03848840ec",
-   "b97cffbe7fa4406f",
-   "fbf5f3fffd024115",
-   "420dfa6e06954267",
-   "1bdf371cdc594a0f",
-   "ebeb1009179b4fbc",
-   "8cddbb5508ff4d7a",
-   "8e729bbd2c01492d",
    "5f22584690f74b47",
    "aa28ab7cd88641de",
    "0d1b3da527e8457d",
@@ -671,9 +652,7 @@
    "831bc6a601d74029",
    "f3406d6037ec40f3",
    "3f147f53aee44806",
-   "8ef18c1652164969",
    "f2a3717407ed4bcd",
-   "2ace98e2947c404f",
    "0ce3fc967dfc425c",
    "8ce21e18953e4ad2",
    "86bd13f68d0242b1",
@@ -717,8 +696,6 @@
    "910ed41444484373",
    "244b325047d34cda",
    "d202c49bdb0b4bed",
-   "2c3c66698ac14fad",
-   "fd33543614634a10",
    "1fe097349a734fea",
    "56a14dcd54e74837",
    "e4ae30c998584eef",
@@ -14875,6 +14852,7 @@
   "2b1ad81760c24c6e",
   "dcbf212344ae4cc0",
   "9eeeb7d455c643ff",
+  "5b7d1c4a6cbe419b",
   "7ed97ea227de41c9",
   "5f93f0921fbb4a40",
   "b9e5759f62e0453b",
@@ -14884,6 +14862,7 @@
   "c0d0a164056c4a34",
   "b03945db55ee442a",
   "79366579fe83433b",
+  "ddf9654252294503",
   "8b1ebb463bec4854",
   "15cb9e979c4d4f51",
   "9fa30f543777475f",
@@ -14922,6 +14901,7 @@
   "d7a69dc391b4421f",
   "cf16752e24d64cf7",
   "15978f7ea2f44c66",
+  "3c399b54a61340be",
   "72af83ab4cf24842",
   "b3e63c85f9414a46",
   "be7a874266aa40f8",
@@ -14958,8 +14938,11 @@
   "fd3fa65f62a34b13",
   "a4b7cc87a8d847e4",
   "f56bfd8c96754171",
+  "8ef18c1652164969",
   "b84b387a1eb044de",
   "06f902aa05cc4560",
+  "18c9d888466e4d1e",
+  "600ebcb0f9d9477f",
   "e802ae551b4f45af",
   "06f2c85a3a4a4a92",
   "60ba1928a6bb48ef",
@@ -14983,6 +14966,7 @@
   "6f3e6959e29848f2",
   "b2c488968b8d43ac",
   "6e7e80f679924bf9",
+  "3516f52438864abd",
   "e319092754ea4fb3",
   "3a7db8b334634649",
   "0bd2627ab8da46a6",
@@ -14990,6 +14974,7 @@
   "40c5bcdf121847df",
   "a554f4df35c64dc8",
   "9eb1762eb47441bb",
+  "ca7c455385eb497a",
   "9d81b5ca50e84891",
   "e39c971425d34226",
   "f038c9da9ca1408a",
@@ -14999,6 +14984,7 @@
   "e205be4a3e904e4b",
   "0b09337fa9694d5f",
   "fe51bc3db5b14bf1",
+  "cefb9bda80a444ab",
   "bd3512812a004edd",
   "89b9956c2d164605",
   "ef50f95cbdf84aee",
@@ -15007,6 +14993,7 @@
   "27485daa2d144b56",
   "74777dd85e234444",
   "2a98796fdfdb4d78",
+  "e760d47e3573497e",
   "f2aa0aadfdd347df",
   "7eaaf0ca02f44b40",
   "e7d5a20a2b3149f0",
@@ -15068,6 +15055,7 @@
   "583a6a5b7b974439",
   "60f931b692064a58",
   "e01258cb902541d4",
+  "09753f3896fc4430",
   "c8fe131eb3104ffc",
   "024b47088046406e",
   "19439d522e4f49bc",
@@ -15093,6 +15081,7 @@
   "8f83992f1c264063",
   "ca5fc35c116c48b4",
   "02a9b593be684ff0",
+  "2ace98e2947c404f",
   "4b5cef44ef224782",
   "992aaa43b22b4a95",
   "a499dd396a8a4236",
@@ -17801,6 +17790,7 @@
   "ebec35360a88450c",
   "dc97b6e6c8c74d19",
   "996f584d1eeb48a8",
+  "81f425a644ea43cb",
   "b74c5440580f44a6",
   "07e7632571914dc8",
   "2473894d67dc46f7",
@@ -17843,6 +17833,7 @@
   "2c96d5e23fa34092",
   "a8c2ae170aeb471a",
   "a1e8fe9f3a854190",
+  "5739fb03848840ec",
   "f8c83a6328914631",
   "04aa79f716d342b1",
   "e38614627eba4330",
@@ -17918,6 +17909,7 @@
   "56358ffb1b814ad3",
   "aea437cdcec14949",
   "87a53dc08b914e73",
+  "b97cffbe7fa4406f",
   "9df062fd5496464e",
   "87076d081a5940c0",
   "8a62433573cd407e",
@@ -17958,6 +17950,7 @@
   "b54d216681a94d7c",
   "f86a05b821794b30",
   "fe0f00e0e34347ff",
+  "2c3c66698ac14fad",
   "f49e6ffce70d42c8",
   "39927fb2e7e04dae",
   "3f816263196f4448",
@@ -17984,15 +17977,19 @@
   "12e5fb7aef4c444a",
   "5313788b27f6477c",
   "08e6e4db91ad481a",
+  "fd33543614634a10",
   "4e22b4adf7e345f5",
   "1ec199762e7842b0",
   "eff9bd21e4104cd6",
   "dc778831c63a4ffe",
   "950abb9c34c44781",
   "f4075188848d4d19",
+  "fbf5f3fffd024115",
   "4d04a7174a2d461e",
   "a438b956c55b466d",
   "04f6f2a2a913431a",
+  "420dfa6e06954267",
+  "37adac3a005747be",
   "11282944a8a04443",
   "c2692e1020d14868",
   "287e4e0bd36b42f5",
@@ -18022,6 +18019,7 @@
   "733c8e30bee54027",
   "2790410111b541a0",
   "69b1bcaf001f4713",
+  "1bdf371cdc594a0f",
   "5065b00769ec44fe",
   "a670e44b34814516",
   "7643797b8ac54965",
@@ -18082,6 +18080,8 @@
   "3422df1204e0418d",
   "82076ebe51244503",
   "ec191642f36642b3",
+  "ebeb1009179b4fbc",
+  "8cddbb5508ff4d7a",
   "f855ff59f5714047",
   "3e37d7828ce64eee",
   "ff1a4fc8e9ec4738",
@@ -18110,6 +18110,7 @@
   "5f9f8bb9e8ad491a",
   "bca57d1c2d5440d9",
   "faaef21505d24789",
+  "8e729bbd2c01492d",
   "b3293bde20b3453e",
   "ceeef3c34aa44276",
   "f63df5e7d7034541",
@@ -1075130,8 +1075131,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Product UI/UX design role posted as remote with no geographic restriction stated anywhere on the page.",
      "the page says: \"віддалено\""
@@ -1075157,7 +1075158,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/atlas/vacancies/377207/",
-    "reason": "Product UI/UX design role posted as remote with no geographic restriction stated anywhere on the page.",
+    "reason": "dou: the job is only on jobs.dou.ua · Product UI/UX design role posted as remote with no geographic restriction stated anywhere on the page.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1075835,8 +1075836,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Open senior UI/UX role (game UI) offering remote as an option with no stated country restriction, so nothing excludes Portugal.",
      "the page says: \"Київ, Львів, Дніпро, Вінниця, Івано-Франківськ, Тернопіль, віддалено; Flexible working format — remote, office-based or flexible\""
@@ -1075862,7 +1075863,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/n-ix/vacancies/377068/",
-    "reason": "Open senior UI/UX role (game UI) offering remote as an option with no stated country restriction, so nothing excludes Portugal.",
+    "reason": "dou: the job is only on jobs.dou.ua · Open senior UI/UX role (game UI) offering remote as an option with no stated country restriction, so nothing excludes Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1078709,8 +1078710,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Design leadership/product design role; location line lists Lisbon (Portugal) and remote, so Portugal is included.",
      "Portugal in · under the title: \"Львів, Лісабон (Португалія), Люблін (Польща), віддалено\""
@@ -1078742,7 +1078743,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/team-international/vacancies/372467/",
-    "reason": "Design leadership/product design role; location line lists Lisbon (Portugal) and remote, so Portugal is included.",
+    "reason": "dou: the job is only on jobs.dou.ua · Design leadership/product design role; location line lists Lisbon (Portugal) and remote, so Portugal is included.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1081639,8 +1081640,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · Open UI/UX design role listed as Kyiv or remote, with no stated geography for remote; PE (Ukrainian sole proprietor) accounting hints at Ukraine-based contracting but is not a restriction.",
      "Portugal OUT · under the title: \"Київ, віддалено\""
@@ -1081668,7 +1081669,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/django-stars/vacancies/320473/",
-    "reason": "remote from a list of countries the page does not show · Open UI/UX design role listed as Kyiv or remote, with no stated geography for remote; PE (Ukrainian sole proprietor) accounting hints at Ukraine-based contracting but is not a restriction.",
+    "reason": "dou: the job is only on jobs.dou.ua · remote from a list of countries the page does not show · Open UI/UX design role listed as Kyiv or remote, with no stated geography for remote; PE (Ukrainian sole proprietor) accounting hints at Ukraine-based contracting but is not a restriction.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1081866,8 +1081867,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Senior product design role listed as Kyiv, abroad, or remote, so it can be done from Portugal.",
      "Portugal in · under the title: \"Київ, за кордоном, віддалено\""
@@ -1081895,7 +1081896,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/youscan/vacancies/376335/",
-    "reason": "Senior product design role listed as Kyiv, abroad, or remote, so it can be done from Portugal.",
+    "reason": "dou: the job is only on jobs.dou.ua · Senior product design role listed as Kyiv, abroad, or remote, so it can be done from Portugal.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1081937,8 +1081938,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Product UI/UX design role, open, fully remote with no geographic restriction stated.",
      "the page says: \"Fully remote work with complete schedule flexibility\""
@@ -1081964,7 +1081965,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/lynksen-digital/vacancies/376314/",
-    "reason": "Product UI/UX design role, open, fully remote with no geographic restriction stated.",
+    "reason": "dou: the job is only on jobs.dou.ua · Product UI/UX design role, open, fully remote with no geographic restriction stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1083634,8 +1083635,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "UX/UI design contract role listed as Lviv, abroad, remote; nothing restricts location beyond Kyiv working hours.",
      "Portugal in · under the title: \"Львів, за кордоном, віддалено\""
@@ -1083661,7 +1083662,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/selecto/vacancies/376116/",
-    "reason": "UX/UI design contract role listed as Lviv, abroad, remote; nothing restricts location beyond Kyiv working hours.",
+    "reason": "dou: the job is only on jobs.dou.ua · UX/UI design contract role listed as Lviv, abroad, remote; nothing restricts location beyond Kyiv working hours.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1084215,8 +1084216,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Open UI/UX & Product Designer role, English description, listed as remote with no geographic restriction stated.",
      "the page says: \"Всі вакансії / Design / віддалено\""
@@ -1084242,7 +1084243,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/swivl/vacancies/376029/",
-    "reason": "Open UI/UX & Product Designer role, English description, listed as remote with no geographic restriction stated.",
+    "reason": "dou: the job is only on jobs.dou.ua · Open UI/UX & Product Designer role, English description, listed as remote with no geographic restriction stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1085069,8 +1085070,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Senior product design role, listed as remote abroad (outside Ukraine) with no country restriction stated.",
      "the page says: \"за кордоном, віддалено\""
@@ -1085098,7 +1085099,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/halo-lab/vacancies/375821/",
-    "reason": "Senior product design role, listed as remote abroad (outside Ukraine) with no country restriction stated.",
+    "reason": "dou: the job is only on jobs.dou.ua · Senior product design role, listed as remote abroad (outside Ukraine) with no country restriction stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1085823,8 +1085824,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "UI design role posted as remote with no stated country restriction; team communication in Ukrainian is a language note, not a location rule.",
      "the page says: \"Remote work. Full-time or part-time cooperation.\""
@@ -1085850,7 +1085851,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/wezom/vacancies/375748/",
-    "reason": "UI design role posted as remote with no stated country restriction; team communication in Ukrainian is a language note, not a location rule.",
+    "reason": "dou: the job is only on jobs.dou.ua · UI design role posted as remote with no stated country restriction; team communication in Ukrainian is a language note, not a location rule.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1090363,8 +1090364,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "UI/UX product design role offering Kyiv, Rivne or remote with no stated country restriction for remote.",
      "the page says: \"Київ, Рівне, віддалено; Remote-first work model\""
@@ -1090390,7 +1090391,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/retail-innovation-raiffeisen-bank-international/vacancies/374406/",
-    "reason": "UI/UX product design role offering Kyiv, Rivne or remote with no stated country restriction for remote.",
+    "reason": "dou: the job is only on jobs.dou.ua · UI/UX product design role offering Kyiv, Rivne or remote with no stated country restriction for remote.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1092026,8 +1092027,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "remote from a list of countries the page does not show · Product designer role with AI prototyping, listed as remote abroad (outside Ukraine) with no country restriction stated.",
      "Portugal OUT · under the title: \"за кордоном, віддалено\""
@@ -1092055,7 +1092056,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/launch-labs/vacancies/363102/",
-    "reason": "remote from a list of countries the page does not show · Product designer role with AI prototyping, listed as remote abroad (outside Ukraine) with no country restriction stated.",
+    "reason": "dou: the job is only on jobs.dou.ua · remote from a list of countries the page does not show · Product designer role with AI prototyping, listed as remote abroad (outside Ukraine) with no country restriction stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1291571,8 +1291572,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Senior Product Designer role, open, remote with no geographic restriction stated; the US mention describes the client's platform only.",
      "the page says: \"Location: Remote\""
@@ -1291598,7 +1291599,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/stellarstech/vacancies/357750/",
-    "reason": "Senior Product Designer role, open, remote with no geographic restriction stated; the US mention describes the client's platform only.",
+    "reason": "dou: the job is only on jobs.dou.ua · Senior Product Designer role, open, remote with no geographic restriction stated; the US mention describes the client's platform only.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1294740,8 +1294741,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Senior product design role listed as remote with no stated geographic restriction.",
      "the page says: \"Senior Product Designer віддалено\""
@@ -1294767,7 +1294768,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/startup-soft/vacancies/378377/",
-    "reason": "Senior product design role listed as remote with no stated geographic restriction.",
+    "reason": "dou: the job is only on jobs.dou.ua · Senior product design role listed as remote with no stated geographic restriction.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1300658,8 +1300659,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "A UI/UX web design role marked remote with no geographic restriction stated; the description is in English.",
      "the page says: \"віддалено $2000–4000\""
@@ -1300685,7 +1300686,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/aston-vip/vacancies/378120/",
-    "reason": "A UI/UX web design role marked remote with no geographic restriction stated; the description is in English.",
+    "reason": "dou: the job is only on jobs.dou.ua · A UI/UX web design role marked remote with no geographic restriction stated; the description is in English.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1303696,8 +1303697,8 @@
    "verdict": {
     "role": "no",
     "place": "remote",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page read is a different job · The page is a Senior Data Scientist posting, not the UI/UX Designer role the pool lists, and data science is not a design role.",
      "Portugal OUT · under the title: \"за кордоном, віддалено\"",
@@ -1303730,7 +1303731,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/proxet/vacancies/378005/",
-    "reason": "the page read is a different job · The page is a Senior Data Scientist posting, not the UI/UX Designer role the pool lists, and data science is not a design role.",
+    "reason": "dou: the job is only on jobs.dou.ua · the page read is a different job · The page is a Senior Data Scientist posting, not the UI/UX Designer role the pool lists, and data science is not a design role.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1305756,8 +1305757,8 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page says both, explicitly: Portugal in, and Portugal out · Product design role offering remote work from anywhere, with the Lviv office only as an option.",
      "Portugal OUT · under the title: \"Львів, віддалено\"",
@@ -1305784,7 +1305785,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/oril/vacancies/331320/",
-    "reason": "the page says both, explicitly: Portugal in, and Portugal out · Product design role offering remote work from anywhere, with the Lviv office only as an option.",
+    "reason": "dou: the job is only on jobs.dou.ua · the page says both, explicitly: Portugal in, and Portugal out · Product design role offering remote work from anywhere, with the Lviv office only as an option.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1306124,8 +1306125,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Product design role offered as Ivano-Frankivsk office or remote, with 'за кордоном' (abroad) listed and no country restriction stated.",
      "Portugal in · under the title: \"Івано-Франківськ, за кордоном, віддалено\"",
@@ -1306155,7 +1306156,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/avidi-technologies/vacancies/377777/",
-    "reason": "Product design role offered as Ivano-Frankivsk office or remote, with 'за кордоном' (abroad) listed and no country restriction stated.",
+    "reason": "dou: the job is only on jobs.dou.ua · Product design role offered as Ivano-Frankivsk office or remote, with 'за кордоном' (abroad) listed and no country restriction stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1306180,19 +1306181,7 @@
     "read_at": "2026-11-03T08:28:02",
     "evidence": {
      "board_posted": "2026-10-26"
-    },
-    "copies": [
-     {
-      "id": "37adac3a005747be",
-      "url": "https://jobs.dou.ua/companies/avidi-technologies/vacancies/377776/",
-      "read_url": "https://jobs.dou.ua/companies/avidi-technologies/vacancies/377776/",
-      "source": "uxjobs",
-      "posted": "2026-10-26",
-      "location": "Remote",
-      "lane": "open",
-      "read": "board"
-     }
-    ]
+    }
    }
   },
   {
@@ -1306398,8 +1306387,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "UX/UI game designer role marked remote with no country restriction except excluding Russia.",
      "the page says: \"віддалено; the ability to work remotely; DOES NOT HIRE from the Russian Federation\""
@@ -1306427,7 +1306416,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/pingle-studio/vacancies/371872/",
-    "reason": "UX/UI game designer role marked remote with no country restriction except excluding Russia.",
+    "reason": "dou: the job is only on jobs.dou.ua · UX/UI game designer role marked remote with no country restriction except excluding Russia.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1306462,8 +1306451,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Product designer role with mobile focus; offers remote work, including abroad (за кордоном), with the Ivano-Frankivsk office as one option.",
      "Portugal in · under the title: \"Івано-Франківськ, за кордоном, віддалено\""
@@ -1306489,7 +1306478,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/avidi-technologies/vacancies/377776/",
-    "reason": "Product designer role with mobile focus; offers remote work, including abroad (за кордоном), with the Ivano-Frankivsk office as one option.",
+    "reason": "dou: the job is only on jobs.dou.ua · Product designer role with mobile focus; offers remote work, including abroad (за кордоном), with the Ivano-Frankivsk office as one option.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1308617,8 +1308606,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Design management role (product design team lead) at MacPaw, open, in English, offered in Kyiv, abroad or remote with no country restriction.",
      "Portugal in · under the title: \"Київ, за кордоном, віддалено\""
@@ -1308646,7 +1308635,7 @@
     ],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/macpaw/vacancies/377758/",
-    "reason": "Design management role (product design team lead) at MacPaw, open, in English, offered in Kyiv, abroad or remote with no country restriction.",
+    "reason": "dou: the job is only on jobs.dou.ua · Design management role (product design team lead) at MacPaw, open, in English, offered in Kyiv, abroad or remote with no country restriction.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1313293,8 +1313282,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Senior product design role with design system ownership, fully remote at a globally distributed company, with no country restriction, only a Pacific time overlap requirement.",
      "Portugal in · body: \"Syndicode is a value-driven software development partner with a globally distributed team of engineers, designers, architects, and IT managers.\"",
@@ -1313321,7 +1313310,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/syndicode/vacancies/377443/",
-    "reason": "Senior product design role with design system ownership, fully remote at a globally distributed company, with no country restriction, only a Pacific time overlap requirement.",
+    "reason": "dou: the job is only on jobs.dou.ua · Senior product design role with design system ownership, fully remote at a globally distributed company, with no country restriction, only a Pacific time overlap requirement.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1313369,8 +1313358,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Open UI/UX design role posted as remote with no country restriction stated.",
      "the page says: \"UI/UX Designer (Project-Based) віддалено\""
@@ -1313396,7 +1313385,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/deka-designs/vacancies/377403/",
-    "reason": "Open UI/UX design role posted as remote with no country restriction stated.",
+    "reason": "dou: the job is only on jobs.dou.ua · Open UI/UX design role posted as remote with no country restriction stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
@@ -1315811,8 +1315800,8 @@
    "verdict": {
     "role": "yes",
     "place": "remote",
-    "lane": "open",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "Product design role (mobile-first UI/UX) that is remote with no geographic restriction stated.",
      "the page says: \"Remote work withh flexible working schedule.\""
@@ -1315838,7 +1315827,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jobs.dou.ua/companies/bumpy/vacancies/377322/",
-    "reason": "Product design role (mobile-first UI/UX) that is remote with no geographic restriction stated.",
+    "reason": "dou: the job is only on jobs.dou.ua · Product design role (mobile-first UI/UX) that is remote with no geographic restriction stated.",
     "open": "yes",
     "language_ok": true,
     "language": "English",
