@@ -99,12 +99,27 @@ def workday(job, *more):
     return None
 
 
+DOU = re.compile(r"(^|[/.])dou\.ua\b", re.I)
+
+
+def dou(job, read_url=None):
+    """His rule (2026-11-07): no jobs from jobs.dou.ua, he can't use its
+    Ukrainian site. Fine when the job is posted somewhere else: a role VISION
+    read on another page (the employer's own) stays, and the same job listed
+    by another source is its own role and is not touched."""
+    if not any(DOU.search(str(u or "")) for u in (job.get("url"), job.get("apply_url"))):
+        return None
+    if read_url and not DOU.search(read_url) and read_url not in (job.get("url"), job.get("apply_url")):
+        return None
+    return "dou: the job is only on jobs.dou.ua"
+
+
 def cut(job):
     """CTF: Workday, the title, the names VISION has learned, then the 45
     days. None when the job goes on to FETCH, else the reason. l1() stays
     title-only for the callers that have nothing but a title (a link is worth
     keeping for one design title, however old)."""
-    r = workday(job) or l1(job.get("title"))
+    r = workday(job) or dou(job) or l1(job.get("title"))
     if r:
         return r
     n = cut_names().get(name_of(job.get("title")))

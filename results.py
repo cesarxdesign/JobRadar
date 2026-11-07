@@ -356,7 +356,8 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             eb = (role["verdict"].get("evidence") or {}).get("employer_board") or {}
             wd = judge.workday(rec, vis.get("read_url"), eb.get("url"), eb.get("source"),
                                (vis.get("employer") or {}).get("url"), (vis.get("employer") or {}).get("source"))
-            if wd and lane in lanes:      # his rule, 2026-11-04: Workday applications are cut
+            wd = wd or judge.dou(rec, vis.get("read_url") if vis.get("read") == "employer" else None)
+            if wd and lane in lanes:      # his rules: Workday applications cut (11-04), DOU-only jobs cut (11-07)
                 lane = "cut"
                 role["verdict"].update({"lane": "cut", "cut": True, "reason": wd + " · " + str(role["verdict"].get("reason") or "")})
             (lanes[lane] if lane in lanes else closed if lane == "closed" else vcut).append(rec["id"])
@@ -375,7 +376,7 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
         roles.append(role)
         if v.get("judged") and v.get("stage") != "parse":
             lane = v["lane"]
-            if not v["cut"] and judge.workday(rec):
+            if not v["cut"] and (judge.workday(rec) or judge.dou(rec)):
                 cut.append(rec["id"])          # Workday application, his rule 2026-11-04
                 continue
             if not v["cut"] and lane in ("open", "unsure") and placed_elsewhere(rec):

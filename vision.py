@@ -651,6 +651,7 @@ def see(finder, rec):
             return {**v, "lane": "cut", "stage": "cl",
                     "reason": f"age: the employer's own posting was posted or last updated {a} days ago; the job board's copy made it look newer"}
     wd = judge.workday(rec, v.get("read_url"), (v.get("employer") or {}).get("url"), (v.get("employer") or {}).get("source"))
+    wd = wd or judge.dou(rec, v.get("read_url") if v.get("read") == "employer" else None)
     if wd:
         return {**v, "lane": "cut", "stage": "cl", "reason": wd}
     # CL: the real page names none of his places. No tokens, and no reading.
