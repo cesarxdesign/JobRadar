@@ -99,19 +99,20 @@ def workday(job, *more):
     return None
 
 
-DOU = re.compile(r"(^|[/.])dou\.ua\b", re.I)
+DOU = re.compile(r"(^|[/.])(dou\.ua|djinni\.co)\b", re.I)     # his cuts: DOU (11-07), Djinni (11-07)
 
 
 def dou(job, read_url=None):
-    """His rule (2026-11-07): no jobs from jobs.dou.ua, he can't use its
-    Ukrainian site. Fine when the job is posted somewhere else: a role VISION
+    """His rule (2026-11-07): no jobs from jobs.dou.ua (he can't use its
+    Ukrainian site) or djinni.co (Ukrainian outsourcing at local rates). Fine when the job is posted somewhere else: a role VISION
     read on another page (the employer's own) stays, and the same job listed
     by another source is its own role and is not touched."""
     if not any(DOU.search(str(u or "")) for u in (job.get("url"), job.get("apply_url"))):
         return None
     if read_url and not DOU.search(read_url) and read_url not in (job.get("url"), job.get("apply_url")):
         return None
-    return "dou: the job is only on jobs.dou.ua"
+    site = DOU.search(str(job.get("url") or "") + " " + str(job.get("apply_url") or "")).group(2)
+    return f"{site}: the job is only on {site}"
 
 
 def cut(job):
