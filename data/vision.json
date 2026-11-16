@@ -1846626,7 +1846626,7 @@
  },
  "beaed1947dc64dac": {
   "id": "beaed1947dc64dac",
-  "at": "2026-11-16T11:29:04",
+  "at": "2026-11-16T11:41:35",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jooble.org/desc/-2700163386155004327?ckey=UX+designer&rgn=-1&pos=37&groupId=1075&elckey=4296391225148926481&p=2&aq=4624641082197423260&cid=12006&jobAge=100&brelb=100&bscr=83.95283&scr=83.95283",
@@ -1846646,7 +1846646,7 @@
   "stage": "render",
   "open_quote": "Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "0b4adc17e2f349f8": {
   "id": "0b4adc17e2f349f8",
@@ -1846750,7 +1846750,7 @@
  },
  "023cd1f2dded41f0": {
   "id": "023cd1f2dded41f0",
-  "at": "2026-11-16T11:29:02",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://news.ycombinator.com/item?id=50349294",
@@ -1846765,11 +1846765,12 @@
   "looked": [],
   "read": "board",
   "read_url": "https://news.ycombinator.com/item?id=50349294",
-  "same_job": "no",
+  "fetched_at": "2026-11-16T11:26:30",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Open roles (gross per year, plus annual performance bonus): - Staff Full-Stack Engineer (Next.js, Medusa) ... - Head of Data & Analytics ... - Senior E-commerce Product Manager ... - VP Growth Europe ... - Head of SEO & AI Search ... - Head of CRM & Lifecycle",
+  "open_quote": "Open roles (gross per year, plus annual performance bonus): - Staff Full-Stack Engineer (Next.js, Medusa), €140k–€185k ... - Head of CRM & Lifecycle, €115k–€150k",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1846777,29 +1846778,20 @@
   "location_under_the_title": "Scento | Paris, Berlin | REMOTE (EU) or ONSITE | Full-time",
   "place_signals": [
    {
-    "quote": "Paris, Berlin",
-    "where": "under the title",
-    "kind": "tag",
-    "says": "says_nothing"
-   },
-   {
-    "quote": "REMOTE (EU) or ONSITE",
-    "where": "under the title",
+    "quote": "Paris, Berlin | REMOTE (EU) or ONSITE",
+    "where": "opening paragraph",
     "kind": "explicit",
     "says": "portugal_in"
-   },
-   {
-    "quote": "shipped to 26 EU countries. Founded in 2024, headquartered in Paris with a second office in Berlin.",
-    "where": "body",
-    "kind": "generic",
-    "says": "says_nothing"
    }
   ],
   "place_verdict": "unclear",
   "place_quote": "Paris, Berlin | REMOTE (EU) or ONSITE | Full-time",
-  "reason": "the page read is a different job · The page is a Hacker News hiring comment listing six non-design roles, with no Designer posting, so it is not a single job posting.",
+  "reason": "The page is a Hacker News hiring comment listing six open roles, none of them a Designer, so it is not a single job posting.",
   "confidence": "medium",
-  "inferred": [],
+  "inferred": [
+   "posting_open",
+   "seniority"
+  ],
   "fields": {
    "role": "Designer",
    "company": "Scento",
@@ -1846809,7 +1846801,7 @@
    "countries": [
     "EU"
    ],
-   "portugal_ok": "unclear",
+   "portugal_ok": "yes",
    "salary": null,
    "years_xp": null,
    "reports_to": null,
@@ -1846818,7 +1846810,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "9ac665717d814679": {
   "id": "9ac665717d814679",
@@ -1848342,7 +1848334,7 @@
  },
  "b83b5419f1f147aa": {
   "id": "b83b5419f1f147aa",
-  "at": "2026-11-16T11:30:29",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.teksystems.com/us/en/job/JP-006394670/Sr-Designer-Design-Systems",
@@ -1848357,8 +1848349,9 @@
   "looked": [],
   "read": "board",
   "read_url": "https://careers.teksystems.com/us/en/job/JP-006394670/Sr-Designer-Design-Systems",
+  "fetched_at": "2026-11-16T11:27:17",
   "same_job": "yes",
-  "posted_by": "agency",
+  "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
   "open_quote": "Get personalized tech job recommendations based on your skills and experience.",
@@ -1848366,16 +1848359,13 @@
   "language_ok": true,
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
-  "location_under_the_title": "Palm Beach Gardens, Florida, USA (from page title only)",
+  "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "Sr Designer Design Systems in Palm Beach Gardens, Florida, USA",
-  "reason": "The visible page has only menus and footer with no job description, so it is an empty shell and the role and place cannot be judged.",
-  "confidence": "medium",
-  "inferred": [
-   "posted_by agency: TEKsystems is a staffing firm, inferred from company name",
-   "location from page title, not page body"
-  ],
+  "place_quote": "",
+  "reason": "The page shows only site navigation and footer text with no job description, so the posting cannot be read.",
+  "confidence": "high",
+  "inferred": [],
   "fields": {
    "role": "Sr Designer Design Systems",
    "company": "TEKsystems",
@@ -1848392,7 +1848382,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "0dd5eef5498149a7": {
   "id": "0dd5eef5498149a7",
@@ -1852116,7 +1852106,7 @@
  },
  "2ac16fca872847da": {
   "id": "2ac16fca872847da",
-  "at": "2026-11-16T11:32:37",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jobspresso.co/job/product-designer-growth-monetization/",
@@ -1852141,7 +1852131,8 @@
   "orig_id": "c43a7ad01cbe45f0",
   "orig_posted": "2025-11-21",
   "orig_updated": "2026-10-27",
-  "same_job": "no",
+  "fetched_at": "2026-11-16T11:27:53",
+  "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
@@ -1852153,15 +1852144,15 @@
   "location_under_the_title": null,
   "place_signals": [
    {
-    "quote": "We’re hiring across our global hubs and remotely in the US and Canada.",
+    "quote": "We're hiring across our global hubs and remotely in the US and Canada.",
     "where": "opening paragraph",
     "kind": "generic",
     "says": "portugal_out"
    }
   ],
   "place_verdict": "unclear",
-  "place_quote": "We’re hiring across our global hubs and remotely in the US and Canada.",
-  "reason": "The page is the Figma careers landing page with a list of many jobs, not a single posting; the listed Growth & Monetization product designer role does not appear.",
+  "place_quote": "We're hiring across our global hubs and remotely in the US and Canada.",
+  "reason": "The page is the Figma careers landing page with a list of many jobs, not a single posting for Product Designer, Growth & Monetization (that title is not even in the list).",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1852174,13 +1852165,12 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "24cfa6e991ab4752": {
   "id": "24cfa6e991ab4752",
@@ -1853896,7 +1853886,7 @@
  },
  "a329c7f3bf9e4360": {
   "id": "a329c7f3bf9e4360",
-  "at": "2026-11-16T11:33:40",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://parallel.recruitee.com/o/associate-design-director-1",
@@ -1853911,6 +1853901,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://www.parallelhq.com/careers",
+  "fetched_at": "2026-11-16T11:28:22",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1853924,13 +1853915,13 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a careers index listing several roles with Apply buttons, not a single job posting, and it has no description or location for Associate Design Director.",
+  "reason": "The page is a general careers page listing several roles with only Apply buttons, not a single job posting with a description.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Associate Design Director",
    "company": "Parallel",
-   "seniority": "unstated",
+   "seniority": "director",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
@@ -1853943,11 +1853934,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "b9d92098abb34be4": {
   "id": "b9d92098abb34be4",
-  "at": "2026-11-16T11:33:42",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=3507ecef-7058-4213-b70a-9b4acee04610&jobId=608385&lang=en_US",
@@ -1853962,6 +1853953,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=3507ecef-7058-4213-b70a-9b4acee04610&jobId=608385&lang=en_US",
+  "fetched_at": "2026-11-16T11:28:27",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1853969,18 +1853961,15 @@
   "open_quote": "Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "yes",
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the role is judged from the title 'Senior Design Engineer' alone.",
+  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title alone suggests a Design Engineer role.",
   "confidence": "low",
-  "inferred": [
-   "role_verdict judged from the pool title only",
-   "seniority taken from the pool title"
-  ],
+  "inferred": [],
   "fields": {
    "role": "Senior Design Engineer",
    "company": "3507ecef-7058-4213-b70a-9b4acee04610",
@@ -1853997,11 +1853986,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "3808d3bd50334565": {
   "id": "3808d3bd50334565",
-  "at": "2026-11-16T11:33:42",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=3507ecef-7058-4213-b70a-9b4acee04610&jobId=608382&lang=en_US",
@@ -1854016,6 +1854005,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=3507ecef-7058-4213-b70a-9b4acee04610&jobId=608382&lang=en_US",
+  "fetched_at": "2026-11-16T11:28:28",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1854023,18 +1854013,15 @@
   "open_quote": "Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "yes",
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description, so it is an empty shell; the role is judged from the title 'Design Engineer' alone.",
-  "confidence": "low",
-  "inferred": [
-   "role_verdict judged from pool title only, since the page has no description",
-   "language assumed English from the page text, no posting text present"
-  ],
+  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read.",
+  "confidence": "high",
+  "inferred": [],
   "fields": {
    "role": "Design Engineer",
    "company": "3507ecef-7058-4213-b70a-9b4acee04610",
@@ -1854045,13 +1854032,12 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "ca1b1bf8335043e9": {
   "id": "ca1b1bf8335043e9",
@@ -1854267,7 +1854253,7 @@
  },
  "fc8e62d9657f4bd0": {
   "id": "fc8e62d9657f4bd0",
-  "at": "2026-11-16T11:33:54",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.scandit.com/careers/job-description/?gh_jid=8333916",
@@ -1854282,6 +1854268,7 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.scandit.com/careers/job-description/?gh_jid=8333916",
+  "fetched_at": "2026-11-16T11:29:12",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1854314,11 +1854301,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "24fe9bc1668643da": {
   "id": "24fe9bc1668643da",
-  "at": "2026-11-16T11:33:55",
+  "at": "2026-11-16T11:41:32",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.scandit.com/careers/job-description/?gh_jid=8334178",
@@ -1854333,6 +1854320,7 @@
   "looked": [],
   "read": "board",
   "read_url": "https://www.scandit.com/careers/job-description/?gh_jid=8334178",
+  "fetched_at": "2026-11-16T11:29:13",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1854346,13 +1854334,16 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and cookie text with no job description, so it is an empty shell.",
+  "reason": "The page shows only site navigation and cookie text with no job description, so the posting cannot be read.",
   "confidence": "high",
-  "inferred": [],
+  "inferred": [
+   "role_verdict left unclear because the page has no description, though the title (Senior) UX Designer suggests a design role",
+   "language assumed English from the page text"
+  ],
   "fields": {
    "role": "(Senior) UX Designer",
    "company": "Scandit",
-   "seniority": "unstated",
+   "seniority": "senior",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
@@ -1854365,7 +1854356,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "6b3755ed7b084a10": {
   "id": "6b3755ed7b084a10",
@@ -1855463,7 +1855454,7 @@
  },
  "168624fde5d44dbb": {
   "id": "168624fde5d44dbb",
-  "at": "2026-11-16T11:34:43",
+  "at": "2026-11-16T11:41:35",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://parallel.recruitee.com/o/director-brand-design",
@@ -1855478,11 +1855469,12 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://www.parallelhq.com/careers",
+  "fetched_at": "2026-11-16T11:28:50",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Lead Web Designer Apply Founding Product Marketing Lead Apply Web Development Lead Apply Associate Design Director Apply Director, Brand Design Apply",
+  "open_quote": "Lead Web Designer Apply Founding Product Marketing Lead Apply Web Development Lead Apply Associate Design Director Apply Director, Brand Design Apply Senior Content Strategist, Web Design Apply Senior Product Designer Apply",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1855491,12 +1855483,9 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a careers listing of several roles with no description for Director, Brand Design, so it is not a single job posting.",
+  "reason": "The page is a general careers page listing several roles with Apply buttons, not a single job posting, and has no description or location.",
   "confidence": "high",
-  "inferred": [
-   "seniority taken from the title",
-   "posting_open set to unreadable because the page is a list of jobs"
-  ],
+  "inferred": [],
   "fields": {
    "role": "Director, Brand Design",
    "company": "Parallel",
@@ -1855513,11 +1855502,11 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "21ee172bb130488e": {
   "id": "21ee172bb130488e",
-  "at": "2026-11-16T11:34:43",
+  "at": "2026-11-16T11:41:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://parallel.recruitee.com/o/senior-product-designer",
@@ -1855532,6 +1855521,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://www.parallelhq.com/careers",
+  "fetched_at": "2026-11-16T11:28:54",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1855545,7 +1855535,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a careers landing page listing several open roles with no description for Senior Product Designer, so it is not a single job posting.",
+  "reason": "The page is a careers listing with several roles and no job description for the Senior Product Designer, so it is not a single posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1855564,7 +1855554,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "e44df385823b4c11": {
   "id": "e44df385823b4c11",
@@ -1855914,7 +1855904,7 @@
  },
  "fed8bc84d8f04056": {
   "id": "fed8bc84d8f04056",
-  "at": "2026-11-16T11:35:10",
+  "at": "2026-11-16T11:41:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://parallel.recruitee.com/o/senior-content-strategist-web-design",
@@ -1855929,6 +1855919,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://www.parallelhq.com/careers",
+  "fetched_at": "2026-11-16T11:29:11",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1855942,7 +1855933,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page is a careers landing page listing several roles with only titles and Apply buttons, not a single job posting with a description.",
+  "reason": "The page is a careers landing page listing several open roles with no description for this one, so it is not a single job posting.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1855961,7 +1855952,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "9df793cde78f4de0": {
   "id": "9df793cde78f4de0",
@@ -1857346,7 +1857337,7 @@
  },
  "6ba32b4648654956": {
   "id": "6ba32b4648654956",
-  "at": "2026-11-16T11:35:51",
+  "at": "2026-11-16T11:41:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=5835eab7-4b2b-43a5-accc-4cb212fb3112&jobId=604807&lang=en_US",
@@ -1857361,6 +1857352,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=5835eab7-4b2b-43a5-accc-4cb212fb3112&jobId=604807&lang=en_US",
+  "fetched_at": "2026-11-16T11:29:52",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1857368,18 +1857360,15 @@
   "open_quote": "Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.",
   "language_of_the_posting": "English",
   "language_ok": true,
-  "role_verdict": "no",
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description; the title 'Gift Basket Designer' is not a product design role.",
-  "confidence": "medium",
-  "inferred": [
-   "role_verdict judged from the pool title alone since the page has no description",
-   "language assumed English from the page text"
-  ],
+  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title alone (Gift Basket Designer) is not a clear product design role.",
+  "confidence": "low",
+  "inferred": [],
   "fields": {
    "role": "Gift Basket Designer",
    "company": "5835eab7-4b2b-43a5-accc-4cb212fb3112",
@@ -1857396,7 +1857385,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "19890b46773446d3": {
   "id": "19890b46773446d3",
@@ -1857502,7 +1857491,7 @@
  },
  "23bc1814418e4c2f": {
   "id": "23bc1814418e4c2f",
-  "at": "2026-11-16T11:35:53",
+  "at": "2026-11-16T11:41:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=421cafef-b1d5-4066-9fab-e9476fad2ab6&jobId=572000&lang=en_US",
@@ -1857517,6 +1857506,7 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=421cafef-b1d5-4066-9fab-e9476fad2ab6&jobId=572000&lang=en_US",
+  "fetched_at": "2026-11-16T11:29:54",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1857530,13 +1857520,13 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description, so it is an empty shell and nothing about the role or place can be read.",
+  "reason": "The page shows only a cookie consent banner with no job description, so the posting cannot be read and the role is judged from the title alone as unclear.",
   "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "System Design Engineer I",
    "company": "421cafef-b1d5-4066-9fab-e9476fad2ab6",
-   "seniority": "unstated",
+   "seniority": "junior",
    "remote": "unstated",
    "onsite_days": null,
    "countries": [],
@@ -1857549,7 +1857539,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "fcf51bc9a60a4741": {
   "id": "fcf51bc9a60a4741",
@@ -1858619,7 +1858609,7 @@
  },
  "f0f425e2b63243cb": {
   "id": "f0f425e2b63243cb",
-  "at": "2026-11-16T11:36:14",
+  "at": "2026-11-16T11:41:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://uscareers-cvent.icims.com/jobs/11000/job",
@@ -1858634,11 +1858624,13 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://uscareers-cvent.icims.com/jobs/11000/job?mobile=false&width=1216&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+  "fetched_at": "2026-11-16T11:30:09",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Skip Branding Skip to Main Content Home Life At Cvent Benefits Campus Locations FIND JOBS COMPANY",
+  "open_quote": "Skip Branding Skip to Main Content Home Life At Cvent Benefits Campus Locations FIND JOBS",
+  "open_quote_note": null,
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1858647,8 +1858639,8 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer with no job description, so the posting cannot be read; the page title mentions Tysons Corner, Virginia but the body has no posting content.",
-  "confidence": "medium",
+  "reason": "The page shows only site navigation and footer text with no job description, so the posting is an empty shell.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Lead Content Designer",
@@ -1858666,7 +1858658,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "cf749d54f131482c": {
   "id": "cf749d54f131482c",
@@ -1858736,7 +1858728,7 @@
  },
  "c3de20fb559747a8": {
   "id": "c3de20fb559747a8",
-  "at": "2026-11-16T11:36:14",
+  "at": "2026-11-16T11:41:36",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://uscareers-cvent.icims.com/jobs/8991/job",
@@ -1858751,11 +1858743,12 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://uscareers-cvent.icims.com/jobs/8991/job?mobile=false&width=1216&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+  "fetched_at": "2026-11-16T11:30:08",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Skip Branding Skip to Main Content Home Life At Cvent Benefits Campus Locations FIND JOBS COMPANY",
+  "open_quote": "Skip Branding Skip to Main Content Home Life At Cvent Benefits Campus Locations FIND JOBS",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1858764,15 +1858757,12 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only navigation and footer text with no job description, so it is an empty shell; the title alone mentions Tysons Corner, Virginia but the posting itself is not readable.",
-  "confidence": "medium",
-  "inferred": [
-   "language assumed English from the navigation text",
-   "same_job judged from the page title 'Lead Content Designer (UX)' matching the pool role; the company shown is Cvent, while the pool says Splash (Splash is a Cvent company)"
-  ],
+  "reason": "The page shows only site navigation and footer with no job description, so it is an empty shell and nothing about the role or place can be read.",
+  "confidence": "high",
+  "inferred": [],
   "fields": {
    "role": "Lead Content Designer (UX)",
-   "company": "Cvent",
+   "company": "Splash",
    "seniority": "lead",
    "remote": "unstated",
    "onsite_days": null,
@@ -1858786,7 +1858776,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "2ade2834a80f498d": {
   "id": "2ade2834a80f498d",
@@ -1866202,7 +1866192,7 @@
  },
  "d37abf2de3c74a5a": {
   "id": "d37abf2de3c74a5a",
-  "at": "2026-11-16T11:39:20",
+  "at": "2026-11-16T11:41:41",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jobspresso.co/job/principal-product-designer-ai/",
@@ -1866224,6 +1866214,7 @@
   ],
   "read": "employer",
   "read_url": "https://www.atlassian.com/company/careers/all-jobs",
+  "fetched_at": "2026-11-16T11:31:57",
   "same_job": "no",
   "posted_by": "employer",
   "hiring_for": null,
@@ -1866234,23 +1866225,10 @@
   "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
-  "place_signals": [
-   {
-    "quote": "We can hire people in any country where we have a legal entity, assuming you have eligible working rights and a sufficient timezone overlap with your team.",
-    "where": "opening paragraph",
-    "kind": "generic",
-    "says": "portugal_maybe"
-   },
-   {
-    "quote": "All Atlassians can choose to work remotely or return to an office (unless it's necessary for the role to be performed in the office).",
-    "where": "opening paragraph",
-    "kind": "generic",
-    "says": "says_nothing"
-   }
-  ],
+  "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "We can hire people in any country where we have a legal entity, assuming you have eligible working rights and a sufficient timezone overlap with your team.",
-  "reason": "The page is a listing of 337 jobs rather than a single posting, and no 'Principal Product Designer, AI' entry appears on it.",
+  "place_quote": "Select a function and the country where you're eligible to work to see remote-eligible roles in your area.",
+  "reason": "The page is Atlassian's all-jobs listing of 337 roles, not a single posting, and it contains no description for Principal Product Designer, AI.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1866269,7 +1866247,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "9b38e83c13c1450d": {
   "id": "9b38e83c13c1450d",
@@ -1866802,13 +1866780,13 @@
  },
  "595032fad7084fe1": {
   "id": "595032fad7084fe1",
-  "at": "2026-11-16T11:39:38",
+  "at": "2026-11-16T11:42:06",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27523/structural-revit-designer/job?hub=7&amp;in_iframe=1",
   "board": null,
   "employer": {
-   "url": "https://careers-kimley-horn.icims.com/jobs/27523/structural-revit-designer/job?hub=7&mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+   "url": "https://careers-kimley-horn.icims.com/jobs/27523/structural-revit-designer/job?hub=7&amp",
    "status": 200,
    "shot": "data/shots/595032fad7084fe1.jpg",
    "error": null
@@ -1866822,17 +1866800,17 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "cd1d7428be804f1f": {
   "id": "cd1d7428be804f1f",
-  "at": "2026-11-16T11:39:38",
+  "at": "2026-11-16T11:42:03",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers-kimley-horn.icims.com/jobs/27708/structural-design-technician/job?hub=7&amp;in_iframe=1",
   "board": null,
   "employer": {
-   "url": "https://careers-kimley-horn.icims.com/jobs/27708/structural-design-technician/job?hub=7&mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
+   "url": "https://careers-kimley-horn.icims.com/jobs/27708/structural-design-technician/job?hub=7&amp",
    "status": 200,
    "shot": "data/shots/cd1d7428be804f1f.jpg",
    "error": null
@@ -1866846,7 +1866824,7 @@
   "stage": "render",
   "open_quote": null,
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "ac6ad58bdb2a4cc9": {
   "id": "ac6ad58bdb2a4cc9",
@@ -1869803,7 +1869781,7 @@
  },
  "236d12d3ffd34d4d": {
   "id": "236d12d3ffd34d4d",
-  "at": "2026-11-16T11:40:29",
+  "at": "2026-11-16T11:41:41",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jobs.jobvite.com/rightpoint/job/o2Z3Afwo",
@@ -1869818,11 +1869796,12 @@
   "looked": [],
   "read": "employer",
   "read_url": "https://jobs.jobvite.com/genpactexperience/jobs",
+  "fetched_at": "2026-11-16T11:32:31",
   "same_job": "yes",
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Open Positions",
+  "open_quote": "Open Experience Positions ... Senior Interaction Designer\tBengaluru, India ... Front End Developer- React + Next\tBengaluru, India",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1869831,7 +1869810,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Senior Interaction Designer\tBengaluru, India",
-  "reason": "The page is a list of many Genpact jobs, not a single posting, and has no description; the listed Senior Interaction Designer entry shows only Bengaluru, India.",
+  "reason": "The page is a list of many Genpact job openings, not a single posting, so there is no description to judge; the listed entry shows only a Bengaluru, India location tag.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1869840,17 +1869819,18 @@
    "seniority": "senior",
    "remote": "unstated",
    "onsite_days": null,
-   "countries": [],
+   "countries": [
+    "India"
+   ],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
-   "reports_to": null,
    "language": "English",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "5f31b89c8330461a": {
   "id": "5f31b89c8330461a",
