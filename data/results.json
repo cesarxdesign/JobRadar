@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-03T12:53:24+00:00",
- "built_at": "2026-11-07T11:33+00:00",
+ "built_at": "2026-11-16T08:30+00:00",
  "run_id": "2026-11-03T12:53:24+00:00",
  "last_full": "2026-11-02T20:54:47+00:00",
  "last_partial": "2026-11-03T12:53:24+00:00",
@@ -13,17 +13,17 @@
   "unsure": 206,
   "ghosts": 0,
   "cut": 26,
-  "closed": 626,
-  "vision_cut": 17506,
+  "closed": 633,
+  "vision_cut": 17543,
   "agency": 0,
-  "not_read": 43,
-  "folded": 166,
-  "vision_read": 28592,
+  "not_read": 3,
+  "folded": 168,
+  "vision_read": 28598,
   "title_cuts": 42690,
   "design": 26887,
-  "waiting": 6,
-  "unjudged": 560387,
-  "age_cuts": 16845,
+  "waiting": 0,
+  "unjudged": 560381,
+  "age_cuts": 17897,
   "active": 622122,
   "total": 635966
  },
@@ -380,7 +380,6 @@
    "4804815ebc024312",
    "6f27e0577254459b",
    "9e9b8f8f318f49bf",
-   "940b10f91c7e455f",
    "e46e0c3fff54456a",
    "a5780cc270064742",
    "c1df393fb6614ad0",
@@ -449,6 +448,7 @@
    "c67ab65390b2441a",
    "c6b1358bc8e24576",
    "9940f7245fc346e2",
+   "ddb5240f97b74f86",
    "5f22584690f74b47",
    "aa28ab7cd88641de",
    "0d1b3da527e8457d",
@@ -500,7 +500,7 @@
    "6e2834582db4488e",
    "291bbfd4cb764c12",
    "20696b77ada1479e",
-   "ebda20b97b064b4e",
+   "0aeee9646b5048db",
    "a0b70ffda5db46ee",
    "597d36fd5fe24cfd"
   ],
@@ -1324,9 +1324,12 @@
   "a2dc8e2b64b34e51",
   "1abf5d691417439e",
   "c1a09cff883942f4",
+  "66c707971d08411e",
   "b26d9d68afa9496e",
   "84a1f297b1cf4b6e",
   "b0df690a00dc4d11",
+  "35eb392f8aa9453f",
+  "1ddcfc853f7c4ce3",
   "e12b76aba53f4fec",
   "801e877e01684205",
   "1f501ccb27504935",
@@ -1339,6 +1342,8 @@
   "b774a216022b49dd",
   "db865fec37a0473f",
   "c522a09d6e614d59",
+  "9d046d2994fb4b0f",
+  "265dd60573ed4b8b",
   "141a21d7212546f0",
   "b6077f0953a6440e",
   "d61be09e84254b97",
@@ -1362,12 +1367,14 @@
   "feabe8e5123f43b9",
   "d949aa2963514bcf",
   "99a3eea9c12d4243",
+  "b35ee929383b46bf",
   "20898ca506cd4a82",
   "6b3f6d30854441d2",
   "1e44d586c0524e16",
   "f4867117ea344797",
   "d84afc66b4584a7b",
-  "13a8c31ef5bb4f62"
+  "13a8c31ef5bb4f62",
+  "aa9b2f392f69466b"
  ],
  "vcut": [
   "2eca67378abe4b26",
@@ -14683,6 +14690,7 @@
   "537457b638da4205",
   "6ba0677360784fd3",
   "fe0e4ba6d9ef4b4f",
+  "68e1415e17af485f",
   "4b09c3ab41d44bd9",
   "27645023261c435e",
   "10f0ef64e7484671",
@@ -17197,6 +17205,7 @@
   "9526cce638e94179",
   "e5c05ec9637e4e72",
   "74af19de38964a3e",
+  "db4adefd9bb244e3",
   "d07bb4633f744cca",
   "ca1ea8c75f5c49a5",
   "4ab507d20f7f4f52",
@@ -17490,8 +17499,13 @@
   "75568989b72a4a22",
   "623cb47c35184a05",
   "cae54ad5856d4440",
+  "c1b314d96a0f47bb",
+  "bb808006d7bd4b8a",
+  "c3c1e71af1cb47fa",
   "119d2ff5dae34a18",
   "22a0f93424b84522",
+  "f35a7322f6d443c4",
+  "536bce1561be4991",
   "9b50104226684f9e",
   "d7e29d11c5714334",
   "3176811d4ac64da4",
@@ -17654,10 +17668,12 @@
   "86cc39e411294476",
   "b5b8f54527224f58",
   "a977eccdebb3452f",
+  "cdbbb4dcd94a44f0",
   "8d898784440f4af0",
   "620f3d0f424740b5",
   "c6c095828ca1475b",
   "133ab783ed824a47",
+  "69b61c581463480b",
   "1d334a363da241aa",
   "33b9d89765a94541",
   "51a1ebdc3a204e8b",
@@ -17957,6 +17973,8 @@
   "188c72f7a6d74d15",
   "7df5ea0d0fc64605",
   "e88d210c23694336",
+  "b3f5162eb3fc4d8e",
+  "5a225a8e4a874576",
   "a1391a357a9d457c",
   "40b430bf8d9347a1",
   "a3fab37d1f8047b5",
@@ -17980,11 +17998,13 @@
   "37adac3a005747be",
   "11282944a8a04443",
   "c2692e1020d14868",
+  "b239104170f544ce",
   "287e4e0bd36b42f5",
   "e9591361da6649d5",
   "ceeb8fc0937d42de",
   "07239354555b4904",
   "c13619d55c7c4a3d",
+  "12b9c024a6424cb4",
   "36631a632c18424f",
   "80bd5b4aae7e4a52",
   "21c0ccbe12d94712",
@@ -18022,6 +18042,9 @@
   "49bd3911309f44c3",
   "05d7c7951cc84ca4",
   "6d465efc35f14fbe",
+  "ad60317b57664274",
+  "3c1c8ad96fb34081",
+  "e631e564a6154326",
   "b795cc307b9a4234",
   "caedcb91612a4614",
   "24633ef2c480480e",
@@ -18061,6 +18084,7 @@
   "c6590c4dc0a54633",
   "23f7867a48784f10",
   "e1cad8d1be924276",
+  "10f71dfd1bd64987",
   "23c210d2d1e64d3c",
   "cd3635e43c3e423f",
   "74044a88eb254f95",
@@ -18076,6 +18100,7 @@
   "ab8804f086d64d26",
   "279cd8416ad74dc8",
   "dcf4eadfa0124c48",
+  "d6c3e331def64dea",
   "fe86ad4bcb6c4977",
   "45462ecd287140a7",
   "be6ac9f37c484b26",
@@ -18086,9 +18111,12 @@
   "02ec870a262248a0",
   "10d2913f42804cca",
   "2b5976d212a44ffe",
+  "97acf866f94646c2",
+  "7a27ebbf1cbe48aa",
   "c64094eccbd5407c",
   "c31d81f0acee4eb0",
   "02e0b2129cdb440b",
+  "46e3172d88354163",
   "03c14a488c134a81",
   "d5bf1655e3bc40cf",
   "2ac0660c083e4bfc",
@@ -18107,6 +18135,7 @@
   "8ee32debfe2540a1",
   "0a19b886c26c46dd",
   "63e525be442b4d49",
+  "6951230398704f31",
   "66164faf5af641c3",
   "3523dc4e669a4e54",
   "2f2b016087054188",
@@ -18115,25 +18144,32 @@
   "96a44c5a4e70443d",
   "7957eb8f6484405b",
   "18499468b7334b83",
+  "fb4f9ed37a0349a3",
   "345136c83d184023",
   "008ead4c09d641cd",
   "a119d44ae56c4260",
   "a1aa0c392eef4ccd",
   "22607711276a4855",
   "ae7c2fd5f3704388",
+  "c8b6f883ef2e4df9",
   "fe17f5f8922c4730",
   "4bcd0640578e4239",
   "c59da34b964441cc",
   "57c8d29660d34c4a",
   "7c5feb58568b40ac",
   "343a375a6bfc4b76",
+  "49934a0590874f8a",
   "07404c2e1ecd4670",
   "6900a21f725149e5",
+  "477fe4a74f6f43fa",
   "9bd246f83ec141ae",
   "1df7043667bc46ba",
   "c510b573f4154971",
   "13e88b69edcd441d",
   "3f6c0595c3ed4a47",
+  "d945d00087b54282",
+  "919f4932c5494ce9",
+  "49562cc3e7154faa",
   "fe69c5c3bd064eda",
   "3b4cdbdfb46e409c",
   "695fd9f428c340a0",
@@ -18300,6 +18336,7 @@
   "a57c1b98d9104686",
   "18a7515833ed4ca2",
   "12c34b8935ba44d9",
+  "1cced7ae68dc4578",
   "38eaa174870a433b",
   "4ea66a9e3f5a47ae",
   "f04e9347321b4ff9",
@@ -18367,6 +18404,9 @@
   "5e91e7fc2a434571",
   "f6e7620db4044c20",
   "f40085096a21428a",
+  "319366fb7ead4696",
+  "5fd0b73f67874d50",
+  "a6d7e3a9972040a7",
   "3ea58c0cfc3b4e27",
   "89a6b55a35364117",
   "492581d7d0bd4d77",
@@ -18379,6 +18419,8 @@
   "134618d40aba4b3c",
   "e196378c29cf496e",
   "e00f88450e7d4bcf",
+  "dcc25136637940f3",
+  "c4ea83e934b94a2c",
   "45839836f7064f67",
   "5d242f2066694be0",
   "ce5d09be23024f9f",
@@ -18393,6 +18435,7 @@
   "56e75262102b4eba",
   "b15651e496d14407",
   "ee18a0f0a1ba4e49",
+  "9175438167d3425a",
   "b9f2374d844e45a3",
   "b52f8ae5691e4f75",
   "468a45760d904bcb",
@@ -18769,6 +18812,7 @@
   "032b15ae7cbf41ac",
   "97ab34d2ec3b4b35",
   "555e259eaeb44d22",
+  "e66b0e0aded84ac6",
   "6b8d6b7e8a3f4145",
   "9448416219a14f7a",
   "adb1b0f214be4fe7",
@@ -18903,47 +18947,7 @@
  "unread": [
   "2dc6c294a7774ee7",
   "cc7fb0a126a3418c",
-  "68e1415e17af485f",
-  "db4adefd9bb244e3",
-  "c1b314d96a0f47bb",
-  "bb808006d7bd4b8a",
-  "c3c1e71af1cb47fa",
-  "f35a7322f6d443c4",
-  "536bce1561be4991",
-  "cdbbb4dcd94a44f0",
-  "69b61c581463480b",
-  "b3f5162eb3fc4d8e",
-  "5a225a8e4a874576",
-  "66c707971d08411e",
-  "b239104170f544ce",
-  "12b9c024a6424cb4",
-  "ad60317b57664274",
-  "3c1c8ad96fb34081",
-  "e631e564a6154326",
-  "10f71dfd1bd64987",
-  "d6c3e331def64dea",
-  "97acf866f94646c2",
-  "7a27ebbf1cbe48aa",
-  "35eb392f8aa9453f",
-  "46e3172d88354163",
-  "08577b63c7724e21",
-  "0aeee9646b5048db",
-  "6951230398704f31",
-  "ddb5240f97b74f86",
-  "1ddcfc853f7c4ce3",
-  "fb4f9ed37a0349a3",
-  "c8b6f883ef2e4df9",
-  "1cced7ae68dc4578",
-  "9d046d2994fb4b0f",
-  "265dd60573ed4b8b",
-  "319366fb7ead4696",
-  "5fd0b73f67874d50",
-  "a6d7e3a9972040a7",
-  "dcc25136637940f3",
-  "c4ea83e934b94a2c",
-  "b35ee929383b46bf",
-  "9175438167d3425a",
-  "e66b0e0aded84ac6"
+  "08577b63c7724e21"
  ],
  "sources": {
   "ok": 72,
@@ -1062309,10 +1062313,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Cvent careers login page with only menu and footer text, no job posting content.",
+     "The page is a Cvent careers login page with no job posting content, so nothing about the role or place can be read.",
      "the page says: \"Login\""
     ],
     "judged": true,
@@ -1062322,7 +1062326,7 @@
     "fields": {
      "role": "Lead Content Designer (UX)",
      "company": "Splash",
-     "seniority": "lead",
+     "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
      "countries": [],
@@ -1062336,7 +1062340,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://uscareers-cvent.icims.com/jobs/8991/login",
-    "reason": "The page is a Cvent careers login page with only menu and footer text, no job posting content.",
+    "reason": "the page would not open on two runs · The page is a Cvent careers login page with no job posting content, so nothing about the role or place can be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1062345,7 +1062349,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/68e1415e17af485f.jpg",
-    "read_at": "2026-11-03T09:06:11",
+    "read_at": "2026-11-16T08:29:19",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1108951,49 +1108955,7 @@
     "evidence": {
      "board_posted": "2026-10-20"
     },
-    "hiring_for": null,
-    "copies": [
-     {
-      "id": "110e3bf7811e4216",
-      "url": "https://jobs.workable.com/view/vz4jXTXKgr2Y8hTAVVawsZ/remote-product-designer-in-germany-at-mlabs",
-      "read_url": "https://jobs.workable.com/view/vz4jXTXKgr2Y8hTAVVawsZ/remote-product-designer-in-germany-at-mlabs",
-      "source": "workablesearch",
-      "posted": "2026-10-20",
-      "location": "Germany",
-      "lane": "open",
-      "read": "employer"
-     },
-     {
-      "id": "f97caae7c93546a3",
-      "url": "https://jobs.workable.com/view/qwN1GeTcELCZiCDL9PABoA/remote-product-designer-in-poland-at-mlabs",
-      "read_url": "https://jobs.workable.com/view/qwN1GeTcELCZiCDL9PABoA/remote-product-designer-in-poland-at-mlabs",
-      "source": "workablesearch",
-      "posted": "2026-10-20",
-      "location": "Poland",
-      "lane": "unsure",
-      "read": "employer"
-     },
-     {
-      "id": "9f9d8d85757a4a3b",
-      "url": "https://jobs.workable.com/view/xfJTrDGhG6nuA84dqGo4w6/remote-product-designer-in-netherlands-at-mlabs",
-      "read_url": "https://jobs.workable.com/view/xfJTrDGhG6nuA84dqGo4w6/remote-product-designer-in-netherlands-at-mlabs",
-      "source": "workablesearch",
-      "posted": "2026-10-20",
-      "location": "Netherlands",
-      "lane": "unsure",
-      "read": "employer"
-     },
-     {
-      "id": "62ef2a38c50b4dbf",
-      "url": "https://jobs.workable.com/view/d2CREJv3br49SyphsURZaj/remote-product-designer-in-spain-at-mlabs",
-      "read_url": "https://jobs.workable.com/view/d2CREJv3br49SyphsURZaj/remote-product-designer-in-spain-at-mlabs",
-      "source": "workablesearch",
-      "posted": "2026-10-20",
-      "location": "Spain",
-      "lane": "unsure",
-      "read": "employer"
-     }
-    ]
+    "hiring_for": null
    }
   },
   {
@@ -1241990,13 +1241952,14 @@
    "title": "P&ID and Piping Designer",
    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9e11f3d3-6c67-472b-abab-e5460d08e697&jobId=554336&lang=en_US",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
-     "the page says: \"Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.\""
+     "This is a P&ID and 3D piping designer (process engineering drafting), not product, UX or UI design, so the role is not one he does.",
+     "Portugal OUT · under the title: \"New Delhi, Delhi, IN\"",
+     "Portugal OUT · body: \"Vadodara, India\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1242008,27 +1241971,45 @@
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "India"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
-     "reports_to": null,
+     "reports_to": "Design Engineering Supervisor",
      "language": "English",
-     "posted": null
+     "posted": "27 days ago"
     },
-    "inferred": [],
+    "inferred": [
+     "workplace_as_posted set to remote because the posting lists onsite, hybrid and remote as options",
+     "seniority unstated"
+    ],
     "read": "employer",
     "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9e11f3d3-6c67-472b-abab-e5460d08e697&jobId=554336&lang=en_US",
-    "reason": "The page shows only a cookie consent banner with no job description, so the posting cannot be read.",
-    "open": "unreadable",
+    "reason": "This is a P&ID and 3D piping designer (process engineering drafting), not product, UX or UI design, so the role is not one he does.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Location Vadodara, India; Onsite, Hybrid or Fully Remote: Onsite, Hybrid, Remote",
+    "signals": [
+     {
+      "quote": "New Delhi, Delhi, IN",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Vadodara, India",
+      "where": "body",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/db4adefd9bb244e3.jpg",
-    "read_at": "2026-11-03T09:14:54",
+    "read_at": "2026-11-16T08:29:15",
     "evidence": {
      "employer_posted": "2026-10-20"
     }
@@ -1266703,8 +1266684,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266717,7 +1266698,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-6316504667218702890?ckey=UX+designer&rgn=-1&pos=51&groupId=1075&elckey=6845454431354775350&p=3&aq=-4020709367531804460&cid=12006&jobAge=188&brelb=100&bscr=84.95024&scr=84.95024",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266726,7 +1266707,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c1b314d96a0f47bb.jpg",
-    "read_at": "2026-11-03T09:02:28",
+    "read_at": "2026-11-16T08:28:48",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1266753,8 +1266734,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266767,7 +1266748,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/8770498185579381181?ckey=UX+designer&rgn=-1&pos=70&groupId=1075&elckey=6845454431354775350&p=4&aq=-7295448912987507070&cid=12006&jobAge=188&brelb=100&bscr=84.51098&scr=84.51098",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266776,7 +1266757,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/bb808006d7bd4b8a.jpg",
-    "read_at": "2026-11-03T09:02:29",
+    "read_at": "2026-11-16T08:28:47",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1266803,8 +1266784,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1266817,7 +1266798,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-513961471400230687?ckey=UX+designer&rgn=-1&pos=12&groupId=1075&elckey=6845454431354775350&p=1&aq=-4281334290100560780&cid=12006&jobAge=212&brelb=100&bscr=102.42857&scr=102.42857",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1266826,7 +1266807,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c3c1e71af1cb47fa.jpg",
-    "read_at": "2026-11-03T09:08:13",
+    "read_at": "2026-11-16T08:28:57",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1267049,8 +1267030,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1267063,7 +1267044,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/3824942177114830890?ckey=UX+designer&rgn=-1&pos=59&groupId=1075&elckey=6417764813443540579&p=3&aq=-2396726538537014954&cid=12006&jobAge=36&brelb=100&bscr=80.153046&scr=80.153046",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1267072,7 +1267053,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/f35a7322f6d443c4.jpg",
-    "read_at": "2026-11-03T09:15:06",
+    "read_at": "2026-11-16T08:29:17",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1267099,8 +1267080,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Sorry, you have been blocked You are unable to access jooble.org Why have I been blocked? This website is using a security service to protect itself from online\""
@@ -1267113,7 +1267094,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://jooble.org/desc/-7537850345726094615?ckey=UX+designer&rgn=-1&pos=3&groupId=1075&elckey=6417764813443540579&p=1&aq=3723811435019407819&cid=12006&jobAge=36&brelb=100&bscr=104.19895&scr=104.19895",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1267122,7 +1267103,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/536bce1561be4991.jpg",
-    "read_at": "2026-11-03T09:15:06",
+    "read_at": "2026-11-16T08:29:17",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1281197,13 +1281178,14 @@
    "url": "https://apply.workable.com/runware/j/7830FD5632",
    "workplace": "on_site",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "This is a mechanical cooling systems engineering job, not product design, and the location is hybrid in Bucharest with conflicting generic remote-first text.",
+     "Portugal OUT · under the title: \"Hybrid Bucharest, Bucharest, Romania\"",
+     "Portugal OUT · body: \"Remote-first setup – work from home anywhere we can employ you\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1281212,10 +1281194,12 @@
     "fields": {
      "role": "Lead / Senior Cooling Systems Design Engineer",
      "company": "Runware",
-     "seniority": "unstated",
-     "remote": "unstated",
+     "seniority": "lead",
+     "remote": "hybrid",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "Romania"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -1281226,16 +1281210,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/runware/j/7830FD5632",
-    "reason": "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
+    "reason": "This is a mechanical cooling systems engineering job, not product design, and the location is hybrid in Bucharest with conflicting generic remote-first text.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Hybrid Bucharest, Bucharest, Romania; Remote-first setup – work from home anywhere we can employ you",
+    "signals": [
+     {
+      "quote": "Hybrid Bucharest, Bucharest, Romania",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Remote-first setup – work from home anywhere we can employ you",
+      "where": "body",
+      "kind": "generic",
+      "says": "portugal_maybe"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/cdbbb4dcd94a44f0.jpg",
-    "read_at": "2026-11-03T08:57:18",
+    "read_at": "2026-11-16T08:28:38",
     "evidence": {
      "board_posted": "2026-10-27"
     }
@@ -1281587,18 +1281584,18 @@
    "url": "https://www.comeet.com/jobs/earnix/93.00B/digital-designer/A1.470",
    "workplace": "on_site",
    "verdict": {
-    "role": "unclear",
+    "role": "no",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a list of Earnix jobs, not a single posting, and no Digital Designer role appears in it.",
-     "the page says: \"Come Work With Us\""
+     "the page does not say where · Digital Designer role is mostly brand, marketing and graphic work (campaigns, social, motion, events), and the page states no location or remote policy.",
+     "the page says: \"US ID: P0231\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "Digital Designer",
      "company": "Earnix",
@@ -1281607,25 +1281604,25 @@
      "onsite_days": null,
      "countries": [],
      "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
+     "salary": "$110,000-130,000",
+     "years_xp": "5+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "employer",
-    "read_url": "https://www.comeet.com/jobs/earnix/93.00B",
-    "reason": "The page is a list of Earnix jobs, not a single posting, and no Digital Designer role appears in it.",
-    "open": "unreadable",
+    "read_url": "https://www.comeet.com/jobs/earnix/93.00B/digital-designer/A1.470",
+    "reason": "the page does not say where · Digital Designer role is mostly brand, marketing and graphic work (campaigns, social, motion, events), and the page states no location or remote policy.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
+    "quote": "US ID: P0231",
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/69b61c581463480b.jpg",
-    "read_at": "2026-11-03T09:09:54",
+    "read_at": "2026-11-16T08:29:03",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1304988,47 +1304985,31 @@
    "url": "https://apply.workable.com/marathon-talent/j/E074ADC351/",
    "workplace": "Hybrid",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Product designer",
-     "company": "Marathon Talent",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "language": "English",
-     "posted": null
-    },
-    "inferred": [
-     "posted_by guessed as agency from the company name 'Marathon Talent' in the pool listing, not read from the page",
-     "same_job set to yes because the page shows no conflicting title or company"
-    ],
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/marathon-talent/j/E074ADC351/",
-    "reason": "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b3f5162eb3fc4d8e.jpg",
-    "read_at": "2026-11-03T08:57:18",
+    "read_at": "2026-11-16T08:28:38",
     "evidence": {
      "board_posted": "2026-10-27"
     }
@@ -1305052,13 +1305033,14 @@
    "url": "https://apply.workable.com/pavago/j/598C2C50BF/",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error, not a job posting, so nothing about the job can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Role is a product designer job, but the stated locations are Latin American countries that do not include Portugal.",
+     "Portugal OUT · under the title: \"Peru\"",
+     "Portugal OUT · body: \"Location: Brazil, Colombia, Argentina, Mexico\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1305067,33 +1305049,55 @@
     "fields": {
      "role": "Product Designer - UX/UI & Design Systems (Remote)",
      "company": "Pavago",
-     "seniority": "unstated",
-     "remote": "unstated",
+     "seniority": "mid",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "Brazil",
+      "Colombia",
+      "Argentina",
+      "Mexico",
+      "Peru"
+     ],
+     "portugal_ok": "no",
      "salary": null,
-     "years_xp": null,
+     "years_xp": "2+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "posted_by agency: Pavago says 'one of our clients is hiring'"
+    ],
     "read": "employer",
     "read_url": "https://apply.workable.com/pavago/j/598C2C50BF/",
-    "reason": "The page is a 429 rate-limit error, not a job posting, so nothing about the job can be read.",
-    "open": "unreadable",
+    "reason": "Role is a product designer job, but the stated locations are Latin American countries that do not include Portugal.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Location: Brazil, Colombia, Argentina, Mexico",
+    "signals": [
+     {
+      "quote": "Peru",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: Brazil, Colombia, Argentina, Mexico",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5a225a8e4a874576.jpg",
-    "read_at": "2026-11-03T08:57:18",
+    "read_at": "2026-11-16T08:28:38",
     "evidence": {
      "board_posted": "2026-10-27"
-    }
+    },
+    "hiring_for": null
    }
   },
   {
@@ -1305113,45 +1305117,32 @@
    "url": "https://apply.workable.com/burendo/j/C9802B8D4E/",
    "workplace": "Hybrid",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
+    "role": null,
+    "place": null,
+    "lane": "closed",
     "cut": false,
     "why": [
-     "The page is a Workable 429 rate-limit error with no job description, so nothing about the posting can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "the employer says it is closed",
+     "the page says: \"the employer's board no longer has this posting: its link opens the list of open jobs\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Senior UX Designer",
-     "company": "Burendo",
-     "seniority": "senior",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
-    "read_url": "https://apply.workable.com/burendo/j/C9802B8D4E/",
-    "reason": "The page is a Workable 429 rate-limit error with no job description, so nothing about the posting can be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "read_url": "https://apply.workable.com/burendo/?not_found=true",
+    "reason": "the employer says it is closed",
+    "open": "no",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/66c707971d08411e.jpg",
-    "read_at": "2026-11-03T08:57:18",
+    "read_at": "2026-11-16T08:28:47",
     "evidence": {
      "board_posted": "2026-10-27"
     }
@@ -1306628,45 +1306619,31 @@
    "url": "https://apply.workable.com/raydar/j/9A16FCF847/",
    "workplace": "On-site",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Workable 429 error with no job description, so the posting cannot be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Product Designer (UI/UX)",
-     "company": "Raydar",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/raydar/j/9A16FCF847/",
-    "reason": "The page is a Workable 429 error with no job description, so the posting cannot be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b239104170f544ce.jpg",
-    "read_at": "2026-11-03T08:57:18",
+    "read_at": "2026-11-16T08:28:38",
     "evidence": {
      "board_posted": "2026-10-26"
     }
@@ -1307041,28 +1307018,30 @@
    "url": "https://apply.workable.com/koru/j/065A1572C5",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Design role labelled Remote with India as the only location tag; the page doesn't say whether remote work is open outside India.",
+     "Portugal OUT · under the title: \"India\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
-     "role": "UI/UX Designer",
+     "role": "UI/UX Designer (DES-1-102026)",
      "company": "Koru UX Design",
-     "seniority": "unstated",
-     "remote": "unstated",
+     "seniority": "mid",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "India"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
-     "years_xp": null,
+     "years_xp": "2-5 years",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -1307070,16 +1307049,23 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/koru/j/065A1572C5",
-    "reason": "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
+    "reason": "Design role labelled Remote with India as the only location tag; the page doesn't say whether remote work is open outside India.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "RemoteDesignFull timeDES-1-102026 India",
+    "signals": [
+     {
+      "quote": "India",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/12b9c024a6424cb4.jpg",
-    "read_at": "2026-11-03T08:57:18",
+    "read_at": "2026-11-16T08:28:38",
     "evidence": {
      "board_posted": "2026-10-26"
     }
@@ -1309746,27 +1309732,30 @@
    "url": "https://apply.workable.com/nitrogenwealth/j/49F64DA7ED/",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Remote product design role with 'United States' as the location and applicants welcomed across US time zones, though the team includes engineers in Poland, so Portugal eligibility is ambiguous.",
+     "Portugal OUT · under the title: \"United States\"",
+     "Portugal OUT · body: \"We're a fully remote team spanning Poland to California, and we welcome applicants across time zones in the US.\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "Senior Product Designer",
      "company": "Nitrogen",
      "seniority": "senior",
-     "remote": "unstated",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "United States"
+     ],
      "portugal_ok": "unclear",
-     "salary": null,
+     "salary": "$130k-$140k + annual bonus target",
      "years_xp": null,
      "reports_to": null,
      "language": "English",
@@ -1309775,16 +1309764,29 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/nitrogenwealth/j/49F64DA7ED/",
-    "reason": "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
+    "reason": "Remote product design role with 'United States' as the location and applicants welcomed across US time zones, though the team includes engineers in Poland, so Portugal eligibility is ambiguous.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "We're a fully remote team spanning Poland to California, and we welcome applicants across time zones in the US.",
+    "signals": [
+     {
+      "quote": "United States",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We're a fully remote team spanning Poland to California, and we welcome applicants across time zones in the US.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ad60317b57664274.jpg",
-    "read_at": "2026-11-03T08:57:35",
+    "read_at": "2026-11-16T08:28:38",
     "evidence": {
      "board_posted": "2026-10-23"
     }
@@ -1309807,45 +1309809,31 @@
    "url": "https://apply.workable.com/marathon-talent/j/D79FDE9A9B/",
    "workplace": "On-site",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Workable 429 error with no job content, so the posting cannot be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Product Designer Senior Advanced",
-     "company": "Marathon Talent",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/marathon-talent/j/D79FDE9A9B/",
-    "reason": "The page is a Workable 429 error with no job content, so the posting cannot be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/3c1c8ad96fb34081.jpg",
-    "read_at": "2026-11-03T08:57:47",
+    "read_at": "2026-11-16T08:28:38",
     "evidence": {
      "board_posted": "2026-10-23"
     }
@@ -1309868,45 +1309856,31 @@
    "url": "https://apply.workable.com/innovaccer-analytics/j/7EC6D4D5E4/",
    "workplace": "On-site",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error with no job description, so the posting cannot be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Senior Manager- Product Designer",
-     "company": "Innovaccer",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/innovaccer-analytics/j/7EC6D4D5E4/",
-    "reason": "The page is a 429 rate-limit error with no job description, so the posting cannot be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e631e564a6154326.jpg",
-    "read_at": "2026-11-03T08:58:08",
+    "read_at": "2026-11-16T08:28:41",
     "evidence": {
      "board_posted": "2026-10-23"
     }
@@ -1312723,45 +1312697,31 @@
    "url": "https://apply.workable.com/mylo-btech/j/9E4B1BD09A/",
    "workplace": "Hybrid",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Senior Product Designer",
-     "company": "Mylo",
-     "seniority": "senior",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/mylo-btech/j/9E4B1BD09A/",
-    "reason": "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/10f71dfd1bd64987.jpg",
-    "read_at": "2026-11-03T09:04:48",
+    "read_at": "2026-11-16T08:28:48",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1313813,14 +1313773,14 @@
    "url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
+    "role": "yes",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only the careers site header and footer with no job description, so it is an empty shell and the posting cannot be read.",
+     "The page shows only site navigation and the company address, with no job description, so the posting cannot be read and place is unclear.",
      "the page says: \"45335 Vintage Park Plaza, Sterling, VA 20166\"",
-     "the page says: \"Help Us Help Others\""
+     "the page says: \"Search Jobs\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1313842,8 +1313802,8 @@
     },
     "inferred": [],
     "read": "employer",
-    "read_url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job?mobile=false&width=1220&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=60",
-    "reason": "The page shows only the careers site header and footer with no job description, so it is an empty shell and the posting cannot be read.",
+    "read_url": "https://careers-reisystems.icims.com/jobs/3526/senior-ui-ux-designer/job",
+    "reason": "the page would not open on two runs · The page shows only site navigation and the company address, with no job description, so the posting cannot be read and place is unclear.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1313852,7 +1313812,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/d6c3e331def64dea.jpg",
-    "read_at": "2026-11-03T09:10:33",
+    "read_at": "2026-11-16T08:29:12",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1314604,10 +1314564,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation and footer with no job posting content; the job description did not load.",
+     "The page shows only site navigation and footer for a careers page, with no job description, so it is not a readable single posting.",
      "the page says: \"Join the Team - Careers - Nextiva\""
     ],
     "judged": true,
@@ -1314628,13 +1314588,10 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [
-     "same_job set to no because the page contains no posting for the listed role, only a generic careers shell",
-     "language assumed English from navigation text"
-    ],
+    "inferred": [],
     "read": "board",
     "read_url": "https://www.nextiva.com/company/careers-listing?gh_jid=8888979002",
-    "reason": "The page shows only site navigation and footer with no job posting content; the job description did not load.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and footer for a careers page, with no job description, so it is not a readable single posting.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1314643,7 +1314600,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/97acf866f94646c2.jpg",
-    "read_at": "2026-11-03T09:11:35",
+    "read_at": "2026-11-16T08:29:47",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1314666,13 +1314623,13 @@
    "url": "https://apply.workable.com/joinmakropro/j/ACE826F90C/",
    "workplace": "Hybrid",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Hybrid product design role based in Bangkok, Thailand with no remote option, so it cannot be done from Portugal.",
+     "Portugal OUT · under the title: \"Bangkok, Bangkok, Thailand\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1314682,29 +1314639,40 @@
      "role": "Senior Product Designer (UI/UX) - CDC",
      "company": "CP Axtra",
      "seniority": "senior",
-     "remote": "unstated",
+     "remote": "hybrid",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "Thailand"
+     ],
+     "portugal_ok": "no",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "Hybrid in Bangkok implies office days in Bangkok, though the number of days is not stated."
+    ],
     "read": "employer",
     "read_url": "https://apply.workable.com/joinmakropro/j/ACE826F90C/",
-    "reason": "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
+    "reason": "Hybrid product design role based in Bangkok, Thailand with no remote option, so it cannot be done from Portugal.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Hybrid; Bangkok, Bangkok, Thailand",
+    "signals": [
+     {
+      "quote": "Bangkok, Bangkok, Thailand",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/7a27ebbf1cbe48aa.jpg",
-    "read_at": "2026-11-03T09:11:34",
+    "read_at": "2026-11-16T08:29:00",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1314945,45 +1314913,32 @@
    "url": "https://apply.workable.com/keywords-intl1/j/98EDD0725E/",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
+    "role": null,
+    "place": null,
+    "lane": "closed",
     "cut": false,
     "why": [
-     "The page is a 429 rate-limit error with no job description, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "the employer says it is closed",
+     "the page says: \"the employer's hiring system no longer has this posting\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "UI Artist",
-     "company": "Keywords Studios",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
-    "read_url": "https://apply.workable.com/keywords-intl1/j/98EDD0725E/",
-    "reason": "The page is a 429 rate-limit error with no job description, so nothing about the role or place can be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "read_url": "https://apply.workable.com/keywords-intl1/?not_found=true",
+    "reason": "the employer says it is closed",
+    "open": "no",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/35eb392f8aa9453f.jpg",
-    "read_at": "2026-11-03T09:11:46",
+    "read_at": "2026-11-16T08:29:14",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1315007,45 +1314962,54 @@
    "url": "https://apply.workable.com/ecp-123/j/64870E4F8C/",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "The role is a open product design lead marked Remote, but the only locations given are three US cities with no statement on whether non-US candidates are eligible.",
+     "Portugal OUT · under the title: \"Milwaukee, Wisconsin, United States Chicago, Illinois, United States Madison, Wisconsin, United States\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "Lead Product Designer",
      "company": "ECP",
-     "seniority": "unstated",
-     "remote": "unstated",
+     "seniority": "lead",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "United States"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
-     "years_xp": null,
-     "reports_to": null,
+     "years_xp": "7+",
+     "reports_to": "VP of Product",
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/ecp-123/j/64870E4F8C/",
-    "reason": "The page is a 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
+    "reason": "The role is a open product design lead marked Remote, but the only locations given are three US cities with no statement on whether non-US candidates are eligible.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Remote Full time — Milwaukee, Wisconsin, United States / Chicago, Illinois, United States / Madison, Wisconsin, United States",
+    "signals": [
+     {
+      "quote": "Milwaukee, Wisconsin, United States Chicago, Illinois, United States Madison, Wisconsin, United States",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/46e3172d88354163.jpg",
-    "read_at": "2026-11-03T09:11:51",
+    "read_at": "2026-11-16T08:29:09",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1316449,13 +1316413,14 @@
    "url": "https://apply.workable.com/critical-manufacturing/j/2A56EE9673/",
    "workplace": "Hybrid",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
+    "role": "yes",
+    "place": "pt_onsite",
+    "lane": "portugal",
     "cut": false,
     "why": [
-     "The page is a 429 error with no job description, so the posting cannot be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Design lead role (UI/UX Lead) that is hybrid at an office in Maia, Portugal.",
+     "Portugal in · under the title: \"Maia, Porto District, Portugal\"",
+     "Portugal in · under the title: \"Hybrid\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1316465,32 +1316430,71 @@
      "role": "UI/UX Lead",
      "company": "Critical Manufacturing",
      "seniority": "lead",
-     "remote": "unstated",
+     "remote": "hybrid",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
+     "countries": [
+      "Portugal"
+     ],
+     "portugal_ok": "yes",
      "salary": null,
-     "years_xp": null,
+     "years_xp": "5+ years UI/UX product design; 2+ years managing design teams",
      "reports_to": null,
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "seniority: lead (from title)"
+    ],
     "read": "employer",
-    "read_url": "https://apply.workable.com/critical-manufacturing/j/2A56EE9673/",
-    "reason": "The page is a 429 error with no job description, so the posting cannot be read.",
-    "open": "unreadable",
+    "read_url": "https://careers.criticalmanufacturing.com/_/j/2A56EE9673",
+    "reason": "Design lead role (UI/UX Lead) that is hybrid at an office in Maia, Portugal.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Hybrid ... Maia, Porto District, Portugal",
+    "signals": [
+     {
+      "quote": "Maia, Porto District, Portugal",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Hybrid",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_in"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/0aeee9646b5048db.jpg",
-    "read_at": "2026-11-03T09:16:25",
+    "read_at": "2026-11-16T08:29:19",
     "evidence": {
      "board_posted": "2026-10-20"
-    }
+    },
+    "copies": [
+     {
+      "id": "ebda20b97b064b4e",
+      "url": "https://jobs.workable.com/view/929dQaB1fxKYn6V8SGsLUt/hybrid-ui%2Fux-lead-in-maia-at-critical-manufacturing",
+      "read_url": "https://jobs.workable.com/view/929dQaB1fxKYn6V8SGsLUt/hybrid-ui%2Fux-lead-in-maia-at-critical-manufacturing",
+      "source": "workablesearch",
+      "posted": "2026-10-20",
+      "location": "Maia, Porto District, Portugal",
+      "lane": "portugal",
+      "read": "employer"
+     },
+     {
+      "id": "692cc3ef53494acf",
+      "url": "https://www.itjobs.pt/oferta/518391/ui-ux-lead",
+      "read_url": "https://www.itjobs.pt/oferta/518391/ui-ux-lead",
+      "source": "itjobs",
+      "posted": "2026-10-21",
+      "location": "Porto",
+      "lane": "portugal",
+      "read": "board"
+     }
+    ]
    }
   },
   {
@@ -1316510,44 +1316514,31 @@
    "url": "https://apply.workable.com/99brightminds/j/6F8C31DF60/",
    "workplace": "On-site",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Workable 429 rate-limit error with no job description, so nothing about the posting can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Product (UX/UI) Designer",
-     "company": "99BrightMinds",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/99brightminds/j/6F8C31DF60/",
-    "reason": "The page is a Workable 429 rate-limit error with no job description, so nothing about the posting can be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/6951230398704f31.jpg",
-    "read_at": "2026-11-03T09:16:25",
+    "read_at": "2026-11-16T08:29:19",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1316573,13 +1316564,14 @@
    "url": "https://apply.workable.com/mlabs/j/34197BDFC1",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
+    "role": "yes",
+    "place": "remote",
+    "lane": "open",
     "cut": false,
     "why": [
-     "The page is a 429 error with no job description, so the posting cannot be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Remote product design role for an MLabs client, with Portugal listed among locations; time zone range is hours-based and Portugal (UTC+0/+1) falls within it.",
+     "Portugal in · under the title: \"Netherlands Germany Spain Portugal Poland\"",
+     "Portugal OUT · opening paragraph: \"Location: UK, central Europe, and Latin America\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1316589,32 +1316581,109 @@
      "role": "Product Designer",
      "company": "MLabs",
      "seniority": "unstated",
-     "remote": "unstated",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
+     "countries": [
+      "Netherlands",
+      "Germany",
+      "Spain",
+      "Portugal",
+      "Poland",
+      "UK",
+      "central Europe",
+      "Latin America"
+     ],
+     "portugal_ok": "yes",
+     "salary": "Competitive Compensation",
+     "years_xp": "3+ years",
+     "reports_to": "Frontend Lead",
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "Agency status inferred from 'Our client is seeking' wording; client company is not named."
+    ],
     "read": "employer",
     "read_url": "https://apply.workable.com/mlabs/j/34197BDFC1",
-    "reason": "The page is a 429 error with no job description, so the posting cannot be read.",
-    "open": "unreadable",
+    "reason": "Remote product design role for an MLabs client, with Portugal listed among locations; time zone range is hours-based and Portugal (UTC+0/+1) falls within it.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Remote | Full-time ... Netherlands Germany Spain Portugal Poland ... 100% remote and open to candidates based between US Central Time (UTC−6) and Central European Time (UTC+1).",
+    "signals": [
+     {
+      "quote": "Netherlands Germany Spain Portugal Poland",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_in"
+     },
+     {
+      "quote": "Location: UK, central Europe, and Latin America",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_maybe"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/ddb5240f97b74f86.jpg",
-    "read_at": "2026-11-03T09:12:08",
+    "read_at": "2026-11-16T08:29:09",
     "evidence": {
      "board_posted": "2026-10-21"
-    }
+    },
+    "hiring_for": null,
+    "copies": [
+     {
+      "id": "940b10f91c7e455f",
+      "url": "https://jobs.workable.com/view/b8ej8MYX4mUcZiv73L1kU3/remote-product-designer-in-portugal-at-mlabs",
+      "read_url": "https://jobs.workable.com/view/b8ej8MYX4mUcZiv73L1kU3/remote-product-designer-in-portugal-at-mlabs",
+      "source": "workablesearch",
+      "posted": "2026-10-20",
+      "location": "Portugal",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "110e3bf7811e4216",
+      "url": "https://jobs.workable.com/view/vz4jXTXKgr2Y8hTAVVawsZ/remote-product-designer-in-germany-at-mlabs",
+      "read_url": "https://jobs.workable.com/view/vz4jXTXKgr2Y8hTAVVawsZ/remote-product-designer-in-germany-at-mlabs",
+      "source": "workablesearch",
+      "posted": "2026-10-20",
+      "location": "Germany",
+      "lane": "open",
+      "read": "employer"
+     },
+     {
+      "id": "f97caae7c93546a3",
+      "url": "https://jobs.workable.com/view/qwN1GeTcELCZiCDL9PABoA/remote-product-designer-in-poland-at-mlabs",
+      "read_url": "https://jobs.workable.com/view/qwN1GeTcELCZiCDL9PABoA/remote-product-designer-in-poland-at-mlabs",
+      "source": "workablesearch",
+      "posted": "2026-10-20",
+      "location": "Poland",
+      "lane": "unsure",
+      "read": "employer"
+     },
+     {
+      "id": "9f9d8d85757a4a3b",
+      "url": "https://jobs.workable.com/view/xfJTrDGhG6nuA84dqGo4w6/remote-product-designer-in-netherlands-at-mlabs",
+      "read_url": "https://jobs.workable.com/view/xfJTrDGhG6nuA84dqGo4w6/remote-product-designer-in-netherlands-at-mlabs",
+      "source": "workablesearch",
+      "posted": "2026-10-20",
+      "location": "Netherlands",
+      "lane": "unsure",
+      "read": "employer"
+     },
+     {
+      "id": "62ef2a38c50b4dbf",
+      "url": "https://jobs.workable.com/view/d2CREJv3br49SyphsURZaj/remote-product-designer-in-spain-at-mlabs",
+      "read_url": "https://jobs.workable.com/view/d2CREJv3br49SyphsURZaj/remote-product-designer-in-spain-at-mlabs",
+      "source": "workablesearch",
+      "posted": "2026-10-20",
+      "location": "Spain",
+      "lane": "unsure",
+      "read": "employer"
+     }
+    ]
    }
   },
   {
@@ -1316634,45 +1316703,32 @@
    "url": "https://apply.workable.com/first-focus/j/837BA1E13C/",
    "workplace": "Hybrid",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
+    "role": null,
+    "place": null,
+    "lane": "closed",
     "cut": false,
     "why": [
-     "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "the employer says it is closed",
+     "the page says: \"the employer's hiring system no longer has this posting\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Senior UX/UI Designer",
-     "company": "First Focus",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
-    "read_url": "https://apply.workable.com/first-focus/j/837BA1E13C/",
-    "reason": "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "read_url": "https://apply.workable.com/first-focus/?not_found=true",
+    "reason": "the employer says it is closed",
+    "open": "no",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1ddcfc853f7c4ce3.jpg",
-    "read_at": "2026-11-03T09:16:25",
+    "read_at": "2026-11-16T08:29:28",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1317311,10 +1317367,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only site navigation and footer with no job description, so it is not a readable single posting.",
+     "The page shows only site navigation and footer with no job description, so the posting cannot be read.",
      "the page says: \"Skip Branding Explore Us PRODUCTS Amplify Platform B2B Integration\""
     ],
     "judged": true,
@@ -1317323,7 +1317379,7 @@
     "confidence": "high",
     "fields": {
      "role": "Senior User Exp Design Engineer I",
-     "company": "Axway (74Software)",
+     "company": "74Software",
      "seniority": "senior",
      "remote": "unstated",
      "onsite_days": null,
@@ -1317336,11 +1317392,12 @@
      "posted": null
     },
     "inferred": [
-     "The page title mentions Noida, India, but the visible text has no description, so no place signal was recorded."
+     "The URL and page title suggest a Senior User Exp Design Engineer I role in Noida, India, but no posting text is visible.",
+     "same_job set to yes because the URL slug and title are a UX design role at Axway/74Software, consistent with the pool listing."
     ],
     "read": "employer",
     "read_url": "https://careers-axway.icims.com/jobs/8948/senior-user-exp-design-engineer-i/job",
-    "reason": "The page shows only site navigation and footer with no job description, so it is not a readable single posting.",
+    "reason": "the page would not open on two runs · The page shows only site navigation and footer with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1317349,7 +1317406,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/fb4f9ed37a0349a3.jpg",
-    "read_at": "2026-11-03T09:18:51",
+    "read_at": "2026-11-16T08:29:31",
     "evidence": {
      "board_posted": "2026-10-15"
     }
@@ -1317750,25 +1317807,27 @@
    "url": "https://apply.workable.com/methods/j/1DB5DF0DE0/",
    "workplace": "Hybrid",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "no",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 error with no job content, so the posting cannot be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Content design (writing GOV.UK content) is a content/writing job rather than product, UX or UI design, and place is mixed: UK city tags and 'Hybrid' versus a body saying remote with some UK travel.",
+     "Portugal OUT · under the title: \"Manchester, England, United Kingdom Birmingham, England, United Kingdom Leeds, England, United Kingdom Newcastle upon Tyne, England, United Kingdom\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
+    "confidence": "medium",
     "fields": {
      "role": "Senior Content Designer",
-     "company": "Methods",
+     "company": "Methods Business and Digital Technology",
      "seniority": "senior",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "United Kingdom"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -1317776,19 +1317835,29 @@
      "language": "English",
      "posted": null
     },
-    "inferred": [],
+    "inferred": [
+     "workplace_as_posted taken from body text 'based remotely' despite 'Hybrid' label under title",
+     "role_verdict no because content design is mostly content writing, not product/UX/UI design"
+    ],
     "read": "employer",
     "read_url": "https://apply.workable.com/methods/j/1DB5DF0DE0/",
-    "reason": "The page is a 429 error with no job content, so the posting cannot be read.",
-    "open": "unreadable",
+    "reason": "Content design (writing GOV.UK content) is a content/writing job rather than product, UX or UI design, and place is mixed: UK city tags and 'Hybrid' versus a body saying remote with some UK travel.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "The role will be based remotely, but there may be a need for some UK travel requiring you to stay away from home.",
+    "signals": [
+     {
+      "quote": "Manchester, England, United Kingdom Birmingham, England, United Kingdom Leeds, England, United Kingdom Newcastle upon Tyne, England, United Kingdom",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c8b6f883ef2e4df9.jpg",
-    "read_at": "2026-11-03T09:19:42",
+    "read_at": "2026-11-16T08:29:21",
     "evidence": {
      "board_posted": "2026-10-15"
     }
@@ -1318207,6 +1318276,53 @@
   },
   {
    "active": true,
+   "company": "CodeNinja",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "49934a0590874f8a",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Riyadh, Saudi Arabia",
+   "posted": "2026-10-14",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "UI/UX Specialist",
+   "url": "https://apply.workable.com/codeninjapk/j/C36F4A2BFC/",
+   "workplace": "On-site",
+   "verdict": {
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/codeninjapk/j/C36F4A2BFC/",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/49934a0590874f8a.jpg",
+    "read_at": "2026-11-16T08:29:22",
+    "evidence": {
+     "board_posted": "2026-10-14"
+    }
+   }
+  },
+  {
+   "active": true,
    "company": "Onward Search",
    "first_run": "2026-11-02T20:54:47+00:00",
    "first_seen": "2026-11-02T20:54:47+00:00",
@@ -1318372,6 +1318488,98 @@
     "evidence": {
      "board_posted": "2026-10-13"
     }
+   }
+  },
+  {
+   "active": true,
+   "company": "Raydar",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "477fe4a74f6f43fa",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Remote, United Kingdom; Remote: Europe, Middle East & Africa",
+   "posted": "2026-10-13",
+   "remote": true,
+   "salary": "$200k–$280k",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "Product Design Lead, Design Systems",
+   "url": "https://apply.workable.com/raydar/j/541A840B4A/",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Design systems lead role is open, but remote is limited to candidates based in the US, Canada or UK, which excludes Portugal.",
+     "Portugal OUT · under the title: \"United States United Kingdom Canada\"",
+     "Portugal OUT · body: \"Full-time and remote-friendly for candidates based in the United States, Canada or United Kingdom.\"",
+     "Portugal OUT · body: \"Existing visa transfers, including OPT or H1B transfers, may be considered.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Design Lead, Design Systems",
+     "company": "Raydar",
+     "seniority": "staff",
+     "remote": "remote",
+     "onsite_days": "3 days per week for candidates living near offices",
+     "countries": [
+      "United States",
+      "Canada",
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "$200,000-$280,000 annual base salary, plus equity",
+     "years_xp": "8-20 years",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "posted_by agency inferred from 'Our client' wording; company name Raydar taken from pool/URL, not stated on page",
+     "seniority staff/principal stated; mapped to staff"
+    ],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/raydar/j/541A840B4A/",
+    "reason": "Design systems lead role is open, but remote is limited to candidates based in the US, Canada or UK, which excludes Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "remote-friendly for candidates based in the United States, Canada or United Kingdom.",
+    "signals": [
+     {
+      "quote": "United States United Kingdom Canada",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Full-time and remote-friendly for candidates based in the United States, Canada or United Kingdom.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Existing visa transfers, including OPT or H1B transfers, may be considered.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/477fe4a74f6f43fa.jpg",
+    "read_at": "2026-11-16T08:29:24",
+    "evidence": {
+     "board_posted": "2026-10-13"
+    },
+    "hiring_for": null
    }
   },
   {
@@ -1318757,6 +1318965,270 @@
     "found_by": null,
     "shot": "data/shots/3f6c0595c3ed4a47.jpg",
     "read_at": "2026-11-03T09:31:57",
+    "evidence": {
+     "board_posted": "2026-10-13"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Gotymex",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "d945d00087b54282",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "New York, United States",
+   "posted": "2026-10-13",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "Product Designer - UI and Design System expert - Ho Chi Minh City, Vietnam",
+   "url": "https://apply.workable.com/gotymex/j/E380B4983B/",
+   "workplace": "Hybrid",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "The role is based in Ho Chi Minh City with hybrid office work and requires relocation after an initial remote period.",
+     "Portugal OUT · under the title: \"Hong Kong, Hong Kong, Hong Kong Cotgrave, England, United Kingdom Goslar, Lower Saxony, Germany Bangkok, Bangkok, Thailand New York, New York, United States\"",
+     "Portugal OUT · body: \"This position is based in Ho Chi Minh City.\"",
+     "Portugal OUT · body: \"We are open to initial remote collaboration with a subsequent relocation.\"",
+     "Portugal OUT · body: \"We have a hybrid working model, part in the office, part remote from everywhere.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Product Designer - UI and Design System expert - Ho Chi Minh City, Vietnam",
+     "company": "GoTymeX",
+     "seniority": "lead",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "Vietnam"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "4+",
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/gotymex/j/E380B4983B/",
+    "reason": "The role is based in Ho Chi Minh City with hybrid office work and requires relocation after an initial remote period.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "This position is based in Ho Chi Minh City. We are open to initial remote collaboration with a subsequent relocation.",
+    "signals": [
+     {
+      "quote": "Hong Kong, Hong Kong, Hong Kong Cotgrave, England, United Kingdom Goslar, Lower Saxony, Germany Bangkok, Bangkok, Thailand New York, New York, United States",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "This position is based in Ho Chi Minh City.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We are open to initial remote collaboration with a subsequent relocation.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "We have a hybrid working model, part in the office, part remote from everywhere.",
+      "where": "body",
+      "kind": "generic",
+      "says": "portugal_maybe"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/d945d00087b54282.jpg",
+    "read_at": "2026-11-16T08:29:26",
+    "evidence": {
+     "board_posted": "2026-10-13"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "BoostDraft",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "919f4932c5494ce9",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Remote, Japan; Remote: Asia-Pacific",
+   "posted": "2026-10-13",
+   "remote": true,
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "Head of Design",
+   "url": "https://apply.workable.com/boostdraft/j/0E4CD16D16/",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Head of Design role, fully remote with no required relocation to Japan; the Tokyo tag is only the HQ location. Working hours (flexible 6:00-11:30 / 15:00-22:00 core 11:30-15:00) are presumably in Japan time but are only time-zone details.",
+     "Portugal OUT · under the title: \"Tokyo, Japan\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "medium",
+    "fields": {
+     "role": "Head of Design",
+     "company": "BoostDraft",
+     "seniority": "head",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "Japan"
+     ],
+     "portugal_ok": "unclear",
+     "salary": null,
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [
+     "seniority head from title"
+    ],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/boostdraft/j/0E4CD16D16/",
+    "reason": "Head of Design role, fully remote with no required relocation to Japan; the Tokyo tag is only the HQ location. Working hours (flexible 6:00-11:30 / 15:00-22:00 core 11:30-15:00) are presumably in Japan time but are only time-zone details.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Fully remote... relocation to Japan is not mandatory.",
+    "signals": [
+     {
+      "quote": "Tokyo, Japan",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/919f4932c5494ce9.jpg",
+    "read_at": "2026-11-16T08:29:27",
+    "evidence": {
+     "board_posted": "2026-10-13"
+    }
+   }
+  },
+  {
+   "active": true,
+   "company": "Pawlicy",
+   "first_run": "2026-11-02T20:54:47+00:00",
+   "first_seen": "2026-11-02T20:54:47+00:00",
+   "id": "49562cc3e7154faa",
+   "last_seen": "2026-11-02T20:54:47+00:00",
+   "location": "Remote, United States; Remote: US & Canada",
+   "posted": "2026-10-13",
+   "remote": true,
+   "salary": "$165k–$200k",
+   "source": "uxjobs",
+   "sources": [
+    "uxjobs"
+   ],
+   "title": "Senior Product Designer",
+   "url": "https://apply.workable.com/pawlicy/j/DE48F63B3C/",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Senior product design role is open but requires being based in the USA and US work authorization.",
+     "Portugal OUT · under the title: \"United States\"",
+     "Portugal OUT · opening paragraph: \"Location: Remote, US-based. Full Time.\"",
+     "Portugal OUT · body: \"Legally authorized to work in the United States without sponsorship.\"",
+     "Portugal OUT · body: \"Must be based in the USA.\"",
+     "Portugal OUT · body: \"Remote-first within the United States.\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Senior Product Designer",
+     "company": "Pawlicy",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$165,000 - $200,000",
+     "years_xp": "5+",
+     "reports_to": "Chief Product Officer",
+     "language": "English",
+     "posted": null
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://apply.workable.com/pawlicy/j/DE48F63B3C/",
+    "reason": "Senior product design role is open but requires being based in the USA and US work authorization.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Location: Remote, US-based. Full Time. ... Must be based in the USA.",
+    "signals": [
+     {
+      "quote": "United States",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: Remote, US-based. Full Time.",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Legally authorized to work in the United States without sponsorship.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Must be based in the USA.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Remote-first within the United States.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/49562cc3e7154faa.jpg",
+    "read_at": "2026-11-16T08:29:28",
     "evidence": {
      "board_posted": "2026-10-13"
     }
@@ -1333756,19 +1334228,7 @@
     "read_at": "2026-11-03T09:16:34",
     "evidence": {
      "board_posted": "2026-10-20"
-    },
-    "copies": [
-     {
-      "id": "692cc3ef53494acf",
-      "url": "https://www.itjobs.pt/oferta/518391/ui-ux-lead",
-      "read_url": "https://www.itjobs.pt/oferta/518391/ui-ux-lead",
-      "source": "itjobs",
-      "posted": "2026-10-21",
-      "location": "Porto",
-      "lane": "portugal",
-      "read": "board"
-     }
-    ]
+    }
    }
   },
   {
@@ -1335117,17 +1335577,17 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a company career landing page that lists one job title with no description, not a single job posting; the only place line is Malmö, Hybrid.",
-     "Portugal OUT · under the title: \"Products Solutions · Malmö · Hybrid\"",
-     "the page says: \"Join the team ... Senior UX/UI designer Products Solutions · Malmö · Hybrid All jobs\""
+     "The page is the company career landing page listing two jobs, not a single job posting with a description.",
+     "Portugal OUT · body: \"Products Solutions · Malmö · Hybrid\"",
+     "the page says: \"Senior software engineer (AI-Native) Products Solutions · Malmö · Onsite Senior UX/UI designer Products Solutions · Malmö · Hybrid All jobs\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Senior UX/UI designer",
      "company": "Curamet",
@@ -1335137,7 +1335597,7 @@
      "countries": [
       "Sweden"
      ],
-     "portugal_ok": "unclear",
+     "portugal_ok": "no",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
@@ -1335145,11 +1335605,11 @@
      "posted": null
     },
     "inferred": [
-     "seniority from the title"
+     "workplace hybrid in Malmö taken from the job list entry, not a posting description"
     ],
     "read": "board",
     "read_url": "https://career.curamet.se/",
-    "reason": "The page is a company career landing page that lists one job title with no description, not a single job posting; the only place line is Malmö, Hybrid.",
+    "reason": "the page would not open on two runs · The page is the company career landing page listing two jobs, not a single job posting with a description.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1335157,7 +1335617,7 @@
     "signals": [
      {
       "quote": "Products Solutions · Malmö · Hybrid",
-      "where": "under the title",
+      "where": "body",
       "kind": "explicit",
       "says": "portugal_out"
      }
@@ -1335165,7 +1335625,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/1cced7ae68dc4578.jpg",
-    "read_at": "2026-11-03T08:58:06",
+    "read_at": "2026-11-16T08:28:51",
     "evidence": {
      "board_posted": "2026-10-23"
     }
@@ -1335960,24 +1336420,27 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
+    "lane": "closed",
     "cut": false,
     "why": [
-     "The page is only an application start screen with no job description, so the posting cannot be read as a job posting.",
-     "Portugal OUT · footer or small print: \"Stockholm---Solna\"",
-     "the page says: \"Start Your Application\""
+     "The page states the position is no longer open for applications, so the verdicts are left unclear.",
+     "Portugal OUT · under the title: \"Solna, Sweden\"",
+     "Portugal OUT · body: \"För befattningar där Saab har krav på säkerhetsklassinplacering kan, i förekommande fall, medföra krav på visst medborgarskap.\"",
+     "the page says: \"This position is no longer open for applications\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Systemingenjör inom UX-Design",
-     "company": "SAAB Aktiebolag",
+     "company": "Saab",
      "seniority": "unstated",
-     "remote": "unstated",
+     "remote": "onsite",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "Sweden"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -1335986,29 +1336449,35 @@
      "posted": null
     },
     "inferred": [
-     "Location Stockholm/Solna taken from the page address, not the page text",
-     "Company Saab taken from the pool listing",
-     "Language inferred from the Swedish title"
+     "workplace_as_posted is onsite because only a city and country are named with no mention of remote",
+     "seniority is unstated",
+     "portugal_ok is unclear because the posting is closed"
     ],
     "read": "board",
-    "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46514/apply?source=arbetsformedlingen_v2",
-    "reason": "The page is only an application start screen with no job description, so the posting cannot be read as a job posting.",
-    "open": "unreadable",
+    "read_url": "https://www.aplitrak.com/?adid=dC55ZGVmam9yZC4zOTcxNS4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ",
+    "reason": "The page states the position is no longer open for applications, so the verdicts are left unclear.",
+    "open": "no",
     "language_ok": false,
-    "language": "Swedish (title only; no description shown)",
-    "quote": "Stockholm---Solna",
+    "language": "Swedish",
+    "quote": "Systemingenjör inom UX-Design (REQ_46514) Solna, Sweden",
     "signals": [
      {
-      "quote": "Stockholm---Solna",
-      "where": "footer or small print",
+      "quote": "Solna, Sweden",
+      "where": "under the title",
       "kind": "tag",
       "says": "portugal_out"
+     },
+     {
+      "quote": "För befattningar där Saab har krav på säkerhetsklassinplacering kan, i förekommande fall, medföra krav på visst medborgarskap.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_maybe"
      }
     ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9d046d2994fb4b0f.jpg",
-    "read_at": "2026-11-03T09:05:08",
+    "read_at": "2026-11-16T08:28:51",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1336033,46 +1336502,63 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "unsure",
+    "lane": "closed",
     "cut": false,
     "why": [
-     "The page is only an application-start shell with a title and no description, so open status, role and place cannot be judged.",
-     "the page says: \"Systemingenjör inom UX-Design Autofill with Resume Apply Manually Use My Last Application\""
+     "The page says the position is no longer open, and the description is in Swedish.",
+     "Portugal OUT · under the title: \"Systemingenjör inom UX-Design (REQ_46515) Solna, Sweden\"",
+     "Portugal OUT · body: \"För befattningar där Saab har krav på säkerhetsklassinplacering kan, i förekommande fall, medföra krav på visst medborgarskap.\"",
+     "the page says: \"This position is no longer open for applications\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "low",
+    "confidence": "high",
     "fields": {
      "role": "Systemingenjör inom UX-Design",
-     "company": "SAAB Aktiebolag",
+     "company": "Saab",
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "Sweden"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
      "reports_to": null,
-     "language": "unknown",
+     "language": "Swedish",
      "posted": null
     },
     "inferred": [
-     "The URL path says Stockholm---Solna, but the page text itself gives no location, so it is not listed as a place signal.",
-     "language_ok is set true because no description exists to be in another language; the Swedish title alone is not the description."
+     "seniority not stated",
+     "workplace_as_posted inferred from city with no remote mention"
     ],
     "read": "board",
-    "read_url": "https://saabgroup.wd116.myworkdayjobs.com/Saab_careers/job/Stockholm---Solna/Systemingenjr-inom-UX-Design_REQ_46515/apply?source=arbetsformedlingen_v2",
-    "reason": "The page is only an application-start shell with a title and no description, so open status, role and place cannot be judged.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "unknown (no description; title in Swedish)",
-    "quote": "",
-    "signals": [],
+    "read_url": "https://www.aplitrak.com/?adid=dC55ZGVmam9yZC40Mjg1NS4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ",
+    "reason": "The page says the position is no longer open, and the description is in Swedish.",
+    "open": "no",
+    "language_ok": false,
+    "language": "Swedish",
+    "quote": "Systemingenjör inom UX-Design (REQ_46515) Solna, Sweden",
+    "signals": [
+     {
+      "quote": "Systemingenjör inom UX-Design (REQ_46515) Solna, Sweden",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "För befattningar där Saab har krav på säkerhetsklassinplacering kan, i förekommande fall, medföra krav på visst medborgarskap.",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_maybe"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/265dd60573ed4b8b.jpg",
-    "read_at": "2026-11-03T09:05:00",
+    "read_at": "2026-11-16T08:28:52",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1342126,35 +1342612,76 @@
    "url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
    "workplace": "On-site",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d22eb2ae3cc 46.102.17.26 PT\""
+     "Head of UX/PX design leadership role, but hybrid based in Nottingham, UK with no remote option offered.",
+     "Portugal OUT · under the title: \"Nottingham, Nottinghamshire\"",
+     "Portugal OUT · opening paragraph: \"Hybrid | Nottingham | £90,000 + Excellent Benefits\"",
+     "Portugal OUT · body: \"Hybrid working from Nottingham\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
-    "inferred": [],
+    "confidence": "high",
+    "fields": {
+     "role": "Head of UX / PX",
+     "company": "Experis",
+     "seniority": "head",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£85,000 - £90,000 per annum bonus + bens",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": "23rd Oct"
+    },
+    "inferred": [
+     "seniority inferred as head from title",
+     "onsite_days not stated",
+     "posted_by agency inferred from Experis recruiting for an unnamed 'innovative software organisation'"
+    ],
     "read": "board",
-    "read_url": "https://www.cv-library.co.uk/job/225759998/Head-of-UX-PX?s=106923",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "read_url": "https://www.cv-library.co.uk/job/225759998/head-of-ux-px?s=106923",
+    "reason": "Head of UX/PX design leadership role, but hybrid based in Nottingham, UK with no remote option offered.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
+    "signals": [
+     {
+      "quote": "Nottingham, Nottinghamshire",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid | Nottingham | £90,000 + Excellent Benefits",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid working from Nottingham",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/319366fb7ead4696.jpg",
-    "read_at": "2026-11-03T08:58:27",
+    "read_at": "2026-11-16T08:28:58",
     "evidence": {
      "board_posted": "2026-10-23"
-    }
+    },
+    "hiring_for": null
    }
   },
   {
@@ -1342176,35 +1342703,75 @@
    "url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
    "workplace": "On-site",
    "verdict": {
-    "role": null,
-    "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "the page could not be read in the browser",
-     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a2d4de8b1e3cc 46.102.17.26 PT\""
+     "Design lead role is hybrid based in Nottingham, UK, with no remote option, so it cannot be done from Portugal.",
+     "Portugal OUT · under the title: \"Nottingham, Nottinghamshire\"",
+     "Portugal OUT · opening paragraph: \"Hybrid - Nottingham | £90,000 + Excellent Benefits\"",
+     "Portugal OUT · body: \"Hybrid working based in Nottingham\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": null,
-    "fields": {},
-    "inferred": [],
+    "confidence": "high",
+    "fields": {
+     "role": "UX / PX Design Lead",
+     "company": "Experis",
+     "seniority": "lead",
+     "remote": "hybrid",
+     "onsite_days": null,
+     "countries": [
+      "United Kingdom"
+     ],
+     "portugal_ok": "no",
+     "salary": "£85,000 - £90,000 per annum bonus + bens",
+     "years_xp": null,
+     "reports_to": null,
+     "language": "English",
+     "posted": "23rd Oct"
+    },
+    "inferred": [
+     "Seniority taken as lead from the title.",
+     "Posted by agency: Experis (ManpowerGroup) is recruiting for an unnamed software organisation."
+    ],
     "read": "board",
-    "read_url": "https://www.cv-library.co.uk/job/225759935/UX-PX-Design-Lead?s=106923",
-    "reason": "the page could not be read in the browser",
-    "open": "unreadable",
-    "language_ok": null,
-    "language": null,
-    "quote": null,
-    "signals": [],
+    "read_url": "https://www.cv-library.co.uk/job/225759935/ux-px-design-lead?s=106923",
+    "reason": "Design lead role is hybrid based in Nottingham, UK, with no remote option, so it cannot be done from Portugal.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
+    "signals": [
+     {
+      "quote": "Nottingham, Nottinghamshire",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid - Nottingham | £90,000 + Excellent Benefits",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Hybrid working based in Nottingham",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/5fd0b73f67874d50.jpg",
-    "read_at": "2026-11-03T08:58:34",
+    "read_at": "2026-11-16T08:28:57",
     "evidence": {
      "board_posted": "2026-10-23"
-    }
+    },
+    "hiring_for": null
    }
   },
   {
@@ -1342227,11 +1342794,11 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
      "the page could not be read in the browser",
-     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a54a47eb9de8750d 46.102.17.26 PT\""
+     "the page says: \"Blocked You triggered a security action If you believe this to be in error, please contact support@cv-library.co.uk a5b5208ebc48489e 46.102.17.26 PT\""
     ],
     "judged": true,
     "text": "job board's copy",
@@ -1342241,7 +1342808,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://www.cv-library.co.uk/job/225746134/UX-UI-Designer?s=106923",
-    "reason": "the page could not be read in the browser",
+    "reason": "the page would not open on two runs · the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1342250,7 +1342817,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/a6d7e3a9972040a7.jpg",
-    "read_at": "2026-11-03T09:16:44",
+    "read_at": "2026-11-16T08:29:28",
     "evidence": {
      "board_posted": "2026-10-20"
     }
@@ -1343434,44 +1344001,68 @@
    "url": "https://apply.workable.com/spate/j/50E3E4BED9",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You've sent too many requests too fast. Please try again later.\""
+     "Product design role is open and remote, but requires being based in US Central or Eastern time zones, and the title and location say US.",
+     "Portugal OUT · under the title: \"Product Designer (US - Part-time, Contract)\"",
+     "Portugal OUT · under the title: \"RemoteContract United States\"",
+     "Portugal OUT · body: \"The role is fully remote and part-time, about 20 hours a week. You’ll need to be based in US Central Time (UTC−6) or US Eastern Time (UTC-5).\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
     "confidence": "high",
     "fields": {
-     "role": "Product Designer – Part-time, Contract",
-     "company": "SPATE",
+     "role": "Product Designer (US - Part-time, Contract)",
+     "company": "Spate",
      "seniority": "unstated",
-     "remote": "unstated",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "$75/hour, about 20 hours a week, independent contractor",
+     "years_xp": "2+ years of product design experience",
+     "reports_to": null,
      "language": "English",
      "posted": null
     },
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/spate/j/50E3E4BED9",
-    "reason": "The page is a Workable 429 rate-limit error, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
+    "reason": "Product design role is open and remote, but requires being based in US Central or Eastern time zones, and the title and location say US.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "You’ll need to be based in US Central Time (UTC−6) or US Eastern Time (UTC-5).",
+    "signals": [
+     {
+      "quote": "Product Designer (US - Part-time, Contract)",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "RemoteContract United States",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "The role is fully remote and part-time, about 20 hours a week. You’ll need to be based in US Central Time (UTC−6) or US Eastern Time (UTC-5).",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/dcc25136637940f3.jpg",
-    "read_at": "2026-11-03T09:12:51",
+    "read_at": "2026-11-16T08:29:09",
     "evidence": {
      "board_posted": "2026-10-21"
     }
@@ -1343496,13 +1344087,15 @@
    "url": "https://apply.workable.com/mlabs/j/240BE27C13",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a 429 rate-limit error with no job description, so the posting cannot be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "Remote part-time contract role requires candidates located in US Central or Eastern time zones, so it is not open to someone in Portugal.",
+     "Portugal OUT · under the title: \"United States\"",
+     "Portugal OUT · opening paragraph: \"Location: United States\"",
+     "Portugal OUT · body: \"Candidates must be located in US Central Time (UTC−6) or US Eastern Time (UTC−5) and available during core collaboration hours (9:00 AM – 12:00 PM Eastern Time).\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1343510,14 +1344103,16 @@
     "confidence": "high",
     "fields": {
      "role": "Product Designer",
-     "company": "MLabs",
-     "seniority": "unstated",
-     "remote": "unstated",
+     "company": "MLabs (recruiting for an unnamed client)",
+     "seniority": "mid",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": "Competitive Compensation",
+     "years_xp": "2+ years",
      "reports_to": null,
      "language": "English",
      "posted": null
@@ -1343525,19 +1344120,39 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://apply.workable.com/mlabs/j/240BE27C13",
-    "reason": "The page is a 429 rate-limit error with no job description, so the posting cannot be read.",
-    "open": "unreadable",
+    "reason": "Remote part-time contract role requires candidates located in US Central or Eastern time zones, so it is not open to someone in Portugal.",
+    "open": "yes",
     "language_ok": true,
     "language": "English",
-    "quote": "",
-    "signals": [],
+    "quote": "Candidates must be located in US Central Time (UTC−6) or US Eastern Time (UTC−5)",
+    "signals": [
+     {
+      "quote": "United States",
+      "where": "under the title",
+      "kind": "tag",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Location: United States",
+      "where": "opening paragraph",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Candidates must be located in US Central Time (UTC−6) or US Eastern Time (UTC−5) and available during core collaboration hours (9:00 AM – 12:00 PM Eastern Time).",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/c4ea83e934b94a2c.jpg",
-    "read_at": "2026-11-03T09:12:52",
+    "read_at": "2026-11-16T08:29:12",
     "evidence": {
      "board_posted": "2026-10-21"
-    }
+    },
+    "hiring_for": "a high-growth data and trend intelligence platform (unnamed client of MLabs)"
    }
   },
   {
@@ -1344046,45 +1344661,32 @@
    "url": "https://apply.workable.com/arbor-education-3/j/2005EECB2D",
    "workplace": "Remote",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
+    "role": null,
+    "place": null,
+    "lane": "closed",
     "cut": false,
     "why": [
-     "The page is a 429 error page, not a job posting, so nothing about the role or place can be read.",
-     "the page says: \"Sorry, there's been an error. You’ve sent too many requests too fast. Please try again later.\""
+     "the employer says it is closed",
+     "the page says: \"the employer's hiring system no longer has this posting\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "Head of Product Design",
-     "company": "Arbor Education",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
-    "read_url": "https://apply.workable.com/arbor-education-3/j/2005EECB2D",
-    "reason": "The page is a 429 error page, not a job posting, so nothing about the role or place can be read.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "read_url": "https://careers.arbor-education.com/?not_found=true",
+    "reason": "the employer says it is closed",
+    "open": "no",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/b35ee929383b46bf.jpg",
-    "read_at": "2026-11-03T08:59:10",
+    "read_at": "2026-11-16T08:28:54",
     "evidence": {
      "board_posted": "2026-10-23"
     }
@@ -1345268,13 +1345870,13 @@
    "title": "Design de Impressão - Designer de Impressão / Designers de Impressão",
    "url": "https://www.fixando.pt/partilhar/3970346/procura-Designers-de-Impressao-em-Caminha?ref=xml_feed",
    "verdict": {
-    "role": "unclear",
+    "role": "no",
     "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting for an employee.",
-     "Portugal in · body: \"Na localização do especialista (máx. 25 km de distância)\"",
+     "This is a private client's one-off request for printing a fanzine, posted on a freelance marketplace, not a job posting for a design role.",
+     "Portugal in · body: \"Onde deseja que o serviço seja realizado? Na localização do especialista (máx. 25 km de distância)\"",
      "Portugal in · under the title: \"Design de Impressão - 4910 - Dem - Caminha\"",
      "the page says: \"Detalhes do pedido - ID3970346 - M. M.\""
     ],
@@ -1345286,7 +1345888,7 @@
      "role": "Design de Impressão",
      "company": "Fixando",
      "seniority": "unstated",
-     "remote": "onsite",
+     "remote": "unstated",
      "onsite_days": null,
      "countries": [
       "Portugal"
@@ -1345299,19 +1345901,21 @@
      "posted": "21.10.2026 - 11:04"
     },
     "inferred": [
-     "posting_open is unreadable because the page is a client service request, not a job posting",
-     "workplace_as_posted is onsite because the work happens at the specialist's location near Caminha"
+     "same_job answered no because the page is a customer's service request, not a job posting for the pool's role",
+     "posting_open set to unreadable because the page is a client request rather than a single job posting",
+     "role_verdict no because it is a small print job (brochure/fanzine), not product design or UX",
+     "workplace_as_posted onsite inferred from service being done at the specialist's location within 25 km"
     ],
     "read": "board",
     "read_url": "https://www.fixando.pt/partilhar/3970346/procura-Designers-de-Impressao-em-Caminha?ref=xml_feed",
-    "reason": "The page is a private customer's quote request for a print job (a fanzine) on a services marketplace, not a job posting for an employee.",
+    "reason": "the page would not open on two runs · This is a private client's one-off request for printing a fanzine, posted on a freelance marketplace, not a job posting for a design role.",
     "open": "unreadable",
     "language_ok": true,
     "language": "Portuguese",
     "quote": "Na localização do especialista (máx. 25 km de distância)",
     "signals": [
      {
-      "quote": "Na localização do especialista (máx. 25 km de distância)",
+      "quote": "Onde deseja que o serviço seja realizado? Na localização do especialista (máx. 25 km de distância)",
       "where": "body",
       "kind": "explicit",
       "says": "portugal_in"
@@ -1345326,7 +1345930,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9175438167d3425a.jpg",
-    "read_at": "2026-11-03T09:05:12",
+    "read_at": "2026-11-16T08:29:04",
     "evidence": {
      "board_posted": "2026-10-22"
     }
@@ -1372507,45 +1373111,31 @@
    "title": "System Design Engineer I",
    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c4da4d30-6e6e-4dd4-9141-60a5db3b3321&jobId=572000&lang=en_US",
    "verdict": {
-    "role": "unclear",
-    "place": "unclear",
-    "lane": "unsure",
-    "cut": false,
+    "role": null,
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
     "why": [
-     "The page shows only a cookie consent banner with no job description, so it cannot be read as a posting.",
-     "the page says: \"Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.\""
+     "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page"
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "high",
-    "fields": {
-     "role": "System Design Engineer I",
-     "company": "c4da4d30-6e6e-4dd4-9141-60a5db3b3321",
-     "seniority": "unstated",
-     "remote": "unstated",
-     "onsite_days": null,
-     "countries": [],
-     "portugal_ok": "unclear",
-     "salary": null,
-     "years_xp": null,
-     "reports_to": null,
-     "language": "English",
-     "posted": null
-    },
+    "confidence": null,
+    "fields": {},
     "inferred": [],
     "read": "employer",
     "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c4da4d30-6e6e-4dd4-9141-60a5db3b3321&jobId=572000&lang=en_US",
-    "reason": "The page shows only a cookie consent banner with no job description, so it cannot be read as a posting.",
-    "open": "unreadable",
-    "language_ok": true,
-    "language": "English",
-    "quote": "",
+    "reason": "location: none of remote, Lisbon, Portugal, Europe, EMEA anywhere on the page",
+    "open": null,
+    "language_ok": null,
+    "language": null,
+    "quote": null,
     "signals": [],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/e66b0e0aded84ac6.jpg",
-    "read_at": "2026-11-03T09:05:46",
+    "read_at": "2026-11-16T08:29:07",
     "evidence": {
      "employer_posted": "2026-10-22"
     }
@@ -1378462,6 +1379052,57 @@
     "found_by": "pool",
     "shot": "data/shots/13a8c31ef5bb4f62.employer.jpg",
     "read_at": "2026-11-03T12:58:13",
+    "evidence": {
+     "board_posted": "2026-10-28"
+    }
+   }
+  },
+  {
+   "active": true,
+   "apply_url": "https://apply.workable.com/starling-bank/j/2932779F8D",
+   "company": "Starling Bank",
+   "first_run": "2026-11-03T12:53:24+00:00",
+   "first_seen": "2026-11-03T12:53:24+00:00",
+   "id": "aa9b2f392f69466b",
+   "jdhash": "4955",
+   "last_seen": "2026-11-03T12:53:24+00:00",
+   "location": "London, United Kingdom (Onsite)",
+   "posted": "2026-10-28",
+   "remote": false,
+   "salary": "€105,000",
+   "source": "eurotoptech",
+   "sources": [
+    "eurotoptech"
+   ],
+   "title": "Content Designer",
+   "url": "https://www.eurotoptech.com/jobs/preview/content-designer-starling-bank-london-2514909",
+   "verdict": {
+    "role": null,
+    "place": null,
+    "lane": "closed",
+    "cut": false,
+    "why": [
+     "the board says it is closed, and the employer's posting was not found",
+     "the page says: \"the server answered 404: Skip to content Euro Top Tech Jobs Data Career Lab More Pricing Search ⌘K Log In 404 This page doesn't exist The link ma\""
+    ],
+    "judged": true,
+    "text": "job board's copy",
+    "stage": "vision",
+    "confidence": null,
+    "fields": {},
+    "inferred": [],
+    "read": "board",
+    "read_url": "https://www.eurotoptech.com/jobs/preview/content-designer-starling-bank-london-2514909",
+    "reason": "the board says it is closed, and the employer's posting was not found",
+    "open": "no",
+    "language_ok": null,
+    "language": null,
+    "quote": null,
+    "signals": [],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/aa9b2f392f69466b.jpg",
+    "read_at": "2026-11-16T08:28:39",
     "evidence": {
      "board_posted": "2026-10-28"
     }
