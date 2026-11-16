@@ -1814458,7 +1814458,7 @@
  },
  "e766c0fc1b6d44c0": {
   "id": "e766c0fc1b6d44c0",
-  "at": "2026-11-16T11:19:31",
+  "at": "2026-11-16T12:23:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jobalert.world/jobs/senior-ux-designer-at-excella-arlington-virginia-united-states-remote-70168",
@@ -1814497,7 +1814497,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Arlington, Virginia, United States, Remote",
-  "reason": "The page is a list of current job openings with no single posting description, so it is unreadable; the listing only shows a tag for Senior UX Designer in Arlington, Virginia, Remote.",
+  "reason": "The page is a list of current openings with no single job description, so the posting cannot be read as one job.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1814516,7 +1814516,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "f7aabdca61424aa9": {
   "id": "f7aabdca61424aa9",
@@ -1814707,7 +1814707,7 @@
  },
  "0c87577acc1b4cea": {
   "id": "0c87577acc1b4cea",
-  "at": "2026-11-16T11:19:34",
+  "at": "2026-11-16T12:23:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.evercommerce.com/us/en/job/R-106620/EverPro-Product-Designer-Invoice-Simple-Remote-Canada",
@@ -1814733,7 +1814733,7 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Skip to main content Talent Community ... Hi There! Are you interested in this job?",
+  "open_quote": "Hi There! Are you interested in this job?",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1814742,7 +1814742,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site menus, footer and a chatbot; no job description is visible, so the posting is an empty shell.",
+  "reason": "The page shows only site chrome and a chatbot, with no job description, so the posting cannot be read; the title alone says 'Remote Canada'.",
   "confidence": "medium",
   "inferred": [],
   "fields": {
@@ -1814761,7 +1814761,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "941e237507354c92": {
   "id": "941e237507354c92",
@@ -1817001,7 +1817001,7 @@
  },
  "2b8420b964f74514": {
   "id": "2b8420b964f74514",
-  "at": "2026-11-16T11:19:48",
+  "at": "2026-11-16T12:23:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://work-sv.aleido.com/jobs/8683777-senior-ux-designer",
@@ -1817029,7 +1817029,7 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Current job openings No matching jobs … All jobs … Aleido Sweden Senior UX Designer Aleido Tech · Göteborg · Hybrid",
+  "open_quote": "Current job openings No matching jobs All jobs Aleido jobs",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1817038,7 +1817038,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Aleido Tech · Göteborg · Hybrid",
-  "reason": "The page is the company's career site listing many jobs, not a single posting with a description; the Senior UX Designer entry is only a list item.",
+  "reason": "The page is a company career-site listing of many jobs, not a single posting with a description; the Senior UX Designer appears only as a list entry.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1817057,7 +1817057,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "ba6f493ae41f46f2": {
   "id": "ba6f493ae41f46f2",
@@ -1817830,7 +1817830,7 @@
  },
  "59f75dccc0ce4b66": {
   "id": "59f75dccc0ce4b66",
-  "at": "2026-11-16T11:19:56",
+  "at": "2026-11-16T12:23:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.teksystems.com/us/en/job/JP-006404354/Design-Systems-Designer-Wearables",
@@ -1817857,7 +1817857,7 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Get personalized tech job recommendations based on your skills and experience.",
+  "open_quote": "A new world of opportunity awaits. We stand ready to partner side by side with you.",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1817885,7 +1817885,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "efff637db92241d1": {
   "id": "efff637db92241d1",
@@ -1820103,7 +1820103,7 @@
  },
  "9b712f95df3949f3": {
   "id": "9b712f95df3949f3",
-  "at": "2026-11-16T11:20:17",
+  "at": "2026-11-16T12:23:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.excella.com/careers/apply/?gh_jid=4751867005",
@@ -1820123,34 +1820123,25 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Current Job Openings Lead Consultant Data Scientist ... Lead JavaScript Engineer ... Senior UX Designer",
+  "open_quote": "Current Job Openings Lead Consultant Data Scientist ... Senior UX Designer ... Apply",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
-  "workplace_as_posted": "remote",
-  "location_under_the_title": "Arlington, Virginia, United States, Remote",
-  "place_signals": [
-   {
-    "quote": "Arlington, Virginia, United States, Remote",
-    "where": "body",
-    "kind": "explicit",
-    "says": "portugal_out"
-   }
-  ],
+  "workplace_as_posted": "not stated",
+  "location_under_the_title": null,
+  "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Senior UX Designer Arlington, Virginia, United States, Remote",
-  "reason": "The page is a list of job openings, not a single posting with a description, so it is unreadable; the listing shows only a US-based remote tag.",
-  "confidence": "medium",
+  "reason": "The page is a list of job openings, not a single posting with a description, so nothing about the job's place can be confirmed.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Senior UX Designer",
    "company": "Excella",
    "seniority": "senior",
-   "remote": "remote",
+   "remote": "unstated",
    "onsite_days": null,
-   "countries": [
-    "United States"
-   ],
+   "countries": [],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
@@ -1820160,7 +1820151,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "aaaee155e2fe4fd1": {
   "id": "aaaee155e2fe4fd1",
@@ -1825341,7 +1825332,7 @@
  },
  "079092e9fd1d48c6": {
   "id": "079092e9fd1d48c6",
-  "at": "2026-11-16T11:20:52",
+  "at": "2026-11-16T12:24:49",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://netapp.eightfold.ai/careers/job/45294939",
@@ -1825361,7 +1825352,7 @@
   "stage": "render",
   "open_quote": "Skip to main content Join Talent Network Join us, and we'll help you do your best work The job you are looking for may have closed. Powered by eightfold.ai #Wha",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "b84e8d89e10f4b16": {
   "id": "b84e8d89e10f4b16",
@@ -1825591,7 +1825582,7 @@
  },
  "aa55852bfa8a4617": {
   "id": "aa55852bfa8a4617",
-  "at": "2026-11-16T11:20:50",
+  "at": "2026-11-16T12:23:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b0e24f83-6e4d-492d-9d6a-bc0fea197d6a&jobId=575197&lang=en_US",
@@ -1825624,7 +1825615,7 @@
   "confidence": "low",
   "inferred": [
    "role_verdict judged from title alone",
-   "language assumed English from the page text and URL (lang=en_US)"
+   "language assumed English from page text"
   ],
   "fields": {
    "role": "Design Engineer - Mid Level",
@@ -1825642,7 +1825633,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "bcf8ee3a168647d6": {
   "id": "bcf8ee3a168647d6",
@@ -1826507,7 +1826498,7 @@
  },
  "4a4c484108744ee6": {
   "id": "4a4c484108744ee6",
-  "at": "2026-11-16T11:20:58",
+  "at": "2026-11-16T12:23:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDU5NTQ1IDE0MQ?lang=en",
@@ -1826536,7 +1826527,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only the EURES portal menus and footer with no job description, so the posting cannot be read.",
+  "reason": "The page shows only EURES portal navigation and footer with no job description, so the posting is unreadable.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1826555,7 +1826546,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 1
+  "unread_tries": 2
  },
  "7835b2df2f4f4662": {
   "id": "7835b2df2f4f4662",
