@@ -2434,7 +2434,13 @@ def getro(host):
                     continue
                 seen.add(j.get("id"))
                 org = j.get("organization") or {}
-                yield {"company": org.get("name"), "title": j.get("title"), "url": j.get("url"),
+                # The posting is Getro's own page for the job; j["url"] is only the way to
+                # apply, and how he would apply is nothing to RADAR (his rule, 2026-11-16).
+                # It was the row's link, and for an email-only job (Ev3) that was mailto:.
+                page = f"https://{host}/companies/{org.get('slug')}/jobs/{j.get('slug')}" if org.get("slug") and j.get("slug") else None
+                own = j.get("url") if str(j.get("url") or "").lower().startswith(("http://", "https://")) else None
+                yield {"company": org.get("name"), "title": j.get("title"), "url": own or page,
+                       "apply_url": None if own else j.get("url"),
                        "location": "; ".join(j.get("locations") or []),
                        "workplace": j.get("work_mode") or None,
                        "remote": (j.get("work_mode") == "remote") or None,

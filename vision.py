@@ -512,10 +512,6 @@ def reader(rec, page):
 
 def see(finder, rec):
     """Everything vision knows about one role."""
-    # His hard rule (2026-11-16): never open a mailto: link (it opened Mail)
-    mail = judge.by_email(rec, time.strftime("%Y-%m-%dT%H:%M:%S"), criteria.VERSION, MODEL)
-    if mail:
-        return mail
     # What FETCH already has is used as it is: a page saved in the last three
     # days is read from the file, and a job FETCH found closed, or cut on
     # location, is settled without a token.
