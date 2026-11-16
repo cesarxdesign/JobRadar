@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-16T13:12:08+00:00",
- "built_at": "2026-11-16T13:32+00:00",
+ "built_at": "2026-11-16T14:15+00:00",
  "run_id": "2026-11-16T13:12:08+00:00",
  "last_full": "2026-11-16T08:28:15+00:00",
  "last_partial": "2026-11-16T13:12:08+00:00",
@@ -18371,7 +18371,9 @@
   "063ea06755a8422c",
   "6fc2d25aedd04689",
   "c108baa2476b4c24",
-  "beacd9eef8344b03"
+  "beacd9eef8344b03",
+  "86923b58482746dd",
+  "1f4456c487af4243"
  ],
  "unread": [
   "2dc6c294a7774ee7",
@@ -1292663,6 +1292665,16 @@
     "read_at": "2026-11-16T10:58:16",
     "evidence": {
      "board_posted": "2026-11-12"
+    },
+    "audit": {
+     "at": "2026-11-16T14:13:32",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "unclear",
+     "place": null,
+     "reason": "The page is only a Workday application start screen with no job description, so it is not a readable single posting.",
+     "signals": []
     }
    }
   },
@@ -1304840,6 +1304852,53 @@
     "read_at": "2026-11-16T10:58:12",
     "evidence": {
      "board_posted": "2026-11-12"
+    },
+    "audit": {
+     "at": "2026-11-16T14:13:12",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": "unclear",
+     "reason": "remote from a list of countries the page does not show · The role is UI/UX design leadership, but it is hybrid at an SCE facility and requires living in California.",
+     "signals": [
+      {
+       "quote": "Remote restrictions apply",
+       "where": "under the title",
+       "kind": "explicit",
+       "says": "portugal_maybe"
+      },
+      {
+       "quote": "U.S. visa required",
+       "where": "side panel",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "This position's work mode is hybrid. The employee will report to an SCE facility for a set number of days with the option to work remotely on the remaining days.",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Unless otherwise noted, employees are required to work and reside in the state of California.",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "readiness to report in person to the Irwindale location on short notice",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Relocation does not apply to this position.",
+       "where": "body",
+       "kind": "explicit",
+       "says": "portugal_out"
+      }
+     ]
     }
    }
   },
