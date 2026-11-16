@@ -269,6 +269,10 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
             ghosts += 1
             continue
         vis = vision.get(rec["id"])
+        # a mailto: posting read before the rule was filed "closed" (about:blank): it is Unsure, apply by email
+        mail = judge.by_email(rec, (vis or {}).get("at"), (vis or {}).get("criteria"), (vis or {}).get("model"))
+        if mail and vis:
+            vis = mail
         # The parser reads the title as it is TODAY. An id outlives a retitle,
         # so a role that was a design title when vision read it and is now
         # "Frontend Leaning Engineer" is out, whatever was said before.

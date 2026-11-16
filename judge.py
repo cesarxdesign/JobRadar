@@ -99,6 +99,21 @@ def workday(job, *more):
     return None
 
 
+def by_email(rec, at=None, criteria_version=None, model=None):
+    """His hard rule (2026-11-16): the pipeline never triggers an email or any
+    other action. A posting whose link is mailto: (or any non-web address) is
+    never opened - Chrome hands it to Mail - and not cut: it waits in Unsure.
+    -> the verdict for such a role, or None for an ordinary web link."""
+    url = str(rec.get("url") or "")
+    if url.lower().startswith(("http://", "https://")):
+        return None
+    to = url.split(":", 1)[-1].split("?")[0]
+    return {"id": rec["id"], "at": at, "criteria": criteria_version, "model": model, "pool_url": url,
+            "board": None, "employer": None, "found_by": None, "looked": [], "lane": "unsure",
+            "posting_open": "email", "read": None, "read_url": None, "apply_by_email": to, "stage": "render",
+            "reason": f"apply by email ({to}): JobRadar never opens email links, so nothing was read"}
+
+
 DOU = re.compile(r"(^|[/.])(dou\.ua|djinni\.co)\b", re.I)     # his cuts: DOU (11-07), Djinni (11-07)
 
 

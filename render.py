@@ -15,7 +15,7 @@ DevTools needs.
     python3 render.py <url> [<url> ...]     # print what each page shows
 """
 import base64, json, os, re, socket, struct, subprocess, sys, tempfile, time, urllib.request
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -62,6 +62,7 @@ class WS:
             buf += self.s.recv(4096)
         self.buf = buf.split(b"\r\n\r\n", 1)[1]
         self.n = 0
+        self.blocked = []
 
     def _read(self, n):
         while len(self.buf) < n:
@@ -73,6 +74,27 @@ class WS:
         return out
 
     def recv(self, timeout):
+        while True:
+            m = self._recv(timeout)
+            if m.get("method") == "Fetch.requestPaused":
+                self._guard(m["params"])                       # answered here, never left hanging
+                continue
+            return m
+
+    def _guard(self, p):
+        """His hard rule (2026-11-16): the pipeline never triggers an email or
+        any other action. A page whose server redirects to mailto:, tel:, sms:
+        or any other non-web address is stopped here, before Chrome can hand
+        it to the Mac (Mail opened 2 drafts from a headless read)."""
+        loc = next((h["value"] for h in p.get("responseHeaders") or [] if h["name"].lower() == "location"), "")
+        target = urljoin(p["request"]["url"], loc) if loc else p["request"]["url"]
+        if not web(target):
+            self.blocked.append(target)
+            self.send("Fetch.failRequest", requestId=p["requestId"], errorReason="BlockedByClient")
+        else:
+            self.send("Fetch.continueRequest", requestId=p["requestId"])
+
+    def _recv(self, timeout):
         self.s.settimeout(timeout)
         data = b""
         while True:
@@ -132,6 +154,12 @@ class WS:
             pass
 
 
+def web(u):
+    """An address a read may open: a web page, or the blank tab. Anything else
+    (mailto:, tel:, sms:, an app's own scheme) makes the Mac act - it is never opened."""
+    return (u or "").split(":", 1)[0].strip().lower() in ("http", "https", "about", "data", "blob")
+
+
 class BrowserDown(Exception):
     """Chrome cannot be started. Nothing read after this would mean anything."""
 
@@ -178,6 +206,10 @@ class Browser:
         a page that will not load is a fact about the posting. js, if given,
         is run on the rendered page too, and what it returns is out["js"]."""
         out = {"asked": url, "url": url, "status": None, "title": "", "text": "", "apply": [], "links": [], "error": None}
+        if not (url or "").lower().startswith(("http://", "https://")):
+            out["error"] = f"not a web page, never opened: {(url or '')[:60]}"
+            out["blocked"] = [url]
+            return out
         tab = None
         for attempt in range(3):
             try:
@@ -203,6 +235,9 @@ class Browser:
             ev = []
             ws.call("Page.enable")
             ws.call("Network.enable")
+            # every page and frame is checked on its way in: a redirect to
+            # mailto: or any other non-web address is refused (see WS._guard)
+            ws.call("Fetch.enable", patterns=[{"urlPattern": "*", "resourceType": "Document", "requestStage": "Response"}])
             frame = ws.call("Page.navigate", events=ev, url=url).get("frameId")
             ws.drain(timeout, ev, until="Page.loadEventFired")
             ws.drain(settle, ev)                               # scripts paint after load
@@ -234,6 +269,8 @@ class Browser:
         except Exception as e:
             out["error"] = f"{type(e).__name__}: {e}"
         finally:
+            if ws.blocked:
+                out["blocked"] = ws.blocked
             ws.close()
             try:
                 self._http(f"/json/close/{tab['id']}")
