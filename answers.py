@@ -121,7 +121,7 @@ def to_write(form):
     for x in form.get("questions") or []:
         if x["standard"]:
             continue
-        if x["kind"] == "long" or (x["kind"] in ("short", "file") and (x["q"].rstrip(" *:").endswith("?") or len(x["q"]) > 60)):
+        if x["kind"] in ("long", "email") or (x["kind"] in ("short", "file") and (x["q"].rstrip(" *:").endswith("?") or len(x["q"]) > 60)):
             out.append(x)
     return out
 
@@ -279,6 +279,7 @@ def main(argv):
             return None
         got = (res or {}).get("answers") or []
         rec = {"id": r["id"], "company": r.get("company"), "title": r.get("title"), "apply_url": f.get("apply_url"),
+               "email_to": f.get("email_to"),
                "version": version, "form_read_at": f.get("read_at"), "written_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
                "model": MODEL, "tokens": n, "gaps": (res or {}).get("gaps") or [],
                "answers": [{"q": x["q"], "required": x["required"], "kind": x["kind"],

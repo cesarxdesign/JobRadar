@@ -190,6 +190,44 @@ def rendered(browser, url):
     return {"error": "no application form found", "apply_url": url}
 
 
+# ---------- an application by email ----------
+# Some postings take applications by email, not a form: Freqens on Notion
+# ("send your resume ... to talent@freqens.com"), Ev3 on Getro (a mailto:
+# apply link). His ask (2026-11-16): the answers pane then holds the email,
+# ready to paste. How he applies changes nothing about the role's lane.
+MAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)*\.[a-z]{2,}", re.I)
+TO_APPLY = re.compile(r"\b(apply|applications?|send (us )?(your|a|an)|email (us|your)|e-mail (us|your)|submit (your|a)|reach out)\b", re.I)
+# a box for help, not for applying: accommodations@, applyassistance@, legal@, privacy@ ...
+NOT_TO_APPLY = re.compile(r"accommodat|assist|legal|privacy|gdpr|support|help|security|press|media|accessib|benefit|payroll|no-?reply|abuse|disabilit", re.I)
+HIRING_BOX = re.compile(r"^(talent|jobs?|careers?|hiring|recruit\w*|hr|apply|people|join|work|team|hello|founders?)\b", re.I)
+EMAIL_HELP = ("Write the whole email: first line 'Subject: ...', a blank line, then the body, 100 to 160 words, "
+              "the 'why us' shape: about them and the problem, then his matching roles in one line. Sign off: "
+              "Cesar Garcia, then cesarxdesign.com, linkedin.com/in/cesarxdesign and github.com/cesarxdesign, "
+              "each on its own line. Say the CV is attached. Never mention the posting's date or salary.")
+
+
+def by_email(r):
+    """The address an application goes to by email, or None. Read from the
+    posting's mailto: apply link, else from the posting VISION read: an
+    address next to words that ask for an application. Never opened."""
+    au = str(r.get("apply_url") or r.get("url") or "")
+    if au.lower().startswith("mailto:"):
+        return au[7:].split("?")[0] or None
+    p = f"{ROOT}/data/pages/{r['id']}.txt"
+    if not os.path.exists(p):
+        return None
+    text = open(p).read()
+    found = [m for m in MAIL.finditer(text) if TO_APPLY.search(text[max(0, m.start() - 160): m.end() + 60])
+             and not NOT_TO_APPLY.search(m.group(0)) and not NOT_TO_APPLY.search(text[max(0, m.start() - 120): m.start()])]
+    found.sort(key=lambda m: not HIRING_BOX.search(m.group(0)))       # talent@, jobs@, careers@ first
+    return found[0].group(0).rstrip(".") if found else None
+
+
+def email_form(to):
+    return {"system": "email", "email_to": to, "apply_url": None,
+            "questions": [q(f"The application email to {to}", "email", True, EMAIL_HELP)]}
+
+
 # ---------- which roles ----------
 def decided():
     try:
@@ -222,13 +260,19 @@ def save(forms):
 
 def read_one(browser, r):
     url = (r.get("verdict") or {}).get("read_url") or r["url"]
-    try:
-        out = ashby(url) or greenhouse(url) or rendered(browser, url)
-    except Exception as e:
+    to = by_email(r)
+    if str(r.get("apply_url") or "").lower().startswith("mailto:") and to:
+        out = email_form(to)                     # a mailto: apply link: there is no form to look for
+    else:
         try:
-            out = rendered(browser, url)
-        except Exception as e2:
-            out = {"error": f"{type(e2).__name__}: {e2}"}
+            out = ashby(url) or greenhouse(url) or rendered(browser, url)
+        except Exception as e:
+            try:
+                out = rendered(browser, url)
+            except Exception as e2:
+                out = {"error": f"{type(e2).__name__}: {e2}"}
+        if (out.get("error") or not out.get("questions")) and to:
+            out = email_form(to)                 # no form, and the posting asks for an email
     out.update({"id": r["id"], "url": url, "company": r.get("company"), "title": r.get("title"),
                 "read_at": time.strftime("%Y-%m-%dT%H:%M:%S")})
     return out
@@ -273,7 +317,7 @@ def main(argv):
         browser.close()
     save(forms)
     got = [forms[r["id"]] for r in roles]
-    longs = sum(1 for f in got if any(x["kind"] == "long" and not x["standard"] for x in f.get("questions") or []))
+    longs = sum(1 for f in got if any(x["kind"] in ("long", "email") and not x["standard"] for x in f.get("questions") or []))
     print(f"forms: {len(got)} read, {sum(1 for f in got if f.get('questions'))} with a form, "
           f"{longs} with questions to write, {sum(1 for f in got if f.get('error'))} not found")
 

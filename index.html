@@ -967,6 +967,8 @@ function renderPane(){
   if($("note")) $("note").oninput=e=>autoNote(r,e.target.value);
   $("pane").querySelectorAll(".copy[data-a]").forEach(b=>b.onclick=()=>copyBtn(b,ANS[r.id].answers[+b.dataset.a].answer));
   $("pane").querySelectorAll(".copy[data-me]").forEach(b=>b.onclick=()=>copyBtn(b,ME[+b.dataset.me][1]));
+  $("pane").querySelectorAll(".copy[data-m]").forEach(b=>b.onclick=()=>{const [i,k]=b.dataset.m.split(":").map(Number);
+    const a=ANS[r.id];copyBtn(b,mailParts(a,a.answers[i])[k][1]);});
 }
 
 // ---------- Application answers ----------
@@ -1007,13 +1009,26 @@ function answersBox(r){
   if(!a) return '<div class="answers"><div class="fk">Application answers</div>'+me+'</div>';
   const gaps=g=>(g||[]).map(x=>'<div class="gap">↳ '+esc(x)+'</div>').join("");
   return '<div class="answers"><div class="fk">Application answers · draft · '+esc(String(a.written_at||"").slice(0,10))
-    +(a.apply_url?' · <a href="'+esc(outbound(a.apply_url))+'" target="_blank" rel="noopener" style="color:var(--acc)">the form ↗</a>':'')+'</div>'
+    +(a.apply_url?' · <a href="'+esc(outbound(a.apply_url))+'" target="_blank" rel="noopener" style="color:var(--acc)">the form ↗</a>':'')
+    +(a.email_to?' · by email · attach your CV':'')+'</div>'
     +me+gaps(a.gaps)
-    +a.answers.map((x,i)=>'<div class="qa">'+(x.answer?'<button class="copy" data-a="'+i+'">copy</button>':'')
+    +a.answers.map((x,i)=>x.kind==="email"&&x.answer?mailBox(a,x,i):'<div class="qa">'+(x.answer?'<button class="copy" data-a="'+i+'">copy</button>':'')
       +'<div class="qq">'+esc(x.q)+'</div>'
       +(x.answer?'<div class="aa">'+esc(x.answer)+'</div>':'<div class="none">for you to answer</div>')
       +gaps(x.gaps)+'</div>').join("")
     +'</div>';
+}
+
+// An application by email (his ask, 2026-11-16): To, Subject and Body, each
+// ready to copy. Nothing is sent or opened from here; he sends it himself.
+function mailParts(a,x){
+  const m=String(x.answer).match(/^\s*Subject:\s*(.+)\n+([\s\S]*)$/i);
+  return [["To",a.email_to||""],["Subject",m?m[1].trim():""],["Body",m?m[2].trim():String(x.answer).trim()]];
+}
+function mailBox(a,x,i){
+  return mailParts(a,x).filter(p=>p[1]).map((p,k)=>'<div class="qa"><button class="copy" data-m="'+i+':'+k+'">copy</button>'
+    +'<div class="qq">'+(k?p[0]:'Email to')+'</div><div class="aa">'+esc(p[1])+'</div></div>').join("")
+    +'<div class="qa">'+((x.gaps||[]).map(g=>'<div class="gap">↳ '+esc(g)+'</div>').join(""))+'</div>';
 }
 
 // ---------- Evidence ----------
