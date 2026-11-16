@@ -154,6 +154,23 @@ class WS:
             pass
 
 
+# Run in every page and frame before its own scripts (his hard rule, 2026-11-16):
+# a page can never send a form, and never open a non-web address (mailto:,
+# tel:, ...) by window.open or a link it clicks itself. JobRadar only reads.
+GUARD_JS = r"""(() => {
+  const web = u => { try { return ['http:','https:','about:','data:','blob:'].includes(new URL(u, location.href).protocol); } catch (e) { return false; } };
+  const open = window.open;
+  window.open = function (u, ...a) { return (u === undefined || web(u)) ? open.call(this, u, ...a) : null; };
+  HTMLFormElement.prototype.submit = function () {};
+  HTMLFormElement.prototype.requestSubmit = function () {};
+  addEventListener('submit', e => { e.preventDefault(); e.stopImmediatePropagation(); }, true);
+  const click = HTMLAnchorElement.prototype.click;
+  HTMLAnchorElement.prototype.click = function () { if (web(this.href)) click.call(this); };
+  addEventListener('click', e => { const a = e.target && e.target.closest && e.target.closest('a[href]');
+    if (a && !web(a.href)) { e.preventDefault(); e.stopImmediatePropagation(); } }, true);
+})();"""
+
+
 def web(u):
     """An address a read may open: a web page, or the blank tab. Anything else
     (mailto:, tel:, sms:, an app's own scheme) makes the Mac act - it is never opened."""
@@ -234,6 +251,7 @@ class Browser:
         try:
             ev = []
             ws.call("Page.enable")
+            ws.call("Page.addScriptToEvaluateOnNewDocument", source=GUARD_JS)
             ws.call("Network.enable")
             # every page and frame is checked on its way in: a redirect to
             # mailto: or any other non-web address is refused (see WS._guard)
