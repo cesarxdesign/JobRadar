@@ -1814458,7 +1814458,7 @@
  },
  "e766c0fc1b6d44c0": {
   "id": "e766c0fc1b6d44c0",
-  "at": "2026-11-16T11:22:13",
+  "at": "2026-11-16T11:19:31",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://jobalert.world/jobs/senior-ux-designer-at-excella-arlington-virginia-united-states-remote-70168",
@@ -1814497,8 +1814497,8 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "Arlington, Virginia, United States, Remote",
-  "reason": "The page is a list of job openings with no description for this posting, so it is not a single readable job posting.",
-  "confidence": "medium",
+  "reason": "The page is a list of current job openings with no single posting description, so it is unreadable; the listing only shows a tag for Senior UX Designer in Arlington, Virginia, Remote.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "Senior UX Designer",
@@ -1814516,7 +1814516,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "f7aabdca61424aa9": {
   "id": "f7aabdca61424aa9",
@@ -1814707,7 +1814707,7 @@
  },
  "0c87577acc1b4cea": {
   "id": "0c87577acc1b4cea",
-  "at": "2026-11-16T11:22:13",
+  "at": "2026-11-16T11:19:34",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.evercommerce.com/us/en/job/R-106620/EverPro-Product-Designer-Invoice-Simple-Remote-Canada",
@@ -1814742,7 +1814742,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only menus, footer and chatbot text with no job description, so the posting cannot be read.",
+  "reason": "The page shows only site menus, footer and a chatbot; no job description is visible, so the posting is an empty shell.",
   "confidence": "medium",
   "inferred": [],
   "fields": {
@@ -1814761,7 +1814761,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "941e237507354c92": {
   "id": "941e237507354c92",
@@ -1817001,7 +1817001,7 @@
  },
  "2b8420b964f74514": {
   "id": "2b8420b964f74514",
-  "at": "2026-11-16T11:22:13",
+  "at": "2026-11-16T11:19:48",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://work-sv.aleido.com/jobs/8683777-senior-ux-designer",
@@ -1817037,8 +1817037,8 @@
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
-  "place_quote": "Senior UX Designer Aleido Tech · Göteborg · Hybrid",
-  "reason": "The page is the Aleido careers site listing many jobs, not a single posting with a description, so the page cannot be read as one job.",
+  "place_quote": "Aleido Tech · Göteborg · Hybrid",
+  "reason": "The page is the company's career site listing many jobs, not a single posting with a description; the Senior UX Designer entry is only a list item.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1817057,7 +1817057,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "ba6f493ae41f46f2": {
   "id": "ba6f493ae41f46f2",
@@ -1817830,7 +1817830,7 @@
  },
  "59f75dccc0ce4b66": {
   "id": "59f75dccc0ce4b66",
-  "at": "2026-11-16T11:22:13",
+  "at": "2026-11-16T11:19:56",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://careers.teksystems.com/us/en/job/JP-006404354/Design-Systems-Designer-Wearables",
@@ -1817857,7 +1817857,7 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "A new world of opportunity awaits. We stand ready to partner side by side with you.",
+  "open_quote": "Get personalized tech job recommendations based on your skills and experience.",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
@@ -1817866,7 +1817866,7 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only site navigation and footer text with no job description, so the posting is an empty shell.",
+  "reason": "The page shows only site navigation and footer text with no job description, so the posting cannot be read.",
   "confidence": "high",
   "inferred": [],
   "fields": {
@@ -1817885,7 +1817885,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "efff637db92241d1": {
   "id": "efff637db92241d1",
@@ -1820103,7 +1820103,7 @@
  },
  "9b712f95df3949f3": {
   "id": "9b712f95df3949f3",
-  "at": "2026-11-16T11:22:13",
+  "at": "2026-11-16T11:20:17",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://www.excella.com/careers/apply/?gh_jid=4751867005",
@@ -1820123,25 +1820123,34 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Current Job Openings",
+  "open_quote": "Current Job Openings Lead Consultant Data Scientist ... Lead JavaScript Engineer ... Senior UX Designer",
   "language_of_the_posting": "English",
   "language_ok": true,
   "role_verdict": "unclear",
-  "workplace_as_posted": "not stated",
-  "location_under_the_title": null,
-  "place_signals": [],
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Arlington, Virginia, United States, Remote",
+  "place_signals": [
+   {
+    "quote": "Arlington, Virginia, United States, Remote",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   }
+  ],
   "place_verdict": "unclear",
-  "place_quote": "Arlington, Virginia, United States, Remote",
-  "reason": "The page is a list of current job openings, not a single posting with a description; the Senior UX Designer entry only shows a location tag.",
+  "place_quote": "Senior UX Designer Arlington, Virginia, United States, Remote",
+  "reason": "The page is a list of job openings, not a single posting with a description, so it is unreadable; the listing shows only a US-based remote tag.",
   "confidence": "medium",
   "inferred": [],
   "fields": {
    "role": "Senior UX Designer",
    "company": "Excella",
    "seniority": "senior",
-   "remote": "unstated",
+   "remote": "remote",
    "onsite_days": null,
-   "countries": [],
+   "countries": [
+    "United States"
+   ],
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
@@ -1820151,7 +1820160,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "aaaee155e2fe4fd1": {
   "id": "aaaee155e2fe4fd1",
@@ -1825332,7 +1825341,7 @@
  },
  "079092e9fd1d48c6": {
   "id": "079092e9fd1d48c6",
-  "at": "2026-11-16T11:23:14",
+  "at": "2026-11-16T11:20:52",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://netapp.eightfold.ai/careers/job/45294939",
@@ -1825352,7 +1825361,7 @@
   "stage": "render",
   "open_quote": "Skip to main content Join Talent Network Join us, and we'll help you do your best work The job you are looking for may have closed. Powered by eightfold.ai #Wha",
   "reason": "the page could not be read in the browser",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "b84e8d89e10f4b16": {
   "id": "b84e8d89e10f4b16",
@@ -1825582,7 +1825591,7 @@
  },
  "aa55852bfa8a4617": {
   "id": "aa55852bfa8a4617",
-  "at": "2026-11-16T11:22:13",
+  "at": "2026-11-16T11:20:50",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b0e24f83-6e4d-492d-9d6a-bc0fea197d6a&jobId=575197&lang=en_US",
@@ -1825611,12 +1825620,11 @@
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only a cookie banner with no job description, so openness and place cannot be read; the title Design Engineer names a design-leaning role.",
+  "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title 'Design Engineer' counts as design-leaning engineering.",
   "confidence": "low",
   "inferred": [
-   "role_verdict judged from the title alone",
-   "seniority taken from the title 'Mid Level'",
-   "language assumed English from the page text and URL lang=en_US"
+   "role_verdict judged from title alone",
+   "language assumed English from the page text and URL (lang=en_US)"
   ],
   "fields": {
    "role": "Design Engineer - Mid Level",
@@ -1825634,7 +1825642,7 @@
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "bcf8ee3a168647d6": {
   "id": "bcf8ee3a168647d6",
@@ -1826499,7 +1826507,7 @@
  },
  "4a4c484108744ee6": {
   "id": "4a4c484108744ee6",
-  "at": "2026-11-16T11:22:13",
+  "at": "2026-11-16T11:20:58",
   "criteria": "2026-10-05.5",
   "model": "sonnet",
   "pool_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDU5NTQ1IDE0MQ?lang=en",
@@ -1826519,21 +1826527,21 @@
   "posted_by": "employer",
   "hiring_for": null,
   "posting_open": "unreadable",
-  "open_quote": "Go to main content EN Search EURES (EURopean Employment Services) Home Jobseekers Employers Living & Working",
+  "open_quote": "Go to main content",
   "language_of_the_posting": "unknown",
   "language_ok": true,
-  "role_verdict": "yes",
+  "role_verdict": "unclear",
   "workplace_as_posted": "not stated",
   "location_under_the_title": null,
   "place_signals": [],
   "place_verdict": "unclear",
   "place_quote": "",
-  "reason": "The page shows only EURES portal navigation and footer with no job description, so it is an empty shell and the role cannot be judged beyond the title.",
-  "confidence": "medium",
+  "reason": "The page shows only the EURES portal menus and footer with no job description, so the posting cannot be read.",
+  "confidence": "high",
   "inferred": [],
   "fields": {
    "role": "DESIGNER, GRÁFICO OU DE COMUNICAÇÃO E MULTIMÉDIA",
-   "company": "",
+   "company": null,
    "seniority": "unstated",
    "remote": "unstated",
    "onsite_days": null,
@@ -1826541,12 +1826549,13 @@
    "portugal_ok": "unclear",
    "salary": null,
    "years_xp": null,
+   "reports_to": null,
    "language": "unknown",
    "posted": null
   },
   "stage": "vision",
   "lane": "unsure",
-  "unread_tries": 2
+  "unread_tries": 1
  },
  "7835b2df2f4f4662": {
   "id": "7835b2df2f4f4662",
@@ -1829304,6 +1829313,84 @@
   "stage": "render",
   "reason": "the employer says it is closed",
   "fetched_at": "2026-11-16T11:16:01"
+ },
+ "03d25cbe52bb4294": {
+  "id": "03d25cbe52bb4294",
+  "at": "2026-11-16T12:22:42",
+  "criteria": "2026-10-05.5",
+  "model": "sonnet",
+  "pool_url": "https://jobs.workable.com/view/8hrLwotqUCUXBbkVhDFKDG/remote-content-designer-in-united-states-at-supersummary",
+  "board": null,
+  "employer": {
+   "url": "https://jobs.workable.com/view/8hrLwotqUCUXBbkVhDFKDG/remote-content-designer-in-united-states-at-supersummary",
+   "status": 200,
+   "shot": "data/shots/03d25cbe52bb4294.jpg",
+   "error": null
+  },
+  "found_by": null,
+  "looked": [],
+  "read": "employer",
+  "read_url": "https://jobs.workable.com/view/8hrLwotqUCUXBbkVhDFKDG/remote-content-designer-in-united-states-at-supersummary",
+  "same_job": "yes",
+  "posted_by": "employer",
+  "hiring_for": null,
+  "posting_open": "yes",
+  "open_quote": null,
+  "language_of_the_posting": "English",
+  "language_ok": true,
+  "role_verdict": "yes",
+  "workplace_as_posted": "remote",
+  "location_under_the_title": "Remote United States Contract",
+  "place_signals": [
+   {
+    "quote": "RemoteUnited StatesContract",
+    "where": "under the title",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Remote — US-based (location flexible within the United States).",
+    "where": "body",
+    "kind": "explicit",
+    "says": "portugal_out"
+   },
+   {
+    "quote": "Work with a distributed, global team in Latin America, Europe, and the US that has been remote-first since 2018",
+    "where": "body",
+    "kind": "generic",
+    "says": "says_nothing"
+   },
+   {
+    "quote": "a fully remote, global team united by curiosity, creativity, and a shared love of learning",
+    "where": "opening paragraph",
+    "kind": "generic",
+    "says": "says_nothing"
+   }
+  ],
+  "place_verdict": "no",
+  "place_quote": "Remote — US-based (location flexible within the United States).",
+  "reason": "Content design role with UX/product design focus, but the role is explicitly remote US-based only.",
+  "confidence": "high",
+  "inferred": [],
+  "fields": {
+   "role": "Content Designer",
+   "company": "SuperSummary",
+   "seniority": "senior",
+   "remote": "remote",
+   "onsite_days": null,
+   "countries": [
+    "United States"
+   ],
+   "portugal_ok": "no",
+   "salary": null,
+   "years_xp": "5+",
+   "reports_to": "Head of Product",
+   "language": "English",
+   "posted": "Posted 6 days ago"
+  },
+  "stage": "vision",
+  "lane": "cut",
+  "reader_place": "no"
  },
  "470513ef79d84ed3": {
   "id": "470513ef79d84ed3",

@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-16T11:23:10+00:00",
- "built_at": "2026-11-16T11:42+00:00",
+ "built_at": "2026-11-16T12:23+00:00",
  "run_id": "2026-11-16T11:23:10+00:00",
  "last_full": "2026-11-16T08:28:15+00:00",
  "last_partial": "2026-11-16T11:23:10+00:00",
@@ -14,15 +14,15 @@
   "ghosts": 0,
   "cut": 44,
   "closed": 687,
-  "vision_cut": 16920,
+  "vision_cut": 16913,
   "agency": 0,
-  "not_read": 3,
+  "not_read": 11,
   "folded": 116,
-  "vision_read": 31296,
+  "vision_read": 31297,
   "title_cuts": 36476,
   "design": 26972,
-  "waiting": 161,
-  "unjudged": 579240,
+  "waiting": 160,
+  "unjudged": 579239,
   "age_cuts": 16750,
   "active": 634143,
   "total": 652159
@@ -17203,7 +17203,6 @@
   "1e55e862f29d474f",
   "a2def319933d4a5f",
   "f3c9b0befc5b484b",
-  "aa55852bfa8a4617",
   "b071ecff3dd04489",
   "bcf8ee3a168647d6",
   "c67939e1cf484f7a",
@@ -17339,7 +17338,6 @@
   "ac6ad58bdb2a4cc9",
   "ab77287b66ac45db",
   "5073ef43d572479b",
-  "4a4c484108744ee6",
   "02c45ded17694570",
   "00e438cb919d4106",
   "83e85749a314417a",
@@ -17400,7 +17398,6 @@
   "e6836704a18e4acc",
   "c338f3a2443c450b",
   "c4b5cdec4c494248",
-  "e766c0fc1b6d44c0",
   "941e237507354c92",
   "5b9cd09c35324998",
   "c5d3bd7a121c4bfc",
@@ -17428,7 +17425,6 @@
   "ff4e96b3cda14255",
   "d7dd87393dc641e9",
   "84dbc40f03714710",
-  "0c87577acc1b4cea",
   "1b399ffc9f7d46b1",
   "5da55c43879d411a",
   "53c575df23bf41a7",
@@ -17705,6 +17701,7 @@
   "eeba7187c77c4d7b",
   "997c55641593450e",
   "50dd235375b24717",
+  "03d25cbe52bb4294",
   "05b8703a727e4740",
   "d4af145167b146ef",
   "226633e4848941a7",
@@ -17749,12 +17746,10 @@
   "2ac34b4c14df48db",
   "ba6f493ae41f46f2",
   "603ffe6654d64ac5",
-  "2b8420b964f74514",
   "ebdabf4b0ba64b57",
   "cf99ed7c504445ab",
   "17d0e5bdfee54541",
   "c0bedb3f090744b5",
-  "079092e9fd1d48c6",
   "84b59cec68c74f36",
   "d8347c6c6e7646aa",
   "01d96fbfc0ea4e1b",
@@ -17765,7 +17760,6 @@
   "873418e6262c4711",
   "a15d5ab1d25646bd",
   "efff637db92241d1",
-  "59f75dccc0ce4b66",
   "1529c84613284ef8",
   "6d45119b4f524575",
   "24cb30b0ae9046bf",
@@ -18182,7 +18176,6 @@
   "bc528ec5abc34f79",
   "4126fa310581461d",
   "2f60258f8d11444d",
-  "9b712f95df3949f3",
   "554c8358977a43d4",
   "8728767541b84de6",
   "007ecdcd89114a1e",
@@ -18375,7 +18368,15 @@
  "unread": [
   "2dc6c294a7774ee7",
   "cc7fb0a126a3418c",
-  "08577b63c7724e21"
+  "08577b63c7724e21",
+  "aa55852bfa8a4617",
+  "4a4c484108744ee6",
+  "e766c0fc1b6d44c0",
+  "0c87577acc1b4cea",
+  "2b8420b964f74514",
+  "079092e9fd1d48c6",
+  "59f75dccc0ce4b66",
+  "9b712f95df3949f3"
  ],
  "sources": {
   "ok": 1039,
@@ -1225796,10 +1225797,10 @@
    "verdict": {
     "role": "yes",
     "place": "unclear",
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
-     "The page shows only a cookie banner with no job description, so openness and place cannot be read; the title Design Engineer names a design-leaning role.",
+     "The page shows only a cookie banner with no job description, so the posting cannot be read; the title 'Design Engineer' counts as design-leaning engineering.",
      "the page says: \"Our site uses cookies and similar technologies to remember your visit, collect statistics of visits and tailor our site to your interests.\""
     ],
     "judged": true,
@@ -1225821,13 +1225822,12 @@
      "posted": null
     },
     "inferred": [
-     "role_verdict judged from the title alone",
-     "seniority taken from the title 'Mid Level'",
-     "language assumed English from the page text and URL lang=en_US"
+     "role_verdict judged from title alone",
+     "language assumed English from the page text and URL (lang=en_US)"
     ],
     "read": "employer",
     "read_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b0e24f83-6e4d-492d-9d6a-bc0fea197d6a&jobId=575197&lang=en_US",
-    "reason": "the page would not open on two runs · The page shows only a cookie banner with no job description, so openness and place cannot be read; the title Design Engineer names a design-leaning role.",
+    "reason": "The page shows only a cookie banner with no job description, so the posting cannot be read; the title 'Design Engineer' counts as design-leaning engineering.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1225836,7 +1225836,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/aa55852bfa8a4617.jpg",
-    "read_at": "2026-11-16T11:22:13",
+    "read_at": "2026-11-16T11:20:50",
     "evidence": {
      "employer_posted": "2026-11-05"
     }
@@ -1240910,21 +1240910,21 @@
    "updated": "2026-11-05",
    "url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDU5NTQ1IDE0MQ?lang=en",
    "verdict": {
-    "role": "yes",
+    "role": "unclear",
     "place": "unclear",
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
-     "The page shows only EURES portal navigation and footer with no job description, so it is an empty shell and the role cannot be judged beyond the title.",
-     "the page says: \"Go to main content EN Search EURES (EURopean Employment Services) Home Jobseekers Employers Living & Working\""
+     "The page shows only the EURES portal menus and footer with no job description, so the posting cannot be read.",
+     "the page says: \"Go to main content\""
     ],
     "judged": true,
     "text": "job board's copy",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "DESIGNER, GRÁFICO OU DE COMUNICAÇÃO E MULTIMÉDIA",
-     "company": "",
+     "company": null,
      "seniority": "unstated",
      "remote": "unstated",
      "onsite_days": null,
@@ -1240932,13 +1240932,14 @@
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
+     "reports_to": null,
      "language": "unknown",
      "posted": null
     },
     "inferred": [],
     "read": "board",
     "read_url": "https://europa.eu/eures/portal/jv-se/jv-details/NTg5NDU5NTQ1IDE0MQ?lang=en",
-    "reason": "the page would not open on two runs · The page shows only EURES portal navigation and footer with no job description, so it is an empty shell and the role cannot be judged beyond the title.",
+    "reason": "The page shows only the EURES portal menus and footer with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "unknown",
@@ -1240947,7 +1240948,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/4a4c484108744ee6.jpg",
-    "read_at": "2026-11-16T11:22:13",
+    "read_at": "2026-11-16T11:20:58",
     "evidence": {
      "board_posted": "2026-11-05"
     }
@@ -1246807,17 +1246808,17 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
-     "The page is a list of job openings with no description for this posting, so it is not a single readable job posting.",
+     "The page is a list of current job openings with no single posting description, so it is unreadable; the listing only shows a tag for Senior UX Designer in Arlington, Virginia, Remote.",
      "the page says: \"Arlington, Virginia, United States, Remote\"",
      "the page says: \"Current Job Openings\""
     ],
     "judged": true,
     "text": "employer's page",
     "stage": "vision",
-    "confidence": "medium",
+    "confidence": "high",
     "fields": {
      "role": "Senior UX Designer",
      "company": "Excella",
@@ -1246835,7 +1246836,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://www.excella.com/careers/current-opportunities?gh_jid=4751867005",
-    "reason": "the page would not open on two runs · The page is a list of job openings with no description for this posting, so it is not a single readable job posting.",
+    "reason": "The page is a list of current job openings with no single posting description, so it is unreadable; the listing only shows a tag for Senior UX Designer in Arlington, Virginia, Remote.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1246844,7 +1246845,7 @@
     "if_employer": null,
     "found_by": "pool",
     "shot": "data/shots/e766c0fc1b6d44c0.employer.jpg",
-    "read_at": "2026-11-16T11:22:13",
+    "read_at": "2026-11-16T11:19:31",
     "evidence": {
      "board_posted": "2026-11-06"
     }
@@ -1249478,10 +1249479,10 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
-     "The page shows only menus, footer and chatbot text with no job description, so the posting cannot be read.",
+     "The page shows only site menus, footer and a chatbot; no job description is visible, so the posting is an empty shell.",
      "the page says: \"Skip to main content Talent Community ... Hi There! Are you interested in this job?\""
     ],
     "judged": true,
@@ -1249505,7 +1249506,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://careers.evercommerce.com/us/en/job/R-106620/EverPro-Product-Designer-Invoice-Simple-Remote-Canada",
-    "reason": "the page would not open on two runs · The page shows only menus, footer and chatbot text with no job description, so the posting cannot be read.",
+    "reason": "The page shows only site menus, footer and a chatbot; no job description is visible, so the posting is an empty shell.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1249514,7 +1249515,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/0c87577acc1b4cea.jpg",
-    "read_at": "2026-11-16T11:22:13",
+    "read_at": "2026-11-16T11:19:34",
     "evidence": {
      "board_posted": "2026-11-06"
     }
@@ -1273460,6 +1273461,87 @@
   },
   {
    "active": true,
+   "company": "SuperSummary",
+   "first_run": "2026-11-16T08:28:15+00:00",
+   "first_seen": "2026-11-16T08:28:15+00:00",
+   "id": "03d25cbe52bb4294",
+   "jdhash": "4757",
+   "last_seen": "2026-11-16T08:28:15+00:00",
+   "location": "United States",
+   "posted": "2026-11-10",
+   "remote": true,
+   "source": "workablesearch",
+   "sources": [
+    "uxjobs",
+    "workablesearch"
+   ],
+   "title": "Content Designer",
+   "updated": "2026-11-10",
+   "url": "https://jobs.workable.com/view/8hrLwotqUCUXBbkVhDFKDG/remote-content-designer-in-united-states-at-supersummary",
+   "workplace": "Remote",
+   "verdict": {
+    "role": "yes",
+    "place": "no",
+    "lane": "cut",
+    "cut": true,
+    "why": [
+     "Content design role with UX/product design focus, but the role is explicitly remote US-based only.",
+     "Portugal OUT · under the title: \"RemoteUnited StatesContract\"",
+     "Portugal OUT · body: \"Remote — US-based (location flexible within the United States).\""
+    ],
+    "judged": true,
+    "text": "employer's page",
+    "stage": "vision",
+    "confidence": "high",
+    "fields": {
+     "role": "Content Designer",
+     "company": "SuperSummary",
+     "seniority": "senior",
+     "remote": "remote",
+     "onsite_days": null,
+     "countries": [
+      "United States"
+     ],
+     "portugal_ok": "no",
+     "salary": null,
+     "years_xp": "5+",
+     "reports_to": "Head of Product",
+     "language": "English",
+     "posted": "Posted 6 days ago"
+    },
+    "inferred": [],
+    "read": "employer",
+    "read_url": "https://jobs.workable.com/view/8hrLwotqUCUXBbkVhDFKDG/remote-content-designer-in-united-states-at-supersummary",
+    "reason": "Content design role with UX/product design focus, but the role is explicitly remote US-based only.",
+    "open": "yes",
+    "language_ok": true,
+    "language": "English",
+    "quote": "Remote — US-based (location flexible within the United States).",
+    "signals": [
+     {
+      "quote": "RemoteUnited StatesContract",
+      "where": "under the title",
+      "kind": "explicit",
+      "says": "portugal_out"
+     },
+     {
+      "quote": "Remote — US-based (location flexible within the United States).",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
+    "if_employer": null,
+    "found_by": null,
+    "shot": "data/shots/03d25cbe52bb4294.jpg",
+    "read_at": "2026-11-16T12:22:42",
+    "evidence": {
+     "board_posted": "2026-11-10"
+    }
+   }
+  },
+  {
+   "active": true,
    "company": "Aquent",
    "first_run": "2026-11-16T08:28:15+00:00",
    "first_seen": "2026-11-16T08:28:15+00:00",
@@ -1276663,11 +1276745,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
-     "The page is the Aleido careers site listing many jobs, not a single posting with a description, so the page cannot be read as one job.",
-     "the page says: \"Senior UX Designer Aleido Tech · Göteborg · Hybrid\"",
+     "The page is the company's career site listing many jobs, not a single posting with a description; the Senior UX Designer entry is only a list item.",
+     "the page says: \"Aleido Tech · Göteborg · Hybrid\"",
      "the page says: \"Current job openings No matching jobs … All jobs … Aleido Sweden Senior UX Designer Aleido Tech · Göteborg · Hybrid\""
     ],
     "judged": true,
@@ -1276691,16 +1276773,16 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://aleidogroup.teamtailor.com/",
-    "reason": "the page would not open on two runs · The page is the Aleido careers site listing many jobs, not a single posting with a description, so the page cannot be read as one job.",
+    "reason": "The page is the company's career site listing many jobs, not a single posting with a description; the Senior UX Designer entry is only a list item.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "Senior UX Designer Aleido Tech · Göteborg · Hybrid",
+    "quote": "Aleido Tech · Göteborg · Hybrid",
     "signals": [],
     "if_employer": null,
     "found_by": "link",
     "shot": "data/shots/2b8420b964f74514.employer.jpg",
-    "read_at": "2026-11-16T11:22:13",
+    "read_at": "2026-11-16T11:19:48",
     "evidence": {
      "board_posted": "2026-11-06"
     }
@@ -1276949,8 +1277031,8 @@
    "verdict": {
     "role": null,
     "place": null,
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
      "the page could not be read in the browser",
      "the page says: \"Skip to main content Join Talent Network Join us, and we'll help you do your best work The job you are looking for may have closed. Powered by eightfold.ai #Wha\""
@@ -1276963,7 +1277045,7 @@
     "inferred": [],
     "read": "board",
     "read_url": "https://netapp.eightfold.ai/careers/job/45294939",
-    "reason": "the page would not open on two runs · the page could not be read in the browser",
+    "reason": "the page could not be read in the browser",
     "open": "unreadable",
     "language_ok": null,
     "language": null,
@@ -1276972,7 +1277054,7 @@
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/079092e9fd1d48c6.jpg",
-    "read_at": "2026-11-16T11:23:14",
+    "read_at": "2026-11-16T11:20:52",
     "evidence": {
      "board_posted": "2026-11-06"
     }
@@ -1277881,11 +1277963,11 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
-     "The page shows only site navigation and footer text with no job description, so the posting is an empty shell.",
-     "the page says: \"A new world of opportunity awaits. We stand ready to partner side by side with you.\""
+     "The page shows only site navigation and footer text with no job description, so the posting cannot be read.",
+     "the page says: \"Get personalized tech job recommendations based on your skills and experience.\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1277908,7 +1277990,7 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://careers.teksystems.com/us/en/job/JP-006404354/Design-Systems-Designer-Wearables",
-    "reason": "the page would not open on two runs · The page shows only site navigation and footer text with no job description, so the posting is an empty shell.",
+    "reason": "The page shows only site navigation and footer text with no job description, so the posting cannot be read.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
@@ -1277917,7 +1277999,7 @@
     "if_employer": null,
     "found_by": "careers",
     "shot": "data/shots/59f75dccc0ce4b66.employer.jpg",
-    "read_at": "2026-11-16T11:22:13",
+    "read_at": "2026-11-16T11:19:56",
     "evidence": {
      "board_posted": "2026-11-06"
     }
@@ -1315356,12 +1315438,12 @@
    "verdict": {
     "role": "unclear",
     "place": "unclear",
-    "lane": "cut",
-    "cut": true,
+    "lane": "unsure",
+    "cut": false,
     "why": [
-     "The page is a list of current job openings, not a single posting with a description; the Senior UX Designer entry only shows a location tag.",
-     "the page says: \"Arlington, Virginia, United States, Remote\"",
-     "the page says: \"Current Job Openings\""
+     "The page is a list of job openings, not a single posting with a description, so it is unreadable; the listing shows only a US-based remote tag.",
+     "Portugal OUT · body: \"Arlington, Virginia, United States, Remote\"",
+     "the page says: \"Current Job Openings Lead Consultant Data Scientist ... Lead JavaScript Engineer ... Senior UX Designer\""
     ],
     "judged": true,
     "text": "employer's page",
@@ -1315371,9 +1315453,11 @@
      "role": "Senior UX Designer",
      "company": "Excella",
      "seniority": "senior",
-     "remote": "unstated",
+     "remote": "remote",
      "onsite_days": null,
-     "countries": [],
+     "countries": [
+      "United States"
+     ],
      "portugal_ok": "unclear",
      "salary": null,
      "years_xp": null,
@@ -1315384,16 +1315468,23 @@
     "inferred": [],
     "read": "employer",
     "read_url": "https://www.excella.com/careers/current-opportunities?gh_jid=4751867005",
-    "reason": "the page would not open on two runs · The page is a list of current job openings, not a single posting with a description; the Senior UX Designer entry only shows a location tag.",
+    "reason": "The page is a list of job openings, not a single posting with a description, so it is unreadable; the listing shows only a US-based remote tag.",
     "open": "unreadable",
     "language_ok": true,
     "language": "English",
-    "quote": "Arlington, Virginia, United States, Remote",
-    "signals": [],
+    "quote": "Senior UX Designer Arlington, Virginia, United States, Remote",
+    "signals": [
+     {
+      "quote": "Arlington, Virginia, United States, Remote",
+      "where": "body",
+      "kind": "explicit",
+      "says": "portugal_out"
+     }
+    ],
     "if_employer": null,
     "found_by": null,
     "shot": "data/shots/9b712f95df3949f3.jpg",
-    "read_at": "2026-11-16T11:22:13",
+    "read_at": "2026-11-16T11:20:17",
     "evidence": {
      "employer_posted": "2026-11-06"
     }
