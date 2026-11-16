@@ -108,10 +108,17 @@ def by_email(rec, at=None, criteria_version=None, model=None):
     if url.lower().startswith(("http://", "https://")):
         return None
     to = url.split(":", 1)[-1].split("?")[0]
-    return {"id": rec["id"], "at": at, "criteria": criteria_version, "model": model, "pool_url": url,
-            "board": None, "employer": None, "found_by": None, "looked": [], "lane": "unsure",
-            "posting_open": "email", "read": None, "read_url": None, "apply_by_email": to, "stage": "render",
-            "reason": f"apply by email ({to}): JobRadar never opens email links, so nothing was read"}
+    v = {"id": rec["id"], "at": at, "criteria": criteria_version, "model": model, "pool_url": url,
+         "board": None, "employer": None, "found_by": None, "looked": [], "posting_open": "email",
+         "read": None, "read_url": None, "apply_by_email": to}
+    # There is no page, so CL's place rule is applied to what the pool holds:
+    # none of remote, Lisbon, Portugal, Europe, EMEA there is a cut, as anywhere else.
+    held = " ".join(str(rec.get(k) or "") for k in ("title", "location", "workplace", "country", "restrictions", "timezones"))
+    if rec.get("remote") is not True and not PLACE.search(held):
+        return {**v, "lane": "cut", "stage": "cl", "place_verdict": "no",
+                "reason": f"location: {str(rec.get('location') or 'no place given')[:60]} - none of remote, Lisbon, Portugal, Europe, EMEA (apply by email, {to})"}
+    return {**v, "lane": "unsure", "stage": "render",
+            "reason": f"apply by email ({to}): the place may fit, but there is no page to read - JobRadar never opens email links"}
 
 
 DOU = re.compile(r"(^|[/.])(dou\.ua|djinni\.co)\b", re.I)     # his cuts: DOU (11-07), Djinni (11-07)
