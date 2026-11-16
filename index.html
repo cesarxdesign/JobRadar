@@ -154,6 +154,7 @@ h1{font-size:17px;margin:0;letter-spacing:-.2px}
   <span class="spacer"></span>
   <label class="safari" title="job links open in Safari; the board stays in Chrome because only Chrome can read and write the routing file"><input type="checkbox" id="f-safari"> Safari</label>
   <label class="safari" title="hide the preview on the right and let the list take the full width"><input type="checkbox" id="f-pane"> Hide preview</label>
+  <label class="safari" title="hide every role whose posting or form is on Workable, while Workable is blocking this Mac for too many requests"><input type="checkbox" id="f-noworkable"> Hide Workable</label>
   <select id="f-sort" title="order by the posting's age">
     <option value="new">newest first</option>
     <option value="old">oldest first</option>
@@ -443,11 +444,17 @@ function sortRows(rows){
 // there while this page stays put. Per-browser setting, off by default.
 let SAFARI = true;      // on unless he switched it off
 try { SAFARI = localStorage.getItem("radar-safari") !== "0"; } catch (e) {}
+// Hide Workable (his ask, 2026-11-16): every click on a Workable link while it
+// is blocking this Mac ("too many requests") starts its cooldown again.
+let NOWORKABLE = false;
+try { NOWORKABLE = localStorage.getItem("radar-noworkable") === "1"; } catch (e) {}
+const isWorkable = r => /workable\.com/i.test([r.url, r.apply_url, r.verdict && r.verdict.read_url].join(" "));
 function outbound(u){
   return SAFARI && /^https:\/\//i.test(u || "") ? "x-safari-" + u : u;
 }
 
 function matches(r){
+  if(NOWORKABLE && isWorkable(r)) return false;
   // A role whose posting carries no date has no place in a window of days:
   // it sits under "?" (and under "all time"), never under "last 1 day".
   // Bands, not ceilings: "1 week" is the last 7 days without the last day, "1
@@ -476,6 +483,13 @@ function wireFilters(){
     pn.checked=hide; sp.classList.toggle("nopane",hide);
     pn.onchange=()=>{sp.classList.toggle("nopane",pn.checked);
       try{localStorage.setItem("radar-nopane",pn.checked?"1":"0");}catch(e){}};
+  }
+  const nw=$("f-noworkable");
+  if(nw){
+    nw.checked=NOWORKABLE;
+    nw.onchange=()=>{NOWORKABLE=nw.checked;
+      try{localStorage.setItem("radar-noworkable",NOWORKABLE?"1":"0");}catch(e){}
+      render();};
   }
   const sf=$("f-safari");
   if(sf){
