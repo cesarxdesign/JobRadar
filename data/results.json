@@ -1,10 +1,10 @@
 {
  "jd": {},
- "generated_at": "2026-11-16T11:23:10+00:00",
- "built_at": "2026-11-16T12:25+00:00",
- "run_id": "2026-11-16T11:23:10+00:00",
+ "generated_at": "2026-11-16T13:12:08+00:00",
+ "built_at": "2026-11-16T13:32+00:00",
+ "run_id": "2026-11-16T13:12:08+00:00",
  "last_full": "2026-11-16T08:28:15+00:00",
- "last_partial": "2026-11-16T11:23:10+00:00",
+ "last_partial": "2026-11-16T13:12:08+00:00",
  "criteria": "2026-09-03.1",
  "model": "haiku",
  "counts": {
@@ -18379,8 +18379,10 @@
   "08577b63c7724e21"
  ],
  "sources": {
-  "ok": 1039,
-  "failed": {}
+  "ok": 0,
+  "failed": {
+   "workable/positiv-cohort": "HTTPError: HTTP Error 429: Too Many Requests"
+  }
  },
  "roles": [
   {
