@@ -1,7 +1,7 @@
 {
  "jd": {},
  "generated_at": "2026-11-16T13:12:08+00:00",
- "built_at": "2026-11-17T04:14+00:00",
+ "built_at": "2026-11-17T05:15+00:00",
  "run_id": "2026-11-16T13:12:08+00:00",
  "last_full": "2026-11-16T08:28:15+00:00",
  "last_partial": "2026-11-16T13:12:08+00:00",
@@ -18372,7 +18372,12 @@
   "6fc2d25aedd04689",
   "c108baa2476b4c24",
   "beacd9eef8344b03",
+  "2dfe0aa08dee4fea",
+  "6c4c1d6a04eb458f",
+  "603ffe6654d64ac5",
+  "68d4d0d607ea4a7b",
   "86923b58482746dd",
+  "d88751b8c1884b18",
   "1f4456c487af4243"
  ],
  "unread": [
@@ -1175943,6 +1175948,16 @@
     "read_at": "2026-11-16T10:48:24",
     "evidence": {
      "employer_posted": "2026-11-13"
+    },
+    "audit": {
+     "at": "2026-11-17T05:12:27",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "unclear",
+     "place": null,
+     "reason": "The page shows only site navigation and footer with no job description, so the posting content is an empty shell; title alone suggests an engineering role.",
+     "signals": []
     }
    }
   },
@@ -1267682,6 +1267697,16 @@
     "read_at": "2026-11-16T10:46:34",
     "evidence": {
      "board_posted": "2026-11-14"
+    },
+    "audit": {
+     "at": "2026-11-17T05:13:35",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "unclear",
+     "place": null,
+     "reason": "The page shows only the site menu and office addresses, with no job description, so the posting itself cannot be read.",
+     "signals": []
     }
    }
   },
@@ -1276727,6 +1276752,29 @@
     "read_at": "2026-11-16T11:19:48",
     "evidence": {
      "board_posted": "2026-11-06"
+    },
+    "audit": {
+     "at": "2026-11-17T05:11:01",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": "unclear",
+     "reason": "a place is named, and only company-wide text suggests anywhere wider · Remote product design role tagged Brazil; the page gives time-zone hours (UTC+0 includes Portugal) but doesn't state which countries are eligible.",
+     "signals": [
+      {
+       "quote": "Brazil",
+       "where": "under the title",
+       "kind": "tag",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Our global team operates across North America, Latin America, South Africa, and Europe in a remote-first setup.",
+       "where": "body",
+       "kind": "generic",
+       "says": "portugal_in"
+      }
+     ]
     }
    }
   },
@@ -1281290,6 +1281338,16 @@
     "read_at": "2026-11-16T11:33:27",
     "evidence": {
      "board_posted": "2026-10-30"
+    },
+    "audit": {
+     "at": "2026-11-17T05:11:57",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "unclear",
+     "place": null,
+     "reason": "The page shows only site navigation and footer with no job description, so the posting cannot be read.",
+     "signals": []
     }
    }
   },
@@ -1300548,6 +1300606,35 @@
     "read_at": "2026-11-16T11:32:44",
     "evidence": {
      "employer_posted": "2026-11-02"
+    },
+    "audit": {
+     "at": "2026-11-17T05:10:59",
+     "criteria": "2026-10-05.5",
+     "lane": "unsure",
+     "agrees": false,
+     "role": "yes",
+     "place": "unclear",
+     "reason": "remote from a list of countries the page does not show · Head of Design is a design leadership role, but it is posted as remote in the United Kingdom only, which excludes Portugal.",
+     "signals": [
+      {
+       "quote": "ProductRemote, United Kingdom",
+       "where": "under the title",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Remote - United Kingdom",
+       "where": "opening paragraph",
+       "kind": "explicit",
+       "says": "portugal_out"
+      },
+      {
+       "quote": "Candidates must be legally authorized to work in the country where the role is based at the time of hire and must maintain that authorization for the duration of employment. The company does not provide visa sponsorship or immigration support for this position.",
+       "where": "footer or small print",
+       "kind": "explicit",
+       "says": "portugal_maybe"
+      }
+     ]
     }
    }
   },
