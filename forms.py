@@ -29,7 +29,6 @@ import render
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = f"{ROOT}/data/forms.json"
-RR = os.path.expanduser("~/Desktop/RadarRouting.json")
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36")
 
@@ -229,19 +228,10 @@ def email_form(to):
 
 
 # ---------- which roles ----------
-def decided():
-    try:
-        rr = json.load(open(RR))
-        return {d["id"] for d in rr.get("decisions") or [] if d.get("decision")}
-    except Exception:
-        return set()
-
-
 def open_roles():
-    """Open roles he has not acted on, newest first: the board's own Open tab."""
+    """Open roles, newest first. Never his routing file: what he applied to is filtered on the board (his rule, 2026-11-17)."""
     d = json.load(open(f"{ROOT}/data/results.json"))
-    gone = decided()
-    rows = [r for r in d["roles"] if (r.get("verdict") or {}).get("lane") == "open" and r.get("active", True) and r["id"] not in gone]
+    rows = [r for r in d["roles"] if (r.get("verdict") or {}).get("lane") == "open" and r.get("active", True)]
     return sorted(rows, key=lambda r: str(r.get("updated") or r.get("posted") or r.get("first_seen") or ""), reverse=True)
 
 

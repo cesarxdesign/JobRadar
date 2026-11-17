@@ -1203,14 +1203,14 @@ document.querySelectorAll(".tab[data-lane]").forEach(t=>t.onclick=()=>{
 
 // Data reloads without the page: selection, tab and routing all stay.
 function load(){
-  return fetch("data/results.json?t="+Date.now()).then(r=>r.json()).then(d=>{
+  return fetch("data/board.json?t="+Date.now()).then(r=>r.json()).then(d=>{
     DATA=d;
     // What is on the board is only what has been READ on its own page. The
     // rest of the design-titled roles are waiting their turn, and the line
     // says how many, so a short lane is never mistaken for a short market.
     stamp();
     render();
-  }).catch(()=>{$("stamp").textContent="no data/results.json yet — run pool.py, judge.py, results.py";});
+  }).catch(()=>{$("stamp").textContent="no data/board.json yet — run results.py";});
 }
 wireFilters();
 $("batch").onclick=()=>INBATCH?completeBatch():setBatch(true);

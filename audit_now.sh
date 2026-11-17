@@ -7,8 +7,7 @@ echo; echo "=== retry + second read $(date '+%F %H:%M') ==="
 echo "-- VISION: not read, second try"; python3 vision.py --new | grep -v "^  \[" | tail -5
 echo "-- VISION: second read of every rejection not yet checked"; python3 vision.py --audit --all | grep -v "^  \[" | tail -40
 python3 results.py | head -1 | cut -c1-260
-python3 poolparts.py split >/dev/null
-git add data/pool[0-9]*.json data/results.json data/vision.json data/shipped.json data/vision_runs.jsonl 2>/dev/null
+git add data/board.json   # only the roles that passed go to git (his rule, 2026-11-17)
 git diff --cached --quiet || { git commit -q -m "retry and audit $(date '+%F %H:%M')
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q && echo "pushed $(date +%H:%M)"; }

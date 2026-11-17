@@ -4266,25 +4266,10 @@ SLIM = ("id", "title", "company", "source", "sources", "url",
 
 
 def keep_whole():
-    """Ids that stay whole whatever their title: anything vision has read and
-    anything he has decided on."""
-    ids = set()
+    """Ids that stay whole whatever their title: anything VISION has read.
+    Never his routing file: the run does not depend on it in any way (his rule, 2026-11-17)."""
     v = ROOT / "data" / "vision.json"
-    if v.exists():
-        ids |= set(json.loads(v.read_text()))
-    for rr in (type(ROOT).home() / "Desktop" / "RadarRouting.json",
-               ROOT / "data" / "backup.RadarRouting.json"):
-        if rr.exists():
-            try:
-                doc = json.loads(rr.read_text())
-            except OSError as e:
-                # his decisions can't be read (the 23:00 job has no Desktop access): skip the
-                # tidy-up, never the save. New jobs are saved whatever happens here.
-                print(f"POOL: {rr} can't be read ({e.strerror}); nothing slimmed this run", flush=True)
-                return None
-            ids |= {d.get("id") for d in doc.get("decisions", [])}
-            ids |= set(doc.get("favorites") or [])
-    return ids
+    return set(json.loads(v.read_text())) if v.exists() else set()
 
 
 def slim(jobs):
@@ -4292,8 +4277,6 @@ def slim(jobs):
     Returns (jobs, ids slimmed, rows dropped)."""
     import judge
     whole, out, slimmed, dropped = keep_whole(), [], set(), 0
-    if whole is None:
-        return jobs, slimmed, dropped
     for j in jobs:
         if j["id"] in whole or judge.l1(j.get("title")) is None:
             out.append(j)

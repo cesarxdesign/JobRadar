@@ -26,6 +26,9 @@ ORIGINALS_FILE = ROOT / "data" / "originals.json"
 LINKS_FILE = ROOT / "data" / "links.json"
 VERDICTS_FILE = ROOT / "data" / "verdicts.json"
 RESULTS_FILE = ROOT / "data" / "results.json"
+# What goes to git and the live board: only the roles that passed (his rule, 2026-11-17).
+# results.json stays on this Mac for the run's own steps.
+BOARD_FILE = ROOT / "data" / "board.json"
 JD_FILE = ROOT / "data" / "jd.json"                   # descriptions, keyed by id
 VISION_FILE = ROOT / "data" / "vision.json"           # the page, read in a browser
 HINTS_FILE = ROOT / "data" / "applied_hints.json"     # local only, from match.py
@@ -425,6 +428,17 @@ def build(pool_doc, verdicts_doc, hints=None, jd=None, originals=None, vision=No
     }
 
 
+def board(built):
+    """The live board's file: the roles that passed - Open, Portugal, Unsure - and the few
+    still waiting on him (a second read that disagreed with a cut, a page that never opened).
+    Cut and closed roles never leave this Mac."""
+    keep = {i for lane in built["lanes"].values() for i in lane} | set(built["review"]) \
+        | set(built["unread"]) | set(built["agency"])
+    return {**{k: v for k, v in built.items() if k not in ("roles", "cut", "closed", "vcut")},
+            "cut": [], "closed": [], "vcut": [],
+            "roles": [r for r in built["roles"] if r["id"] in keep]}
+
+
 def remember_shipped(built):
     """A role is "seen" once it has stood in one of the three lanes. Cuts are
     shipped so the board can explain them, but no tab shows them, so they are
@@ -454,6 +468,7 @@ def main():
                   json.loads(VISION_FILE.read_text()) if VISION_FILE.exists() else {})
     fresh = remember_shipped(built)
     RESULTS_FILE.write_text(json.dumps(built, indent=1, ensure_ascii=False))
+    BOARD_FILE.write_text(json.dumps(board(built), ensure_ascii=False))
     print(f"RESULTS: wrote {RESULTS_FILE} - {built['counts']}")
     print(f"  RESULTS: {fresh} roles he had never been shown before")
     return 0

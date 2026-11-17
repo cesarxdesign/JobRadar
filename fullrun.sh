@@ -5,7 +5,7 @@
 #   POOL    a full pass, then the links SOURCE finds, with FETCH and CL on what comes through CTF
 #   VISION  1000 at a time, newest first, until the queue is empty; waits out the usage limit by itself
 #   then the application forms of the Open roles, and his drafts for their questions (forms.py, answers.py)
-# then the second read of rejections, and the battery. RESULTS is published every 20 minutes and after every pull.
+# then the second read of rejections. Nothing here reads his routing file (RR); the battery needs it, so it runs by hand. RESULTS is published every 20 minutes and after every pull.
 # One at a time: it leaves if a run is already going. Log: data/nightly.log
 cd "$(dirname "$0")" || exit 1
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
@@ -68,5 +68,4 @@ publish
 # the application forms of the Open roles (no tokens), then his drafts for their questions, only now the queue is empty
 echo "-- forms: the questions on each Open role's application  $(date +%H:%M)"; python3 forms.py 2>&1 | tail -1
 echo "-- answers: drafts for those questions, on Sonnet  $(date +%H:%M)"; python3 answers.py 2>&1 | grep -v "^  \[" | tail -3
-python3 battery.py | head -4
 echo "=== run done $(date '+%F %H:%M'): the queue is empty ==="

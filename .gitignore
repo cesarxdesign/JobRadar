@@ -86,3 +86,7 @@ data/answers.json.tmp
 .fullrun.running.sh
 .fullrun.resume.sh
 data/.publishing
+# Only the roles that passed go to git (his rule, 2026-11-17): everything else the run makes stays on this Mac.
+data/*
+!data/board.json
+!data/fixtures/

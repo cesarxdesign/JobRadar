@@ -6,7 +6,7 @@
 cd "$(dirname "$0")"
 publish() {
   python3 results.py >/dev/null 2>&1 || return
-  git add data/results.json data/vision.json data/shipped.json data/vision_runs.jsonl 2>/dev/null
+  git add data/board.json   # only the roles that passed go to git (his rule, 2026-11-17)
   git diff --cached --quiet || { git commit -q -m "run $(date +%F\ %H:%M): roles read by vision
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"; git push -q; }
