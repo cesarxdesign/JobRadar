@@ -43,6 +43,7 @@ MAX_PAGES = 400               # per address pattern per snapshot
 # and nothing is dropped: every link is due again the next day.
 RECHECK_DAYS = 0
 # systems that refuse a crowd: this many askers at a time, with a pause between
+STOP_AT_FIRST = {"workable"}   # a 429 ends its check for the night (his call, 2026-11-17)
 SLOW = {k: threading.Semaphore(2) for k in ("dover", "workable", "join", "rippling", "personio")}
 WORKERS = 32          # was 12; VISION is to be the bottleneck, not this (2026-10-06)
 
@@ -444,11 +445,14 @@ def check(boards, minutes=None):
     due.sort(key=lambda x: boards[x[0]][x[1]].get("checked") or "")
     print(f"SOURCE: check: {len(due)} links due" + (f", {minutes} minutes allowed" if minutes else ""), flush=True)
     lock, n, added, stop = threading.Lock(), [0], [], [False]
+    refused = set()
 
     def one(item):
         if stop[0]:
             return
         sys_, k = item
+        if sys_ in refused:
+            return            # left due, asked again next night
         rec = boards[sys_][k]
         if sys_ in SLOW:
             SLOW[sys_].acquire()
@@ -477,7 +481,16 @@ def check(boards, minutes=None):
                 # the cause stays visible on the record: 1,147 BambooHR boards
                 # fail without an HTTP code (JSONDecodeError) and were never marked
                 rec["error"] = type(e).__name__
-                if getattr(e, "code", None) in (403, 429, 503):
+                if getattr(e, "code", None) == 429 and sys_ in STOP_AT_FIRST:
+                    # Workable bans the whole connection (Cloudflare 1015) and every ask
+                    # while banned makes it longer: 9 hours on 2026-11-17 after 6 hours
+                    # of asking. First refusal ends its check; the rest stay due (his call).
+                    with lock:
+                        if sys_ not in refused:
+                            refused.add(sys_)
+                            print(f"SOURCE: {sys_} refused (429) at {time.strftime('%H:%M')}: its check stops here, "
+                                  f"the rest is asked next night", flush=True)
+                elif getattr(e, "code", None) in (403, 429, 503):
                     time.sleep(8)
         finally:
             if sys_ in SLOW:
