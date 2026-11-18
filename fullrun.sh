@@ -2,7 +2,8 @@
 # A full run, started by hand (he says "run" in chat). This is the loop that ran for real on
 # 2026-10-06, 16:48 to 21:56: 4,936 jobs settled, 68% of them without a token.
 #   SOURCE  every link opened, in the background
-#   POOL    a full pass, then the links SOURCE finds, with FETCH and CL on what comes through CTF
+#   POOL    a full pass, every job saved the moment it is found; FETCH and CL run on what it saves while it pulls,
+#           then the links SOURCE finds
 #   VISION  1000 at a time, newest first, until the queue is empty; waits out the usage limit by itself
 #   then the application forms of the Open roles, and his drafts for their questions (forms.py, answers.py)
 # then the second read of rejections. Nothing here reads his routing file (RR); the battery needs it, so it runs by hand. RESULTS is published every 20 minutes and after every pull.
@@ -32,7 +33,15 @@ WATCH=$!
 (
   while pgrep -f "pool.py" >/dev/null; do sleep 15; done
   T0=$(date +%s); echo "-- POOL: every link with a design job, and every job board  $(date +%H:%M)"
-  python3 pool.py 2>&1 | grep -v "^  \[\|^   *…" | tail -4 | cut -c1-240
+  # POOL saves every job the moment it finds it and folds them into the pool as it goes;
+  # FETCH and CL read what it has saved while it keeps pulling, and VISION reads what they pass
+  ( python3 pool.py 2>&1 | grep -v "^  \[\|^   *…\|POOL saved" | tail -4 | cut -c1-240 ) &
+  PJOB=$!
+  while kill -0 $PJOB 2>/dev/null; do
+    sleep 60
+    pgrep -f "vision.py --fetch" >/dev/null || python3 vision.py --fetch --new 2>&1 | grep -v "^  \[" | tail -1 | cut -c1-200
+  done
+  wait $PJOB
   echo "   POOL full pass: $(( ($(date +%s) - T0) / 60 )) min"
   python3 limit.py 900 python3 discover.py 2>&1 | tail -2 | cut -c1-200
   while :; do

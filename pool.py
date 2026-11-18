@@ -13,6 +13,7 @@ sha1(company|title) every run; 21 roles ended up with more than one id.
     python3 pool.py --dry        # scrape, report, write nothing
 """
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -4025,6 +4026,27 @@ SOURCE_LIMIT = 25 * 60        # seconds one source may take
 BOARDS_AT_ONCE = 24           # company boards read at the same time
 LEFT_BEHIND = []              # sources still running when their time was up
 
+# Every posting goes to disk the moment it is found (his rule, 2026-11-18: "AS SOON AS A SINGLE
+# JOB IS FOUND, SAVE IT"). The scrape appends one line per posting to the journal; a second
+# process (pool.py --fold) folds the journal into pool.json and jd.json again and again while
+# the scrape runs, so FETCH, CL and VISION read new roles while POOL is still pulling. Only
+# the last fold, once every source has been read, marks roles gone. A run that breaks leaves
+# its journal, and the next POOL folds it in first: nothing found is ever lost.
+JOURNAL = ROOT / "data" / "pool.found.jsonl"
+FOLD_LOCK = ROOT / "data" / "pool.lock"
+_journal = {"f": None}
+import threading as _threading
+_journal_lock = _threading.Lock()
+
+
+def journal(row):
+    """One posting, saved now."""
+    line = json.dumps({"r": row}, ensure_ascii=False) + "\n"
+    with _journal_lock:
+        if _journal["f"] is not None:
+            _journal["f"].write(line)
+            _journal["f"].flush()
+
 
 def scrape(sources, on_batch=None):
     """Every source, failing soft, reporting as it goes.
@@ -4050,7 +4072,9 @@ def scrape(sources, on_batch=None):
         """Consume a reader, heartbeating inside slow ones."""
         rows, t0, last = [], time.monotonic(), time.monotonic()
         for r in gen:
-            rows.append(normalise(r, label))
+            row = normalise(r, label)
+            journal(row)
+            rows.append(row)
             now = time.monotonic()
             if now - t0 > SOURCE_LIMIT:
                 # One slow board held a whole night's scrape. It fails soft:
@@ -4289,6 +4313,8 @@ def slim(jobs):
 
 
 def main():
+    if "--fold" in sys.argv:
+        return fold()
     if "--skip" in sys.argv:
         SKIP.update(sys.argv[sys.argv.index("--skip") + 1].split(","))
         print(f"POOL: skipping (roles kept active): {', '.join(sorted(SKIP))}", flush=True)
@@ -4345,68 +4371,173 @@ def main():
         ckpt.write_text(json.dumps({"generated_at": stamp, "run_id": run_id,
                                     "found": len(rows)}, indent=1))
 
-    found, errors = ([], {}) if "--slim" in sys.argv else scrape(sources, on_batch=save)
-    # --slim: no scrape, the pool on disk rewritten slim. update() would read
-    # an empty scrape as every posting having gone.
-    jobs, minted = (previous, 0) if "--slim" in sys.argv else update(previous, found, run_id, stamp, failed=set(errors), keep_rest=NEW_BOARDS is not None)
-    active = sum(1 for j in jobs if j["active"])
-    print(f"found {len(found)} postings -> {len(jobs)} roles "
-          f"({active} active, {minted} newly minted ids)", flush=True)
+    if "--slim" in sys.argv or "--dry" in sys.argv:
+        # --slim: no scrape, the pool on disk rewritten slim. update() would read
+        # an empty scrape as every posting having gone. --dry: nothing written.
+        found, errors = ([], {}) if "--slim" in sys.argv else scrape(sources, on_batch=save)
+        jobs, minted = (previous, 0) if "--slim" in sys.argv else update(previous, found, run_id, stamp, failed=set(errors), keep_rest=NEW_BOARDS is not None)
+        active = sum(1 for j in jobs if j["active"])
+        print(f"found {len(found)} postings -> {len(jobs)} roles "
+              f"({active} active, {minted} newly minted ids)", flush=True)
+        if "--dry" in sys.argv:
+            print("  --dry: nothing written")
+            return 0
+        previous_jd = json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {}
+        rc, _ = write_pool(jobs, previous_jd, stamp, run_id, len(found), errors, runs_key=None)
+        return rc
 
-    thin = [k for k, v in errors.items()]
-    if thin:
-        print(f"  {len(thin)} sources failed soft, their roles kept as they were: "
-              + ", ".join(f"{k} ({v[:40]})" for k, v in sorted(errors.items())), flush=True)
-    if "--dry" in sys.argv:
-        print("  --dry: nothing written")
-        return 0
+    import subprocess
+    del previous                          # the folder reads the pool itself
+    if JOURNAL.exists():
+        print("POOL: a run that broke left its postings in the journal; folding them in first", flush=True)
+        rc = subprocess.run([sys.executable, str(Path(__file__).resolve()), "--fold"]).returncode
+        if rc:
+            print("ABORT - the journal of the last run could not be folded in; nothing scraped", file=sys.stderr)
+            return rc
+    with _journal_lock:
+        _journal["f"] = open(JOURNAL, "w", encoding="utf-8")
+        _journal["f"].write(json.dumps({"run": run_id, "stamp": stamp, "pid": os.getpid()}) + "\n")
+        _journal["f"].flush()
+    folder = subprocess.Popen([sys.executable, str(Path(__file__).resolve()), "--fold"])
+    # If the scrape breaks, what it found is in the journal: the folder sees the
+    # scrape gone, folds it all in, and calls nothing gone.
+    found, errors = scrape(sources, on_batch=save)
+    with _journal_lock:
+        _journal["f"].write(json.dumps({"done": True, "errors": errors, "skip": sorted(SKIP),
+                                        "new_boards": NEW_BOARDS is not None,
+                                        "found": len(found)}, ensure_ascii=False) + "\n")
+        _journal["f"].close()
+        _journal["f"] = None
+    return folder.wait()
 
-    # Read the previous descriptions NOW, not at start: a judge run resolving
-    # originals during a 40-minute scrape writes jd.json too, and a snapshot
-    # taken at start would overwrite its work.
-    previous_jd = json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {}
+
+def write_pool(jobs, previous_jd, stamp, run_id, found_n, errors, runs_key, quiet=False):
+    """Slim, carry descriptions forward, and write pool.json and jd.json atomically.
+    Returns (exit code, the jd written)."""
+    say = (lambda *a, **k: None) if quiet else print
     jobs, slimmed, dropped = slim(jobs)
     kept = {j["id"] for j in jobs} - slimmed
     previous_jd = {k: v for k, v in previous_jd.items() if k in kept}
-    print(f"  CUT: {len(slimmed)} active postings kept as one slim line, "
-          f"{dropped} dead ones dropped", flush=True)
+    say(f"  CUT: {len(slimmed)} active postings kept as one slim line, "
+        f"{dropped} dead ones dropped", flush=True)
     jd, carried, lost = merge_jd(jobs, previous_jd)
     if lost:
         print(f"ABORT - {len(lost)} active roles would lose their description; "
               f"nothing written", file=sys.stderr)
-        return 3
+        return 3, None
     if carried:
-        print(f"  {carried} descriptions carried forward for roles not fetched this run",
-              flush=True)
+        say(f"  {carried} descriptions carried forward for roles not fetched this run",
+            flush=True)
     # The board's top line: when every source was last read, and when only some were.
-    if "--slim" not in sys.argv:
+    if runs_key:
         runs_f = ROOT / "data" / "runs.json"
         try:
             runs = json.loads(runs_f.read_text())
         except Exception:
             runs = {}
-        runs["partial" if (SKIP or NEW_BOARDS is not None) else "full"] = stamp
+        runs[runs_key] = stamp
         runs_f.write_text(json.dumps(runs))
     tmp = POOL_FILE.with_suffix(".tmp")
     tmp.write_text(contracts.pool_text({"generated_at": stamp, "run_id": run_id,
                                         "adapter_version": ADAPTER_VERSION,
-                                        "sources": {"ok": len(found), "failed": errors}},
+                                        "sources": {"ok": found_n, "failed": errors}},
                                        jobs))
     tmp.replace(POOL_FILE)                 # atomic - never a half-written pool
     tmpjd = JD_FILE.with_suffix(".tmp")
     tmpjd.write_text(json.dumps(jd, ensure_ascii=False))
     tmpjd.replace(JD_FILE)
-    ckpt.unlink(missing_ok=True)
-    print(f"wrote {POOL_FILE} ({POOL_FILE.stat().st_size//1024}K) "
-          f"and {JD_FILE} ({JD_FILE.stat().st_size//1024}K)", flush=True)
+    say(f"wrote {POOL_FILE} ({POOL_FILE.stat().st_size//1024}K) "
+        f"and {JD_FILE} ({JD_FILE.stat().st_size//1024}K)", flush=True)
     # GitHub refuses files over 100MB. Cesar's call (2026-09-12): one file
     # until it is an actual problem, and a warning at 95MB.
     mb = POOL_FILE.stat().st_size / 1048576
-    if mb > 95:
+    if mb > 95 and not quiet:
         print(f"\nWARNING - pool.json is {mb:.0f}MB. GitHub rejects files over 100MB; "
               f"the push will fail soon. Shard it or stop tracking it (see BACKLOG.md).",
               file=sys.stderr, flush=True)
-    return 0
+    return 0, jd
+
+
+def fold():
+    """pool.py --fold: the journal into pool.json and jd.json, again and again.
+
+    Started by the scrape. Each fold applies every posting the journal holds so
+    far, only adding and updating: nothing is called gone. The fold after the
+    scrape's last line (every source read) is the one that marks roles gone,
+    exactly as a whole run always did. A journal whose scrape died without that
+    line is folded in, adding only, and nothing is called gone. Ids stay the
+    same from fold to fold: each fold starts from the roles the last one made."""
+    import contextlib, fcntl, io
+    lock = open(FOLD_LOCK, "w")
+    fcntl.flock(lock, fcntl.LOCK_EX)       # one folder at a time
+    if not JOURNAL.exists():
+        return 0
+    previous = contracts.load_pool(POOL_FILE)["jobs"] if POOL_FILE.exists() else []
+    jd = json.loads(JD_FILE.read_text()) if JD_FILE.exists() else {}
+    f = open(JOURNAL, "rb")
+    head = json.loads(f.readline())
+    run_id, stamp, writer = head["run"], head["stamp"], head.get("pid")
+    rows, done, pos, folded, n = [], None, f.tell(), 0, 0
+
+    def alive(pid):
+        try:
+            os.kill(pid, 0)
+            return True
+        except (ProcessLookupError, TypeError):
+            return False
+        except PermissionError:
+            return True
+
+    while True:
+        f.seek(pos)
+        while True:
+            line = f.readline()
+            if not line.endswith(b"\n"):
+                break                       # a line still being written: read next time
+            pos = f.tell()
+            d = json.loads(line)
+            if "r" in d:
+                rows.append(d["r"])
+            elif d.get("done"):
+                done = d
+        broken = done is None and not alive(writer)
+        final = done is not None
+        if len(rows) == folded and not (final or broken):
+            time.sleep(2)
+            continue
+        if final:
+            SKIP.update(done.get("skip") or [])
+        keep_rest = not final or bool(done.get("new_boards"))
+        failed = set((done or {}).get("errors") or {})
+        quiet = not final
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out) if quiet else contextlib.nullcontext():
+            jobs, minted = update(previous, rows, run_id, stamp, failed=failed, keep_rest=keep_rest)
+        previous = jobs
+        if final:
+            active = sum(1 for j in jobs if j["active"])
+            print(f"found {len(rows)} postings -> {len(jobs)} roles "
+                  f"({active} active, {minted} newly minted ids)", flush=True)
+            thin = list((done.get("errors") or {}).items())
+            if thin:
+                print(f"  {len(thin)} sources failed soft, their roles kept as they were: "
+                      + ", ".join(f"{k} ({v[:40]})" for k, v in sorted(thin)), flush=True)
+        key = ("partial" if (SKIP or done.get("new_boards")) else "full") if final else None
+        rc, wrote = write_pool(jobs, jd, stamp, run_id, len(rows), (done or {}).get("errors") or {},
+                               runs_key=key, quiet=quiet)
+        if rc and final:
+            return rc
+        if wrote is not None:
+            jd = wrote
+            n += 1
+            if quiet:
+                print(f"   POOL saved {len(rows)} postings found so far ({time.strftime('%H:%M')})", flush=True)
+        folded = len(rows)
+        if final or broken:
+            JOURNAL.unlink(missing_ok=True)
+            if broken:
+                print(f"   POOL: the scrape stopped without finishing; its {len(rows)} postings are in the pool, nothing called gone", flush=True)
+            return 0
 
 
 if __name__ == "__main__":
