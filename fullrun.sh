@@ -32,7 +32,7 @@ WATCH=$!
 (
   while pgrep -f "pool.py" >/dev/null; do sleep 15; done
   T0=$(date +%s); echo "-- POOL: every link with a design job, and every job board  $(date +%H:%M)"
-  python3 limit.py 9000 python3 pool.py 2>&1 | grep -v "^  \[\|^   *…" | tail -4 | cut -c1-240
+  python3 pool.py 2>&1 | grep -v "^  \[\|^   *…" | tail -4 | cut -c1-240
   echo "   POOL full pass: $(( ($(date +%s) - T0) / 60 )) min"
   python3 limit.py 900 python3 discover.py 2>&1 | tail -2 | cut -c1-200
   while :; do
