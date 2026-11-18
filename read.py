@@ -134,6 +134,10 @@ def parse(text):
     return json.loads(text[i:j + 1])
 
 
+# His call, 2026-11-18: nothing in JobRadar may reach his Claude subscription any more.
+CUT = "JobRadar no longer calls Claude (cut 2026-11-18, his call). LocalRadar does the reading: ~/Claude/LocalRadar"
+
+
 class Overloaded(Exception):
     """The API is failing, not this posting. Retrying harder makes it worse."""
 
@@ -143,50 +147,8 @@ GIVE_UP_AFTER = 8           # consecutive API failures -> stop the whole run
 
 
 def ask(prompt, tries=2):
-    """One posting, judged.
-
-    Two failure kinds, treated differently:
-      - unparseable reply: the model wandered. Retrying is cheap and usually
-        works, so retry once, immediately.
-      - API error: the service is refusing. Retrying immediately is the worst
-        possible response - it was 86% of one run's spend. Back off, try once
-        more, and if the failures are piling up across the run, stop.
-    """
-    last = None
-    for attempt in range(tries):
-        try:
-            r = subprocess.run(["claude", "-p", prompt, "--output-format", "json",
-                                "--model", MODEL, "--fallback-model", FALLBACK],
-                               capture_output=True, text=True, timeout=240,
-                               env=cli_env())
-        except subprocess.TimeoutExpired:
-            last = "timeout"
-            time.sleep(4 * (attempt + 1))
-            continue
-        out = r.stdout
-        api_error = False
-        try:
-            env = json.loads(out)
-            if env.get("is_error"):
-                api_error = True
-                last = "api error: " + str(env.get("result"))[:160]
-            else:
-                out = env.get("result") or out
-        except Exception:
-            pass
-        if api_error:
-            _consecutive[0] += 1
-            if _consecutive[0] >= GIVE_UP_AFTER:
-                raise Overloaded(f"{_consecutive[0]} API failures in a row - stopping")
-            time.sleep(3 * (2 ** attempt))          # 3s, then 6s
-            continue
-        try:
-            v = parse(out)
-            _consecutive[0] = 0                     # a good reply clears the run
-            return v
-        except Exception as e:
-            last = f"unparseable: {e}"
-    raise RuntimeError(last or "failed")
+    """Cut. This was the old judge's call to Claude, one posting at a time."""
+    raise RuntimeError(CUT)
 
 
 def text_kind(rec, jd):

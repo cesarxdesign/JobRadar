@@ -142,37 +142,8 @@ def prompt_for(role, form, qs):
 
 
 def ask(prompt, system, role=True):
-    last = None
-    for attempt in range(3):
-        try:
-            r = subprocess.run(
-                ["claude", "-p", prompt, "--output-format", "json", "--model", MODEL,
-                 "--system-prompt", system, "--tools", "", "--strict-mcp-config", "--setting-sources", ""],
-                capture_output=True, text=True, timeout=300, env=read.cli_env(), cwd="/tmp")
-            env = json.loads(r.stdout)
-            if env.get("is_error"):
-                last = "api: " + str(env.get("result"))[:160]
-                if vision.LIMIT.search(str(env.get("result"))):
-                    vision.wait_for_reset(str(env.get("result")))
-                    return ask(prompt, system, role)
-                time.sleep(4 * 2 ** attempt)
-                continue
-            u = env.get("usage") or {}
-            n = (u.get("input_tokens") or 0) + (u.get("cache_creation_input_tokens") or 0) \
-                + (u.get("cache_read_input_tokens") or 0) + (u.get("output_tokens") or 0)
-            with _lock:
-                _usage["calls"] += role         # the ceiling is per role: the check rides on its role
-                _usage["in"] += n - (u.get("output_tokens") or 0)
-                _usage["out"] += u.get("output_tokens") or 0
-                _usage["usd"] += env.get("total_cost_usd") or 0
-                if _usage["calls"] >= 3 and (_usage["in"] + _usage["out"]) / _usage["calls"] > CEILING:
-                    _usage["stop"] = True
-            return read.parse(env.get("result") or ""), n
-        except subprocess.TimeoutExpired:
-            last = "timeout"
-        except Exception as e:
-            last = f"{type(e).__name__}: {e}"
-    raise RuntimeError(last)
+    """Cut. This wrote his application drafts with Claude, about 24,000 tokens a role."""
+    raise RuntimeError(read.CUT)
 
 
 def norm(t):
@@ -236,6 +207,8 @@ def save(a):
 
 
 def main(argv):
+    print(read.CUT)
+    return 0
     ids = next((argv[argv.index(a) + 1] for a in argv if a == "--ids"), None)
     limit = next((int(argv[argv.index(a) + 1]) for a in argv if a == "--limit"), None)
     again = "--again" in argv

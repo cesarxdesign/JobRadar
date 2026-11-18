@@ -77,42 +77,17 @@ _usage = {"calls": 0, "in": 0, "out": 0, "usd": 0.0}
 LIMIT = re.compile(r"(?i)\blimit\b|\bresets?\b|quota|out of (extra )?usage|overloaded|too many requests|\b429\b")
 
 
+# His call, 2026-11-18: nothing in JobRadar may reach his Claude subscription any more.
+CUT = "JobRadar no longer calls Claude (cut 2026-11-18, his call). LocalRadar does the reading: ~/Claude/LocalRadar"
+
+
 class ReaderDown(Exception):
     """The reader could not answer. Not a fact about the posting: the role stays unread."""
 
 
 def wait_for_reset(msg):
-    """His plan's usage ran out. Nothing is wrong with the run, so it does not
-    end and it does not guess: it sleeps, asks a one-word question every ten
-    minutes, and carries on from the same role the moment an answer comes."""
-    with _limit_lock:                      # one sleeper; the other readers queue behind it
-        if time.time() - _limit["cleared"] < 120:
-            return                         # another reader has just seen it come back
-        m = re.search(r"\|(\d{10})\b", msg or "")
-        until = int(m.group(1)) if m else None
-        _paused_at = time.time()
-        open(f"{ROOT}/data/vision.paused", "w").write(time.strftime("%F %H:%M"))    # the night run's watchdog: waiting, not stuck
-        print(f"PAUSED {time.strftime('%H:%M')}: usage limit ({str(msg)[:90]}). "
-              + (f"Resets about {time.strftime('%H:%M', time.localtime(until))}. " if until else "")
-              + "Waiting; the run picks up by itself.", flush=True)
-        while True:
-            time.sleep(max(60, min(600, (until - time.time()) + 30)) if until and until > time.time() else 600)
-            try:
-                r = subprocess.run(["claude", "-p", "Reply with the word ok.", "--output-format", "json", "--model", MODEL,
-                                    "--system-prompt", "Reply with one word.", "--tools", "", "--strict-mcp-config",
-                                    "--setting-sources", ""], capture_output=True, text=True, timeout=120,
-                                   env=read.cli_env(), cwd="/tmp")
-                if not json.loads(r.stdout).get("is_error"):
-                    break
-            except Exception:
-                pass
-        _usage["waited"] = _usage.get("waited", 0) + (time.time() - _paused_at)
-        _limit["cleared"] = time.time()
-        try:
-            os.remove(f"{ROOT}/data/vision.paused")
-        except OSError:
-            pass
-        print(f"RESUMED {time.strftime('%H:%M')}", flush=True)
+    """Cut. This asked Claude a one-word question every ten minutes until the usage limit reset."""
+    raise ReaderDown(CUT)
 
 
 _limit_lock, _limit = threading.Lock(), {"cleared": 0}
@@ -122,39 +97,8 @@ SYSTEM = "You read one job posting and answer with one JSON object."
 
 
 def ask(prompt, system=None):
-    """One page, one answer. The CLI's own system prompt and tools are 30,000
-    tokens a call and none of it is needed to read a page, so they are off."""
-    last = None
-    for attempt in range(3):
-        try:
-            r = subprocess.run(
-                ["claude", "-p", prompt, "--output-format", "json", "--model", MODEL,
-                 "--system-prompt", system or SYSTEM,
-                 "--tools", "", "--strict-mcp-config", "--setting-sources", ""],
-                capture_output=True, text=True, timeout=240, env=read.cli_env(), cwd="/tmp")
-            env = json.loads(r.stdout)
-            if env.get("is_error"):
-                last = "api: " + str(env.get("result"))[:160]
-                if LIMIT.search(str(env.get("result"))):
-                    wait_for_reset(str(env.get("result")))
-                    return ask(prompt, system)
-                time.sleep(4 * 2 ** attempt)
-                continue
-            u = env.get("usage") or {}
-            with _lock:
-                _usage["calls"] += 1
-                _usage["in"] += (u.get("input_tokens") or 0) + (u.get("cache_creation_input_tokens") or 0) \
-                    + (u.get("cache_read_input_tokens") or 0)
-                _usage["out"] += u.get("output_tokens") or 0
-                _usage["usd"] += env.get("total_cost_usd") or 0
-                if _usage["calls"] >= 10 and (_usage["in"] + _usage["out"]) / _usage["calls"] > CEILING:
-                    _usage["stop"] = _usage["over"] = True
-            return read.parse(env.get("result") or "")
-        except subprocess.TimeoutExpired:
-            last = "timeout"
-        except Exception as e:
-            last = f"{type(e).__name__}: {e}"
-    raise ReaderDown(last)
+    """Cut. This was the one place VISION spent his tokens: a page handed to Claude to read."""
+    raise ReaderDown(CUT)
 
 
 def gone(page):
@@ -885,7 +829,12 @@ def main():
     except Exception:
         pass
     if FETCH:
-        return fetch(jobs, out)
+        return fetch(jobs, out)            # FETCH and CL never called Claude: they still work
+    if "--count" in sys.argv:
+        print(0)                           # VISION is cut here, so nothing waits for it: the run scripts see an empty queue and end
+        return
+    print(CUT)
+    sys.exit(5)
     if "--audit" in sys.argv:          # --audit: a tenth of the last day's cuts; --audit --all: of every cut not yet checked
         since = None if "--all" in sys.argv else time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time() - 86400))
         audit(out, {j["id"]: j for j in jobs}, since)

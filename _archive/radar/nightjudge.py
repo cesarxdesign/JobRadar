@@ -214,8 +214,7 @@ def ask(prompt, tries=3):
     last = None
     for attempt in range(tries):
         try:
-            r = subprocess.run(["claude", "-p", prompt, "--output-format", "json"],
-                               capture_output=True, text=True, timeout=300)
+            raise RuntimeError("JobRadar no longer calls Claude (cut 2026-11-18, his call)")
         except subprocess.TimeoutExpired:
             last = "timed out after 300s"
             continue
